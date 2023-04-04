@@ -1,0 +1,33 @@
+{
+    "code": "0000",
+    "message": "Thành Công",
+    "result": [
+      {
+        "feeId": 1,
+        "feeName": "Học phí",
+        "value": 500000,
+        "semester": 1,
+        "year": "2021-2022",
+        "status": 0,
+        "qrCode": "https://static.vecteezy.com/system/resources/previews/006/902/221/original/distressed-american-flag-free-vector.jpg"
+      },
+      {
+        "feeId": 2,
+        "feeName": "Quỹ lớp",
+        "value": 50000,
+        "semester": 1,
+        "year": "2021-2022",
+        "status": 1,
+        "qrCode": "https://static.vecteezy.com/system/resources/previews/006/902/221/original/distressed-american-flag-free-vector.jpg"
+      },
+      {
+        "feeId": 3,
+        "feeName": "Xây dựng",
+        "value": 200000,
+        "semester": 1,
+        "year": "2021-2022",
+        "status": 1,
+        "qrCode": "https://static.vecteezy.com/system/resources/previews/006/902/221/original/distressed-american-flag-free-vector.jpg"
+      }
+    ]
+}

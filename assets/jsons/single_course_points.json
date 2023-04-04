@@ -1,0 +1,23 @@
+{
+    "code": "0000",
+    "message": "Thành Công",
+    "result": [
+        {
+            "id": 1,
+            "pointname": "Điểm chuyên cần",
+            "point": 7
+        },
+        {
+            "id": 2,
+            "pointname": "Điểm thường xuyên",
+            "point": 7
+        },
+        {
+            "id": 3,
+            "pointname": "Điểm học kỳ",
+            "point": 8
+        }
+    ],
+    "recordsTotal": 0,
+    "icon": null
+}

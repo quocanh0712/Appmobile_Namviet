@@ -1,0 +1,17 @@
+{
+    "code": "0000",
+    "message": "Thành Công",
+    "result": {
+      "classification": "Trung Bình Khá",
+      "classification10": "Khá",
+      "rank": 3,
+      "rank10": 7,
+      "learningAverage": 6.5,
+      "gpA4": 3,
+      "gpA10": 6,
+      "accumulatedCredits": 137,
+      "academicCredits": 140,
+      "hoc_ky": 0,
+      "nam_hoc": null
+    }
+}
