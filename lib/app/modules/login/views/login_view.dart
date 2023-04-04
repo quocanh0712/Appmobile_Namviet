@@ -1,6 +1,6 @@
 // Copyright (c) 2022, one of the D3F outsourcing projects. All rights reserved.
 
-// coverage:ignore-file nmduc
+// coverage:ignore-file nmduc1
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:dart_extensions/dart_extensions.dart';
