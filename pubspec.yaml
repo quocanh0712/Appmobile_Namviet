@@ -1,7 +1,7 @@
 name: ftu_lms
 version: 0.0.1+1
 publish_to: none
-description: The FTU Learning Management System.
+description: The UFL Learning Management System.
 environment: 
   sdk: '>=2.18.2 <3.0.0'
 
@@ -86,6 +86,7 @@ dev_dependencies:
   hive_test: ^1.0.1
   flutter_test: 
     sdk: flutter
+  change_app_package_name: ^1.0.0
   generators: 
     path: lib/utils/generators/
 

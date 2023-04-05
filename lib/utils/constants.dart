@@ -7,19 +7,22 @@ import 'dart:ui';
 class Constants {
   static const String EMPTY = "";
   static const String HTTPS_SCHEME = "https";
-  static const String FTU_HOST = "ftu.edu.vn";
-  static const String SUPPORT_PHONE_NUMBER = "0967 648 834";
-  static const String UNIVERSITY_WEBSITE = "https://ftu.edu.vn/";
-  static const String ONE_SIGNAL_APP_ID = "c54e1ad1-a7d2-45b5-99d5-7b3957d0624b";
+  static const String FTU_HOST = "ufl.udn.vn";
+  static const String SUPPORT_PHONE_NUMBER = "(+84) 236. 3699324";
+  static const String UNIVERSITY_WEBSITE = "http://ufl.udn.vn/";
+  static const String ONE_SIGNAL_APP_ID =
+      "c54e1ad1-a7d2-45b5-99d5-7b3957d0624b";
   static const emailValidateReg =
       r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+";
-  static const phoneValidateReg = r"([\+84|84|0]+(3|5|7|8|9|1[2|6|8|9]))+([0-9]{8})\b";
+  static const phoneValidateReg =
+      r"([\+84|84|0]+(3|5|7|8|9|1[2|6|8|9]))+([0-9]{8})\b";
   // password validation regex: Minimum eight characters, at least one uppercase letter,
   // one lowercase letter, one number and one special character:
   // static const passValidateReg =
   //     r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$";
   // password validation regex: Minimum six characters, at least one letter, one number and one special character:
-  static const passValidateReg = r"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$";
+  static const passValidateReg =
+      r"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$";
 }
 
 class InfiniteList {

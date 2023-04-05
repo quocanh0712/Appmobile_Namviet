@@ -36,7 +36,7 @@ class LoginController extends BaseController {
   UserObject? userObject;
   late bool? biometricAuthIsNotSupported;
   final BiometricAuthenticator biometricAuthenticator = Get.find();
-  final biometricLoginIsEnable = false.obs;
+  final biometricLoginIsEnable = true.obs;
   final showBiometricLogin = false.obs;
 
   @override
@@ -94,7 +94,8 @@ class LoginController extends BaseController {
   @visibleForTesting
   checkBiometricAuthentication() async {
     Fimber.d("checkBiometricAuthentication()");
-    biometricAuthIsNotSupported = await biometricAuthenticator.deviceIsSupported();
+    biometricAuthIsNotSupported =
+        await biometricAuthenticator.deviceIsSupported();
     if (biometricAuthIsNotSupported == true) {
       userObject = await userRepo.retrieveUserInfo();
       biometricLoginIsEnable.value = userObject?.biometricAuth ?? false;
@@ -160,7 +161,8 @@ class LoginController extends BaseController {
         //     user.result?.copyWith(password: password, role: UserPermission.student.value));
 
         // share external User Id
-        OneSignal.shared.setExternalUserId(user.result?.iduser ?? Constants.EMPTY);
+        OneSignal.shared
+            .setExternalUserId(user.result?.iduser ?? Constants.EMPTY);
 
         Get.offAllNamed(Routes.DASHBOARD);
       } else {
@@ -175,6 +177,7 @@ class LoginController extends BaseController {
 
   handleBiometricLogin() async {
     Fimber.d("handleBiometricLogin()");
+    //showBiometricLogin.value = true;
     final authenticated = await biometricAuthenticator
         .authenticateWithBiometrics(LocaleKeys.bimometricDescription.tr);
     if (authenticated) Get.offAllNamed(Routes.DASHBOARD);

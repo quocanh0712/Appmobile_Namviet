@@ -88,7 +88,8 @@ class LocaleKeys {
   static const logout = 'logout';
   static const bimometricTitle = 'bimometricTitle';
   static const bimometricDescription = 'bimometricDescription';
-  static const biometricAuthIsNotSupportedMessage = 'biometricAuthIsNotSupportedMessage';
+  static const biometricAuthIsNotSupportedMessage =
+      'biometricAuthIsNotSupportedMessage';
   static const profile = 'profile';
   static const fullName = 'fullName';
   static const birthday = 'birthday';
@@ -232,7 +233,8 @@ class LocaleKeys {
   static const updateInfo = 'updateInfo';
   static const financeInformations = 'financeInformations';
   static const totalAmountNeedToPay = 'totalAmountNeedToPay';
-  static const totalAmountNeedToPayBySemester = 'totalAmountNeedToPayBySemester';
+  static const totalAmountNeedToPayBySemester =
+      'totalAmountNeedToPayBySemester';
   static const totalAmountHasPayed = 'totalAmountHasPayed';
   static const excessFee = 'excessFee';
   static const schoolYearTitle = 'schoolYearTitle';
@@ -254,7 +256,8 @@ class LocaleKeys {
   static const practicePointDetail = 'practicePointDetail';
   static const groupCriterias = 'groupCriterias';
   static const totalPoints = 'totalPoints';
-  static const evaluationOfLearningConsciousness = 'evaluationOfLearningConsciousness';
+  static const evaluationOfLearningConsciousness =
+      'evaluationOfLearningConsciousness';
   static const childCriterias = 'childCriterias';
   static const excellent = 'excellent';
   static const good = 'good';
@@ -322,9 +325,10 @@ class Locales {
     'password': 'Mật khẩu',
     'forgotPassword': 'Quên mật khẩu?',
     'login': 'Đăng nhập',
-    'learningManagementSystem': 'Cổng thông tin quản lý sinh viên',
+    'learningManagementSystem': 'Hệ thống quản lý đào tạo Essoft',
     'restNow': 'Nghỉ ngơi thôi',
-    'noTasksMessage': 'Hôm nay bạn không có lịch nào cả. Hãy tận hưởng 1 ngày vui vẻ nhé.',
+    'noTasksMessage':
+        'Hôm nay bạn không có lịch nào cả. Hãy tận hưởng 1 ngày vui vẻ nhé.',
     'tasksCalendar': 'Lịch công tác',
     'teachingProgram': 'Chương trình đào tạo',
     'rewardDiscipline': 'Khen thưởng, kỷ luật',
@@ -387,8 +391,10 @@ class Locales {
     'versionInfo': 'Thông tin phiên bản',
     'logout': 'Đăng xuất',
     'bimometricTitle': 'Xác thực danh tính của bạn',
-    'bimometricDescription': 'Sử dụng sinh trắc học để xác thực danh tính của bạn',
-    'biometricAuthIsNotSupportedMessage': 'Thiết bị này không hỗ trợ xác thực sinh trắc học.',
+    'bimometricDescription':
+        'Sử dụng sinh trắc học để xác thực danh tính của bạn',
+    'biometricAuthIsNotSupportedMessage':
+        'Thiết bị này không hỗ trợ xác thực sinh trắc học.',
     'profile': 'Hồ sơ',
     'fullName': 'Họ và tên',
     'birthday': 'Ngày sinh',
@@ -461,7 +467,8 @@ class Locales {
     'titleTeacherContact': 'Danh bạ giáo viên',
     'hintInputText': 'Nhập văn bản của bạn ở đây',
     'requestTitleButton': 'Gửi yêu cầu',
-    'errorInputMissing': 'Vui lòng nhập đầy đủ đủ thông tin bắt buộc trước khi Gửi yêu cầu',
+    'errorInputMissing':
+        'Vui lòng nhập đầy đủ đủ thông tin bắt buộc trước khi Gửi yêu cầu',
     'errorUploadFile': 'Có lỗi xảy ra trong quá trình tài dữ liệu',
     'sendRequestSuccess': 'Gửi yêu cầu thành công',
     'deleteSuccess': 'Xóa thông tin thành công',
@@ -604,8 +611,10 @@ class Locales {
     'featureIsDeveloping': 'Tính năng đang phát triển.',
     'userNameIsNotEmpty': 'Tên đăng nhập không được rỗng.',
     'passwordIsNotEmpty': 'Mật khẩu không được rỗng.',
-    'userNameAndPasswordIsNotEmpty': 'Tên đăng nhập và mật khẩu không được rỗng.',
-    'eof': 'End of File. Please add a new text above this item to avoid conflicts. Thanks!',
+    'userNameAndPasswordIsNotEmpty':
+        'Tên đăng nhập và mật khẩu không được rỗng.',
+    'eof':
+        'End of File. Please add a new text above this item to avoid conflicts. Thanks!',
   };
   static const en_US = {
     'homePageTitle': 'Login - Home Page',
@@ -619,9 +628,10 @@ class Locales {
     'password': 'Mật khẩu',
     'forgotPassword': 'Quên mật khẩu?',
     'login': 'Đăng nhập',
-    'learningManagementSystem': 'Cổng thông tin quản lý sinh viên',
+    'learningManagementSystem': 'Hệ thống quản lý đào tạo Essoft',
     'restNow': 'Nghỉ ngơi thôi',
-    'noTasksMessage': 'Hôm nay bạn không có lịch nào cả. Hãy tận hưởng 1 ngày vui vẻ nhé.',
+    'noTasksMessage':
+        'Hôm nay bạn không có lịch nào cả. Hãy tận hưởng 1 ngày vui vẻ nhé.',
     'tasksCalendar': 'Lịch công tác',
     'teachingProgram': 'Chương trình đào tạo',
     'rewardDiscipline': 'Khen thưởng, kỷ luật',
@@ -684,8 +694,10 @@ class Locales {
     'versionInfo': 'Thông tin phiên bản',
     'logout': 'Đăng xuất',
     'bimometricTitle': 'Xác thực danh tính của bạn',
-    'bimometricDescription': 'Sử dụng sinh trắc học để xác thực danh tính của bạn',
-    'biometricAuthIsNotSupportedMessage': 'This device doesn\'t support biometric authentication.',
+    'bimometricDescription':
+        'Sử dụng sinh trắc học để xác thực danh tính của bạn',
+    'biometricAuthIsNotSupportedMessage':
+        'This device doesn\'t support biometric authentication.',
     'profile': 'Hồ sơ',
     'fullName': 'Họ và tên',
     'birthday': 'Ngày sinh',
@@ -762,7 +774,8 @@ class Locales {
     'fileName': 'tệp',
     'serviceRequestList': 'Danh sách yêu cầu',
     'requestTitleButton': 'Gửi yêu cầu',
-    'errorInputMissing': 'Vui lòng nhập đầy đủ đủ thông tin bắt buộc trước khi Gửi yêu cầu',
+    'errorInputMissing':
+        'Vui lòng nhập đầy đủ đủ thông tin bắt buộc trước khi Gửi yêu cầu',
     'errorUploadFile': 'Có lỗi xảy ra trong quá trình tài dữ liệu',
     'sendRequestSuccess': 'Gửi yêu cầu thành công',
     'deleteSuccess': 'Xóa thông tin thành công',
@@ -900,7 +913,9 @@ class Locales {
     'featureIsDeveloping': 'Tính năng đang phát triển.',
     'userNameIsNotEmpty': 'Tên đăng nhập không được rỗng.',
     'passwordIsNotEmpty': 'Mật khẩu không được rỗng.',
-    'userNameAndPasswordIsNotEmpty': 'Tên đăng nhập và mật khẩu không được rỗng.',
-    'eof': 'End of File. Please add a new text above this item to avoid conflicts. Thanks!',
+    'userNameAndPasswordIsNotEmpty':
+        'Tên đăng nhập và mật khẩu không được rỗng.',
+    'eof':
+        'End of File. Please add a new text above this item to avoid conflicts. Thanks!',
   };
 }

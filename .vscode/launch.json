@@ -12,7 +12,7 @@
             "args": [
                 "--dart-define", "DART_DEFINES_APP_NAME=Essoft(Dev)",
                 "--dart-define", "DART_DEFINES_APP_SUFFIX=.dev",
-                "--dart-define", "DART_DEFINES_BASE_URL=https://demo.api.essoft.vn/mobile/api",
+                "--dart-define", "DART_DEFINES_BASE_URL=https://api.ufl.essoft.vn/mobile/api",
                 "--debug"
             ]
         },
@@ -24,7 +24,7 @@
             "args": [
                 "--dart-define", "DART_DEFINES_APP_NAME=Essoft(Stg)",
                 "--dart-define", "DART_DEFINES_APP_SUFFIX=.stg",
-                "--dart-define", "DART_DEFINES_BASE_URL=https://demo.api.essoft.vn/mobile/api",
+                "--dart-define", "DART_DEFINES_BASE_URL=https://api.ufl.essoft.vn/mobile/api",
                 "--profile"
             ]
         },
@@ -35,7 +35,7 @@
             "program": "lib/main.dart",
             "args": [
                 "--dart-define", "DART_DEFINES_APP_NAME=Essoft",
-                "--dart-define", "DART_DEFINES_BASE_URL=https://demo.api.essoft.vn/mobile/api",
+                "--dart-define", "DART_DEFINES_BASE_URL=https://api.ufl.essoft.vn/mobile/api",
                 "--release"
             ]
         }

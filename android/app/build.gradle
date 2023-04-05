@@ -22,9 +22,9 @@ if (flutterVersionName == null) {
 }
 
 def dartEnvironmentVariables = [
-        DART_DEFINES_APP_NAME: 'FTULMS',
+        DART_DEFINES_APP_NAME: 'UFL',
         DART_DEFINES_APP_SUFFIX: null,
-        DART_DEFINES_BASE_URL: 'https://demo.api.essoft.vn/mobile/api',
+        DART_DEFINES_BASE_URL: 'https://api.ufl.essoft.vn/mobile/api',
 ]
 if (project.hasProperty('dart-defines')) {
     dartEnvironmentVariables = dartEnvironmentVariables + project.property('dart-defines')
@@ -58,7 +58,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.essoft.ftulms"
+        applicationId "com.namvietjsc.ufl"
         applicationIdSuffix dartEnvironmentVariables.DART_DEFINES_APP_SUFFIX
         minSdkVersion 21
         targetSdkVersion 33
