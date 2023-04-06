@@ -36,7 +36,7 @@
             "args": [
                 "--dart-define", "DART_DEFINES_APP_NAME=Essoft",
                 "--dart-define", "DART_DEFINES_BASE_URL=https://api.ufl.essoft.vn/mobile/api",
-                "--release"
+                "--debug"
             ]
         }
     ]
