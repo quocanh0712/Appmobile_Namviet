@@ -38,15 +38,19 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       minHeight: Get.height - 260,
       parallaxEnabled: false,
       color: context.themeExtensions.transparent,
-      boxShadow: [BoxShadow(blurRadius: 0, color: context.themeExtensions.transparent)],
+      boxShadow: [
+        BoxShadow(blurRadius: 0, color: context.themeExtensions.transparent)
+      ],
       body: Scaffold(
         body: Stack(
           children: [
-            Assets.images.universityBuilding.image(width: double.infinity, fit: BoxFit.cover),
+            Assets.images.universityBuilding
+                .image(width: double.infinity, fit: BoxFit.cover),
             Container(
               width: double.infinity,
               height: 445,
-              decoration: BoxDecoration(gradient: GradientExtension(context).headerGradient),
+              decoration: BoxDecoration(
+                  gradient: GradientExtension(context).headerGradient),
               child: SafeArea(
                 top: true,
                 bottom: true,
@@ -55,13 +59,16 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const SizedBox(height: 36),
-                    Assets.images.ftuLogo.image(width: 68, height: 68, fit: BoxFit.cover),
+                    Assets.images.ftuLogo
+                        .image(width: 68, height: 68, fit: BoxFit.cover),
                     const SizedBox(height: 13),
-                    Obx(() => AutoSizeText(controller.userObject.value?.fullname ?? '',
+                    Obx(() => AutoSizeText(
+                        controller.userObject.value?.fullname ?? '',
                         style: context.themeExtensions.heading1
                             .copyWith(color: context.themeExtensions.white))),
                     const SizedBox(height: 3),
-                    Obx(() => AutoSizeText("ID: ${controller.userObject.value?.username}",
+                    Obx(() => AutoSizeText(
+                        "${controller.userObject.value?.username}",
                         style: context.themeExtensions.subTex
                             .copyWith(color: context.themeExtensions.white)))
                   ],
@@ -102,48 +109,63 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Obx(() => SizedBox(height: controller.hasNoTasks.value ? 75 : 105)),
+                Obx(() =>
+                    SizedBox(height: controller.hasNoTasks.value ? 75 : 105)),
                 Expanded(
                   child: Container(
                     color: context.themeExtensions.white,
                     child: ScrollConfiguration(
                       behavior: DisableScrollGlowBehavior(),
                       child: ListView(
-                        physics: PanelScrollPhysics(controller: controller.panelController),
+                        physics: PanelScrollPhysics(
+                            controller: controller.panelController),
                         controller: controller.scrollController,
                         children: <Widget>[
-                          Obx(() => SizedBox(height: controller.hasNoTasks.value ? 76 : 96)),
+                          Obx(() => SizedBox(
+                              height: controller.hasNoTasks.value ? 76 : 96)),
                           const SizedBox(height: 40),
                           Obx(() => Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 20),
-                              child: _retrieveMainFeaturesByPermission(context,
-                                  controller.userPermission?.value ?? UserPermission.none))),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20),
+                              child: _retrieveMainFeaturesByPermission(
+                                  context,
+                                  controller.userPermission?.value ??
+                                      UserPermission.none))),
                           const SizedBox(height: 15),
                           InkWell(
                             onTap: () => controller.navigateToUtilites(),
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
+                              padding: const EdgeInsets.only(
+                                  left: 20, top: 20, right: 20),
                               child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   AutoSizeText(
                                     LocaleKeys.utilities.tr,
-                                    style: context.themeExtensions.paragraphSemiBold
-                                        .copyWith(color: context.themeExtensions.black),
+                                    style: context
+                                        .themeExtensions.paragraphSemiBold
+                                        .copyWith(
+                                            color:
+                                                context.themeExtensions.black),
                                   ),
-                                  Assets.images.arrowRight.svg(fit: BoxFit.cover)
+                                  Assets.images.arrowRight
+                                      .svg(fit: BoxFit.cover)
                                 ],
                               ),
                             ),
                           ),
                           const SizedBox(height: 30),
                           Obx(() => SizedBox(
-                                child: _retrieveUtilitiesByPermission(context,
-                                    controller.userPermission?.value ?? UserPermission.none),
+                                child: _retrieveUtilitiesByPermission(
+                                    context,
+                                    controller.userPermission?.value ??
+                                        UserPermission.none),
                               )),
                           Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 35, horizontal: 20),
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 35, horizontal: 20),
                               child: _buildBanners(context)),
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -153,13 +175,18 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                               children: [
                                 AutoSizeText(
                                   LocaleKeys.recentActivities.tr,
-                                  style: context.themeExtensions.paragraphSemiBold
-                                      .copyWith(color: context.themeExtensions.textColor),
+                                  style: context
+                                      .themeExtensions.paragraphSemiBold
+                                      .copyWith(
+                                          color: context
+                                              .themeExtensions.textColor),
                                 ),
                                 AutoSizeText(
                                   LocaleKeys.viewMore.tr,
                                   style: context.themeExtensions.subTex
-                                      .copyWith(color: context.themeExtensions.mainGreen),
+                                      .copyWith(
+                                          color: context
+                                              .themeExtensions.mainGreen),
                                 )
                               ],
                             ),
@@ -167,7 +194,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                           const SizedBox(height: 25),
                           for (var activity in controller.lstRecentActivities)
                             _buildRecentActivityItem(context, activity,
-                                isLast: activity == controller.lstRecentActivities.last),
+                                isLast: activity ==
+                                    controller.lstRecentActivities.last),
                           const SizedBox(height: 45),
                         ],
                       ),
@@ -319,8 +347,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     );
   }
 
-  Widget _retrieveUtilitiesByPermission(BuildContext context, UserPermission permission) {
-    if (permission == UserPermission.teacher) return _buildTeacherUtilities(context);
+  Widget _retrieveUtilitiesByPermission(
+      BuildContext context, UserPermission permission) {
+    if (permission == UserPermission.teacher) {
+      return _buildTeacherUtilities(context);
+    }
     return _buildStudentUtilities(context);
   }
 
@@ -468,7 +499,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         maskType: EasyLoadingMaskType.clear);
   }
 
-  Widget _buildRecentActivityItem(BuildContext context, HomeRecentActitvity activity,
+  Widget _buildRecentActivityItem(
+      BuildContext context, HomeRecentActitvity activity,
       {bool? isLast = false}) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 20),
@@ -485,12 +517,14 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                 width: 24,
                 height: 24,
                 fit: BoxFit.cover,
-                placeholder: (context, url) => const CircularProgressIndicator(),
-                errorWidget: (context, url, error) => Assets.images.icEmptyWalletChange.image(
-                    width: 24,
-                    height: 23,
-                    fit: BoxFit.cover,
-                    color: context.themeExtensions.textGrey),
+                placeholder: (context, url) =>
+                    const CircularProgressIndicator(),
+                errorWidget: (context, url, error) =>
+                    Assets.images.icEmptyWalletChange.image(
+                        width: 24,
+                        height: 23,
+                        fit: BoxFit.cover,
+                        color: context.themeExtensions.textGrey),
               ),
               const SizedBox(width: 15),
               Flexible(
@@ -507,9 +541,13 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               )
             ],
           ),
-          isLast == false ? const SizedBox(height: 18) : const SizedBox.shrink(),
           isLast == false
-              ? Container(height: 1, color: context.themeExtensions.chineseBlack.withOpacity(0.1))
+              ? const SizedBox(height: 18)
+              : const SizedBox.shrink(),
+          isLast == false
+              ? Container(
+                  height: 1,
+                  color: context.themeExtensions.chineseBlack.withOpacity(0.1))
               : const SizedBox.shrink()
         ],
       ),
@@ -533,7 +571,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               padding: const EdgeInsets.all(10),
               decoration: assetImage != null
                   ? BoxDecoration(
-                      color: context.themeExtensions.antiFlashWhite, shape: BoxShape.circle)
+                      color: context.themeExtensions.antiFlashWhite,
+                      shape: BoxShape.circle)
                   : null,
               child: assetImage?.image(fit: BoxFit.cover),
             ),
@@ -661,7 +700,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                   Align(
                       alignment: Alignment.centerLeft,
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 19, horizontal: 3),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 19, horizontal: 3),
                         child: DottedLine(
                           dashLength: 5,
                           dashGapLength: 3,
@@ -715,17 +755,22 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             subject ?? "",
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style:
-                context.themeExtensions.subTex.copyWith(color: context.themeExtensions.textGrey),
+            style: context.themeExtensions.subTex
+                .copyWith(color: context.themeExtensions.textGrey),
           ),
         )
       ],
     );
   }
 
-  Widget _retrieveMainFeaturesByPermission(BuildContext context, UserPermission permission) {
-    if (permission == UserPermission.teacher) return _buildTeacherMainFeatures(context);
-    if (permission == UserPermission.student) return _buildStudentMainFeatures(context);
+  Widget _retrieveMainFeaturesByPermission(
+      BuildContext context, UserPermission permission) {
+    if (permission == UserPermission.teacher) {
+      return _buildTeacherMainFeatures(context);
+    }
+    if (permission == UserPermission.student) {
+      return _buildStudentMainFeatures(context);
+    }
     return const SizedBox.shrink();
   }
 
@@ -738,7 +783,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           children: <Widget>[
             _buildMainFeatureItem(
               context,
-              background: Assets.images.homeTopLeftButBg.image(fit: BoxFit.cover),
+              background:
+                  Assets.images.homeTopLeftButBg.image(fit: BoxFit.cover),
               icon: Assets.images.icCalendarEdition.svg(fit: BoxFit.cover),
               title: LocaleKeys.tasksCalendar.tr,
               onTap: () => controller.navigateToScheduleTime(),
@@ -746,7 +792,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             const SizedBox(width: 6),
             _buildMainFeatureItem(
               context,
-              background: Assets.images.homeTopRightButBg.image(fit: BoxFit.cover),
+              background:
+                  Assets.images.homeTopRightButBg.image(fit: BoxFit.cover),
               icon: Assets.images.icCalendarEdition.svg(fit: BoxFit.cover),
               title: LocaleKeys.teachingProgram.tr,
               onTap: () => controller.navigateToEducationProgram(),
@@ -761,14 +808,16 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             _buildMainFeatureItem(
               context,
               onTap: () => controller.navigateToRewardDiscipline(),
-              background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+              background:
+                  Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
               icon: Assets.images.icCalendarEdition.svg(fit: BoxFit.cover),
               title: LocaleKeys.rewardDiscipline.tr,
             ),
             const SizedBox(width: 6),
             _buildMainFeatureItem(
               context,
-              background: Assets.images.homeBotRightButBg.image(fit: BoxFit.cover),
+              background:
+                  Assets.images.homeBotRightButBg.image(fit: BoxFit.cover),
               icon: Assets.images.icCalendarEdition.svg(fit: BoxFit.cover),
               title: LocaleKeys.eLearning.tr,
               onTap: () => controller.navigateToELearning(),
@@ -788,7 +837,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           children: <Widget>[
             _buildMainFeatureItem(
               context,
-              background: Assets.images.homeTopLeftButBg.image(fit: BoxFit.cover),
+              background:
+                  Assets.images.homeTopLeftButBg.image(fit: BoxFit.cover),
               icon: Assets.images.icCalendarEdition.svg(fit: BoxFit.cover),
               title: LocaleKeys.learningSchedule.tr,
               onTap: () => controller.navigateToScheduleTime(),
@@ -796,7 +846,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             const SizedBox(width: 6),
             _buildMainFeatureItem(
               context,
-              background: Assets.images.homeTopRightButBg.image(fit: BoxFit.cover),
+              background:
+                  Assets.images.homeTopRightButBg.image(fit: BoxFit.cover),
               icon: Assets.images.icTeacherSvg
                   .svg(fit: BoxFit.cover, color: context.themeExtensions.white),
               title: LocaleKeys.learningResults.tr,
@@ -853,16 +904,20 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                   child: Container(
                     margin: const EdgeInsets.all(5),
                     child: ClipRRect(
-                        borderRadius: const BorderRadius.all(Radius.circular(9)),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(9)),
                         child: CachedNetworkImage(
                           imageUrl: element.imageurl ?? '',
                           fit: BoxFit.fill,
                           width: double.infinity,
                           height: 123,
                           placeholder: (context, url) => const SizedBox(
-                              width: 35, height: 35, child: CircularProgressIndicator()),
-                          errorWidget: (context, url, error) =>
-                              Assets.images.ftuLogo.image(width: 35, height: 35),
+                              width: 35,
+                              height: 35,
+                              child: CircularProgressIndicator()),
+                          errorWidget: (context, url, error) => Assets
+                              .images.ftuLogo
+                              .image(width: 35, height: 35),
                         )),
                   ),
                 )),
@@ -872,7 +927,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                 enlargeCenterPage: false,
                 viewportFraction: 1,
                 aspectRatio: 2,
-                onPageChanged: (index, reason) => controller.currentBanner.value = index),
+                onPageChanged: (index, reason) =>
+                    controller.currentBanner.value = index),
           )),
       Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -882,11 +938,14 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             child: Obx(() => Container(
                   width: 6,
                   height: 6,
-                  margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
+                  margin:
+                      const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: context.themeExtensions.mainGreen
-                          .withOpacity(controller.currentBanner.value == entry.key ? 0.9 : 0.3)),
+                      color: context.themeExtensions.mainGreen.withOpacity(
+                          controller.currentBanner.value == entry.key
+                              ? 0.9
+                              : 0.3)),
                 )),
           );
         }).toList(),

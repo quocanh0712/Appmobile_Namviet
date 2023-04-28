@@ -16,8 +16,8 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../controllers/app_information_controller.dart';
 
-class AppInformationView
-    extends BaseBindingCreatorView<AppInformationBinding, AppInformationController> {
+class AppInformationView extends BaseBindingCreatorView<AppInformationBinding,
+    AppInformationController> {
   AppInformationView({super.key, required super.bindingCreator});
 
   @override
@@ -28,7 +28,8 @@ class AppInformationView
           onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
           child: Stack(
             children: [
-              Assets.images.profileHeaderBg.image(width: double.infinity, fit: BoxFit.cover),
+              Assets.images.profileHeaderBg
+                  .image(width: double.infinity, fit: BoxFit.cover),
               Scaffold(
                 backgroundColor: context.themeExtensions.transparent,
                 appBar: CustomAppBar(
@@ -50,16 +51,19 @@ class AppInformationView
                             width: double.infinity,
                             padding: const EdgeInsets.all(16),
                             decoration: BoxDecoration(
-                              borderRadius: const BorderRadius.all(Radius.circular(10)),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(10)),
                               boxShadow: [
                                 BoxShadow(
-                                    color: context.themeExtensions.black.withOpacity(0.05),
+                                    color: context.themeExtensions.black
+                                        .withOpacity(0.05),
                                     offset: const Offset(0, 4),
                                     blurRadius: 10)
                               ],
                               color: context.themeExtensions.white,
                               border: Border.all(
-                                  color: context.themeExtensions.black.withOpacity(0.05),
+                                  color: context.themeExtensions.black
+                                      .withOpacity(0.05),
                                   width: 1),
                             ),
                             child: Column(
@@ -68,12 +72,15 @@ class AppInformationView
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 _buildInfoItem(context,
-                                    title: LocaleKeys.version.tr, value: "1.0 b23", isFirst: true),
+                                    title: LocaleKeys.version.tr,
+                                    value: "1.0",
+                                    isFirst: true),
                                 _buildInfoItem(
                                   context,
                                   title: LocaleKeys.hotline.tr,
                                   value: Constants.SUPPORT_PHONE_NUMBER,
-                                  onTap: () => _makePhoneCall(Constants.SUPPORT_PHONE_NUMBER),
+                                  onTap: () => _makePhoneCall(
+                                      Constants.SUPPORT_PHONE_NUMBER),
                                 ),
                                 _buildInfoItem(
                                   context,
@@ -114,7 +121,9 @@ class AppInformationView
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.max,
         children: [
-          isFirst != true ? const SizedBox(height: 16) : const SizedBox.shrink(),
+          isFirst != true
+              ? const SizedBox(height: 16)
+              : const SizedBox.shrink(),
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,

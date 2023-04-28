@@ -70,8 +70,10 @@ dependencies:
       url: https://github.com/D3FOutsourcing/jiffy.git
       ref: vietnamese-locale
 
+
 dev_dependencies: 
   test: ^1.21.4
+  melos: ^3.0.1
   build_runner: ^2.2.1
   json_serializable: ^6.4.1
   hive_generator: ^1.1.3
