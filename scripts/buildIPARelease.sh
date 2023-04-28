@@ -9,6 +9,6 @@ git ls-files -z -- '*.dart' | xargs -0 dart format "$@" -l 99
 
 fvm flutter build ipa --obfuscate --split-debug-info --split-per-abi \
 --dart-define=DART_DEFINES_APP_NAME="FTU LMS" \
---dart-define=DART_DEFINES_BASE_URL="https://demo.api.essoft.vn/mobile/api" \
+--dart-define=DART_DEFINES_BASE_URL="https://api.ufl.essoft.vn/mobile/api" \
 --export-options-plist ./ios/fastlane/export_options/Release/ExportOptions.plist \
 --release

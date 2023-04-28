@@ -16,7 +16,7 @@ abstract class BaseClientGenerator {
 
   String get method;
 
-  //String get baseURL => "https://demo.api.essoft.vn/mobile/api";
+  //String get baseURL => "https://api.ufl.essoft.vn/mobile/api";
   //String get baseURL => "https://api.ufl.essoft.vn/mobile/api";
   String get baseURL => EnvironmentConfig.BASE_URL;
 

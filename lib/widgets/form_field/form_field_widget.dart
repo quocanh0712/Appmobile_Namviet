@@ -151,7 +151,7 @@ class _FormFieldWidgetState extends State<FormFieldWidget> {
             initDate: _formFieldData.value == null
                 ? null
                 : DateTimeUtils.convertFromDateString(
-                    dateString: _formFieldData!.value!, dateFormat: dateYMDSlash),
+                    dateString: _formFieldData.value!, dateFormat: dateYMDSlash),
             onDataChange: (date) {
               _formFieldData = _formFieldData.copyWith(
                   value: date == null ? null : DateTimeUtils.formatDateTime(date, dateYMDSlash));
