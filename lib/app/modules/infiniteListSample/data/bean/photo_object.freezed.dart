@@ -67,7 +67,7 @@ class _$PhotoObjectCopyWithImpl<$Res, $Val extends PhotoObject>
     Object? title = freezed,
     Object? url = freezed,
     Object? thumbnailUrl = freezed,
-    Object? color = freezed,
+    Object? color = null,
   }) {
     return _then(_value.copyWith(
       albumId: freezed == albumId
@@ -90,7 +90,7 @@ class _$PhotoObjectCopyWithImpl<$Res, $Val extends PhotoObject>
           ? _value.thumbnailUrl
           : thumbnailUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      color: freezed == color
+      color: null == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as Color?,
@@ -131,7 +131,7 @@ class __$$_PhotoObjectCopyWithImpl<$Res>
     Object? title = freezed,
     Object? url = freezed,
     Object? thumbnailUrl = freezed,
-    Object? color = freezed,
+    Object? color = null,
   }) {
     return _then(_$_PhotoObject(
       albumId: freezed == albumId
@@ -154,7 +154,7 @@ class __$$_PhotoObjectCopyWithImpl<$Res>
           ? _value.thumbnailUrl
           : thumbnailUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      color: freezed == color
+      color: null == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as Color?,
@@ -206,13 +206,13 @@ class _$_PhotoObject implements _PhotoObject {
             (identical(other.url, url) || other.url == url) &&
             (identical(other.thumbnailUrl, thumbnailUrl) ||
                 other.thumbnailUrl == thumbnailUrl) &&
-            (identical(other.color, color) || other.color == color));
+            const DeepCollectionEquality().equals(other.color, color));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, albumId, id, title, url, thumbnailUrl, color);
+  int get hashCode => Object.hash(runtimeType, albumId, id, title, url,
+      thumbnailUrl, const DeepCollectionEquality().hash(color));
 
   @JsonKey(ignore: true)
   @override

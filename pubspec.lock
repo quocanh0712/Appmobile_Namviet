@@ -5,10 +5,10 @@ packages:
     dependency: transitive
     description:
       name: _fe_analyzer_shared
-      sha256: "4897882604d919befd350648c7f91926a9d5de99e67b455bf0917cc2362f4bb8"
+      sha256: "405666cd3cf0ee0a48d21ec67e65406aad2c726d9fa58840d3375e7bdcd32a07"
       url: "https://pub.dev"
     source: hosted
-    version: "47.0.0"
+    version: "60.0.0"
   _flutterfire_internals:
     dependency: transitive
     description:
@@ -21,10 +21,10 @@ packages:
     dependency: transitive
     description:
       name: analyzer
-      sha256: "690e335554a8385bc9d787117d9eb52c0c03ee207a607e593de3c9d71b1cfe80"
+      sha256: "1952250bd005bacb895a01bf1b4dc00e3ba1c526cf47dca54dfe24979c65f5b3"
       url: "https://pub.dev"
     source: hosted
-    version: "4.7.0"
+    version: "5.12.0"
   animated_bottom_navigation_bar:
     dependency: "direct main"
     description:
@@ -117,10 +117,10 @@ packages:
     dependency: transitive
     description:
       name: build_daemon
-      sha256: "6bc5544ea6ce4428266e7ea680e945c68806c4aae2da0eb5e9ccf38df8d6acbf"
+      sha256: "757153e5d9cd88253cb13f28c2fb55a537dc31fefd98137549895b5beb7c6169"
       url: "https://pub.dev"
     source: hosted
-    version: "3.1.0"
+    version: "3.1.1"
   build_resolvers:
     dependency: transitive
     description:
@@ -133,10 +133,10 @@ packages:
     dependency: "direct dev"
     description:
       name: build_runner
-      sha256: "93f05c041932674be039b0a2323d6cf57e5f2bbf884a3c0382f9e53fc45ebace"
+      sha256: b0a8a7b8a76c493e85f1b84bffa0588859a06197863dba8c9036b15581fd9727
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.0"
+    version: "2.3.3"
   build_runner_core:
     dependency: transitive
     description:
@@ -238,6 +238,14 @@ packages:
     description:
       name: cli_launcher
       sha256: "5e7e0282b79e8642edd6510ee468ae2976d847a0a29b3916e85f5fa1bfe24005"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.3.1"
+  cli_script:
+    dependency: "direct main"
+    description:
+      name: cli_script
+      sha256: "3463c6e8e57271faaf557eee56cb455522f1ab1ebe618bbfb7454f74fc793967"
       url: "https://pub.dev"
     source: hosted
     version: "0.3.1"
@@ -788,10 +796,10 @@ packages:
     dependency: transitive
     description:
       name: frontend_server_client
-      sha256: "4f4a162323c86ffc1245765cfe138872b8f069deb42f7dbb36115fa27f31469b"
+      sha256: "408e3ca148b31c20282ad6f37ebfa6f4bdc8fede5b74bc2f08d9d92b55db3612"
       url: "https://pub.dev"
     source: hosted
-    version: "2.1.3"
+    version: "3.2.0"
   gallery_saver:
     dependency: "direct main"
     description:
@@ -859,10 +867,10 @@ packages:
     dependency: "direct dev"
     description:
       name: hive_generator
-      sha256: "81fd20125cb2ce8fd23623d7744ffbaf653aae93706c9bd3bf7019ea0ace3938"
+      sha256: "65998cc4d2cd9680a3d9709d893d2f6bb15e6c1f92626c3f1fa650b4b3281521"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.3"
+    version: "2.0.0"
   hive_test:
     dependency: "direct dev"
     description:
@@ -1076,10 +1084,10 @@ packages:
     dependency: "direct dev"
     description:
       name: mockito
-      sha256: "2a8a17b82b1bde04d514e75d90d634a0ac23f6cb4991f6098009dd56836aeafe"
+      sha256: dd61809f04da1838a680926de50a9e87385c1de91c6579629c3d1723946e8059
       url: "https://pub.dev"
     source: hosted
-    version: "5.3.2"
+    version: "5.4.0"
   mustache_template:
     dependency: transitive
     description:
@@ -1814,6 +1822,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.6.1"
+  xargs:
+    dependency: "direct main"
+    description:
+      name: xargs
+      sha256: d0c22880a8e00b7e5a44de9baf122efc389e7c3a8e2d1e836937d7b8df16fa7c
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   xdg_directories:
     dependency: transitive
     description:
@@ -1847,5 +1863,5 @@ packages:
     source: hosted
     version: "2.1.0"
 sdks:
-  dart: ">=2.18.2 <3.0.0"
+  dart: ">=2.19.0 <3.0.0"
   flutter: ">=3.3.0"

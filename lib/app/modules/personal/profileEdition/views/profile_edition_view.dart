@@ -30,7 +30,8 @@ class ProfileEditionView extends BaseView<ProfileEditionController> {
       },
       child: Stack(
         children: [
-          Assets.images.profileHeaderBg.image(width: double.infinity, fit: BoxFit.cover),
+          Assets.images.profileHeaderBg
+              .image(width: double.infinity, fit: BoxFit.cover),
           Scaffold(
             backgroundColor: context.themeExtensions.transparent,
             appBar: CustomAppBar(
@@ -63,16 +64,19 @@ class ProfileEditionView extends BaseView<ProfileEditionController> {
                               width: double.infinity,
                               padding: const EdgeInsets.all(16),
                               decoration: BoxDecoration(
-                                borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(10)),
                                 boxShadow: [
                                   BoxShadow(
-                                      color: context.themeExtensions.black.withOpacity(0.05),
+                                      color: context.themeExtensions.black
+                                          .withOpacity(0.05),
                                       offset: const Offset(0, 4),
                                       blurRadius: 10)
                                 ],
                                 color: context.themeExtensions.white,
                                 border: Border.all(
-                                    color: context.themeExtensions.black.withOpacity(0.05),
+                                    color: context.themeExtensions.black
+                                        .withOpacity(0.05),
                                     width: 1),
                               ),
                               child: Column(
@@ -83,11 +87,14 @@ class ProfileEditionView extends BaseView<ProfileEditionController> {
                                   Obx(() => _buildTextInputField(
                                         context,
                                         title: LocaleKeys.fullName.tr,
-                                        initValue: controller.userObject.value?.fullname,
+                                        initValue: controller
+                                            .userObject.value?.fullname,
                                         error: controller.userNameError.value,
                                         onChanged: (value) {
-                                          controller.currentInputField = InputField.userName;
-                                          controller.currentFullnameInputText.value = value;
+                                          controller.currentInputField =
+                                              InputField.userName;
+                                          controller.currentFullnameInputText
+                                              .value = value;
                                         },
                                         onFieldSubmitted: (value) =>
                                             controller.validateUserName(value),
@@ -95,7 +102,8 @@ class ProfileEditionView extends BaseView<ProfileEditionController> {
                                   Obx(() => _buildTextInputField(
                                         context,
                                         title: LocaleKeys.birthday.tr,
-                                        initValue: controller.userObject.value?.birthday,
+                                        initValue: controller
+                                            .userObject.value?.birthday,
                                         hintText: DateTimeUtils.yMd,
                                         error: controller.birthdayError.value,
                                         suffixIcon: Container(
@@ -108,7 +116,10 @@ class ProfileEditionView extends BaseView<ProfileEditionController> {
                                                 _showDatePicker(context);
                                               },
                                               child: Assets.images.icCalendar
-                                                  .svg(width: 16, height: 16, fit: BoxFit.contain),
+                                                  .svg(
+                                                      width: 16,
+                                                      height: 16,
+                                                      fit: BoxFit.contain),
                                             ),
                                           ),
                                         ),
@@ -116,47 +127,60 @@ class ProfileEditionView extends BaseView<ProfileEditionController> {
                                         onFieldSubmitted: (value) =>
                                             controller.validateBirthday(value),
                                         onChanged: (value) {
-                                          controller.currentInputField = InputField.birthday;
-                                          controller.currentBirthdayInputText.value = value;
+                                          controller.currentInputField =
+                                              InputField.birthday;
+                                          controller.currentBirthdayInputText
+                                              .value = value;
                                         },
                                       )),
                                   Obx(
                                     () => _buildTextInputField(
                                       context,
                                       title: LocaleKeys.phoneNumber.tr,
-                                      initValue: controller.userObject.value?.phone,
+                                      initValue:
+                                          controller.userObject.value?.phone,
                                       error: controller.phoneNumberError.value,
                                       onFieldSubmitted: (value) =>
                                           controller.validatePhoneNumber(value),
                                       onChanged: (value) {
-                                        controller.currentInputField = InputField.phoneNumber;
-                                        controller.currentPhoneNumberInputText.value = value;
+                                        controller.currentInputField =
+                                            InputField.phoneNumber;
+                                        controller.currentPhoneNumberInputText
+                                            .value = value;
                                       },
                                     ),
                                   ),
                                   Obx(
                                     () => _buildTextInputField(context,
                                         title: LocaleKeys.email.tr,
-                                        initValue: controller.userObject.value?.email,
+                                        initValue:
+                                            controller.userObject.value?.email,
                                         error: controller.emailError.value,
                                         onFieldSubmitted: (value) =>
                                             controller.validateEmail(value),
                                         onChanged: (value) {
-                                          controller.currentInputField = InputField.email;
-                                          controller.currentEmailInputText.value = value;
+                                          controller.currentInputField =
+                                              InputField.email;
+                                          controller.currentEmailInputText
+                                              .value = value;
                                         },
-                                        keyboardType: TextInputType.emailAddress),
+                                        keyboardType:
+                                            TextInputType.emailAddress),
                                   ),
                                   Obx(
                                     () => _buildTextInputField(
                                       context,
                                       title: LocaleKeys.ccidNumberAsterisk.tr,
-                                      initValue: controller.userObject.value?.ccid,
+                                      initValue:
+                                          controller.userObject.value?.ccid,
                                       isLast: true,
-                                      onFieldSubmitted: (value) => controller.validateCCID(value),
+                                      onFieldSubmitted: (value) =>
+                                          controller.validateCCID(value),
                                       onChanged: (value) {
-                                        controller.currentInputField = InputField.ccid;
-                                        controller.currentCCIDInputText.value = value;
+                                        controller.currentInputField =
+                                            InputField.ccid;
+                                        controller.currentCCIDInputText.value =
+                                            value;
                                       },
                                       error: controller.ccidError.value,
                                     ),
@@ -179,7 +203,8 @@ class ProfileEditionView extends BaseView<ProfileEditionController> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
-                              image: AssetImage(Assets.images.butGradientBg.path),
+                              image:
+                                  AssetImage(Assets.images.butGradientBg.path),
                               fit: BoxFit.cover)),
                       child: InkWell(
                         onTap: () {
@@ -192,7 +217,8 @@ class ProfileEditionView extends BaseView<ProfileEditionController> {
                             child: AutoSizeText(
                               LocaleKeys.save.tr,
                               style: context.themeExtensions.paragraphSemiBold
-                                  .copyWith(color: context.themeExtensions.white),
+                                  .copyWith(
+                                      color: context.themeExtensions.white),
                             )),
                       ),
                     ).paddingOnly(left: 20, right: 20, bottom: 13),
@@ -201,7 +227,8 @@ class ProfileEditionView extends BaseView<ProfileEditionController> {
                     if (controller.isError.value?.isNotBlank() == true) {
                       controller.isError.value = "";
                       WidgetsBinding.instance.addPostFrameCallback((duration) {
-                        showErrorDialog(context, messageError: controller.isError.value);
+                        showErrorDialog(context,
+                            messageError: controller.isError.value);
                       });
                     }
                     return const SizedBox.shrink();
@@ -258,7 +285,8 @@ class ProfileEditionView extends BaseView<ProfileEditionController> {
       children: [
         AutoSizeText(
           title ?? '',
-          style: context.themeExtensions.subTex.copyWith(color: context.themeExtensions.textGrey),
+          style: context.themeExtensions.subTex
+              .copyWith(color: context.themeExtensions.textGrey),
         ),
         TextFormField(
           key: UniqueKey(),
@@ -268,22 +296,27 @@ class ProfileEditionView extends BaseView<ProfileEditionController> {
           onFieldSubmitted: onFieldSubmitted,
           textAlignVertical: TextAlignVertical.center,
           keyboardType: keyboardType,
-          textInputAction: isLast == true ? TextInputAction.done : TextInputAction.next,
+          textInputAction:
+              isLast == true ? TextInputAction.done : TextInputAction.next,
           decoration: InputDecoration(
             contentPadding: const EdgeInsets.only(bottom: 6),
             isDense: true,
-            suffixIconConstraints:
-                const BoxConstraints(maxHeight: 24, maxWidth: 24, minHeight: 24, minWidth: 24),
+            suffixIconConstraints: const BoxConstraints(
+                maxHeight: 24, maxWidth: 24, minHeight: 24, minWidth: 24),
             suffixIcon: suffixIcon,
             hintText: hintText,
             enabledBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: context.themeExtensions.textGrey)),
+                borderSide:
+                    BorderSide(color: context.themeExtensions.textGrey)),
             focusedBorder: UnderlineInputBorder(
-                borderSide: BorderSide(color: context.themeExtensions.mainGreen)),
+                borderSide:
+                    BorderSide(color: context.themeExtensions.mainGreen)),
           ),
         ),
         const SizedBox(height: 8),
-        error?.isNotEmpty == true ? const SizedBox(height: 7) : const SizedBox.shrink(),
+        error?.isNotEmpty == true
+            ? const SizedBox(height: 7)
+            : const SizedBox.shrink(),
         error?.isNotEmpty == true
             ? AutoSizeText(
                 error ?? '',

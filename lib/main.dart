@@ -30,7 +30,8 @@ Future<void> main() async {
   await Hive.initFlutter();
 
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      statusBarColor: Colors.transparent, systemStatusBarContrastEnforced: false));
+      statusBarColor: Colors.transparent,
+      systemStatusBarContrastEnforced: false));
 
   await StatusBarControl.setHidden(false, animation: StatusBarAnimation.FADE);
   await StatusBarControl.setStyle(StatusBarStyle.LIGHT_CONTENT);

@@ -37,9 +37,11 @@ class ElearningView extends BaseListView<ElearningController> {
                     child: Image.network(response.imageUrl ?? Constants.EMPTY,
                         fit: BoxFit.fill,
                         loadingBuilder: (context, child, loadingProgress) =>
-                            Assets.images.ftuLogo.image(width: 70, height: 70, fit: BoxFit.cover),
-                        errorBuilder: (context, error, stackTrace) =>
-                            Assets.images.ftuLogo.image(width: 70, height: 70, fit: BoxFit.cover),
+                            Assets.images.ftuLogo.image(
+                                width: 70, height: 70, fit: BoxFit.cover),
+                        errorBuilder: (context, error, stackTrace) => Assets
+                            .images.ftuLogo
+                            .image(width: 70, height: 70, fit: BoxFit.cover),
                         width: 60,
                         height: 60)),
               ),
@@ -63,7 +65,8 @@ class ElearningView extends BaseListView<ElearningController> {
                     const SizedBox(height: 5),
                     infoView(context, Assets.images.icClock, response.time),
                     const SizedBox(height: 5),
-                    infoView(context, Assets.images.icTeacherSvg, response.teacher),
+                    infoView(
+                        context, Assets.images.icTeacherSvg, response.teacher),
                     const SizedBox(height: 5),
                   ],
                 ),
@@ -102,14 +105,18 @@ class ElearningView extends BaseListView<ElearningController> {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         image.svg(
-            fit: BoxFit.cover, width: 16, height: 16, color: context.themeExtensions.textColor),
+            fit: BoxFit.cover,
+            width: 16,
+            height: 16,
+            color: context.themeExtensions.textColor),
         const SizedBox(
           width: 3,
         ),
         Expanded(
             child: Text(
           title ?? Constants.EMPTY,
-          style: context.themeExtensions.subTex.copyWith(color: context.themeExtensions.textColor),
+          style: context.themeExtensions.subTex
+              .copyWith(color: context.themeExtensions.textColor),
         ))
       ],
     );
@@ -129,8 +136,8 @@ class ElearningView extends BaseListView<ElearningController> {
             controller.queryELearningList(date);
           }, currentTime: controller.dateTimeRequest, locale: LocaleType.vi);
         },
-        icon: Assets.images.icCalendar
-            .svg(width: 24, height: 24, color: context.themeExtensions.textColor),
+        icon: Assets.images.icCalendar.svg(
+            width: 24, height: 24, color: context.themeExtensions.textColor),
       ),
     ];
   }

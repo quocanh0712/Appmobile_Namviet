@@ -60,7 +60,8 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
               color: Utils.randomColor(),
             ),
             height: marginEnd - marginStart,
-            padding: const EdgeInsets.only(left: 14, right: 14, top: 10, bottom: 10),
+            padding:
+                const EdgeInsets.only(left: 14, right: 14, top: 10, bottom: 10),
             child: SingleChildScrollView(
               child: Column(children: [
                 Align(
@@ -149,8 +150,8 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
                       child: Text(
                         time,
                         textAlign: TextAlign.right,
-                        style: Get.context?.themeExtensions.subTex
-                            .copyWith(color: Get.context?.themeExtensions.textGrey),
+                        style: Get.context?.themeExtensions.subTex.copyWith(
+                            color: Get.context?.themeExtensions.textGrey),
                       ),
                     ),
                   ),
@@ -161,8 +162,8 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
                       child: Text(
                         "-",
                         textAlign: TextAlign.center,
-                        style: Get.context?.themeExtensions.subTex
-                            .copyWith(color: Get.context?.themeExtensions.textGrey),
+                        style: Get.context?.themeExtensions.subTex.copyWith(
+                            color: Get.context?.themeExtensions.textGrey),
                       ),
                     ),
                   ),
@@ -189,8 +190,8 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
               controller.loadScheduleDaily();
             }, currentTime: controller.timeDaily, locale: LocaleType.vi);
           },
-          icon: Assets.images.icDate
-              .svg(width: 24, height: 24, color: context.themeExtensions.textColor),
+          icon: Assets.images.icDate.svg(
+              width: 24, height: 24, color: context.themeExtensions.textColor),
         ),
       ];
 

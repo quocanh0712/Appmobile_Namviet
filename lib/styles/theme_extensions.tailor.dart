@@ -50,35 +50,35 @@ class ThemeExtensions extends ThemeExtension<ThemeExtensions> {
     required this.paragraphSemiBold,
   });
 
-  final Color background;
-  final Color mainGreen;
-  final Color red;
-  final Color textColor;
-  final Color textLightGrey;
-  final Color textGrey;
-  final Color semiGrey;
-  final Color bgGrey;
-  final Color subYellow;
-  final Color lightSilver;
-  final Color honeydew;
-  final Color darkGreen;
-  final Color secondGreen;
-  final Color cyan;
-  final Color smokyBlack;
-  final Color palmLeaf;
-  final Color black;
-  final Color white;
-  final Color dartmouthGreen;
-  final Color apple;
-  final Color cultured;
-  final Color transparent;
-  final Color smokyWhite;
-  final Color chineseSilver;
-  final Color antiFlashWhite;
-  final Color chineseBlack;
-  final Color wildSand;
-  final Color alabaster;
-  final Color orange;
+  final dynamic background;
+  final dynamic mainGreen;
+  final dynamic red;
+  final dynamic textColor;
+  final dynamic textLightGrey;
+  final dynamic textGrey;
+  final dynamic semiGrey;
+  final dynamic bgGrey;
+  final dynamic subYellow;
+  final dynamic lightSilver;
+  final dynamic honeydew;
+  final dynamic darkGreen;
+  final dynamic secondGreen;
+  final dynamic cyan;
+  final dynamic smokyBlack;
+  final dynamic palmLeaf;
+  final dynamic black;
+  final dynamic white;
+  final dynamic dartmouthGreen;
+  final dynamic apple;
+  final dynamic cultured;
+  final dynamic transparent;
+  final dynamic smokyWhite;
+  final dynamic chineseSilver;
+  final dynamic antiFlashWhite;
+  final dynamic chineseBlack;
+  final dynamic wildSand;
+  final dynamic alabaster;
+  final dynamic orange;
   final TextStyle headline;
   final TextStyle heading1;
   final TextStyle heading2;
@@ -178,35 +178,35 @@ class ThemeExtensions extends ThemeExtension<ThemeExtensions> {
 
   @override
   ThemeExtensions copyWith({
-    Color? background,
-    Color? mainGreen,
-    Color? red,
-    Color? textColor,
-    Color? textLightGrey,
-    Color? textGrey,
-    Color? semiGrey,
-    Color? bgGrey,
-    Color? subYellow,
-    Color? lightSilver,
-    Color? honeydew,
-    Color? darkGreen,
-    Color? secondGreen,
-    Color? cyan,
-    Color? smokyBlack,
-    Color? palmLeaf,
-    Color? black,
-    Color? white,
-    Color? dartmouthGreen,
-    Color? apple,
-    Color? cultured,
-    Color? transparent,
-    Color? smokyWhite,
-    Color? chineseSilver,
-    Color? antiFlashWhite,
-    Color? chineseBlack,
-    Color? wildSand,
-    Color? alabaster,
-    Color? orange,
+    dynamic background,
+    dynamic mainGreen,
+    dynamic red,
+    dynamic textColor,
+    dynamic textLightGrey,
+    dynamic textGrey,
+    dynamic semiGrey,
+    dynamic bgGrey,
+    dynamic subYellow,
+    dynamic lightSilver,
+    dynamic honeydew,
+    dynamic darkGreen,
+    dynamic secondGreen,
+    dynamic cyan,
+    dynamic smokyBlack,
+    dynamic palmLeaf,
+    dynamic black,
+    dynamic white,
+    dynamic dartmouthGreen,
+    dynamic apple,
+    dynamic cultured,
+    dynamic transparent,
+    dynamic smokyWhite,
+    dynamic chineseSilver,
+    dynamic antiFlashWhite,
+    dynamic chineseBlack,
+    dynamic wildSand,
+    dynamic alabaster,
+    dynamic orange,
     TextStyle? headline,
     TextStyle? heading1,
     TextStyle? heading2,
@@ -263,35 +263,35 @@ class ThemeExtensions extends ThemeExtension<ThemeExtensions> {
   ThemeExtensions lerp(ThemeExtension<ThemeExtensions>? other, double t) {
     if (other is! ThemeExtensions) return this;
     return ThemeExtensions(
-      background: Color.lerp(background, other.background, t)!,
-      mainGreen: Color.lerp(mainGreen, other.mainGreen, t)!,
-      red: Color.lerp(red, other.red, t)!,
-      textColor: Color.lerp(textColor, other.textColor, t)!,
-      textLightGrey: Color.lerp(textLightGrey, other.textLightGrey, t)!,
-      textGrey: Color.lerp(textGrey, other.textGrey, t)!,
-      semiGrey: Color.lerp(semiGrey, other.semiGrey, t)!,
-      bgGrey: Color.lerp(bgGrey, other.bgGrey, t)!,
-      subYellow: Color.lerp(subYellow, other.subYellow, t)!,
-      lightSilver: Color.lerp(lightSilver, other.lightSilver, t)!,
-      honeydew: Color.lerp(honeydew, other.honeydew, t)!,
-      darkGreen: Color.lerp(darkGreen, other.darkGreen, t)!,
-      secondGreen: Color.lerp(secondGreen, other.secondGreen, t)!,
-      cyan: Color.lerp(cyan, other.cyan, t)!,
-      smokyBlack: Color.lerp(smokyBlack, other.smokyBlack, t)!,
-      palmLeaf: Color.lerp(palmLeaf, other.palmLeaf, t)!,
-      black: Color.lerp(black, other.black, t)!,
-      white: Color.lerp(white, other.white, t)!,
-      dartmouthGreen: Color.lerp(dartmouthGreen, other.dartmouthGreen, t)!,
-      apple: Color.lerp(apple, other.apple, t)!,
-      cultured: Color.lerp(cultured, other.cultured, t)!,
-      transparent: Color.lerp(transparent, other.transparent, t)!,
-      smokyWhite: Color.lerp(smokyWhite, other.smokyWhite, t)!,
-      chineseSilver: Color.lerp(chineseSilver, other.chineseSilver, t)!,
-      antiFlashWhite: Color.lerp(antiFlashWhite, other.antiFlashWhite, t)!,
-      chineseBlack: Color.lerp(chineseBlack, other.chineseBlack, t)!,
-      wildSand: Color.lerp(wildSand, other.wildSand, t)!,
-      alabaster: Color.lerp(alabaster, other.alabaster, t)!,
-      orange: Color.lerp(orange, other.orange, t)!,
+      background: t < 0.5 ? background : other.background,
+      mainGreen: t < 0.5 ? mainGreen : other.mainGreen,
+      red: t < 0.5 ? red : other.red,
+      textColor: t < 0.5 ? textColor : other.textColor,
+      textLightGrey: t < 0.5 ? textLightGrey : other.textLightGrey,
+      textGrey: t < 0.5 ? textGrey : other.textGrey,
+      semiGrey: t < 0.5 ? semiGrey : other.semiGrey,
+      bgGrey: t < 0.5 ? bgGrey : other.bgGrey,
+      subYellow: t < 0.5 ? subYellow : other.subYellow,
+      lightSilver: t < 0.5 ? lightSilver : other.lightSilver,
+      honeydew: t < 0.5 ? honeydew : other.honeydew,
+      darkGreen: t < 0.5 ? darkGreen : other.darkGreen,
+      secondGreen: t < 0.5 ? secondGreen : other.secondGreen,
+      cyan: t < 0.5 ? cyan : other.cyan,
+      smokyBlack: t < 0.5 ? smokyBlack : other.smokyBlack,
+      palmLeaf: t < 0.5 ? palmLeaf : other.palmLeaf,
+      black: t < 0.5 ? black : other.black,
+      white: t < 0.5 ? white : other.white,
+      dartmouthGreen: t < 0.5 ? dartmouthGreen : other.dartmouthGreen,
+      apple: t < 0.5 ? apple : other.apple,
+      cultured: t < 0.5 ? cultured : other.cultured,
+      transparent: t < 0.5 ? transparent : other.transparent,
+      smokyWhite: t < 0.5 ? smokyWhite : other.smokyWhite,
+      chineseSilver: t < 0.5 ? chineseSilver : other.chineseSilver,
+      antiFlashWhite: t < 0.5 ? antiFlashWhite : other.antiFlashWhite,
+      chineseBlack: t < 0.5 ? chineseBlack : other.chineseBlack,
+      wildSand: t < 0.5 ? wildSand : other.wildSand,
+      alabaster: t < 0.5 ? alabaster : other.alabaster,
+      orange: t < 0.5 ? orange : other.orange,
       headline: TextStyle.lerp(headline, other.headline, t)!,
       heading1: TextStyle.lerp(heading1, other.heading1, t)!,
       heading2: TextStyle.lerp(heading2, other.heading2, t)!,
