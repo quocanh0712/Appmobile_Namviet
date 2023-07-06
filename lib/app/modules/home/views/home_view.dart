@@ -59,16 +59,25 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const SizedBox(height: 36),
-                    Assets.images.ftuLogo
-                        .image(width: 68, height: 68, fit: BoxFit.cover),
+                    Obx(() => Visibility(
+                          visible: true,
+                          child: Image.asset(controller.imagePath.value,
+                              height: 68, width: 68, fit: BoxFit.cover),
+                        )),
                     const SizedBox(height: 13),
-                    Obx(() => AutoSizeText(
-                        controller.userObject.value?.fullname ?? '',
+                    Obx(() => AutoSizeText(controller.title.value,
                         style: context.themeExtensions.heading1
                             .copyWith(color: context.themeExtensions.white))),
                     const SizedBox(height: 3),
                     Obx(() => AutoSizeText(
+                        "${controller.userObject.value?.fullname}",
+                        //controller.name.value,
+                        style: context.themeExtensions.subTex
+                            .copyWith(color: context.themeExtensions.white))),
+                    const SizedBox(height: 3),
+                    Obx(() => AutoSizeText(
                         "${controller.userObject.value?.username}",
+                        //controller.username.value,
                         style: context.themeExtensions.subTex
                             .copyWith(color: context.themeExtensions.white)))
                   ],
@@ -355,6 +364,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     return _buildStudentUtilities(context);
   }
 
+  /////////////////////////////////////////////////////  /////////////////////////////////////////////////////
   // Widget _buildTeacherUtilities(BuildContext context) {
   //   return Column(
   //     mainAxisAlignment: MainAxisAlignment.start,
@@ -489,6 +499,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
   //     ],
   //   );
   // }
+  /////////////////////////////////////////////////////  /////////////////////////////////////////////////////
   Widget _buildTeacherUtilities(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -715,7 +726,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                             .copyWith(color: context.themeExtensions.textColor),
                       ),
                       AutoSizeText(
-                        "${Jiffy().EEEE}, ${Jiffy().date}/${Jiffy().month}/${Jiffy().year}",
+                        //"${Jiffy().EEEE}, ${Jiffy().date}/${Jiffy().month}/${Jiffy().year}",
+                        "Thứ Hai, 26/06/2023",
                         style: context.themeExtensions.subTexMedium
                             .copyWith(color: context.themeExtensions.textGrey),
                       ),

@@ -21,6 +21,7 @@ class LoginController extends BaseController {
   late FocusNode? userNameFocusNode;
   final userNameIsFocus = false.obs;
   String? userName;
+  int? idDonVi = 0;
   final showUserNameClearIcon = false.obs;
 
   late TextEditingController? passwordTextEditingController;
@@ -38,6 +39,33 @@ class LoginController extends BaseController {
   final BiometricAuthenticator biometricAuthenticator = Get.find();
   final biometricLoginIsEnable = true.obs;
   final showBiometricLogin = false.obs;
+
+  List<DropdownMenuItem> list = [
+    DropdownMenuItem(
+        value: 0,
+        child: Center(
+            child: Text("---Mời chọn đơn vị---", textAlign: TextAlign.center))),
+    DropdownMenuItem(
+        value: 1,
+        child: Text("Trường Đại học Ngoại ngữ Đà Nẵng",
+            textAlign: TextAlign.center)),
+    DropdownMenuItem(
+        value: 2,
+        child: Text("Trường Đại học Nông Lâm Thái Nguyên",
+            textAlign: TextAlign.center)),
+    DropdownMenuItem(
+        value: 3,
+        child: Text("Trường Đai học Sư phạm Nghệ thuật TW",
+            textAlign: TextAlign.center)),
+    DropdownMenuItem(
+        value: 4,
+        child: Text("Trường Đại học Sư phạm TDTT Hà Nội",
+            textAlign: TextAlign.center)),
+    DropdownMenuItem(
+        value: 5,
+        child: Text("Trường Quốc tế - Đại học Quốc Gia Hà Nội",
+            textAlign: TextAlign.center))
+  ];
 
   @override
   void onInit() {
@@ -66,7 +94,7 @@ class LoginController extends BaseController {
   }
 
   _handleUserNameTextFieldFocus() {
-    Fimber.d("_handleUserNameTextFieldFocusState()");
+    //Fimber.d("_handleUserNameTextFieldFocusState()");
     userNameFocusNode?.addListener(() {
       if (userNameFocusNode?.hasFocus == true) {
         userNameIsFocus.value = true;
@@ -79,7 +107,7 @@ class LoginController extends BaseController {
   }
 
   _handlePasswordTextFieldFocus() {
-    Fimber.d("_handlePasswordTextFieldFocus");
+    //Fimber.d("_handlePasswordTextFieldFocus");
     passwordFocusNode?.addListener(() {
       if (passwordFocusNode?.hasFocus == true) {
         passwordIsFocus.value = true;
@@ -93,7 +121,7 @@ class LoginController extends BaseController {
 
   @visibleForTesting
   checkBiometricAuthentication() async {
-    Fimber.d("checkBiometricAuthentication()");
+    //Fimber.d("checkBiometricAuthentication()");
     biometricAuthIsNotSupported =
         await biometricAuthenticator.deviceIsSupported();
     if (biometricAuthIsNotSupported == true) {
@@ -103,26 +131,26 @@ class LoginController extends BaseController {
   }
 
   userNameTextChanged(String? userName) {
-    Fimber.d("userNameTextChanged(String? $userName)");
+    //Fimber.d("userNameTextChanged(String? $userName)");
     this.userName = userName;
     showUserNameClearIcon.value = true;
   }
 
   clearUserName() {
-    Fimber.d("clearUserName()");
+    //Fimber.d("clearUserName()");
     userNameTextEditingController?.clear();
     userName = '';
     showUserNameClearIcon.value = false;
   }
 
   passwordTextChanged(String? password) {
-    Fimber.d("passwordTextChanged(String? $password)");
+    //Fimber.d("passwordTextChanged(String? $password)");
     this.password = password;
     showPasswordClearIcon.value = true;
   }
 
   clearPassword() {
-    Fimber.d("clearPassword()");
+    //Fimber.d("clearPassword()");
     passwordTextEditingController?.clear();
     password = '';
     showPasswordClearIcon.value = false;
@@ -133,10 +161,17 @@ class LoginController extends BaseController {
   }
 
   performLogin() async {
-    Fimber.d("performLogin()");
     // mock user/pass. This one will be remove in the production.
-    // userName = userName?.isNotEmpty == true ? userName : /*"219203012 namviet"*/ "219203012";
-    // password = password?.isNotEmpty == true ? password : /*"hue23052001 123@123"*/ "hue23052001";
+    userName = userName?.isNotEmpty == true
+        ? userName
+        : /*"219203012 namviet"*/ "tester";
+    password = password?.isNotEmpty == true
+        ? password
+        : /*"hue23052001 123@123  Namvietjsc2023"*/ "ABC@123.com";
+    if (idDonVi == 0 || idDonVi == null) {
+      isError.value = LocaleKeys.idDonViIsNotEmpty.tr;
+      return;
+    }
     if (userName.isEmptyOrNull) {
       if (password.isEmptyOrNull) {
         isError.value = LocaleKeys.userNameAndPasswordIsNotEmpty.tr;
@@ -151,15 +186,13 @@ class LoginController extends BaseController {
     }
     if (isLoading.value) return;
     isLoading.value = true;
-    final response = await userRepo.login(userName, password);
+    final response = await userRepo.login(userName, password, idDonVi);
     response.when(success: (user) async {
       isLoading.value = false;
-      Fimber.d("login() - logged in: ${jsonEncode(user.result?.toJson())}");
+      //Fimber.d("login() - logged in: ${jsonEncode(user.result?.toJson())}");
       if (user.isSuccess()) {
-        await userRepo.saveUserInfo(user.result?.copyWith(password: password));
-        // userRepo.saveUserInfo(
-        //     user.result?.copyWith(password: password, role: UserPermission.student.value));
-
+        await userRepo.saveUserInfo(
+            user.result?.copyWith(password: password, idDonVi: idDonVi));
         // share external User Id
         OneSignal.shared
             .setExternalUserId(user.result?.iduser ?? Constants.EMPTY);
@@ -181,5 +214,9 @@ class LoginController extends BaseController {
     final authenticated = await biometricAuthenticator
         .authenticateWithBiometrics(LocaleKeys.bimometricDescription.tr);
     if (authenticated) Get.offAllNamed(Routes.DASHBOARD);
+  }
+
+  void getValueDropDown(int? value) async {
+    idDonVi = value;
   }
 }

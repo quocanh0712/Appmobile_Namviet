@@ -61,13 +61,14 @@ class UserObjectAdapter extends TypeAdapter<UserObject> {
       biometricAuth: fields[21] as bool?,
       avatar: fields[22] as String?,
       password: fields[23] as String?,
+      idDonVi: fields[24] as int?,
     );
   }
 
   @override
   void write(BinaryWriter writer, UserObject obj) {
     writer
-      ..writeByte(24)
+      ..writeByte(25)
       ..writeByte(0)
       ..write(obj.iduser)
       ..writeByte(1)
@@ -115,7 +116,9 @@ class UserObjectAdapter extends TypeAdapter<UserObject> {
       ..writeByte(22)
       ..write(obj.avatar)
       ..writeByte(23)
-      ..write(obj.password);
+      ..write(obj.password)
+      ..writeByte(24)
+      ..write(obj.idDonVi);
   }
 
   @override
@@ -159,6 +162,7 @@ _$_UserObject _$$_UserObjectFromJson(Map<String, dynamic> json) =>
       biometricAuth: json['biometricAuth'] as bool?,
       avatar: json['avatar'] as String?,
       password: json['password'] as String?,
+      idDonVi: json['idDonVi'] as int?,
     );
 
 Map<String, dynamic> _$$_UserObjectToJson(_$_UserObject instance) =>
@@ -187,4 +191,5 @@ Map<String, dynamic> _$$_UserObjectToJson(_$_UserObject instance) =>
       'biometricAuth': instance.biometricAuth,
       'avatar': instance.avatar,
       'password': instance.password,
+      'idDonVi': instance.idDonVi,
     };

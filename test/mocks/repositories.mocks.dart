@@ -353,6 +353,7 @@ class MockUserRepository extends _i1.Mock implements _i6.UserRepository {
       login(
     String? userName,
     String? password,
+    int? idDonVi,
   ) =>
           (super.noSuchMethod(
             Invocation.method(
@@ -360,6 +361,7 @@ class MockUserRepository extends _i1.Mock implements _i6.UserRepository {
               [
                 userName,
                 password,
+                idDonVi,
               ],
             ),
             returnValue: _i5.Future<
@@ -372,6 +374,7 @@ class MockUserRepository extends _i1.Mock implements _i6.UserRepository {
                 [
                   userName,
                   password,
+                  idDonVi,
                 ],
               ),
             )),
@@ -385,6 +388,7 @@ class MockUserRepository extends _i1.Mock implements _i6.UserRepository {
                 [
                   userName,
                   password,
+                  idDonVi,
                 ],
               ),
             )),

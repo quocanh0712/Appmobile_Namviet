@@ -11,6 +11,7 @@ import 'package:ftu_lms/data/repositories/user_repository.dart';
 import 'package:ftu_lms/utils/biometric_auth/biometric_authenticator.dart';
 import 'package:get/get.dart';
 import 'package:sliding_up_panel2/sliding_up_panel2.dart';
+import '../../../../generated/assets.gen.dart';
 
 class PersonalController extends BaseController {
   late ScrollController? scrollController;
@@ -28,23 +29,57 @@ class PersonalController extends BaseController {
 
   Rx<bool> isTeacherPermission = false.obs;
 
+  int? idDonVi = 0;
+  Rx<String> title = "NAM VIỆT JSC".obs;
+  Rx<String> imagePath = Assets.images.ftuLogo.path.obs;
+
   @override
-  void onInit() {
+  void onInit() async {
     super.onInit();
     scrollController = ScrollController();
     panelController = PanelController();
+    userObject.value = await userRepo.retrieveUserInfo();
+    idDonVi = userObject.value?.idDonVi;
+    switch (idDonVi) {
+      case 1:
+        title.value = "Trường ĐH Ngoại ngữ Đà Nẵng";
+        imagePath.value = Assets.images.ftuLogo.path;
+        break;
+      case 2:
+        title.value = "Trường ĐH Nông Lâm Thái Nguyên";
+        imagePath.value = Assets.images.icBookPng.path;
+        break;
+      case 3:
+        title.value = "Trường ĐH SPNT Trung Ương";
+        imagePath.value = Assets.images.homeBotLeftButBg.path;
+        break;
+      case 4:
+        title.value = "Trường ĐH Sư phạm TDTT Hà Nội";
+        imagePath.value = Assets.images.ftuLogo.path;
+        break;
+      case 5:
+        title.value = "Trường Quốc tế - ĐHQG Hà Nội";
+        imagePath.value = Assets.images.icBookPng.path;
+        break;
+      default:
+        title.value = "NAM VIỆT JSC";
+        imagePath.value = Assets.images.ftuLogo.path;
+        break;
+    }
   }
 
   @override
   void onReady() async {
     super.onReady();
     Fimber.d("onReady()");
-    biometricAuthIsNotSupported.value = await biometricAuthenticator.deviceIsSupported();
+    biometricAuthIsNotSupported.value =
+        await biometricAuthenticator.deviceIsSupported();
     userObject.value = await userRepo.retrieveUserInfo();
     if (biometricAuthIsNotSupported.value) {
       biometricLoginIsEnable.value = userObject.value?.biometricAuth ?? false;
     }
-    isTeacherPermission.value = userObject.value?.retrievePermission() == UserPermission.teacher;
+    isTeacherPermission.value =
+        userObject.value?.retrievePermission() == UserPermission.teacher;
     if (isTeacherPermission.value == false) retrieveSemesterPoints();
   }
 

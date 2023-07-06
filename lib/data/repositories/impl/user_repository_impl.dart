@@ -22,8 +22,8 @@ class UserRepositoryImpl extends UserRepository {
     box.put(StorageKeys.userKey, userObject);
     this.userObject = userObject;
     // pass informations to the App Configurations.
-    Get.find<AppConfigsRepository>()
-        .saveAppConfigurations(AppConfigurations(accessToken: userObject.accessToken));
+    Get.find<AppConfigsRepository>().saveAppConfigurations(AppConfigurations(
+        accessToken: userObject.accessToken, idDonVi: userObject.idDonVi));
   }
 
   @override
@@ -57,7 +57,9 @@ class UserRepositoryImpl extends UserRepository {
 
   @override
   Future<Result<BaseResponseObject<UserObject?>, NetworkError>> login(
-      String? userName, String? password) {
+      String? userName, String? password, int? idDonVi) {
+    Get.find<AppConfigsRepository>()
+        .saveAppConfigurations(AppConfigurations(idDonVi: idDonVi));
     return NetworkExecutor.execute<BaseResponseObject<UserObject?>,
             BaseResponseObject<UserObject?>>(
         route: UserClient.login(userName, password),
@@ -67,7 +69,8 @@ class UserRepositoryImpl extends UserRepository {
   @override
   Future<Result<BaseResponseObject<int?>, NetworkError>> changePass(
       String? oldPass, String? newPass) {
-    return NetworkExecutor.execute<BaseResponseObject<int?>, BaseResponseObject<int?>>(
+    return NetworkExecutor.execute<BaseResponseObject<int?>,
+            BaseResponseObject<int?>>(
         route: UserClient.changePass(oldPass, newPass),
         responseType: const BaseResponseObject<int?>());
   }
@@ -76,13 +79,18 @@ class UserRepositoryImpl extends UserRepository {
   Future<Result<BaseResponseObject<int?>, NetworkError>> logout() async {
     userObject = null;
     await removeUserInfo();
-    return NetworkExecutor.execute<BaseResponseObject<int?>, BaseResponseObject<int?>>(
-        route: UserClient.logout(), responseType: const BaseResponseObject<int?>());
+    return NetworkExecutor.execute<BaseResponseObject<int?>,
+            BaseResponseObject<int?>>(
+        route: UserClient.logout(),
+        responseType: const BaseResponseObject<int?>());
   }
 
   @override
-  Future<Result<BaseResponseObject<int?>, NetworkError>> update(UserObject? user) {
-    return NetworkExecutor.execute<BaseResponseObject<int?>, BaseResponseObject<int?>>(
-        route: UserClient.update(user), responseType: const BaseResponseObject<int?>());
+  Future<Result<BaseResponseObject<int?>, NetworkError>> update(
+      UserObject? user) {
+    return NetworkExecutor.execute<BaseResponseObject<int?>,
+            BaseResponseObject<int?>>(
+        route: UserClient.update(user),
+        responseType: const BaseResponseObject<int?>());
   }
 }

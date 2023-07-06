@@ -15,6 +15,8 @@ import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:get/get.dart';
 import 'package:sliding_up_panel2/sliding_up_panel2.dart';
 
+import '../../../../generated/assets.gen.dart';
+
 class HomeController extends BaseController {
   final ScrollController scrollController = ScrollController();
   PanelController? panelController = PanelController();
@@ -32,12 +34,54 @@ class HomeController extends BaseController {
   Rx<UserObject?> userObject = UserObject().obs;
   Rx<UserPermission>? userPermission = UserPermission.none.obs;
 
+  int? idDonVi = 0;
+  Rx<String> title = "NAM VIỆT JSC".obs;
+  Rx<String> imagePath = Assets.images.icBookPng.path.obs;
+  // Rx<String> username = "19571402060106".obs;
+  // Rx<String> name = "Đỗ Thịnh An".obs;
+  // Rx<String> username = "admin".obs;
+  // Rx<String> name = "Quản trị hệ thống".obs;
+
+  @override
+  void onInit() async {
+    super.onInit();
+    userObject.value = await userRepo.retrieveUserInfo();
+    idDonVi = userObject.value?.idDonVi;
+    switch (idDonVi) {
+      case 1:
+        title.value = "Trường ĐH Ngoại ngữ Đà Nẵng";
+        imagePath.value = Assets.images.ftuLogo.path;
+        break;
+      case 2:
+        title.value = "Trường ĐH Nông Lâm Thái Nguyên";
+        imagePath.value = Assets.images.homeBotLeftButBg.path;
+        break;
+      case 3:
+        title.value = "Trường ĐH SPNT Trung Ương";
+        imagePath.value = Assets.images.homeBotLeftButBg.path;
+        break;
+      case 4:
+        title.value = "Trường ĐH Sư phạm TDTT Hà Nội";
+        imagePath.value = Assets.images.homeBotLeftButBg.path;
+        break;
+      case 5:
+        title.value = "Trường Quốc tế - ĐHQG Hà Nội";
+        imagePath.value = Assets.images.homeBotLeftButBg.path;
+        break;
+      default:
+        title.value = "NAM VIỆT JSC";
+        imagePath.value = Assets.images.icBookPng.path;
+        break;
+    }
+  }
+
   @override
   void onReady() async {
     super.onReady();
     Fimber.d("onReady()");
     userObject.value = await userRepo.retrieveUserInfo();
-    userPermission?.value = userObject.value?.retrievePermission() ?? UserPermission.none;
+    userPermission?.value =
+        userObject.value?.retrievePermission() ?? UserPermission.none;
     retrieveData();
   }
 

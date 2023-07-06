@@ -41,9 +41,11 @@ class UserObject with _$UserObject {
     @HiveField(21) bool? biometricAuth,
     @HiveField(22) String? avatar,
     @HiveField(23) String? password,
+    @HiveField(24) int? idDonVi,
   }) = _UserObject;
 
-  factory UserObject.fromJson(Map<String, dynamic> json) => _$UserObjectFromJson(json);
+  factory UserObject.fromJson(Map<String, dynamic> json) =>
+      _$UserObjectFromJson(json);
 }
 
 enum UserPermission { none, parent, student, teacher }

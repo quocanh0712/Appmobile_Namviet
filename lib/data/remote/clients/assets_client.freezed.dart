@@ -20,32 +20,38 @@ mixin _$AssetsClient {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? barcode) checkin,
+    required TResult Function(String? barcode) scaninfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? barcode)? checkin,
+    TResult? Function(String? barcode)? scaninfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? barcode)? checkin,
+    TResult Function(String? barcode)? scaninfo,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Inventory value) checkin,
+    required TResult Function(_InventoryInfo value) scaninfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Inventory value)? checkin,
+    TResult? Function(_InventoryInfo value)? scaninfo,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Inventory value)? checkin,
+    TResult Function(_InventoryInfo value)? scaninfo,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -155,6 +161,7 @@ class _$_Inventory extends _Inventory {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(String? barcode) checkin,
+    required TResult Function(String? barcode) scaninfo,
   }) {
     return checkin(barcode);
   }
@@ -163,6 +170,7 @@ class _$_Inventory extends _Inventory {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(String? barcode)? checkin,
+    TResult? Function(String? barcode)? scaninfo,
   }) {
     return checkin?.call(barcode);
   }
@@ -171,6 +179,7 @@ class _$_Inventory extends _Inventory {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(String? barcode)? checkin,
+    TResult Function(String? barcode)? scaninfo,
     required TResult orElse(),
   }) {
     if (checkin != null) {
@@ -183,6 +192,7 @@ class _$_Inventory extends _Inventory {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Inventory value) checkin,
+    required TResult Function(_InventoryInfo value) scaninfo,
   }) {
     return checkin(this);
   }
@@ -191,6 +201,7 @@ class _$_Inventory extends _Inventory {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Inventory value)? checkin,
+    TResult? Function(_InventoryInfo value)? scaninfo,
   }) {
     return checkin?.call(this);
   }
@@ -199,6 +210,7 @@ class _$_Inventory extends _Inventory {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Inventory value)? checkin,
+    TResult Function(_InventoryInfo value)? scaninfo,
     required TResult orElse(),
   }) {
     if (checkin != null) {
@@ -217,5 +229,143 @@ abstract class _Inventory extends AssetsClient {
   @override
   @JsonKey(ignore: true)
   _$$_InventoryCopyWith<_$_Inventory> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_InventoryInfoCopyWith<$Res>
+    implements $AssetsClientCopyWith<$Res> {
+  factory _$$_InventoryInfoCopyWith(
+          _$_InventoryInfo value, $Res Function(_$_InventoryInfo) then) =
+      __$$_InventoryInfoCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String? barcode});
+}
+
+/// @nodoc
+class __$$_InventoryInfoCopyWithImpl<$Res>
+    extends _$AssetsClientCopyWithImpl<$Res, _$_InventoryInfo>
+    implements _$$_InventoryInfoCopyWith<$Res> {
+  __$$_InventoryInfoCopyWithImpl(
+      _$_InventoryInfo _value, $Res Function(_$_InventoryInfo) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? barcode = freezed,
+  }) {
+    return _then(_$_InventoryInfo(
+      freezed == barcode
+          ? _value.barcode
+          : barcode // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_InventoryInfo extends _InventoryInfo {
+  _$_InventoryInfo(this.barcode) : super._();
+
+  @override
+  final String? barcode;
+
+  @override
+  String toString() {
+    return 'AssetsClient.scaninfo(barcode: $barcode)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_InventoryInfo &&
+            (identical(other.barcode, barcode) || other.barcode == barcode));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, barcode);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_InventoryInfoCopyWith<_$_InventoryInfo> get copyWith =>
+      __$$_InventoryInfoCopyWithImpl<_$_InventoryInfo>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String? barcode) checkin,
+    required TResult Function(String? barcode) scaninfo,
+  }) {
+    return scaninfo(barcode);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? barcode)? checkin,
+    TResult? Function(String? barcode)? scaninfo,
+  }) {
+    return scaninfo?.call(barcode);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? barcode)? checkin,
+    TResult Function(String? barcode)? scaninfo,
+    required TResult orElse(),
+  }) {
+    if (scaninfo != null) {
+      return scaninfo(barcode);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Inventory value) checkin,
+    required TResult Function(_InventoryInfo value) scaninfo,
+  }) {
+    return scaninfo(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Inventory value)? checkin,
+    TResult? Function(_InventoryInfo value)? scaninfo,
+  }) {
+    return scaninfo?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Inventory value)? checkin,
+    TResult Function(_InventoryInfo value)? scaninfo,
+    required TResult orElse(),
+  }) {
+    if (scaninfo != null) {
+      return scaninfo(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _InventoryInfo extends AssetsClient {
+  factory _InventoryInfo(final String? barcode) = _$_InventoryInfo;
+  _InventoryInfo._() : super._();
+
+  @override
+  String? get barcode;
+  @override
+  @JsonKey(ignore: true)
+  _$$_InventoryInfoCopyWith<_$_InventoryInfo> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -17,8 +17,9 @@ abstract class UserRepository {
   Future<UserPermission?> retrieveUserPermission();
   Future<void> toggleBiometricLogin(bool? enable);
   Future<Result<BaseResponseObject<UserObject?>, NetworkError>> login(
-      String? userName, String? password);
-  Future<Result<BaseResponseObject<int?>, NetworkError>> update(UserObject? user);
+      String? userName, String? password, int? idDonVi);
+  Future<Result<BaseResponseObject<int?>, NetworkError>> update(
+      UserObject? user);
   Future<Result<BaseResponseObject<int?>, NetworkError>> changePass(
       String? oldPass, String? newPass);
   Future<Result<BaseResponseObject<int?>, NetworkError>> logout();

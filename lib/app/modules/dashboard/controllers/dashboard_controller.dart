@@ -6,5 +6,5 @@ import 'package:get/get.dart';
 
 class DashboardController extends BaseController {
   final currentTabIndex = homeTabIndex.obs;
-  final notiCount = '8'.obs;
+  final notiCount = '3'.obs;
 }

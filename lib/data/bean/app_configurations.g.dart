@@ -21,13 +21,14 @@ class AppConfigurationsAdapter extends TypeAdapter<AppConfigurations> {
       accessToken: fields[4] as String?,
       refreshToken: fields[5] as String?,
       baseUrl: fields[6] as String?,
+      idDonVi: fields[7] as int?,
     );
   }
 
   @override
   void write(BinaryWriter writer, AppConfigurations obj) {
     writer
-      ..writeByte(4)
+      ..writeByte(5)
       ..writeByte(0)
       ..write(obj.latestSyncedTime)
       ..writeByte(4)
@@ -35,7 +36,9 @@ class AppConfigurationsAdapter extends TypeAdapter<AppConfigurations> {
       ..writeByte(5)
       ..write(obj.refreshToken)
       ..writeByte(6)
-      ..write(obj.baseUrl);
+      ..write(obj.baseUrl)
+      ..writeByte(7)
+      ..write(obj.idDonVi);
   }
 
   @override
@@ -59,6 +62,7 @@ _$_AppConfigurations _$$_AppConfigurationsFromJson(Map<String, dynamic> json) =>
       accessToken: json['accessToken'] as String?,
       refreshToken: json['refreshToken'] as String?,
       baseUrl: json['baseUrl'] as String?,
+      idDonVi: json['idDonVi'] as int?,
     );
 
 Map<String, dynamic> _$$_AppConfigurationsToJson(
@@ -68,4 +72,5 @@ Map<String, dynamic> _$$_AppConfigurationsToJson(
       'accessToken': instance.accessToken,
       'refreshToken': instance.refreshToken,
       'baseUrl': instance.baseUrl,
+      'idDonVi': instance.idDonVi,
     };

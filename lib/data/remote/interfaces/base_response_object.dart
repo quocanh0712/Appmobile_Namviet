@@ -27,6 +27,7 @@ import 'package:ftu_lms/app/modules/working_process/model/language_process_respo
 import 'package:ftu_lms/app/modules/working_process/model/learning_process_response.dart';
 import 'package:ftu_lms/app/modules/working_process/model/learning_profile_response.dart';
 import 'package:ftu_lms/app/modules/working_process/model/working_process_response.dart';
+import 'package:ftu_lms/data/bean/CheckIn/checkin_object.dart';
 import 'package:ftu_lms/data/bean/all_courses_points_object/all_courses_points_object.dart';
 import 'package:ftu_lms/data/bean/finance_response_object/finance_response_object.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_response_object.dart';
@@ -80,23 +81,36 @@ extension NetworkResponseConverter on BaseResponseObject {
       return BaseResponseObject<UserObject>.fromJson(json, jsonToUserObject);
     }
     if (this is BaseResponseObject<UserObject?>) {
-      return BaseResponseObject<UserObject?>.fromJson(json, jsonToNullableUserObject);
+      return BaseResponseObject<UserObject?>.fromJson(
+          json, jsonToNullableUserObject);
+    }
+    if (this is BaseResponseObject<CheckInObject>) {
+      return BaseResponseObject<CheckInObject>.fromJson(
+          json, jsonToCheckInObject);
+    }
+    if (this is BaseResponseObject<CheckInObject?>) {
+      return BaseResponseObject<CheckInObject?>.fromJson(
+          json, jsonToNullableCheckInObject);
     }
     if (this is BaseResponseObject<List<UserObject>>) {
-      return BaseResponseObject<List<UserObject>>.fromJson(json, jsonToListUserObjects);
+      return BaseResponseObject<List<UserObject>>.fromJson(
+          json, jsonToListUserObjects);
     }
     if (this is BaseResponseObject<List<UserObject?>>) {
-      return BaseResponseObject<List<UserObject?>>.fromJson(json, jsonToListNullableUserObjects);
+      return BaseResponseObject<List<UserObject?>>.fromJson(
+          json, jsonToListNullableUserObjects);
     }
     if (this is BaseResponseObject<List<UserObject>?>) {
-      return BaseResponseObject<List<UserObject>?>.fromJson(json, jsonToListUserObjects);
+      return BaseResponseObject<List<UserObject>?>.fromJson(
+          json, jsonToListUserObjects);
     }
     if (this is BaseResponseObject<List<KeyValueResponse?>?>) {
       return BaseResponseObject<List<KeyValueResponse?>?>.fromJson(
           json, jsonToListNullableKeyValueResponses);
     }
     if (this is BaseResponseObject<List<UserObject?>?>) {
-      return BaseResponseObject<List<UserObject?>?>.fromJson(json, jsonToListNullableUserObjects);
+      return BaseResponseObject<List<UserObject?>?>.fromJson(
+          json, jsonToListNullableUserObjects);
     }
     if (this is BaseResponseObject<List<ScheduleTimeResponse?>?>) {
       return BaseResponseObject<List<ScheduleTimeResponse?>?>.fromJson(
@@ -111,7 +125,8 @@ extension NetworkResponseConverter on BaseResponseObject {
           json, jsonToListNullableScientificResearchResponses);
     }
     if (this is BaseResponseObject<List<ItemScientificResearchResponse?>?>) {
-      return BaseResponseObject<List<ItemScientificResearchResponse?>?>.fromJson(
+      return BaseResponseObject<
+              List<ItemScientificResearchResponse?>?>.fromJson(
           json, jsonToListNullableItemScientificResearchResponses);
     }
     if (this is BaseResponseObject<List<ConversationResponse?>?>) {
@@ -180,8 +195,9 @@ extension NetworkResponseConverter on BaseResponseObject {
     }
     if (this is BaseResponseObject<PhotoObject?>) {
       json.addAll({
-        'color':
-            Color((math.Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0).toHexString()
+        'color': Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+            .withOpacity(1.0)
+            .toHexString()
       });
       return BaseResponseObject<PhotoObject?>.fromJson(
           {"result": json}, jsonToNullablePhotoObject);
@@ -231,7 +247,8 @@ extension NetworkResponseConverter on BaseResponseObject {
           json, jsonToNullablePracticePointResponseObject);
     }
     if (this is BaseResponseObject<List<PracticePointDetailResponseObject?>?>) {
-      return BaseResponseObject<List<PracticePointDetailResponseObject?>?>.fromJson(
+      return BaseResponseObject<
+              List<PracticePointDetailResponseObject?>?>.fromJson(
           json, jsonToListNullablePracticePointDetailResponseObjects);
     }
     if (this is BaseResponseObject<int?>) {

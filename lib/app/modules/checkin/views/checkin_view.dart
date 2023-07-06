@@ -23,7 +23,8 @@ class CheckinView extends StatefulHookWidget {
 }
 
 class CheckinViewState extends State<CheckinView> {
-  final CheckinController controller = Get.put(CheckinController(), permanent: false);
+  final CheckinController controller =
+      Get.put(CheckinController(), permanent: false);
 
   @override
   Widget build(BuildContext context) {
@@ -33,15 +34,13 @@ class CheckinViewState extends State<CheckinView> {
         Obx(() {
           if (controller.isError.value?.isNotBlank() == true) {
             WidgetsBinding.instance.addPostFrameCallback((duration) {
-              showErrorDialog(
-                context,
-                messageError: controller.isError.value,
-                rightActionTitle: LocaleKeys.retry.tr,
-                rightAction: () => controller.retry(),
-                leftActionTitle: LocaleKeys.close.tr,
-                leftAction: () => controller.isError.value = "",
-              );
-              controller.isError.value = "";
+              showErrorDialog(context,
+                  messageError: controller.isError.value,
+                  rightActionTitle: LocaleKeys.retry.tr,
+                  rightAction: () => controller.retry(),
+                  leftActionTitle: LocaleKeys.close.tr,
+                  leftAction: () => resumeQRScannerCamera());
+              //controller.isError.value = "";
             });
           }
           return const SizedBox.shrink();
@@ -65,9 +64,8 @@ class CheckinViewState extends State<CheckinView> {
                   title: LocaleKeys.notification.tr,
                   message: controller.showMessage.value,
                   rightActionTitle: LocaleKeys.close.tr,
-                  rightAction: () => controller.showMessage.value = '');
+                  rightAction: () => resumeQRScannerCamera());
             });
-            controller.showMessage.value = "";
           }
           return const SizedBox.shrink();
         }),
@@ -77,6 +75,8 @@ class CheckinViewState extends State<CheckinView> {
 
   resumeQRScannerCamera() {
     Fimber.d("resumeQRScannerCamera()");
+    controller.showMessage.value = '';
+    controller.isError.value = '';
     controller.resumeQRScannerCamera();
   }
 
@@ -128,7 +128,8 @@ class CheckinViewState extends State<CheckinView> {
                   width: 68,
                   height: 68,
                   alignment: Alignment.center,
-                  child: Assets.images.icReload.svg(width: 32, height: 32, fit: BoxFit.cover),
+                  child: Assets.images.icReload
+                      .svg(width: 32, height: 32, fit: BoxFit.cover),
                 ),
               ),
             ],
@@ -143,7 +144,8 @@ class CheckinViewState extends State<CheckinView> {
     qrController.scannedDataStream.listen((scanData) {
       controller.result = scanData;
       controller.pauseQRScannerCamera();
-      controller.checkin(controller.result?.code);
+      controller.scaninfo(controller.result?.code);
+      //controller.checkin(controller.result?.code);
     });
     controller.resumeQRScannerCamera();
   }
@@ -152,7 +154,7 @@ class CheckinViewState extends State<CheckinView> {
     Fimber.d('${DateTime.now().toIso8601String()}_onPermissionSet $p');
     if (!p) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('No Permission')),
+        const SnackBar(content: Text('Ứng dụng chưa được cấp quyền')),
       );
     }
   }

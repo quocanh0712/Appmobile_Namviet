@@ -49,9 +49,11 @@ class UserClient extends BaseClientGenerator with _$UserClient {
   @override
   Map<String, dynamic> get body {
     return maybeWhen(
-      login: (userName, password) => {'userName': userName, 'password': password},
+      login: (userName, password) =>
+          {'userName': userName, 'password': password},
       update: (user) => user?.toJson() ?? {},
-      changePass: (oldPass, newPass) => {'oldPass': oldPass, 'newPass': newPass},
+      changePass: (oldPass, newPass) =>
+          {'oldPass': oldPass, 'newPass': newPass},
       orElse: () => {},
     );
   }

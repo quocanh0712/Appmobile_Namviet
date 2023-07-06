@@ -20,6 +20,7 @@ class AppConfigurations with _$AppConfigurations {
     @HiveField(4) String? accessToken,
     @HiveField(5) String? refreshToken,
     @HiveField(6) String? baseUrl,
+    @HiveField(7) int? idDonVi,
   }) = _AppConfigurations;
 
   factory AppConfigurations.fromJson(Map<String, dynamic> json) =>

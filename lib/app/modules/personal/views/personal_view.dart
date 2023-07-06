@@ -23,8 +23,10 @@ import 'package:sliding_up_panel2/sliding_up_panel2.dart';
 
 import '../controllers/personal_controller.dart';
 
-class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalController> {
-  PersonalView({Key? key, required BindingCreator<PersonalBinding> bindingCreator})
+class PersonalView
+    extends BaseBindingCreatorView<PersonalBinding, PersonalController> {
+  PersonalView(
+      {Key? key, required BindingCreator<PersonalBinding> bindingCreator})
       : super(key: key, bindingCreator: bindingCreator);
 
   @override
@@ -40,15 +42,19 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
       minHeight: Get.height - 230,
       parallaxEnabled: false,
       color: context.themeExtensions.transparent,
-      boxShadow: [BoxShadow(blurRadius: 0, color: context.themeExtensions.transparent)],
+      boxShadow: [
+        BoxShadow(blurRadius: 0, color: context.themeExtensions.transparent)
+      ],
       body: Scaffold(
         body: Stack(
           children: [
-            Assets.images.universityBuilding.image(width: double.infinity, fit: BoxFit.cover),
+            Assets.images.universityBuilding
+                .image(width: double.infinity, fit: BoxFit.cover),
             Container(
               width: double.infinity,
               height: 445,
-              decoration: BoxDecoration(gradient: GradientExtension(context).headerGradient),
+              decoration: BoxDecoration(
+                  gradient: GradientExtension(context).headerGradient),
               child: SafeArea(
                 top: true,
                 bottom: true,
@@ -57,13 +63,23 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const SizedBox(height: 36),
-                    Assets.images.ftuLogo.image(width: 68, height: 68, fit: BoxFit.cover),
+                    Obx(() => Visibility(
+                          visible: true,
+                          child: Image.asset(controller.imagePath.value,
+                              height: 68, width: 68, fit: BoxFit.cover),
+                        )),
                     const SizedBox(height: 13),
-                    Obx(() => AutoSizeText(controller.userObject.value?.fullname ?? '',
+                    Obx(() => AutoSizeText(controller.title.value,
                         style: context.themeExtensions.heading1
                             .copyWith(color: context.themeExtensions.white))),
                     const SizedBox(height: 3),
-                    Obx(() => AutoSizeText("ID: ${controller.userObject.value?.username}",
+                    Obx(() => AutoSizeText(
+                        "${controller.userObject.value?.fullname}",
+                        style: context.themeExtensions.subTex
+                            .copyWith(color: context.themeExtensions.white))),
+                    const SizedBox(height: 3),
+                    Obx(() => AutoSizeText(
+                        "${controller.userObject.value?.username}",
                         style: context.themeExtensions.subTex
                             .copyWith(color: context.themeExtensions.white)))
                   ],
@@ -74,7 +90,8 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
               if (controller.isError.value?.isNotBlank() == true) {
                 controller.isError.value = "";
                 WidgetsBinding.instance.addPostFrameCallback((duration) {
-                  showErrorDialog(context, messageError: controller.isError.value);
+                  showErrorDialog(context,
+                      messageError: controller.isError.value);
                 });
               }
               return const SizedBox.shrink();
@@ -121,15 +138,19 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
       minHeight: Get.height - 230,
       parallaxEnabled: false,
       color: context.themeExtensions.transparent,
-      boxShadow: [BoxShadow(blurRadius: 0, color: context.themeExtensions.transparent)],
+      boxShadow: [
+        BoxShadow(blurRadius: 0, color: context.themeExtensions.transparent)
+      ],
       body: Scaffold(
         body: Stack(
           children: [
-            Assets.images.universityBuilding.image(width: double.infinity, fit: BoxFit.cover),
+            Assets.images.universityBuilding
+                .image(width: double.infinity, fit: BoxFit.cover),
             Container(
               width: double.infinity,
               height: 445,
-              decoration: BoxDecoration(gradient: GradientExtension(context).headerGradient),
+              decoration: BoxDecoration(
+                  gradient: GradientExtension(context).headerGradient),
               child: SafeArea(
                 top: true,
                 bottom: true,
@@ -138,13 +159,23 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const SizedBox(height: 36),
-                    Assets.images.ftuLogo.image(width: 68, height: 68, fit: BoxFit.cover),
+                    Obx(() => Visibility(
+                          visible: true,
+                          child: Image.asset(controller.imagePath.value,
+                              height: 68, width: 68, fit: BoxFit.cover),
+                        )),
                     const SizedBox(height: 13),
-                    Obx(() => AutoSizeText(controller.userObject.value?.fullname ?? '',
+                    Obx(() => AutoSizeText(controller.title.value,
                         style: context.themeExtensions.heading1
                             .copyWith(color: context.themeExtensions.white))),
                     const SizedBox(height: 3),
-                    Obx(() => AutoSizeText("ID: ${controller.userObject.value?.username}",
+                    Obx(() => AutoSizeText(
+                        "${controller.userObject.value?.fullname}",
+                        style: context.themeExtensions.subTex
+                            .copyWith(color: context.themeExtensions.white))),
+                    const SizedBox(height: 3),
+                    Obx(() => AutoSizeText(
+                        "${controller.userObject.value?.username}",
                         style: context.themeExtensions.subTex
                             .copyWith(color: context.themeExtensions.white)))
                   ],
@@ -155,7 +186,8 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
               if (controller.isError.value?.isNotBlank() == true) {
                 controller.isError.value = "";
                 WidgetsBinding.instance.addPostFrameCallback((duration) {
-                  showErrorDialog(context, messageError: controller.isError.value);
+                  showErrorDialog(context,
+                      messageError: controller.isError.value);
                 });
               }
               return const SizedBox.shrink();
@@ -231,7 +263,8 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                     borderRadius: const BorderRadius.all(Radius.circular(10)),
                     boxShadow: [
                       BoxShadow(
-                          color: context.themeExtensions.black.withOpacity(0.05),
+                          color:
+                              context.themeExtensions.black.withOpacity(0.05),
                           offset: const Offset(0, 4),
                           blurRadius: 10)
                     ],
@@ -253,13 +286,16 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                       borderRadius: const BorderRadius.all(Radius.circular(10)),
                       boxShadow: [
                         BoxShadow(
-                            color: context.themeExtensions.black.withOpacity(0.05),
+                            color:
+                                context.themeExtensions.black.withOpacity(0.05),
                             offset: const Offset(0, 4),
                             blurRadius: 10)
                       ],
                       color: context.themeExtensions.white,
                       border: Border.all(
-                          color: context.themeExtensions.black.withOpacity(0.05), width: 1),
+                          color:
+                              context.themeExtensions.black.withOpacity(0.05),
+                          width: 1),
                     ),
                     child: Align(
                       alignment: Alignment.center,
@@ -298,25 +334,31 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                     behavior: DisableScrollGlowBehavior(),
                     child: ListView(
                       padding: const EdgeInsets.all(20),
-                      physics: PanelScrollPhysics(controller: controller.panelController),
+                      physics: PanelScrollPhysics(
+                          controller: controller.panelController),
                       controller: controller.scrollController,
                       children: <Widget>[
                         const SizedBox(height: 68),
                         Container(
                           decoration: BoxDecoration(
-                            borderRadius: const BorderRadius.all(Radius.circular(10)),
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(10)),
                             boxShadow: [
                               BoxShadow(
-                                  color: context.themeExtensions.black.withOpacity(0.05),
+                                  color: context.themeExtensions.black
+                                      .withOpacity(0.05),
                                   offset: const Offset(0, 4),
                                   blurRadius: 10)
                             ],
                             color: context.themeExtensions.white,
                             border: Border.all(
-                                color: context.themeExtensions.black.withOpacity(0.05), width: 1),
+                                color: context.themeExtensions.black
+                                    .withOpacity(0.05),
+                                width: 1),
                           ),
                           child: Container(
-                            padding: const EdgeInsets.only(left: 5, top: 10, right: 5, bottom: 10),
+                            padding: const EdgeInsets.only(
+                                left: 5, top: 10, right: 5, bottom: 10),
                             child: _buildMenuList(context),
                           ),
                         ),
@@ -327,16 +369,19 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                             width: double.infinity,
                             height: 50,
                             decoration: BoxDecoration(
-                              borderRadius: const BorderRadius.all(Radius.circular(10)),
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(10)),
                               boxShadow: [
                                 BoxShadow(
-                                    color: context.themeExtensions.black.withOpacity(0.05),
+                                    color: context.themeExtensions.black
+                                        .withOpacity(0.05),
                                     offset: const Offset(0, 4),
                                     blurRadius: 10)
                               ],
                               color: context.themeExtensions.white,
                               border: Border.all(
-                                  color: context.themeExtensions.black.withOpacity(0.05),
+                                  color: context.themeExtensions.black
+                                      .withOpacity(0.05),
                                   width: 1),
                             ),
                             child: Align(
@@ -344,7 +389,8 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                               child: AutoSizeText(
                                 LocaleKeys.logout.tr,
                                 style: context.themeExtensions.paragraphSemiBold
-                                    .copyWith(color: context.themeExtensions.red),
+                                    .copyWith(
+                                        color: context.themeExtensions.red),
                               ),
                             ),
                           ),
@@ -365,7 +411,8 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
     );
   }
 
-  Widget _buildActionMenuItem(BuildContext context, SvgGenImage? icon, String? title) {
+  Widget _buildActionMenuItem(
+      BuildContext context, SvgGenImage? icon, String? title) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -373,20 +420,26 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
         Padding(
           padding: const EdgeInsets.all(15),
           child: icon?.svg(
-              width: 21, height: 21, fit: BoxFit.cover, color: context.themeExtensions.textGrey),
+              width: 21,
+              height: 21,
+              fit: BoxFit.cover,
+              color: context.themeExtensions.textGrey),
         ),
         Expanded(
           flex: 1,
           child: AutoSizeText(
             title ?? '',
-            style:
-                context.themeExtensions.paragraph.copyWith(color: context.themeExtensions.black),
+            style: context.themeExtensions.paragraph
+                .copyWith(color: context.themeExtensions.black),
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(right: 5),
           child: Assets.images.arrowRight.svg(
-              width: 21, height: 21, fit: BoxFit.cover, color: context.themeExtensions.textGrey),
+              width: 21,
+              height: 21,
+              fit: BoxFit.cover,
+              color: context.themeExtensions.textGrey),
         )
       ],
     );
@@ -411,7 +464,8 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                         offset: const Offset(0, 4),
                         blurRadius: 10)
                   ],
-                  image: DecorationImage(image: AssetImage(Assets.images.butGradientBg.path))),
+                  image: DecorationImage(
+                      image: AssetImage(Assets.images.butGradientBg.path))),
               child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -427,13 +481,17 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                         ),
                         const SizedBox(height: 3),
                         Obx(() => AutoSizeText(
-                              controller.semesterPoint?.value?.gpA10?.retrieveSRank10() ?? '',
+                              controller.semesterPoint?.value?.gpA10
+                                      ?.retrieveSRank10() ??
+                                  '',
                               style: context.themeExtensions.paragraphSemiBold
-                                  .copyWith(color: context.themeExtensions.white),
+                                  .copyWith(
+                                      color: context.themeExtensions.white),
                             ))
                       ],
                     ),
-                    Assets.images.icMission.image(width: 42, height: 42, fit: BoxFit.cover)
+                    Assets.images.icMission
+                        .image(width: 42, height: 42, fit: BoxFit.cover)
                   ]),
             ),
             const SizedBox(height: 10),
@@ -441,7 +499,8 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
               height: 140,
               decoration: BoxDecoration(
                   image: DecorationImage(
-                      image: AssetImage(Assets.images.personalStudyOverviewBg.path),
+                      image: AssetImage(
+                          Assets.images.personalStudyOverviewBg.path),
                       fit: BoxFit.contain),
                   boxShadow: [
                     BoxShadow(
@@ -456,7 +515,8 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                   Expanded(
                       flex: 1,
                       child: Container(
-                        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 15, horizontal: 20),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -468,13 +528,19 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                                 AutoSizeText(
                                   LocaleKeys.compactLearningRank4.tr,
                                   style: context.themeExtensions.subTex
-                                      .copyWith(color: context.themeExtensions.darkGreen),
+                                      .copyWith(
+                                          color: context
+                                              .themeExtensions.darkGreen),
                                 ),
                                 Obx(() => AutoSizeText(
-                                      controller.semesterPoint?.value?.gpA4?.retrieveSRank4() ??
+                                      controller.semesterPoint?.value?.gpA4
+                                              ?.retrieveSRank4() ??
                                           '',
-                                      style: context.themeExtensions.paragraphSemiBold
-                                          .copyWith(color: context.themeExtensions.black),
+                                      style: context
+                                          .themeExtensions.paragraphSemiBold
+                                          .copyWith(
+                                              color: context
+                                                  .themeExtensions.black),
                                     ))
                               ],
                             ),
@@ -497,7 +563,8 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                   Expanded(
                       flex: 1,
                       child: Container(
-                        padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 15, horizontal: 20),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -509,12 +576,17 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                                 AutoSizeText(
                                   LocaleKeys.defaultCredits.tr,
                                   style: context.themeExtensions.subTex
-                                      .copyWith(color: context.themeExtensions.darkGreen),
+                                      .copyWith(
+                                          color: context
+                                              .themeExtensions.darkGreen),
                                 ),
                                 Obx(() => AutoSizeText(
                                       '${controller.semesterPoint?.value?.accumulatedCredits} / ${controller.semesterPoint?.value?.academicCredits}',
-                                      style: context.themeExtensions.paragraphSemiBold
-                                          .copyWith(color: context.themeExtensions.black),
+                                      style: context
+                                          .themeExtensions.paragraphSemiBold
+                                          .copyWith(
+                                              color: context
+                                                  .themeExtensions.black),
                                     ))
                               ],
                             ),
@@ -539,27 +611,32 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
       children: [
         InkWell(
           onTap: () => controller.navigateToProfile(),
-          child:
-              _buildActionMenuItem(context, Assets.images.icProfile, LocaleKeys.personalInfo.tr),
+          child: _buildActionMenuItem(
+              context, Assets.images.icProfile, LocaleKeys.personalInfo.tr),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 50, right: 5),
-          child: Container(height: 1, color: context.themeExtensions.black.withOpacity(0.05)),
+          child: Container(
+              height: 1,
+              color: context.themeExtensions.black.withOpacity(0.05)),
         ),
         Obx(() => Visibility(
               visible: controller.isTeacherPermission.value != true,
               child: InkWell(
                 onTap: () => controller.navigateToCertificate(),
                 child: _buildActionMenuItem(
-                    context, Assets.images.icCertificate, LocaleKeys.certificatesTitle.tr),
+                    context,
+                    Assets.images.icCertificate,
+                    LocaleKeys.certificatesTitle.tr),
               ),
             )),
         Obx(() => Visibility(
               visible: controller.isTeacherPermission.value != true,
               child: Padding(
                 padding: const EdgeInsets.only(left: 50, right: 5),
-                child:
-                    Container(height: 1, color: context.themeExtensions.black.withOpacity(0.05)),
+                child: Container(
+                    height: 1,
+                    color: context.themeExtensions.black.withOpacity(0.05)),
               ),
             )),
         Obx(() => Visibility(
@@ -567,15 +644,18 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
               child: InkWell(
                 onTap: () => controller.navigateToWorkingProcess(),
                 child: _buildActionMenuItem(
-                    context, Assets.images.icWorkingProcess, LocaleKeys.workingProcess.tr),
+                    context,
+                    Assets.images.icWorkingProcess,
+                    LocaleKeys.workingProcess.tr),
               ),
             )),
         Obx(() => Visibility(
               visible: controller.isTeacherPermission.value,
               child: Padding(
                 padding: const EdgeInsets.only(left: 50, right: 5),
-                child:
-                    Container(height: 1, color: context.themeExtensions.black.withOpacity(0.05)),
+                child: Container(
+                    height: 1,
+                    color: context.themeExtensions.black.withOpacity(0.05)),
               ),
             )),
         InkWell(
@@ -585,7 +665,9 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
         ),
         Padding(
           padding: const EdgeInsets.only(left: 50, right: 5),
-          child: Container(height: 1, color: context.themeExtensions.black.withOpacity(0.05)),
+          child: Container(
+              height: 1,
+              color: context.themeExtensions.black.withOpacity(0.05)),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -618,7 +700,8 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                       activeColor: context.themeExtensions.mainGreen,
                       inactiveColor: context.themeExtensions.textGrey,
                       value: controller.biometricLoginIsEnable.value,
-                      onToggle: (value) => controller.toggleBimometricLogin(value))
+                      onToggle: (value) =>
+                          controller.toggleBimometricLogin(value))
                   : SizedBox(
                       height: 50,
                       width: 70,
@@ -632,13 +715,16 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
                               activeColor: context.themeExtensions.textGrey,
                               inactiveColor: context.themeExtensions.textGrey,
                               value: false,
-                              onToggle: (value) => controller.toggleBimometricLogin(value)),
+                              onToggle: (value) =>
+                                  controller.toggleBimometricLogin(value)),
                           InkWell(
                             onTap: () {
                               EasyLoading.showToast(
-                                  LocaleKeys.biometricAuthIsNotSupportedMessage.tr,
+                                  LocaleKeys
+                                      .biometricAuthIsNotSupportedMessage.tr,
                                   duration: ToastDuration.LENGTH_SHORT,
-                                  toastPosition: EasyLoadingToastPosition.bottom);
+                                  toastPosition:
+                                      EasyLoadingToastPosition.bottom);
                             },
                             child: const SizedBox(
                               width: double.infinity,
@@ -653,17 +739,23 @@ class PersonalView extends BaseBindingCreatorView<PersonalBinding, PersonalContr
         ),
         Padding(
           padding: const EdgeInsets.only(left: 50, right: 5),
-          child: Container(height: 1, color: context.themeExtensions.black.withOpacity(0.05)),
+          child: Container(
+              height: 1,
+              color: context.themeExtensions.black.withOpacity(0.05)),
         ),
         InkWell(
           onTap: () => controller.navigateToFinanceOverview(),
-          child: _buildActionMenuItem(context, Assets.images.icLampCharge, LocaleKeys.help.tr),
+          child: _buildActionMenuItem(
+              context, Assets.images.icLampCharge, LocaleKeys.help.tr),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 50, right: 5),
-          child: Container(height: 1, color: context.themeExtensions.black.withOpacity(0.05)),
+          child: Container(
+              height: 1,
+              color: context.themeExtensions.black.withOpacity(0.05)),
         ),
-        _buildActionMenuItem(context, Assets.images.icInfoCircle, LocaleKeys.versionInfo.tr),
+        _buildActionMenuItem(
+            context, Assets.images.icInfoCircle, LocaleKeys.versionInfo.tr),
       ],
     );
   }

@@ -62,6 +62,27 @@ class CheckinController extends BaseController {
     isLoading.value = false;
   }
 
+  scaninfo(String? barcode) async {
+    isLoading.value = true;
+    final response = await inventoryRepo?.scaninfo(barcode);
+    Fimber.d("response: ${response.toString()}");
+    response?.when(
+      success: (data) {
+        if (data.isSuccess()) {
+          Fimber.d("data.isSuccess(): ${data.result?.ma_ts.toString()}");
+          showMessage.value = data.result?.toString();
+        } else {
+          isError.value = data.message;
+        }
+      },
+      failure: (error) {
+        Fimber.d(error.localizedErrorMessage ?? "");
+        isError.value = error.localizedErrorMessage;
+      },
+    );
+    isLoading.value = false;
+  }
+
   @override
   void onClose() {
     qrController?.dispose();

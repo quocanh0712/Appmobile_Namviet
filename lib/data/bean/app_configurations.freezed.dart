@@ -28,6 +28,8 @@ mixin _$AppConfigurations {
   String? get refreshToken => throw _privateConstructorUsedError;
   @HiveField(6)
   String? get baseUrl => throw _privateConstructorUsedError;
+  @HiveField(7)
+  int? get idDonVi => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,7 +47,8 @@ abstract class $AppConfigurationsCopyWith<$Res> {
       {@HiveField(0) int? latestSyncedTime,
       @HiveField(4) String? accessToken,
       @HiveField(5) String? refreshToken,
-      @HiveField(6) String? baseUrl});
+      @HiveField(6) String? baseUrl,
+      @HiveField(7) int? idDonVi});
 }
 
 /// @nodoc
@@ -65,6 +68,7 @@ class _$AppConfigurationsCopyWithImpl<$Res, $Val extends AppConfigurations>
     Object? accessToken = freezed,
     Object? refreshToken = freezed,
     Object? baseUrl = freezed,
+    Object? idDonVi = freezed,
   }) {
     return _then(_value.copyWith(
       latestSyncedTime: freezed == latestSyncedTime
@@ -83,6 +87,10 @@ class _$AppConfigurationsCopyWithImpl<$Res, $Val extends AppConfigurations>
           ? _value.baseUrl
           : baseUrl // ignore: cast_nullable_to_non_nullable
               as String?,
+      idDonVi: freezed == idDonVi
+          ? _value.idDonVi
+          : idDonVi // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -99,7 +107,8 @@ abstract class _$$_AppConfigurationsCopyWith<$Res>
       {@HiveField(0) int? latestSyncedTime,
       @HiveField(4) String? accessToken,
       @HiveField(5) String? refreshToken,
-      @HiveField(6) String? baseUrl});
+      @HiveField(6) String? baseUrl,
+      @HiveField(7) int? idDonVi});
 }
 
 /// @nodoc
@@ -117,6 +126,7 @@ class __$$_AppConfigurationsCopyWithImpl<$Res>
     Object? accessToken = freezed,
     Object? refreshToken = freezed,
     Object? baseUrl = freezed,
+    Object? idDonVi = freezed,
   }) {
     return _then(_$_AppConfigurations(
       latestSyncedTime: freezed == latestSyncedTime
@@ -135,6 +145,10 @@ class __$$_AppConfigurationsCopyWithImpl<$Res>
           ? _value.baseUrl
           : baseUrl // ignore: cast_nullable_to_non_nullable
               as String?,
+      idDonVi: freezed == idDonVi
+          ? _value.idDonVi
+          : idDonVi // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -146,7 +160,8 @@ class _$_AppConfigurations implements _AppConfigurations {
       {@HiveField(0) this.latestSyncedTime,
       @HiveField(4) this.accessToken,
       @HiveField(5) this.refreshToken,
-      @HiveField(6) this.baseUrl});
+      @HiveField(6) this.baseUrl,
+      @HiveField(7) this.idDonVi});
 
   factory _$_AppConfigurations.fromJson(Map<String, dynamic> json) =>
       _$$_AppConfigurationsFromJson(json);
@@ -163,10 +178,13 @@ class _$_AppConfigurations implements _AppConfigurations {
   @override
   @HiveField(6)
   final String? baseUrl;
+  @override
+  @HiveField(7)
+  final int? idDonVi;
 
   @override
   String toString() {
-    return 'AppConfigurations(latestSyncedTime: $latestSyncedTime, accessToken: $accessToken, refreshToken: $refreshToken, baseUrl: $baseUrl)';
+    return 'AppConfigurations(latestSyncedTime: $latestSyncedTime, accessToken: $accessToken, refreshToken: $refreshToken, baseUrl: $baseUrl, idDonVi: $idDonVi)';
   }
 
   @override
@@ -180,13 +198,14 @@ class _$_AppConfigurations implements _AppConfigurations {
                 other.accessToken == accessToken) &&
             (identical(other.refreshToken, refreshToken) ||
                 other.refreshToken == refreshToken) &&
-            (identical(other.baseUrl, baseUrl) || other.baseUrl == baseUrl));
+            (identical(other.baseUrl, baseUrl) || other.baseUrl == baseUrl) &&
+            (identical(other.idDonVi, idDonVi) || other.idDonVi == idDonVi));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, latestSyncedTime, accessToken, refreshToken, baseUrl);
+  int get hashCode => Object.hash(runtimeType, latestSyncedTime, accessToken,
+      refreshToken, baseUrl, idDonVi);
 
   @JsonKey(ignore: true)
   @override
@@ -208,7 +227,8 @@ abstract class _AppConfigurations implements AppConfigurations {
       {@HiveField(0) final int? latestSyncedTime,
       @HiveField(4) final String? accessToken,
       @HiveField(5) final String? refreshToken,
-      @HiveField(6) final String? baseUrl}) = _$_AppConfigurations;
+      @HiveField(6) final String? baseUrl,
+      @HiveField(7) final int? idDonVi}) = _$_AppConfigurations;
 
   factory _AppConfigurations.fromJson(Map<String, dynamic> json) =
       _$_AppConfigurations.fromJson;
@@ -225,6 +245,9 @@ abstract class _AppConfigurations implements AppConfigurations {
   @override
   @HiveField(6)
   String? get baseUrl;
+  @override
+  @HiveField(7)
+  int? get idDonVi;
   @override
   @JsonKey(ignore: true)
   _$$_AppConfigurationsCopyWith<_$_AppConfigurations> get copyWith =>

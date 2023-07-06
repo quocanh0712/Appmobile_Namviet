@@ -71,6 +71,8 @@ mixin _$UserObject {
   String? get avatar => throw _privateConstructorUsedError;
   @HiveField(23)
   String? get password => throw _privateConstructorUsedError;
+  @HiveField(24)
+  int? get idDonVi => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -108,7 +110,8 @@ abstract class $UserObjectCopyWith<$Res> {
       @HiveField(20) String? chucdanhnghiencuu,
       @HiveField(21) bool? biometricAuth,
       @HiveField(22) String? avatar,
-      @HiveField(23) String? password});
+      @HiveField(23) String? password,
+      @HiveField(24) int? idDonVi});
 }
 
 /// @nodoc
@@ -148,6 +151,7 @@ class _$UserObjectCopyWithImpl<$Res, $Val extends UserObject>
     Object? biometricAuth = freezed,
     Object? avatar = freezed,
     Object? password = freezed,
+    Object? idDonVi = freezed,
   }) {
     return _then(_value.copyWith(
       iduser: freezed == iduser
@@ -246,6 +250,10 @@ class _$UserObjectCopyWithImpl<$Res, $Val extends UserObject>
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String?,
+      idDonVi: freezed == idDonVi
+          ? _value.idDonVi
+          : idDonVi // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -282,7 +290,8 @@ abstract class _$$_UserObjectCopyWith<$Res>
       @HiveField(20) String? chucdanhnghiencuu,
       @HiveField(21) bool? biometricAuth,
       @HiveField(22) String? avatar,
-      @HiveField(23) String? password});
+      @HiveField(23) String? password,
+      @HiveField(24) int? idDonVi});
 }
 
 /// @nodoc
@@ -320,6 +329,7 @@ class __$$_UserObjectCopyWithImpl<$Res>
     Object? biometricAuth = freezed,
     Object? avatar = freezed,
     Object? password = freezed,
+    Object? idDonVi = freezed,
   }) {
     return _then(_$_UserObject(
       iduser: freezed == iduser
@@ -418,6 +428,10 @@ class __$$_UserObjectCopyWithImpl<$Res>
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String?,
+      idDonVi: freezed == idDonVi
+          ? _value.idDonVi
+          : idDonVi // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -449,7 +463,8 @@ class _$_UserObject implements _UserObject {
       @HiveField(20) this.chucdanhnghiencuu,
       @HiveField(21) this.biometricAuth,
       @HiveField(22) this.avatar,
-      @HiveField(23) this.password});
+      @HiveField(23) this.password,
+      @HiveField(24) this.idDonVi});
 
   factory _$_UserObject.fromJson(Map<String, dynamic> json) =>
       _$$_UserObjectFromJson(json);
@@ -529,10 +544,13 @@ class _$_UserObject implements _UserObject {
   @override
   @HiveField(23)
   final String? password;
+  @override
+  @HiveField(24)
+  final int? idDonVi;
 
   @override
   String toString() {
-    return 'UserObject(iduser: $iduser, role: $role, username: $username, sex: $sex, fullname: $fullname, birthday: $birthday, phone: $phone, email: $email, ccid: $ccid, accessToken: $accessToken, expiresIn: $expiresIn, tokenType: $tokenType, scope: $scope, hedaotao: $hedaotao, khoa: $khoa, nganh: $nganh, nienkhoa: $nienkhoa, hocham: $hocham, namphonghocham: $namphonghocham, linhvucnghiencuu: $linhvucnghiencuu, chucdanhnghiencuu: $chucdanhnghiencuu, biometricAuth: $biometricAuth, avatar: $avatar, password: $password)';
+    return 'UserObject(iduser: $iduser, role: $role, username: $username, sex: $sex, fullname: $fullname, birthday: $birthday, phone: $phone, email: $email, ccid: $ccid, accessToken: $accessToken, expiresIn: $expiresIn, tokenType: $tokenType, scope: $scope, hedaotao: $hedaotao, khoa: $khoa, nganh: $nganh, nienkhoa: $nienkhoa, hocham: $hocham, namphonghocham: $namphonghocham, linhvucnghiencuu: $linhvucnghiencuu, chucdanhnghiencuu: $chucdanhnghiencuu, biometricAuth: $biometricAuth, avatar: $avatar, password: $password, idDonVi: $idDonVi)';
   }
 
   @override
@@ -576,7 +594,8 @@ class _$_UserObject implements _UserObject {
                 other.biometricAuth == biometricAuth) &&
             (identical(other.avatar, avatar) || other.avatar == avatar) &&
             (identical(other.password, password) ||
-                other.password == password));
+                other.password == password) &&
+            (identical(other.idDonVi, idDonVi) || other.idDonVi == idDonVi));
   }
 
   @JsonKey(ignore: true)
@@ -606,7 +625,8 @@ class _$_UserObject implements _UserObject {
         chucdanhnghiencuu,
         biometricAuth,
         avatar,
-        password
+        password,
+        idDonVi
       ]);
 
   @JsonKey(ignore: true)
@@ -648,7 +668,8 @@ abstract class _UserObject implements UserObject {
       @HiveField(20) final String? chucdanhnghiencuu,
       @HiveField(21) final bool? biometricAuth,
       @HiveField(22) final String? avatar,
-      @HiveField(23) final String? password}) = _$_UserObject;
+      @HiveField(23) final String? password,
+      @HiveField(24) final int? idDonVi}) = _$_UserObject;
 
   factory _UserObject.fromJson(Map<String, dynamic> json) =
       _$_UserObject.fromJson;
@@ -728,6 +749,9 @@ abstract class _UserObject implements UserObject {
   @override
   @HiveField(23)
   String? get password;
+  @override
+  @HiveField(24)
+  int? get idDonVi;
   @override
   @JsonKey(ignore: true)
   _$$_UserObjectCopyWith<_$_UserObject> get copyWith =>
