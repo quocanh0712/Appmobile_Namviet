@@ -364,142 +364,6 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     return _buildStudentUtilities(context);
   }
 
-  /////////////////////////////////////////////////////  /////////////////////////////////////////////////////
-  // Widget _buildTeacherUtilities(BuildContext context) {
-  //   return Column(
-  //     mainAxisAlignment: MainAxisAlignment.start,
-  //     crossAxisAlignment: CrossAxisAlignment.center,
-  //     mainAxisSize: MainAxisSize.max,
-  //     children: [
-  //       Padding(
-  //         padding: const EdgeInsets.symmetric(horizontal: 20),
-  //         child: Row(
-  //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-  //           crossAxisAlignment: CrossAxisAlignment.start,
-  //           children: [
-  //             // _buildUtilityButton(
-  //             //   context: context,
-  //             //   assetImage: Assets.images.icUserOctagon,
-  //             //   title: LocaleKeys.account.tr,
-  //             //   onTap: () => showFeatureIsDeveloping(),
-  //             // ),
-  //             _buildUtilityButton(
-  //                 context: context,
-  //                 assetImage: Assets.images.icMicroscope,
-  //                 onTap: () => controller.navigateToScientificResearch(),
-  //                 title: LocaleKeys.scienceStudy.tr),
-  //             // _buildUtilityButton(
-  //             //   context: context,
-  //             //   assetImage: Assets.images.icProfileTick,
-  //             //   title: LocaleKeys.setupPermission.tr,
-  //             //   onTap: () => showFeatureIsDeveloping(),
-  //             // )
-  //           ],
-  //         ),
-  //       ),
-  //       const SizedBox(height: 20),
-  //       Padding(
-  //         padding: const EdgeInsets.symmetric(horizontal: 20),
-  //         child: Row(
-  //           mainAxisAlignment: MainAxisAlignment.start,
-  //           children: [
-  //             _buildUtilityButton(
-  //               context: context,
-  //               assetImage: Assets.images.icFilterSearch,
-  //               title: LocaleKeys.serveyResults.tr,
-  //               onTap: () => controller.navigateToSurveyResult(),
-  //             ),
-  //             _buildUtilityButton(
-  //                 context: context,
-  //                 assetImage: Assets.images.icTeacherContact,
-  //                 onTap: () => controller.navigateToTeacherContact(),
-  //                 title: LocaleKeys.titleTeacherContact.tr),
-  //             // _buildUtilityButton(
-  //             //   context: context,
-  //             //   assetImage: Assets.images.icMonitorMobbile,
-  //             //   title: LocaleKeys.assets.tr,
-  //             //   onTap: () => showFeatureIsDeveloping(),
-  //             // ),
-  //           ],
-  //         ),
-  //       ),
-  //       const SizedBox(height: 20),
-  //       // Padding(
-  //       //   padding: const EdgeInsets.symmetric(horizontal: 20),
-  //       //   child: Row(
-  //       //     mainAxisAlignment: MainAxisAlignment.start,
-  //       //     children: [
-  //       //       // _buildUtilityButton(
-  //       //       //   context: context,
-  //       //       //   assetImage: Assets.images.icDirectInbox,
-  //       //       //   title: LocaleKeys.incomeDocuments.tr,
-  //       //       //   onTap: () => showFeatureIsDeveloping(),
-  //       //       // ),
-  //       //       // _buildUtilityButton(
-  //       //       //     context: context,
-  //       //       //     assetImage: Assets.images.icDirectSend,
-  //       //       //     onTap: () => showFeatureIsDeveloping(),
-  //       //       //     title: LocaleKeys.outcomeDocuments.tr),
-  //       //       // _buildUtilityButton(
-  //       //       //   context: context,
-  //       //       //   assetImage: Assets.images.icScan,
-  //       //       //   title: LocaleKeys.timekeeping.tr,
-  //       //       //   onTap: () => showFeatureIsDeveloping(),
-  //       //       // ),
-  //       //     ],
-  //       //   ),
-  //       // ),
-  //       const SizedBox(height: 20),
-  //       Padding(
-  //         padding: const EdgeInsets.symmetric(horizontal: 20),
-  //         child: Row(
-  //           mainAxisAlignment: MainAxisAlignment.start,
-  //           children: [
-  //             // _buildUtilityButton(
-  //             //   context: context,
-  //             //   assetImage: Assets.images.icCalendarTick,
-  //             //   title: LocaleKeys.examTrackingSchedule.tr,
-  //             //   onTap: () => showFeatureIsDeveloping(),
-  //             // ),
-  //             _buildUtilityButton(
-  //                 context: context,
-  //                 assetImage: Assets.images.icBrifecaseTick,
-  //                 onTap: () => controller.navigateToOneGate(),
-  //                 title: LocaleKeys.oneStopService.tr),
-  //             // _buildUtilityButton(
-  //             //   context: context,
-  //             //   assetImage: Assets.images.icPeople,
-  //             //   title: LocaleKeys.studentList.tr,
-  //             //   onTap: () => showFeatureIsDeveloping(),
-  //             // ),
-  //           ],
-  //         ),
-  //       ),
-  //       const SizedBox(height: 20),
-  //       // Padding(
-  //       //   padding: const EdgeInsets.symmetric(horizontal: 20),
-  //       //   child: Row(
-  //       //     mainAxisAlignment: MainAxisAlignment.start,
-  //       //     children: [
-  //       //       _buildUtilityButton(
-  //       //         context: context,
-  //       //         assetImage: Assets.images.icDollarCircle,
-  //       //         title: LocaleKeys.salaryInfo.tr,
-  //       //         onTap: () => showFeatureIsDeveloping(),
-  //       //       ),
-  //       //       _buildUtilityButton(
-  //       //           context: context,
-  //       //           assetImage: Assets.images.icTaskSquare,
-  //       //           onTap: () => showFeatureIsDeveloping(),
-  //       //           title: LocaleKeys.taskStatus.tr),
-  //       //       _buildUtilityButton(context: context),
-  //       //     ],
-  //       //   ),
-  //       // ),
-  //     ],
-  //   );
-  // }
-  /////////////////////////////////////////////////////  /////////////////////////////////////////////////////
   Widget _buildTeacherUtilities(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -542,6 +406,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                   assetImage: Assets.images.icBrifecaseTick,
                   onTap: () => controller.navigateToOneGate(),
                   title: LocaleKeys.oneStopService.tr),
+              _buildUtilityButton(
+                  context: context,
+                  assetImage: Assets.images.icCheckin,
+                  onTap: () => controller.navigateToCheckInDevice(),
+                  title: LocaleKeys.checkInDevice.tr),
             ],
           ),
         ),
@@ -649,6 +518,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     );
   }
 
+  //
   Widget _buildTodayTasksOverview(BuildContext context) {
     return ForceDraggableWidget(
       child: Padding(
@@ -726,8 +596,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                             .copyWith(color: context.themeExtensions.textColor),
                       ),
                       AutoSizeText(
-                        //"${Jiffy().EEEE}, ${Jiffy().date}/${Jiffy().month}/${Jiffy().year}",
-                        "Thứ Hai, 26/06/2023",
+                        "${Jiffy().EEEE}, ${Jiffy().date}/${Jiffy().month}/${Jiffy().year}",
                         style: context.themeExtensions.subTexMedium
                             .copyWith(color: context.themeExtensions.textGrey),
                       ),

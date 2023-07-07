@@ -42,9 +42,12 @@ abstract class Routes {
   static const DOCUMENT_FORM_ITEM = _Paths.DOCUMENT_FORM_ITEM;
   static const SERVICE_REQUEST_LIST = _Paths.SERVICE_REQUEST_LIST;
   static const ALL_SERVICE_REQUEST_LIST = _Paths.ALL_SERVICE_REQUEST_LIST;
-  static const WAITING_SERVICE_REQUEST_LIST = _Paths.WAITING_SERVICE_REQUEST_LIST;
-  static const APPROVED_SERVICE_REQUEST_LIST = _Paths.APPROVED_SERVICE_REQUEST_LIST;
-  static const REJECTED_SERVICE_REQUEST_LIST = _Paths.REJECTED_SERVICE_REQUEST_LIST;
+  static const WAITING_SERVICE_REQUEST_LIST =
+      _Paths.WAITING_SERVICE_REQUEST_LIST;
+  static const APPROVED_SERVICE_REQUEST_LIST =
+      _Paths.APPROVED_SERVICE_REQUEST_LIST;
+  static const REJECTED_SERVICE_REQUEST_LIST =
+      _Paths.REJECTED_SERVICE_REQUEST_LIST;
   static const NOTIFICATION_DETAILS = _Paths.NOTIFICATION_DETAILS;
   static const DISCUSS_FEEDBACK = _Paths.DISCUSS_FEEDBACK;
   static const CREATE_NEW_CONVERSATION = _Paths.CREATE_NEW_CONVERSATION;
@@ -69,6 +72,7 @@ abstract class Routes {
   static const SURVEY_RESULT = _Paths.SURVEY_RESULT;
   static const ACCOUNT = _Paths.ACCOUNT;
   static const SURVEY_ITEM = _Paths.SURVEY_ITEM;
+  static const SCHEDULE_CHECKIN = _Paths.SCHEDULE_CHECKIN;
 }
 
 abstract class _Paths {
@@ -136,4 +140,5 @@ abstract class _Paths {
   static const SURVEY_RESULT = '/survey-result';
   static const ACCOUNT = '/account';
   static const SURVEY_ITEM = '/survey-item';
+  static const SCHEDULE_CHECKIN = '/schedule-checkin';
 }

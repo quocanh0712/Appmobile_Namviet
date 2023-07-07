@@ -23,7 +23,8 @@ abstract class BaseController<T> extends GetxController with StateMixin<T> {
     Get.dialog(
       AlertDialog(
         contentPadding: const EdgeInsets.all(20),
-        shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(15))),
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(15))),
         title: Text(
           title,
           style: Get.context?.themeExtensions.heading2

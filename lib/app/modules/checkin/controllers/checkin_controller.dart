@@ -42,7 +42,6 @@ class CheckinController extends BaseController {
   }
 
   checkin(String? barcode) async {
-    Fimber.d("checkin(String? $barcode)");
     isLoading.value = true;
     final response = await inventoryRepo?.checkin(barcode);
     response?.when(
@@ -69,8 +68,20 @@ class CheckinController extends BaseController {
     response?.when(
       success: (data) {
         if (data.isSuccess()) {
-          Fimber.d("data.isSuccess(): ${data.result?.ma_ts.toString()}");
-          showMessage.value = data.result?.toString();
+          //Show info device here
+          String result = "";
+          result += "-Mã tài sản: ${data.result?.ma_ts ?? ""} \n";
+          result += "-Tên tài sản: ${data.result?.ten_ts ?? ""} \n";
+          result += "-Năm sản xuất: ${data.result?.nam_sx ?? ""} \n";
+          result += "-Hãng sản xuất: ${data.result?.hang_sx ?? ""} \n";
+          result += "-Nước sản xuất: ${data.result?.nuoc_ts ?? ""} \n";
+          result += "-Thông số kỹ thuật: ${data.result?.thong_so_kt ?? ""} \n";
+          result += "-Tên bộ phận sử dụng: ${data.result?.ten_bp ?? ""} \n";
+          result += "-Sô CT: ${data.result?.so_ct ?? ""} \n";
+          result += "-Ngày CT: ${data.result?.str_ngay_ct ?? ""} \n";
+          result += "-Số lượng: ${data.result?.so_luong ?? 0} \n";
+          result += "-Ghi chú: ${data.result?.ghi_chu ?? ""} \n";
+          showMessage.value = result;
         } else {
           isError.value = data.message;
         }

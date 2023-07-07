@@ -140,6 +140,11 @@ class HomeController extends BaseController {
     Get.toNamed(Routes.ONE_GATE);
   }
 
+  navigateToCheckInDevice() {
+    Fimber.d("navigateToCheckInDevice()");
+    Get.toNamed(Routes.SCHEDULE_CHECKIN);
+  }
+
   navigateToUtilites() {
     Fimber.d("navigateToUtilites()");
   }

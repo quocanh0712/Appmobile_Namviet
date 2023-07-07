@@ -308,6 +308,8 @@ class LocaleKeys {
   static const passwordIsNotEmpty = 'passwordIsNotEmpty';
   static const userNameAndPasswordIsNotEmpty = 'userNameAndPasswordIsNotEmpty';
   static const idDonViIsNotEmpty = 'idDonViIsNotEmpty';
+  static const checkInDevice = 'checkInDevice';
+  static const listScheduleCheckin = 'listScheduleCheckin';
   static const eof = 'eof';
   static const TestingTime = 'TestingTime';
   static const amount = 'amount';
@@ -614,6 +616,8 @@ class Locales {
     'userNameAndPasswordIsNotEmpty':
         'Tên đăng nhập và mật khẩu không được rỗng.',
     'idDonViIsNotEmpty': 'Chọn đơn vị trước khi đăng nhập.',
+    'checkInDevice': 'Kiểm kê tài sản.',
+    'listScheduleCheckin': 'Kế hoạch kiểm kê tài sản.',
     'eof':
         'End of File. Please add a new text above this item to avoid conflicts. Thanks!',
   };
@@ -918,6 +922,8 @@ class Locales {
     'userNameAndPasswordIsNotEmpty':
         'Tên đăng nhập và mật khẩu không được rỗng.',
     'idDonViIsNotEmpty': 'Chọn đơn vị trước khi đăng nhập.',
+    'checkInDevice': 'Kiểm kê tài sản.',
+    'listScheduleCheckin': 'Kế hoạch kiểm kê tài sản.',
     'eof':
         'End of File. Please add a new text above this item to avoid conflicts. Thanks!',
   };

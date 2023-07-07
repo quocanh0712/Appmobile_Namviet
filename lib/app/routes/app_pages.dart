@@ -145,7 +145,9 @@ class AppPages {
   static const INITIAL = Routes.LOGIN;
 
   static final routes = [
-    GetPage(name: _Paths.HOME, page: () => HomeView(bindingCreator: () => HomeBinding())),
+    GetPage(
+        name: _Paths.HOME,
+        page: () => HomeView(bindingCreator: () => HomeBinding())),
     GetPage(
         name: _Paths.DASHBOARD,
         page: () => const DashboardView(),
@@ -165,7 +167,8 @@ class AppPages {
       binding: SettingsBinding(),
     ),
     GetPage(
-        name: _Paths.PERSONAL, page: () => PersonalView(bindingCreator: () => PersonalBinding())),
+        name: _Paths.PERSONAL,
+        page: () => PersonalView(bindingCreator: () => PersonalBinding())),
     GetPage(
       name: _Paths.PROFILE,
       page: () => ProfileView(),
@@ -248,7 +251,8 @@ class AppPages {
     ),
     GetPage(
         name: _Paths.APP_INFORMATION,
-        page: () => AppInformationView(bindingCreator: () => AppInformationBinding())),
+        page: () =>
+            AppInformationView(bindingCreator: () => AppInformationBinding())),
     GetPage(
       name: _Paths.INFINITE_LIST_SAMPLE,
       page: () => InfiniteListSampleView(),
@@ -441,6 +445,11 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SURVEY_ITEM,
+      page: () => SurveyItemView(),
+      binding: SurveyItemBinding(),
+    ),
+    GetPage(
+      name: _Paths.SCHEDULE_CHECKIN,
       page: () => SurveyItemView(),
       binding: SurveyItemBinding(),
     ),

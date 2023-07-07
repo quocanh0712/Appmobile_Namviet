@@ -294,5 +294,7 @@
   "passwordIsNotEmpty": "Mật khẩu không được rỗng.",
   "userNameAndPasswordIsNotEmpty": "Tên đăng nhập và mật khẩu không được rỗng.",
   "idDonViIsNotEmpty": "Chọn đơn vị trước khi đăng nhập.",
+  "checkInDevice": "Kiểm kê tài sản.",
+  "listScheduleCheckin": "Kế hoạch kiểm kê tài sản.",
   "eof": "End of File. Please add a new text above this item to avoid conflicts. Thanks!"
 }

@@ -48,23 +48,23 @@ class LoginController extends BaseController {
     DropdownMenuItem(
         value: 1,
         child: Text("Trường Đại học Ngoại ngữ Đà Nẵng",
-            textAlign: TextAlign.center)),
+            textAlign: TextAlign.center, overflow: TextOverflow.ellipsis)),
     DropdownMenuItem(
         value: 2,
         child: Text("Trường Đại học Nông Lâm Thái Nguyên",
-            textAlign: TextAlign.center)),
+            textAlign: TextAlign.center, overflow: TextOverflow.ellipsis)),
     DropdownMenuItem(
         value: 3,
         child: Text("Trường Đai học Sư phạm Nghệ thuật TW",
-            textAlign: TextAlign.center)),
+            textAlign: TextAlign.center, overflow: TextOverflow.ellipsis)),
     DropdownMenuItem(
         value: 4,
         child: Text("Trường Đại học Sư phạm TDTT Hà Nội",
-            textAlign: TextAlign.center)),
+            textAlign: TextAlign.center, overflow: TextOverflow.ellipsis)),
     DropdownMenuItem(
         value: 5,
         child: Text("Trường Quốc tế - Đại học Quốc Gia Hà Nội",
-            textAlign: TextAlign.center))
+            textAlign: TextAlign.center, overflow: TextOverflow.ellipsis))
   ];
 
   @override
