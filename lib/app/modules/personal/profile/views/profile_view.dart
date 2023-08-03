@@ -50,7 +50,8 @@ class ProfileView extends BaseView<ProfileController> {
                             child: Align(
                               alignment: Alignment.center,
                               child: CachedNetworkImage(
-                                  imageUrl: controller.userObject.value?.avatar ?? '',
+                                  imageUrl:
+                                      controller.userObject.value?.avatar ?? '',
                                   width: 24,
                                   height: 24,
                                   fit: BoxFit.cover),
@@ -74,16 +75,18 @@ class ProfileView extends BaseView<ProfileController> {
                 title: Text(LocaleKeys.profile.tr, textAlign: TextAlign.center),
                 leading: IconButton(
                   onPressed: () => Get.back(),
-                  icon: Assets.images.icArrowLeft
-                      .svg(width: 24, height: 24, color: context.themeExtensions.white),
+                  icon: Assets.images.icArrowLeft.svg(
+                      width: 24,
+                      height: 24,
+                      color: context.themeExtensions.white),
                 ),
                 actions: [
                   InkWell(
                     onTap: () => controller.navigateToProfileEdition(),
                     child: Padding(
                         padding: const EdgeInsets.all(18),
-                        child:
-                            Assets.images.icEdit2.svg(width: 24, height: 24, fit: BoxFit.cover)),
+                        child: Assets.images.icEdit2
+                            .svg(width: 24, height: 24, fit: BoxFit.cover)),
                   )
                 ],
                 flexibleSpace: Stack(
@@ -95,7 +98,8 @@ class ProfileView extends BaseView<ProfileController> {
                               : LMSColors.mainGreen,
                         )),
                     FlexibleSpaceBar(
-                      background: Assets.images.profileHeaderBg.image(fit: BoxFit.cover),
+                      background: Assets.images.profileHeaderBg
+                          .image(fit: BoxFit.cover),
                     )
                   ],
                 ),
@@ -109,12 +113,14 @@ class ProfileView extends BaseView<ProfileController> {
                         children: [
                           const SizedBox(height: 30),
                           AutoSizeText(
-                            controller.userObject.value?.fullname ?? '',
+                            //controller.userObject.value?.fullname ?? '',
+                            controller.name.value,
                             style: context.themeExtensions.heading1
                                 .copyWith(color: context.themeExtensions.black),
                           ),
                           AutoSizeText(
-                            'ID: ${controller.userObject.value?.username}',
+                            //'ID: ${controller.userObject.value?.username}',
+                            controller.username.value,
                             style: context.themeExtensions.subTex
                                 .copyWith(color: context.themeExtensions.black),
                           ),
@@ -124,7 +130,8 @@ class ProfileView extends BaseView<ProfileController> {
                             padding: const EdgeInsets.symmetric(horizontal: 20),
                             child: Container(
                               decoration: BoxDecoration(
-                                borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(10)),
                                 color: context.themeExtensions.cultured,
                               ),
                               child: Padding(
@@ -136,44 +143,55 @@ class ProfileView extends BaseView<ProfileController> {
                                     _buildUserInfoLine(
                                         context: context,
                                         title: LocaleKeys.fullName.tr,
-                                        value: controller.userObject.value?.fullname,
+                                        //value: controller.userObject.value?.fullname,
+                                        value: controller.username.value,
                                         isFirst: true),
                                     _buildUserInfoLine(
                                         context: context,
                                         title: LocaleKeys.birthday.tr,
-                                        value: controller.userObject.value?.birthday),
+                                        value: controller
+                                            .userObject.value?.birthday),
                                     _buildUserInfoLine(
                                         context: context,
                                         title: LocaleKeys.gender.tr,
-                                        value: controller.userObject.value?.sex),
+                                        value:
+                                            controller.userObject.value?.sex),
                                     _buildUserInfoLine(
                                         context: context,
                                         title: LocaleKeys.phoneNumber.tr,
-                                        value: controller.userObject.value?.phone),
+                                        value:
+                                            controller.userObject.value?.phone),
                                     _buildUserInfoLine(
                                         context: context,
                                         title: LocaleKeys.email.tr,
-                                        value: controller.userObject.value?.email),
+                                        //value: controller.userObject.value?.email
+                                        value:
+                                            '${controller.username.value}@spnttw.edu.vn'),
                                     _buildUserInfoLine(
                                         context: context,
                                         title: LocaleKeys.ccidNumber.tr,
-                                        value: controller.userObject.value?.ccid),
+                                        value:
+                                            controller.userObject.value?.ccid),
                                     _buildUserInfoLine(
                                         context: context,
                                         title: LocaleKeys.trainingSystem.tr,
-                                        value: controller.userObject.value?.hedaotao),
+                                        value: controller
+                                            .userObject.value?.hedaotao),
                                     _buildUserInfoLine(
                                         context: context,
                                         title: LocaleKeys.department.tr,
-                                        value: controller.userObject.value?.khoa),
+                                        value:
+                                            controller.userObject.value?.khoa),
                                     _buildUserInfoLine(
                                         context: context,
                                         title: LocaleKeys.branch.tr,
-                                        value: controller.userObject.value?.nganh),
+                                        value:
+                                            controller.userObject.value?.nganh),
                                     _buildUserInfoLine(
                                         context: context,
                                         title: LocaleKeys.schoolYear.tr,
-                                        value: controller.userObject.value?.nienkhoa,
+                                        value: controller
+                                            .userObject.value?.nienkhoa,
                                         isLast: true)
                                   ],
                                 ),
@@ -214,8 +232,8 @@ class ProfileView extends BaseView<ProfileController> {
               color: Color(0xff1a5441),
             ),
             embeddedImage: snapshot.data,
-            embeddedImageStyle:
-                QrEmbeddedImageStyle(size: const Size.square(46), color: Colors.white),
+            embeddedImageStyle: QrEmbeddedImageStyle(
+                size: const Size.square(46), color: Colors.white),
           ),
         );
       },
@@ -236,7 +254,8 @@ class ProfileView extends BaseView<ProfileController> {
       bool? isFirst = false,
       bool? isLast = false}) {
     return Container(
-      padding: EdgeInsets.only(top: isFirst == true ? 0 : 7, bottom: isLast == true ? 0 : 7),
+      padding: EdgeInsets.only(
+          top: isFirst == true ? 0 : 7, bottom: isLast == true ? 0 : 7),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -254,8 +273,8 @@ class ProfileView extends BaseView<ProfileController> {
             flex: 5,
             child: AutoSizeText(
               value ?? '',
-              style:
-                  context.themeExtensions.paragraph.copyWith(color: context.themeExtensions.black),
+              style: context.themeExtensions.paragraph
+                  .copyWith(color: context.themeExtensions.black),
               textAlign: TextAlign.end,
             ),
           )

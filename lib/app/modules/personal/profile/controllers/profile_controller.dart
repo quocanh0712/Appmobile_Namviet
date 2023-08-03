@@ -16,7 +16,10 @@ class ProfileController extends BaseController {
 
   final userRepo = Get.find<UserRepository>();
   Rx<UserObject?> userObject = UserObject().obs;
-
+  Rx<String> username = "1952220001".obs;
+  Rx<String> name = "Phạm Thị Vân Anh".obs;
+  //Rx<String> username = "admin".obs;
+  //Rx<String> name = "Quản trị hệ thống".obs;
   @override
   onReady() async {
     super.onReady();
@@ -26,7 +29,8 @@ class ProfileController extends BaseController {
 
   navigateToProfileEdition() async {
     Fimber.d("navigateToProfileEdition()");
-    var edittedUserInfo = await Get.toNamed(Routes.PROFILE_EDITION, arguments: userObject.value);
+    var edittedUserInfo =
+        await Get.toNamed(Routes.PROFILE_EDITION, arguments: userObject.value);
     if (edittedUserInfo is UserObject) {
       userObject.value = edittedUserInfo;
     }
