@@ -73,6 +73,18 @@ abstract class Routes {
   static const ACCOUNT = _Paths.ACCOUNT;
   static const SURVEY_ITEM = _Paths.SURVEY_ITEM;
   static const SCHEDULE_CHECKIN = _Paths.SCHEDULE_CHECKIN;
+  static const ELEARNING_DETAIL = _Paths.ELEARNING_DETAIL;
+  static const LIST_CLASS_MANAGERS = _Paths.LIST_CLASS_MANAGERS;
+  static const CLASS_SURVEY_RESULT = _Paths.CLASS_SURVEY_RESULT;
+  static const STU_CHECKIN_MANAGER = _Paths.STU_CHECKIN_MANAGER;
+  static const STU_CHECKIN = _Paths.STU_CHECKIN;
+  static const STU_NOCHECKIN = _Paths.STU_NOCHECKIN;
+  static const STU_OUTSIDE_MANAGER = _Paths.STU_OUTSIDE_MANAGER;
+  static const STU_CROSS_MANAGER = _Paths.STU_CROSS_MANAGER;
+  static const STU_WORK_MANAGER = _Paths.STU_WORK_MANAGER;
+  static const STU_CERTIFICATE_MANAGER = _Paths.STU_CERTIFICATE_MANAGER;
+  static const EXECUTIVE_DOCUMENTS = _Paths.EXECUTIVE_DOCUMENTS;
+  static const SEND_REQUEST = _Paths.SEND_REQUEST;
 }
 
 abstract class _Paths {
@@ -141,4 +153,16 @@ abstract class _Paths {
   static const ACCOUNT = '/account';
   static const SURVEY_ITEM = '/survey-item';
   static const SCHEDULE_CHECKIN = '/schedule-checkin';
+  static const ELEARNING_DETAIL = '/elearning-detail';
+  static const LIST_CLASS_MANAGERS = '/list-class-managers';
+  static const CLASS_SURVEY_RESULT = '/class-survey-result';
+  static const STU_CHECKIN_MANAGER = '/stu-checkin';
+  static const STU_CHECKIN = '/list-stu-checkin';
+  static const STU_NOCHECKIN = '/list-stu-nocheckin';
+  static const STU_OUTSIDE_MANAGER = '/stu-outside-manager';
+  static const STU_CROSS_MANAGER = '/stu-cross-manager';
+  static const STU_WORK_MANAGER = '/stu-work-manager';
+  static const STU_CERTIFICATE_MANAGER = '/stu-certificate-manager';
+  static const EXECUTIVE_DOCUMENTS = '/executive-documents';
+  static const SEND_REQUEST = '/send-request';
 }

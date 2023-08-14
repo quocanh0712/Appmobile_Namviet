@@ -29,6 +29,8 @@ import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:get/get.dart';
 import 'package:status_bar_control/status_bar_control.dart';
 
+import '../../schedule_checkin/views/request_checkin_view.dart';
+
 class DashboardView extends StatefulHookWidget {
   const DashboardView({super.key});
 
@@ -41,13 +43,15 @@ class _DashboardViewState extends State<DashboardView> {
   final autoSizeGroup = AutoSizeGroup();
   late StreamSubscription<bool> keyboardSubscription;
 
-  final DashboardController dashboardController = Get.put(DashboardController(), permanent: false);
+  final DashboardController dashboardController =
+      Get.put(DashboardController(), permanent: false);
 
   final GlobalKey<CheckinViewState> checkinGlobalKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
-    pageController = usePageController(keepPage: true, initialPage: homeTabIndex);
+    pageController =
+        usePageController(keepPage: true, initialPage: homeTabIndex);
     return WillPopScope(
       onWillPop: () => _showExitPopup(context),
       child: Stack(
@@ -63,24 +67,31 @@ class _DashboardViewState extends State<DashboardView> {
                 _changeSystemStatusBarIconColor(index);
               },
               children: <Widget>[
-                KeepAliveWidget(child: HomeView(bindingCreator: () => HomeBinding())),
+                KeepAliveWidget(
+                    child: HomeView(bindingCreator: () => HomeBinding())),
                 KeepAliveWidget(
                   safeAreaTop: true,
-                  child: NotificationView(bindingCreator: () => NotificationBinding()),
+                  child: NotificationView(
+                      bindingCreator: () => NotificationBinding()),
                 ),
                 KeepAliveWidget(child: CheckinView(key: checkinGlobalKey)),
                 KeepAliveWidget(
-                    child: AppInformationView(bindingCreator: () => AppInformationBinding())),
-                KeepAliveWidget(child: PersonalView(bindingCreator: () => PersonalBinding())),
+                    child: AppInformationView(
+                        bindingCreator: () => AppInformationBinding())),
+                KeepAliveWidget(
+                    child:
+                        PersonalView(bindingCreator: () => PersonalBinding())),
               ],
             ),
             floatingActionButton: InkWell(
-              child: Assets.images.icCheckin.image(width: 56, height: 56, fit: BoxFit.cover),
+              child: Assets.images.icCheckin
+                  .image(width: 56, height: 56, fit: BoxFit.cover),
               onTap: () {
                 pageController.jumpToPage(checkInTabIndex);
               },
             ),
-            floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.centerDocked,
             bottomNavigationBar: buildBottomNavigationBar(context),
           ),
           SafeArea(
@@ -105,9 +116,11 @@ class _DashboardViewState extends State<DashboardView> {
                           style: TextStyle(
                               decoration: TextDecoration.none,
                               fontSize: 14,
-                              color: (dashboardController.currentTabIndex.value == -1)
-                                  ? LMSColors.mainGreen
-                                  : LMSColors.textGrey),
+                              color:
+                                  (dashboardController.currentTabIndex.value ==
+                                          -1)
+                                      ? LMSColors.mainGreen
+                                      : LMSColors.textGrey),
                         ),
                       )),
                 ),
@@ -125,9 +138,10 @@ class _DashboardViewState extends State<DashboardView> {
           itemCount: botNavItems.length,
           tabBuilder: (int index, bool isActive) {
             final botNavItem = botNavItems[index];
-            final color = (isActive && dashboardController.currentTabIndex.value != -1)
-                ? botNavItem.activeColor
-                : botNavItem.inactiveColor;
+            final color =
+                (isActive && dashboardController.currentTabIndex.value != -1)
+                    ? botNavItem.activeColor
+                    : botNavItem.inactiveColor;
             return Column(
               mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
@@ -136,9 +150,11 @@ class _DashboardViewState extends State<DashboardView> {
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(left: 9, top: 7, right: 9),
-                      child: botNavItems[index]
-                              .icon
-                              ?.svg(width: 25, height: 25, fit: BoxFit.cover, color: color) ??
+                      child: botNavItems[index].icon?.svg(
+                              width: 25,
+                              height: 25,
+                              fit: BoxFit.cover,
+                              color: color) ??
                           const SizedBox.shrink(),
                     ),
                     index == notificationTabIndex
@@ -150,13 +166,16 @@ class _DashboardViewState extends State<DashboardView> {
                                 color: context.themeExtensions.red,
                                 borderRadius: BorderRadius.circular(10),
                               ),
-                              constraints: const BoxConstraints(minWidth: 10, minHeight: 10),
+                              constraints: const BoxConstraints(
+                                  minWidth: 10, minHeight: 10),
                               child: Align(
                                 alignment: Alignment.center,
                                 child: Text(
                                   dashboardController.notiCount.value,
-                                  style: context.themeExtensions.subTexMedium.copyWith(
-                                      color: context.themeExtensions.white, fontSize: 12),
+                                  style: context.themeExtensions.subTexMedium
+                                      .copyWith(
+                                          color: context.themeExtensions.white,
+                                          fontSize: 12),
                                   textAlign: TextAlign.center,
                                 ),
                               ),
@@ -208,15 +227,15 @@ class _DashboardViewState extends State<DashboardView> {
             ),
             content: Text(
               LocaleKeys.exitAppMessage.tr,
-              style:
-                  context.themeExtensions.paragraph.copyWith(color: context.themeExtensions.black),
+              style: context.themeExtensions.paragraph
+                  .copyWith(color: context.themeExtensions.black),
             ),
             actions: [
               ElevatedButton(
                 //return false when click on "NO"
                 onPressed: () => Get.back(result: false, closeOverlays: true),
-                style:
-                    ElevatedButton.styleFrom(backgroundColor: context.themeExtensions.mainGreen),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: context.themeExtensions.mainGreen),
                 child: Text(
                   LocaleKeys.no.tr,
                   style: context.themeExtensions.paragraphSemiBold
@@ -226,7 +245,8 @@ class _DashboardViewState extends State<DashboardView> {
               ElevatedButton(
                 //return true when click on "Yes"
                 onPressed: () => Get.back(result: true, closeOverlays: true),
-                style: ElevatedButton.styleFrom(backgroundColor: context.themeExtensions.textGrey),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: context.themeExtensions.textGrey),
                 child: Text(
                   LocaleKeys.yes.tr,
                   style: context.themeExtensions.paragraphSemiBold

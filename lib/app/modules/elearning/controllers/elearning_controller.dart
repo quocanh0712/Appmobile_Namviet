@@ -13,6 +13,8 @@ import 'package:ftu_lms/utils/constants.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../routes/app_pages.dart';
+
 class ElearningController extends BaseListController<ELearningResponse> {
   DateTime dateTimeRequest = DateTime.now();
 
@@ -23,10 +25,13 @@ class ElearningController extends BaseListController<ELearningResponse> {
   }
 
   @override
-  Future<Result<BaseResponseObject<List<ELearningResponse?>?>, NetworkError>> callToHost() {
+  Future<Result<BaseResponseObject<List<ELearningResponse?>?>, NetworkError>>
+      callToHost() {
     ELearningRepository repository = Get.find();
     return repository.getListELearning(ELearningRequest(
-        nowdate: dateTimeRequest, length: maxLengthResult, startindex: pageIndex));
+        nowdate: dateTimeRequest,
+        length: maxLengthResult,
+        startindex: pageIndex));
   }
 
   String getTitle() => LocaleKeys.eLearning.tr;
@@ -35,7 +40,12 @@ class ElearningController extends BaseListController<ELearningResponse> {
     if (!await launchUrl(Uri.parse(href ?? Constants.EMPTY),
         mode: LaunchMode.externalApplication)) {
       EasyLoading.showToast(LocaleKeys.commonErrorMessage.tr,
-          duration: ToastDuration.LENGTH_SHORT, toastPosition: EasyLoadingToastPosition.bottom);
+          duration: ToastDuration.LENGTH_SHORT,
+          toastPosition: EasyLoadingToastPosition.bottom);
     }
+  }
+
+  void navigateToLearning() {
+    Get.toNamed(Routes.ELEARNING_DETAIL);
   }
 }

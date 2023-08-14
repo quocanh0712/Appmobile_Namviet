@@ -2,6 +2,8 @@
 
 // coverage:ignore-file
 
+import 'package:ftu_lms/app/modules/schedule_checkin/bindings/schedule_checkin_binding.dart';
+import 'package:ftu_lms/app/modules/schedule_checkin/views/schedule_checkin_view.dart';
 import 'package:ftu_lms/app/modules/survey_result/views/survey_item/bindings/survey_item_binding.dart';
 import 'package:ftu_lms/app/modules/survey_result/views/survey_item/views/survey_item_view.dart';
 import 'package:get/get.dart';
@@ -12,6 +14,8 @@ import '../modules/appInformation/bindings/app_information_binding.dart';
 import '../modules/appInformation/views/app_information_view.dart';
 import '../modules/checkin/bindings/checkin_binding.dart';
 import '../modules/checkin/views/checkin_view.dart';
+import '../modules/class_survey_result/bindings/class_survey_result_binding.dart';
+import '../modules/class_survey_result/views/class_survey_result_view.dart';
 import '../modules/create_new_certificate/bindings/create_new_certificate_binding.dart';
 import '../modules/create_new_certificate/views/create_new_certificate_view.dart';
 import '../modules/create_new_conversation/bindings/create_new_conversation_binding.dart';
@@ -31,7 +35,10 @@ import '../modules/document_form_item/views/document_form_item_view.dart';
 import '../modules/educationProgram/bindings/education_program_binding.dart';
 import '../modules/educationProgram/views/education_program_view.dart';
 import '../modules/elearning/bindings/elearning_binding.dart';
+import '../modules/elearning/views/elearning_detail_view.dart';
 import '../modules/elearning/views/elearning_view.dart';
+import '../modules/executive_documents/bindings/executive_documents_binding.dart';
+import '../modules/executive_documents/views/executive_documents_view.dart';
 import '../modules/financeOverview/billPayment/bindings/bill_payment_binding.dart';
 import '../modules/financeOverview/billPayment/views/bill_payment_view.dart';
 import '../modules/financeOverview/bindings/finance_overview_binding.dart';
@@ -48,6 +55,8 @@ import '../modules/item_scientific_research/bindings/item_scientific_research_bi
 import '../modules/item_scientific_research/views/item_scientific_research_view.dart';
 import '../modules/list_certificates/bindings/list_certificates_binding.dart';
 import '../modules/list_certificates/views/list_certificates_view.dart';
+import '../modules/list_class_managers/bindings/list_class_managers_binding.dart';
+import '../modules/list_class_managers/views/list_class_managers_view.dart';
 import '../modules/list_request_form/bindings/list_request_form_binding.dart';
 import '../modules/list_request_form/views/list_request_form_view.dart';
 import '../modules/list_teacher_info/bindings/list_teacher_info_binding.dart';
@@ -96,6 +105,8 @@ import '../modules/schedule_time/bindings/schedule_time_binding.dart';
 import '../modules/schedule_time/views/schedule_time_view.dart';
 import '../modules/scientific_research/bindings/scientific_research_binding.dart';
 import '../modules/scientific_research/views/scientific_research_view.dart';
+import '../modules/send_request/bindings/send_request_binding.dart';
+import '../modules/send_request/views/send_request_view.dart';
 import '../modules/serviceRequestList/bindings/service_request_list_binding.dart';
 import '../modules/serviceRequestList/views/allServiceRequestList/bindings/all_service_request_list_binding.dart';
 import '../modules/serviceRequestList/views/allServiceRequestList/views/all_service_request_list_view.dart';
@@ -110,6 +121,14 @@ import '../modules/settings/bindings/settings_binding.dart';
 import '../modules/settings/views/settings_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
+import '../modules/stu_checkin/bindings/stu_checkin_binding.dart';
+import '../modules/stu_checkin/views/list_stu_checkin_view.dart';
+import '../modules/stu_checkin/views/list_stu_nocheckin_view.dart';
+import '../modules/stu_checkin/views/stu_certificate_manager_view.dart';
+import '../modules/stu_checkin/views/stu_checkin_view.dart';
+import '../modules/stu_checkin/views/stu_cross_manager_view.dart';
+import '../modules/stu_checkin/views/stu_outside_manager_view.dart';
+import '../modules/stu_checkin/views/stu_work_manager_view.dart';
 import '../modules/survey_result/bindings/survey_result_binding.dart';
 import '../modules/survey_result/views/survey_result_view.dart';
 import '../modules/working_process/bindings/create/create_language_process_binding.dart';
@@ -450,8 +469,68 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SCHEDULE_CHECKIN,
-      page: () => SurveyItemView(),
-      binding: SurveyItemBinding(),
+      page: () => ScheduleCheckinView(),
+      binding: ScheduleCheckinBinding(),
     ),
+    GetPage(
+      name: _Paths.ELEARNING_DETAIL,
+      page: () => ElearningDeTailView(),
+      binding: ElearningBinding(),
+    ),
+    GetPage(
+      name: _Paths.LIST_CLASS_MANAGERS,
+      page: () => ListClassManagersView(),
+      binding: ListClassManagersBinding(),
+    ),
+    GetPage(
+      name: _Paths.CLASS_SURVEY_RESULT,
+      page: () => ClassSurveyResultView(),
+      binding: ClassSurveyResultBinding(),
+    ),
+    GetPage(
+      name: _Paths.STU_CHECKIN_MANAGER,
+      page: () => StuCheckinView(),
+      binding: StuCheckinBinding(),
+    ),
+    GetPage(
+      name: _Paths.STU_CHECKIN,
+      page: () => ListStuCheckinView(),
+      binding: StuCheckinBinding(),
+    ),
+    GetPage(
+      name: _Paths.STU_NOCHECKIN,
+      page: () => ListStuNoCheckinView(),
+      binding: StuCheckinBinding(),
+    ),
+    GetPage(
+      name: _Paths.STU_WORK_MANAGER,
+      page: () => StuWorkManagerView(),
+      binding: StuCheckinBinding(),
+    ),
+    GetPage(
+      name: _Paths.STU_CROSS_MANAGER,
+      page: () => StuCrossManagerView(),
+      binding: StuCheckinBinding(),
+    ),
+    GetPage(
+      name: _Paths.STU_CERTIFICATE_MANAGER,
+      page: () => StuCertificateManagerView(),
+      binding: StuCheckinBinding(),
+    ),
+    GetPage(
+      name: _Paths.STU_OUTSIDE_MANAGER,
+      page: () => StuOutsideManagerView(),
+      binding: StuCheckinBinding(),
+    ),
+    GetPage(
+      name: _Paths.EXECUTIVE_DOCUMENTS,
+      page: () => ExecutiveDocumentsView(),
+      binding: ExecutiveDocumentsBinding(),
+    ),
+    GetPage(
+      name: _Paths.SEND_REQUEST,
+      page: () => SendRequestView(),
+      binding: SendRequestBinding(),
+    )
   ];
 }

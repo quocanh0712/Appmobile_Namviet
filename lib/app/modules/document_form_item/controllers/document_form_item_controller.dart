@@ -14,7 +14,8 @@ class DocumentFormItemController extends BaseController {
 
   @override
   void onInit() {
-    _documentFormResponse = Get.arguments is DocumentFormResponse ? Get.arguments : null;
+    _documentFormResponse =
+        Get.arguments is DocumentFormResponse ? Get.arguments : null;
     super.onInit();
   }
 
@@ -39,14 +40,17 @@ class DocumentFormItemController extends BaseController {
   }
 
   void downloadFile() async {
-    if (!await launchUrl(Uri.parse(_documentFormResponse?.linkDownload ?? Constants.EMPTY),
+    if (!await launchUrl(
+        Uri.parse(_documentFormResponse?.linkDownload ?? Constants.EMPTY),
         mode: LaunchMode.externalApplication)) {
       EasyLoading.showToast(LocaleKeys.commonErrorMessage.tr,
-          duration: ToastDuration.LENGTH_SHORT, toastPosition: EasyLoadingToastPosition.bottom);
+          duration: ToastDuration.LENGTH_SHORT,
+          toastPosition: EasyLoadingToastPosition.bottom);
     }
   }
 
   void createForm() {
-    Get.toNamed(Routes.CREATE_NEW_FORM, arguments: [_documentFormResponse, true]);
+    Get.toNamed(Routes.CREATE_NEW_FORM,
+        arguments: [_documentFormResponse, true]);
   }
 }

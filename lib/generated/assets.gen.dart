@@ -15,6 +15,18 @@ import 'package:lottie/lottie.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/HUPES_logo.png
+  AssetGenImage get hUPESLogo => const AssetGenImage('assets/images/HUPES_logo.png');
+
+  /// File path: assets/images/IS_HNU_logo.png
+  AssetGenImage get iSHNULogo => const AssetGenImage('assets/images/IS_HNU_logo.png');
+
+  /// File path: assets/images/NUAE_logo.png
+  AssetGenImage get nUAELogo => const AssetGenImage('assets/images/NUAE_logo.png');
+
+  /// File path: assets/images/TUAF_logo.png
+  AssetGenImage get tUAFLogo => const AssetGenImage('assets/images/TUAF_logo.png');
+
   /// File path: assets/images/android12splash.png
   AssetGenImage get android12splash => const AssetGenImage('assets/images/android12splash.png');
 
@@ -302,6 +314,28 @@ class $AssetsImagesGen {
   /// File path: assets/images/ic_working_process.svg
   SvgGenImage get icWorkingProcess => const SvgGenImage('assets/images/ic_working_process.svg');
 
+  /// File path: assets/images/icons8-classroom-28.png
+  AssetGenImage get icons8Classroom28 =>
+      const AssetGenImage('assets/images/icons8-classroom-28.png');
+
+  /// File path: assets/images/icons8-document-28.png
+  AssetGenImage get icons8Document28 =>
+      const AssetGenImage('assets/images/icons8-document-28.png');
+
+  /// File path: assets/images/icons8-pdf-file-format-28.png
+  AssetGenImage get icons8PdfFileFormat28 =>
+      const AssetGenImage('assets/images/icons8-pdf-file-format-28.png');
+
+  /// File path: assets/images/icons8-request-28.png
+  AssetGenImage get icons8Request28 => const AssetGenImage('assets/images/icons8-request-28.png');
+
+  /// File path: assets/images/icons8-training-28.png
+  AssetGenImage get icons8Training28 =>
+      const AssetGenImage('assets/images/icons8-training-28.png');
+
+  /// File path: assets/images/icons8-youtube-28.png
+  AssetGenImage get icons8Youtube28 => const AssetGenImage('assets/images/icons8-youtube-28.png');
+
   /// File path: assets/images/lesson_registration_banner.png
   AssetGenImage get lessonRegistrationBanner =>
       const AssetGenImage('assets/images/lesson_registration_banner.png');
@@ -323,6 +357,10 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<dynamic> get values => [
+        hUPESLogo,
+        iSHNULogo,
+        nUAELogo,
+        tUAFLogo,
         android12splash,
         aristaBg,
         arrowRight,
@@ -415,6 +453,12 @@ class $AssetsImagesGen {
         icTrash,
         icUserOctagon,
         icWorkingProcess,
+        icons8Classroom28,
+        icons8Document28,
+        icons8PdfFileFormat28,
+        icons8Request28,
+        icons8Training28,
+        icons8Youtube28,
         lessonRegistrationBanner,
         personalStudyOverviewBg,
         profileHeaderBg,

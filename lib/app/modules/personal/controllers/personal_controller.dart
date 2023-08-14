@@ -32,7 +32,10 @@ class PersonalController extends BaseController {
   int? idDonVi = 0;
   Rx<String> title = "NAM VIỆT JSC".obs;
   Rx<String> imagePath = Assets.images.ftuLogo.path.obs;
-
+  Rx<String> username = "1952220001".obs;
+  Rx<String> name = "Phạm Thị Vân Anh".obs;
+  //Rx<String> username = "admin".obs;
+  //Rx<String> name = "Quản trị hệ thống".obs;
   @override
   void onInit() async {
     super.onInit();
@@ -47,25 +50,29 @@ class PersonalController extends BaseController {
         break;
       case 2:
         title.value = "Trường ĐH Nông Lâm Thái Nguyên";
-        imagePath.value = Assets.images.icBookPng.path;
+        imagePath.value = Assets.images.tUAFLogo.path;
         break;
       case 3:
         title.value = "Trường ĐH SPNT Trung Ương";
-        imagePath.value = Assets.images.homeBotLeftButBg.path;
+        imagePath.value = Assets.images.nUAELogo.path;
         break;
       case 4:
         title.value = "Trường ĐH Sư phạm TDTT Hà Nội";
-        imagePath.value = Assets.images.ftuLogo.path;
+        imagePath.value = Assets.images.hUPESLogo.path;
         break;
       case 5:
         title.value = "Trường Quốc tế - ĐHQG Hà Nội";
-        imagePath.value = Assets.images.icBookPng.path;
+        imagePath.value = Assets.images.iSHNULogo.path;
         break;
       default:
         title.value = "NAM VIỆT JSC";
-        imagePath.value = Assets.images.ftuLogo.path;
+        imagePath.value = Assets.images.icBookPng.path;
         break;
     }
+
+    isTeacherPermission.value =
+        userObject.value?.retrievePermission() == UserPermission.teacher;
+    if (isTeacherPermission.value == false) retrieveSemesterPoints();
   }
 
   @override
@@ -78,9 +85,6 @@ class PersonalController extends BaseController {
     if (biometricAuthIsNotSupported.value) {
       biometricLoginIsEnable.value = userObject.value?.biometricAuth ?? false;
     }
-    isTeacherPermission.value =
-        userObject.value?.retrievePermission() == UserPermission.teacher;
-    if (isTeacherPermission.value == false) retrieveSemesterPoints();
   }
 
   retrieveSemesterPoints({bool? isRefresh = false}) async {

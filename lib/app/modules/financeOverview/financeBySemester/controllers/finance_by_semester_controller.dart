@@ -24,8 +24,8 @@ class FinanceBySemesterController extends BaseController {
   void loadData({bool? isRefresh = false}) async {
     Fimber.d('loadData({bool? isRefresh = $isRefresh})');
     isLoading.value = true;
-    final response = await finaceRepo?.getAllBills(
-        FinanceRequestParams(year: semester.value?.year, semester: semester.value?.semester));
+    final response = await finaceRepo?.getAllBills(FinanceRequestParams(
+        year: semester.value?.year, semester: semester.value?.semester));
     isLoading.value = false;
     response?.when(
       success: (data) {
@@ -46,5 +46,9 @@ class FinanceBySemesterController extends BaseController {
   void navigateToPayBill(SemesterBillResponseObject? bill) {
     Fimber.d('navigateToPayBill(SemesterBillResponseObject? $bill)');
     Get.toNamed(Routes.TUITION, arguments: bill);
+  }
+
+  void doPayment() {
+    Get.toNamed(Routes.BILL_PAYMENT);
   }
 }

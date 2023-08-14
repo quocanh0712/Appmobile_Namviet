@@ -31,6 +31,7 @@ class LocaleKeys {
   static const reward = 'reward';
   static const discipline = 'discipline';
   static const eLearning = 'eLearning';
+  static const eLearningDetail = 'eLearningDetail';
   static const utilities = 'utilities';
   static const account = 'account';
   static const scienceStudy = 'scienceStudy';
@@ -310,7 +311,33 @@ class LocaleKeys {
   static const idDonViIsNotEmpty = 'idDonViIsNotEmpty';
   static const checkInDevice = 'checkInDevice';
   static const listScheduleCheckin = 'listScheduleCheckin';
+  static const listClassManager = 'listClassManager';
+  static const listClassManagerTitle = 'listClassManagerTitle';
+  static const classSurveyResults = 'classSurveyResults';
+  static const studentManager = 'studentManager';
+  static const stuCheckin = 'stuCheckin';
+  static const stuNoCheckin = 'stuNoCheckin';
+  static const stuOutSiteManager = 'stuOutSiteManager';
+  static const stuWorkManager = 'stuWorkManager';
+  static const stuCrossManager = 'stuCrossManager';
+  static const stuCertificateManager = 'stuCertificateManager';
+  static const countTeaching = 'countTeaching';
+  static const executiveDocuments = 'executiveDocuments';
+  static const sendRequest = 'sendRequest';
+  static const download = 'download';
   static const eof = 'eof';
+  static const fakeClass = 'fakeClass';
+  static const fakeStu1 = 'fakeStu1';
+  static const fakeStu2 = 'fakeStu2';
+  static const fakeStu3 = 'fakeStu3';
+  static const fakeStu4 = 'fakeStu4';
+  static const fakeStu5 = 'fakeStu5';
+  static const fakeStu6 = 'fakeStu6';
+  static const fakeStu7 = 'fakeStu7';
+  static const fakeStu8 = 'fakeStu8';
+  static const fakeStu9 = 'fakeStu9';
+  static const fakeStu10 = 'fakeStu10';
+  static const fakeStu11 = 'fakeStu11';
   static const TestingTime = 'TestingTime';
   static const amount = 'amount';
 }
@@ -320,7 +347,7 @@ class Locales {
     'homePageTitle': 'Login - Home Page',
     'homePage': 'Trang chủ',
     'notification': 'Thông báo',
-    'checkin': 'Checkin',
+    'checkin': 'Điểm danh',
     'settings': 'Thiết lập',
     'personal': 'Cá nhân',
     'welcomeMessage': 'Welcome to Learning Management System',
@@ -328,16 +355,17 @@ class Locales {
     'password': 'Mật khẩu',
     'forgotPassword': 'Quên mật khẩu?',
     'login': 'Đăng nhập',
-    'learningManagementSystem': 'Cổng thông tin quản lý sinh viên',
+    'learningManagementSystem': 'Hệ thống quản lý giáo dục ESSoft',
     'restNow': 'Nghỉ ngơi thôi',
     'noTasksMessage':
-        'Hôm nay bạn không có lịch nào cả. Hãy tận hưởng 1 ngày vui vẻ nhé.',
+        'Hôm nay không có lịch nào cả. Bạn có thể nghỉ ngơi hoặc sắp xếp lịch khác.',
     'tasksCalendar': 'Lịch công tác',
     'teachingProgram': 'Chương trình đào tạo',
     'rewardDiscipline': 'Khen thưởng, kỷ luật',
     'reward': 'Khen thưởng',
     'discipline': 'Kỷ luật',
-    'eLearning': 'E-Learning',
+    'eLearning': 'Học trực tuyến',
+    'eLearningDetail': 'Bài giảng điện tử',
     'utilities': 'Tiện ích',
     'account': 'Tài khoản',
     'scienceStudy': 'Nghiên cứu khoa học',
@@ -346,7 +374,7 @@ class Locales {
     'viewMore': 'Xem tất cả',
     'todayTasks': 'Công việc hôm nay',
     'otherScheduleTimeTitle': 'Lịch học',
-    'teacherScheduleTimeTitle': 'Lịch giảng dạy',
+    'teacherScheduleTimeTitle': 'Lịch làm việc',
     'studyScheduleTitle': 'Lịch học hôm nay',
     'teachScheduleTitle': 'Lịch dạy học hôm nay',
     'AM6': '6 AM',
@@ -616,16 +644,42 @@ class Locales {
     'userNameAndPasswordIsNotEmpty':
         'Tên đăng nhập và mật khẩu không được rỗng.',
     'idDonViIsNotEmpty': 'Chọn đơn vị trước khi đăng nhập.',
-    'checkInDevice': 'Kiểm kê tài sản.',
-    'listScheduleCheckin': 'Kế hoạch kiểm kê tài sản.',
+    'checkInDevice': 'Kiểm kê tài sản',
+    'listScheduleCheckin': 'Kế hoạch kiểm kê.',
+    'listClassManager': 'Danh sách lớp quản lý.',
+    'listClassManagerTitle': 'Quản lý lớp học',
+    'classSurveyResults': 'Đánh giá lớp học',
+    'studentManager': 'Quản lý sinh viên',
+    'stuCheckin': 'Điểm danh sinh viên',
+    'stuNoCheckin': 'Thống kê vắng mặt',
+    'stuOutSiteManager': 'Quản lý ngoại trú',
+    'stuWorkManager': 'Quản lý việc làm',
+    'stuCrossManager': 'Y tế học đường',
+    'stuCertificateManager': 'CĐR và các chứng chỉ',
+    'countTeaching': 'Thống kê số tiết giảng',
+    'executiveDocuments': 'Văn bản điều hành',
+    'sendRequest': 'Gửi đề xuất',
+    'download': 'Tải xuống',
     'eof':
         'End of File. Please add a new text above this item to avoid conflicts. Thanks!',
+    'fakeClass': 'D17-VO-A',
+    'fakeStu1': '(19571402060261) - Chu Thị Ngọc Ánh',
+    'fakeStu2': '(19571402060262) - Achek Bounchanthala',
+    'fakeStu3': '(19571402060263) - Nguyễn Hải Đăng',
+    'fakeStu4': '(19571402060264) - Lê Đắc Dũng',
+    'fakeStu5': '(19571402060265) - Đỗ Hùng Dương',
+    'fakeStu6': '(19571402060266) - Nguyễn Văn Giang',
+    'fakeStu7': '(19571402060268) - Nguyễn Thị Lan',
+    'fakeStu8': '(19571402060271) - Hoàng Thị Kim Ngân',
+    'fakeStu9': '(19571402060274) - Phan Trọng Tấn',
+    'fakeStu10': '(19571402060272) - Nguyễn Văn Nguyên',
+    'fakeStu11': '(19571402060273) - Nguyễn Đức Phi',
   };
   static const vn_VI = {
     'homePageTitle': 'Đăng nhập - Trang chủ',
     'homePage': 'Trang chủ',
     'notification': 'Thông báo',
-    'checkin': 'Checkin',
+    'checkin': 'Điểm danh',
     'settings': 'Thiết lập',
     'personal': 'Cá nhân',
     'welcomeMessage': 'Welcome to Learning Management System',
@@ -633,7 +687,7 @@ class Locales {
     'password': 'Mật khẩu',
     'forgotPassword': 'Quên mật khẩu?',
     'login': 'Đăng nhập',
-    'learningManagementSystem': 'Cổng thông tin quản lý sinh viên',
+    'learningManagementSystem': 'Hệ thống quản lý giáo dục ESSoft',
     'restNow': 'Nghỉ ngơi thôi',
     'noTasksMessage':
         'Hôm nay bạn không có lịch nào cả. Hãy tận hưởng 1 ngày vui vẻ nhé.',
@@ -642,7 +696,8 @@ class Locales {
     'rewardDiscipline': 'Khen thưởng, kỷ luật',
     'reward': 'Khen thưởng',
     'discipline': 'Kỷ luật',
-    'eLearning': 'E-Learning',
+    'eLearning': 'Học trực tuyến',
+    'eLearningDetail': 'Bài giảng điện tử',
     'utilities': 'Tiện ích',
     'account': 'Tài khoản',
     'scienceStudy': 'Nghiên cứu khoa học',
@@ -651,7 +706,7 @@ class Locales {
     'viewMore': 'Xem tất cả',
     'todayTasks': 'Công việc hôm nay',
     'otherScheduleTimeTitle': 'Lịch học',
-    'teacherScheduleTimeTitle': 'Lịch giảng dạy',
+    'teacherScheduleTimeTitle': 'Lịch làm việc',
     'studyScheduleTitle': 'Lịch học hôm nay',
     'teachScheduleTitle': 'Lịch dạy học hôm nay',
     'AM6': '6 AM',
@@ -922,9 +977,35 @@ class Locales {
     'userNameAndPasswordIsNotEmpty':
         'Tên đăng nhập và mật khẩu không được rỗng.',
     'idDonViIsNotEmpty': 'Chọn đơn vị trước khi đăng nhập.',
-    'checkInDevice': 'Kiểm kê tài sản.',
-    'listScheduleCheckin': 'Kế hoạch kiểm kê tài sản.',
+    'checkInDevice': 'Kiểm kê tài sản',
+    'listScheduleCheckin': 'Kế hoạch kiểm kê.',
+    'listClassManager': 'Danh sách lớp quản lý.',
+    'listClassManagerTitle': 'Quản lý lớp học',
+    'classSurveyResults': 'Đánh giá lớp học',
+    'studentManager': 'Quản lý sinh viên',
+    'stuCheckin': 'Điểm danh sinh viên',
+    'stuNoCheckin': 'Thống kê vắng mặt',
+    'stuOutSiteManager': 'Quản lý ngoại trú',
+    'stuWorkManager': 'Quản lý việc làm',
+    'stuCrossManager': 'Y tế học đường',
+    'stuCertificateManager': 'CĐR và các chứng chỉ',
+    'countTeaching': 'Thống kê số tiết giảng',
+    'executiveDocuments': 'Văn bản điều hành',
+    'sendRequest': 'Gửi đề xuất',
+    'download': 'Tải xuống',
     'eof':
         'End of File. Please add a new text above this item to avoid conflicts. Thanks!',
+    'fakeClass': 'D17-VO-A',
+    'fakeStu1': '(19571402060261) - Chu Thị Ngọc Ánh',
+    'fakeStu2': '(19571402060262) - Achek Bounchanthala',
+    'fakeStu3': '(19571402060263) - Nguyễn Hải Đăng',
+    'fakeStu4': '(19571402060264) - Lê Đắc Dũng',
+    'fakeStu5': '(19571402060265) - Đỗ Hùng Dương',
+    'fakeStu6': '(19571402060266) - Nguyễn Văn Giang',
+    'fakeStu7': '(19571402060268) - Nguyễn Thị Lan',
+    'fakeStu8': '(19571402060271) - Hoàng Thị Kim Ngân',
+    'fakeStu9': '(19571402060274) - Phan Trọng Tấn',
+    'fakeStu10': '(19571402060272) - Nguyễn Văn Nguyên',
+    'fakeStu11': '(19571402060273) - Nguyễn Đức Phi',
   };
 }

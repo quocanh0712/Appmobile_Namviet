@@ -66,18 +66,18 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                         )),
                     const SizedBox(height: 13),
                     Obx(() => AutoSizeText(controller.title.value,
-                        style: context.themeExtensions.heading1
+                        style: context.themeExtensions.heading3
                             .copyWith(color: context.themeExtensions.white))),
                     const SizedBox(height: 3),
                     Obx(() => AutoSizeText(
-                        "${controller.userObject.value?.fullname}",
-                        //controller.name.value,
+                        //"${controller.userObject.value?.fullname}",
+                        controller.name.value,
                         style: context.themeExtensions.subTex
                             .copyWith(color: context.themeExtensions.white))),
                     const SizedBox(height: 3),
                     Obx(() => AutoSizeText(
-                        "${controller.userObject.value?.username}",
-                        //controller.username.value,
+                        //"${controller.userObject.value?.username}",
+                        controller.username.value,
                         style: context.themeExtensions.subTex
                             .copyWith(color: context.themeExtensions.white)))
                   ],
@@ -172,10 +172,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                                     controller.userPermission?.value ??
                                         UserPermission.none),
                               )),
-                          Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  vertical: 35, horizontal: 20),
-                              child: _buildBanners(context)),
+                          //------------Show list banner----------
+                          // Padding(
+                          //     padding: const EdgeInsets.symmetric(
+                          //         vertical: 35, horizontal: 20),
+                          //     child: _buildBanners(context)),
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
                             child: Row(
@@ -406,15 +407,48 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                   assetImage: Assets.images.icBrifecaseTick,
                   onTap: () => controller.navigateToOneGate(),
                   title: LocaleKeys.oneStopService.tr),
+              // _buildUtilityButton(
+              //     context: context,
+              //     assetImage: Assets.images.icScan,
+              //     onTap: () => controller.navigateToCheckInDevice(),
+              //     title: LocaleKeys.checkInDevice.tr),
               _buildUtilityButton(
                   context: context,
-                  assetImage: Assets.images.icCheckin,
-                  onTap: () => controller.navigateToCheckInDevice(),
-                  title: LocaleKeys.checkInDevice.tr),
+                  assetImage: Assets.images.icReceiptDisscount,
+                  onTap: () => controller.navigateToClassSurveyResult(),
+                  title: LocaleKeys.classSurveyResults.tr),
+              _buildUtilityButton(
+                  context: context,
+                  assetImage: Assets.images.icons8Training28,
+                  onTap: () => controller.navigateToListClassManagerTitle(),
+                  title: LocaleKeys.listClassManagerTitle.tr),
             ],
           ),
         ),
         const SizedBox(height: 20),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              _buildUtilityButton(
+                  context: context,
+                  assetImage: Assets.images.icTaskSquare,
+                  onTap: () => controller.navigateToStuCheckinManager(),
+                  title: LocaleKeys.studentManager.tr),
+              _buildUtilityButton(
+                  context: context,
+                  assetImage: Assets.images.icons8Document28,
+                  onTap: () => controller.navigateToExecutiveDocuments(),
+                  title: LocaleKeys.executiveDocuments.tr),
+              _buildUtilityButton(
+                  context: context,
+                  assetImage: Assets.images.icons8Request28,
+                  onTap: () => controller.navigateToSendRequest(),
+                  title: LocaleKeys.sendRequest.tr)
+            ],
+          ),
+        ),
       ],
     );
   }
@@ -508,7 +542,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             const SizedBox(height: 8),
             AutoSizeText(title ?? '',
                 maxLines: 2,
-                style: context.themeExtensions.subTexMedium
+                style: context.themeExtensions.subTex
                     .copyWith(color: context.themeExtensions.textColor),
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis)

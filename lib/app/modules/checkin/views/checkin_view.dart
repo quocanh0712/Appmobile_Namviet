@@ -145,7 +145,6 @@ class CheckinViewState extends State<CheckinView> {
       controller.result = scanData;
       controller.pauseQRScannerCamera();
       controller.scaninfo(controller.result?.code);
-      //controller.checkin(controller.result?.code);
     });
     controller.resumeQRScannerCamera();
   }

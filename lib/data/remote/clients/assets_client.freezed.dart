@@ -16,23 +16,25 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$AssetsClient {
-  String? get barcode => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String? barcode) checkin,
+    required TResult Function(String? barcode, String? schedulecode) checkin,
     required TResult Function(String? barcode) scaninfo,
+    required TResult Function() schedulecheckin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? barcode)? checkin,
+    TResult? Function(String? barcode, String? schedulecode)? checkin,
     TResult? Function(String? barcode)? scaninfo,
+    TResult? Function()? schedulecheckin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? barcode)? checkin,
+    TResult Function(String? barcode, String? schedulecode)? checkin,
     TResult Function(String? barcode)? scaninfo,
+    TResult Function()? schedulecheckin,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -40,24 +42,23 @@ mixin _$AssetsClient {
   TResult map<TResult extends Object?>({
     required TResult Function(_Inventory value) checkin,
     required TResult Function(_InventoryInfo value) scaninfo,
+    required TResult Function(_InventorySchedule value) schedulecheckin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Inventory value)? checkin,
     TResult? Function(_InventoryInfo value)? scaninfo,
+    TResult? Function(_InventorySchedule value)? schedulecheckin,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Inventory value)? checkin,
     TResult Function(_InventoryInfo value)? scaninfo,
+    TResult Function(_InventorySchedule value)? schedulecheckin,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $AssetsClientCopyWith<AssetsClient> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -66,8 +67,6 @@ abstract class $AssetsClientCopyWith<$Res> {
   factory $AssetsClientCopyWith(
           AssetsClient value, $Res Function(AssetsClient) then) =
       _$AssetsClientCopyWithImpl<$Res, AssetsClient>;
-  @useResult
-  $Res call({String? barcode});
 }
 
 /// @nodoc
@@ -79,30 +78,15 @@ class _$AssetsClientCopyWithImpl<$Res, $Val extends AssetsClient>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? barcode = freezed,
-  }) {
-    return _then(_value.copyWith(
-      barcode: freezed == barcode
-          ? _value.barcode
-          : barcode // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$_InventoryCopyWith<$Res>
-    implements $AssetsClientCopyWith<$Res> {
+abstract class _$$_InventoryCopyWith<$Res> {
   factory _$$_InventoryCopyWith(
           _$_Inventory value, $Res Function(_$_Inventory) then) =
       __$$_InventoryCopyWithImpl<$Res>;
-  @override
   @useResult
-  $Res call({String? barcode});
+  $Res call({String? barcode, String? schedulecode});
 }
 
 /// @nodoc
@@ -117,11 +101,16 @@ class __$$_InventoryCopyWithImpl<$Res>
   @override
   $Res call({
     Object? barcode = freezed,
+    Object? schedulecode = freezed,
   }) {
     return _then(_$_Inventory(
       freezed == barcode
           ? _value.barcode
           : barcode // ignore: cast_nullable_to_non_nullable
+              as String?,
+      freezed == schedulecode
+          ? _value.schedulecode
+          : schedulecode // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -130,14 +119,16 @@ class __$$_InventoryCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_Inventory extends _Inventory {
-  _$_Inventory(this.barcode) : super._();
+  _$_Inventory(this.barcode, this.schedulecode) : super._();
 
   @override
   final String? barcode;
+  @override
+  final String? schedulecode;
 
   @override
   String toString() {
-    return 'AssetsClient.checkin(barcode: $barcode)';
+    return 'AssetsClient.checkin(barcode: $barcode, schedulecode: $schedulecode)';
   }
 
   @override
@@ -145,11 +136,13 @@ class _$_Inventory extends _Inventory {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Inventory &&
-            (identical(other.barcode, barcode) || other.barcode == barcode));
+            (identical(other.barcode, barcode) || other.barcode == barcode) &&
+            (identical(other.schedulecode, schedulecode) ||
+                other.schedulecode == schedulecode));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, barcode);
+  int get hashCode => Object.hash(runtimeType, barcode, schedulecode);
 
   @JsonKey(ignore: true)
   @override
@@ -160,30 +153,33 @@ class _$_Inventory extends _Inventory {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String? barcode) checkin,
+    required TResult Function(String? barcode, String? schedulecode) checkin,
     required TResult Function(String? barcode) scaninfo,
+    required TResult Function() schedulecheckin,
   }) {
-    return checkin(barcode);
+    return checkin(barcode, schedulecode);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? barcode)? checkin,
+    TResult? Function(String? barcode, String? schedulecode)? checkin,
     TResult? Function(String? barcode)? scaninfo,
+    TResult? Function()? schedulecheckin,
   }) {
-    return checkin?.call(barcode);
+    return checkin?.call(barcode, schedulecode);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? barcode)? checkin,
+    TResult Function(String? barcode, String? schedulecode)? checkin,
     TResult Function(String? barcode)? scaninfo,
+    TResult Function()? schedulecheckin,
     required TResult orElse(),
   }) {
     if (checkin != null) {
-      return checkin(barcode);
+      return checkin(barcode, schedulecode);
     }
     return orElse();
   }
@@ -193,6 +189,7 @@ class _$_Inventory extends _Inventory {
   TResult map<TResult extends Object?>({
     required TResult Function(_Inventory value) checkin,
     required TResult Function(_InventoryInfo value) scaninfo,
+    required TResult Function(_InventorySchedule value) schedulecheckin,
   }) {
     return checkin(this);
   }
@@ -202,6 +199,7 @@ class _$_Inventory extends _Inventory {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Inventory value)? checkin,
     TResult? Function(_InventoryInfo value)? scaninfo,
+    TResult? Function(_InventorySchedule value)? schedulecheckin,
   }) {
     return checkin?.call(this);
   }
@@ -211,6 +209,7 @@ class _$_Inventory extends _Inventory {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Inventory value)? checkin,
     TResult Function(_InventoryInfo value)? scaninfo,
+    TResult Function(_InventorySchedule value)? schedulecheckin,
     required TResult orElse(),
   }) {
     if (checkin != null) {
@@ -221,24 +220,22 @@ class _$_Inventory extends _Inventory {
 }
 
 abstract class _Inventory extends AssetsClient {
-  factory _Inventory(final String? barcode) = _$_Inventory;
+  factory _Inventory(final String? barcode, final String? schedulecode) =
+      _$_Inventory;
   _Inventory._() : super._();
 
-  @override
   String? get barcode;
-  @override
+  String? get schedulecode;
   @JsonKey(ignore: true)
   _$$_InventoryCopyWith<_$_Inventory> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_InventoryInfoCopyWith<$Res>
-    implements $AssetsClientCopyWith<$Res> {
+abstract class _$$_InventoryInfoCopyWith<$Res> {
   factory _$$_InventoryInfoCopyWith(
           _$_InventoryInfo value, $Res Function(_$_InventoryInfo) then) =
       __$$_InventoryInfoCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({String? barcode});
 }
@@ -298,8 +295,9 @@ class _$_InventoryInfo extends _InventoryInfo {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String? barcode) checkin,
+    required TResult Function(String? barcode, String? schedulecode) checkin,
     required TResult Function(String? barcode) scaninfo,
+    required TResult Function() schedulecheckin,
   }) {
     return scaninfo(barcode);
   }
@@ -307,8 +305,9 @@ class _$_InventoryInfo extends _InventoryInfo {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(String? barcode)? checkin,
+    TResult? Function(String? barcode, String? schedulecode)? checkin,
     TResult? Function(String? barcode)? scaninfo,
+    TResult? Function()? schedulecheckin,
   }) {
     return scaninfo?.call(barcode);
   }
@@ -316,8 +315,9 @@ class _$_InventoryInfo extends _InventoryInfo {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String? barcode)? checkin,
+    TResult Function(String? barcode, String? schedulecode)? checkin,
     TResult Function(String? barcode)? scaninfo,
+    TResult Function()? schedulecheckin,
     required TResult orElse(),
   }) {
     if (scaninfo != null) {
@@ -331,6 +331,7 @@ class _$_InventoryInfo extends _InventoryInfo {
   TResult map<TResult extends Object?>({
     required TResult Function(_Inventory value) checkin,
     required TResult Function(_InventoryInfo value) scaninfo,
+    required TResult Function(_InventorySchedule value) schedulecheckin,
   }) {
     return scaninfo(this);
   }
@@ -340,6 +341,7 @@ class _$_InventoryInfo extends _InventoryInfo {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Inventory value)? checkin,
     TResult? Function(_InventoryInfo value)? scaninfo,
+    TResult? Function(_InventorySchedule value)? schedulecheckin,
   }) {
     return scaninfo?.call(this);
   }
@@ -349,6 +351,7 @@ class _$_InventoryInfo extends _InventoryInfo {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Inventory value)? checkin,
     TResult Function(_InventoryInfo value)? scaninfo,
+    TResult Function(_InventorySchedule value)? schedulecheckin,
     required TResult orElse(),
   }) {
     if (scaninfo != null) {
@@ -362,10 +365,117 @@ abstract class _InventoryInfo extends AssetsClient {
   factory _InventoryInfo(final String? barcode) = _$_InventoryInfo;
   _InventoryInfo._() : super._();
 
-  @override
   String? get barcode;
-  @override
   @JsonKey(ignore: true)
   _$$_InventoryInfoCopyWith<_$_InventoryInfo> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_InventoryScheduleCopyWith<$Res> {
+  factory _$$_InventoryScheduleCopyWith(_$_InventorySchedule value,
+          $Res Function(_$_InventorySchedule) then) =
+      __$$_InventoryScheduleCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_InventoryScheduleCopyWithImpl<$Res>
+    extends _$AssetsClientCopyWithImpl<$Res, _$_InventorySchedule>
+    implements _$$_InventoryScheduleCopyWith<$Res> {
+  __$$_InventoryScheduleCopyWithImpl(
+      _$_InventorySchedule _value, $Res Function(_$_InventorySchedule) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_InventorySchedule extends _InventorySchedule {
+  _$_InventorySchedule() : super._();
+
+  @override
+  String toString() {
+    return 'AssetsClient.schedulecheckin()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_InventorySchedule);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(String? barcode, String? schedulecode) checkin,
+    required TResult Function(String? barcode) scaninfo,
+    required TResult Function() schedulecheckin,
+  }) {
+    return schedulecheckin();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(String? barcode, String? schedulecode)? checkin,
+    TResult? Function(String? barcode)? scaninfo,
+    TResult? Function()? schedulecheckin,
+  }) {
+    return schedulecheckin?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(String? barcode, String? schedulecode)? checkin,
+    TResult Function(String? barcode)? scaninfo,
+    TResult Function()? schedulecheckin,
+    required TResult orElse(),
+  }) {
+    if (schedulecheckin != null) {
+      return schedulecheckin();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Inventory value) checkin,
+    required TResult Function(_InventoryInfo value) scaninfo,
+    required TResult Function(_InventorySchedule value) schedulecheckin,
+  }) {
+    return schedulecheckin(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Inventory value)? checkin,
+    TResult? Function(_InventoryInfo value)? scaninfo,
+    TResult? Function(_InventorySchedule value)? schedulecheckin,
+  }) {
+    return schedulecheckin?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Inventory value)? checkin,
+    TResult Function(_InventoryInfo value)? scaninfo,
+    TResult Function(_InventorySchedule value)? schedulecheckin,
+    required TResult orElse(),
+  }) {
+    if (schedulecheckin != null) {
+      return schedulecheckin(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _InventorySchedule extends AssetsClient {
+  factory _InventorySchedule() = _$_InventorySchedule;
+  _InventorySchedule._() : super._();
 }

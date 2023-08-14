@@ -1,121 +1,136 @@
 {
-    "code": "0000",
-    "message": "Thành Công",
-    "result": [
-      {
-        "id": 1,
-        "formname": "abc",
-        "idForm": 1,
-        "status": 1,
-        "updateTime": "10:00:00 10/05/2022",
-        "listForm": [
-          {
-            "type": "checkbox-group",
-            "required": false,
-            "label": "Checkbox Group",
-            "toggle": false,
-            "inline": false,
-            "name": "checkbox-group-1671722313641-0",
-            "access": false,
-            "other": false,
-            "values": [
-              {
-                "label": "Option 1",
-                "value": "option-1",
-                "selected": true
-              }
-            ]
-          },
-          {
-            "type": "date",
-            "required": false,
-            "label": "Date Field",
-            "className": "form-control",
-            "name": "date-1671722319475-0",
-            "access": false
-          },
-          {
-            "type": "file",
-            "required": false,
-            "label": "File Upload",
-            "className": "form-control",
-            "name": "file-1671722323144-0",
-            "access": false,
-            "subtype": "file",
-            "multiple": false
-          },
-          {
-            "type": "radio-group",
-            "required": false,
-            "label": "Radio Group",
-            "inline": false,
-            "name": "radio-group-1671722382710-0",
-            "access": false,
-            "other": false,
-            "values": [
-              {
-                "label": "Option 1",
-                "value": "option-1",
-                "selected": false
-              },
-              {
-                "label": "Option 2",
-                "value": "option-2",
-                "selected": false
-              },
-              {
-                "label": "Option 3",
-                "value": "option-3",
-                "selected": false
-              }
-            ]
-          },
-          {
-            "type": "select",
-            "required": false,
-            "label": "Select",
-            "className": "form-control",
-            "name": "select-1671722390927-0",
-            "access": false,
-            "multiple": false,
-            "values": [
-              {
-                "label": "Option 1",
-                "value": "option-1",
-                "selected": true
-              },
-              {
-                "label": "Option 2",
-                "value": "option-2",
-                "selected": false
-              },
-              {
-                "label": "Option 3",
-                "value": "option-3",
-                "selected": false
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "required": false,
-            "label": "Text Field",
-            "className": "form-control",
-            "name": "text-1671722392969-0",
-            "access": false,
-            "subtype": "text"
-          },
-          {
-            "type": "textarea",
-            "required": false,
-            "label": "Text Area",
-            "className": "form-control",
-            "name": "textarea-1671722400802-0",
-            "access": false,
-            "subtype": "textarea"
-          }
-        ]
-      }
-    ]
-  }
-  
+  "listForm": [
+    {
+      "type": "checkbox-group",
+      "required": false,
+      "label": "Loại đề xuất",
+      "toggle": false,
+      "inline": false,
+      "name": "checkbox-group-1671722313641-0",
+      "access": false,
+      "other": false,
+      "className": null,
+      "subtype": null,
+      "multiple": false,
+      "values": [
+        {
+          "label": "Đề xuất tạm ngưng lịch dạy",
+          "value": "1",
+          "selected": true
+        },
+        {
+          "label": "Đề xuất dạy bù",
+          "value": "2",
+          "selected": false
+        },
+        {
+          "label": "Đề xuất dạy thay",
+          "value": "3",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "type": "date",
+      "required": false,
+      "label": "Từ ngày",
+      "toggle": false,
+      "inline": false,
+      "name": "date-1671722319475-0",
+      "access": false,
+      "other": false,
+      "className": "form-control",
+      "subtype": null,
+      "multiple": false,
+      "values": null
+    },
+    {
+      "type": "date",
+      "required": false,
+      "label": "Đến ngày ngày",
+      "toggle": false,
+      "inline": false,
+      "name": "date-1671722319475-0",
+      "access": false,
+      "other": false,
+      "className": "form-control",
+      "subtype": null,
+      "multiple": false,
+      "values": null
+    },
+    {
+      "type": "select",
+      "required": false,
+      "label": "Lớp học",
+      "toggle": false,
+      "inline": false,
+      "name": "select-1671722390927-0",
+      "access": false,
+      "other": false,
+      "className": null,
+      "subtype": null,
+      "multiple": false,
+      "values": [
+        {
+          "label": "Hình họa",
+          "value": "1",
+          "selected": true
+        },
+        {
+          "label": "Pháp luật đại cương",
+          "value": "2",
+          "selected": true
+        },
+        {
+          "label": "Toán cao cấp",
+          "value": "3",
+          "selected": true
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "required": false,
+      "label": "Giảng viên",
+      "toggle": false,
+      "inline": false,
+      "name": "select-1671722390927-0",
+      "access": false,
+      "other": false,
+      "className": null,
+      "subtype": null,
+      "multiple": false,
+      "values": [
+        {
+          "label": "Nguyễn Hải Kiên",
+          "value": "kiennh",
+          "selected": true
+        },
+        {
+          "label": "Phạm Văn Duy",
+          "value": "duypm",
+          "selected": true
+        },
+        {
+          "label": "Nguyễn Thị Hồng",
+          "value": "hongnt",
+          "selected": true
+        }
+      ]
+    },
+    {
+      "type": "textarea",
+      "required": false,
+      "label": "Lý do",
+      "toggle": false,
+      "inline": false,
+      "name": "textarea-1671722400802-0",
+      "access": false,
+      "other": false,
+      "className": "form-control",
+      "subtype": "textarea",
+      "multiple": false,
+      "values": null
+    }
+  ]
+}

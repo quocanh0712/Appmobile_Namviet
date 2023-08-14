@@ -12,8 +12,10 @@ part 'assets_client.freezed.dart';
 @freezed
 class AssetsClient extends BaseClientGenerator with _$AssetsClient {
   AssetsClient._() : super();
-  factory AssetsClient.checkin(String? barcode) = _Inventory;
+  factory AssetsClient.checkin(String? barcode, String? schedulecode) =
+      _Inventory;
   factory AssetsClient.scaninfo(String? barcode) = _InventoryInfo;
+  factory AssetsClient.schedulecheckin() = _InventorySchedule;
 
   @override
   String get baseURL => '${super.baseURL}/QuanLyTaiSan';
@@ -28,8 +30,9 @@ class AssetsClient extends BaseClientGenerator with _$AssetsClient {
   @override
   String get path {
     return maybeWhen<String>(
-      checkin: (barcode) => '/KiemKeTaiSan',
+      checkin: (barcode, schedulecode) => '/KiemKeTaiSan',
       scaninfo: (barcode) => '/ThongTinTaiSan',
+      schedulecheckin: () => '/KeHoachKiemKe',
       orElse: () => '',
     );
   }
@@ -37,8 +40,10 @@ class AssetsClient extends BaseClientGenerator with _$AssetsClient {
   @override
   Map<String, dynamic> get body {
     return maybeWhen(
-      checkin: (barcode) => {"barcode": barcode},
+      checkin: (barcode, schedulecode) =>
+          {"barcode": barcode, "scheduleCode": schedulecode},
       scaninfo: (barcode) => {"barcode": barcode},
+      schedulecheckin: () => {},
       orElse: () => {},
     );
   }

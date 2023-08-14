@@ -70,18 +70,19 @@ class PersonalView
                         )),
                     const SizedBox(height: 13),
                     Obx(() => AutoSizeText(controller.title.value,
-                        style: context.themeExtensions.heading1
+                        style: context.themeExtensions.heading3
                             .copyWith(color: context.themeExtensions.white))),
                     const SizedBox(height: 3),
                     Obx(() => AutoSizeText(
-                        "${controller.userObject.value?.fullname}",
+                        //"${controller.userObject.value?.fullname}",
+                        controller.name.value,
                         style: context.themeExtensions.subTex
                             .copyWith(color: context.themeExtensions.white))),
-                    const SizedBox(height: 3),
-                    Obx(() => AutoSizeText(
-                        "${controller.userObject.value?.username}",
-                        style: context.themeExtensions.subTex
-                            .copyWith(color: context.themeExtensions.white)))
+                    // const SizedBox(height: 3),
+                    // Obx(() => AutoSizeText(
+                    //     "${controller.userObject.value?.username}",
+                    //     style: context.themeExtensions.subTex
+                    //         .copyWith(color: context.themeExtensions.white)))
                   ],
                 ),
               ),
@@ -166,18 +167,19 @@ class PersonalView
                         )),
                     const SizedBox(height: 13),
                     Obx(() => AutoSizeText(controller.title.value,
-                        style: context.themeExtensions.heading1
+                        style: context.themeExtensions.heading3
                             .copyWith(color: context.themeExtensions.white))),
                     const SizedBox(height: 3),
                     Obx(() => AutoSizeText(
-                        "${controller.userObject.value?.fullname}",
+                        //"${controller.userObject.value?.fullname}",
+                        controller.name.value,
                         style: context.themeExtensions.subTex
                             .copyWith(color: context.themeExtensions.white))),
-                    const SizedBox(height: 3),
-                    Obx(() => AutoSizeText(
-                        "${controller.userObject.value?.username}",
-                        style: context.themeExtensions.subTex
-                            .copyWith(color: context.themeExtensions.white)))
+                    // const SizedBox(height: 3),
+                    // Obx(() => AutoSizeText(
+                    //     "${controller.userObject.value?.username}",
+                    //     style: context.themeExtensions.subTex
+                    //         .copyWith(color: context.themeExtensions.white)))
                   ],
                 ),
               ),
@@ -637,6 +639,16 @@ class PersonalView
                 child: Container(
                     height: 1,
                     color: context.themeExtensions.black.withOpacity(0.05)),
+              ),
+            )),
+        Obx(() => Visibility(
+              visible: controller.isTeacherPermission.value,
+              child: InkWell(
+                onTap: () => controller.navigateToWorkingProcess(),
+                child: _buildActionMenuItem(
+                    context,
+                    Assets.images.icCertificate,
+                    LocaleKeys.countTeaching.tr + ': 122 tiết'),
               ),
             )),
         Obx(() => Visibility(

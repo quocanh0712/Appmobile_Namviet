@@ -41,7 +41,8 @@ class DocumentFormItemView extends BaseAppBarView<DocumentFormItemController> {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                      image: AssetImage(Assets.images.butGradientBg.path), fit: BoxFit.cover)),
+                      image: AssetImage(Assets.images.butGradientBg.path),
+                      fit: BoxFit.cover)),
               child: Align(
                   alignment: FractionalOffset.center,
                   child: AutoSizeText(
@@ -63,8 +64,8 @@ class DocumentFormItemView extends BaseAppBarView<DocumentFormItemController> {
         onPressed: () {
           controller.downloadFile();
         },
-        icon: Assets.images.icDocumentDownload
-            .image(width: 24, height: 24, color: context.themeExtensions.textColor),
+        icon: Assets.images.icDocumentDownload.image(
+            width: 24, height: 24, color: context.themeExtensions.textColor),
       ),
     ];
   }

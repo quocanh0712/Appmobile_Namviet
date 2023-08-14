@@ -67,6 +67,13 @@ class LoginController extends BaseController {
             textAlign: TextAlign.center, overflow: TextOverflow.ellipsis))
   ];
 
+  // List<DropdownMenuItem> list = [
+  //   DropdownMenuItem(
+  //       value: 5,
+  //       child: Text("Trường Quốc tế - Đại học Quốc Gia Hà Nội",
+  //           textAlign: TextAlign.center, overflow: TextOverflow.ellipsis))
+  // ];
+
   @override
   void onInit() {
     super.onInit();
@@ -161,13 +168,13 @@ class LoginController extends BaseController {
   }
 
   performLogin() async {
-    // mock user/pass. This one will be remove in the production.
     userName = userName?.isNotEmpty == true
         ? userName
-        : /*"219203012 namviet"*/ "tester";
+        : /*219203012 namviet admin tester*/ "namviet";
     password = password?.isNotEmpty == true
         ? password
-        : /*"hue23052001 123@123  Namvietjsc2023"*/ "ABC@123.com";
+        : /*hue23052001 123@123  Namvietjsc2023  admin ABC@123.com*/ "123@123";
+
     if (idDonVi == 0 || idDonVi == null) {
       isError.value = LocaleKeys.idDonViIsNotEmpty.tr;
       return;
@@ -184,12 +191,17 @@ class LoginController extends BaseController {
       isError.value = LocaleKeys.passwordIsNotEmpty.tr;
       return;
     }
+
+    // if (userName == "admin" && password == "admin") {
+    //   userName = "auth";
+    //   password = "A587c5a7857b1d1028b95cdf1b16b2dd@CNS";
+    // }
+
     if (isLoading.value) return;
     isLoading.value = true;
     final response = await userRepo.login(userName, password, idDonVi);
     response.when(success: (user) async {
       isLoading.value = false;
-      //Fimber.d("login() - logged in: ${jsonEncode(user.result?.toJson())}");
       if (user.isSuccess()) {
         await userRepo.saveUserInfo(
             user.result?.copyWith(password: password, idDonVi: idDonVi));

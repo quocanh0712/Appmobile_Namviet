@@ -1,6 +1,7 @@
 // Copyright (c) 2022, one of the D3F outsourcing projects. All rights reserved.
 
 import 'package:dart_extensions/dart_extensions.dart';
+import 'package:fimber/fimber.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/app/modules/document_form/model/delete_request_model.dart';
@@ -57,11 +58,12 @@ class CreateNewFormController extends BaseController {
         if (element?.type?.getFormType() == FormType.fileUpload) {
           List<ValueModel> newListValue = List.empty(growable: true);
           element?.values?.forEach((value) async {
-            final response = await documentFormRepository
-                .uploadFile(UploadFileRequest(name: value.label, strBase64: value.value));
+            final response = await documentFormRepository.uploadFile(
+                UploadFileRequest(name: value.label, strBase64: value.value));
             response.when(success: (data) {
               if (data.isSuccess() && data.result?.isNotEmpty == true) {
-                newListValue.add(ValueModel(label: value.label, value: data.result));
+                newListValue
+                    .add(ValueModel(label: value.label, value: data.result));
               } else {
                 isUploadFileSuccess = false;
               }
@@ -72,15 +74,17 @@ class CreateNewFormController extends BaseController {
           lisFormField[i] = lisFormField[i].copyWith(values: newListValue);
         }
       }
-      documentFormResponse = documentFormResponse.copyWith(listForm: lisFormField);
+      documentFormResponse =
+          documentFormResponse.copyWith(listForm: lisFormField);
 
       // send form request
       final Result<BaseResponseObject<String?>, NetworkError> responseRequest;
       if (isCreateForm == true) {
-        responseRequest =
-            await documentFormRepository.insertNewRequestDocument(documentFormResponse);
+        responseRequest = await documentFormRepository
+            .insertNewRequestDocument(documentFormResponse);
       } else {
-        responseRequest = await documentFormRepository.updateRequestDocument(documentFormResponse);
+        responseRequest = await documentFormRepository
+            .updateRequestDocument(documentFormResponse);
       }
       responseRequest.when(success: (data) {
         if (!isUploadFileSuccess) {
@@ -90,7 +94,8 @@ class CreateNewFormController extends BaseController {
         }
         isLoading.value = false;
         if (data.isSuccess()) {
-          showAlertDialog(LocaleKeys.titleDialog.tr, LocaleKeys.sendRequestSuccess.tr, () {
+          showAlertDialog(
+              LocaleKeys.titleDialog.tr, LocaleKeys.sendRequestSuccess.tr, () {
             Get.back(result: isCreateForm != true);
           });
         } else {
@@ -132,13 +137,14 @@ class CreateNewFormController extends BaseController {
     }
     isLoading.value = true;
     DocumentFormRepository documentFormRepository = Get.find();
-    var response = await documentFormRepository
-        .deleteRequestDocument(DeleteRequestModel(requestId: documentFormResponse.id));
+    var response = await documentFormRepository.deleteRequestDocument(
+        DeleteRequestModel(requestId: documentFormResponse.id));
     response.when(success: (data) {
       isLoading.value = false;
       if (data.isSuccess()) {
         // delete success
-        showAlertDialog(LocaleKeys.titleDialog.tr, LocaleKeys.deleteRequestSuccess.tr, () {
+        showAlertDialog(
+            LocaleKeys.titleDialog.tr, LocaleKeys.deleteRequestSuccess.tr, () {
           Get.back(result: isCreateForm != true);
         });
       } else {

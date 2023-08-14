@@ -41,25 +41,25 @@ class CheckinController extends BaseController {
     resumeQRScannerCamera();
   }
 
-  checkin(String? barcode) async {
-    isLoading.value = true;
-    final response = await inventoryRepo?.checkin(barcode);
-    response?.when(
-      success: (data) {
-        if (data.isSuccess()) {
-          Fimber.d(data.toString());
-          showMessage.value = data.result;
-        } else {
-          isError.value = data.message;
-        }
-      },
-      failure: (error) {
-        Fimber.d(error.localizedErrorMessage ?? "");
-        isError.value = error.localizedErrorMessage;
-      },
-    );
-    isLoading.value = false;
-  }
+  // checkin(String? barcode) async {
+  //   isLoading.value = true;
+  //   final response = await inventoryRepo?.checkin(barcode);
+  //   response?.when(
+  //     success: (data) {
+  //       if (data.isSuccess()) {
+  //         Fimber.d(data.toString());
+  //         showMessage.value = data.result;
+  //       } else {
+  //         isError.value = data.message;
+  //       }
+  //     },
+  //     failure: (error) {
+  //       Fimber.d(error.localizedErrorMessage ?? "");
+  //       isError.value = error.localizedErrorMessage;
+  //     },
+  //   );
+  //   isLoading.value = false;
+  // }
 
   scaninfo(String? barcode) async {
     isLoading.value = true;

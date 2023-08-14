@@ -25,7 +25,8 @@ class ElearningView extends BaseListView<ElearningController> {
           height: 12,
         ),
         InkWell(
-          onTap: () => controller.openHrefLink(response.link),
+          //onTap: () => controller.openHrefLink(response.link),
+          onTap: () => controller.navigateToLearning(),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -37,10 +38,10 @@ class ElearningView extends BaseListView<ElearningController> {
                     child: Image.network(response.imageUrl ?? Constants.EMPTY,
                         fit: BoxFit.fill,
                         loadingBuilder: (context, child, loadingProgress) =>
-                            Assets.images.ftuLogo.image(
+                            Assets.images.icBookPng.image(
                                 width: 70, height: 70, fit: BoxFit.cover),
                         errorBuilder: (context, error, stackTrace) => Assets
-                            .images.ftuLogo
+                            .images.icBookPng
                             .image(width: 70, height: 70, fit: BoxFit.cover),
                         width: 60,
                         height: 60)),
@@ -63,10 +64,11 @@ class ElearningView extends BaseListView<ElearningController> {
                       ),
                     ),
                     const SizedBox(height: 5),
-                    infoView(context, Assets.images.icClock, response.time),
+                    //infoView(context, Assets.images.icClock, response.time),
+                    infoView(context, Assets.images.icClock, ''),
                     const SizedBox(height: 5),
-                    infoView(
-                        context, Assets.images.icTeacherSvg, response.teacher),
+                    infoView(context, Assets.images.icTeacherSvg, 'admin'),
+                    //context, Assets.images.icTeacherSvg, response.teacher),
                     const SizedBox(height: 5),
                   ],
                 ),

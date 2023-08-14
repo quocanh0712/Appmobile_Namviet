@@ -37,10 +37,10 @@ class HomeController extends BaseController {
   int? idDonVi = 0;
   Rx<String> title = "NAM VIỆT JSC".obs;
   Rx<String> imagePath = Assets.images.icBookPng.path.obs;
-  // Rx<String> username = "19571402060106".obs;
-  // Rx<String> name = "Đỗ Thịnh An".obs;
-  // Rx<String> username = "admin".obs;
-  // Rx<String> name = "Quản trị hệ thống".obs;
+  Rx<String> username = "1952220001".obs;
+  Rx<String> name = "Phạm Thị Vân Anh".obs;
+  //Rx<String> username = "admin".obs;
+  //Rx<String> name = "Quản trị hệ thống".obs;
 
   @override
   void onInit() async {
@@ -54,19 +54,19 @@ class HomeController extends BaseController {
         break;
       case 2:
         title.value = "Trường ĐH Nông Lâm Thái Nguyên";
-        imagePath.value = Assets.images.homeBotLeftButBg.path;
+        imagePath.value = Assets.images.tUAFLogo.path;
         break;
       case 3:
         title.value = "Trường ĐH SPNT Trung Ương";
-        imagePath.value = Assets.images.homeBotLeftButBg.path;
+        imagePath.value = Assets.images.nUAELogo.path;
         break;
       case 4:
         title.value = "Trường ĐH Sư phạm TDTT Hà Nội";
-        imagePath.value = Assets.images.homeBotLeftButBg.path;
+        imagePath.value = Assets.images.hUPESLogo.path;
         break;
       case 5:
         title.value = "Trường Quốc tế - ĐHQG Hà Nội";
-        imagePath.value = Assets.images.homeBotLeftButBg.path;
+        imagePath.value = Assets.images.iSHNULogo.path;
         break;
       default:
         title.value = "NAM VIỆT JSC";
@@ -93,7 +93,19 @@ class HomeController extends BaseController {
       Fimber.d('response.when(success:)');
       if (data.isSuccess()) {
         Fimber.d('data.isSuccess()');
-        lstRecentActivities.value = data.result?.homeRecentActitvities ?? [];
+        //lstRecentActivities.value = data.result?.homeRecentActitvities ?? [];
+        lstRecentActivities.value = [
+          HomeRecentActitvity(
+              id: 1,
+              icon: '',
+              title: 'Thông báo chung toàn trường',
+              content: 'THỜI KHÓA BIỂU DỰ KIẾN HỌC KỲ 1 NĂM HỌC 2023-2024'),
+          HomeRecentActitvity(
+              id: 2,
+              icon: '',
+              title: 'Bạn được nhắn đến trong 01 bài viết gần đây',
+              content: 'Thông báo: Các em sinh viên khóa K22 chuẩn bị nộp...'),
+        ];
         lstBanners.value = data.result?.homeBannerUrls ?? [];
         recentTasks.value = data.result?.homeRecentTasks ?? [];
       } else {
@@ -170,7 +182,7 @@ class HomeController extends BaseController {
   }
 
   navigateToScientificResearch() {
-    Fimber.d("navigateToELearning()");
+    Fimber.d("navigateToScientificResearch()");
     Get.toNamed(Routes.SCIENTIFIC_RESEARCH);
   }
 
@@ -207,5 +219,30 @@ class HomeController extends BaseController {
   navigateToCertificate() {
     Fimber.d("navigateToCertificate()");
     Get.toNamed(Routes.LIST_CERTIFICATES);
+  }
+
+  navigateToListClassManagerTitle() {
+    Fimber.d("navigateToListClassManagerTitle()");
+    Get.toNamed(Routes.LIST_CLASS_MANAGERS);
+  }
+
+  navigateToClassSurveyResult() {
+    Fimber.d("navigateToClassSurveyResult()");
+    Get.toNamed(Routes.CLASS_SURVEY_RESULT);
+  }
+
+  navigateToStuCheckinManager() {
+    Fimber.d("navigateToStuCheckinManager()");
+    Get.toNamed(Routes.STU_CHECKIN_MANAGER);
+  }
+
+  navigateToExecutiveDocuments() {
+    Fimber.d("navigateToExecutiveDocuments()");
+    Get.toNamed(Routes.EXECUTIVE_DOCUMENTS);
+  }
+
+  navigateToSendRequest() {
+    Fimber.d("navigateToSendRequest()");
+    Get.toNamed(Routes.SEND_REQUEST);
   }
 }

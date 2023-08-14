@@ -31,7 +31,8 @@ class FinanceBySemesterView extends BaseView<FinanceBySemesterController> {
         children: [
           Stack(
             children: [
-              Assets.images.profileHeaderBg.image(width: double.infinity, fit: BoxFit.cover),
+              Assets.images.profileHeaderBg
+                  .image(width: double.infinity, fit: BoxFit.cover),
               SafeArea(
                 top: true,
                 child: Column(
@@ -50,16 +51,20 @@ class FinanceBySemesterView extends BaseView<FinanceBySemesterController> {
                           Container(
                         padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
-                          borderRadius: const BorderRadius.all(Radius.circular(10)),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(10)),
                           boxShadow: [
                             BoxShadow(
-                                color: context.themeExtensions.black.withOpacity(0.05),
+                                color: context.themeExtensions.black
+                                    .withOpacity(0.05),
                                 offset: const Offset(0, 4),
                                 blurRadius: 10)
                           ],
                           color: context.themeExtensions.white,
                           border: Border.all(
-                              color: context.themeExtensions.black.withOpacity(0.05), width: 1),
+                              color: context.themeExtensions.black
+                                  .withOpacity(0.05),
+                              width: 1),
                         ),
                         child: Obx(() => Column(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -103,21 +108,41 @@ class FinanceBySemesterView extends BaseView<FinanceBySemesterController> {
           ),
           Expanded(
             child: ScrollConfiguration(
-                behavior: DisableScrollGlowBehavior(),
-                child: Obx(() => ListView(
-                  padding: const EdgeInsets.only(
-                          left: 20, right: 20, top: 10, bottom: 10),
-                      shrinkWrap: true,
-                      children: [
-                        for (var bill in controller.lstBills)
-                          _buildSemesterItem(
-                              context: context,
-                              bill: bill,
-                              isFirst: controller.lstBills.indexOf(bill) == 0,
-                              isLast: (controller.lstBills.indexOf(bill) ==
-                                  controller.lstBills.length - 1)),
-                      ],
-                    ))),
+              behavior: DisableScrollGlowBehavior(),
+              child: Obx(() => ListView(
+                    padding: const EdgeInsets.only(
+                        left: 20, right: 20, top: 10, bottom: 10),
+                    shrinkWrap: true,
+                    children: [
+                      for (var bill in controller.lstBills)
+                        _buildSemesterItem(
+                            context: context,
+                            bill: bill,
+                            isFirst: controller.lstBills.indexOf(bill) == 0,
+                            isLast: (controller.lstBills.indexOf(bill) ==
+                                controller.lstBills.length - 1)),
+                    ],
+                  )),
+            ),
+          ),
+          InkWell(
+            onTap: () => controller.doPayment(),
+            child: Container(
+              width: double.infinity,
+              height: 50,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                      image: AssetImage(Assets.images.butGradientBg.path),
+                      fit: BoxFit.cover)),
+              child: Align(
+                  alignment: FractionalOffset.center,
+                  child: AutoSizeText(
+                    LocaleKeys.billPaymentTitle.tr,
+                    style: Get.context?.themeExtensions.paragraph
+                        .copyWith(color: Get.context?.themeExtensions.white),
+                  )),
+            ),
           ),
           Obx(() {
             if (controller.isLoading.value == true) {
@@ -165,9 +190,13 @@ class FinanceBySemesterView extends BaseView<FinanceBySemesterController> {
                 value ?? '',
                 style: isFirst == true
                     ? context.themeExtensions.paragraphSemiBold.copyWith(
-                        color: _valueColor(context: context, isFirst: isFirst, isLast: isLast))
+                        color: _valueColor(
+                            context: context, isFirst: isFirst, isLast: isLast))
                     : context.themeExtensions.paragraph.copyWith(
-                        color: _valueColor(context: context, isFirst: isFirst, isLast: isLast)),
+                        color: _valueColor(
+                            context: context,
+                            isFirst: isFirst,
+                            isLast: isLast)),
               ),
             )
           ],
@@ -183,7 +212,10 @@ class FinanceBySemesterView extends BaseView<FinanceBySemesterController> {
     );
   }
 
-  Color _valueColor({required BuildContext context, bool? isFirst = false, bool? isLast = false}) {
+  Color _valueColor(
+      {required BuildContext context,
+      bool? isFirst = false,
+      bool? isLast = false}) {
     if (isFirst == true) return context.themeExtensions.black;
     if (isLast == true) return context.themeExtensions.red;
     return context.themeExtensions.dartmouthGreen;
@@ -248,9 +280,11 @@ class FinanceBySemesterView extends BaseView<FinanceBySemesterController> {
                           child: Align(
                             alignment: Alignment.center,
                             child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 7),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 13, vertical: 7),
                               decoration: BoxDecoration(
-                                borderRadius: const BorderRadius.all(Radius.circular(8)),
+                                borderRadius:
+                                    const BorderRadius.all(Radius.circular(8)),
                                 color: context.themeExtensions.white,
                                 border: Border.all(
                                   color: context.themeExtensions.bgGrey,
@@ -260,7 +294,9 @@ class FinanceBySemesterView extends BaseView<FinanceBySemesterController> {
                               child: AutoSizeText(
                                 LocaleKeys.payNow.tr,
                                 style: context.themeExtensions.subTexMedium
-                                    .copyWith(color: context.themeExtensions.mainGreen),
+                                    .copyWith(
+                                        color:
+                                            context.themeExtensions.mainGreen),
                               ),
                             ),
                           ),
