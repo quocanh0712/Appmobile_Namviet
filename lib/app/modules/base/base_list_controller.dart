@@ -21,7 +21,8 @@ abstract class BaseListController<T> extends BaseController<T> {
   @override
   void onInit() {
     scrollController.addListener(() {
-      if (scrollController.position.pixels == scrollController.position.maxScrollExtent &&
+      if (scrollController.position.pixels ==
+              scrollController.position.maxScrollExtent &&
           _canLoadMoreData()) {
         loadMoreServerData();
       }
@@ -49,7 +50,8 @@ abstract class BaseListController<T> extends BaseController<T> {
     });
   }
 
-  T? getItem(int index) => 0 <= index && index < listData.length ? listData[index] : null;
+  T? getItem(int index) =>
+      0 <= index && index < listData.length ? listData[index] : null;
 
   int getDataLength() => listData.length;
 

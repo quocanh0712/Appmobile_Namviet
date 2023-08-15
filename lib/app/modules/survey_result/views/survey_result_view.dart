@@ -30,7 +30,8 @@ class SurveyResultView extends BaseListView<SurveyResultController> {
                 border: Border.all(color: context.themeExtensions.lightSilver),
                 boxShadow: [
                   BoxShadow(
-                    color: context.themeExtensions.textLightGrey.withOpacity(0.5),
+                    color:
+                        context.themeExtensions.textLightGrey.withOpacity(0.5),
                     spreadRadius: 1,
                     blurRadius: 2,
                     offset: const Offset(0, 3), // changes position of shadow
@@ -101,11 +102,11 @@ class SurveyResultView extends BaseListView<SurveyResultController> {
               acceptBtPress: () => controller.filterRequestData(),
             );
           },
-          icon: Assets.images.icFilterSearch
-              .image(width: 24, height: 24, color: context.themeExtensions.textColor),
+          icon: Assets.images.icFilterSearch.image(
+              width: 24, height: 24, color: context.themeExtensions.textColor),
         ),
       ];
 
   @override
-  String? get titleAppBar => LocaleKeys.serveyResults.tr;
+  String? get titleAppBar => LocaleKeys.listSurvey.tr;
 }

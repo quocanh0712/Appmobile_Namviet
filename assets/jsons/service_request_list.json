@@ -47,7 +47,7 @@
     {
       "type": "date",
       "required": false,
-      "label": "Đến ngày ngày",
+      "label": "Đến ngày",
       "toggle": false,
       "inline": false,
       "name": "date-1671722319475-0",

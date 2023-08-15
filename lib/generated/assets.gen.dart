@@ -322,9 +322,28 @@ class $AssetsImagesGen {
   AssetGenImage get icons8Document28 =>
       const AssetGenImage('assets/images/icons8-document-28.png');
 
+  /// File path: assets/images/icons8-email-28.png
+  AssetGenImage get icons8Email28 => const AssetGenImage('assets/images/icons8-email-28.png');
+
+  /// File path: assets/images/icons8-email-28.png.sketch
+  String get icons8Email28Png => 'assets/images/icons8-email-28.png.sketch';
+
+  /// File path: assets/images/icons8-forward-24.png
+  AssetGenImage get icons8Forward24Png =>
+      const AssetGenImage('assets/images/icons8-forward-24.png');
+
+  /// File path: assets/images/icons8-forward-24.svg
+  SvgGenImage get icons8Forward24Svg => const SvgGenImage('assets/images/icons8-forward-24.svg');
+
   /// File path: assets/images/icons8-pdf-file-format-28.png
   AssetGenImage get icons8PdfFileFormat28 =>
       const AssetGenImage('assets/images/icons8-pdf-file-format-28.png');
+
+  /// File path: assets/images/icons8-reply-24.png
+  AssetGenImage get icons8Reply24Png => const AssetGenImage('assets/images/icons8-reply-24.png');
+
+  /// File path: assets/images/icons8-reply-24.svg
+  SvgGenImage get icons8Reply24Svg => const SvgGenImage('assets/images/icons8-reply-24.svg');
 
   /// File path: assets/images/icons8-request-28.png
   AssetGenImage get icons8Request28 => const AssetGenImage('assets/images/icons8-request-28.png');
@@ -455,7 +474,13 @@ class $AssetsImagesGen {
         icWorkingProcess,
         icons8Classroom28,
         icons8Document28,
+        icons8Email28,
+        icons8Email28Png,
+        icons8Forward24Png,
+        icons8Forward24Svg,
         icons8PdfFileFormat28,
+        icons8Reply24Png,
+        icons8Reply24Svg,
         icons8Request28,
         icons8Training28,
         icons8Youtube28,
@@ -470,14 +495,32 @@ class $AssetsImagesGen {
 class $AssetsJsonsGen {
   const $AssetsJsonsGen();
 
+  /// File path: assets/jsons/add_email_list.json
+  String get addEmailList => 'assets/jsons/add_email_list.json';
+
   /// File path: assets/jsons/all_courses_points.json
   String get allCoursesPoints => 'assets/jsons/all_courses_points.json';
+
+  /// File path: assets/jsons/assign_document_list.json
+  String get assignDocumentList => 'assets/jsons/assign_document_list.json';
+
+  /// File path: assets/jsons/edit_assign_document_list.json
+  String get editAssignDocumentList => 'assets/jsons/edit_assign_document_list.json';
+
+  /// File path: assets/jsons/edit_report_task_list.json
+  String get editReportTaskList => 'assets/jsons/edit_report_task_list.json';
+
+  /// File path: assets/jsons/email_list.json
+  String get emailList => 'assets/jsons/email_list.json';
 
   /// File path: assets/jsons/finance.json
   String get finance => 'assets/jsons/finance.json';
 
   /// File path: assets/jsons/finance_bills.json
   String get financeBills => 'assets/jsons/finance_bills.json';
+
+  /// File path: assets/jsons/forward_document_list.json
+  String get forwardDocumentList => 'assets/jsons/forward_document_list.json';
 
   /// File path: assets/jsons/learning_result.json
   String get learningResult => 'assets/jsons/learning_result.json';
@@ -490,6 +533,9 @@ class $AssetsJsonsGen {
 
   /// File path: assets/jsons/practice_points_detail.json
   String get practicePointsDetail => 'assets/jsons/practice_points_detail.json';
+
+  /// File path: assets/jsons/report_task_list.json
+  String get reportTaskList => 'assets/jsons/report_task_list.json';
 
   /// File path: assets/jsons/semester_points.json
   String get semesterPoints => 'assets/jsons/semester_points.json';
@@ -508,13 +554,20 @@ class $AssetsJsonsGen {
 
   /// List of all assets
   List<String> get values => [
+        addEmailList,
         allCoursesPoints,
+        assignDocumentList,
+        editAssignDocumentList,
+        editReportTaskList,
+        emailList,
         finance,
         financeBills,
+        forwardDocumentList,
         learningResult,
         notification,
         practicePoints,
         practicePointsDetail,
+        reportTaskList,
         semesterPoints,
         serviceRequestList,
         singleCoursePoints,

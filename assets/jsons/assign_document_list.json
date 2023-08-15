@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "TrichYeu": "V/v Xây dựng không gia môi trường học tập xanh sạch đẹp",
+    "NgayBanHanh": "08/06/2023",
+    "DonVi": "Trường Đại học Sư phạm Nghệ thuật Trung Ương",
+    "TrangThai": "Đang xử lý"
+  },
+  {
+    "id": 2,
+    "TrichYeu": "V/v đề nghị xác minh Bằng cử nhân",
+    "NgayBanHanh": "06/07/2023",
+    "DonVi": "Trường Đại học Sư phạm Nghệ thuật Trung Ương",
+    "TrangThai": "Đã tiếp nhận"
+  },
+  {
+    "id": 3,
+    "TrichYeu": "V/v đề nghị liên kết đào tạo trình độ đại học",
+    "NgayBanHanh": "17/07/2023",
+    "DonVi": "Trường Đại học Sư phạm Nghệ thuật Trung Ương",
+    "TrangThai": "Đã tiếp nhận"
+  }
+]

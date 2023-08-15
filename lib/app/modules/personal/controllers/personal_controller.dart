@@ -72,6 +72,13 @@ class PersonalController extends BaseController {
 
     isTeacherPermission.value =
         userObject.value?.retrievePermission() == UserPermission.teacher;
+    if (!isTeacherPermission.value) {
+      username.value = "1952220001";
+      name.value = "Phạm Thị Vân Anh";
+    } else {
+      username.value = "admin";
+      name.value = "Quản trị hệ thống";
+    }
     if (isTeacherPermission.value == false) retrieveSemesterPoints();
   }
 

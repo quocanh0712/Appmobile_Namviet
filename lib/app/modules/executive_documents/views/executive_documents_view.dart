@@ -82,6 +82,9 @@ class ExecutiveDocumentsView
               )
             ],
           ),
+          onTap: () {
+            controller.assignDocument();
+          },
         ),
         InkWell(
           child: Row(
@@ -141,6 +144,9 @@ class ExecutiveDocumentsView
               )
             ],
           ),
+          onTap: () {
+            controller.forwardDocument();
+          },
         ),
         const SizedBox(
           height: 12,

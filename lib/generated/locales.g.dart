@@ -325,6 +325,14 @@ class LocaleKeys {
   static const executiveDocuments = 'executiveDocuments';
   static const sendRequest = 'sendRequest';
   static const download = 'download';
+  static const listSurvey = 'listSurvey';
+  static const assignDocument = 'assignDocument';
+  static const editassignDocument = 'editassignDocument';
+  static const forwardDocument = 'forwardDocument';
+  static const reportTask = 'reportTask';
+  static const editreportTask = 'editreportTask';
+  static const addemail = 'addemail';
+  static const send = 'send';
   static const eof = 'eof';
   static const fakeClass = 'fakeClass';
   static const fakeStu1 = 'fakeStu1';
@@ -369,7 +377,7 @@ class Locales {
     'utilities': 'Tiện ích',
     'account': 'Tài khoản',
     'scienceStudy': 'Nghiên cứu khoa học',
-    'serveyResults': 'Kết quả khảo sát',
+    'serveyResults': 'Khảo sát sự kiện',
     'recentActivities': 'Hoạt động gần đây',
     'viewMore': 'Xem tất cả',
     'todayTasks': 'Công việc hôm nay',
@@ -660,6 +668,14 @@ class Locales {
     'executiveDocuments': 'Văn bản điều hành',
     'sendRequest': 'Gửi đề xuất',
     'download': 'Tải xuống',
+    'listSurvey': 'Danh sách khảo sát',
+    'assignDocument': 'Bút phê văn bản đến',
+    'editassignDocument': 'Sửa bút phê văn bản đến',
+    'forwardDocument': 'Phân phối văn bản đi',
+    'reportTask': 'Báo cáo tiến độ công việc',
+    'editreportTask': 'Nội dung xử lý công việc',
+    'addemail': 'Soạn thư',
+    'send': 'Gửi',
     'eof':
         'End of File. Please add a new text above this item to avoid conflicts. Thanks!',
     'fakeClass': 'D17-VO-A',
@@ -701,7 +717,7 @@ class Locales {
     'utilities': 'Tiện ích',
     'account': 'Tài khoản',
     'scienceStudy': 'Nghiên cứu khoa học',
-    'serveyResults': 'Kết quả khảo sát',
+    'serveyResults': 'Khảo sát sự kiện',
     'recentActivities': 'Hoạt động gần đây',
     'viewMore': 'Xem tất cả',
     'todayTasks': 'Công việc hôm nay',
@@ -993,6 +1009,14 @@ class Locales {
     'executiveDocuments': 'Văn bản điều hành',
     'sendRequest': 'Gửi đề xuất',
     'download': 'Tải xuống',
+    'listSurvey': 'Danh sách khảo sát',
+    'assignDocument': 'Bút phê văn bản đến',
+    'editassignDocument': 'Sửa bút phê văn bản đến',
+    'forwardDocument': 'Phân phối văn bản đi',
+    'reportTask': 'Báo cáo tiến độ công việc',
+    'editreportTask': 'Nội dung xử lý công việc',
+    'addemail': 'Soạn thư',
+    'send': 'Gửi',
     'eof':
         'End of File. Please add a new text above this item to avoid conflicts. Thanks!',
     'fakeClass': 'D17-VO-A',

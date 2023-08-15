@@ -37,6 +37,7 @@ class HomeController extends BaseController {
   int? idDonVi = 0;
   Rx<String> title = "NAM VIỆT JSC".obs;
   Rx<String> imagePath = Assets.images.icBookPng.path.obs;
+
   Rx<String> username = "1952220001".obs;
   Rx<String> name = "Phạm Thị Vân Anh".obs;
   //Rx<String> username = "admin".obs;
@@ -82,6 +83,13 @@ class HomeController extends BaseController {
     userObject.value = await userRepo.retrieveUserInfo();
     userPermission?.value =
         userObject.value?.retrievePermission() ?? UserPermission.none;
+    if (userPermission?.value == UserPermission.student) {
+      username.value = "1952220001";
+      name.value = "Phạm Thị Vân Anh";
+    } else {
+      username.value = "admin";
+      name.value = "Quản trị hệ thống";
+    }
     retrieveData();
   }
 
@@ -244,5 +252,15 @@ class HomeController extends BaseController {
   navigateToSendRequest() {
     Fimber.d("navigateToSendRequest()");
     Get.toNamed(Routes.SEND_REQUEST);
+  }
+
+  navigateToReportTask() {
+    Fimber.d("navigateToReportTask()");
+    Get.toNamed(Routes.REPORT_TASK);
+  }
+
+  navigateToEmail() {
+    Fimber.d("navigateToEmail()");
+    Get.toNamed(Routes.EMAIL);
   }
 }

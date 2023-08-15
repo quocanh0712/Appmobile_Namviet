@@ -40,39 +40,39 @@ class LoginController extends BaseController {
   final biometricLoginIsEnable = true.obs;
   final showBiometricLogin = false.obs;
 
-  List<DropdownMenuItem> list = [
-    DropdownMenuItem(
-        value: 0,
-        child: Center(
-            child: Text("---Mời chọn đơn vị---", textAlign: TextAlign.center))),
-    DropdownMenuItem(
-        value: 1,
-        child: Text("Trường Đại học Ngoại ngữ Đà Nẵng",
-            textAlign: TextAlign.center, overflow: TextOverflow.ellipsis)),
-    DropdownMenuItem(
-        value: 2,
-        child: Text("Trường Đại học Nông Lâm Thái Nguyên",
-            textAlign: TextAlign.center, overflow: TextOverflow.ellipsis)),
-    DropdownMenuItem(
-        value: 3,
-        child: Text("Trường Đai học Sư phạm Nghệ thuật TW",
-            textAlign: TextAlign.center, overflow: TextOverflow.ellipsis)),
-    DropdownMenuItem(
-        value: 4,
-        child: Text("Trường Đại học Sư phạm TDTT Hà Nội",
-            textAlign: TextAlign.center, overflow: TextOverflow.ellipsis)),
-    DropdownMenuItem(
-        value: 5,
-        child: Text("Trường Quốc tế - Đại học Quốc Gia Hà Nội",
-            textAlign: TextAlign.center, overflow: TextOverflow.ellipsis))
-  ];
-
   // List<DropdownMenuItem> list = [
+  //   DropdownMenuItem(
+  //       value: 0,
+  //       child: Center(
+  //           child: Text("---Mời chọn đơn vị---", textAlign: TextAlign.center))),
+  //   DropdownMenuItem(
+  //       value: 1,
+  //       child: Text("Trường Đại học Ngoại ngữ Đà Nẵng",
+  //           textAlign: TextAlign.center, overflow: TextOverflow.ellipsis)),
+  //   DropdownMenuItem(
+  //       value: 2,
+  //       child: Text("Trường Đại học Nông Lâm Thái Nguyên",
+  //           textAlign: TextAlign.center, overflow: TextOverflow.ellipsis)),
+  //   DropdownMenuItem(
+  //       value: 3,
+  //       child: Text("Trường Đai học Sư phạm Nghệ thuật TW",
+  //           textAlign: TextAlign.center, overflow: TextOverflow.ellipsis)),
+  //   DropdownMenuItem(
+  //       value: 4,
+  //       child: Text("Trường Đại học Sư phạm TDTT Hà Nội",
+  //           textAlign: TextAlign.center, overflow: TextOverflow.ellipsis)),
   //   DropdownMenuItem(
   //       value: 5,
   //       child: Text("Trường Quốc tế - Đại học Quốc Gia Hà Nội",
   //           textAlign: TextAlign.center, overflow: TextOverflow.ellipsis))
   // ];
+
+  List<DropdownMenuItem> list = [
+    DropdownMenuItem(
+        value: 3,
+        child: Text("Trường Đai học Sư phạm Nghệ thuật TW",
+            textAlign: TextAlign.center, overflow: TextOverflow.ellipsis))
+  ];
 
   @override
   void onInit() {
@@ -170,10 +170,10 @@ class LoginController extends BaseController {
   performLogin() async {
     userName = userName?.isNotEmpty == true
         ? userName
-        : /*219203012 namviet admin tester*/ "namviet";
+        : /*219203012 namviet admin tester*/ "219203012";
     password = password?.isNotEmpty == true
         ? password
-        : /*hue23052001 123@123  Namvietjsc2023  admin ABC@123.com*/ "123@123";
+        : /*hue23052001 123@123  Namvietjsc2023  admin ABC@123.com*/ "hue23052001";
 
     if (idDonVi == 0 || idDonVi == null) {
       isError.value = LocaleKeys.idDonViIsNotEmpty.tr;

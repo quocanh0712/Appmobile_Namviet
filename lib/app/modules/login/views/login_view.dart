@@ -88,23 +88,29 @@ class LoginView extends BaseView<LoginController> {
                                             isExpanded: true,
                                             hint: new Text(
                                                 "---Mời chọn đơn vị---"),
-                                            value: loginController
-                                                        .list.first.value !=
-                                                    null
-                                                ? loginController
-                                                    .list.first.value
-                                                : 0,
+                                            // value: loginController
+                                            //             .list.first.value !=
+                                            //         null
+                                            //     ? loginController
+                                            //         .list.first.value
+                                            //     : 3,
+                                            value: 3,
                                             // Down Arrow Icon
                                             icon: const Icon(
                                                 Icons.keyboard_arrow_down),
                                             items: loginController.list,
                                             onChanged: (value) {
+                                              // loginController.list.first =
+                                              //     loginController.list
+                                              //         .firstWhere((e) =>
+                                              //             e.value == value);
                                               loginController.list.first =
                                                   loginController.list
-                                                      .firstWhere((e) =>
-                                                          e.value == value);
+                                                      .firstWhere(
+                                                          (e) => e.value == 3);
                                               loginController
-                                                  .getValueDropDown(value);
+                                                  //.getValueDropDown(value);
+                                                  .getValueDropDown(3);
                                             },
                                           ),
                                         ],

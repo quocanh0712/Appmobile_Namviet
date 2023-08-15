@@ -377,11 +377,16 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // _buildUtilityButton(
+              //     context: context,
+              //     assetImage: Assets.images.icMicroscope,
+              //     onTap: () => controller.navigateToScientificResearch(),
+              //     title: LocaleKeys.scienceStudy.tr),
               _buildUtilityButton(
                   context: context,
-                  assetImage: Assets.images.icMicroscope,
-                  onTap: () => controller.navigateToScientificResearch(),
-                  title: LocaleKeys.scienceStudy.tr),
+                  assetImage: Assets.images.icDocumentNormal,
+                  onTap: () => controller.navigateToReportTask(),
+                  title: LocaleKeys.reportTask.tr),
               _buildUtilityButton(
                 context: context,
                 assetImage: Assets.images.icFilterSearch,
@@ -402,11 +407,16 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              // _buildUtilityButton(
+              //     context: context,
+              //     assetImage: Assets.images.icBrifecaseTick,
+              //     onTap: () => controller.navigateToOneGate(),
+              //     title: LocaleKeys.oneStopService.tr),
               _buildUtilityButton(
                   context: context,
-                  assetImage: Assets.images.icBrifecaseTick,
-                  onTap: () => controller.navigateToOneGate(),
-                  title: LocaleKeys.oneStopService.tr),
+                  assetImage: Assets.images.icons8Email28,
+                  onTap: () => controller.navigateToEmail(),
+                  title: LocaleKeys.email.tr),
               // _buildUtilityButton(
               //     context: context,
               //     assetImage: Assets.images.icScan,

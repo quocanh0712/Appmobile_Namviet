@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "NguoiGui": "Phòng tổ chức - hành chính",
+    "TieuDe": "Quyết định về xử lý cán bộ công chức, viên chức",
+    "ThoiGian": "08/06/2023"
+  },
+  {
+    "id": 2,
+    "NguoiGui": "Phòng đào tạo",
+    "TieuDe": "Thông báo về tổ chức phân công lịch giảng day Năm học 2022-2023",
+    "ThoiGian": "10/06/2023"
+  },
+  {
+    "id": 3,
+    "NguoiGui": "Phòng kế hoạch-tài chính",
+    "TieuDe": "Gửi phiếu lương tháng 06/2023",
+    "ThoiGian": "05/07/2023"
+  }
+]

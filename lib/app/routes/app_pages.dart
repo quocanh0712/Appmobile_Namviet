@@ -8,6 +8,10 @@ import 'package:ftu_lms/app/modules/survey_result/views/survey_item/bindings/sur
 import 'package:ftu_lms/app/modules/survey_result/views/survey_item/views/survey_item_view.dart';
 import 'package:get/get.dart';
 
+import '../modules/Email/bindings/email_binding.dart';
+import '../modules/Email/views/add_email/bindings/add_email_binding.dart';
+import '../modules/Email/views/add_email/views/add_mail_view.dart';
+import '../modules/Email/views/email_view.dart';
 import '../modules/account/bindings/account_binding.dart';
 import '../modules/account/views/account_view.dart';
 import '../modules/appInformation/bindings/app_information_binding.dart';
@@ -37,8 +41,14 @@ import '../modules/educationProgram/views/education_program_view.dart';
 import '../modules/elearning/bindings/elearning_binding.dart';
 import '../modules/elearning/views/elearning_detail_view.dart';
 import '../modules/elearning/views/elearning_view.dart';
+import '../modules/executive_documents/bindings/assign_document_binding.dart';
 import '../modules/executive_documents/bindings/executive_documents_binding.dart';
+import '../modules/executive_documents/bindings/forward_document_binding.dart';
+import '../modules/executive_documents/views/assign_document_view.dart';
+import '../modules/executive_documents/views/edit_assign_document/bindings/edit_assign_document_binding.dart';
+import '../modules/executive_documents/views/edit_assign_document/views/edit_assign_document_view.dart';
 import '../modules/executive_documents/views/executive_documents_view.dart';
+import '../modules/executive_documents/views/forward_document_view.dart';
 import '../modules/financeOverview/billPayment/bindings/bill_payment_binding.dart';
 import '../modules/financeOverview/billPayment/views/bill_payment_view.dart';
 import '../modules/financeOverview/bindings/finance_overview_binding.dart';
@@ -93,6 +103,10 @@ import '../modules/practicePoints/practicePointDetail/bindings/practice_point_de
 import '../modules/practicePoints/practicePointDetail/views/practice_point_detail_view.dart';
 import '../modules/practicePoints/practicePointOverview/bindings/practice_point_overview_binding.dart';
 import '../modules/practicePoints/practicePointOverview/views/practice_point_overview_view.dart';
+import '../modules/report_task/bindings/report_task_binding.dart';
+import '../modules/report_task/views/edit_report_task/bindings/edit_report_task_binding.dart';
+import '../modules/report_task/views/edit_report_task/views/edit_report_task_view.dart';
+import '../modules/report_task/views/report_task_view.dart';
 import '../modules/reward_discipline/bindings/reward_discipline_binding.dart';
 import '../modules/reward_discipline/views/discipline/bindings/discipline_binding.dart';
 import '../modules/reward_discipline/views/discipline/views/discipline_view.dart';
@@ -531,6 +545,41 @@ class AppPages {
       name: _Paths.SEND_REQUEST,
       page: () => SendRequestView(),
       binding: SendRequestBinding(),
+    ),
+    GetPage(
+      name: _Paths.ASSIGN_DOCUMENT,
+      page: () => AssignDocumentView(),
+      binding: AssignDocumentBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_ASSIGN_DOCUMENT,
+      page: () => EditAssignDocumenView(),
+      binding: EditAssignDocumentBinding(),
+    ),
+    GetPage(
+      name: _Paths.FORWARD_DOCUMENT,
+      page: () => ForwardDocumentView(),
+      binding: ForwardDocumentBinding(),
+    ),
+    GetPage(
+      name: _Paths.REPORT_TASK,
+      page: () => ReportTaskView(),
+      binding: ReportTaskBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_REPORT_TASK,
+      page: () => EditReportTaskView(),
+      binding: EditReportTaskBinding(),
+    ),
+    GetPage(
+      name: _Paths.EMAIL,
+      page: () => EmailView(),
+      binding: EmailBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADD_EMAIL,
+      page: () => AddEmailView(),
+      binding: AddEmailBinding(),
     )
   ];
 }

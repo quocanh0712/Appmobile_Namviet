@@ -25,6 +25,14 @@ class ProfileController extends BaseController {
     super.onReady();
     Fimber.d("onReady()");
     userObject.value = await userRepo.retrieveUserInfo();
+
+    if (userObject.value?.retrievePermission() == UserPermission.student) {
+      username.value = "1952220001";
+      name.value = "Phạm Thị Vân Anh";
+    } else {
+      username.value = "admin";
+      name.value = "Quản trị hệ thống";
+    }
   }
 
   navigateToProfileEdition() async {

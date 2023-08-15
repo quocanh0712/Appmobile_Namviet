@@ -85,6 +85,13 @@ abstract class Routes {
   static const STU_CERTIFICATE_MANAGER = _Paths.STU_CERTIFICATE_MANAGER;
   static const EXECUTIVE_DOCUMENTS = _Paths.EXECUTIVE_DOCUMENTS;
   static const SEND_REQUEST = _Paths.SEND_REQUEST;
+  static const ASSIGN_DOCUMENT = _Paths.ASSIGN_DOCUMENT;
+  static const EDIT_ASSIGN_DOCUMENT = _Paths.EDIT_ASSIGN_DOCUMENT;
+  static const FORWARD_DOCUMENT = _Paths.FORWARD_DOCUMENT;
+  static const REPORT_TASK = _Paths.REPORT_TASK;
+  static const EDIT_REPORT_TASK = _Paths.EDIT_REPORT_TASK;
+  static const EMAIL = _Paths.EMAIL;
+  static const ADD_EMAIL = _Paths.ADD_EMAIL;
 }
 
 abstract class _Paths {
@@ -165,4 +172,11 @@ abstract class _Paths {
   static const STU_CERTIFICATE_MANAGER = '/stu-certificate-manager';
   static const EXECUTIVE_DOCUMENTS = '/executive-documents';
   static const SEND_REQUEST = '/send-request';
+  static const ASSIGN_DOCUMENT = '/assign-document';
+  static const EDIT_ASSIGN_DOCUMENT = '/edit-assign-document';
+  static const FORWARD_DOCUMENT = '/forward-document';
+  static const REPORT_TASK = '/report_task';
+  static const EDIT_REPORT_TASK = '/edit_report_task';
+  static const EMAIL = '/email';
+  static const ADD_EMAIL = '/add_email';
 }
