@@ -106,8 +106,9 @@ class HomeController extends BaseController {
           HomeRecentActitvity(
               id: 1,
               icon: '',
-              title: 'Thông báo chung toàn trường',
-              content: 'THỜI KHÓA BIỂU DỰ KIẾN HỌC KỲ 1 NĂM HỌC 2023-2024'),
+              title: 'Thông báo thay đổi lịch học',
+              content:
+                  'Thay đổi THỜI KHÓA BIỂU HỌC KỲ 1 NĂM HỌC 2023-2024. Chi tiết trên trang cổng thông tin...'),
           HomeRecentActitvity(
               id: 2,
               icon: '',

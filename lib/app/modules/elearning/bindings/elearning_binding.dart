@@ -7,10 +7,13 @@ import 'package:ftu_lms/app/modules/elearning/repository/elearning_repository.da
 import 'package:ftu_lms/app/modules/elearning/repository/impl/elearning_repository_impl.dart';
 import 'package:get/get.dart';
 
+import '../controllers/elearning_detail_controller.dart';
+
 class ElearningBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<ELearningRepository>(() => ELearningRepositoryImpl());
     Get.lazyPut<ElearningController>(() => ElearningController());
+    Get.lazyPut<ElearningDetailController>(() => ElearningDetailController());
   }
 }
