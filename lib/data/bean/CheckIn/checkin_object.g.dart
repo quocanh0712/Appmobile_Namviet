@@ -49,13 +49,14 @@ class CheckInObjectAdapter extends TypeAdapter<CheckInObject> {
       str_ngay_ct: fields[9] as String?,
       so_luong: fields[10] as int?,
       ghi_chu: fields[11] as String?,
+      str_ngay_bdsd: fields[12] as String?,
     );
   }
 
   @override
   void write(BinaryWriter writer, CheckInObject obj) {
     writer
-      ..writeByte(12)
+      ..writeByte(13)
       ..writeByte(0)
       ..write(obj.ma_ts)
       ..writeByte(1)
@@ -79,7 +80,9 @@ class CheckInObjectAdapter extends TypeAdapter<CheckInObject> {
       ..writeByte(10)
       ..write(obj.so_luong)
       ..writeByte(11)
-      ..write(obj.ghi_chu);
+      ..write(obj.ghi_chu)
+      ..writeByte(12)
+      ..write(obj.str_ngay_bdsd);
   }
 
   @override
@@ -111,6 +114,7 @@ _$_CheckInObject _$$_CheckInObjectFromJson(Map<String, dynamic> json) =>
       str_ngay_ct: json['str_ngay_ct'] as String?,
       so_luong: json['so_luong'] as int?,
       ghi_chu: json['ghi_chu'] as String?,
+      str_ngay_bdsd: json['str_ngay_bdsd'] as String?,
     );
 
 Map<String, dynamic> _$$_CheckInObjectToJson(_$_CheckInObject instance) =>
@@ -127,4 +131,5 @@ Map<String, dynamic> _$$_CheckInObjectToJson(_$_CheckInObject instance) =>
       'str_ngay_ct': instance.str_ngay_ct,
       'so_luong': instance.so_luong,
       'ghi_chu': instance.ghi_chu,
+      'str_ngay_bdsd': instance.str_ngay_bdsd,
     };

@@ -68,9 +68,9 @@ class LoginController extends BaseController {
   // ];
 
   List<DropdownMenuItem> list = [
-    DropdownMenuItem(
-        value: 3,
-        child: Text("Trường Đai học Sư phạm Nghệ thuật TW",
+    const DropdownMenuItem(
+        value: 2,
+        child: Text("Trường Đại học Nông Lâm Thái Nguyên",
             textAlign: TextAlign.center, overflow: TextOverflow.ellipsis))
   ];
 
@@ -168,12 +168,13 @@ class LoginController extends BaseController {
   }
 
   performLogin() async {
-    userName = userName?.isNotEmpty == true
-        ? userName
-        : /*219203012 namviet admin tester*/ "219203012";
-    password = password?.isNotEmpty == true
-        ? password
-        : /*hue23052001 123@123  Namvietjsc2023  admin ABC@123.com*/ "hue23052001";
+    idDonVi = 2;
+    // userName = userName?.isNotEmpty == true
+    //     ? userName
+    //     : /*219203012 namviet admin tester*/ "219203012";
+    // password = password?.isNotEmpty == true
+    //     ? password
+    //     : /*hue23052001 123@123  Namvietjsc2023  admin ABC@123.com*/ "hue23052001";
 
     if (idDonVi == 0 || idDonVi == null) {
       isError.value = LocaleKeys.idDonViIsNotEmpty.tr;
@@ -192,10 +193,10 @@ class LoginController extends BaseController {
       return;
     }
 
-    // if (userName == "admin" && password == "admin") {
-    //   userName = "auth";
-    //   password = "A587c5a7857b1d1028b95cdf1b16b2dd@CNS";
-    // }
+    if (userName == "admin" && password == "admin") {
+      userName = "auth";
+      password = "A587c5a7857b1d1028b95cdf1b16b2dd@CNS";
+    }
 
     if (isLoading.value) return;
     isLoading.value = true;

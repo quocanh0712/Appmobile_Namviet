@@ -44,6 +44,8 @@ import 'package:ftu_lms/data/bean/user_object/user_object.dart';
 import 'package:ftu_lms/utils/extensions/color_extension.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../../bean/CheckIn/schedule_checkin_object.dart';
+
 part 'base_response_object.g.dart';
 
 const String successStatus = "0000";
@@ -103,6 +105,14 @@ extension NetworkResponseConverter on BaseResponseObject {
     if (this is BaseResponseObject<List<UserObject>?>) {
       return BaseResponseObject<List<UserObject>?>.fromJson(
           json, jsonToListUserObjects);
+    }
+    if (this is BaseResponseObject<List<ScheDuleCheckInObject?>>) {
+      return BaseResponseObject<List<ScheDuleCheckInObject?>>.fromJson(
+          json, jsonToListNullableScheDuleCheckInObjects);
+    }
+    if (this is BaseResponseObject<List<ScheDuleCheckInObject>?>) {
+      return BaseResponseObject<List<ScheDuleCheckInObject>?>.fromJson(
+          json, jsonToListScheDuleCheckInObjects);
     }
     if (this is BaseResponseObject<List<KeyValueResponse?>?>) {
       return BaseResponseObject<List<KeyValueResponse?>?>.fromJson(

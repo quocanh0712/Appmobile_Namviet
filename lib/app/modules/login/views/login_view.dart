@@ -43,7 +43,7 @@ class LoginView extends BaseView<LoginController> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             SizedBox(height: Get.width * 0.1),
-                            Assets.images.ftuLogo.image(
+                            Assets.images.tUAFLogo.image(
                                 width: Get.width * 0.26,
                                 height: Get.width * 0.26,
                                 fit: BoxFit.cover),
@@ -87,30 +87,20 @@ class LoginView extends BaseView<LoginController> {
                                             // Initial Value
                                             isExpanded: true,
                                             hint: new Text(
-                                                "---Mời chọn đơn vị---"),
-                                            // value: loginController
-                                            //             .list.first.value !=
-                                            //         null
-                                            //     ? loginController
-                                            //         .list.first.value
-                                            //     : 3,
-                                            value: 3,
+                                                // "---Mời chọn đơn vị---"),
+                                                "Trường Đại học Nông Lâm Thái Nguyên"),
+                                            value: 2,
                                             // Down Arrow Icon
                                             icon: const Icon(
                                                 Icons.keyboard_arrow_down),
                                             items: loginController.list,
                                             onChanged: (value) {
-                                              // loginController.list.first =
-                                              //     loginController.list
-                                              //         .firstWhere((e) =>
-                                              //             e.value == value);
                                               loginController.list.first =
                                                   loginController.list
-                                                      .firstWhere(
-                                                          (e) => e.value == 3);
+                                                      .firstWhere((e) =>
+                                                          e.value == value);
                                               loginController
-                                                  //.getValueDropDown(value);
-                                                  .getValueDropDown(3);
+                                                  .getValueDropDown(value);
                                             },
                                           ),
                                         ],

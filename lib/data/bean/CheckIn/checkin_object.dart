@@ -23,6 +23,7 @@ class CheckInObject with _$CheckInObject {
     @HiveField(9) String? str_ngay_ct,
     @HiveField(10) int? so_luong,
     @HiveField(11) String? ghi_chu,
+    @HiveField(12) String? str_ngay_bdsd,
   }) = _CheckInObject;
 
   factory CheckInObject.fromJson(Map<String, dynamic> json) =>

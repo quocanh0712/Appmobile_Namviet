@@ -1,7 +1,7 @@
 name: ftu_lms
-version: 0.0.1+3
+version: 0.0.1+4
 publish_to: none
-description: The UFL Learning Management System.
+description: The Learning Management System.
 environment: 
   sdk: '>=2.18.2 <3.0.0'
 

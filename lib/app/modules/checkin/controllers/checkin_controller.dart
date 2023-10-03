@@ -77,6 +77,8 @@ class CheckinController extends BaseController {
           result += "-Nước sản xuất: ${data.result?.nuoc_ts ?? ""} \n";
           result += "-Thông số kỹ thuật: ${data.result?.thong_so_kt ?? ""} \n";
           result += "-Tên bộ phận sử dụng: ${data.result?.ten_bp ?? ""} \n";
+          result +=
+              "-Ngày bắt đầu sử dụng: ${data.result?.str_ngay_bdsd ?? ""} \n";
           result += "-Sô CT: ${data.result?.so_ct ?? ""} \n";
           result += "-Ngày CT: ${data.result?.str_ngay_ct ?? ""} \n";
           result += "-Số lượng: ${data.result?.so_luong ?? 0} \n";

@@ -1,4 +1,4 @@
-package com.namvietjsc.ufl
+package com.namvietjsc.tuaf
 
 import android.os.Bundle
 import io.flutter.embedding.android.FlutterFragmentActivity

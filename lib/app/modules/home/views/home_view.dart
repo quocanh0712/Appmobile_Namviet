@@ -70,14 +70,14 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                             .copyWith(color: context.themeExtensions.white))),
                     const SizedBox(height: 3),
                     Obx(() => AutoSizeText(
-                        //"${controller.userObject.value?.fullname}",
-                        controller.name.value,
+                        "${controller.userObject.value?.fullname}",
+                        //controller.name.value,
                         style: context.themeExtensions.subTex
                             .copyWith(color: context.themeExtensions.white))),
                     const SizedBox(height: 3),
                     Obx(() => AutoSizeText(
-                        //"${controller.userObject.value?.username}",
-                        controller.username.value,
+                        "${controller.userObject.value?.username}",
+                        // controller.username.value,
                         style: context.themeExtensions.subTex
                             .copyWith(color: context.themeExtensions.white)))
                   ],
@@ -173,10 +173,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                                         UserPermission.none),
                               )),
                           //------------Show list banner----------
-                          // Padding(
-                          //     padding: const EdgeInsets.symmetric(
-                          //         vertical: 35, horizontal: 20),
-                          //     child: _buildBanners(context)),
+                          Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 35, horizontal: 20),
+                              child: _buildBanners(context)),
+
                           Padding(
                             padding: const EdgeInsets.symmetric(horizontal: 20),
                             child: Row(
@@ -377,11 +378,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // _buildUtilityButton(
-              //     context: context,
-              //     assetImage: Assets.images.icMicroscope,
-              //     onTap: () => controller.navigateToScientificResearch(),
-              //     title: LocaleKeys.scienceStudy.tr),
+              _buildUtilityButton(
+                  context: context,
+                  assetImage: Assets.images.icMicroscope,
+                  onTap: () => controller.navigateToScientificResearch(),
+                  title: LocaleKeys.scienceStudy.tr),
               _buildUtilityButton(
                   context: context,
                   assetImage: Assets.images.icDocumentNormal,
@@ -407,11 +408,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              // _buildUtilityButton(
-              //     context: context,
-              //     assetImage: Assets.images.icBrifecaseTick,
-              //     onTap: () => controller.navigateToOneGate(),
-              //     title: LocaleKeys.oneStopService.tr),
+              _buildUtilityButton(
+                  context: context,
+                  assetImage: Assets.images.icBrifecaseTick,
+                  onTap: () => controller.navigateToOneGate(),
+                  title: LocaleKeys.oneStopService.tr),
               _buildUtilityButton(
                   context: context,
                   assetImage: Assets.images.icons8Email28,
@@ -796,6 +797,14 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               title: LocaleKeys.eLearning.tr,
               onTap: () => controller.navigateToELearning(),
             ),
+            // _buildMainFeatureItem(
+            //   context,
+            //   background:
+            //       Assets.images.homeBotRightButBg.image(fit: BoxFit.cover),
+            //   icon: Assets.images.icScan.image(fit: BoxFit.cover),
+            //   title: LocaleKeys.checkInDevice.tr,
+            //   onTap: () => controller.navigateToCheckInDevice(),
+            // ),
           ],
         ),
       ],

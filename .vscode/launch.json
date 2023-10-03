@@ -38,6 +38,17 @@
                 "--dart-define", "DART_DEFINES_BASE_URL=https://api.ufl.essoft.vn/mobile/api",
                 "--debug"
             ]
+        },
+        {
+            "name": "EssoftLive",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "--dart-define", "DART_DEFINES_APP_NAME=Essoft",
+                "--dart-define", "DART_DEFINES_BASE_URL=https://demo.api.essoft.vn/taisantest/api",
+                "--release"
+            ]
         }
     ]
 }

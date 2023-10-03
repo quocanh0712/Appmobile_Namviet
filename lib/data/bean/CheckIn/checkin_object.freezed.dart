@@ -44,6 +44,8 @@ mixin _$CheckInObject {
   int? get so_luong => throw _privateConstructorUsedError;
   @HiveField(11)
   String? get ghi_chu => throw _privateConstructorUsedError;
+  @HiveField(12)
+  String? get str_ngay_bdsd => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -69,7 +71,8 @@ abstract class $CheckInObjectCopyWith<$Res> {
       @HiveField(8) String? so_ct,
       @HiveField(9) String? str_ngay_ct,
       @HiveField(10) int? so_luong,
-      @HiveField(11) String? ghi_chu});
+      @HiveField(11) String? ghi_chu,
+      @HiveField(12) String? str_ngay_bdsd});
 }
 
 /// @nodoc
@@ -97,6 +100,7 @@ class _$CheckInObjectCopyWithImpl<$Res, $Val extends CheckInObject>
     Object? str_ngay_ct = freezed,
     Object? so_luong = freezed,
     Object? ghi_chu = freezed,
+    Object? str_ngay_bdsd = freezed,
   }) {
     return _then(_value.copyWith(
       ma_ts: freezed == ma_ts
@@ -147,6 +151,10 @@ class _$CheckInObjectCopyWithImpl<$Res, $Val extends CheckInObject>
           ? _value.ghi_chu
           : ghi_chu // ignore: cast_nullable_to_non_nullable
               as String?,
+      str_ngay_bdsd: freezed == str_ngay_bdsd
+          ? _value.str_ngay_bdsd
+          : str_ngay_bdsd // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -171,7 +179,8 @@ abstract class _$$_CheckInObjectCopyWith<$Res>
       @HiveField(8) String? so_ct,
       @HiveField(9) String? str_ngay_ct,
       @HiveField(10) int? so_luong,
-      @HiveField(11) String? ghi_chu});
+      @HiveField(11) String? ghi_chu,
+      @HiveField(12) String? str_ngay_bdsd});
 }
 
 /// @nodoc
@@ -197,6 +206,7 @@ class __$$_CheckInObjectCopyWithImpl<$Res>
     Object? str_ngay_ct = freezed,
     Object? so_luong = freezed,
     Object? ghi_chu = freezed,
+    Object? str_ngay_bdsd = freezed,
   }) {
     return _then(_$_CheckInObject(
       ma_ts: freezed == ma_ts
@@ -247,6 +257,10 @@ class __$$_CheckInObjectCopyWithImpl<$Res>
           ? _value.ghi_chu
           : ghi_chu // ignore: cast_nullable_to_non_nullable
               as String?,
+      str_ngay_bdsd: freezed == str_ngay_bdsd
+          ? _value.str_ngay_bdsd
+          : str_ngay_bdsd // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -266,7 +280,8 @@ class _$_CheckInObject implements _CheckInObject {
       @HiveField(8) this.so_ct,
       @HiveField(9) this.str_ngay_ct,
       @HiveField(10) this.so_luong,
-      @HiveField(11) this.ghi_chu});
+      @HiveField(11) this.ghi_chu,
+      @HiveField(12) this.str_ngay_bdsd});
 
   factory _$_CheckInObject.fromJson(Map<String, dynamic> json) =>
       _$$_CheckInObjectFromJson(json);
@@ -307,10 +322,13 @@ class _$_CheckInObject implements _CheckInObject {
   @override
   @HiveField(11)
   final String? ghi_chu;
+  @override
+  @HiveField(12)
+  final String? str_ngay_bdsd;
 
   @override
   String toString() {
-    return 'CheckInObject(ma_ts: $ma_ts, ten_ts: $ten_ts, nam_sx: $nam_sx, hang_sx: $hang_sx, nuoc_ts: $nuoc_ts, thong_so_kt: $thong_so_kt, ten_bp: $ten_bp, ten_lts: $ten_lts, so_ct: $so_ct, str_ngay_ct: $str_ngay_ct, so_luong: $so_luong, ghi_chu: $ghi_chu)';
+    return 'CheckInObject(ma_ts: $ma_ts, ten_ts: $ten_ts, nam_sx: $nam_sx, hang_sx: $hang_sx, nuoc_ts: $nuoc_ts, thong_so_kt: $thong_so_kt, ten_bp: $ten_bp, ten_lts: $ten_lts, so_ct: $so_ct, str_ngay_ct: $str_ngay_ct, so_luong: $so_luong, ghi_chu: $ghi_chu, str_ngay_bdsd: $str_ngay_bdsd)';
   }
 
   @override
@@ -332,7 +350,9 @@ class _$_CheckInObject implements _CheckInObject {
                 other.str_ngay_ct == str_ngay_ct) &&
             (identical(other.so_luong, so_luong) ||
                 other.so_luong == so_luong) &&
-            (identical(other.ghi_chu, ghi_chu) || other.ghi_chu == ghi_chu));
+            (identical(other.ghi_chu, ghi_chu) || other.ghi_chu == ghi_chu) &&
+            (identical(other.str_ngay_bdsd, str_ngay_bdsd) ||
+                other.str_ngay_bdsd == str_ngay_bdsd));
   }
 
   @JsonKey(ignore: true)
@@ -350,7 +370,8 @@ class _$_CheckInObject implements _CheckInObject {
       so_ct,
       str_ngay_ct,
       so_luong,
-      ghi_chu);
+      ghi_chu,
+      str_ngay_bdsd);
 
   @JsonKey(ignore: true)
   @override
@@ -379,7 +400,8 @@ abstract class _CheckInObject implements CheckInObject {
       @HiveField(8) final String? so_ct,
       @HiveField(9) final String? str_ngay_ct,
       @HiveField(10) final int? so_luong,
-      @HiveField(11) final String? ghi_chu}) = _$_CheckInObject;
+      @HiveField(11) final String? ghi_chu,
+      @HiveField(12) final String? str_ngay_bdsd}) = _$_CheckInObject;
 
   factory _CheckInObject.fromJson(Map<String, dynamic> json) =
       _$_CheckInObject.fromJson;
@@ -420,6 +442,9 @@ abstract class _CheckInObject implements CheckInObject {
   @override
   @HiveField(11)
   String? get ghi_chu;
+  @override
+  @HiveField(12)
+  String? get str_ngay_bdsd;
   @override
   @JsonKey(ignore: true)
   _$$_CheckInObjectCopyWith<_$_CheckInObject> get copyWith =>
