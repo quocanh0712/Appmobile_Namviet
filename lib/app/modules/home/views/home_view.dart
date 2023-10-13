@@ -224,7 +224,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisSize: MainAxisSize.max,
+      mainAxisSize: MainAxisSize.min,
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -253,6 +253,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             ],
           ),
         ),
+
         const SizedBox(height: 20),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -463,6 +464,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       ],
     );
   }
+
 
   showFeatureIsDeveloping() {
     Fimber.d("showFeatureIsDeveloping()");
