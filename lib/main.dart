@@ -35,7 +35,7 @@ Future<void> main() async {
 
   await StatusBarControl.setHidden(false, animation: StatusBarAnimation.FADE);
   await StatusBarControl.setStyle(StatusBarStyle.LIGHT_CONTENT);
-  await Jiffy.locale('vi');
+  // await Jiffy.locale('vi');
 
   // setup the One Signal Push Notification.
   OneSignalManager.init();
