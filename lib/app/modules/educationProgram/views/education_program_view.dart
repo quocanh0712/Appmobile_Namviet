@@ -92,11 +92,14 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const SizedBox(
+              VerticalDivider(
                 width: 5,
+                thickness: 2,
+                color: Colors.black,
               ),
               SizedBox(
                 width: 40,
+                height: 40,
                 child: Text(
                   "${index + 1}",
                   textAlign: TextAlign.start,
@@ -142,9 +145,10 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
           ),
         ),
         Divider(
-          height: 1,
+          height: 10,
           color: Get.context?.themeExtensions.textGrey,
-        )
+        ),
+
       ],
     );
   }

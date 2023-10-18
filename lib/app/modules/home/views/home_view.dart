@@ -367,6 +367,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     return _buildStudentUtilities(context);
   }
 
+
+
   Widget _buildTeacherUtilities(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -466,6 +468,9 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
   }
 
 
+
+
+
   showFeatureIsDeveloping() {
     Fimber.d("showFeatureIsDeveloping()");
     EasyLoading.instance.userInteractions = true;
@@ -474,6 +479,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         toastPosition: EasyLoadingToastPosition.bottom,
         maskType: EasyLoadingMaskType.clear);
   }
+
+
 
   Widget _buildRecentActivityItem(
       BuildContext context, HomeRecentActitvity activity,
