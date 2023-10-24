@@ -152,10 +152,11 @@ abstract class ReportProcessView<T extends BaseListController>
             ),
           ),
         ),
+
         Divider(
           height: 1,
           color: Get.context?.themeExtensions.textGrey,
-        )
+        ),
       ],
     );
   }

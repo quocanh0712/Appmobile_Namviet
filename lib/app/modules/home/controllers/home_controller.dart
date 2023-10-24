@@ -264,4 +264,9 @@ class HomeController extends BaseController {
     Fimber.d("navigateToEmail()");
     Get.toNamed(Routes.EMAIL);
   }
+
+  navigateToProfile() {
+    Fimber.d("navigateToProfile()");
+    Get.toNamed(Routes.PROFILE);
+  }
 }

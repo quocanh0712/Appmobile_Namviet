@@ -92,11 +92,6 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              VerticalDivider(
-                width: 5,
-                thickness: 2,
-                color: Colors.black,
-              ),
               SizedBox(
                 width: 40,
                 height: 40,
@@ -148,7 +143,6 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
           height: 10,
           color: Get.context?.themeExtensions.textGrey,
         ),
-
       ],
     );
   }

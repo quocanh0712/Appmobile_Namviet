@@ -25,6 +25,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../generated/assets.gen.dart';
 import '../../../../styles/theme_extensions.dart';
+import '../../dashboard/views/dashboard_view.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
@@ -58,7 +59,23 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const SizedBox(height: 36),
+                    Container(
+                      height: 60,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          GestureDetector(
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                radius: 25,
+                                backgroundImage: NetworkImage('https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg'),
+                              ),
+                              onTap: () => controller.navigateToProfile(),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                     Obx(() => Visibility(
                           visible: true,
                           child: Image.asset(controller.imagePath.value,
@@ -79,7 +96,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                         "${controller.userObject.value?.username}",
                         // controller.username.value,
                         style: context.themeExtensions.subTex
-                            .copyWith(color: context.themeExtensions.white)))
+                            .copyWith(color: context.themeExtensions.white))),
                   ],
                 ),
               ),
@@ -153,14 +170,13 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                                 children: [
                                   AutoSizeText(
                                     LocaleKeys.utilities.tr,
-                                    style: context
-                                        .themeExtensions.paragraphSemiBold
-                                        .copyWith(
-                                            color:
-                                                context.themeExtensions.black),
+                                    style:TextStyle(fontSize: 15,fontWeight: FontWeight.w500,color: Colors.black87)
                                   ),
-                                  Assets.images.arrowRight
-                                      .svg(fit: BoxFit.cover)
+                                  GestureDetector(
+                                    child: Icon(Icons.arrow_forward_ios_rounded,size: 15,),
+                                  ),
+                                  // Assets.images.arrowRight
+                                  //     .svg(fit: BoxFit.cover)
                                 ],
                               ),
                             ),
@@ -221,141 +237,114 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
   }
 
   Widget _buildStudentUtilities(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildUtilityButton(
-                context: context,
-                assetImage: Assets.images.icUserOctagon,
-                title: LocaleKeys.eLearning.tr,
-                onTap: () => controller.navigateToELearning(),
-              ),
-              _buildUtilityButton(
-                context: context,
-                assetImage: Assets.images.icAward,
-                title: LocaleKeys.trainingPoint.tr,
-                onTap: () => controller.navigateToPracticePointOverview(),
-              ),
-              _buildUtilityButton(
-                context: context,
-                assetImage: Assets.images.icBookPng,
-                title: LocaleKeys.teachingProgram.tr,
-                onTap: () => controller.navigateToEducationProgram(),
-              )
-            ],
-          ),
-        ),
-
-        const SizedBox(height: 20),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildUtilityButton(
-                context: context,
-                assetImage: Assets.images.icEmptyWalletChange,
-                title: LocaleKeys.finance.tr,
-                onTap: () => controller.navigateToFinanceOverview(),
-              ),
-              _buildUtilityButton(
-                context: context,
-                assetImage: Assets.images.icExamPlan,
-                title: LocaleKeys.testingPlan.tr,
-                onTap: () => controller.navigateToTestSchedule(),
-              ),
-              _buildUtilityButton(
-                  context: context,
-                  assetImage: Assets.images.icBrifecaseTick,
-                  title: LocaleKeys.oneStopService.tr,
-                  onTap: () => controller.navigateToOneGate()),
-            ],
-          ),
-        ),
-        const SizedBox(height: 20),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildUtilityButton(
-                context: context,
-                assetImage: Assets.images.icUserOctagon,
-                title: LocaleKeys.account.tr,
-                onTap: () => showFeatureIsDeveloping(),
-              ),
-              _buildUtilityButton(
-                context: context,
-                assetImage: Assets.images.ic74,
-                title: LocaleKeys.titleTeacherContact.tr,
-                onTap: () => showFeatureIsDeveloping(),
-              ),
-              _buildUtilityButton(
-                context: context,
-                assetImage: Assets.images.icConversation,
-                title: LocaleKeys.conversationTitle.tr,
-                onTap: () => controller.navigateToConversation(),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 20),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildUtilityButton(
-                context: context,
-                assetImage: Assets.images.icTask,
-                title: LocaleKeys.registedCourses.tr,
-                onTap: () => showFeatureIsDeveloping(),
-              ),
-              _buildUtilityButton(
-                context: context,
-                assetImage: Assets.images.icReceiptDisscount,
-                title: LocaleKeys.scholarship.tr,
-                onTap: () => showFeatureIsDeveloping(),
-              ),
-              _buildUtilityButton(
-                context: context,
-                assetImage: Assets.images.icUtilityMedalStar,
-                title: LocaleKeys.rewardDiscipline.tr,
-                onTap: () => showFeatureIsDeveloping(),
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(height: 20),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildUtilityButton(
-                context: context,
-                assetImage: Assets.images.ic129,
-                title: LocaleKeys.certificatesTitle.tr,
-                onTap: () => controller.navigateToCertificate(),
-              ),
-              _buildUtilityButton(context: context),
-              _buildUtilityButton(context: context),
-            ],
-          ),
-        ),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SizedBox(
+            height: 150,
+            child:ListView(
+              scrollDirection: Axis.horizontal,
+               children: [
+                 _buildUtilityButton(
+                   context: context,
+                   assetImage: Assets.images.icUserOctagon,
+                   title: LocaleKeys.eLearning.tr,
+                   onTap: () => controller.navigateToELearning(),
+                 ),
+                 const SizedBox(height: 20,width: 5,),
+                 _buildUtilityButton(
+                   context: context,
+                   assetImage: Assets.images.icAward,
+                   title: LocaleKeys.trainingPoint.tr,
+                   onTap: () => controller.navigateToPracticePointOverview(),
+                 ),
+                 const SizedBox(height: 20,width: 15,),
+                 _buildUtilityButton(
+                   context: context,
+                   assetImage: Assets.images.icBookPng,
+                   title: LocaleKeys.teachingProgram.tr,
+                   onTap: () => controller.navigateToEducationProgram(),
+                 ),
+                 const SizedBox(height: 20,width: 15,),
+                 _buildUtilityButton(
+                   context: context,
+                   assetImage: Assets.images.icEmptyWalletChange,
+                   title: LocaleKeys.finance.tr,
+                   onTap: () => controller.navigateToFinanceOverview(),
+                 ),
+                 const SizedBox(height: 20,width: 15,),
+                 _buildUtilityButton(
+                   context: context,
+                   assetImage: Assets.images.icExamPlan,
+                   title: LocaleKeys.testingPlan.tr,
+                   onTap: () => controller.navigateToTestSchedule(),
+                 ),
+                 const SizedBox(height: 20,width: 15,),
+                 _buildUtilityButton(
+                     context: context,
+                     assetImage: Assets.images.icBrifecaseTick,
+                     title: LocaleKeys.oneStopService.tr,
+                     onTap: () => controller.navigateToOneGate()
+                 ),
+                 const SizedBox(height: 20,width: 15,),
+                 _buildUtilityButton(
+                   context: context,
+                   assetImage: Assets.images.icUserOctagon,
+                   title: LocaleKeys.account.tr,
+                   onTap: () => showFeatureIsDeveloping(),
+                 ),
+                 const SizedBox(height: 20,width: 15,),
+                 _buildUtilityButton(
+                   context: context,
+                   assetImage: Assets.images.ic74,
+                   title: LocaleKeys.titleTeacherContact.tr,
+                   onTap: () => showFeatureIsDeveloping(),
+                 ),
+                 const SizedBox(height: 20,width: 15,),
+                 _buildUtilityButton(
+                   context: context,
+                   assetImage: Assets.images.icConversation,
+                   title: LocaleKeys.conversationTitle.tr,
+                   onTap: () => controller.navigateToConversation(),
+                 ),
+                 const SizedBox(height: 20,width: 15,),
+                 _buildUtilityButton(
+                   context: context,
+                   assetImage: Assets.images.icTask,
+                   title: LocaleKeys.registedCourses.tr,
+                   onTap: () => showFeatureIsDeveloping(),
+                 ),
+                 const SizedBox(height: 20,width: 15,),
+                 _buildUtilityButton(
+                   context: context,
+                   assetImage: Assets.images.icReceiptDisscount,
+                   title: LocaleKeys.scholarship.tr,
+                   onTap: () => showFeatureIsDeveloping(),
+                 ),
+                 const SizedBox(height: 20,width: 15,),
+                 _buildUtilityButton(
+                   context: context,
+                   assetImage: Assets.images.icUtilityMedalStar,
+                   title: LocaleKeys.rewardDiscipline.tr,
+                   onTap: () => showFeatureIsDeveloping(),
+                 ),
+                 const SizedBox(height: 20,width: 15,),
+                 _buildUtilityButton(
+                   context: context,
+                   assetImage: Assets.images.ic129,
+                   title: LocaleKeys.certificatesTitle.tr,
+                   onTap: () => controller.navigateToCertificate(),
+                 ),
+                 _buildUtilityButton(context: context),
+                 _buildUtilityButton(context: context),
+               ],
+            ) ,
+          )
+        ],
+      ),
     );
   }
 
@@ -370,100 +359,93 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
 
 
   Widget _buildTeacherUtilities(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisSize: MainAxisSize.max,
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              _buildUtilityButton(
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SizedBox(
+            height: 100,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                _buildUtilityButton(
+                    context: context,
+                    assetImage: Assets.images.icMicroscope,
+                    onTap: () => controller.navigateToScientificResearch(),
+                    title: LocaleKeys.scienceStudy.tr,),
+                SizedBox(height: 15, width: 20,),
+                _buildUtilityButton(
+                    context: context,
+                    assetImage: Assets.images.icDocumentNormal,
+                    onTap: () => controller.navigateToReportTask(),
+                    title: LocaleKeys.reportTask.tr),
+                SizedBox(height: 15, width: 20,),
+                _buildUtilityButton(
                   context: context,
-                  assetImage: Assets.images.icMicroscope,
-                  onTap: () => controller.navigateToScientificResearch(),
-                  title: LocaleKeys.scienceStudy.tr),
-              _buildUtilityButton(
-                  context: context,
-                  assetImage: Assets.images.icDocumentNormal,
-                  onTap: () => controller.navigateToReportTask(),
-                  title: LocaleKeys.reportTask.tr),
-              _buildUtilityButton(
-                context: context,
-                assetImage: Assets.images.icFilterSearch,
-                title: LocaleKeys.serveyResults.tr,
-                onTap: () => controller.navigateToSurveyResult(),
-              ),
-              _buildUtilityButton(
-                  context: context,
-                  assetImage: Assets.images.icTeacherContact,
-                  onTap: () => controller.navigateToTeacherContact(),
-                  title: LocaleKeys.titleTeacherContact.tr),
-            ],
-          ),
-        ),
-        const SizedBox(height: 20),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              _buildUtilityButton(
-                  context: context,
-                  assetImage: Assets.images.icBrifecaseTick,
-                  onTap: () => controller.navigateToOneGate(),
-                  title: LocaleKeys.oneStopService.tr),
-              _buildUtilityButton(
-                  context: context,
-                  assetImage: Assets.images.icons8Email28,
-                  onTap: () => controller.navigateToEmail(),
-                  title: LocaleKeys.email.tr),
-              // _buildUtilityButton(
-              //     context: context,
-              //     assetImage: Assets.images.icScan,
-              //     onTap: () => controller.navigateToCheckInDevice(),
-              //     title: LocaleKeys.checkInDevice.tr),
-              _buildUtilityButton(
-                  context: context,
-                  assetImage: Assets.images.icReceiptDisscount,
-                  onTap: () => controller.navigateToClassSurveyResult(),
-                  title: LocaleKeys.classSurveyResults.tr),
-              _buildUtilityButton(
-                  context: context,
-                  assetImage: Assets.images.icons8Training28,
-                  onTap: () => controller.navigateToListClassManagerTitle(),
-                  title: LocaleKeys.listClassManagerTitle.tr),
-            ],
-          ),
-        ),
-        const SizedBox(height: 20),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              _buildUtilityButton(
-                  context: context,
-                  assetImage: Assets.images.icTaskSquare,
-                  onTap: () => controller.navigateToStuCheckinManager(),
-                  title: LocaleKeys.studentManager.tr),
-              _buildUtilityButton(
-                  context: context,
-                  assetImage: Assets.images.icons8Document28,
-                  onTap: () => controller.navigateToExecutiveDocuments(),
-                  title: LocaleKeys.executiveDocuments.tr),
-              _buildUtilityButton(
-                  context: context,
-                  assetImage: Assets.images.icons8Request28,
-                  onTap: () => controller.navigateToSendRequest(),
-                  title: LocaleKeys.sendRequest.tr)
-            ],
-          ),
-        ),
-      ],
+                  assetImage: Assets.images.icFilterSearch,
+                  title: LocaleKeys.serveyResults.tr,
+                  onTap: () => controller.navigateToSurveyResult(),
+                ),
+                SizedBox(height: 15, width: 20,),
+                _buildUtilityButton(
+                    context: context,
+                    assetImage: Assets.images.icTeacherContact,
+                    onTap: () => controller.navigateToTeacherContact(),
+                    title: LocaleKeys.titleTeacherContact.tr),
+                SizedBox(height: 15, width: 20,),
+                _buildUtilityButton(
+                    context: context,
+                    assetImage: Assets.images.icBrifecaseTick,
+                    onTap: () => controller.navigateToOneGate(),
+                    title: LocaleKeys.oneStopService.tr),
+                SizedBox(height: 15, width: 20,),
+                _buildUtilityButton(
+                    context: context,
+                    assetImage: Assets.images.icons8Email28,
+                    onTap: () => controller.navigateToEmail(),
+                    title: LocaleKeys.email.tr),
+                SizedBox(height: 15, width: 20,),
+                // _buildUtilityButton(
+                //     context: context,
+                //     assetImage: Assets.images.icScan,
+                //     onTap: () => controller.navigateToCheckInDevice(),
+                //     title: LocaleKeys.checkInDevice.tr),
+                _buildUtilityButton(
+                    context: context,
+                    assetImage: Assets.images.icReceiptDisscount,
+                    onTap: () => controller.navigateToClassSurveyResult(),
+                    title: LocaleKeys.classSurveyResults.tr),
+                SizedBox(height: 15, width: 20,),
+                _buildUtilityButton(
+                    context: context,
+                    assetImage: Assets.images.icons8Training28,
+                    onTap: () => controller.navigateToListClassManagerTitle(),
+                    title: LocaleKeys.listClassManagerTitle.tr),
+                SizedBox(height: 15, width: 20,),
+                _buildUtilityButton(
+                    context: context,
+                    assetImage: Assets.images.icTaskSquare,
+                    onTap: () => controller.navigateToStuCheckinManager(),
+                    title: LocaleKeys.studentManager.tr),
+                SizedBox(height: 15, width: 20,),
+                _buildUtilityButton(
+                    context: context,
+                    assetImage: Assets.images.icons8Document28,
+                    onTap: () => controller.navigateToExecutiveDocuments(),
+                    title: LocaleKeys.executiveDocuments.tr),
+                SizedBox(height: 15, width: 20,),
+                _buildUtilityButton(
+                    context: context,
+                    assetImage: Assets.images.icons8Request28,
+                    onTap: () => controller.navigateToSendRequest(),
+                    title: LocaleKeys.sendRequest.tr)
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 
@@ -554,7 +536,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               padding: const EdgeInsets.all(10),
               decoration: assetImage != null
                   ? BoxDecoration(
-                      color: context.themeExtensions.antiFlashWhite,
+                      color: Colors.white,
                       shape: BoxShape.circle)
                   : null,
               child: assetImage?.image(fit: BoxFit.cover),
@@ -562,8 +544,9 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             const SizedBox(height: 8),
             AutoSizeText(title ?? '',
                 maxLines: 2,
-                style: context.themeExtensions.subTex
-                    .copyWith(color: context.themeExtensions.textColor),
+                style: TextStyle(fontSize: 13,fontWeight: FontWeight.bold),
+                // style: context.themeExtensions.subTex
+                //     .copyWith(color: context.themeExtensions.textColor),
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis)
           ],
@@ -778,7 +761,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               context,
               background:
                   Assets.images.homeTopRightButBg.image(fit: BoxFit.cover),
-              icon: Assets.images.icCalendarEdition.svg(fit: BoxFit.cover),
+              icon: Icon(Icons.train,color: Colors.white,size: 30,),
               title: LocaleKeys.teachingProgram.tr,
               onTap: () => controller.navigateToEducationProgram(),
             ),
@@ -794,7 +777,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               onTap: () => controller.navigateToRewardDiscipline(),
               background:
                   Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-              icon: Assets.images.icCalendarEdition.svg(fit: BoxFit.cover),
+              icon: Icon(Icons.bookmarks,color: Colors.amber,size: 30,),
               title: LocaleKeys.rewardDiscipline.tr,
             ),
             const SizedBox(width: 6),
@@ -802,7 +785,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               context,
               background:
                   Assets.images.homeBotRightButBg.image(fit: BoxFit.cover),
-              icon: Assets.images.icCalendarEdition.svg(fit: BoxFit.cover),
+              icon:Icon(Icons.laptop_mac_sharp,color: Colors.pink,size: 30,),
               title: LocaleKeys.eLearning.tr,
               onTap: () => controller.navigateToELearning(),
             ),
@@ -874,9 +857,9 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                   const SizedBox(height: 3),
                   AutoSizeText(
                     title ?? '',
-                    maxLines: 2,
+                    maxLines: 5,
                     style: context.themeExtensions.subTexMedium
-                        .copyWith(color: context.themeExtensions.white),
+                        .copyWith(color: context.themeExtensions.black),
                     textAlign: TextAlign.center,
                   )
                 ],
