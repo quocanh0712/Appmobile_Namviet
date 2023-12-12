@@ -1,7 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Essoft(Dev)" type="FlutterRunConfigurationType" factoryName="Flutter">
-    <option name="additionalArgs" value="--dart-define=DART_DEFINES_APP_NAME=&quot;Essoft(Dev)&quot; --dart-define=DART_DEFINES_APP_SUFFIX=.dev --dart-define=DART_DEFINES_BASE_URL=&quot;https://api.ufl.essoft.vn/mobile/api&quot; --debug" />
-    <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
-    <method v="2" />
-  </configuration>
-</component>

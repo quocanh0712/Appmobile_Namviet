@@ -429,10 +429,10 @@ packages:
     dependency: transitive
     description:
       name: dart_console
-      sha256: cfbaeb901f23f3c838a6e70bf15c747b83bf53884bb850d1536c8512dc5005b3
+      sha256: eba6af9ef2172df11ce49053d16b868de82684bc02123baf21bd8c9b1850a106
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.2"
+    version: "1.0.0"
   dart_extensions:
     dependency: "direct main"
     description:
@@ -947,8 +947,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: vietnamese-locale
-      resolved-ref: "29053777715c922fd12c951a0f4db23f6dae5cc5"
+      ref: master
+      resolved-ref: "2efff30420307464cdf2593efd1daed38cc67402"
       url: "https://github.com/D3FOutsourcing/jiffy.git"
     source: git
     version: "5.0.0"
@@ -1822,14 +1822,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.6.1"
-  xargs:
-    dependency: "direct main"
-    description:
-      name: xargs
-      sha256: d0c22880a8e00b7e5a44de9baf122efc389e7c3a8e2d1e836937d7b8df16fa7c
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.0"
   xdg_directories:
     dependency: transitive
     description:

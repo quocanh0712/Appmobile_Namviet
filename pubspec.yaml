@@ -69,8 +69,8 @@ dependencies:
   jiffy: 
     git: 
       url: https://github.com/D3FOutsourcing/jiffy.git
-      ref: vietnamese-locale
-  xargs: ^1.0.0
+      ref: master
+#  xargs: ^1.0.0
   cli_script: ^0.3.1
 
 
