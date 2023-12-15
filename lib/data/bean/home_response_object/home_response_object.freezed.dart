@@ -26,6 +26,9 @@ mixin _$HomeResponseObject {
   @JsonKey(name: 'listrecentlyactitvity')
   List<HomeRecentActitvity>? get homeRecentActitvities =>
       throw _privateConstructorUsedError;
+  @JsonKey(name: 'listoutstandingactitvity')
+  List<HomeOutstandingActitvity>? get homeOutstandingActitvities =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'listurlbanner')
   List<HomeBannerUrl>? get homeBannerUrls => throw _privateConstructorUsedError;
 
@@ -46,6 +49,8 @@ abstract class $HomeResponseObjectCopyWith<$Res> {
           List<HomeRecentTask>? homeRecentTasks,
       @JsonKey(name: 'listrecentlyactitvity')
           List<HomeRecentActitvity>? homeRecentActitvities,
+      @JsonKey(name: 'listoutstandingactitvity')
+          List<HomeOutstandingActitvity>? homeOutstandingActitvities,
       @JsonKey(name: 'listurlbanner')
           List<HomeBannerUrl>? homeBannerUrls});
 }
@@ -65,6 +70,7 @@ class _$HomeResponseObjectCopyWithImpl<$Res, $Val extends HomeResponseObject>
   $Res call({
     Object? homeRecentTasks = freezed,
     Object? homeRecentActitvities = freezed,
+    Object? homeOutstandingActitvities = freezed,
     Object? homeBannerUrls = freezed,
   }) {
     return _then(_value.copyWith(
@@ -76,6 +82,10 @@ class _$HomeResponseObjectCopyWithImpl<$Res, $Val extends HomeResponseObject>
           ? _value.homeRecentActitvities
           : homeRecentActitvities // ignore: cast_nullable_to_non_nullable
               as List<HomeRecentActitvity>?,
+      homeOutstandingActitvities: freezed == homeOutstandingActitvities
+          ? _value.homeOutstandingActitvities
+          : homeOutstandingActitvities // ignore: cast_nullable_to_non_nullable
+              as List<HomeOutstandingActitvity>?,
       homeBannerUrls: freezed == homeBannerUrls
           ? _value.homeBannerUrls
           : homeBannerUrls // ignore: cast_nullable_to_non_nullable
@@ -97,6 +107,8 @@ abstract class _$$_HomeResponseObjectCopyWith<$Res>
           List<HomeRecentTask>? homeRecentTasks,
       @JsonKey(name: 'listrecentlyactitvity')
           List<HomeRecentActitvity>? homeRecentActitvities,
+      @JsonKey(name: 'listoutstandingactitvity')
+          List<HomeOutstandingActitvity>? homeOutstandingActitvities,
       @JsonKey(name: 'listurlbanner')
           List<HomeBannerUrl>? homeBannerUrls});
 }
@@ -114,6 +126,7 @@ class __$$_HomeResponseObjectCopyWithImpl<$Res>
   $Res call({
     Object? homeRecentTasks = freezed,
     Object? homeRecentActitvities = freezed,
+    Object? homeOutstandingActitvities = freezed,
     Object? homeBannerUrls = freezed,
   }) {
     return _then(_$_HomeResponseObject(
@@ -125,6 +138,10 @@ class __$$_HomeResponseObjectCopyWithImpl<$Res>
           ? _value._homeRecentActitvities
           : homeRecentActitvities // ignore: cast_nullable_to_non_nullable
               as List<HomeRecentActitvity>?,
+      homeOutstandingActitvities: freezed == homeOutstandingActitvities
+          ? _value._homeOutstandingActitvities
+          : homeOutstandingActitvities // ignore: cast_nullable_to_non_nullable
+              as List<HomeOutstandingActitvity>?,
       homeBannerUrls: freezed == homeBannerUrls
           ? _value._homeBannerUrls
           : homeBannerUrls // ignore: cast_nullable_to_non_nullable
@@ -141,10 +158,13 @@ class _$_HomeResponseObject implements _HomeResponseObject {
           final List<HomeRecentTask>? homeRecentTasks,
       @JsonKey(name: 'listrecentlyactitvity')
           final List<HomeRecentActitvity>? homeRecentActitvities,
+      @JsonKey(name: 'listoutstandingactitvity')
+          final List<HomeOutstandingActitvity>? homeOutstandingActitvities,
       @JsonKey(name: 'listurlbanner')
           final List<HomeBannerUrl>? homeBannerUrls})
       : _homeRecentTasks = homeRecentTasks,
         _homeRecentActitvities = homeRecentActitvities,
+        _homeOutstandingActitvities = homeOutstandingActitvities,
         _homeBannerUrls = homeBannerUrls;
 
   factory _$_HomeResponseObject.fromJson(Map<String, dynamic> json) =>
@@ -170,6 +190,16 @@ class _$_HomeResponseObject implements _HomeResponseObject {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<HomeOutstandingActitvity>? _homeOutstandingActitvities;
+  @override
+  @JsonKey(name: 'listoutstandingactitvity')
+  List<HomeOutstandingActitvity>? get homeOutstandingActitvities {
+    final value = _homeOutstandingActitvities;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   final List<HomeBannerUrl>? _homeBannerUrls;
   @override
   @JsonKey(name: 'listurlbanner')
@@ -182,7 +212,7 @@ class _$_HomeResponseObject implements _HomeResponseObject {
 
   @override
   String toString() {
-    return 'HomeResponseObject(homeRecentTasks: $homeRecentTasks, homeRecentActitvities: $homeRecentActitvities, homeBannerUrls: $homeBannerUrls)';
+    return 'HomeResponseObject(homeRecentTasks: $homeRecentTasks, homeRecentActitvities: $homeRecentActitvities, homeOutstandingActitvities: $homeOutstandingActitvities, homeBannerUrls: $homeBannerUrls)';
   }
 
   @override
@@ -194,6 +224,9 @@ class _$_HomeResponseObject implements _HomeResponseObject {
                 .equals(other._homeRecentTasks, _homeRecentTasks) &&
             const DeepCollectionEquality()
                 .equals(other._homeRecentActitvities, _homeRecentActitvities) &&
+            const DeepCollectionEquality().equals(
+                other._homeOutstandingActitvities,
+                _homeOutstandingActitvities) &&
             const DeepCollectionEquality()
                 .equals(other._homeBannerUrls, _homeBannerUrls));
   }
@@ -204,6 +237,7 @@ class _$_HomeResponseObject implements _HomeResponseObject {
       runtimeType,
       const DeepCollectionEquality().hash(_homeRecentTasks),
       const DeepCollectionEquality().hash(_homeRecentActitvities),
+      const DeepCollectionEquality().hash(_homeOutstandingActitvities),
       const DeepCollectionEquality().hash(_homeBannerUrls));
 
   @JsonKey(ignore: true)
@@ -227,6 +261,8 @@ abstract class _HomeResponseObject implements HomeResponseObject {
           final List<HomeRecentTask>? homeRecentTasks,
       @JsonKey(name: 'listrecentlyactitvity')
           final List<HomeRecentActitvity>? homeRecentActitvities,
+      @JsonKey(name: 'listoutstandingactitvity')
+          final List<HomeOutstandingActitvity>? homeOutstandingActitvities,
       @JsonKey(name: 'listurlbanner')
           final List<HomeBannerUrl>? homeBannerUrls}) = _$_HomeResponseObject;
 
@@ -239,6 +275,9 @@ abstract class _HomeResponseObject implements HomeResponseObject {
   @override
   @JsonKey(name: 'listrecentlyactitvity')
   List<HomeRecentActitvity>? get homeRecentActitvities;
+  @override
+  @JsonKey(name: 'listoutstandingactitvity')
+  List<HomeOutstandingActitvity>? get homeOutstandingActitvities;
   @override
   @JsonKey(name: 'listurlbanner')
   List<HomeBannerUrl>? get homeBannerUrls;

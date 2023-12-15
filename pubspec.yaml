@@ -70,7 +70,6 @@ dependencies:
     git: 
       url: https://github.com/D3FOutsourcing/jiffy.git
       ref: master
-#  xargs: ^1.0.0
   cli_script: ^0.3.1
 
 

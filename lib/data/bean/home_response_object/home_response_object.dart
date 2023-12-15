@@ -6,6 +6,7 @@ import 'package:annotations/annotations.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'home_banner_url.dart';
+import 'home_outstanding_actitvity.dart';
 import 'home_recent_actitvity.dart';
 import 'home_recent_task.dart';
 
@@ -18,6 +19,7 @@ class HomeResponseObject with _$HomeResponseObject {
   factory HomeResponseObject({
     @JsonKey(name: 'listnowtask') List<HomeRecentTask>? homeRecentTasks,
     @JsonKey(name: 'listrecentlyactitvity') List<HomeRecentActitvity>? homeRecentActitvities,
+    @JsonKey(name: 'listoutstandingactitvity') List<HomeOutstandingActitvity>? homeOutstandingActitvities,
     @JsonKey(name: 'listurlbanner') List<HomeBannerUrl>? homeBannerUrls,
   }) = _HomeResponseObject;
 

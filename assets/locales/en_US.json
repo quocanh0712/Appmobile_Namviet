@@ -320,7 +320,9 @@
   "addemail": "Soạn thư",
   "send": "Gửi",
   "eof": "End of File. Please add a new text above this item to avoid conflicts. Thanks!",
-
+  "task": "Các chức năng",
+  "outstandingActivity": "Hoạt động nổi bật",
+  "utilitiesInformation": "THÔNG TIN TIỆN ÍCH",
 
   "fakeClass": "D17-VO-A",
   "fakeStu1": "(19571402060261) - Chu Thị Ngọc Ánh",

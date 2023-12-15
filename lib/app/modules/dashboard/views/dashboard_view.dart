@@ -68,7 +68,10 @@ class _DashboardViewState extends State<DashboardView> {
               },
               children: <Widget>[
                 KeepAliveWidget(
-                    child: HomeView(bindingCreator: () => HomeBinding())),
+                    child: HomeView(
+                  bindingCreator: () => HomeBinding(),
+                  pageController: pageController,
+                )),
                 KeepAliveWidget(
                   safeAreaTop: true,
                   child: NotificationView(
@@ -194,7 +197,7 @@ class _DashboardViewState extends State<DashboardView> {
               ],
             );
           },
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.white54,
           activeIndex: dashboardController.currentTabIndex.value,
           splashSpeedInMilliseconds: 68,
           notchSmoothness: NotchSmoothness.defaultEdge,
