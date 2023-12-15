@@ -11,7 +11,7 @@ part 'home_recent_actitvity.g.dart';
 class HomeRecentActitvity with _$HomeRecentActitvity {
   factory HomeRecentActitvity({
     int? id,
-    String? icon,
+    String? image,
     String? title,
     String? content,
   }) = _HomeRecentActitvity;

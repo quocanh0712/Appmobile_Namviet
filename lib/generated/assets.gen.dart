@@ -322,8 +322,15 @@ class $AssetsImagesGen {
   AssetGenImage get icons8Document28 =>
       const AssetGenImage('assets/images/icons8-document-28.png');
 
+  /// File path: assets/images/icons_document_32.png
+  AssetGenImage get iconsDocument32 =>
+      const AssetGenImage('assets/images/icons_document_32.png');
+
   /// File path: assets/images/icons8-email-28.png
   AssetGenImage get icons8Email28 => const AssetGenImage('assets/images/icons8-email-28.png');
+
+  /// File path: assets/images/icons_email_view_32.png
+  AssetGenImage get iconsEmailView32 => const AssetGenImage('assets/images/icons_email_view_32.png');
 
   /// File path: assets/images/icons8-email-28.png.sketch
   String get icons8Email28Png => 'assets/images/icons8-email-28.png.sketch';

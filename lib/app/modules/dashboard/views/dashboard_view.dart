@@ -68,7 +68,10 @@ class _DashboardViewState extends State<DashboardView> {
               },
               children: <Widget>[
                 KeepAliveWidget(
-                    child: HomeView(bindingCreator: () => HomeBinding())),
+                    child: HomeView(
+                  bindingCreator: () => HomeBinding(),
+                  pageController: pageController,
+                )),
                 KeepAliveWidget(
                   safeAreaTop: true,
                   child: NotificationView(

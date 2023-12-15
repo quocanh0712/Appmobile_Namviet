@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/app/routes/app_pages.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_banner_url.dart';
+import 'package:ftu_lms/data/bean/home_response_object/home_outstanding_actitvity.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_recent_actitvity.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_recent_task.dart';
 import 'package:ftu_lms/data/bean/user_object/user_object.dart';
@@ -24,10 +25,15 @@ class HomeController extends BaseController {
   final recentTasks = <HomeRecentTask?>[].obs;
 
   final lstRecentActivities = <HomeRecentActitvity>[].obs;
+  final lstOutstandingActivities = <HomeOutstandingActitvity>[].obs;
 
   final lstBanners = <HomeBannerUrl>[].obs;
   CarouselController? bannerController = CarouselController();
   final currentBanner = 0.obs;
+
+
+  PageController? pageTeacherController = PageController();
+  final currentPage = 0.obs;
 
   final userRepo = Get.find<UserRepository>();
   final homeRepo = Get.find<HomeRepository?>();
@@ -105,14 +111,39 @@ class HomeController extends BaseController {
         lstRecentActivities.value = [
           HomeRecentActitvity(
               id: 1,
-              icon: '',
+              // image: '',
+              image: 'https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg',
               title: 'Thông báo thay đổi lịch học',
               content:
                   'Thay đổi THỜI KHÓA BIỂU HỌC KỲ 1 NĂM HỌC 2023-2024. Chi tiết trên trang cổng thông tin...'),
           HomeRecentActitvity(
               id: 2,
-              icon: '',
+              image: 'http://thttphonxuong.pgdyenthe.edu.vn/upload/38578/fck/24215413/2023_01_28_14_46_241.jpg',
               title: 'Bạn được nhắn đến trong 01 bài viết gần đây',
+              content: 'Thông báo: Các em sinh viên khóa K22 chuẩn bị nộp...'),
+        ];
+        // lstOutstandingActivities.value = data.result?.homeOutstandingActitvities ?? [];
+        lstOutstandingActivities.value = [
+          HomeOutstandingActitvity(
+              id: 1,
+              image: 'http://thttphonxuong.pgdyenthe.edu.vn/upload/38578/fck/24215413/2023_01_28_14_46_241.jpg',
+              title: 'Thông báo thay đổi lịch học',
+              content:
+              'xxxxxxx Thay đổi THỜI KHÓA BIỂU HỌC KỲ 1 NĂM HỌC 2023-2024. Chi tiết trên trang cổng thông tin...'),
+          HomeOutstandingActitvity(
+              id: 2,
+              image: 'https://media.kenhtuyensinh.vn/images/2013/03/dai_hoc_nha_trang.jpg',
+              title: ' Bạn được nhắn đến trong 01 bài viết gần đây',
+              content: 'Thông báo: Các em sinh viên khóa K22 chuẩn bị nộp...'),
+          HomeOutstandingActitvity(
+              id: 2,
+              image: 'https://media.kenhtuyensinh.vn/images/2013/03/dai_hoc_nha_trang.jpg',
+              title: 'Bfdfff ạn được nhắn đến trong 01 bài viết gần đây',
+              content: 'Thông báo: Các em sinh viên khóa K22 chuẩn bị nộp...'),
+          HomeOutstandingActitvity(
+              id: 2,
+              image: 'https://media.kenhtuyensinh.vn/images/2013/03/dai_hoc_nha_trang.jpg',
+              title: ' 111111 Bạn được nhắn đến trong 01 bài viết gần đây',
               content: 'Thông báo: Các em sinh viên khóa K22 chuẩn bị nộp...'),
         ];
         lstBanners.value = data.result?.homeBannerUrls ?? [];

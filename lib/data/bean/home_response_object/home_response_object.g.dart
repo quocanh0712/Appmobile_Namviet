@@ -35,6 +35,11 @@ _$_HomeResponseObject _$$_HomeResponseObjectFromJson(
       homeRecentActitvities: (json['listrecentlyactitvity'] as List<dynamic>?)
           ?.map((e) => HomeRecentActitvity.fromJson(e as Map<String, dynamic>))
           .toList(),
+      homeOutstandingActitvities:
+          (json['listoutstandingactitvity'] as List<dynamic>?)
+              ?.map((e) =>
+                  HomeOutstandingActitvity.fromJson(e as Map<String, dynamic>))
+              .toList(),
       homeBannerUrls: (json['listurlbanner'] as List<dynamic>?)
           ?.map((e) => HomeBannerUrl.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -45,5 +50,6 @@ Map<String, dynamic> _$$_HomeResponseObjectToJson(
     <String, dynamic>{
       'listnowtask': instance.homeRecentTasks,
       'listrecentlyactitvity': instance.homeRecentActitvities,
+      'listoutstandingactitvity': instance.homeOutstandingActitvities,
       'listurlbanner': instance.homeBannerUrls,
     };
