@@ -1,7 +1,6 @@
 {
   "images" : [
     {
-      "filename" : "background.png",
       "idiom" : "universal"
     },
     {
@@ -11,7 +10,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "darkbackground.png",
+      "filename" : "dark_background_TUAF_logo.png",
       "idiom" : "universal"
     }
   ],
