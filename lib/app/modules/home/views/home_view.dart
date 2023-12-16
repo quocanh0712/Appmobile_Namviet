@@ -207,18 +207,6 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                         children: <Widget>[
                           Obx(() => SizedBox(
                               height: controller.hasNoTasks.value ? 56 : 76)),
-                          InkWell(
-                            onTap: () => controller.navigateToUtilites(),
-                            child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 20, top: 20, right: 20),
-                              child: Text(LocaleKeys.task.tr,
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 15)),
-                            ),
-                          ),
-                          const SizedBox(height: 20),
 
                           /// The functions of the teacher or student
                           _retrieveMainFeaturesByUser(context),
@@ -248,7 +236,20 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
 
   Widget _retrieveMainFeaturesByUser(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        InkWell(
+          onTap: () => controller.navigateToUtilites(),
+          child: Padding(
+            padding: const EdgeInsets.only(
+                left: 20, top: 20, right: 20),
+            child: Text(LocaleKeys.task.tr,
+                style: const TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 15)),
+          ),
+        ),
+        const SizedBox(height: 20),
         Obx(() => Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: _retrieveMainFeaturesByPermission(context,

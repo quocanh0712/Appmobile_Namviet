@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="TUAF" type="FlutterRunConfigurationType" factoryName="Flutter">
+    <option name="additionalArgs" value="--dart-define=DART_DEFINES_APP_NAME=&quot;TUAF&quot; --dart-define=DART_DEFINES_BASE_URL=&quot;https://api.ufl.essoft.vn/mobile/api&quot; --release" />
+    <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
+    <method v="2" />
+  </configuration>
+</component>

@@ -10,7 +10,8 @@ class EnvironmentConfig {
   static const BASE_URL = "https://api.ufl.essoft.vn/mobile/api";
   static const BASE_URL_HUPES = "https://demo.api.essoft.vn/mobile/api";
   static const BASE_URL_NUAE = "https://demo.api.essoft.vn/mobile/api";
-  static const BASE_URL_TUAF = "https://api.tuaf.edu.vn/mobile/api";
+  static const BASE_URL_TUAF = "https://api.tuaf.edu.vn/mobile/api"; // api build product
+  // static const BASE_URL_TUAF = "https://demo.api.essoft.vn/mobile/api"; // api dev test
   // static const BASE_URL_TUAF = "https://api.tuaf.essoft.vn/mobile/api";
   static const BASE_URL_IS = "https://demo.api.essoft.vn/taisantest/api";
 }
