@@ -166,7 +166,7 @@ class ProfileView extends BaseView<ProfileController> {
                                         title: LocaleKeys.email.tr,
                                         //value: controller.userObject.value?.email
                                         value:
-                                            '${controller.username.value}@spnttw.edu.vn'),
+                                            '${controller.username.value}@tuaf.edu.vn'),
                                     _buildUserInfoLine(
                                         context: context,
                                         title: LocaleKeys.ccidNumber.tr,

@@ -663,7 +663,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             if (isShowAll == true)
               Container(
                 margin: const EdgeInsets.only(top: 5),
-                height: MediaQuery.of(context).size.height - 400,
+                height: MediaQuery.of(context).size.height - 250,
                 child: GridView.count(
                   physics: const NeverScrollableScrollPhysics(),
                   crossAxisCount: 3,
