@@ -92,6 +92,12 @@ abstract class Routes {
   static const EDIT_REPORT_TASK = _Paths.EDIT_REPORT_TASK;
   static const EMAIL = _Paths.EMAIL;
   static const ADD_EMAIL = _Paths.ADD_EMAIL;
+  static const ACTIVITY = _Paths.ACTIVITY;
+  static const CHAT = _Paths.CHAT;
+  static const DOCUMENT_MANAGEMENT = _Paths.DOCUMENT_MANAGEMENT;
+  static const STATISTICAL = _Paths.STATISTICAL;
+  static const TRACK_PROGRESS = _Paths.TRACK_PROGRESS;
+  static const TEACHER_SCHEDULE_TIME = _Paths.TEACHER_SCHEDULE_TIME;
 }
 
 abstract class _Paths {
@@ -179,4 +185,10 @@ abstract class _Paths {
   static const EDIT_REPORT_TASK = '/edit_report_task';
   static const EMAIL = '/email';
   static const ADD_EMAIL = '/add_email';
+  static const ACTIVITY = '/activity';
+  static const CHAT = '/chat';
+  static const DOCUMENT_MANAGEMENT = '/document-management';
+  static const STATISTICAL = '/statistical';
+  static const TRACK_PROGRESS = '/track-progress';
+  static const TEACHER_SCHEDULE_TIME = '/teacher-schedule-time';
 }

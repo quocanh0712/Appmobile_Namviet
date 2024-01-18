@@ -99,6 +99,9 @@ class $AssetsImagesGen {
   AssetGenImage get icUtilityMedalStar =>
       const AssetGenImage('assets/images/icUtilityMedalStar.png');
 
+  /// File path: assets/images/ic_activity.svg
+  SvgGenImage get icActivity => const SvgGenImage('assets/images/ic_activity.svg');
+
   /// File path: assets/images/ic_add.svg
   SvgGenImage get icAdd => const SvgGenImage('assets/images/ic_add.svg');
 
@@ -134,6 +137,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/ic_certificate.svg
   SvgGenImage get icCertificate => const SvgGenImage('assets/images/ic_certificate.svg');
+
+  /// File path: assets/images/ic_chat.svg
+  SvgGenImage get icChat => const SvgGenImage('assets/images/ic_chat.svg');
 
   /// File path: assets/images/ic_checkin.png
   AssetGenImage get icCheckin => const AssetGenImage('assets/images/ic_checkin.png');
@@ -192,6 +198,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/ic_flash_on.png
   AssetGenImage get icFlashOn => const AssetGenImage('assets/images/ic_flash_on.png');
 
+  /// File path: assets/images/ic_google-classroom.png
+  AssetGenImage get icGoogleClassroom =>
+      const AssetGenImage('assets/images/ic_google-classroom.png');
+
   /// File path: assets/images/ic_has_no_data.png
   AssetGenImage get icHasNoData => const AssetGenImage('assets/images/ic_has_no_data.png');
 
@@ -203,6 +213,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/ic_image_7.png
   AssetGenImage get icImage7 => const AssetGenImage('assets/images/ic_image_7.png');
+
+  /// File path: assets/images/ic_image_regular.svg
+  SvgGenImage get icImageRegular => const SvgGenImage('assets/images/ic_image_regular.svg');
 
   /// File path: assets/images/ic_info_circle.svg
   SvgGenImage get icInfoCircle => const SvgGenImage('assets/images/ic_info_circle.svg');
@@ -240,6 +253,15 @@ class $AssetsImagesGen {
   /// File path: assets/images/ic_notification.svg
   SvgGenImage get icNotification => const SvgGenImage('assets/images/ic_notification.svg');
 
+  /// File path: assets/images/ic_panorama_solid.svg
+  SvgGenImage get icPanoramaSolid => const SvgGenImage('assets/images/ic_panorama_solid.svg');
+
+  /// File path: assets/images/ic_pen.svg
+  SvgGenImage get icPen => const SvgGenImage('assets/images/ic_pen.svg');
+
+  /// File path: assets/images/ic_pencil.svg
+  SvgGenImage get icPencil => const SvgGenImage('assets/images/ic_pencil.svg');
+
   /// File path: assets/images/ic_person.svg
   SvgGenImage get icPerson => const SvgGenImage('assets/images/ic_person.svg');
 
@@ -255,6 +277,9 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/ic_polygon.svg
   SvgGenImage get icPolygon => const SvgGenImage('assets/images/ic_polygon.svg');
+
+  /// File path: assets/images/ic_presentation.png
+  AssetGenImage get icPresentation => const AssetGenImage('assets/images/ic_presentation.png');
 
   /// File path: assets/images/ic_profile.svg
   SvgGenImage get icProfile => const SvgGenImage('assets/images/ic_profile.svg');
@@ -295,6 +320,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/ic_sort.svg
   SvgGenImage get icSort => const SvgGenImage('assets/images/ic_sort.svg');
 
+  /// File path: assets/images/ic_square_youtube.svg
+  SvgGenImage get icSquareYoutube => const SvgGenImage('assets/images/ic_square_youtube.svg');
+
   /// File path: assets/images/ic_teacher.png
   AssetGenImage get icTeacherPng => const AssetGenImage('assets/images/ic_teacher.png');
 
@@ -322,15 +350,8 @@ class $AssetsImagesGen {
   AssetGenImage get icons8Document28 =>
       const AssetGenImage('assets/images/icons8-document-28.png');
 
-  /// File path: assets/images/icons_document_32.png
-  AssetGenImage get iconsDocument32 =>
-      const AssetGenImage('assets/images/icons_document_32.png');
-
   /// File path: assets/images/icons8-email-28.png
   AssetGenImage get icons8Email28 => const AssetGenImage('assets/images/icons8-email-28.png');
-
-  /// File path: assets/images/icons_email_view_32.png
-  AssetGenImage get iconsEmailView32 => const AssetGenImage('assets/images/icons_email_view_32.png');
 
   /// File path: assets/images/icons8-email-28.png.sketch
   String get icons8Email28Png => 'assets/images/icons8-email-28.png.sketch';
@@ -361,6 +382,13 @@ class $AssetsImagesGen {
 
   /// File path: assets/images/icons8-youtube-28.png
   AssetGenImage get icons8Youtube28 => const AssetGenImage('assets/images/icons8-youtube-28.png');
+
+  /// File path: assets/images/icons_document_32.png
+  AssetGenImage get iconsDocument32 => const AssetGenImage('assets/images/icons_document_32.png');
+
+  /// File path: assets/images/icons_email_view_32.png
+  AssetGenImage get iconsEmailView32 =>
+      const AssetGenImage('assets/images/icons_email_view_32.png');
 
   /// File path: assets/images/lesson_registration_banner.png
   AssetGenImage get lessonRegistrationBanner =>
@@ -409,6 +437,7 @@ class $AssetsImagesGen {
         icTask,
         icTaskSquare,
         icUtilityMedalStar,
+        icActivity,
         icAdd,
         icArrowDown,
         icArrowLeft,
@@ -421,6 +450,7 @@ class $AssetsImagesGen {
         icCalendarEdition,
         icCall,
         icCertificate,
+        icChat,
         icCheckin,
         icClear,
         icClearSearch,
@@ -439,10 +469,12 @@ class $AssetsImagesGen {
         icFingerScan,
         icFlashOff,
         icFlashOn,
+        icGoogleClassroom,
         icHasNoData,
         icHome,
         icImage6,
         icImage7,
+        icImageRegular,
         icInfoCircle,
         icKeySquare,
         icLampCharge,
@@ -455,11 +487,15 @@ class $AssetsImagesGen {
         icNoData,
         icNoTasks,
         icNotification,
+        icPanoramaSolid,
+        icPen,
+        icPencil,
         icPerson,
         icPersonalAward,
         icPersonalBooks,
         icPersonalFingerScan,
         icPolygon,
+        icPresentation,
         icProfile,
         icProfileTick,
         icReadAll,
@@ -473,6 +509,7 @@ class $AssetsImagesGen {
         icSendInactive,
         icSettings,
         icSort,
+        icSquareYoutube,
         icTeacherPng,
         icTeacherSvg,
         icTeacherContact,
@@ -491,6 +528,8 @@ class $AssetsImagesGen {
         icons8Request28,
         icons8Training28,
         icons8Youtube28,
+        iconsDocument32,
+        iconsEmailView32,
         lessonRegistrationBanner,
         personalStudyOverviewBg,
         profileHeaderBg,

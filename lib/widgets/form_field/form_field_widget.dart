@@ -74,9 +74,11 @@ class _FormFieldWidgetState extends State<FormFieldWidget> {
       children: [
         Expanded(
           child: Text(_formFieldData.label ?? Constants.EMPTY,
-              style: context.themeExtensions.paragraphSemiBold.copyWith(
-                color: context.themeExtensions.semiGrey,
-              )),
+              style: const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w600)
+              // context.themeExtensions.paragraphSemiBold.copyWith(
+              //   color: context.themeExtensions.semiGrey,
+              // )
+          ),
         ),
         if (_formFieldData.required == true) ...{
           Text("(*)",
@@ -149,7 +151,7 @@ class _FormFieldWidgetState extends State<FormFieldWidget> {
         ),
         DateInputForm(
             initDate: _formFieldData.value == null
-                ? null
+                ? DateTime.now()
                 : DateTimeUtils.convertFromDateString(
                     dateString: _formFieldData.value!, dateFormat: dateYMDSlash),
             onDataChange: (date) {

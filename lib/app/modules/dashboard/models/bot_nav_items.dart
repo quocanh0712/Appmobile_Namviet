@@ -23,13 +23,13 @@ final botNavItems = <BotNavItem>[
       activeColor: LMSColors.mainGreen,
       inactiveColor: LMSColors.textGrey),
   BotNavItem(
-      title: LocaleKeys.notification.tr,
-      icon: Assets.images.icNotification,
+      title: LocaleKeys.chat.tr,
+      icon: Assets.images.icChat,
       activeColor: LMSColors.mainGreen,
       inactiveColor: LMSColors.textGrey),
   BotNavItem(
-      title: LocaleKeys.info.tr,
-      icon: Assets.images.icSettings,
+      title: LocaleKeys.news.tr,
+      icon: Assets.images.icActivity,
       activeColor: LMSColors.mainGreen,
       inactiveColor: LMSColors.textGrey),
   BotNavItem(
@@ -42,3 +42,4 @@ final botNavItems = <BotNavItem>[
 const notificationTabIndex = 1;
 const checkInTabIndex = 2;
 const homeTabIndex = 0;
+const activityTabIndex = 3;

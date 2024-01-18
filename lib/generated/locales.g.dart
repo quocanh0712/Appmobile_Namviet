@@ -338,7 +338,40 @@ class LocaleKeys {
   static const task = 'task';
   static const outstandingActivity = 'outstandingActivity';
   static const utilitiesInformation = 'utilitiesInformation';
+  static const activity = 'activity';
+  static const chat = 'chat';
+  static const shareActivity = 'shareActivity';
+  static const post = 'post';
+  static const postActivity = 'postActivity';
+  static const postPicture = 'postPicture';
+  static const postVideo = 'postVideo';
+  static const wallpaper = 'wallpaper';
+  static const qrCode = 'qrCode';
+  static const news = 'news';
+  static const newGroup = 'newGroup';
+  static const group = 'group';
+  static const friend = 'friend';
+  static const newMessage = 'newMessage';
+  static const selectClass = 'selectClass';
+  static const trackIncomingDocument = 'trackIncomingDocument';
+  static const trackOutgoingDocument = 'trackOutgoingDocument';
+  static const documentManagement = 'documentManagement';
+  static const incomingNumber = 'incomingNumber';
+  static const documentIdentifier = 'documentIdentifier';
+  static const abstract = 'abstract';
+  static const issueDate = 'issueDate';
+  static const status = 'status';
+  static const origin = 'origin';
+  static const searchIncomingDocument = 'searchIncomingDocument';
+  static const searchOutgoingDocument = 'searchOutgoingDocument';
+  static const trackProgress = 'trackProgress';
+  static const statistical = 'statistical';
+  static const incomingDocumentStatistics = 'incomingDocumentStatistics';
+  static const outgoingDocumentStatistics = 'outgoingDocumentStatistics';
+  static const lookupByMonth = 'lookupByMonth';
+  static const lookupByWeek = 'lookupByWeek';
   static const fakeClass = 'fakeClass';
+  static const fakeClass1 = 'fakeClass1';
   static const fakeStu1 = 'fakeStu1';
   static const fakeStu2 = 'fakeStu2';
   static const fakeStu3 = 'fakeStu3';
@@ -685,7 +718,40 @@ class Locales {
     'task': 'Các chức năng',
     'outstandingActivity': 'Hoạt động nổi bật',
     'utilitiesInformation': 'THÔNG TIN TIỆN ÍCH',
+    'activity': 'Hoạt động',
+    'chat': 'Trò chuyện',
+    'shareActivity': 'Hãy chia sẻ hoạt động của bạn...',
+    'post': 'Đăng',
+    'postActivity': 'Đăng hoạt động',
+    'postPicture': 'Đăng ảnh',
+    'postVideo': 'Đăng video',
+    'wallpaper': 'Hình nền',
+    'qrCode': 'QR code',
+    'news': 'Tin tức',
+    'newGroup': 'hat nhóm',
+    'group': 'Nhóm',
+    'friend': 'Bạn bè',
+    'newMessage': 'Tin nhắn mới',
+    'selectClass': 'Chọn lớp',
+    'trackIncomingDocument': 'Theo dõi văn bản đến',
+    'trackOutgoingDocument': 'Theo dõi văn bản đi',
+    'documentManagement': 'Văn bản điều hành',
+    'incomingNumber': 'Số đến',
+    'documentIdentifier': 'Số ký hiệu',
+    'abstract': 'Trích yếu',
+    'issueDate': 'Ngày ban hành',
+    'status': 'Trạng thái',
+    'origin': 'Nơi gửi',
+    'searchIncomingDocument': 'Tìm kiếm văn bản đến',
+    'searchOutgoingDocument': 'Tìm kiếm văn bản đi',
+    'trackProgress': 'Theo dõi tiến độ',
+    'statistical': 'Thống kê',
+    'incomingDocumentStatistics': 'Thống kê sổ văn bản đến',
+    'outgoingDocumentStatistics': 'Thống kê sổ văn bản đi',
+    'lookupByMonth': 'Tra cứu theo tháng',
+    'lookupByWeek': 'Tra cứu theo tuần',
     'fakeClass': 'D17-VO-A',
+    'fakeClass1': 'D18-VO-A',
     'fakeStu1': '(19571402060261) - Chu Thị Ngọc Ánh',
     'fakeStu2': '(19571402060262) - Achek Bounchanthala',
     'fakeStu3': '(19571402060263) - Nguyễn Hải Đăng',
@@ -1028,7 +1094,40 @@ class Locales {
     'task': 'Các chức năng',
     'outstandingActivity': 'Hoạt động nổi bật',
     'utilitiesInformation': 'THÔNG TIN TIỆN ÍCH',
+    'activity': 'Hoạt động',
+    'chat': 'Trò chuyện',
+    'shareActivity': 'Hãy chia sẻ hoạt động của bạn...',
+    'post': 'Đăng',
+    'postActivity': 'Đăng hoạt động',
+    'postPicture': 'Đăng ảnh',
+    'postVideo': 'Đăng video',
+    'wallpaper': 'Hình nền',
+    'qrCode': 'QR code',
+    'news': 'Tin tức',
+    'newGroup': 'Tạo nhóm',
+    'group': 'Nhóm',
+    'friend': 'Bạn bè',
+    'newMessage': 'Tin nhắn mới',
+    'selectClass': 'Chọn lớp',
+    'trackIncomingDocument': 'Theo dõi văn bản đến',
+    'trackOutgoingDocument': 'Theo dõi văn bản đi',
+    'documentManagement': 'Văn bản điều hành',
+    'incomingNumber': 'Số đến',
+    'documentIdentifier': 'Số ký hiệu',
+    'abstract': 'Trích yếu',
+    'issueDate': 'Ngày ban hành',
+    'status': 'Trạng thái',
+    'origin': 'Nơi gửi',
+    'searchIncomingDocument': 'Tìm kiếm văn bản đến',
+    'searchOutgoingDocument': 'Tìm kiếm văn bản đi',
+    'trackProgress': 'Theo dõi tiến độ',
+    'statistical': 'Thống kê',
+    'incomingDocumentStatistics': 'Thống kê sổ văn bản đến',
+    'outgoingDocumentStatistics': 'Thống kê sổ văn bản đi',
+    'lookupByMonth': 'Tra cứu theo tháng',
+    'lookupByWeek': 'Tra cứu theo tuần',
     'fakeClass': 'D17-VO-A',
+    'fakeClass1': 'D18-VO-A',
     'fakeStu1': '(19571402060261) - Chu Thị Ngọc Ánh',
     'fakeStu2': '(19571402060262) - Achek Bounchanthala',
     'fakeStu3': '(19571402060263) - Nguyễn Hải Đăng',

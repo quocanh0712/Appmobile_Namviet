@@ -10,9 +10,13 @@ import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:ftu_lms/app/modules/activity/bindings/activity_binding.dart';
+import 'package:ftu_lms/app/modules/activity/views/activity_view.dart';
 import 'package:ftu_lms/app/modules/appInformation/bindings/app_information_binding.dart';
 import 'package:ftu_lms/app/modules/appInformation/views/app_information_view.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
+import 'package:ftu_lms/app/modules/chat/bindings/chat_binding.dart';
+import 'package:ftu_lms/app/modules/chat/views/chat_view.dart';
 import 'package:ftu_lms/app/modules/checkin/views/checkin_view.dart';
 import 'package:ftu_lms/app/modules/dashboard/controllers/dashboard_controller.dart';
 import 'package:ftu_lms/app/modules/dashboard/models/bot_nav_items.dart';
@@ -72,15 +76,19 @@ class _DashboardViewState extends State<DashboardView> {
                   bindingCreator: () => HomeBinding(),
                   pageController: pageController,
                 )),
-                KeepAliveWidget(
-                  safeAreaTop: true,
-                  child: NotificationView(
-                      bindingCreator: () => NotificationBinding()),
-                ),
+                KeepAliveWidget(child: ChatView(bindingCreator: () => ChatBinding())),
+                // KeepAliveWidget(
+                //   safeAreaTop: true,
+                //   child: NotificationView(
+                //       bindingCreator: () => NotificationBinding()),
+                // ),
                 KeepAliveWidget(child: CheckinView(key: checkinGlobalKey)),
+                // KeepAliveWidget(
+                //     child: AppInformationView(
+                //         bindingCreator: () => AppInformationBinding())),
                 KeepAliveWidget(
-                    child: AppInformationView(
-                        bindingCreator: () => AppInformationBinding())),
+                    child: ActivityView(
+                        bindingCreator: () => ActivityBinding())),
                 KeepAliveWidget(
                     child:
                         PersonalView(bindingCreator: () => PersonalBinding())),
@@ -114,7 +122,7 @@ class _DashboardViewState extends State<DashboardView> {
                   child: Obx(() => Container(
                         padding: const EdgeInsets.only(top: 32, bottom: 7),
                         child: AutoSizeText(
-                          LocaleKeys.checkin.tr,
+                          LocaleKeys.qrCode.tr,
                           maxLines: 1,
                           style: TextStyle(
                               decoration: TextDecoration.none,
@@ -264,7 +272,7 @@ class _DashboardViewState extends State<DashboardView> {
 
   void _changeSystemStatusBarIconColor(int tabIndex) {
     Fimber.d("_changeSystemStatusBarIconColor(int index)");
-    if (tabIndex == notificationTabIndex) {
+    if (tabIndex == notificationTabIndex || tabIndex == activityTabIndex) {
       StatusBarControl.setStyle(StatusBarStyle.DARK_CONTENT);
     } else {
       StatusBarControl.setStyle(StatusBarStyle.LIGHT_CONTENT);

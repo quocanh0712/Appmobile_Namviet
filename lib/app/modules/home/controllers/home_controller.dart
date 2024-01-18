@@ -3,6 +3,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/app/routes/app_pages.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_banner_url.dart';
@@ -15,6 +16,7 @@ import 'package:ftu_lms/data/repositories/user_repository.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:get/get.dart';
 import 'package:sliding_up_panel2/sliding_up_panel2.dart';
+import 'package:status_bar_control/status_bar_control.dart';
 
 import '../../../../generated/assets.gen.dart';
 
@@ -80,6 +82,8 @@ class HomeController extends BaseController {
         imagePath.value = Assets.images.icBookPng.path;
         break;
     }
+
+
   }
 
   @override
@@ -107,7 +111,7 @@ class HomeController extends BaseController {
       Fimber.d('response.when(success:)');
       if (data.isSuccess()) {
         Fimber.d('data.isSuccess()');
-        //lstRecentActivities.value = data.result?.homeRecentActitvities ?? [];
+        lstRecentActivities.value = data.result?.homeRecentActitvities ?? [];
         lstRecentActivities.value = [
           HomeRecentActitvity(
               id: 1,
@@ -136,14 +140,14 @@ class HomeController extends BaseController {
               title: ' Bạn được nhắn đến trong 01 bài viết gần đây',
               content: 'Thông báo: Các em sinh viên khóa K22 chuẩn bị nộp...'),
           HomeOutstandingActitvity(
-              id: 2,
+              id: 3,
               image: 'https://media.kenhtuyensinh.vn/images/2013/03/dai_hoc_nha_trang.jpg',
               title: 'Bfdfff ạn được nhắn đến trong 01 bài viết gần đây',
               content: 'Thông báo: Các em sinh viên khóa K22 chuẩn bị nộp...'),
           HomeOutstandingActitvity(
-              id: 2,
-              image: 'https://media.kenhtuyensinh.vn/images/2013/03/dai_hoc_nha_trang.jpg',
-              title: ' 111111 Bạn được nhắn đến trong 01 bài viết gần đây',
+              id: 4,
+              image: '',
+              title: ' 4444444 Bạn được nhắn đến trong 01 bài viết gần đây',
               content: 'Thông báo: Các em sinh viên khóa K22 chuẩn bị nộp...'),
         ];
         lstBanners.value = data.result?.homeBannerUrls ?? [];
@@ -299,5 +303,27 @@ class HomeController extends BaseController {
   navigateToProfile() {
     Fimber.d("navigateToProfile()");
     Get.toNamed(Routes.PROFILE);
+  }
+
+  navigateToNotification() {
+    Fimber.d("navigateToNotification()");
+    Get.toNamed(Routes.NOTIFICATION);
+  }
+
+  navigateToDocumentManagement() {
+    Fimber.d("navigateToDocumentManagement()");
+    StatusBarControl.setStyle(StatusBarStyle.DARK_CONTENT);
+    Get.toNamed(Routes.DOCUMENT_MANAGEMENT);
+  }
+
+  navigateToStatistical() {
+    Fimber.d('navigateToStatistical()');
+    StatusBarControl.setStyle(StatusBarStyle.DARK_CONTENT);
+    Get.toNamed(Routes.STATISTICAL);
+  }
+  navigateToTrackProgress() {
+    Fimber.d('navigateToTrackProgress()');
+    StatusBarControl.setStyle(StatusBarStyle.DARK_CONTENT);
+    Get.toNamed(Routes.TRACK_PROGRESS);
   }
 }

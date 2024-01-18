@@ -1,11 +1,3 @@
-// Copyright (c) 2023, one of the D3F outsourcing projects. All rights reserved.
-
-// coverage:ignore-file
-
-import 'package:ftu_lms/app/modules/schedule_checkin/bindings/schedule_checkin_binding.dart';
-import 'package:ftu_lms/app/modules/schedule_checkin/views/schedule_checkin_view.dart';
-import 'package:ftu_lms/app/modules/survey_result/views/survey_item/bindings/survey_item_binding.dart';
-import 'package:ftu_lms/app/modules/survey_result/views/survey_item/views/survey_item_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/Email/bindings/email_binding.dart';
@@ -14,8 +6,12 @@ import '../modules/Email/views/add_email/views/add_mail_view.dart';
 import '../modules/Email/views/email_view.dart';
 import '../modules/account/bindings/account_binding.dart';
 import '../modules/account/views/account_view.dart';
+import '../modules/activity/bindings/activity_binding.dart';
+import '../modules/activity/views/activity_view.dart';
 import '../modules/appInformation/bindings/app_information_binding.dart';
 import '../modules/appInformation/views/app_information_view.dart';
+import '../modules/chat/bindings/chat_binding.dart';
+import '../modules/chat/views/chat_view.dart';
 import '../modules/checkin/bindings/checkin_binding.dart';
 import '../modules/checkin/views/checkin_view.dart';
 import '../modules/class_survey_result/bindings/class_survey_result_binding.dart';
@@ -36,6 +32,8 @@ import '../modules/document_form/bindings/document_form_binding.dart';
 import '../modules/document_form/views/document_form_view.dart';
 import '../modules/document_form_item/bindings/document_form_item_binding.dart';
 import '../modules/document_form_item/views/document_form_item_view.dart';
+import '../modules/document_management/bindings/document_management_binding.dart';
+import '../modules/document_management/views/document_management_view.dart';
 import '../modules/educationProgram/bindings/education_program_binding.dart';
 import '../modules/educationProgram/views/education_program_view.dart';
 import '../modules/elearning/bindings/elearning_binding.dart';
@@ -113,6 +111,8 @@ import '../modules/reward_discipline/views/discipline/views/discipline_view.dart
 import '../modules/reward_discipline/views/reward/bindings/reward_binding.dart';
 import '../modules/reward_discipline/views/reward/views/reward_view.dart';
 import '../modules/reward_discipline/views/reward_discipline_view.dart';
+import '../modules/schedule_checkin/bindings/schedule_checkin_binding.dart';
+import '../modules/schedule_checkin/views/schedule_checkin_view.dart';
 import '../modules/schedule_daily/bindings/schedule_daily_binding.dart';
 import '../modules/schedule_daily/views/schedule_daily_view.dart';
 import '../modules/schedule_time/bindings/schedule_time_binding.dart';
@@ -135,6 +135,8 @@ import '../modules/settings/bindings/settings_binding.dart';
 import '../modules/settings/views/settings_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
+import '../modules/statistical/bindings/statistical_binding.dart';
+import '../modules/statistical/views/statistical_view.dart';
 import '../modules/stu_checkin/bindings/stu_checkin_binding.dart';
 import '../modules/stu_checkin/views/list_stu_checkin_view.dart';
 import '../modules/stu_checkin/views/list_stu_nocheckin_view.dart';
@@ -144,7 +146,13 @@ import '../modules/stu_checkin/views/stu_cross_manager_view.dart';
 import '../modules/stu_checkin/views/stu_outside_manager_view.dart';
 import '../modules/stu_checkin/views/stu_work_manager_view.dart';
 import '../modules/survey_result/bindings/survey_result_binding.dart';
+import '../modules/survey_result/views/survey_item/bindings/survey_item_binding.dart';
+import '../modules/survey_result/views/survey_item/views/survey_item_view.dart';
 import '../modules/survey_result/views/survey_result_view.dart';
+import '../modules/teacher_schedule_time/bindings/teacher_schedule_time_binding.dart';
+import '../modules/teacher_schedule_time/views/teacher_schedule_time_view.dart';
+import '../modules/track_progress/bindings/track_progress_binding.dart';
+import '../modules/track_progress/views/track_progress_view.dart';
 import '../modules/working_process/bindings/create/create_language_process_binding.dart';
 import '../modules/working_process/bindings/create/create_learning_process_binding.dart';
 import '../modules/working_process/bindings/create/create_working_process_binding.dart';
@@ -161,6 +169,10 @@ import '../modules/working_process/views/learning_process_view.dart';
 import '../modules/working_process/views/learning_profile_view.dart';
 import '../modules/working_process/views/list_working_process_view.dart';
 import '../modules/working_process/views/working_process_view.dart';
+
+// Copyright (c) 2023, one of the D3F outsourcing projects. All rights reserved.
+
+// coverage:ignore-file
 
 // Copyright (c) 2023, one of the D3F outsourcing projects. All rights reserved.
 
@@ -580,6 +592,42 @@ class AppPages {
       name: _Paths.ADD_EMAIL,
       page: () => AddEmailView(),
       binding: AddEmailBinding(),
-    )
+    ),
+    GetPage(
+        name: _Paths.ACTIVITY,
+        page: () => ActivityView(bindingCreator: () => ActivityBinding())),
+    GetPage(
+      name: _Paths.CHAT,
+      page: () => ChatView(
+        bindingCreator: () => ChatBinding(),
+      ),
+      binding: ChatBinding(),
+    ),
+    GetPage(
+      name: _Paths.DOCUMENT_MANAGEMENT,
+      page: () => DocumentManagementView(
+        bindingCreator: () => DocumentManagementBinding(),
+      ),
+      binding: DocumentManagementBinding(),
+    ),
+    GetPage(
+      name: _Paths.STATISTICAL,
+      page: () => StatisticalView(
+        bindingCreator: () => StatisticalBinding(),
+      ),
+      binding: StatisticalBinding(),
+    ),
+    GetPage(
+      name: _Paths.TRACK_PROGRESS,
+      page: () => TrackProgressView(
+        bindingCreator: () => TrackProgressBinding(),
+      ),
+      binding: TrackProgressBinding(),
+    ),
+    GetPage(
+      name: _Paths.TEACHER_SCHEDULE_TIME,
+      page: () => const TeacherScheduleTimeView(),
+      binding: TeacherScheduleTimeBinding(),
+    ),
   ];
 }

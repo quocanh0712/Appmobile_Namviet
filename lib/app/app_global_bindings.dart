@@ -31,6 +31,9 @@ import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:local_auth/local_auth.dart';
 
+import '../data/repositories/activity_repository.dart';
+import '../data/repositories/impl/activity_repository_impl.dart';
+
 class AppGlobalBindings extends Bindings {
   @override
   void dependencies() {
@@ -46,8 +49,10 @@ class AppGlobalBindings extends Bindings {
     Get.lazyPut<LearningResultRepository?>(() => LearningResultRepositoryImpl(), fenix: true);
     Get.lazyPut<TestScheduleRepository?>(() => TestScheduleRepositoryImpl(), fenix: true);
     Get.lazyPut<HomeRepository?>(() => HomeRepositoryImpl(), fenix: true);
+    Get.lazyPut<ActivityRepository?>(() => ActivityRepositoryImpl(), fenix: true);
     Get.lazyPut<FinanceRepository?>(() => FinanceRepositoryImpl(), fenix: true);
     Get.lazyPut<PracticePointRepository?>(() => PracticePointRepositoryImpl(), fenix: true);
     Get.lazyPut<InventoryRepository?>(() => InventoryRepositoryImpl(), fenix: true);
+
   }
 }

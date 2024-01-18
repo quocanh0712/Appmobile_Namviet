@@ -1,7 +1,6 @@
 // Copyright (c) 2022, one of the D3F outsourcing projects. All rights reserved.
 
 // coverage:ignore-file
-
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -9,6 +8,7 @@ import 'package:dart_extensions/dart_extensions.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/app/modules/base/binding_creator.dart';
@@ -120,10 +120,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                           ),
                           GestureDetector(
                               onTap: () {
-                                pageController?.animateToPage(
-                                    notificationTabIndex,
-                                    duration: const Duration(milliseconds: 300),
-                                    curve: Curves.easeInOut);
+                                controller.navigateToNotification();
+                                // pageController?.animateToPage(
+                                //     notificationTabIndex,
+                                //     duration: const Duration(milliseconds: 300),
+                                //     curve: Curves.easeInOut);
                               },
                               child: Container(
                                   margin: const EdgeInsets.only(right: 10),
@@ -1040,14 +1041,95 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       ),
       _buildMainFeatureItem(
         context,
-        onTap: () => controller.navigateToRewardDiscipline(),
+        onTap: () {
+          launchUrl(
+            Uri.parse('https://viettech.itch.io/map3d'),
+            mode: LaunchMode.externalNonBrowserApplication,
+          );
+        },
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.maps_home_work,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: 'Bản đồ trường học',
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () {
+          launchUrl(
+            Uri.parse('https://viettech.itch.io/map3d'),
+            mode: LaunchMode.externalApplication,
+          );
+        },
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.maps_home_work,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: 'Bản đồ trường học',
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () async {
+          // SystemChrome.setPreferredOrientations(DeviceOrientation.values);
+         await SystemChrome.setPreferredOrientations([
+            DeviceOrientation.portraitUp,
+            DeviceOrientation.portraitDown,
+            DeviceOrientation.landscapeLeft,
+            DeviceOrientation.landscapeRight,
+          ]);
+          launchUrl(
+            Uri.parse('https://viettech.itch.io/map3d'),
+            mode: LaunchMode.inAppWebView,
+          );
+          await SystemChrome.setPreferredOrientations([
+            DeviceOrientation.portraitUp,
+            DeviceOrientation.portraitDown,
+          ]);
+        },
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.maps_home_work,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: 'Bản đồ trường học',
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToTrackProgress(),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         icon: Icon(
           Icons.bookmarks,
           color: const Color(0xFF4da543).withOpacity(0.75),
           size: 30,
         ),
-        title: LocaleKeys.rewardDiscipline.tr,
+        title: LocaleKeys.trackProgress.tr,
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToDocumentManagement(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.bookmarks,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: LocaleKeys.executiveDocuments.tr,
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToStatistical(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.bookmarks,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: LocaleKeys.statistical.tr,
       ),
       _buildMainFeatureItem(
         context,
@@ -1058,51 +1140,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           color: const Color(0xFF4da543).withOpacity(0.75),
           size: 30,
         ),
-        title: LocaleKeys.rewardDiscipline.tr,
-      ),
-      _buildMainFeatureItem(
-        context,
-        onTap: () => controller.navigateToRewardDiscipline(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: Icon(
-          Icons.bookmarks,
-          color: const Color(0xFF4da543).withOpacity(0.75),
-          size: 30,
-        ),
-        title: LocaleKeys.rewardDiscipline.tr,
-      ),
-      _buildMainFeatureItem(
-        context,
-        onTap: () => controller.navigateToRewardDiscipline(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: Icon(
-          Icons.bookmarks,
-          color: const Color(0xFF4da543).withOpacity(0.75),
-          size: 30,
-        ),
-        title: LocaleKeys.rewardDiscipline.tr,
-      ),
-      _buildMainFeatureItem(
-        context,
-        onTap: () => controller.navigateToRewardDiscipline(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: Icon(
-          Icons.bookmarks,
-          color: const Color(0xFF4da543).withOpacity(0.75),
-          size: 30,
-        ),
-        title: LocaleKeys.rewardDiscipline.tr,
-      ),
-      _buildMainFeatureItem(
-        context,
-        onTap: () => controller.navigateToRewardDiscipline(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: Icon(
-          Icons.bookmarks,
-          color: const Color(0xFF4da543).withOpacity(0.75),
-          size: 30,
-        ),
-        title: 'ok',
+        title: LocaleKeys.teacherScheduleTimeTitle.tr,
       ),
     ];
     return Column(

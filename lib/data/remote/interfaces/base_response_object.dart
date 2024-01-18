@@ -45,6 +45,7 @@ import 'package:ftu_lms/utils/extensions/color_extension.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import '../../bean/CheckIn/schedule_checkin_object.dart';
+import '../../bean/activity_response_object/activity_response_object.dart';
 
 part 'base_response_object.g.dart';
 
@@ -231,6 +232,10 @@ extension NetworkResponseConverter on BaseResponseObject {
     if (this is BaseResponseObject<HomeResponseObject?>) {
       return BaseResponseObject<HomeResponseObject?>.fromJson(
           json, jsonToNullableHomeResponseObject);
+    }
+    if (this is BaseResponseObject<ActivityResponseObject?>) {
+      return BaseResponseObject<ActivityResponseObject?>.fromJson(
+          json, jsonToNullableActivityResponseObject);
     }
     if (this is BaseResponseObject<AllCoursesPointsObject?>) {
       return BaseResponseObject<AllCoursesPointsObject?>.fromJson(
