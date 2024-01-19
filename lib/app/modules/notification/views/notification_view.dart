@@ -23,6 +23,7 @@ class NotificationView
 
   @override
   AppBarActions? get appBarActions => (context) => <Widget>[
+    SizedBox(height: MediaQuery.of(context).size.height - 800,),
         IconButton(
           onPressed: () => controller.items.isNotEmpty == true
               ? showAlertDialog(context,

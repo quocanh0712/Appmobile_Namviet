@@ -8,7 +8,6 @@ import 'package:dart_extensions/dart_extensions.dart';
 import 'package:dotted_line/dotted_line.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/app/modules/base/binding_creator.dart';
@@ -23,12 +22,11 @@ import 'package:get/get.dart';
 import 'package:jiffy/jiffy.dart';
 import 'package:sliding_up_panel2/sliding_up_panel2.dart';
 import 'package:url_launcher/url_launcher.dart';
-
+import 'dart:io' show Platform;
 import '../../../../generated/assets.gen.dart';
 import '../../../../generated/colors.gen.dart';
 import '../../../../styles/theme_extensions.dart';
 import '../../dashboard/controllers/dashboard_controller.dart';
-import '../../dashboard/models/bot_nav_items.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
@@ -216,13 +214,13 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                           _buildBannerWithPadding(context),
 
                           ///Teacher or student amenities
-                          _retrieveUtilitiesFeaturesByUser(context),
-
-                          ///show recent activity
-                          _buildRecentActivities(context),
+                          // _retrieveUtilitiesFeaturesByUser(context),
 
                           ///show outstanding activity
                           _buildOutstandingActivities(context),
+
+                          ///show recent activity
+                          _buildRecentActivities(context),
                         ],
                       ),
                     ),
@@ -242,12 +240,24 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         InkWell(
           onTap: () => controller.navigateToUtilites(),
           child: Padding(
-            padding: const EdgeInsets.only(
-                left: 20, top: 20, right: 20),
-            child: Text(LocaleKeys.task.tr,
-                style: const TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15)),
+            padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(LocaleKeys.task.tr,
+                    style: const TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 17)),
+                GestureDetector(
+                  onTap: () {
+                    Get.to(
+                      () => _navigatorToTeacherMainFeatures(context),
+                    );
+                  },
+                  child: const Text('Tất cả', style: TextStyle(color: LMSColors.mainGreen, fontSize: 15),),
+                ),
+              ],
+            ),
           ),
         ),
         const SizedBox(height: 20),
@@ -274,35 +284,35 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           thickness: 4,
           color: Colors.black12,
         ),
-        InkWell(
-          onTap: () => controller.navigateToUtilites(),
-          child: Padding(
-            padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                AutoSizeText(LocaleKeys.utilities.tr,
-                    style: const TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87)),
-                GestureDetector(
-                  onTap: () {
-                    Get.to(
-                      () => _navigatorToAllUtilities(context),
-                    );
-                  },
-                  child: const Icon(
-                    Icons.arrow_forward_ios_rounded,
-                    size: 15,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-        const SizedBox(height: 30),
+        // InkWell(
+        //   onTap: () => controller.navigateToUtilites(),
+        //   child: Padding(
+        //     padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
+        //     child: Row(
+        //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //       crossAxisAlignment: CrossAxisAlignment.center,
+        //       children: [
+        //         AutoSizeText(LocaleKeys.utilities.tr,
+        //             style: const TextStyle(
+        //                 fontSize: 15,
+        //                 fontWeight: FontWeight.bold,
+        //                 color: Colors.black87)),
+        //         GestureDetector(
+        //           onTap: () {
+        //             // Get.to(
+        //             //   () => _navigatorToTeacherMainFeatures(context),
+        //             // );
+        //           },
+        //           child: const Icon(
+        //             Icons.arrow_forward_ios_rounded,
+        //             size: 15,
+        //           ),
+        //         ),
+        //       ],
+        //     ),
+        //   ),
+        // ),
+        // const SizedBox(height: 35),
       ],
     );
   }
@@ -474,6 +484,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
   Widget _buildRecentActivities(BuildContext context) {
     return Column(
       children: [
+        const SizedBox(height: 15,),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Row(
@@ -506,10 +517,6 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                         recentActivity: controller.lstRecentActivities[index]));
               }),
         ),
-        const Divider(
-          thickness: 4,
-          color: Colors.black12,
-        ),
       ],
     );
   }
@@ -526,7 +533,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 AutoSizeText(
-                  LocaleKeys.outstandingActivity.tr,
+                  'Tin tức nhà trường',
+                  // LocaleKeys.outstandingActivity.tr,
                   style: context.themeExtensions.paragraphSemiBold
                       .copyWith(color: context.themeExtensions.textColor),
                 ),
@@ -555,6 +563,10 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                         outstandingActivity:
                             controller.lstOutstandingActivities[index]));
               }),
+        ),
+        const Divider(
+          thickness: 4,
+          color: Colors.black12,
         ),
       ],
     );
@@ -830,16 +842,16 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         const SizedBox(width: 25),
         Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                AutoSizeText(LocaleKeys.restNow.tr,
-                    style: context.themeExtensions.heading2
-                        .copyWith(color: context.themeExtensions.textColor)),
-                const SizedBox(height: 11),
-                AutoSizeText(LocaleKeys.noTasksMessage.tr,
-                    style: context.themeExtensions.paragraph
-                        .copyWith(color: context.themeExtensions.textGrey))
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            AutoSizeText(LocaleKeys.restNow.tr,
+                style: context.themeExtensions.heading2
+                    .copyWith(color: context.themeExtensions.textColor)),
+            const SizedBox(height: 11),
+            AutoSizeText(LocaleKeys.noTasksMessage.tr,
+                style: context.themeExtensions.paragraph
+                    .copyWith(color: context.themeExtensions.textGrey))
           ],
         )),
         const SizedBox(width: 25)
@@ -980,13 +992,14 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     return const SizedBox.shrink();
   }
 
-  Widget _buildTeacherMainFeatures(BuildContext context) {
+  Widget _buildTeacherMainFeatures(BuildContext context,
+      {bool? isShowAll = false}) {
     List<Widget> mainFeatureItemList = [
       _buildMainFeatureItem(
         context,
-        // background: Container(
-        //   color: Colors.red,
-        // ),
+        background: Container(
+          color: Colors.red,
+        ),
         icon: Icon(
           Icons.calendar_today,
           color: const Color(0xFF4da543).withOpacity(0.75),
@@ -997,7 +1010,9 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       ),
       _buildMainFeatureItem(
         context,
-        background: Assets.images.homeTopRightButBg.image(fit: BoxFit.cover),
+        background: Container(
+          color: Colors.green,
+        ),
         icon: Icon(
           Icons.train,
           color: const Color(0xFF4da543).withOpacity(0.75),
@@ -1009,7 +1024,9 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       _buildMainFeatureItem(
         context,
         onTap: () => controller.navigateToRewardDiscipline(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        background: Container(
+          color: Colors.orange,
+        ),
         icon: Icon(
           Icons.bookmarks,
           color: const Color(0xFF4da543).withOpacity(0.75),
@@ -1042,53 +1059,17 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       _buildMainFeatureItem(
         context,
         onTap: () {
-          launchUrl(
-            Uri.parse('https://viettech.itch.io/map3d'),
-            mode: LaunchMode.externalNonBrowserApplication,
-          );
-        },
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: Icon(
-          Icons.maps_home_work,
-          color: const Color(0xFF4da543).withOpacity(0.75),
-          size: 30,
-        ),
-        title: 'Bản đồ trường học',
-      ),
-      _buildMainFeatureItem(
-        context,
-        onTap: () {
-          launchUrl(
-            Uri.parse('https://viettech.itch.io/map3d'),
-            mode: LaunchMode.externalApplication,
-          );
-        },
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: Icon(
-          Icons.maps_home_work,
-          color: const Color(0xFF4da543).withOpacity(0.75),
-          size: 30,
-        ),
-        title: 'Bản đồ trường học',
-      ),
-      _buildMainFeatureItem(
-        context,
-        onTap: () async {
-          // SystemChrome.setPreferredOrientations(DeviceOrientation.values);
-         await SystemChrome.setPreferredOrientations([
-            DeviceOrientation.portraitUp,
-            DeviceOrientation.portraitDown,
-            DeviceOrientation.landscapeLeft,
-            DeviceOrientation.landscapeRight,
-          ]);
-          launchUrl(
-            Uri.parse('https://viettech.itch.io/map3d'),
-            mode: LaunchMode.inAppWebView,
-          );
-          await SystemChrome.setPreferredOrientations([
-            DeviceOrientation.portraitUp,
-            DeviceOrientation.portraitDown,
-          ]);
+          if (Platform.isIOS) {
+            launchUrl(
+              Uri.parse('https://viettech.itch.io/map3d'),
+              mode: LaunchMode.inAppWebView,
+            );
+          } else {
+            launchUrl(
+              Uri.parse('https://viettech.itch.io/map3d'),
+              mode: LaunchMode.externalNonBrowserApplication,
+            );
+          }
         },
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         icon: Icon(
@@ -1118,7 +1099,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           color: const Color(0xFF4da543).withOpacity(0.75),
           size: 30,
         ),
-        title: LocaleKeys.executiveDocuments.tr,
+        title: 'Theo dõi văn bản',
       ),
       _buildMainFeatureItem(
         context,
@@ -1142,69 +1123,205 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         ),
         title: LocaleKeys.teacherScheduleTimeTitle.tr,
       ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToScientificResearch(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.science_outlined,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: LocaleKeys.scienceStudy.tr,
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToReportTask(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.calendar_today_outlined,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: LocaleKeys.reportTask.tr,
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToSurveyResult(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.filter_alt_outlined,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: LocaleKeys.serveyResults.tr,
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToTeacherContact(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.quick_contacts_dialer_sharp,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: LocaleKeys.titleTeacherContact.tr,
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToOneGate(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.home_repair_service_rounded,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: LocaleKeys.oneStopService.tr,
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToEmail(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.attach_email_outlined,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: LocaleKeys.email.tr,
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToClassSurveyResult(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.class_,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: LocaleKeys.classSurveyResults.tr,
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToListClassManagerTitle(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.flight_class_rounded,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: LocaleKeys.listClassManagerTitle.tr,
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToStuCheckinManager(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.fact_check_outlined,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: LocaleKeys.studentManager.tr,
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToListClassManagerTitle(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.file_copy_outlined,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: LocaleKeys.executiveDocuments.tr,
+      ),
+      _buildMainFeatureItem(
+        context,
+        onTap: () => controller.navigateToSendRequest(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        icon: Icon(
+          Icons.send_to_mobile,
+          color: const Color(0xFF4da543).withOpacity(0.75),
+          size: 30,
+        ),
+        title: LocaleKeys.sendRequest.tr,
+      ),
     ];
-    return Column(
-      children: [
-        SizedBox(
-          height: 220,
-          child: Column(
+    return isShowAll == true
+        ? SizedBox(
+            height: MediaQuery.of(context).size.height - 120,
+            child: GridView.count(
+              crossAxisCount: 3,
+              childAspectRatio: 1.2 / 1,
+              children: List.generate(mainFeatureItemList.length, (index) {
+                return Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: mainFeatureItemList[index]);
+              }),
+            ),
+          )
+        : Column(
             children: [
-              Expanded(
-                child: PageView.builder(
-                  controller: controller.pageTeacherController,
-                  itemCount: (mainFeatureItemList.length / 4).ceil(),
-                  onPageChanged: (int page) {
-                    controller.currentPage.value = page;
-                  },
-                  itemBuilder: (context, pageIndex) {
-                    int startIndex = pageIndex * 4;
-                    int endIndex = (pageIndex + 1) * 4;
-                    endIndex = endIndex < mainFeatureItemList.length
-                        ? endIndex
-                        : mainFeatureItemList.length;
-                    List<Widget> items =
-                        mainFeatureItemList.sublist(startIndex, endIndex);
-                    return Container(
-                      margin: const EdgeInsets.only(top: 2),
-                      child: GridView.count(
-                        crossAxisCount: 2,
-                        childAspectRatio: 1.8 / 1,
-                        physics: const NeverScrollableScrollPhysics(),
-                        children: items.map((item) {
-                          return Column(
-                            children: [
-                              item,
-                            ],
+              SizedBox(
+                height: 260,
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: PageView.builder(
+                        controller: controller.pageTeacherController,
+                        itemCount: (mainFeatureItemList.length / 6).ceil(),
+                        onPageChanged: (int page) {
+                          controller.currentPage.value = page;
+                        },
+                        itemBuilder: (context, pageIndex) {
+                          int startIndex = pageIndex * 6;
+                          int endIndex = (pageIndex + 1) * 6;
+                          endIndex = endIndex < mainFeatureItemList.length
+                              ? endIndex
+                              : mainFeatureItemList.length;
+                          List<Widget> items =
+                              mainFeatureItemList.sublist(startIndex, endIndex);
+                          return Container(
+                            margin: const EdgeInsets.only(top: 2),
+                            child: GridView.count(
+                              crossAxisCount: 3,
+                              // childAspectRatio: 2 / 1,
+                              physics: const NeverScrollableScrollPhysics(),
+                              children: items.map((item) {
+                                return Column(
+                                  children: [
+                                    Expanded(child: item),
+                                  ],
+                                );
+                              }).toList(),
+                            ),
                           );
-                        }).toList(),
+                        },
                       ),
-                    );
-                  },
+                    ),
+                  ],
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  (mainFeatureItemList.length / 6).ceil(),
+                  (index) => Obx(() => Container(
+                        width: 6,
+                        height: 6,
+                        margin: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 4),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: context.themeExtensions.mainGreen.withOpacity(
+                            controller.currentPage.value == index ? 0.9 : 0.3,
+                          ),
+                        ),
+                      )),
                 ),
               ),
             ],
-          ),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: List.generate(
-            (mainFeatureItemList.length / 4).ceil(),
-            (index) => Obx(() => Container(
-                  width: 6,
-                  height: 6,
-                  margin:
-                      const EdgeInsets.symmetric(vertical: 8, horizontal: 4),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: context.themeExtensions.mainGreen.withOpacity(
-                      controller.currentPage.value == index ? 0.9 : 0.3,
-                    ),
-                  ),
-                )),
-          ),
-        ),
-      ],
-    );
+          );
   }
 
   Widget _buildStudentMainFeatures(BuildContext context) {
@@ -1251,7 +1368,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         children: [
           // background ?? const SizedBox.shrink(),
           Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
@@ -1264,13 +1381,19 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                 child: Container(child: icon),
               ),
               const SizedBox(height: 3),
-              AutoSizeText(
-                title ?? '',
-                maxLines: 5,
-                style: context.themeExtensions.subTexMedium
-                    .copyWith(color: context.themeExtensions.black),
-                textAlign: TextAlign.center,
-              )
+              Center(
+                child: SizedBox(
+                  width: 110,
+                  child: Text(
+                    title ?? '',
+                    maxLines: 5,
+                    style: context.themeExtensions.subTexMedium
+                        .copyWith(color: context.themeExtensions.black),
+                    textAlign: TextAlign.center,
+                    // overflow: TextOverflow.clip,
+                  ),
+                ),
+              ),
             ],
           )
         ],
@@ -1335,7 +1458,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     ]);
   }
 
-  Widget _navigatorToAllUtilities(BuildContext context) {
+  Widget _navigatorToTeacherMainFeatures(BuildContext context) {
     return Scaffold(
       backgroundColor: LMSColors.white,
       appBar: AppBar(
@@ -1355,26 +1478,29 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             children: const [
               // Để text tạm thời
               Text(
-                'Tất cả tiện ích',
+                'Tất cả chức năng',
                 style: TextStyle(color: Colors.black),
               ),
             ],
           )),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            margin: const EdgeInsets.fromLTRB(10, 5, 0, 20),
-            child: AutoSizeText(LocaleKeys.utilitiesInformation.tr,
-                style: const TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black87)),
-          ),
-          Container(
-            child: _buildTeacherUtilities(context: context, isShowAll: true),
-          ),
-        ],
+      body: SingleChildScrollView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              margin: const EdgeInsets.fromLTRB(10, 5, 0, 20),
+              child: AutoSizeText(LocaleKeys.utilitiesInformation.tr,
+                  style: const TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black87)),
+            ),
+            Container(
+              child: _buildTeacherMainFeatures(context, isShowAll: true),
+            ),
+          ],
+        ),
       ),
     );
   }
