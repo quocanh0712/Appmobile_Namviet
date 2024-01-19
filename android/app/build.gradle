@@ -58,7 +58,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.namvietjsc.tuaf"
+        applicationId "com.namvietjsc.ufll"
         applicationIdSuffix dartEnvironmentVariables.DART_DEFINES_APP_SUFFIX
         minSdkVersion 21
         targetSdkVersion 33

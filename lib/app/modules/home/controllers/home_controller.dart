@@ -59,7 +59,7 @@ class HomeController extends BaseController {
     switch (idDonVi) {
       case 1:
         title.value = "Trường ĐH Ngoại ngữ Đà Nẵng";
-        imagePath.value = Assets.images.ftuLogo.path;
+        imagePath.value = Assets.images.uflLogo.path;
         break;
       case 2:
         title.value = "Trường ĐH Nông Lâm Thái Nguyên";

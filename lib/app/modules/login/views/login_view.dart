@@ -9,6 +9,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:ftu_lms/app/modules/base/base_view.dart';
 import 'package:ftu_lms/app/modules/login/controllers/login_controller.dart';
 import 'package:ftu_lms/generated/assets.gen.dart';
+import 'package:ftu_lms/generated/colors.gen.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:get/get.dart';
@@ -43,7 +44,7 @@ class LoginView extends BaseView<LoginController> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             SizedBox(height: Get.width * 0.1),
-                            Assets.images.tUAFLogo.image(
+                            Assets.images.uflLogo.image(
                                 width: Get.width * 0.26,
                                 height: Get.width * 0.26,
                                 fit: BoxFit.cover),
@@ -89,7 +90,7 @@ class LoginView extends BaseView<LoginController> {
                                             hint: new Text(
                                                 // "---Mời chọn đơn vị---"),
                                                 "Trường Đại học Nông Lâm Thái Nguyên"),
-                                            value: 2,
+                                            value: 1,
                                             // Down Arrow Icon
                                             icon: const Icon(
                                                 Icons.keyboard_arrow_down),

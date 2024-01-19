@@ -1,4 +1,4 @@
-package com.namvietjsc.ufl
+package com.namvietjsc.ufll
 
 import android.app.Activity
 import android.graphics.Color

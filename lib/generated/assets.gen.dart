@@ -405,6 +405,15 @@ class $AssetsImagesGen {
   AssetGenImage get splashBotContent =>
       const AssetGenImage('assets/images/splash_bot_content.png');
 
+  /// File path: assets/images/ufl_logo.png
+  AssetGenImage get uflLogo => const AssetGenImage('assets/images/ufl_logo.png');
+
+  /// File path: assets/images/ufl_logo_icon.png
+  AssetGenImage get uflLogoIcon => const AssetGenImage('assets/images/ufl_logo_icon.png');
+
+  /// File path: assets/images/ufl_logo_svg.svg
+  SvgGenImage get uflLogoSvg => const SvgGenImage('assets/images/ufl_logo_svg.svg');
+
   /// File path: assets/images/university_building.png
   AssetGenImage get universityBuilding =>
       const AssetGenImage('assets/images/university_building.png');
@@ -534,6 +543,9 @@ class $AssetsImagesGen {
         personalStudyOverviewBg,
         profileHeaderBg,
         splashBotContent,
+        uflLogo,
+        uflLogoIcon,
+        uflLogoSvg,
         universityBuilding
       ];
 }

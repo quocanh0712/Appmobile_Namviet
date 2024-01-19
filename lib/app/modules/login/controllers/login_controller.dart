@@ -69,8 +69,8 @@ class LoginController extends BaseController {
 
   List<DropdownMenuItem> list = [
     const DropdownMenuItem(
-        value: 2,
-        child: Text("Trường Đại học Nông Lâm Thái Nguyên",
+        value: 1,
+        child: Text("Trường Đại học Ngoại ngữ Đà Nẵng",
             textAlign: TextAlign.center, overflow: TextOverflow.ellipsis))
   ];
 
@@ -168,7 +168,7 @@ class LoginController extends BaseController {
   }
 
   performLogin() async {
-    idDonVi = 2;
+    idDonVi = 1;
     // userName = userName?.isNotEmpty == true
     //     ? userName
     //     : /*219203012 namviet admin tester*/ "219203012";

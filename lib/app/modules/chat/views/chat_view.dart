@@ -709,71 +709,91 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
   Widget buildGroupChatDisplay(BuildContext context) {
     List<Widget> listChat = [
       _buildChatDisplayItem(context, '', 'Nhóm Lớp D17-VO-A', 'Huỳnh Bùi Đức',
-          'Nay có đi học không vậy cả lớp', ' 2 giờ', () {},
-          isGroup: true),
+          'Nay có đi học không vậy cả lớp', ' 2 giờ', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp D18-VO-A', 'Lại Xuân hợp',
-          'Nay cả lớp nghỉ nhé', ' 12 giờ', () {},
-          isGroup: true),
+          'Nay cả lớp nghỉ nhé', ' 12 giờ', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp D19-VO-A', 'Nguyễn Ánh Viên',
-          'Nay các bạn thi cuối học phần nhé', ' 14 giờ', () {},
-          isGroup: true),
-      _buildChatDisplayItem(context, '', 'Nhóm Lớp D20-VO-A', 'Nguyễn Văn Tuấn',
-          'Thi', '16 giờ', () {},
-          isGroup: true),
+          'Nay các bạn thi cuối học phần nhé', ' 14 giờ', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
+      _buildChatDisplayItem(
+          context, '', 'Nhóm Lớp D20-VO-A', 'Nguyễn Văn Tuấn', 'Thi', '16 giờ',
+          () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp Quản Trị Kinh Doanh',
-          'Đặng Minh', 'Đi du lịch không cả lớp', ' 18 giờ', () {},
-          isGroup: true),
+          'Đặng Minh', 'Đi du lịch không cả lớp', ' 18 giờ', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp Quản trị doanh nghiệp',
-          'Vũ Tuấn Huy', 'Bỏ học thôi cả lớp ơi', ' 20 giờ', () {},
-          isGroup: true),
+          'Vũ Tuấn Huy', 'Bỏ học thôi cả lớp ơi', ' 20 giờ', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm Toán 3', 'Bùi Đức',
-          'Đăng kí tín chỉ chưa cả lớp', ' 21 giờ', () {},
-          isGroup: true),
+          'Đăng kí tín chỉ chưa cả lớp', ' 21 giờ', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm học lại Toán 1', 'Huỳnh Bùi Đức',
-          'Nay có đi học không vậyffffffffffffffffff', ' 21 giờ', () {},
-          isGroup: true),
+          'Nay có đi học không vậyffffffffffffffffff', ' 21 giờ', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm KTMT', 'Huỳnh Bùi Đức',
-          'Nay có đi học không vậyffffffffffffffffff', ' 21 giờ', () {},
-          isGroup: true),
+          'Nay có đi học không vậyffffffffffffffffff', ' 21 giờ', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm KTKTCN', 'Huỳnh Bùi Đức',
-          'Nay có đi học không ', ' 22 giờ', () {},
-          isGroup: true),
+          'Nay có đi học không ', ' 22 giờ', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm Đồ Án', 'Huỳnh Bùi Đức',
-          'Nay có đi học không vậyffffffffffffffffff', ' 22 giờ', () {},
-          isGroup: true),
+          'Nay có đi học không vậyffffffffffffffffff', ' 22 giờ', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(
           context,
           '',
           'Nhóm Lớp Giám sát hệ thống thông minh',
           'Huỳnh Bùi Đức',
           'Nay có đi học không ',
-          ' 23 giờ',
-          () {},
-          isGroup: true),
+          ' 23 giờ', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp Hệ cơ sở chi thức',
-          'Huỳnh Bùi Đức', 'Nay có đi học không ', ' T3', () {},
-          isGroup: true),
+          'Huỳnh Bùi Đức', 'Nay có đi học không ', ' T3', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp học ve ', 'Huỳnh Bùi Đức',
-          'Nay có đi học không vậyffffffffffffffffff', 'T5', () {},
-          isGroup: true),
+          'Nay có đi học không vậyffffffffffffffffff', 'T5', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp học ve ', 'Chán học',
-          'Nay có đi học không vậy', 'T6', () {},
-          isGroup: true),
+          'Nay có đi học không vậy', 'T6', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm học lại Toán 1', 'Bỏ học',
-          'Nay có đi học không ', 'CN', () {},
-          isGroup: true),
+          'Nay có đi học không ', 'CN', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm KTMT', 'Tuấn Đức',
-          'Nay có đi học không vậyffffffffffffffffff', '12/12/2023', () {},
-          isGroup: true),
+          'Nay có đi học không vậyffffffffffffffffff', '12/12/2023', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm KTKTCN', 'Đức',
-          'Nay có đi học không vậyffffffffffffffffff', '15/11/2022', () {},
-          isGroup: true),
+          'Nay có đi học không vậyffffffffffffffffff', '15/11/2022', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp học ve ', 'Bùi Đức',
-          'Nay có đi học không vậyffffffffffffffffff', '7/1/2021', () {},
-          isGroup: true),
+          'Nay có đi học không vậyffffffffffffffffff', '7/1/2021', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp học ve ', 'Bùi Đức',
-          'Có ai đăng kí tín chỉ không vậy', '3/2/2020', () {},
-          isGroup: true),
+          'Có ai đăng kí tín chỉ không vậy', '3/2/2020', () {
+        _showNotificationDialog(context);
+      }, isGroup: true),
     ];
     return Container(
       color: Colors.white,
@@ -793,54 +813,115 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
     );
   }
 
+  Future<void> _showNotificationDialog(BuildContext context) async {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Thông báo'),
+          content: const Text('Chức năng đang được cập nhật'),
+          actions: <Widget>[
+            ElevatedButton(
+              child: const Text('Đồng ý'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   Widget buildFriendChatDisplay(BuildContext context) {
     List<Widget> listChat = [
       _buildChatDisplayItem(context, '', 'Nhóm Lớp D17-VO-A', 'Huỳnh Bùi Đức',
-          'Nay có đi học không vậy cả lớp', ' 2 giờ', () {}),
+          'Nay có đi học không vậy cả lớp', ' 2 giờ', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp D18-VO-A', 'Lại Xuân hợp',
-          'Nay cả lớp nghỉ nhé', ' 12 giờ', () {}),
+          'Nay cả lớp nghỉ nhé', ' 12 giờ', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp D19-VO-A', 'Nguyễn Ánh Viên',
-          'Nay các bạn thi cuối học phần nhé', ' 14 giờ', () {}),
-      _buildChatDisplayItem(context, '', 'Nhóm Lớp D20-VO-A', 'Nguyễn Văn Tuấn',
-          'Thi', '16 giờ', () {}),
+          'Nay các bạn thi cuối học phần nhé', ' 14 giờ', () {
+        _showNotificationDialog(context);
+      }),
+      _buildChatDisplayItem(
+          context, '', 'Nhóm Lớp D20-VO-A', 'Nguyễn Văn Tuấn', 'Thi', '16 giờ',
+          () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp Quản Trị Kinh Doanh',
-          'Đặng Minh', 'Đi du lịch không cả lớp', ' 18 giờ', () {}),
+          'Đặng Minh', 'Đi du lịch không cả lớp', ' 18 giờ', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp Quản trị doanh nghiệp',
-          'Vũ Tuấn Huy', 'Bỏ học thôi cả lớp ơi', ' 20 giờ', () {}),
+          'Vũ Tuấn Huy', 'Bỏ học thôi cả lớp ơi', ' 20 giờ', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm Toán 3', 'Bùi Đức',
-          'Đăng kí tín chỉ chưa cả lớp', ' 21 giờ', () {}),
+          'Đăng kí tín chỉ chưa cả lớp', ' 21 giờ', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm học lại Toán 1', 'Huỳnh Bùi Đức',
-          'Nay có đi học không vậyffffffffffffffffff', ' 21 giờ', () {}),
+          'Nay có đi học không vậyffffffffffffffffff', ' 21 giờ', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm KTMT', 'Huỳnh Bùi Đức',
-          'Nay có đi học không vậyffffffffffffffffff', ' 21 giờ', () {}),
+          'Nay có đi học không vậyffffffffffffffffff', ' 21 giờ', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm KTKTCN', 'Huỳnh Bùi Đức',
-          'Nay có đi học không ', ' 22 giờ', () {}),
+          'Nay có đi học không ', ' 22 giờ', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm Đồ Án', 'Huỳnh Bùi Đức',
-          'Nay có đi học không vậyffffffffffffffffff', ' 22 giờ', () {}),
+          'Nay có đi học không vậyffffffffffffffffff', ' 22 giờ', () {
+        _showNotificationDialog(context);
+        ;
+      }),
       _buildChatDisplayItem(
           context,
           '',
           'Nhóm Lớp Giám sát hệ thống thông minh',
           'Huỳnh Bùi Đức',
           'Nay có đi học không ',
-          ' 23 giờ',
-          () {}),
+          ' 23 giờ', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp Hệ cơ sở chi thức',
-          'Huỳnh Bùi Đức', 'Nay có đi học không ', ' T3', () {}),
+          'Huỳnh Bùi Đức', 'Nay có đi học không ', ' T3', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp học ve ', 'Huỳnh Bùi Đức',
-          'Nay có đi học không vậyffffffffffffffffff', 'T5', () {}),
+          'Nay có đi học không vậyffffffffffffffffff', 'T5', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp học ve ', 'Chán học',
-          'Nay có đi học không vậy', 'T6', () {}),
+          'Nay có đi học không vậy', 'T6', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm học lại Toán 1', 'Bỏ học',
-          'Nay có đi học không ', 'CN', () {}),
+          'Nay có đi học không ', 'CN', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm KTMT', 'Tuấn Đức',
-          'Nay có đi học không vậyffffffffffffffffff', '12/12/2023', () {}),
+          'Nay có đi học không vậyffffffffffffffffff', '12/12/2023', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm KTKTCN', 'Đức',
-          'Nay có đi học không vậyffffffffffffffffff', '15/11/2022', () {}),
+          'Nay có đi học không vậyffffffffffffffffff', '15/11/2022', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp học ve ', 'Bùi Đức',
-          'Nay có đi học không vậyffffffffffffffffff', '7/1/2021', () {}),
+          'Nay có đi học không vậyffffffffffffffffff', '7/1/2021', () {
+        _showNotificationDialog(context);
+      }),
       _buildChatDisplayItem(context, '', 'Nhóm Lớp học ve ', 'Bùi Đức',
-          'Có ai đăng kí tín chỉ không vậy', '3/2/2020', () {}),
+          'Có ai đăng kí tín chỉ không vậy', '3/2/2020', () {
+        _showNotificationDialog(context);
+      }),
     ];
     return Container(
       color: Colors.white,
@@ -979,7 +1060,7 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
     );
   }
 
-  // Widget _buildChatDetailDisplayItem(BuildContext context) {
-  //   return;
-  // }
+// Widget _buildChatDetailDisplayItem(BuildContext context) {
+//   return;
+// }
 }

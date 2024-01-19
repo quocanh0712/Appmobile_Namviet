@@ -1133,7 +1133,9 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       ),
       _buildMainFeatureItem(
         context,
-        onTap: () => controller.navigateToRewardDiscipline(),
+        onTap: () {
+          _showNotificationDialog(context);
+        },
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         icon: Icon(
           Icons.bookmarks,
@@ -1206,6 +1208,25 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       ],
     );
   }
+
+  Future<void> _showNotificationDialog(BuildContext context) async {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Thông báo'),
+          content: const Text('Chức năng đang được cập nhật'),
+          actions: <Widget>[
+            ElevatedButton(
+              child: const Text('Đồng ý'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );}
 
   Widget _buildStudentMainFeatures(BuildContext context) {
     return Column(
