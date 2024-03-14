@@ -11,6 +11,8 @@ import 'package:ftu_lms/utils/constants.dart';
 import 'package:ftu_lms/utils/date_time_utils.dart';
 import 'package:ftu_lms/utils/utils.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
 import '../controllers/schedule_daily_controller.dart';
 
@@ -21,29 +23,128 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
 
   @override
   Widget child(BuildContext context) {
+    RxString selectedDate = RxString('');
     return SingleChildScrollView(
-      child: Container(
-        padding: const EdgeInsets.only(left: 20, right: 12),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              alignment: Alignment.topCenter,
-              child: Obx(() => timeView()),
+      child: Column(
+        children: [
+          const SizedBox(height: 5,),
+          Container(
+            height: 120,
+            width: MediaQuery.of(context).size.width * 0.95,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+                color: Colors.white,
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color.fromRGBO(9, 116, 66, 1),
+                    Color.fromRGBO(98, 179, 69, 1),
+                  ],
+                ),
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.black12,
+                  spreadRadius: 2,
+                  blurRadius: 10,
+                  offset: Offset(0, 0), // changes position of shadow
+                ),
+              ]
             ),
-            const SizedBox(
-              width: 16,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                const SizedBox(
+                  height: 15,
+                ),
+            GestureDetector(
+              onTap: () async {
+                DatePicker.showDatePicker(context,
+                    showTitleActions: true,
+                    minTime: DateTime(DateTime.now().year - 2),
+                    maxTime: DateTime(DateTime.now().year + 2),
+                    onChanged: (date) {
+                      print('change $date');
+                    },
+                    onConfirm: (date) {
+                      // Cập nhật selectedDate với giá trị đã chọn từ date picker
+                      selectedDate.value = DateFormat('dd/MM/yyyy').format(date); // Định dạng ngày tháng năm
+                      controller.timeDaily = date;
+                      controller.loadScheduleDaily();
+                    },
+                    currentTime: controller.timeDaily,
+                    locale: LocaleType.vi);
+              },
+              child: Container(
+                height: 40,
+                width: 200,
+                decoration: BoxDecoration(
+
+                    borderRadius: BorderRadius.circular(10)
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15.0),
+                      child: Obx(() => Text(
+                        selectedDate.value.isEmpty ? DateFormat('dd/MM/yyyy').format(DateTime.now()) : selectedDate.value,
+                        style: GoogleFonts.notoSansKhojki(fontSize: 23, color: Colors.white, fontWeight: FontWeight.bold),
+                      )),
+                    ),
+                    const Icon(Icons.arrow_drop_down_sharp, color: Colors.white, size: 45,),
+
+                  ],
+                ),
+              ),
             ),
-            Expanded(
-                child: SizedBox(
-              width: double.maxFinite,
-              child: Obx(() => scheduleDaily()),
-            ))
-          ],
-        ),
+            const SizedBox(height: 20,),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Thời gian' ,style: GoogleFonts.notoSansKhojki(fontSize: 15, color: Colors.white, fontWeight: FontWeight.w600),
+                  ),
+                  Text(
+                    'Công việc' ,style: GoogleFonts.notoSansKhojki(fontSize: 15, color: Colors.white, fontWeight: FontWeight.w600),
+                  )
+                ],
+              ),
+            )
+              ],
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+            padding: const EdgeInsets.only(left: 20, right: 12),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  alignment: Alignment.topCenter,
+                  child: Obx(() => timeView()),
+                ),
+                const SizedBox(
+                  width: 16,
+                ),
+                Expanded(
+                    child: SizedBox(
+                  width: double.maxFinite,
+                  child: Obx(() => scheduleDaily()),
+                ))
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
+
+
 
   Widget scheduleDaily() {
     var listItemSchedule = controller.listScheduleDaily.map((element) {
@@ -54,10 +155,19 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
       return Column(
         children: [
           SizedBox(height: marginStart),
+          //card
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
               color: Utils.randomColor(),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black12,
+                    spreadRadius: 5,
+                    blurRadius: 10,
+                    offset: Offset(0, 4), // changes position of shadow
+                  ),
+                ]
             ),
             height: marginEnd - marginStart,
             padding:
@@ -69,8 +179,9 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
                   child: Text(
                     element.coursename ?? Constants.EMPTY,
                     textAlign: TextAlign.start,
-                    style: Get.context?.themeExtensions.paragraphSemiBold
-                        .copyWith(color: Get.context?.themeExtensions.white),
+                    // style: Get.context?.themeExtensions.paragraphSemiBold
+                    //     .copyWith(color: Get.context?.themeExtensions.white),
+                    style: GoogleFonts.notoSansKhojki(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                 ),
                 const SizedBox(height: 2),
@@ -84,8 +195,9 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
                           : null
                     ]),
                     textAlign: TextAlign.start,
-                    style: Get.context?.themeExtensions.subTex
-                        .copyWith(color: Get.context?.themeExtensions.white),
+                    // style: Get.context?.themeExtensions.subTex
+                    //     .copyWith(color: Get.context?.themeExtensions.white),
+                    style: GoogleFonts.notoSansKhojki(fontSize: 15, color: Colors.white, fontWeight: FontWeight.w600),
                   ),
                 ),
                 const SizedBox(height: 2),
@@ -94,8 +206,9 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
                   child: Text(
                     element.roomname ?? Constants.EMPTY,
                     textAlign: TextAlign.start,
-                    style: Get.context?.themeExtensions.subTex
-                        .copyWith(color: Get.context?.themeExtensions.white),
+                    // style: Get.context?.themeExtensions.subTex
+                    //     .copyWith(color: Get.context?.themeExtensions.white),
+                    style: GoogleFonts.notoSansKhojki(fontSize: 13, color: Colors.white, fontWeight: FontWeight.w600),
                   ),
                 ),
               ]),
@@ -177,23 +290,23 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
   }
 
   @override
-  List<Widget>? actionAppBar(BuildContext context) => [
-        IconButton(
-          onPressed: () async {
-            DatePicker.showDatePicker(context,
-                showTitleActions: true,
-                minTime: DateTime(DateTime.now().year - 2),
-                maxTime: DateTime(DateTime.now().year + 2), onChanged: (date) {
-              print('change $date');
-            }, onConfirm: (date) {
-              controller.timeDaily = date;
-              controller.loadScheduleDaily();
-            }, currentTime: controller.timeDaily, locale: LocaleType.vi);
-          },
-          icon: Assets.images.icDate.svg(
-              width: 24, height: 24, color: context.themeExtensions.textColor),
-        ),
-      ];
+  // List<Widget>? actionAppBar(BuildContext context) => [
+  //       IconButton(
+  //         onPressed: () async {
+  //           DatePicker.showDatePicker(context,
+  //               showTitleActions: true,
+  //               minTime: DateTime(DateTime.now().year - 2),
+  //               maxTime: DateTime(DateTime.now().year + 2), onChanged: (date) {
+  //             print('change $date');
+  //           }, onConfirm: (date) {
+  //             controller.timeDaily = date;
+  //             controller.loadScheduleDaily();
+  //           }, currentTime: controller.timeDaily, locale: LocaleType.vi);
+  //         },
+  //         icon: Assets.images.icDate.svg(
+  //             width: 24, height: 24, color: context.themeExtensions.textColor),
+  //       ),
+  //     ];
 
   @override
   String? get titleAppBar => controller.getTitle();

@@ -1,3 +1,4 @@
+import 'package:ftu_lms/app/modules/add_item_scientific_research/view/add_item_scientific_research_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/Email/bindings/email_binding.dart';
@@ -8,6 +9,7 @@ import '../modules/account/bindings/account_binding.dart';
 import '../modules/account/views/account_view.dart';
 import '../modules/activity/bindings/activity_binding.dart';
 import '../modules/activity/views/activity_view.dart';
+import '../modules/add_item_scientific_research/bindings/add_item_scientific_research_binding.dart';
 import '../modules/appInformation/bindings/app_information_binding.dart';
 import '../modules/appInformation/views/app_information_view.dart';
 import '../modules/chat/bindings/chat_binding.dart';
@@ -312,6 +314,11 @@ class AppPages {
       name: _Paths.ITEM_SCIENTIFIC_RESEARCH,
       page: () => ItemScientificResearchView(),
       binding: ItemScientificResearchBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADD_ITEM_SCIENTIFIC_RESEARCH,
+      page: () => AddItemScientificResearchView(),
+      binding: AddItemScientificResearchBinding(),
     ),
     GetPage(
       name: _Paths.SURVEY_RESULT,
@@ -629,5 +636,6 @@ class AppPages {
       page: () => const TeacherScheduleTimeView(),
       binding: TeacherScheduleTimeBinding(),
     ),
+
   ];
 }

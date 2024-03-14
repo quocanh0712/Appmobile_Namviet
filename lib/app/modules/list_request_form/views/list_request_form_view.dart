@@ -17,7 +17,7 @@ class ListRequestFormView extends GetView<ListRequestFormController> {
         title: const Text('ListRequestFormView'),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'ListRequestFormView is working',
           style: TextStyle(fontSize: 20),

@@ -392,10 +392,10 @@ class ActivityView
                                 ),
                                 width: 120,
                                 height: 30,
-                                child: Row(
+                                child: const Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
-                                  children: const [
+                                  children: [
                                     Icon(
                                       Icons.lock_open_rounded,
                                       color: Colors.black54,
@@ -428,10 +428,10 @@ class ActivityView
                                 ),
                                 width: 120,
                                 height: 30,
-                                child: Row(
+                                child: const Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
-                                  children: const [
+                                  children: [
                                     Icon(
                                       Icons.settings,
                                       color: Colors.black54,
@@ -706,9 +706,9 @@ class ActivityView
         children: [
           Container(
               margin: const EdgeInsets.all(10),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
+                children: [
                   Text(
                     'Ai có thể xem hoạt động của bạn?',
                     style: TextStyle(

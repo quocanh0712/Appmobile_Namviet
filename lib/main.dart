@@ -2,6 +2,8 @@
 
 // coverage:ignore-file
 
+import 'dart:convert';
+
 import 'package:cryptography_flutter/cryptography_flutter.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
@@ -26,6 +28,7 @@ Future<void> main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
 
+
   FlutterCryptography.enable();
   await Hive.initFlutter();
 
@@ -35,7 +38,8 @@ Future<void> main() async {
 
   await StatusBarControl.setHidden(false, animation: StatusBarAnimation.FADE);
   await StatusBarControl.setStyle(StatusBarStyle.LIGHT_CONTENT);
-  // await Jiffy.locale('vi');
+   //await Jiffy.locale('vi_VN');
+  print('${Jiffy.getAllAvailableLocales().toString()}');
 
   // setup the One Signal Push Notification.
   OneSignalManager.init();
@@ -88,3 +92,5 @@ void configLoading() {
     ..dismissOnTap = false
     ..customAnimation = EasyLoadingCustomAnimation();
 }
+
+

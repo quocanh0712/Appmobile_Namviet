@@ -16,7 +16,7 @@ class SettingsView extends BaseView<SettingsController> {
         title: const Text('SettingsView'),
         centerTitle: true,
       ),
-      body: Center(
+      body: const Center(
         child: Text(
           'SettingsView is working',
           style: TextStyle(fontSize: 20),

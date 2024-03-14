@@ -22,11 +22,13 @@ class ScientificResearchController extends BaseListController {
   @override
   Future<Result<BaseResponseObject<List?>, Exception>> callToHost() {
     ScientificResearchRepository repository = Get.find();
+
     return repository.getScientificResearchList(
         ScientificResearchRequest(length: maxLengthResult, startindex: pageIndex));
   }
 
   void navigateItemScientificResearch(int index) {
     Get.toNamed(Routes.ITEM_SCIENTIFIC_RESEARCH, arguments: listData[index]);
+
   }
 }

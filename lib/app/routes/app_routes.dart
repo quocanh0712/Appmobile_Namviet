@@ -33,6 +33,7 @@ abstract class Routes {
   static const INFINITE_LIST_SAMPLE = _Paths.INFINITE_LIST_SAMPLE;
   static const SCIENTIFIC_RESEARCH = _Paths.SCIENTIFIC_RESEARCH;
   static const ITEM_SCIENTIFIC_RESEARCH = _Paths.ITEM_SCIENTIFIC_RESEARCH;
+  static const ADD_ITEM_SCIENTIFIC_RESEARCH = _Paths.ADD_ITEM_SCIENTIFIC_RESEARCH;
   static const ELEARNING = _Paths.ELEARNING;
   static const DOCUMENT_FORM = _Paths.DOCUMENT_FORM;
   static const ONE_GATE = _Paths.ONE_GATE;
@@ -128,6 +129,7 @@ abstract class _Paths {
   static const INFINITE_LIST_SAMPLE = '/infinite-list-sample';
   static const SCIENTIFIC_RESEARCH = '/scientific-research';
   static const ITEM_SCIENTIFIC_RESEARCH = '/item-scientific-research';
+  static const ADD_ITEM_SCIENTIFIC_RESEARCH = '/add-item-scientific-research';
   static const ELEARNING = '/elearning';
   static const DOCUMENT_FORM = '/document-form';
   static const ONE_GATE = '/one-gate';

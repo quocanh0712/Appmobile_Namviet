@@ -7,6 +7,7 @@ import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/data/bean/user_object/user_object.dart';
+import 'package:ftu_lms/data/remote/interfaces/base_response_object.dart';
 import 'package:ftu_lms/data/repositories/user_repository.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/utils/biometric_auth/biometric_authenticator.dart';
@@ -209,6 +210,10 @@ class LoginController extends BaseController {
         // share external User Id
         OneSignal.shared
             .setExternalUserId(user.result?.iduser ?? Constants.EMPTY);
+        print('------------------${user.result!.accessToken}');
+
+
+
 
         Get.offAllNamed(Routes.DASHBOARD);
       } else {

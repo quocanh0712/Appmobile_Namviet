@@ -12,6 +12,8 @@ import 'package:ftu_lms/utils/constants.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../routes/app_pages.dart';
+
 class ItemScientificResearchController extends BaseListController {
   ScientificResearchResponse? _scientificResearchResponse;
 
@@ -54,5 +56,9 @@ class ItemScientificResearchController extends BaseListController {
       EasyLoading.showToast(LocaleKeys.commonErrorMessage.tr,
           duration: ToastDuration.LENGTH_SHORT, toastPosition: EasyLoadingToastPosition.bottom);
     }
+  }
+
+    void navigateAddItemScientificResearch() {
+    Get.toNamed(Routes.ADD_ITEM_SCIENTIFIC_RESEARCH );
   }
 }

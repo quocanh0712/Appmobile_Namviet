@@ -879,7 +879,6 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
       _buildChatDisplayItem(context, '', 'Nhóm Đồ Án', 'Huỳnh Bùi Đức',
           'Nay có đi học không vậyffffffffffffffffff', ' 22 giờ', () {
         _showNotificationDialog(context);
-        ;
       }),
       _buildChatDisplayItem(
           context,

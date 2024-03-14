@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:get/get.dart';
 
-import '../../base/base_appbar_view.dart';
 import '../controllers/report_task_controller.dart';
 import '../model/report_task_response.dart';
 import 'report_process_view.dart';

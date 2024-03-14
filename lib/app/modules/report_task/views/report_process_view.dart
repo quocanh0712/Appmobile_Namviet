@@ -100,7 +100,7 @@ abstract class ReportProcessView<T extends BaseListController>
                     height: 24,
                     color: context.themeExtensions.textColor),
               )),
-              Expanded(
+              const Expanded(
                   child: InkWell(
                 child: Text("Theo dõi"),
               )),

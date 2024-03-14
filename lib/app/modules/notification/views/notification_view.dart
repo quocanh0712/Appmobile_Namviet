@@ -4,7 +4,6 @@
 
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
 import 'package:ftu_lms/app/modules/base/base_app_bar_widget.dart';
 import 'package:ftu_lms/app/modules/base/infinite_list/base_infinite_lis_view_with_binding_creator.dart';

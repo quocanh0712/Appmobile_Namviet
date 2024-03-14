@@ -9,7 +9,6 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:ftu_lms/app/modules/base/base_view.dart';
 import 'package:ftu_lms/app/modules/login/controllers/login_controller.dart';
 import 'package:ftu_lms/generated/assets.gen.dart';
-import 'package:ftu_lms/generated/colors.gen.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:get/get.dart';
@@ -87,7 +86,7 @@ class LoginView extends BaseView<LoginController> {
                                           DropdownButton(
                                             // Initial Value
                                             isExpanded: true,
-                                            hint: new Text(
+                                            hint: const Text(
                                                 // "---Mời chọn đơn vị---"),
                                                 "Trường Đại học Nông Lâm Thái Nguyên"),
                                             value: 1,

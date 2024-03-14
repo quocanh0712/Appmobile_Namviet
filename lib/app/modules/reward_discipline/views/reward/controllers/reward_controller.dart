@@ -32,6 +32,7 @@ class RewardController extends BaseInfiniteListController<RewardResponse> {
     return repository.getListReward(RewardDisciplineRequest(
       startindex: pageNumber,
       length: defaultItemsPerPageCount,
-    ));
+    )
+    );
   }
 }

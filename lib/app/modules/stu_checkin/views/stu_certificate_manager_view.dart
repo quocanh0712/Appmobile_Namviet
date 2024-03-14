@@ -12,7 +12,6 @@ import '../../../../generated/locales.g.dart';
 import '../../../../widgets/custom_bottom_sheet.dart';
 import '../../../../widgets/search_advance_view.dart';
 import '../../base/base_appbar_view.dart';
-import '../controllers/list_stu_checkin_controller.dart';
 import '../controllers/stu_certificate_manager_controller.dart';
 
 class StuCertificateManagerView

@@ -16,7 +16,6 @@ import '../../../../generated/assets.gen.dart';
 import '../../../../generated/locales.g.dart';
 import '../../../../widgets/custom_bottom_sheet.dart';
 import '../controllers/schedule_time_controller.dart';
-import '../model/schedule_time_request.dart';
 
 class ScheduleTimeView extends BaseListView<ScheduleTimeController> {
   ScheduleTimeView({super.key});
@@ -62,7 +61,7 @@ class ScheduleTimeView extends BaseListView<ScheduleTimeController> {
                       ),
                     ),
                     const SizedBox(
-                      height: 6,
+                      height: 10,
                     ),
                     Align(
                       alignment: Alignment.topCenter,
@@ -189,6 +188,7 @@ class ScheduleTimeView extends BaseListView<ScheduleTimeController> {
                                       ),
                                     )
                                   : Container(),
+
                             ],
                           )
                         ],

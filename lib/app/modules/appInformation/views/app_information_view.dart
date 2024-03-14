@@ -170,9 +170,4 @@ class AppInformationView extends BaseBindingCreatorView<AppInformationBinding,
     await launchUrl(launchUri);
   }
 
-  Future<void> _launchInBrowser(Uri url) async {
-    if (!await launchUrl(url, mode: LaunchMode.externalApplication)) {
-      throw 'Could not launch $url';
-    }
-  }
 }

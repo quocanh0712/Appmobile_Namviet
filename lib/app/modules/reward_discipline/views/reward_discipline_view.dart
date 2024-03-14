@@ -24,6 +24,7 @@ class RewardDisciplineView extends BaseView<RewardDisciplineController> {
       child: DefaultTabController(
         length: 2,
         child: Scaffold(
+
           body: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,

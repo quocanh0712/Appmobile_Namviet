@@ -18,20 +18,8 @@ class CreateNewCertificateController extends BaseController {
 
   Rx<String> base64Image = "".obs;
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   sendNewCertificate() async {
     if (base64Image.value.isNotEmpty &&

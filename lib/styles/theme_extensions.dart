@@ -106,7 +106,8 @@ class $_ThemeExtensions {
 
   static const subTexMediumTextStyle = TextStyle(
       fontSize: 14,
-      fontFamily: LMSFontFamily.sfCompactMedium,
+      //fontFamily: LMSFontFamily.sfCompactMedium,
+      fontFamily: 'Poppins',
       fontWeight: FontWeight.w600,
       height: 1.3,
       letterSpacing: 1.2,

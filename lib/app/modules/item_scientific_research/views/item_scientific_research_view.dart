@@ -20,7 +20,9 @@ class ItemScientificResearchView extends BaseListView<ItemScientificResearchCont
   @override
   Widget itemView(BuildContext context, int index) {
     ItemScientificResearchResponse? response = controller.getItem(index);
-    if (response == null) return Container();
+
+    String postAt = response!.postAt.toString(); // Lấy giá trị của trường "postAt" từ dữ liệu
+    String formattedDate = postAt.substring(0, 10);
     return Column(
       children: [
         const SizedBox(
@@ -36,13 +38,16 @@ class ItemScientificResearchView extends BaseListView<ItemScientificResearchCont
                 alignment: Alignment.topLeft,
                 child: Column(
                   children: [
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        response.title ?? Constants.EMPTY,
-                        style: context.themeExtensions.paragraph
-                            .copyWith(color: context.themeExtensions.textColor),
-                        maxLines: 2,
+                    Container(
+                      color: Colors.white,
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          response.title ?? Constants.EMPTY,
+                          style: context.themeExtensions.paragraph
+                              .copyWith(color: context.themeExtensions.textColor),
+                          maxLines: 2,
+                        ),
                       ),
                     ),
                     const SizedBox(
@@ -55,7 +60,7 @@ class ItemScientificResearchView extends BaseListView<ItemScientificResearchCont
                               child: Text(
                             response.postOn ?? Constants.EMPTY,
                             style: context.themeExtensions.smallTex
-                                .copyWith(color: context.themeExtensions.textColor),
+                                .copyWith(color: context.themeExtensions.secondGreen, fontWeight: FontWeight.bold),
                             maxLines: 2,
                           )),
                           const SizedBox(
@@ -66,7 +71,7 @@ class ItemScientificResearchView extends BaseListView<ItemScientificResearchCont
                           Align(
                             alignment: Alignment.center,
                             child: Assets.images.icDot
-                                .svg(fit: BoxFit.cover, color: context.themeExtensions.textGrey),
+                                .svg(fit: BoxFit.cover, color: context.themeExtensions.textLightGrey),
                           ),
                           const SizedBox(
                             width: 10,
@@ -75,7 +80,7 @@ class ItemScientificResearchView extends BaseListView<ItemScientificResearchCont
                               child: Align(
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              response.postAt ?? Constants.EMPTY,
+                              formattedDate ?? Constants.EMPTY,
                               textAlign: TextAlign.left,
                               style: context.themeExtensions.smallTex
                                   .copyWith(color: context.themeExtensions.textGrey),
@@ -94,6 +99,7 @@ class ItemScientificResearchView extends BaseListView<ItemScientificResearchCont
               SizedBox(
                 width: 70,
                 height: 70,
+
                 child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(10)),
                     child: Image.network(response.imageUrl ?? Constants.EMPTY,
@@ -122,11 +128,11 @@ class ItemScientificResearchView extends BaseListView<ItemScientificResearchCont
   @override
   List<Widget>? actionAppBar(BuildContext context) {
     return [
-      IconButton(
-        onPressed: () async {},
-        icon: Assets.images.icAdd
-            .svg(width: 24, height: 24, color: context.themeExtensions.mainGreen),
-      ),
+      // IconButton(
+      //   onPressed: () => controller.navigateAddItemScientificResearch(),
+      //   icon: Assets.images.icAdd
+      //       .svg(width: 24, height: 24, color: context.themeExtensions.mainGreen),
+      // ),
     ];
   }
 

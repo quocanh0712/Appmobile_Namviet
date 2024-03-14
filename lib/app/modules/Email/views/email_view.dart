@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:get/get.dart';
 
-import '../../base/base_appbar_view.dart';
 import '../controllers/email_controller.dart';
 import '../model/email_response.dart';
 import 'email_process_view.dart';
@@ -34,7 +33,7 @@ class EmailView extends EmailProcessView<EmailController> {
 
   @override
   String? content1(int index) {
-    EmailResponse? response = controller.getItem(index);
+     EmailResponse? response = controller.getItem(index);
     return "${response?.NguoiGui}";
   }
 
