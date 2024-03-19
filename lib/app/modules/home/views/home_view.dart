@@ -29,6 +29,7 @@ import '../../../../generated/colors.gen.dart';
 import '../../../../styles/theme_extensions.dart';
 import '../../dashboard/controllers/dashboard_controller.dart';
 import '../../dashboard/models/bot_nav_items.dart';
+import '../../practicePoints/practicePointDetail/views/practice_point_detail_view.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
@@ -216,6 +217,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
 
                           ///show recent activity
                           _buildRecentActivities(context),
+
                         ],
                       ),
                     ),
@@ -1010,6 +1012,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
   Widget _buildTeacherMainFeatures(BuildContext context,
       {bool? isShowAll = false}) {
     List<Widget> eduItemList = [
+
+
       //20
       //abc
       _buildListFeatureItem(

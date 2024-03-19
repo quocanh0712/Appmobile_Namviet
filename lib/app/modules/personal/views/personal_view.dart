@@ -46,6 +46,7 @@ class PersonalView
         BoxShadow(blurRadius: 0, color: context.themeExtensions.transparent)
       ],
       body: Scaffold(
+
         body: Stack(
           children: [
             Assets.images.universityBuilding
