@@ -57,7 +57,10 @@ class SemesterModel {
 final List<SessionModel> listSessionModel = [
   SessionModel(1, LocaleKeys.sessionOne.tr),
   SessionModel(2, LocaleKeys.sessionTwo.tr),
-  SessionModel(3, LocaleKeys.sessionThree.tr)
+  SessionModel(3, LocaleKeys.sessionThree.tr),
+  SessionModel(4, LocaleKeys.sessionFour.tr),
+  SessionModel(5, LocaleKeys.sessionFive.tr),
+
 ];
 
 class SessionModel {

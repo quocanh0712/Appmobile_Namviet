@@ -50,7 +50,7 @@ class PersonalView
         body: Stack(
           children: [
             Assets.images.universityBuilding
-                .image(width: double.infinity, fit: BoxFit.cover),
+                .image(width: double.infinity, fit: BoxFit.cover, height: 380),
             Container(
               width: double.infinity,
               height: 445,

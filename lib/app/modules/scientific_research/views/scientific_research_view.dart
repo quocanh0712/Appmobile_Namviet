@@ -3,12 +3,14 @@
 // coverage:ignore-file
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ftu_lms/app/modules/base/base_list_view.dart';
 import 'package:ftu_lms/generated/assets.gen.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:ftu_lms/utils/constants.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/scientific_research_controller.dart';
 
@@ -42,8 +44,7 @@ class ScientificResearchView extends BaseListView<ScientificResearchController> 
                   alignment: Alignment.centerLeft,
                   child: Text(
                     controller.getItem(index).type ?? Constants.EMPTY,
-                    style: context.themeExtensions.paragraph
-                        .copyWith(color: context.themeExtensions.textColor),
+                    style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 12.sp),
                     textAlign: TextAlign.left,
                   ),
                 )),

@@ -157,7 +157,7 @@ class TrackProgressView extends BaseBindingCreatorView<TrackProgressBinding,
     const List<DataRow> dataWeekRow = [
       DataRow(cells: [
         DataCell(Text('11')),
-        DataCell(Text('10-VBD/ĐHNTTW')),
+        DataCell(Text('20-VBD/ĐHNTTW')),
         DataCell(Text('Bộ Giáo dục và Đào tạo')),
         DataCell(Text('17/10/2023')),
         DataCell(Text('Bộ Giáo dục và Đào tạo')),

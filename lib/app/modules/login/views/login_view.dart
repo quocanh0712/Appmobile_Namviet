@@ -12,6 +12,7 @@ import 'package:ftu_lms/generated/assets.gen.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LoginView extends BaseView<LoginController> {
   LoginView({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class LoginView extends BaseView<LoginController> {
                 children: [
                   Stack(children: [
                     Assets.images.universityBuilding
-                        .image(width: double.infinity, fit: BoxFit.cover),
+                        .image(width: double.infinity, fit: BoxFit.cover, height: 380),
                     Container(
                       width: double.infinity,
                       height: Get.width * 1.1,
@@ -83,26 +84,27 @@ class LoginView extends BaseView<LoginController> {
                                               width: 100,
                                               alignment:
                                                   AlignmentDirectional.center),
-                                          DropdownButton(
-                                            // Initial Value
-                                            isExpanded: true,
-                                            hint: const Text(
-                                                // "---Mời chọn đơn vị---"),
-                                                "Trường Đại học Nông Lâm Thái Nguyên"),
-                                            value: 1,
-                                            // Down Arrow Icon
-                                            icon: const Icon(
-                                                Icons.keyboard_arrow_down),
-                                            items: loginController.list,
-                                            onChanged: (value) {
-                                              loginController.list.first =
-                                                  loginController.list
-                                                      .firstWhere((e) =>
-                                                          e.value == value);
-                                              loginController
-                                                  .getValueDropDown(value);
-                                            },
-                                          ),
+                                          Text(
+                                            // "---Mời chọn đơn vị---"),
+                                              "Trường Đại học Nông Lâm Thái Nguyên", style: GoogleFonts.roboto(fontWeight: FontWeight.bold, fontSize: 16)),
+                                          // DropdownButton(
+                                          //   // Initial Value
+                                          //   isExpanded: true,
+                                          //   hint: const
+                                          //   value: 1,
+                                          //   // Down Arrow Icon
+                                          //   icon: const Icon(
+                                          //       Icons.keyboard_arrow_down),
+                                          //   items: loginController.list,
+                                          //   onChanged: (value) {
+                                          //     loginController.list.first =
+                                          //         loginController.list
+                                          //             .firstWhere((e) =>
+                                          //                 e.value == value);
+                                          //     loginController
+                                          //         .getValueDropDown(value);
+                                          //   },
+                                          // ),
                                         ],
                                       )),
                                 //-----------------------

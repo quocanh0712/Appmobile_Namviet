@@ -13,6 +13,7 @@ import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:ftu_lms/utils/constants.dart';
 import 'package:ftu_lms/utils/date_time_utils.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 abstract class BaseServiceRequestListView<C extends BaseInfiniteListController>
     extends BaseInfiniteListView<C> {
@@ -68,6 +69,7 @@ abstract class BaseServiceRequestListView<C extends BaseInfiniteListController>
                 ),
                 Container(
                     decoration: BoxDecoration(
+                      color: _retrieveStatusColor(context, item.status),
                       borderRadius: const BorderRadius.all(Radius.circular(8)),
                       border: Border.all(
                         color: _retrieveStatusColor(context, item.status),
@@ -77,8 +79,7 @@ abstract class BaseServiceRequestListView<C extends BaseInfiniteListController>
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     child: AutoSizeText(
                       _retrieveStatusString(item.status),
-                      style: context.themeExtensions.smallTex
-                          .copyWith(color: _retrieveStatusColor(context, item.status)),
+                      style: GoogleFonts.cabin(color: context.themeExtensions.white, letterSpacing: -0.1, fontSize: 14, fontWeight: FontWeight.bold),
                     )),
               ],
             ).paddingSymmetric(vertical: 14),
@@ -106,3 +107,7 @@ abstract class BaseServiceRequestListView<C extends BaseInfiniteListController>
 
   void navigateDetailServiceRequest(int? index) {}
 }
+
+
+
+

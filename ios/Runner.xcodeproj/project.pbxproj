@@ -486,7 +486,7 @@
 				MARKETING_VERSION = 0.0.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.namvietjsc.ufledu.OneSignalNotificationServiceExtention;
+				PRODUCT_BUNDLE_IDENTIFIER = com.namvietjsc.eufl.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = NO;
@@ -549,8 +549,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtensionProfile.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = DTMKFFK6WC;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -567,10 +566,9 @@
 				);
 				MARKETING_VERSION = 0.0.1;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.essoft.ftulms.stg.OneSignalNotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.namvietjsc.eufl.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Stg FTULMS OneSignalNotificationServiceExtension";
 				SKIP_INSTALL = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -640,11 +638,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = WMNY6F6ZYN;
+				DEVELOPMENT_TEAM = DTMKFFK6WC;
 				ENABLE_BITCODE = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GOOGLE_SERVICE_INFO_PLIST_NAME = "GoogleService-Info.stg.plist";
@@ -657,10 +653,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.essoft.ftulms.stg;
+				PRODUCT_BUNDLE_IDENTIFIER = com.namvietjsc.eufl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "Stg ESSoft FTU LMS";
 				RUN_DOCUMENTATION_COMPILER = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
@@ -810,7 +805,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.namvietjsc.ufledu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.namvietjsc.eufl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				RUN_DOCUMENTATION_COMPILER = YES;

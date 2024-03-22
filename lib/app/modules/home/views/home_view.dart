@@ -27,6 +27,7 @@ import 'dart:io' show Platform;
 import '../../../../generated/assets.gen.dart';
 import '../../../../generated/colors.gen.dart';
 import '../../../../styles/theme_extensions.dart';
+import '../../../routes/app_pages.dart';
 import '../../dashboard/controllers/dashboard_controller.dart';
 import '../../dashboard/models/bot_nav_items.dart';
 import '../../practicePoints/practicePointDetail/views/practice_point_detail_view.dart';
@@ -210,7 +211,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                           _buildBannerWithPadding(context),
 
                           ///Teacher or student amenities
-                           _retrieveUtilitiesFeaturesByUser(context),
+                          // _retrieveUtilitiesFeaturesByUser(context),
 
                           ///show outstanding activity
                           _buildOutstandingActivities(context),
@@ -1443,20 +1444,28 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         onTap: () => controller.navigateToCheckInDevice(),
       ),
       //6
+
+      //webview
       _buildMainFeatureItem(
         context,
         onTap: () {
           if (Platform.isIOS) {
-            launchUrl(
-              Uri.parse('https://viettech.itch.io/map3d'),
-              mode: LaunchMode.inAppWebView,
-            );
+            // launchUrl(
+            //   Uri.parse('https://viettech.itch.io/map3d'),
+            //   mode: LaunchMode.inAppWebView,
+            // );
+            Fimber.d("navigateToMapWevView()");
+            Get.toNamed(Routes.MAP_WEBVIEW);
+
           } else {
-            launchUrl(
-              Uri.parse('https://viettech.itch.io/map3d'),
-              mode: LaunchMode.externalNonBrowserApplication,
-            );
+            // launchUrl(
+            //   Uri.parse('https://viettech.itch.io/map3d'),
+            //   mode: LaunchMode.externalNonBrowserApplication,
+            // );
+            Fimber.d("navigateToMapWevView()");
+            Get.toNamed(Routes.MAP_WEBVIEW);
           }
+
         },
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         icon: const Icon(
@@ -1725,7 +1734,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                     Expanded(
                       child: PageView.builder(
                         controller: controller.pageTeacherController,
-                        itemCount: (mainFeatureItemList.length / 6).ceil(),
+                        //itemCount: (mainFeatureItemList.length / 6).ceil(),
+                        itemCount: 2,
                         onPageChanged: (int page) {
                           controller.currentPage.value = page;
                         },
@@ -1762,7 +1772,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
-                  (mainFeatureItemList.length / 6).ceil(),
+                  (mainFeatureItemList.length / 10).ceil(),
                   (index) => Obx(() => Container(
                         width: 6,
                         height: 6,

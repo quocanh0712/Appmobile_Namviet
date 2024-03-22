@@ -99,6 +99,7 @@ abstract class Routes {
   static const STATISTICAL = _Paths.STATISTICAL;
   static const TRACK_PROGRESS = _Paths.TRACK_PROGRESS;
   static const TEACHER_SCHEDULE_TIME = _Paths.TEACHER_SCHEDULE_TIME;
+  static const MAP_WEBVIEW = _Paths.MAP_WEBVIEW;
 }
 
 abstract class _Paths {
@@ -193,4 +194,5 @@ abstract class _Paths {
   static const STATISTICAL = '/statistical';
   static const TRACK_PROGRESS = '/track-progress';
   static const TEACHER_SCHEDULE_TIME = '/teacher-schedule-time';
+  static const MAP_WEBVIEW = '/map_webview';
 }

@@ -80,6 +80,8 @@ class LocaleKeys {
   static const sessionOne = 'sessionOne';
   static const sessionTwo = 'sessionTwo';
   static const sessionThree = 'sessionThree';
+  static const sessionFour = 'sessionFour';
+  static const sessionFive = 'sessionFive';
   static const oneStopService = 'oneStopService';
   static const personalInfo = 'personalInfo';
   static const changePassword = 'changePassword';
@@ -454,10 +456,13 @@ class Locales {
     'semesterOne': 'Học kì 1',
     'semesterTwo': 'Học kì 2',
     'semesterThree': 'Học kì 3',
+
     'chooseSession': 'Chọn đợt học',
     'sessionOne': 'Đợt 1',
     'sessionTwo': 'Đợt 2',
     'sessionThree': 'Đợt 3',
+    'sessionFour': 'Đợt 4',
+    'sessionFive': 'Đợt 5',
     'oneStopService': 'Dịch vụ một cửa',
     'personalInfo': 'Thông tin cá nhân',
     'changePassword': 'Thay đổi mật khẩu',
@@ -835,6 +840,8 @@ class Locales {
     'sessionOne': 'Đợt 1',
     'sessionTwo': 'Đợt 2',
     'sessionThree': 'Đợt 3',
+    'sessionFour': 'Đợt 4',
+    'sessionFive': 'Đợt 5',
     'oneStopService': 'Dịch vụ một cửa',
     'personalInfo': 'Thông tin cá nhân',
     'changePassword': 'Thay đổi mật khẩu',

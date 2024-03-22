@@ -17,6 +17,7 @@ import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:get/get.dart';
 import 'package:sliding_up_panel2/sliding_up_panel2.dart';
 import 'package:status_bar_control/status_bar_control.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../../../generated/assets.gen.dart';
 
@@ -41,6 +42,8 @@ class HomeController extends BaseController {
   final homeRepo = Get.find<HomeRepository?>();
   Rx<UserObject?> userObject = UserObject().obs;
   Rx<UserPermission>? userPermission = UserPermission.none.obs;
+
+
 
   int? idDonVi = 0;
   Rx<String> title = "NAM VIỆT JSC".obs;
@@ -189,6 +192,10 @@ class HomeController extends BaseController {
       title = LocaleKeys.otherScheduleTimeTitle.tr;
     }
     Get.toNamed(Routes.SCHEDULE_TIME, arguments: title);
+  }
+
+  navigateToWebView(){
+
   }
 
   navigateToOneGate() {

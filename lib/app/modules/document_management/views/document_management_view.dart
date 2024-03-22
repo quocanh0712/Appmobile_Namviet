@@ -164,7 +164,7 @@ class DocumentManagementView extends BaseBindingCreatorView<
     const List<DataRow> dataIncomingRow = [
       DataRow(cells: [
         DataCell(Text('11')),
-        DataCell(Text('10-VBD/ĐHNTTW')),
+        DataCell(Text('20-VBD/ĐHNTTW')),
         DataCell(Text('Bộ Giáo dục và Đào tạo')),
         DataCell(Text('17/10/2023')),
         DataCell(Text('Bộ Giáo dục và Đào tạo')),
@@ -259,7 +259,7 @@ class DocumentManagementView extends BaseBindingCreatorView<
     ];
     const List<DataRow> dataOutgoingRow = [
       DataRow(cells: [
-        DataCell(Text('10-VBD/ĐHNTTW')),
+        DataCell(Text('155-VBD/ĐHNTTW')),
         DataCell(Text('Bộ Giáo dục và Đào tạo')),
         DataCell(Text('17/10/2023')),
         DataCell(Text('Đang xử lý'))

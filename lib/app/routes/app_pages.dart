@@ -73,6 +73,7 @@ import '../modules/list_teacher_info/bindings/list_teacher_info_binding.dart';
 import '../modules/list_teacher_info/views/list_teacher_info_view.dart';
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
+import '../modules/map_webview/views/map_webview.dart';
 import '../modules/notification/bindings/notification_binding.dart';
 import '../modules/notification/notificationDetails/bindings/notification_details_binding.dart';
 import '../modules/notification/notificationDetails/views/notification_details_view.dart';
@@ -636,6 +637,9 @@ class AppPages {
       page: () => const TeacherScheduleTimeView(),
       binding: TeacherScheduleTimeBinding(),
     ),
-
+    GetPage(
+      name: _Paths.MAP_WEBVIEW,
+      page: () => const MapWebView(),
+    ),
   ];
 }

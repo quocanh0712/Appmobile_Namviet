@@ -25,6 +25,7 @@ class DocumentFormView extends BaseListView<DocumentFormController> {
     if (item == null) return Container();
     return Container(
       padding: const EdgeInsets.only(top: 10, bottom: 10),
+
       child: Row(
         children: [
           Expanded(

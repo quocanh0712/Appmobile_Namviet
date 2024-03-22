@@ -3,6 +3,7 @@
 // coverage:ignore-file
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ftu_lms/app/modules/base/base_list_view.dart';
 import 'package:ftu_lms/app/modules/educationProgram/controllers/education_program_controller.dart';
 import 'package:ftu_lms/app/modules/educationProgram/model/education_program_response.dart';
@@ -32,7 +33,7 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
       padding: const EdgeInsets.only(bottom: 3.0),
       child: Container(
         //padding: const EdgeInsets.only(top: 8, bottom: 8),
-        height: 50,
+        height: 50.h,
         decoration: BoxDecoration(
           color: hearderTableColor,
           border: Border.all(color: borderHearderTableColor, width: 1.5),
@@ -42,8 +43,8 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              width: 50,
-              height: 40,
+              width: 50.w,
+              height: 40.h,
               decoration: BoxDecoration(
                   border: Border(
                 right: BorderSide(color: borderHearderTableColor, width: 1.5),
@@ -58,8 +59,8 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
                 ),
               ),
             ),
-            const SizedBox(
-              width: 5,
+             SizedBox(
+              width: 5.w,
             ),
             Expanded(
                 child: Text(
@@ -69,12 +70,12 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
                   color: Get.context?.themeExtensions.black,
                   fontWeight: FontWeight.bold),
             )),
-            const SizedBox(
-              width: 5,
+             SizedBox(
+              width: 5.w,
             ),
             Container(
-              width: 85,
-              height: 40,
+              width: 85.w,
+              height: 40.h,
               decoration: BoxDecoration(
                   border: Border(
                 right: BorderSide(color: borderHearderTableColor, width: 1.5),
@@ -95,7 +96,7 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
             //   width: 10,
             // ),
             SizedBox(
-              width: 65,
+              width: 65.w,
               child: Align(
                 alignment: Alignment.center,
                 child: Text(
@@ -126,8 +127,8 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Container(
-                width: 50,
-                height: 60,
+                width: 50.w,
+                height: 60.h,
                 child: Align(
                   alignment: Alignment.center,
                   child: Text(
@@ -140,8 +141,8 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
               ),
 
               Container(
-                width: 230,
-                height: 70,
+                width: 160.w,
+                height: 70.h,
                 decoration: BoxDecoration(
                     border: Border(
                   right: BorderSide(color: borderHearderTableColor, width: 1.5),
@@ -161,7 +162,7 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
                 ),
               ),
               SizedBox(
-                width: 82,
+                width: 82.w,
                 child: Text(
                   response.numbercredits?.toString() ?? Constants.EMPTY,
                   textAlign: TextAlign.center,
@@ -171,8 +172,8 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
               ),
 
               Container(
-                width: 65,
-                height: 70,
+                width: 65.w,
+                height: 70.h,
                 decoration: BoxDecoration(
                     border: Border(
                       left: BorderSide(color: borderHearderTableColor, width: 1.5),
@@ -191,7 +192,7 @@ class EducationProgramView extends BaseListView<EducationProgramController> {
           ),
         ),
         Divider(
-          height: 6,
+          height: 6.h,
           color: borderHearderTableColor,
         ),
       ],

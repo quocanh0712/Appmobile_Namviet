@@ -76,6 +76,9 @@ dependencies:
       ref: master
   cli_script: ^0.3.1
   google_fonts: ^4.0.4
+  flutter_screenutil: ^5.9.0
+  webview_flutter: ^4.5.0
+  flutter_inappwebview: ^6.0.0
 
 
 

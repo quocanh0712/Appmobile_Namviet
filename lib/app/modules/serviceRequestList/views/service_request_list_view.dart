@@ -14,6 +14,7 @@ import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:ftu_lms/widgets/decorated_tab_bar.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/service_request_list_controller.dart';
 
@@ -37,11 +38,10 @@ class ServiceRequestListView extends BaseView<ServiceRequestListController> {
               const SizedBox(height: 7),
               DecoratedTabBar(
                 tabBar: TabBar(
-                  isScrollable: true,
-                  unselectedLabelStyle: context.themeExtensions.subTex
-                      .copyWith(color: context.themeExtensions.textGrey),
-                  labelStyle: context.themeExtensions.subTexMedium
-                      .copyWith(color: context.themeExtensions.black),
+
+                  isScrollable: false,
+                  unselectedLabelStyle:GoogleFonts.cabin(color: context.themeExtensions.textGrey ,letterSpacing: -0.1, fontSize: 14),
+                  labelStyle: GoogleFonts.cabin(color: context.themeExtensions.black, letterSpacing: -0.1, fontSize: 14, fontWeight: FontWeight.bold),
                   labelColor: context.themeExtensions.black,
                   indicatorColor: context.themeExtensions.mainGreen,
                   tabs: [
