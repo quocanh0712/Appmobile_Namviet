@@ -11,6 +11,7 @@ import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:ftu_lms/utils/constants.dart';
 import 'package:ftu_lms/widgets/search_text_field.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/document_form_controller.dart';
 
@@ -37,8 +38,7 @@ class DocumentFormView extends BaseListView<DocumentFormController> {
                 Text(
                   item.formname ?? Constants.EMPTY,
                   maxLines: 2,
-                  style: context.themeExtensions.paragraphSemiBold
-                      .copyWith(color: context.themeExtensions.textColor),
+                  style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(
                   height: 3,
@@ -46,8 +46,7 @@ class DocumentFormView extends BaseListView<DocumentFormController> {
                 Text(
                   item.filename ?? Constants.EMPTY,
                   maxLines: 2,
-                  style: context.themeExtensions.smallTex
-                      .copyWith(color: context.themeExtensions.dartmouthGreen),
+                  style: GoogleFonts.openSans(color: context.themeExtensions.dartmouthGreen, fontSize: 13),
                 ),
               ],
             ),

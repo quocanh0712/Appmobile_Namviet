@@ -9,6 +9,7 @@ import 'package:dotted_line/dotted_line.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/app/modules/base/binding_creator.dart';
 import 'package:ftu_lms/app/modules/home/bindings/home_binding.dart';
@@ -495,13 +496,12 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             children: [
               AutoSizeText(
                 LocaleKeys.recentActivities.tr,
-                style: context.themeExtensions.paragraphSemiBold
-                    .copyWith(color: context.themeExtensions.textColor),
+                style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontSize: 16, fontWeight: FontWeight.bold),
               ),
               AutoSizeText(
                 LocaleKeys.viewMore.tr,
-                style: context.themeExtensions.subTex
-                    .copyWith(color: context.themeExtensions.mainGreen),
+                style: GoogleFonts.openSans(color: context.themeExtensions.mainGreen, fontSize: 12 , fontWeight: FontWeight
+                .w800),
               )
             ],
           ),
@@ -514,15 +514,23 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               itemCount: controller.lstRecentActivities.length,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.only(left:10.0),
+                  padding: const EdgeInsets.only(left: 8.0, right: 5,bottom: 5),
                   child: Container(
                       width: 300,
                       decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(10)
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.2),
+                            spreadRadius: 1,
+                            blurRadius: 1,
+                            offset: const Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
                       ),
                       child: _buildActivityItem(context,
-                          recentActivity: controller.lstRecentActivities[index])),
+                          recentActivity: controller.lstRecentActivities[index], )),
                 );
               }),
         ),
@@ -544,8 +552,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                 AutoSizeText(
                   'Tin tức nhà trường',
                   // LocaleKeys.outstandingActivity.tr,
-                  style: context.themeExtensions.paragraphSemiBold
-                      .copyWith(color: context.themeExtensions.textColor),
+                  style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 // AutoSizeText(
                 //   LocaleKeys.viewMore.tr,
@@ -566,17 +573,25 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               itemCount: controller.lstOutstandingActivities.length,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.only(left: 8.0),
+                  padding: const EdgeInsets.only(left: 8.0, right: 5,bottom: 5),
                   child: Container(
 
                       width: 300,
                       decoration: BoxDecoration(
-                        color: Colors.red,
-                        borderRadius: BorderRadius.circular(10)
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.2),
+                            spreadRadius: 1,
+                            blurRadius: 1,
+                            offset: const Offset(0, 3), // changes position of shadow
+                          ),
+                        ],
 
                       ),
                       child: _buildActivityItem(context,
-                          isRecentActivity: true,
+                          isRecentActivity: false,
                           outstandingActivity:
                               controller.lstOutstandingActivities[index])),
                 );
@@ -747,8 +762,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                   : BorderRadius.circular(10),
               child: CachedNetworkImage(
                 imageUrl: isRecentActivity == true
-                    ? outstandingActivity?.image ?? ''
-                    : recentActivity?.image ?? '',
+                    ? recentActivity?.image ?? ''
+                    : outstandingActivity?.image ?? '',
                 fit: BoxFit.cover,
                 placeholder: (context, url) =>
                     const CircularProgressIndicator(),
@@ -769,12 +784,12 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 AutoSizeText(isRecentActivity == true
-                    ? outstandingActivity?.title ?? ''
-                    : recentActivity?.title ?? ''),
+                    ? recentActivity?.title ?? ''
+                    : outstandingActivity?.title ?? '', style: GoogleFonts.openSans(fontWeight: FontWeight.w700, fontSize: 16, color: Colors.black),),
                 const SizedBox(height: 30),
                 AutoSizeText(isRecentActivity == true
-                    ? outstandingActivity?.content ?? ''
-                    : recentActivity?.content ?? '')
+                    ? recentActivity?.content ?? ''
+                    : outstandingActivity?.content ?? '', style: GoogleFonts.openSans(fontWeight: FontWeight.w500, fontSize: 14))
               ],
             ),
           ),
@@ -906,7 +921,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                       ),
                       AutoSizeText(
                         "${Jiffy().EEEE}, ${Jiffy().date}/${Jiffy().month}/${Jiffy().year}",
-                        style: GoogleFonts.openSans(color: Colors.grey.shade800, fontWeight: FontWeight.normal, fontSize: 14)
+                        style: GoogleFonts.openSans(color: Colors.grey.shade800, fontWeight: FontWeight.w500, fontSize: 14)
                       ),
                       const SizedBox(height: 7),
                     ],
@@ -982,7 +997,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             const SizedBox(width: 7),
             AutoSizeText(
               time ?? "10h-11h",
-              style: GoogleFonts.openSans(color: Colors.black, fontWeight: FontWeight.w500, fontSize: 14)
+              style: GoogleFonts.openSans(color: Colors.black, fontWeight: FontWeight.w600, fontSize: 14)
             )
           ],
         ),
@@ -992,7 +1007,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
             subject ?? "",
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
-            style: GoogleFonts.openSans(color: Colors.grey.shade700, fontWeight: FontWeight.normal, fontSize: 14)
+            style: GoogleFonts.openSans(color: Colors.green.shade700, fontWeight: FontWeight.w600, fontSize: 13)
           ),
         )
       ],
@@ -1017,35 +1032,35 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
 
       //20
       //abc
-      _buildListFeatureItem(
-        context,
-        onTap: () => controller.navigateToListClassManagerTitle(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-
-
-        // icon: Icon(
-        //   Icons.file_copy_outlined,
-        //   //color: const Color(0xFF4da543).withOpacity(0.75),
-        //   color: Colors.red,
-        //   size: 30,
-        // ),
-        image: const Image(image: AssetImage('assets/Icon/21.png',), fit: BoxFit.cover, ),
-        title: LocaleKeys.executiveDocuments.tr,
-      ),
+      // _buildListFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToListClassManagerTitle(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //
+      //
+      //   // icon: Icon(
+      //   //   Icons.file_copy_outlined,
+      //   //   //color: const Color(0xFF4da543).withOpacity(0.75),
+      //   //   color: Colors.red,
+      //   //   size: 30,
+      //   // ),
+      //   image: const Image(image: AssetImage('assets/Icon/21.png',), fit: BoxFit.cover, ),
+      //   title: LocaleKeys.executiveDocuments.tr,
+      // ),
       //21
-      _buildListFeatureItem(
-        context,
-        onTap: () => controller.navigateToSendRequest(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        // icon: Icon(
-        //   Icons.send_to_mobile,
-        //   //color: const Color(0xFF4da543).withOpacity(0.75),
-        //   color: Colors.white,
-        //   size: 30,
-        // ),
-        image: const Image(image: AssetImage('assets/Icon/07.png',), fit: BoxFit.cover, ),
-        title: LocaleKeys.sendRequest.tr,
-      ),
+      // _buildListFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToSendRequest(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //   // icon: Icon(
+      //   //   Icons.send_to_mobile,
+      //   //   //color: const Color(0xFF4da543).withOpacity(0.75),
+      //   //   color: Colors.white,
+      //   //   size: 30,
+      //   // ),
+      //   image: const Image(image: AssetImage('assets/Icon/07.png',), fit: BoxFit.cover, ),
+      //   title: LocaleKeys.sendRequest.tr,
+      // ),
       //1
       _buildListFeatureItem(
         context,
@@ -1107,6 +1122,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         image: const Image(image: AssetImage('assets/Icon/08.png',), fit: BoxFit.cover, ),
         title: LocaleKeys.eLearning.tr,
         onTap: () => controller.navigateToELearning(),
+        //onTap: () => showNotificationDialog(context),
       ),
     ];
     List<Widget> trackerList = [
@@ -1122,7 +1138,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         // ),
         image: const Image(image: AssetImage('assets/Icon/19.png',), fit: BoxFit.cover, ),
         title: LocaleKeys.checkInDevice.tr,
-        onTap: () => controller.navigateToCheckInDevice(),
+        //onTap: () => controller.navigateToCheckInDevice(),
+        onTap: () => showNotificationDialog(context),
       ),
       //6
       _buildListFeatureItem(
@@ -1153,7 +1170,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       //7
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToTrackProgress(),
+        //onTap: () => controller.navigateToTrackProgress(),
+        onTap: () => showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.bookmarks,
@@ -1165,19 +1183,19 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         title: LocaleKeys.trackProgress.tr,
       ),
       //8
-      _buildListFeatureItem(
-        context,
-        onTap: () => controller.navigateToDocumentManagement(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        // icon: Icon(
-        //   Icons.bookmarks,
-        //   //color: const Color(0xFF4da543).withOpacity(0.75),
-        //   color: Colors.white,
-        //   size: 30,
-        // ),
-        image: const Image(image: AssetImage('assets/Icon/17.png',), fit: BoxFit.cover, ),
-        title: 'Theo dõi văn bản',
-      ),
+      // _buildListFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToDocumentManagement(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //   // icon: Icon(
+      //   //   Icons.bookmarks,
+      //   //   //color: const Color(0xFF4da543).withOpacity(0.75),
+      //   //   color: Colors.white,
+      //   //   size: 30,
+      //   // ),
+      //   image: const Image(image: AssetImage('assets/Icon/17.png',), fit: BoxFit.cover, ),
+      //   title: 'Theo dõi văn bản',
+      // ),
     ];
     List<Widget> timeSchedule = [
       //9
@@ -1303,7 +1321,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       //17
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToClassSurveyResult(),
+        //onTap: () => controller.navigateToClassSurveyResult(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.class_,
@@ -1345,7 +1364,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       //20
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToListClassManagerTitle(),
+        //onTap: () => controller.navigateToDocumentManagement(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.file_copy_outlined,
@@ -1359,7 +1379,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       //21
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToSendRequest(),
+        //onTap: () => controller.navigateToSendRequest(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1373,213 +1394,219 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     ];
 
     List<Widget> mainFeatureItemList = [
-      _buildMainFeatureItem(
+      //1
+      _buildListFeatureItem(
         context,
         background: Container(
           color: Colors.red,
         ),
-        icon: const Icon(
-          Icons.calendar_today,
-          //color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
+        // icon: Icon(
+        //   Icons.calendar_today,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image:  Image( image: AssetImage('assets/Icon/11.png',), fit: BoxFit.cover, ),
         title: LocaleKeys.tasksCalendar.tr,
         onTap: () => controller.navigateToScheduleTime(),
       ),
       //2
-      _buildMainFeatureItem(
+      _buildListFeatureItem(
         context,
         background: Container(
           color: Colors.green,
         ),
-        icon: const Icon(
-          Icons.train,
-         // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(image: AssetImage('assets/Icon/03.png',), fit: BoxFit.cover, ),
         title: LocaleKeys.teachingProgram.tr,
         onTap: () => controller.navigateToEducationProgram(),
       ),
       //3
-      _buildMainFeatureItem(
+      _buildListFeatureItem(
         context,
         onTap: () => controller.navigateToRewardDiscipline(),
         background: Container(
           color: Colors.orange,
         ),
-        icon: const Icon(
-          Icons.bookmarks,
-         // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
+        // icon: Icon(
+        //   Icons.bookmarks,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(image: AssetImage('assets/Icon/10.png',), fit: BoxFit.cover, ),
         title: LocaleKeys.rewardDiscipline.tr,
       ),
       //4
-      _buildMainFeatureItem(
+      _buildListFeatureItem(
         context,
         background: Assets.images.homeBotRightButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.laptop_mac_sharp,
-         // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
+        // icon: Icon(
+        //   Icons.laptop_mac_sharp,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(image: AssetImage('assets/Icon/08.png',), fit: BoxFit.cover, ),
         title: LocaleKeys.eLearning.tr,
-        onTap: () => controller.navigateToELearning(),
+        // onTap: () => controller.navigateToELearning(),
+        onTap: () => showNotificationDialog(context),
       ),
-      //5
-      _buildMainFeatureItem(
+      _buildListFeatureItem(
         context,
         background: Assets.images.homeBotRightButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.qr_code_sharp,
-         // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
+        // icon: Icon(
+        //   Icons.qr_code_sharp,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(image: AssetImage('assets/Icon/19.png',), fit: BoxFit.cover, ),
         title: LocaleKeys.checkInDevice.tr,
-        onTap: () => controller.navigateToCheckInDevice(),
+        // onTap: () => controller.navigateToCheckInDevice(),
+        onTap: () => showNotificationDialog(context),
       ),
       //6
-
-      //webview
-      _buildMainFeatureItem(
+      _buildListFeatureItem(
         context,
         onTap: () {
           if (Platform.isIOS) {
-            // launchUrl(
-            //   Uri.parse('https://viettech.itch.io/map3d'),
-            //   mode: LaunchMode.inAppWebView,
-            // );
-            Fimber.d("navigateToMapWevView()");
-            Get.toNamed(Routes.MAP_WEBVIEW);
-
+            launchUrl(
+              Uri.parse('https://viettech.itch.io/map3d'),
+              mode: LaunchMode.inAppWebView,
+            );
           } else {
-            // launchUrl(
-            //   Uri.parse('https://viettech.itch.io/map3d'),
-            //   mode: LaunchMode.externalNonBrowserApplication,
-            // );
-            Fimber.d("navigateToMapWevView()");
-            Get.toNamed(Routes.MAP_WEBVIEW);
+            launchUrl(
+              Uri.parse('https://viettech.itch.io/map3d'),
+              mode: LaunchMode.externalNonBrowserApplication,
+            );
           }
-
         },
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.maps_home_work,
-         // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
+        // icon: Icon(
+        //   Icons.maps_home_work,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(image: AssetImage('assets/Icon/13.png',), fit: BoxFit.cover, ),
         title: 'Bản đồ trường học',
       ),
       //7
-      _buildMainFeatureItem(
-        context,
-        onTap: () => controller.navigateToTrackProgress(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.bookmarks,
-         // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
-        title: LocaleKeys.trackProgress.tr,
-      ),
+      // _buildMainFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToTrackProgress(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //   icon: const Icon(
+      //     Icons.bookmarks,
+      //    // color: const Color(0xFF4da543).withOpacity(0.75),
+      //     color: Colors.green,
+      //     size: 30,
+      //   ),
+      //   title: LocaleKeys.trackProgress.tr,
+      // ),
       //8
-      _buildMainFeatureItem(
-        context,
-        onTap: () => controller.navigateToDocumentManagement(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.bookmarks,
-          //color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
-        title: 'Theo dõi văn bản',
-      ),
+      // _buildMainFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToDocumentManagement(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //   icon: const Icon(
+      //     Icons.bookmarks,
+      //     //color: const Color(0xFF4da543).withOpacity(0.75),
+      //     color: Colors.green,
+      //     size: 30,
+      //   ),
+      //   title: 'Theo dõi văn bản',
+      // ),
       //9
-      _buildMainFeatureItem(
+      _buildListFeatureItem(
         context,
         onTap: () => controller.navigateToStatistical(),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.bookmarks,
-         // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
+        // icon: Icon(
+        //   Icons.bookmarks,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(image: AssetImage('assets/Icon/20.png',), fit: BoxFit.cover, ),
         title: LocaleKeys.statistical.tr,
       ),
       //10
-      _buildMainFeatureItem(
+      _buildListFeatureItem(
         context,
         onTap: () {
           _showNotificationDialog(context);
         },
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.bookmarks,
-         // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
+        // icon: Icon(
+        //   Icons.bookmarks,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(image: AssetImage('assets/Icon/12.png',), fit: BoxFit.cover, ),
         title: LocaleKeys.teacherScheduleTimeTitle.tr,
       ),
       //11
-      _buildMainFeatureItem(
+      _buildListFeatureItem(
         context,
         onTap: () => controller.navigateToScientificResearch(),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.science_outlined,
-         // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
+        // icon: Icon(
+        //   Icons.science_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(image: AssetImage('assets/Icon/14.png',), fit: BoxFit.cover, ),
         title: LocaleKeys.scienceStudy.tr,
       ),
       //12
-      _buildMainFeatureItem(
+      _buildListFeatureItem(
         context,
         onTap: () => controller.navigateToReportTask(),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.calendar_today_outlined,
-         // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(image: AssetImage('assets/Icon/02.png',), fit: BoxFit.cover, ),
         title: LocaleKeys.reportTask.tr,
       ),
       //13
-      _buildMainFeatureItem(
+      _buildListFeatureItem(
         context,
         onTap: () => controller.navigateToSurveyResult(),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.filter_alt_outlined,
-         // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
+        // icon: Icon(
+        //   Icons.filter_alt_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(image: AssetImage('assets/Icon/09.png',), fit: BoxFit.cover, ),
         title: LocaleKeys.serveyResults.tr,
       ),
       //14
-      _buildMainFeatureItem(
+      _buildListFeatureItem(
         context,
         onTap: () => controller.navigateToTeacherContact(),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.quick_contacts_dialer_sharp,
-          //color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
+        // icon: Icon(
+        //   Icons.quick_contacts_dialer_sharp,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(image: AssetImage('assets/Icon/04.png',), fit: BoxFit.cover, ),
         title: LocaleKeys.titleTeacherContact.tr,
       ),
       //15
@@ -1943,21 +1970,21 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               boxShadow: [
                 BoxShadow(
                   color: Colors.black.withOpacity(0.2),
-                  spreadRadius: 3,
-                  blurRadius: 10,
+                  spreadRadius: 2,
+                  blurRadius: 5,
                   offset: const Offset(0, 3), // changes position of shadow
                 ),
               ],
             ),
             child: Padding(
-              padding: const EdgeInsets.only(top:15.0),
+              padding: const EdgeInsets.only(top:23.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    width: 50,
-                    height: 50,
+                    width: 40,
+                    height: 40,
                     decoration: BoxDecoration(
                       // color: Colors.black12.withOpacity(0.04),
 
@@ -1972,7 +1999,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                       child: Text(
                         title ?? '',
                         maxLines: 5,
-                        style: GoogleFonts.openSans(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 14),
+                        style: GoogleFonts.openSans(color: Colors.black, fontWeight: FontWeight.w700, fontSize: 14),
                         textAlign: TextAlign.center,
                         // overflow: TextOverflow.clip,
                       ),
@@ -2055,7 +2082,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           leading: IconButton(
             icon: const Icon(
               Icons.arrow_back_ios,
-              color: LMSColors.cyan,
+              color: LMSColors.black,
             ),
             onPressed: () {
               Navigator.pop(context);
@@ -2095,6 +2122,26 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           ),
         ),
       ),
+    );
+  }
+
+  Future<void> showNotificationDialog(BuildContext context) async {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Thông báo'),
+          content: const Text('Chức năng đang được cập nhật'),
+          actions: <Widget>[
+            ElevatedButton(
+              child: const Text('Đồng ý'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
     );
   }
 }

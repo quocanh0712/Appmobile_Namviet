@@ -11,6 +11,7 @@ class AppTranslation {
 
 class LocaleKeys {
   LocaleKeys._();
+  static const recentsUpdate = 'recentsUpdate';
   static const homePageTitle = 'homePageTitle';
   static const homePage = 'homePage';
   static const notification = 'notification';
@@ -133,6 +134,7 @@ class LocaleKeys {
   static const no = 'no';
   static const yes = 'yes';
   static const hintScientificResearch = 'hintScientificResearch';
+  static const hintChatResearch = 'hintChatResearch';
   static const loadDataErrorMessage = 'loadDataErrorMessage';
   static const noDataMessage = 'noDataMessage';
   static const oops = 'oops';
@@ -390,6 +392,7 @@ class LocaleKeys {
 
 class Locales {
   static const vn_VI = {
+    'recentsUpdate' : 'Hoạt động gần đây',
     'homePageTitle': 'Đăng nhập - Trang chủ',
     'homePage': 'Trang chủ',
     'notification': 'Thông báo',
@@ -401,7 +404,7 @@ class Locales {
     'password': 'Mật khẩu',
     'forgotPassword': 'Quên mật khẩu?',
     'login': 'Đăng nhập',
-    'learningManagementSystem': 'Hệ thống quản lý giáo dục ESSoft',
+    'learningManagementSystem': 'Hệ Thống Quản Lý Giáo Dục ESSOFT',
     'restNow': 'Nghỉ ngơi thôi',
     'noTasksMessage':
         'Hôm nay bạn không có lịch nào cả. Hãy tận hưởng 1 ngày vui vẻ nhé.',
@@ -515,6 +518,7 @@ class Locales {
     'no': 'Không',
     'yes': 'Có',
     'hintScientificResearch': 'Điền tên tài liệu cần tìm',
+    'hintChatResearch' : 'Tìm cuộc trò chuyện',
     'loadDataErrorMessage': 'Có lỗi trong khi tải dữ liệu, chạm để thử lại.',
     'noDataMessage': 'Chưa có dữ liệu để hiển thị.',
     'oops': 'Oops',
@@ -770,6 +774,7 @@ class Locales {
     'fakeStu11': '(19571402060273) - Nguyễn Đức Phi',
   };
   static const en_US = {
+    'recentsUpdate' : 'Hoạt động gần đây',
     'homePageTitle': 'Login - Home Page',
     'homePage': 'Trang chủ',
     'notification': 'Thông báo',
@@ -781,7 +786,7 @@ class Locales {
     'password': 'Mật khẩu',
     'forgotPassword': 'Quên mật khẩu?',
     'login': 'Đăng nhập',
-    'learningManagementSystem': 'Hệ thống quản lý giáo dục ESSoft',
+    'learningManagementSystem': 'Hệ Thống Quản Lý Giáo Dục ESSOFT',
     'restNow': 'Nghỉ ngơi thôi',
     'noTasksMessage':
         'Hôm nay không có lịch nào cả. Bạn có thể nghỉ ngơi hoặc sắp xếp lịch khác.',
@@ -894,6 +899,7 @@ class Locales {
     'no': 'No',
     'yes': 'Yes',
     'hintScientificResearch': 'Điền tên tài liệu cần tìm',
+    'hintChatResearch' : 'Tìm cuộc trò chuyện',
     'loadDataErrorMessage': 'Error while loading data, tap to try again',
     'noDataMessage': 'There is no data to display.',
     'oops': 'Oops',

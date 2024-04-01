@@ -1,12 +1,17 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:ftu_lms/app/modules/chat/bindings/chat_binding.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../../../../generated/assets.gen.dart';
 import '../../../../generated/colors.gen.dart';
 import '../../../../generated/locales.g.dart';
 import '../../../../utils/constants.dart';
+import '../../../../widgets/search_text_field.dart';
 import '../../base/base_binding_creator_widget.dart';
 import '../../home/controllers/home_controller.dart';
 import '../controllers/chat_controller.dart';
@@ -17,6 +22,8 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
   final HomeController homeController =
       Get.put(HomeController(), permanent: false);
 
+  Color searchColor = const Color(0xFFF5F6FA);
+
   @override
   Widget? onCreateViews(BuildContext context) {
     return DefaultTabController(
@@ -26,28 +33,115 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
           backgroundColor: LMSColors.white,
           elevation: 0,
           title: _title(context),
-          bottom: TabBar(
-            tabs: [
-              Tab(
-                child: Text(
-                  LocaleKeys.group.tr,
-                  style: const TextStyle(color: Colors.black, fontSize: 20),
+          // bottom:  TabBar(
+          //   padding: EdgeInsets.only(bottom: 0),
+          //   tabs: [
+          //     Tab(
+          //       child: Text(
+          //         LocaleKeys.friend.tr,
+          //         style: const TextStyle(color: Colors.black, fontSize: 20),
+          //       ),
+          //     ),
+          //     Tab(
+          //       child: Text(
+          //         LocaleKeys.group.tr,
+          //         style: const TextStyle(color: Colors.black, fontSize: 20),
+          //       ),
+          //     ),
+          //
+          //   ],
+          //   indicatorColor: LMSColors.mainGreen,
+          // ),
+        ),
+        // body: TabBarView(children: [
+        //   buildFriendChatDisplay(context),
+        //   buildGroupChatDisplay(context),
+        //
+        // ]),
+        body: Container(
+          color: LMSColors.white,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 5.0),
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 12.0, top: 10),
+                  child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        LocaleKeys.recentsUpdate.tr,
+                        style: GoogleFonts.notoSans(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey.withOpacity(0.9),
+                            fontSize: 14),
+                      )),
                 ),
-              ),
-              Tab(
-                child: Text(
-                  LocaleKeys.friend.tr,
-                  style: const TextStyle(color: Colors.black, fontSize: 20),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: buildRecentUpdate(context),
                 ),
-              )
-            ],
-            indicatorColor: LMSColors.mainGreen,
+                SizedBox(height: 5,),
+                Container(
+                  width: 350,
+                  child: Divider(
+                    color: Colors.black.withOpacity(0.15),
+                    height: 1,
+                  ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 15.0,bottom: 10),
+                  child: TabBar(
+                    tabs: [
+                      Container(
+                        height: 30,
+                        width: 160,
+
+                        child: Center(
+                          child: Tab(
+                            child: Text(
+                              LocaleKeys.friend.tr,
+                              style:  GoogleFonts.notoSans(
+                                   fontSize: 16, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Container(
+                        height: 30,
+                        width: 160,
+                        child: Tab(
+                          child: Text(
+                            LocaleKeys.group.tr,
+                            style:  GoogleFonts.notoSans(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                    ],
+                    indicator: ShapeDecoration(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      color: Colors.grey.withOpacity(0.3), // Màu sắc của tab khi được chọn
+                    ),
+                    labelColor: Colors.black,
+                    unselectedLabelColor: Colors.grey.withOpacity(0.5),
+                    dividerColor: Colors.transparent,
+                  ),
+                ),
+                Expanded(
+                  child: TabBarView(
+                    children: [
+                      buildFriendChatDisplay(context),
+                      buildGroupChatDisplay(context),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
-        body: TabBarView(children: [
-          buildGroupChatDisplay(context),
-          buildFriendChatDisplay(context)
-        ]),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         floatingActionButton: InkWell(
           onTap: () {
@@ -76,7 +170,7 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
 
   Widget _title(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
+      //crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         GestureDetector(
           onTap: () => homeController.navigateToProfile(),
@@ -96,11 +190,17 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
         const SizedBox(
           width: 15,
         ),
-        AutoSizeText(LocaleKeys.chat.tr,
-            style: context.themeExtensions.subTex.copyWith(
-                color: context.themeExtensions.black,
-                fontSize: 22,
-                fontWeight: FontWeight.bold)),
+        Container(
+          height: 35,
+          width: MediaQuery.of(context).size.width*0.75,
+          child: SearchTextField(
+            onTextChanged: (text) {
+              controller.searchData(text);
+            },
+            initText: controller.textSearch,
+            initHintText: LocaleKeys.hintChatResearch.tr,
+          ),
+        ),
       ],
     );
   }
@@ -381,10 +481,10 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
                 const SizedBox(
                   height: 12,
                 ),
-                Divider(
-                  color: context.themeExtensions.smokyWhite,
-                  height: 1,
-                ),
+                // Divider(
+                //   color: context.themeExtensions.smokyWhite,
+                //   height: 1,
+                // ),
               ],
             ),
           ),
@@ -455,10 +555,10 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
                 const SizedBox(
                   height: 12,
                 ),
-                Divider(
-                  color: context.themeExtensions.smokyWhite,
-                  height: 1,
-                ),
+                // Divider(
+                //   color: context.themeExtensions.smokyWhite,
+                //   height: 1,
+                // ),
               ],
             ),
           ),
@@ -529,10 +629,10 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
                 const SizedBox(
                   height: 12,
                 ),
-                Divider(
-                  color: context.themeExtensions.smokyWhite,
-                  height: 1,
-                ),
+                // Divider(
+                //   color: context.themeExtensions.smokyWhite,
+                //   height: 1,
+                // ),
               ],
             ),
           ),
@@ -612,10 +712,10 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
                 const SizedBox(
                   height: 12,
                 ),
-                Divider(
-                  color: context.themeExtensions.smokyWhite,
-                  height: 1,
-                ),
+                // Divider(
+                //   color: context.themeExtensions.red,
+                //   height: 1,
+                // ),
               ],
             ),
           ),
@@ -833,6 +933,77 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
     );
   }
 
+  Widget buildRecentUpdate(BuildContext context){
+    List<Widget> listRecentUpdate =[
+      _buildRecentUpdateItem(context, '', 'Nhóm Lớp D17-VO-A', 'Duck Ngo', ),
+      _buildRecentUpdateItem(context, '', 'Nhóm Lớp D17-VO-A', 'Anh Truong', ),
+      _buildRecentUpdateItem(context, '', 'Nhóm Lớp D17-VO-A', 'Dat Tran', ),
+      _buildRecentUpdateItem(context, '', 'Nhóm Lớp D17-VO-A', 'Tai Nguyen', ),
+      _buildRecentUpdateItem(context, '', 'Nhóm Lớp D17-VO-A', 'Linh Nghiem', ),
+      _buildRecentUpdateItem(context, '', 'Nhóm Lớp D17-VO-A', 'Dat Do', ),
+      _buildRecentUpdateItem(context, '', 'Nhóm Lớp D17-VO-A', 'Anh Nguyen', ),
+      _buildRecentUpdateItem(context, '', 'Nhóm Lớp D17-VO-A', 'Tu Tran', ),
+    ];
+
+    return Container(
+      margin: const EdgeInsets.only(top: 7),
+      width: MediaQuery.of(context).size.width,
+      color: LMSColors.white,
+      height: 90,
+      child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: listRecentUpdate.length,
+          itemBuilder: (context, index) {
+            return listRecentUpdate[index];
+          }),
+    );
+  }
+
+  Widget _buildRecentUpdateItem(
+      BuildContext context,
+      String? image,
+      String name,
+      String senderName,
+      {bool isGroup = false}
+      ){
+    return  Padding(
+      padding: const EdgeInsets.only(right: 8.0),
+      child: Container(
+        height: 50,
+        width: 80,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              radius: 30,
+              backgroundImage: NetworkImage('https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg'),
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            SizedBox(
+              width: 250,
+              child: Center(
+                child: Text(
+                  isGroup == true ? name : senderName,
+                  overflow: TextOverflow.ellipsis,
+                  style:  GoogleFonts.notoSans(
+                    color: Colors.black,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w600
+                    // fontWeight: FontWeight.bold
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+
+
   Widget buildFriendChatDisplay(BuildContext context) {
     List<Widget> listChat = [
       _buildChatDisplayItem(context, '', 'Nhóm Lớp D17-VO-A', 'Huỳnh Bùi Đức',
@@ -960,8 +1131,8 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
                 Container(
                   child: image!.isNotEmpty
                       ? Container(
-                          width: 40,
-                          height: 40,
+                          width: 50,
+                          height: 50,
                           decoration: BoxDecoration(
                             color: Colors.blue.withOpacity(0.6),
                             borderRadius: BorderRadius.circular(20),
@@ -972,11 +1143,11 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
                           ),
                         )
                       : Container(
-                          width: 40,
-                          height: 40,
+                          width: 55,
+                          height: 55,
                           decoration: BoxDecoration(
                             color: Colors.blue.withOpacity(0.6),
-                            borderRadius: BorderRadius.circular(20),
+                            borderRadius: BorderRadius.circular(40),
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -985,7 +1156,7 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
                                 isGroup == true
                                     ? name.substring(0, 1)
                                     : senderName.substring(0, 1),
-                                style: TextStyle(
+                                style: GoogleFonts.notoSans(
                                     fontSize: 20,
                                     color: context.themeExtensions.white,
                                     fontWeight: FontWeight.w700),
@@ -998,61 +1169,68 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
                 const SizedBox(
                   width: 15,
                 ),
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          SizedBox(
-                            width: 250,
-                            child: Text(
-                              isGroup == true ? name : senderName,
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(
-                                color: Colors.black,
-                                fontSize: 18,
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 5.0),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width* 0.76,
+                    height: MediaQuery.of(context).size.height*0.065,
+
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            SizedBox(
+                              width: 250,
+                              child: Text(
+                                isGroup == true ? name : senderName,
+                                overflow: TextOverflow.ellipsis,
+                                style:  GoogleFonts.notoSans(
+                                  color: Colors.black,
+                                  fontSize: 16,
+
+                                   fontWeight: FontWeight.w600
+                                ),
+                              ),
+                            ),
+                            Text(
+                              sendingTime,
+                              style: GoogleFonts.notoSans(
+                                color: Colors.black.withOpacity(0.5),
+                                fontSize: 13,
                                 // fontWeight: FontWeight.bold
                               ),
                             ),
-                          ),
-                          Text(
-                            sendingTime,
-                            style: TextStyle(
-                              color: Colors.black.withOpacity(0.5),
-                              fontSize: 14,
-                              // fontWeight: FontWeight.bold
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        isGroup == true ? '$senderName: $message' : message,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: Colors.black.withOpacity(0.5),
-                          fontSize: 15,
-                          // fontWeight: FontWeight.bold
+                          ],
                         ),
-                      ),
-                    ],
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          isGroup == true ? '$senderName: $message' : message,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: GoogleFonts.notoSans(
+                            color: Colors.black.withOpacity(0.5),
+                            fontSize: 13,
+                            // fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
             ),
-            Container(
-              margin: const EdgeInsets.only(left: 50, top: 15),
-              child: Divider(
-                color: Colors.black.withOpacity(0.15),
-                height: 1,
-              ),
-            )
+            // Container(
+            //   margin: const EdgeInsets.only(left: 50, top: 15),
+            //   child: Divider(
+            //     color: Colors.black.withOpacity(0.15),
+            //     height: 1,
+            //   ),
+            // )
           ],
         ),
       ),

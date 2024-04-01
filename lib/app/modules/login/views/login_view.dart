@@ -86,7 +86,7 @@ class LoginView extends BaseView<LoginController> {
                                                   AlignmentDirectional.center),
                                           Text(
                                             // "---Mời chọn đơn vị---"),
-                                              "Trường Đại học Nông Lâm Thái Nguyên", style: GoogleFonts.roboto(fontWeight: FontWeight.bold, fontSize: 16)),
+                                              "Trường Đại học Ngoại Ngữ Đà Nẵng", style: GoogleFonts.roboto(fontWeight: FontWeight.bold, fontSize: 18)),
                                           // DropdownButton(
                                           //   // Initial Value
                                           //   isExpanded: true,
@@ -110,7 +110,7 @@ class LoginView extends BaseView<LoginController> {
                                 //-----------------------
                                 Obx(() => loginController.sessionTimeout.value
                                     ? const SizedBox.shrink()
-                                    : const SizedBox(height: 16)),
+                                    : const SizedBox(height: 5)),
                                 Obx(() => loginController.sessionTimeout.value
                                     ? const SizedBox.shrink()
                                     : Stack(

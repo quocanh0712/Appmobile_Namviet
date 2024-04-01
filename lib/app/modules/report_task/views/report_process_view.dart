@@ -48,9 +48,9 @@ abstract class ReportProcessView<T extends BaseListController>
                 child: Text(
                   header1(),
                   textAlign: TextAlign.start,
-                  style: GoogleFonts.cabin(
+                  style: GoogleFonts.openSans(
                       color: Get.context?.themeExtensions.black,
-                      fontSize: 14.sp,
+                      fontSize: 13.sp,
                       fontWeight: FontWeight.w600),
                 ),
               )),
@@ -68,9 +68,9 @@ abstract class ReportProcessView<T extends BaseListController>
               child: Text(
                 header2(),
                 textAlign: TextAlign.start,
-                style: GoogleFonts.cabin(
+                style: GoogleFonts.openSans(
                     color: Get.context?.themeExtensions.black,
-                    fontSize: 14.sp,
+                    fontSize: 13.sp,
                     fontWeight: FontWeight.w600),
               ),
             ),
@@ -82,9 +82,9 @@ abstract class ReportProcessView<T extends BaseListController>
             child: Text(
               header3(),
               textAlign: TextAlign.start,
-              style: GoogleFonts.cabin(
+              style: GoogleFonts.openSans(
                   color: Get.context?.themeExtensions.black,
-                  fontSize: 14.sp,
+                  fontSize: 13.sp,
                   fontWeight: FontWeight.w600),
             ),
           ),
@@ -173,7 +173,7 @@ abstract class ReportProcessView<T extends BaseListController>
                       content2(index) ?? Constants.EMPTY,
 
                       style: GoogleFonts.openSans(
-                          color: Get.context?.themeExtensions.textColor, fontWeight: FontWeight.w400, fontSize: 12.sp, letterSpacing: 2.0),
+                          color: Get.context?.themeExtensions.textColor, fontWeight: FontWeight.w400, fontSize: 12.sp, letterSpacing: 1.4),
                     ),
                   ),
                 ),
@@ -201,8 +201,8 @@ abstract class ReportProcessView<T extends BaseListController>
                       alignment: Alignment.center,
                       child: Text(
                         content3(index) ?? Constants.EMPTY,
-                        style: GoogleFonts.cabin(
-                            color: Get.context?.themeExtensions.white, fontWeight: FontWeight.bold, fontSize: 12.sp),
+                        style: GoogleFonts.openSans(
+                            color: Get.context?.themeExtensions.white, fontWeight: FontWeight.bold, fontSize: 11.sp),
                       ),
                     ),
                   ),

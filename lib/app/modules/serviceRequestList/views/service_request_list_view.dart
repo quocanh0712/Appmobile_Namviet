@@ -40,8 +40,8 @@ class ServiceRequestListView extends BaseView<ServiceRequestListController> {
                 tabBar: TabBar(
 
                   isScrollable: false,
-                  unselectedLabelStyle:GoogleFonts.cabin(color: context.themeExtensions.textGrey ,letterSpacing: -0.1, fontSize: 14),
-                  labelStyle: GoogleFonts.cabin(color: context.themeExtensions.black, letterSpacing: -0.1, fontSize: 14, fontWeight: FontWeight.bold),
+                  unselectedLabelStyle:GoogleFonts.openSans(color: context.themeExtensions.textGrey ,letterSpacing: -0.1, fontSize: 14, fontWeight: FontWeight.w500),
+                  labelStyle: GoogleFonts.openSans(color: context.themeExtensions.black, letterSpacing: -0.7, fontSize: 14, fontWeight: FontWeight.bold),
                   labelColor: context.themeExtensions.black,
                   indicatorColor: context.themeExtensions.mainGreen,
                   tabs: [

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:status_bar_control/status_bar_control.dart';
 import '../../../../generated/assets.gen.dart';
 import '../../../../generated/colors.gen.dart';
@@ -17,12 +18,12 @@ class StatisticalView
   Widget? onCreateViews(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: LMSColors.white,
+          backgroundColor: Colors.white,
           elevation: 0,
           leading: IconButton(
             icon: const Icon(
               Icons.arrow_back_ios,
-              color: LMSColors.cyan,
+              color: LMSColors.black,
             ),
             onPressed: () {
               Get.back();
@@ -35,7 +36,7 @@ class StatisticalView
             children: [
               Text(
                 LocaleKeys.statistical.tr,
-                style: const TextStyle(color: Colors.black),
+                style: GoogleFonts.openSans(color: Colors.black, fontWeight: FontWeight.w600),
               ),
               // InkWell(
               //     onTap: () {
@@ -64,6 +65,14 @@ class StatisticalView
               decoration: BoxDecoration(
                 color: context.themeExtensions.white,
                 borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 1,
+                    blurRadius: 2,
+                    offset: const Offset(0, 0), // changes position of shadow
+                  ),
+                ],
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -74,7 +83,9 @@ class StatisticalView
                     height: 45,
                     padding: const EdgeInsets.all(10),
                     decoration: const BoxDecoration(
-                        color: Colors.white, shape: BoxShape.circle),
+                        color: Colors.white, shape: BoxShape.circle ,
+
+                    ),
                     child: Assets.images.iconsDocument32.image(
                         fit: BoxFit.cover,
                         // filterQuality: FilterQuality.none,
@@ -82,7 +93,7 @@ class StatisticalView
                   ),
                   Text(
                     LocaleKeys.incomingDocumentStatistics.tr,
-                    style: const TextStyle(fontSize: 20),
+                    style: GoogleFonts.openSans(fontSize: 18, fontWeight: FontWeight.w600, ),
                   ),
                 ],
               ),
@@ -103,6 +114,14 @@ class StatisticalView
               decoration: BoxDecoration(
                 color: context.themeExtensions.white,
                 borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 1,
+                    blurRadius: 2,
+                    offset: const Offset(0, 0), // changes position of shadow
+                  ),
+                ],
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -121,7 +140,7 @@ class StatisticalView
                   ),
                   Text(
                     LocaleKeys.outgoingDocumentStatistics.tr,
-                    style: const TextStyle(fontSize: 20),
+                    style: GoogleFonts.openSans(fontSize: 18, fontWeight: FontWeight.w600, ),
                   ),
                 ],
               ),

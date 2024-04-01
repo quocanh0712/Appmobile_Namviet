@@ -9,6 +9,7 @@ import 'home_banner_url.dart';
 import 'home_outstanding_actitvity.dart';
 import 'home_recent_actitvity.dart';
 import 'home_recent_task.dart';
+import 'home_new_activity.dart';
 
 part 'home_response_object.freezed.dart';
 part 'home_response_object.g.dart';
@@ -19,6 +20,7 @@ class HomeResponseObject with _$HomeResponseObject {
   factory HomeResponseObject({
     @JsonKey(name: 'listnowtask') List<HomeRecentTask>? homeRecentTasks,
     @JsonKey(name: 'listrecentlyactitvity') List<HomeRecentActitvity>? homeRecentActitvities,
+    //@JsonKey(name: 'listNewActivity') List<HomeNewActivity>? homeNewActivities,
     @JsonKey(name: 'listoutstandingactitvity') List<HomeOutstandingActitvity>? homeOutstandingActitvities,
     @JsonKey(name: 'listurlbanner') List<HomeBannerUrl>? homeBannerUrls,
   }) = _HomeResponseObject;

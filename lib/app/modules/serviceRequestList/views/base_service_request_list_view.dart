@@ -51,15 +51,13 @@ abstract class BaseServiceRequestListView<C extends BaseInfiniteListController>
                     children: [
                       AutoSizeText(
                         item.formname ?? '',
-                        style: context.themeExtensions.paragraphSemiBold
-                            .copyWith(color: context.themeExtensions.black),
+                        style: GoogleFonts.openSans(color: context.themeExtensions.black, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 3),
                       if (item.updateTime != null)
                         AutoSizeText(
                           DateTimeUtils.formatDateTime(item.updateTime!, timeAndDate),
-                          style: context.themeExtensions.subTex
-                              .copyWith(color: context.themeExtensions.textGrey),
+                          style: GoogleFonts.openSans(color: context.themeExtensions.textGrey , fontWeight: FontWeight.w500),
                         )
                     ],
                   ),
@@ -79,7 +77,7 @@ abstract class BaseServiceRequestListView<C extends BaseInfiniteListController>
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     child: AutoSizeText(
                       _retrieveStatusString(item.status),
-                      style: GoogleFonts.cabin(color: context.themeExtensions.white, letterSpacing: -0.1, fontSize: 14, fontWeight: FontWeight.bold),
+                      style: GoogleFonts.openSans(color: context.themeExtensions.white, letterSpacing: -0.1, fontSize: 14, fontWeight: FontWeight.bold),
                     )),
               ],
             ).paddingSymmetric(vertical: 14),

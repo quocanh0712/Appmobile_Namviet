@@ -8,6 +8,7 @@ import 'package:ftu_lms/generated/assets.gen.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/stu_checkin_controller.dart';
 
@@ -58,7 +59,16 @@ class StuCheckinView extends BaseAppBarView<StuCheckinController> {
           padding: const EdgeInsets.all(18),
           decoration: BoxDecoration(
               color: Get.context?.themeExtensions.bgGrey,
-              borderRadius: const BorderRadius.all(Radius.circular(10))),
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.2),
+                spreadRadius: 1,
+                blurRadius: 1,
+                offset: const Offset(0, 3), // changes position of shadow
+              ),
+            ],
+          ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -66,8 +76,7 @@ class StuCheckinView extends BaseAppBarView<StuCheckinController> {
                   child: Text(
                 title,
                 textAlign: TextAlign.start,
-                style: Get.context?.themeExtensions.paragraph
-                    .copyWith(color: Get.context?.themeExtensions.textColor),
+                style: GoogleFonts.openSans(color: Get.context?.themeExtensions.textColor, fontWeight: FontWeight.bold),
               )),
               const SizedBox(
                 width: 8,

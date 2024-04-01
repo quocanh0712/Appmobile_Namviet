@@ -11,6 +11,7 @@ import 'package:ftu_lms/utils/date_time_utils.dart';
 import 'package:ftu_lms/utils/utils.dart';
 import 'package:ftu_lms/widgets/search_advance_view.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../generated/assets.gen.dart';
 import '../../../../generated/locales.g.dart';
@@ -54,10 +55,10 @@ class ScheduleTimeView extends BaseListView<ScheduleTimeController> {
                       child: Text(
                         dayOfWeek.format(scheduleItem.date!),
                         textAlign: TextAlign.center,
-                        style: context.themeExtensions.subTex.copyWith(
+                        style: GoogleFonts.openSans(
                             color: isSameDay
                                 ? context.themeExtensions.secondGreen
-                                : context.themeExtensions.textGrey),
+                                : context.themeExtensions.textGrey, fontWeight: FontWeight.w600),
                       ),
                     ),
                     const SizedBox(
@@ -127,8 +128,7 @@ class ScheduleTimeView extends BaseListView<ScheduleTimeController> {
                             child: Text(
                               item.coursename ?? Constants.EMPTY,
                               textAlign: TextAlign.left,
-                              style: context.themeExtensions.subTexMedium
-                                  .copyWith(color: context.themeExtensions.white),
+                              style: GoogleFonts.openSans(color: context.themeExtensions.white, fontWeight: FontWeight.w700),
                             ),
                           ),
                           const SizedBox(
@@ -147,8 +147,7 @@ class ScheduleTimeView extends BaseListView<ScheduleTimeController> {
                                 child: Text(
                                   item.roomname ?? Constants.EMPTY,
                                   textAlign: TextAlign.center,
-                                  style: context.themeExtensions.smallTex
-                                      .copyWith(color: context.themeExtensions.white),
+                                  style: GoogleFonts.openSans(color: context.themeExtensions.white, fontWeight: FontWeight.w600,fontSize: 14),
                                 ),
                               ),
                               const SizedBox(
@@ -167,8 +166,7 @@ class ScheduleTimeView extends BaseListView<ScheduleTimeController> {
                                           textAlign: TextAlign.center,
                                           maxLines: 1,
                                           overflow: TextOverflow.ellipsis,
-                                          style: context.themeExtensions.smallTex
-                                              .copyWith(color: context.themeExtensions.white),
+                                          style: GoogleFonts.openSans(color: context.themeExtensions.white, fontSize: 13),
                                         )
                                       : Container(),
                                 ),

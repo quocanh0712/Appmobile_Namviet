@@ -11,6 +11,7 @@ import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:ftu_lms/utils/constants.dart';
 import 'package:ftu_lms/widgets/search_text_field.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/list_teacher_info_controller.dart';
 
@@ -57,8 +58,7 @@ class ListTeacherInfoView extends BaseListView<ListTeacherInfoController> {
                 if (response.teacherName?.isNotEmpty == true) ...{
                   Text(
                     response.teacherName!,
-                    style: context.themeExtensions.paragraph
-                        .copyWith(color: context.themeExtensions.textColor),
+                    style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.w600),
                   ),
                   const SizedBox(
                     height: 3,
@@ -67,8 +67,7 @@ class ListTeacherInfoView extends BaseListView<ListTeacherInfoController> {
                 if (response.employeePosition?.isNotEmpty == true) ...{
                   Text(
                     response.employeePosition!,
-                    style: context.themeExtensions.subTex
-                        .copyWith(color: context.themeExtensions.secondGreen),
+                    style: GoogleFonts.openSans(color: context.themeExtensions.secondGreen),
                   ),
                   const SizedBox(
                     height: 3,
@@ -77,8 +76,7 @@ class ListTeacherInfoView extends BaseListView<ListTeacherInfoController> {
                 if (response.employeeCode?.isNotEmpty == true) ...{
                   Text(
                     response.employeeCode!,
-                    style: context.themeExtensions.subTex
-                        .copyWith(color: context.themeExtensions.textGrey),
+                    style: GoogleFonts.openSans(color: context.themeExtensions.textGrey, fontSize: 12, fontWeight: FontWeight.w400),
                   ),
                   const SizedBox(
                     height: 3,
@@ -87,8 +85,7 @@ class ListTeacherInfoView extends BaseListView<ListTeacherInfoController> {
                 if (response.branch?.isNotEmpty == true) ...{
                   Text(
                     response.branch!,
-                    style: context.themeExtensions.subTex
-                        .copyWith(color: context.themeExtensions.textGrey),
+                    style: GoogleFonts.openSans(color: context.themeExtensions.textGrey),
                   ),
                   const SizedBox(
                     height: 3,
@@ -97,8 +94,7 @@ class ListTeacherInfoView extends BaseListView<ListTeacherInfoController> {
                 if (response.email?.isNotEmpty == true) ...{
                   Text(
                     response.email!,
-                    style: context.themeExtensions.subTex
-                        .copyWith(color: context.themeExtensions.textGrey),
+                    style: GoogleFonts.openSans(color: context.themeExtensions.textGrey),
                   ),
                   const SizedBox(
                     height: 3,

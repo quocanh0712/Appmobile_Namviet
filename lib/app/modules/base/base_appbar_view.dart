@@ -10,6 +10,7 @@ import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:ftu_lms/app/modules/base/base_view.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../../generated/assets.gen.dart';
 import 'base_controller.dart';
@@ -80,8 +81,7 @@ abstract class BaseAppBarView<C extends BaseController> extends BaseView<C> {
                               titleAppBar!,
                               maxLines: 2,
                               textAlign: TextAlign.start,
-                              style: context.themeExtensions.headline
-                                  .copyWith(color: context.themeExtensions.textColor),
+                              style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontSize: 24, fontWeight: FontWeight.bold),
                             )),
                       )
                     : const SizedBox(),

@@ -30,6 +30,7 @@ import 'package:ftu_lms/generated/colors.gen.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:status_bar_control/status_bar_control.dart';
 
 import '../../schedule_checkin/views/request_checkin_view.dart';
@@ -119,13 +120,14 @@ class _DashboardViewState extends State<DashboardView> {
                     pageController.jumpToPage(checkInTabIndex);
                   },
                   child: Obx(() => Container(
-                        padding: const EdgeInsets.only(top: 32, bottom: 7),
+                        padding: const EdgeInsets.only(top: 33, bottom: 6),
                         child: AutoSizeText(
                           LocaleKeys.qrCode.tr,
                           maxLines: 1,
-                          style: TextStyle(
+                          style: GoogleFonts.roboto(
                               decoration: TextDecoration.none,
                               fontSize: 14,
+                              fontWeight: FontWeight.w600,
                               color:
                                   (dashboardController.currentTabIndex.value ==
                                           -1)
@@ -194,11 +196,11 @@ class _DashboardViewState extends State<DashboardView> {
                         : const SizedBox.shrink(),
                   ],
                 ),
-                const SizedBox(height: 4),
+                const SizedBox(height: 3),
                 AutoSizeText(
                   botNavItem.title ?? "",
                   maxLines: 1,
-                  style: TextStyle(color: color),
+                  style: GoogleFonts.roboto(color: color, fontWeight: FontWeight.w600),
                   group: autoSizeGroup,
                 )
               ],
@@ -211,16 +213,18 @@ class _DashboardViewState extends State<DashboardView> {
           gapLocation: GapLocation.center,
           leftCornerRadius: 20,
           rightCornerRadius: 20,
+
           onTap: (index) => {
             dashboardController.currentTabIndex.value = index,
             if (index < checkInTabIndex) {pageController.jumpToPage(index)},
             if (index >= checkInTabIndex) {pageController.jumpToPage(index + 1)}
           },
           shadow: BoxShadow(
-              offset: const Offset(0, 1),
-              blurRadius: 12,
-              spreadRadius: 0.5,
-              color: context.themeExtensions.lightSilver),
+            color: Colors.white.withOpacity(0.5),
+            spreadRadius: 5,
+            blurRadius: 7,
+            offset: const Offset(0, 3), // changes position of shadow
+          ),
         ));
   }
 

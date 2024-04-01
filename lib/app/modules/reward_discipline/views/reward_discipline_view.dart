@@ -10,6 +10,7 @@ import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:ftu_lms/widgets/decorated_tab_bar.dart';
 
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/reward_discipline_controller.dart';
 import 'discipline/views/discipline_view.dart';
@@ -36,10 +37,8 @@ class RewardDisciplineView extends BaseView<RewardDisciplineController> {
               const SizedBox(height: 7),
               DecoratedTabBar(
                 tabBar: TabBar(
-                  unselectedLabelStyle: context.themeExtensions.subTex
-                      .copyWith(color: context.themeExtensions.textGrey),
-                  labelStyle: context.themeExtensions.subTexMedium
-                      .copyWith(color: context.themeExtensions.black),
+                  unselectedLabelStyle: GoogleFonts.openSans(color: context.themeExtensions.textGrey, fontWeight: FontWeight.w700),
+                  labelStyle: GoogleFonts.openSans(color: context.themeExtensions.black, fontWeight: FontWeight.w700),
                   labelColor: context.themeExtensions.black,
                   indicatorColor: context.themeExtensions.mainGreen,
                   tabs: [

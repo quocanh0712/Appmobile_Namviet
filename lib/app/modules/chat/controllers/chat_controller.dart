@@ -3,12 +3,15 @@ import 'package:get/get.dart';
 
 import '../../../../data/bean/chat_user_response_object/chat_user_response_object.dart';
 import '../../../../generated/locales.g.dart';
+import '../../../../utils/debouncer.dart';
 import '../../base/base_controller.dart';
 
 class ChatController extends BaseController {
   //TODO: Implement ChatController
   final lstChatResponseObject = <ChatUserResponseObject>[].obs;
   final isNewGroup = false.obs;
+  String textSearch = "";
+  final _debouncer = Debouncer(milliseconds: 300);
   @override
   void onInit() {
     super.onInit();
@@ -24,6 +27,15 @@ class ChatController extends BaseController {
   void onClose() {
     super.onClose();
   }
+
+  void searchData(String string) {
+    if (textSearch == string) return;
+    _debouncer.run(() {
+      textSearch = string;
+
+    });
+  }
+
 
   Future<void> retrieveData() async {
     Fimber.d('retrieveData()');

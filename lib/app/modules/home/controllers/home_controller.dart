@@ -140,7 +140,7 @@ class HomeController extends BaseController {
           HomeOutstandingActitvity(
               id: 2,
               image: 'https://media.kenhtuyensinh.vn/images/2013/03/dai_hoc_nha_trang.jpg',
-              title: ' Bạn được nhắn đến trong 01 bài viết gần đây',
+              title: 'Bạn được nhắn đến trong 01 bài viết gần đây',
               content: 'Thông báo: Các em sinh viên khóa K22 chuẩn bị nộp...'),
           HomeOutstandingActitvity(
               id: 3,
