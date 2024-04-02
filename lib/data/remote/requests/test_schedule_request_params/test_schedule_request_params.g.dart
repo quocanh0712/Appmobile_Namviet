@@ -6,9 +6,9 @@ part of 'test_schedule_request_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TestScheduleRequestParams _$$_TestScheduleRequestParamsFromJson(
+_$TestScheduleRequestParamsImpl _$$TestScheduleRequestParamsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TestScheduleRequestParams(
+    _$TestScheduleRequestParamsImpl(
       fromDate: json['fromDate'] == null
           ? null
           : DateTime.parse(json['fromDate'] as String),
@@ -22,8 +22,8 @@ _$_TestScheduleRequestParams _$$_TestScheduleRequestParamsFromJson(
       length: json['length'] as int?,
     );
 
-Map<String, dynamic> _$$_TestScheduleRequestParamsToJson(
-        _$_TestScheduleRequestParams instance) =>
+Map<String, dynamic> _$$TestScheduleRequestParamsImplToJson(
+        _$TestScheduleRequestParamsImpl instance) =>
     <String, dynamic>{
       'fromDate': instance.fromDate?.toIso8601String(),
       'toDate': instance.toDate?.toIso8601String(),

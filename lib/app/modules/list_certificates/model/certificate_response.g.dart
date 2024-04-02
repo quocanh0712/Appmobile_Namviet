@@ -3,33 +3,12 @@
 part of 'certificate_response.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-CertificateResponse? jsonToNullableCertificateResponse(Object? json) =>
-    CertificateResponse.fromJson(json as Map<String, dynamic>);
-
-CertificateResponse jsonToCertificateResponse(Object? json) =>
-    CertificateResponse.fromJson(json as Map<String, dynamic>);
-
-List<CertificateResponse?> jsonToListNullableCertificateResponses(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => CertificateResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<CertificateResponse> jsonToListCertificateResponses(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => CertificateResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CertificateResponse _$$_CertificateResponseFromJson(
+_$CertificateResponseImpl _$$CertificateResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CertificateResponse(
+    _$CertificateResponseImpl(
       id: json['id'] as int?,
       certificateName: json['certificateName'] as String?,
       graduationYear: json['graduationYear'] as int?,
@@ -40,8 +19,8 @@ _$_CertificateResponse _$$_CertificateResponseFromJson(
       status: json['status'] as int?,
     );
 
-Map<String, dynamic> _$$_CertificateResponseToJson(
-        _$_CertificateResponse instance) =>
+Map<String, dynamic> _$$CertificateResponseImplToJson(
+        _$CertificateResponseImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'certificateName': instance.certificateName,

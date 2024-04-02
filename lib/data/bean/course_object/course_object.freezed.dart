@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'course_object.dart';
 
@@ -12,7 +12,7 @@ part of 'course_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CourseObject _$CourseObjectFromJson(Map<String, dynamic> json) {
   return _CourseObject.fromJson(json);
@@ -92,13 +92,13 @@ class _$CourseObjectCopyWithImpl<$Res, $Val extends CourseObject>
     Object? roomname = freezed,
     Object? timestart = freezed,
     Object? timeend = freezed,
-    Object? lession = null,
+    Object? lession = freezed,
     Object? identificationnumber = freezed,
     Object? examTime = freezed,
     Object? examination = freezed,
     Object? time = freezed,
-    Object? teachingmethod = null,
-    Object? status = null,
+    Object? teachingmethod = freezed,
+    Object? status = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -137,7 +137,7 @@ class _$CourseObjectCopyWithImpl<$Res, $Val extends CourseObject>
           ? _value.timeend
           : timeend // ignore: cast_nullable_to_non_nullable
               as Jiffy?,
-      lession: null == lession
+      lession: freezed == lession
           ? _value.lession
           : lession // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -157,11 +157,11 @@ class _$CourseObjectCopyWithImpl<$Res, $Val extends CourseObject>
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as String?,
-      teachingmethod: null == teachingmethod
+      teachingmethod: freezed == teachingmethod
           ? _value.teachingmethod
           : teachingmethod // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -170,11 +170,11 @@ class _$CourseObjectCopyWithImpl<$Res, $Val extends CourseObject>
 }
 
 /// @nodoc
-abstract class _$$_CourseObjectCopyWith<$Res>
+abstract class _$$CourseObjectImplCopyWith<$Res>
     implements $CourseObjectCopyWith<$Res> {
-  factory _$$_CourseObjectCopyWith(
-          _$_CourseObject value, $Res Function(_$_CourseObject) then) =
-      __$$_CourseObjectCopyWithImpl<$Res>;
+  factory _$$CourseObjectImplCopyWith(
+          _$CourseObjectImpl value, $Res Function(_$CourseObjectImpl) then) =
+      __$$CourseObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -197,11 +197,11 @@ abstract class _$$_CourseObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CourseObjectCopyWithImpl<$Res>
-    extends _$CourseObjectCopyWithImpl<$Res, _$_CourseObject>
-    implements _$$_CourseObjectCopyWith<$Res> {
-  __$$_CourseObjectCopyWithImpl(
-      _$_CourseObject _value, $Res Function(_$_CourseObject) _then)
+class __$$CourseObjectImplCopyWithImpl<$Res>
+    extends _$CourseObjectCopyWithImpl<$Res, _$CourseObjectImpl>
+    implements _$$CourseObjectImplCopyWith<$Res> {
+  __$$CourseObjectImplCopyWithImpl(
+      _$CourseObjectImpl _value, $Res Function(_$CourseObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -216,15 +216,15 @@ class __$$_CourseObjectCopyWithImpl<$Res>
     Object? roomname = freezed,
     Object? timestart = freezed,
     Object? timeend = freezed,
-    Object? lession = null,
+    Object? lession = freezed,
     Object? identificationnumber = freezed,
     Object? examTime = freezed,
     Object? examination = freezed,
     Object? time = freezed,
-    Object? teachingmethod = null,
-    Object? status = null,
+    Object? teachingmethod = freezed,
+    Object? status = freezed,
   }) {
-    return _then(_$_CourseObject(
+    return _then(_$CourseObjectImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -261,7 +261,7 @@ class __$$_CourseObjectCopyWithImpl<$Res>
           ? _value.timeend
           : timeend // ignore: cast_nullable_to_non_nullable
               as Jiffy?,
-      lession: null == lession
+      lession: freezed == lession
           ? _value.lession
           : lession // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -281,11 +281,11 @@ class __$$_CourseObjectCopyWithImpl<$Res>
           ? _value.time
           : time // ignore: cast_nullable_to_non_nullable
               as String?,
-      teachingmethod: null == teachingmethod
+      teachingmethod: freezed == teachingmethod
           ? _value.teachingmethod
           : teachingmethod // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      status: null == status
+      status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -295,8 +295,8 @@ class __$$_CourseObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CourseObject implements _CourseObject {
-  _$_CourseObject(
+class _$CourseObjectImpl implements _CourseObject {
+  _$CourseObjectImpl(
       {this.id,
       this.coursename,
       this.numbercredits,
@@ -314,8 +314,8 @@ class _$_CourseObject implements _CourseObject {
       this.teachingmethod,
       this.status});
 
-  factory _$_CourseObject.fromJson(Map<String, dynamic> json) =>
-      _$$_CourseObjectFromJson(json);
+  factory _$CourseObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CourseObjectImplFromJson(json);
 
   @override
   final int? id;
@@ -358,10 +358,10 @@ class _$_CourseObject implements _CourseObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CourseObject &&
+            other is _$CourseObjectImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.coursename, coursename) ||
                 other.coursename == coursename) &&
@@ -415,12 +415,12 @@ class _$_CourseObject implements _CourseObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CourseObjectCopyWith<_$_CourseObject> get copyWith =>
-      __$$_CourseObjectCopyWithImpl<_$_CourseObject>(this, _$identity);
+  _$$CourseObjectImplCopyWith<_$CourseObjectImpl> get copyWith =>
+      __$$CourseObjectImplCopyWithImpl<_$CourseObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CourseObjectToJson(
+    return _$$CourseObjectImplToJson(
       this,
     );
   }
@@ -443,10 +443,10 @@ abstract class _CourseObject implements CourseObject {
       final int? examination,
       final String? time,
       final dynamic teachingmethod,
-      final dynamic status}) = _$_CourseObject;
+      final dynamic status}) = _$CourseObjectImpl;
 
   factory _CourseObject.fromJson(Map<String, dynamic> json) =
-      _$_CourseObject.fromJson;
+      _$CourseObjectImpl.fromJson;
 
   @override
   int? get id;
@@ -484,6 +484,6 @@ abstract class _CourseObject implements CourseObject {
   dynamic get status;
   @override
   @JsonKey(ignore: true)
-  _$$_CourseObjectCopyWith<_$_CourseObject> get copyWith =>
+  _$$CourseObjectImplCopyWith<_$CourseObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

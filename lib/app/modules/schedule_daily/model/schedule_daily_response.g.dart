@@ -3,33 +3,12 @@
 part of 'schedule_daily_response.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-ScheduleDailyResponse? jsonToNullableScheduleDailyResponse(Object? json) =>
-    ScheduleDailyResponse.fromJson(json as Map<String, dynamic>);
-
-ScheduleDailyResponse jsonToScheduleDailyResponse(Object? json) =>
-    ScheduleDailyResponse.fromJson(json as Map<String, dynamic>);
-
-List<ScheduleDailyResponse?> jsonToListNullableScheduleDailyResponses(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => ScheduleDailyResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<ScheduleDailyResponse> jsonToListScheduleDailyResponses(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => ScheduleDailyResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ScheduleDailyResponse _$$_ScheduleDailyResponseFromJson(
+_$ScheduleDailyResponseImpl _$$ScheduleDailyResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ScheduleDailyResponse(
+    _$ScheduleDailyResponseImpl(
       timestart: json['timestart'] == null
           ? null
           : DateTime.parse(json['timestart'] as String),
@@ -42,8 +21,8 @@ _$_ScheduleDailyResponse _$$_ScheduleDailyResponseFromJson(
       lesson: json['lesson'] as String?,
     );
 
-Map<String, dynamic> _$$_ScheduleDailyResponseToJson(
-        _$_ScheduleDailyResponse instance) =>
+Map<String, dynamic> _$$ScheduleDailyResponseImplToJson(
+        _$ScheduleDailyResponseImpl instance) =>
     <String, dynamic>{
       'timestart': instance.timestart?.toIso8601String(),
       'timeend': instance.timeend?.toIso8601String(),

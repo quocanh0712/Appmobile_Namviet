@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'learning_process_response.dart';
 
@@ -12,7 +12,7 @@ part of 'learning_process_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LearningProcessResponse _$LearningProcessResponseFromJson(
     Map<String, dynamic> json) {
@@ -93,11 +93,12 @@ class _$LearningProcessResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_LearningProcessResponseCopyWith<$Res>
+abstract class _$$LearningProcessResponseImplCopyWith<$Res>
     implements $LearningProcessResponseCopyWith<$Res> {
-  factory _$$_LearningProcessResponseCopyWith(_$_LearningProcessResponse value,
-          $Res Function(_$_LearningProcessResponse) then) =
-      __$$_LearningProcessResponseCopyWithImpl<$Res>;
+  factory _$$LearningProcessResponseImplCopyWith(
+          _$LearningProcessResponseImpl value,
+          $Res Function(_$LearningProcessResponseImpl) then) =
+      __$$LearningProcessResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -109,12 +110,13 @@ abstract class _$$_LearningProcessResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LearningProcessResponseCopyWithImpl<$Res>
+class __$$LearningProcessResponseImplCopyWithImpl<$Res>
     extends _$LearningProcessResponseCopyWithImpl<$Res,
-        _$_LearningProcessResponse>
-    implements _$$_LearningProcessResponseCopyWith<$Res> {
-  __$$_LearningProcessResponseCopyWithImpl(_$_LearningProcessResponse _value,
-      $Res Function(_$_LearningProcessResponse) _then)
+        _$LearningProcessResponseImpl>
+    implements _$$LearningProcessResponseImplCopyWith<$Res> {
+  __$$LearningProcessResponseImplCopyWithImpl(
+      _$LearningProcessResponseImpl _value,
+      $Res Function(_$LearningProcessResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -126,7 +128,7 @@ class __$$_LearningProcessResponseCopyWithImpl<$Res>
     Object? major = freezed,
     Object? trainingplace = freezed,
   }) {
-    return _then(_$_LearningProcessResponse(
+    return _then(_$LearningProcessResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -153,12 +155,12 @@ class __$$_LearningProcessResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LearningProcessResponse implements _LearningProcessResponse {
-  const _$_LearningProcessResponse(
+class _$LearningProcessResponseImpl implements _LearningProcessResponse {
+  const _$LearningProcessResponseImpl(
       {this.id, this.fromdate, this.todate, this.major, this.trainingplace});
 
-  factory _$_LearningProcessResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_LearningProcessResponseFromJson(json);
+  factory _$LearningProcessResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LearningProcessResponseImplFromJson(json);
 
   @override
   final int? id;
@@ -177,10 +179,10 @@ class _$_LearningProcessResponse implements _LearningProcessResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LearningProcessResponse &&
+            other is _$LearningProcessResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.fromdate, fromdate) ||
                 other.fromdate == fromdate) &&
@@ -198,14 +200,13 @@ class _$_LearningProcessResponse implements _LearningProcessResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LearningProcessResponseCopyWith<_$_LearningProcessResponse>
-      get copyWith =>
-          __$$_LearningProcessResponseCopyWithImpl<_$_LearningProcessResponse>(
-              this, _$identity);
+  _$$LearningProcessResponseImplCopyWith<_$LearningProcessResponseImpl>
+      get copyWith => __$$LearningProcessResponseImplCopyWithImpl<
+          _$LearningProcessResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LearningProcessResponseToJson(
+    return _$$LearningProcessResponseImplToJson(
       this,
     );
   }
@@ -217,10 +218,10 @@ abstract class _LearningProcessResponse implements LearningProcessResponse {
       final DateTime? fromdate,
       final DateTime? todate,
       final String? major,
-      final String? trainingplace}) = _$_LearningProcessResponse;
+      final String? trainingplace}) = _$LearningProcessResponseImpl;
 
   factory _LearningProcessResponse.fromJson(Map<String, dynamic> json) =
-      _$_LearningProcessResponse.fromJson;
+      _$LearningProcessResponseImpl.fromJson;
 
   @override
   int? get id;
@@ -234,6 +235,6 @@ abstract class _LearningProcessResponse implements LearningProcessResponse {
   String? get trainingplace;
   @override
   @JsonKey(ignore: true)
-  _$$_LearningProcessResponseCopyWith<_$_LearningProcessResponse>
+  _$$LearningProcessResponseImplCopyWith<_$LearningProcessResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

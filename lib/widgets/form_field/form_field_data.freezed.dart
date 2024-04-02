@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'form_field_data.dart';
 
@@ -12,7 +12,7 @@ part of 'form_field_data.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 FormFieldData _$FormFieldDataFromJson(Map<String, dynamic> json) {
   return _FormFieldData.fromJson(json);
@@ -140,11 +140,11 @@ class _$FormFieldDataCopyWithImpl<$Res, $Val extends FormFieldData>
 }
 
 /// @nodoc
-abstract class _$$_FormFieldDataCopyWith<$Res>
+abstract class _$$FormFieldDataImplCopyWith<$Res>
     implements $FormFieldDataCopyWith<$Res> {
-  factory _$$_FormFieldDataCopyWith(
-          _$_FormFieldData value, $Res Function(_$_FormFieldData) then) =
-      __$$_FormFieldDataCopyWithImpl<$Res>;
+  factory _$$FormFieldDataImplCopyWith(
+          _$FormFieldDataImpl value, $Res Function(_$FormFieldDataImpl) then) =
+      __$$FormFieldDataImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -163,11 +163,11 @@ abstract class _$$_FormFieldDataCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FormFieldDataCopyWithImpl<$Res>
-    extends _$FormFieldDataCopyWithImpl<$Res, _$_FormFieldData>
-    implements _$$_FormFieldDataCopyWith<$Res> {
-  __$$_FormFieldDataCopyWithImpl(
-      _$_FormFieldData _value, $Res Function(_$_FormFieldData) _then)
+class __$$FormFieldDataImplCopyWithImpl<$Res>
+    extends _$FormFieldDataCopyWithImpl<$Res, _$FormFieldDataImpl>
+    implements _$$FormFieldDataImplCopyWith<$Res> {
+  __$$FormFieldDataImplCopyWithImpl(
+      _$FormFieldDataImpl _value, $Res Function(_$FormFieldDataImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -186,7 +186,7 @@ class __$$_FormFieldDataCopyWithImpl<$Res>
     Object? subtype = freezed,
     Object? multiple = freezed,
   }) {
-    return _then(_$_FormFieldData(
+    return _then(_$FormFieldDataImpl(
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -241,8 +241,8 @@ class __$$_FormFieldDataCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FormFieldData implements _FormFieldData {
-  const _$_FormFieldData(
+class _$FormFieldDataImpl implements _FormFieldData {
+  const _$FormFieldDataImpl(
       {this.type,
       this.required,
       this.label,
@@ -257,8 +257,8 @@ class _$_FormFieldData implements _FormFieldData {
       this.multiple})
       : _values = values;
 
-  factory _$_FormFieldData.fromJson(Map<String, dynamic> json) =>
-      _$$_FormFieldDataFromJson(json);
+  factory _$FormFieldDataImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FormFieldDataImplFromJson(json);
 
   @override
   final String? type;
@@ -283,6 +283,7 @@ class _$_FormFieldData implements _FormFieldData {
   List<ValueModel>? get values {
     final value = _values;
     if (value == null) return null;
+    if (_values is EqualUnmodifiableListView) return _values;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -298,10 +299,10 @@ class _$_FormFieldData implements _FormFieldData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FormFieldData &&
+            other is _$FormFieldDataImpl &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.required, required) ||
                 other.required == required) &&
@@ -338,12 +339,12 @@ class _$_FormFieldData implements _FormFieldData {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FormFieldDataCopyWith<_$_FormFieldData> get copyWith =>
-      __$$_FormFieldDataCopyWithImpl<_$_FormFieldData>(this, _$identity);
+  _$$FormFieldDataImplCopyWith<_$FormFieldDataImpl> get copyWith =>
+      __$$FormFieldDataImplCopyWithImpl<_$FormFieldDataImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FormFieldDataToJson(
+    return _$$FormFieldDataImplToJson(
       this,
     );
   }
@@ -362,10 +363,10 @@ abstract class _FormFieldData implements FormFieldData {
       final String? value,
       final List<ValueModel>? values,
       final String? subtype,
-      final bool? multiple}) = _$_FormFieldData;
+      final bool? multiple}) = _$FormFieldDataImpl;
 
   factory _FormFieldData.fromJson(Map<String, dynamic> json) =
-      _$_FormFieldData.fromJson;
+      _$FormFieldDataImpl.fromJson;
 
   @override
   String? get type;
@@ -393,7 +394,7 @@ abstract class _FormFieldData implements FormFieldData {
   bool? get multiple;
   @override
   @JsonKey(ignore: true)
-  _$$_FormFieldDataCopyWith<_$_FormFieldData> get copyWith =>
+  _$$FormFieldDataImplCopyWith<_$FormFieldDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -457,22 +458,22 @@ class _$ValueModelCopyWithImpl<$Res, $Val extends ValueModel>
 }
 
 /// @nodoc
-abstract class _$$_ValueModelCopyWith<$Res>
+abstract class _$$ValueModelImplCopyWith<$Res>
     implements $ValueModelCopyWith<$Res> {
-  factory _$$_ValueModelCopyWith(
-          _$_ValueModel value, $Res Function(_$_ValueModel) then) =
-      __$$_ValueModelCopyWithImpl<$Res>;
+  factory _$$ValueModelImplCopyWith(
+          _$ValueModelImpl value, $Res Function(_$ValueModelImpl) then) =
+      __$$ValueModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? label, String? value, bool? selected});
 }
 
 /// @nodoc
-class __$$_ValueModelCopyWithImpl<$Res>
-    extends _$ValueModelCopyWithImpl<$Res, _$_ValueModel>
-    implements _$$_ValueModelCopyWith<$Res> {
-  __$$_ValueModelCopyWithImpl(
-      _$_ValueModel _value, $Res Function(_$_ValueModel) _then)
+class __$$ValueModelImplCopyWithImpl<$Res>
+    extends _$ValueModelCopyWithImpl<$Res, _$ValueModelImpl>
+    implements _$$ValueModelImplCopyWith<$Res> {
+  __$$ValueModelImplCopyWithImpl(
+      _$ValueModelImpl _value, $Res Function(_$ValueModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -482,7 +483,7 @@ class __$$_ValueModelCopyWithImpl<$Res>
     Object? value = freezed,
     Object? selected = freezed,
   }) {
-    return _then(_$_ValueModel(
+    return _then(_$ValueModelImpl(
       label: freezed == label
           ? _value.label
           : label // ignore: cast_nullable_to_non_nullable
@@ -501,11 +502,11 @@ class __$$_ValueModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ValueModel implements _ValueModel {
-  const _$_ValueModel({this.label, this.value, this.selected});
+class _$ValueModelImpl implements _ValueModel {
+  const _$ValueModelImpl({this.label, this.value, this.selected});
 
-  factory _$_ValueModel.fromJson(Map<String, dynamic> json) =>
-      _$$_ValueModelFromJson(json);
+  factory _$ValueModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ValueModelImplFromJson(json);
 
   @override
   final String? label;
@@ -520,10 +521,10 @@ class _$_ValueModel implements _ValueModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ValueModel &&
+            other is _$ValueModelImpl &&
             (identical(other.label, label) || other.label == label) &&
             (identical(other.value, value) || other.value == value) &&
             (identical(other.selected, selected) ||
@@ -537,12 +538,12 @@ class _$_ValueModel implements _ValueModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ValueModelCopyWith<_$_ValueModel> get copyWith =>
-      __$$_ValueModelCopyWithImpl<_$_ValueModel>(this, _$identity);
+  _$$ValueModelImplCopyWith<_$ValueModelImpl> get copyWith =>
+      __$$ValueModelImplCopyWithImpl<_$ValueModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ValueModelToJson(
+    return _$$ValueModelImplToJson(
       this,
     );
   }
@@ -552,10 +553,10 @@ abstract class _ValueModel implements ValueModel {
   const factory _ValueModel(
       {final String? label,
       final String? value,
-      final bool? selected}) = _$_ValueModel;
+      final bool? selected}) = _$ValueModelImpl;
 
   factory _ValueModel.fromJson(Map<String, dynamic> json) =
-      _$_ValueModel.fromJson;
+      _$ValueModelImpl.fromJson;
 
   @override
   String? get label;
@@ -565,6 +566,6 @@ abstract class _ValueModel implements ValueModel {
   bool? get selected;
   @override
   @JsonKey(ignore: true)
-  _$$_ValueModelCopyWith<_$_ValueModel> get copyWith =>
+  _$$ValueModelImplCopyWith<_$ValueModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

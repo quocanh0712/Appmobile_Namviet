@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'education_program_client.dart';
 
@@ -12,7 +12,7 @@ part of 'education_program_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$EducationProgramClient {
@@ -106,11 +106,12 @@ class _$EducationProgramClientCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EducationProgramClientCopyWith<$Res>
+abstract class _$$EducationProgramClientImplCopyWith<$Res>
     implements $EducationProgramClientCopyWith<$Res> {
-  factory _$$_EducationProgramClientCopyWith(_$_EducationProgramClient value,
-          $Res Function(_$_EducationProgramClient) then) =
-      __$$_EducationProgramClientCopyWithImpl<$Res>;
+  factory _$$EducationProgramClientImplCopyWith(
+          _$EducationProgramClientImpl value,
+          $Res Function(_$EducationProgramClientImpl) then) =
+      __$$EducationProgramClientImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({EducationProgramRequest? model});
@@ -120,12 +121,13 @@ abstract class _$$_EducationProgramClientCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EducationProgramClientCopyWithImpl<$Res>
+class __$$EducationProgramClientImplCopyWithImpl<$Res>
     extends _$EducationProgramClientCopyWithImpl<$Res,
-        _$_EducationProgramClient>
-    implements _$$_EducationProgramClientCopyWith<$Res> {
-  __$$_EducationProgramClientCopyWithImpl(_$_EducationProgramClient _value,
-      $Res Function(_$_EducationProgramClient) _then)
+        _$EducationProgramClientImpl>
+    implements _$$EducationProgramClientImplCopyWith<$Res> {
+  __$$EducationProgramClientImplCopyWithImpl(
+      _$EducationProgramClientImpl _value,
+      $Res Function(_$EducationProgramClientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +135,7 @@ class __$$_EducationProgramClientCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_EducationProgramClient(
+    return _then(_$EducationProgramClientImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -144,8 +146,8 @@ class __$$_EducationProgramClientCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_EducationProgramClient extends _EducationProgramClient {
-  _$_EducationProgramClient(this.model) : super._();
+class _$EducationProgramClientImpl extends _EducationProgramClient {
+  _$EducationProgramClientImpl(this.model) : super._();
 
   @override
   final EducationProgramRequest? model;
@@ -156,10 +158,10 @@ class _$_EducationProgramClient extends _EducationProgramClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EducationProgramClient &&
+            other is _$EducationProgramClientImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -169,9 +171,9 @@ class _$_EducationProgramClient extends _EducationProgramClient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EducationProgramClientCopyWith<_$_EducationProgramClient> get copyWith =>
-      __$$_EducationProgramClientCopyWithImpl<_$_EducationProgramClient>(
-          this, _$identity);
+  _$$EducationProgramClientImplCopyWith<_$EducationProgramClientImpl>
+      get copyWith => __$$EducationProgramClientImplCopyWithImpl<
+          _$EducationProgramClientImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -234,13 +236,13 @@ class _$_EducationProgramClient extends _EducationProgramClient {
 
 abstract class _EducationProgramClient extends EducationProgramClient {
   factory _EducationProgramClient(final EducationProgramRequest? model) =
-      _$_EducationProgramClient;
+      _$EducationProgramClientImpl;
   _EducationProgramClient._() : super._();
 
   @override
   EducationProgramRequest? get model;
   @override
   @JsonKey(ignore: true)
-  _$$_EducationProgramClientCopyWith<_$_EducationProgramClient> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$EducationProgramClientImplCopyWith<_$EducationProgramClientImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

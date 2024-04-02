@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'activity_response_object.dart';
 
@@ -12,7 +12,7 @@ part of 'activity_response_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ActivityResponseObject _$ActivityResponseObjectFromJson(
     Map<String, dynamic> json) {
@@ -68,8 +68,8 @@ class _$ActivityResponseObjectCopyWithImpl<$Res,
   @override
   $Res call({
     Object? fullName = freezed,
-    Object? onUserTap = null,
-    Object? onArticleTap = null,
+    Object? onUserTap = freezed,
+    Object? onArticleTap = freezed,
     Object? dateCreated = freezed,
     Object? position = freezed,
     Object? title = freezed,
@@ -81,11 +81,11 @@ class _$ActivityResponseObjectCopyWithImpl<$Res,
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
               as String?,
-      onUserTap: null == onUserTap
+      onUserTap: freezed == onUserTap
           ? _value.onUserTap
           : onUserTap // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      onArticleTap: null == onArticleTap
+      onArticleTap: freezed == onArticleTap
           ? _value.onArticleTap
           : onArticleTap // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -114,11 +114,12 @@ class _$ActivityResponseObjectCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ActivityResponseObjectCopyWith<$Res>
+abstract class _$$ActivityResponseObjectImplCopyWith<$Res>
     implements $ActivityResponseObjectCopyWith<$Res> {
-  factory _$$_ActivityResponseObjectCopyWith(_$_ActivityResponseObject value,
-          $Res Function(_$_ActivityResponseObject) then) =
-      __$$_ActivityResponseObjectCopyWithImpl<$Res>;
+  factory _$$ActivityResponseObjectImplCopyWith(
+          _$ActivityResponseObjectImpl value,
+          $Res Function(_$ActivityResponseObjectImpl) then) =
+      __$$ActivityResponseObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -133,33 +134,35 @@ abstract class _$$_ActivityResponseObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ActivityResponseObjectCopyWithImpl<$Res>
+class __$$ActivityResponseObjectImplCopyWithImpl<$Res>
     extends _$ActivityResponseObjectCopyWithImpl<$Res,
-        _$_ActivityResponseObject>
-    implements _$$_ActivityResponseObjectCopyWith<$Res> {
-  __$$_ActivityResponseObjectCopyWithImpl(_$_ActivityResponseObject _value,
-      $Res Function(_$_ActivityResponseObject) _then)
+        _$ActivityResponseObjectImpl>
+    implements _$$ActivityResponseObjectImplCopyWith<$Res> {
+  __$$ActivityResponseObjectImplCopyWithImpl(
+      _$ActivityResponseObjectImpl _value,
+      $Res Function(_$ActivityResponseObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? fullName = freezed,
-    Object? onUserTap = null,
-    Object? onArticleTap = null,
+    Object? onUserTap = freezed,
+    Object? onArticleTap = freezed,
     Object? dateCreated = freezed,
     Object? position = freezed,
     Object? title = freezed,
     Object? content = freezed,
     Object? image = freezed,
   }) {
-    return _then(_$_ActivityResponseObject(
+    return _then(_$ActivityResponseObjectImpl(
       fullName: freezed == fullName
           ? _value.fullName
           : fullName // ignore: cast_nullable_to_non_nullable
               as String?,
-      onUserTap: null == onUserTap ? _value.onUserTap : onUserTap,
-      onArticleTap: null == onArticleTap ? _value.onArticleTap : onArticleTap,
+      onUserTap: freezed == onUserTap ? _value.onUserTap! : onUserTap,
+      onArticleTap:
+          freezed == onArticleTap ? _value.onArticleTap! : onArticleTap,
       dateCreated: freezed == dateCreated
           ? _value.dateCreated
           : dateCreated // ignore: cast_nullable_to_non_nullable
@@ -186,8 +189,8 @@ class __$$_ActivityResponseObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ActivityResponseObject implements _ActivityResponseObject {
-  _$_ActivityResponseObject(
+class _$ActivityResponseObjectImpl implements _ActivityResponseObject {
+  _$ActivityResponseObjectImpl(
       {this.fullName,
       this.onUserTap = null,
       this.onArticleTap = null,
@@ -197,8 +200,8 @@ class _$_ActivityResponseObject implements _ActivityResponseObject {
       this.content,
       this.image});
 
-  factory _$_ActivityResponseObject.fromJson(Map<String, dynamic> json) =>
-      _$$_ActivityResponseObjectFromJson(json);
+  factory _$ActivityResponseObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ActivityResponseObjectImplFromJson(json);
 
   @override
   final String? fullName;
@@ -225,10 +228,10 @@ class _$_ActivityResponseObject implements _ActivityResponseObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ActivityResponseObject &&
+            other is _$ActivityResponseObjectImpl &&
             (identical(other.fullName, fullName) ||
                 other.fullName == fullName) &&
             const DeepCollectionEquality().equals(other.onUserTap, onUserTap) &&
@@ -259,13 +262,13 @@ class _$_ActivityResponseObject implements _ActivityResponseObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ActivityResponseObjectCopyWith<_$_ActivityResponseObject> get copyWith =>
-      __$$_ActivityResponseObjectCopyWithImpl<_$_ActivityResponseObject>(
-          this, _$identity);
+  _$$ActivityResponseObjectImplCopyWith<_$ActivityResponseObjectImpl>
+      get copyWith => __$$ActivityResponseObjectImplCopyWithImpl<
+          _$ActivityResponseObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ActivityResponseObjectToJson(
+    return _$$ActivityResponseObjectImplToJson(
       this,
     );
   }
@@ -280,10 +283,10 @@ abstract class _ActivityResponseObject implements ActivityResponseObject {
       final String? position,
       final String? title,
       final String? content,
-      final String? image}) = _$_ActivityResponseObject;
+      final String? image}) = _$ActivityResponseObjectImpl;
 
   factory _ActivityResponseObject.fromJson(Map<String, dynamic> json) =
-      _$_ActivityResponseObject.fromJson;
+      _$ActivityResponseObjectImpl.fromJson;
 
   @override
   String? get fullName;
@@ -303,6 +306,6 @@ abstract class _ActivityResponseObject implements ActivityResponseObject {
   String? get image;
   @override
   @JsonKey(ignore: true)
-  _$$_ActivityResponseObjectCopyWith<_$_ActivityResponseObject> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ActivityResponseObjectImplCopyWith<_$ActivityResponseObjectImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

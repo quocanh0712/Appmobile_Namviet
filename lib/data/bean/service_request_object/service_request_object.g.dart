@@ -3,33 +3,12 @@
 part of 'service_request_object.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-ServiceRequestObject? jsonToNullableServiceRequestObject(Object? json) =>
-    ServiceRequestObject.fromJson(json as Map<String, dynamic>);
-
-ServiceRequestObject jsonToServiceRequestObject(Object? json) =>
-    ServiceRequestObject.fromJson(json as Map<String, dynamic>);
-
-List<ServiceRequestObject?> jsonToListNullableServiceRequestObjects(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => ServiceRequestObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<ServiceRequestObject> jsonToListServiceRequestObjects(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => ServiceRequestObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ServiceRequestObject _$$_ServiceRequestObjectFromJson(
+_$ServiceRequestObjectImpl _$$ServiceRequestObjectImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ServiceRequestObject(
+    _$ServiceRequestObjectImpl(
       id: json['id'] as String?,
       idForm: json['idForm'] as String?,
       formname: json['formname'] as String?,
@@ -42,8 +21,8 @@ _$_ServiceRequestObject _$$_ServiceRequestObjectFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ServiceRequestObjectToJson(
-        _$_ServiceRequestObject instance) =>
+Map<String, dynamic> _$$ServiceRequestObjectImplToJson(
+        _$ServiceRequestObjectImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'idForm': instance.idForm,

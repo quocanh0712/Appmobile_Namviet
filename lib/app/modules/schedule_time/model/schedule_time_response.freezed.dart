@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'schedule_time_response.dart';
 
@@ -12,7 +12,7 @@ part of 'schedule_time_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ScheduleTimeResponse _$ScheduleTimeResponseFromJson(Map<String, dynamic> json) {
   return _ScheduleTimeResponse.fromJson(json);
@@ -69,22 +69,22 @@ class _$ScheduleTimeResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ScheduleTimeResponseCopyWith<$Res>
+abstract class _$$ScheduleTimeResponseImplCopyWith<$Res>
     implements $ScheduleTimeResponseCopyWith<$Res> {
-  factory _$$_ScheduleTimeResponseCopyWith(_$_ScheduleTimeResponse value,
-          $Res Function(_$_ScheduleTimeResponse) then) =
-      __$$_ScheduleTimeResponseCopyWithImpl<$Res>;
+  factory _$$ScheduleTimeResponseImplCopyWith(_$ScheduleTimeResponseImpl value,
+          $Res Function(_$ScheduleTimeResponseImpl) then) =
+      __$$ScheduleTimeResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({DateTime? date, List<CourseItem>? listcourse});
 }
 
 /// @nodoc
-class __$$_ScheduleTimeResponseCopyWithImpl<$Res>
-    extends _$ScheduleTimeResponseCopyWithImpl<$Res, _$_ScheduleTimeResponse>
-    implements _$$_ScheduleTimeResponseCopyWith<$Res> {
-  __$$_ScheduleTimeResponseCopyWithImpl(_$_ScheduleTimeResponse _value,
-      $Res Function(_$_ScheduleTimeResponse) _then)
+class __$$ScheduleTimeResponseImplCopyWithImpl<$Res>
+    extends _$ScheduleTimeResponseCopyWithImpl<$Res, _$ScheduleTimeResponseImpl>
+    implements _$$ScheduleTimeResponseImplCopyWith<$Res> {
+  __$$ScheduleTimeResponseImplCopyWithImpl(_$ScheduleTimeResponseImpl _value,
+      $Res Function(_$ScheduleTimeResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -93,7 +93,7 @@ class __$$_ScheduleTimeResponseCopyWithImpl<$Res>
     Object? date = freezed,
     Object? listcourse = freezed,
   }) {
-    return _then(_$_ScheduleTimeResponse(
+    return _then(_$ScheduleTimeResponseImpl(
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -108,12 +108,13 @@ class __$$_ScheduleTimeResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ScheduleTimeResponse implements _ScheduleTimeResponse {
-  const _$_ScheduleTimeResponse({this.date, final List<CourseItem>? listcourse})
+class _$ScheduleTimeResponseImpl implements _ScheduleTimeResponse {
+  const _$ScheduleTimeResponseImpl(
+      {this.date, final List<CourseItem>? listcourse})
       : _listcourse = listcourse;
 
-  factory _$_ScheduleTimeResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_ScheduleTimeResponseFromJson(json);
+  factory _$ScheduleTimeResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ScheduleTimeResponseImplFromJson(json);
 
   @override
   final DateTime? date;
@@ -122,6 +123,7 @@ class _$_ScheduleTimeResponse implements _ScheduleTimeResponse {
   List<CourseItem>? get listcourse {
     final value = _listcourse;
     if (value == null) return null;
+    if (_listcourse is EqualUnmodifiableListView) return _listcourse;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -132,10 +134,10 @@ class _$_ScheduleTimeResponse implements _ScheduleTimeResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ScheduleTimeResponse &&
+            other is _$ScheduleTimeResponseImpl &&
             (identical(other.date, date) || other.date == date) &&
             const DeepCollectionEquality()
                 .equals(other._listcourse, _listcourse));
@@ -149,13 +151,14 @@ class _$_ScheduleTimeResponse implements _ScheduleTimeResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScheduleTimeResponseCopyWith<_$_ScheduleTimeResponse> get copyWith =>
-      __$$_ScheduleTimeResponseCopyWithImpl<_$_ScheduleTimeResponse>(
-          this, _$identity);
+  _$$ScheduleTimeResponseImplCopyWith<_$ScheduleTimeResponseImpl>
+      get copyWith =>
+          __$$ScheduleTimeResponseImplCopyWithImpl<_$ScheduleTimeResponseImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScheduleTimeResponseToJson(
+    return _$$ScheduleTimeResponseImplToJson(
       this,
     );
   }
@@ -164,10 +167,10 @@ class _$_ScheduleTimeResponse implements _ScheduleTimeResponse {
 abstract class _ScheduleTimeResponse implements ScheduleTimeResponse {
   const factory _ScheduleTimeResponse(
       {final DateTime? date,
-      final List<CourseItem>? listcourse}) = _$_ScheduleTimeResponse;
+      final List<CourseItem>? listcourse}) = _$ScheduleTimeResponseImpl;
 
   factory _ScheduleTimeResponse.fromJson(Map<String, dynamic> json) =
-      _$_ScheduleTimeResponse.fromJson;
+      _$ScheduleTimeResponseImpl.fromJson;
 
   @override
   DateTime? get date;
@@ -175,8 +178,8 @@ abstract class _ScheduleTimeResponse implements ScheduleTimeResponse {
   List<CourseItem>? get listcourse;
   @override
   @JsonKey(ignore: true)
-  _$$_ScheduleTimeResponseCopyWith<_$_ScheduleTimeResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ScheduleTimeResponseImplCopyWith<_$ScheduleTimeResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CourseItem _$CourseItemFromJson(Map<String, dynamic> json) {
@@ -305,11 +308,11 @@ class _$CourseItemCopyWithImpl<$Res, $Val extends CourseItem>
 }
 
 /// @nodoc
-abstract class _$$_CourseItemCopyWith<$Res>
+abstract class _$$CourseItemImplCopyWith<$Res>
     implements $CourseItemCopyWith<$Res> {
-  factory _$$_CourseItemCopyWith(
-          _$_CourseItem value, $Res Function(_$_CourseItem) then) =
-      __$$_CourseItemCopyWithImpl<$Res>;
+  factory _$$CourseItemImplCopyWith(
+          _$CourseItemImpl value, $Res Function(_$CourseItemImpl) then) =
+      __$$CourseItemImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -328,11 +331,11 @@ abstract class _$$_CourseItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CourseItemCopyWithImpl<$Res>
-    extends _$CourseItemCopyWithImpl<$Res, _$_CourseItem>
-    implements _$$_CourseItemCopyWith<$Res> {
-  __$$_CourseItemCopyWithImpl(
-      _$_CourseItem _value, $Res Function(_$_CourseItem) _then)
+class __$$CourseItemImplCopyWithImpl<$Res>
+    extends _$CourseItemCopyWithImpl<$Res, _$CourseItemImpl>
+    implements _$$CourseItemImplCopyWith<$Res> {
+  __$$CourseItemImplCopyWithImpl(
+      _$CourseItemImpl _value, $Res Function(_$CourseItemImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -351,7 +354,7 @@ class __$$_CourseItemCopyWithImpl<$Res>
     Object? lession = freezed,
     Object? rank = freezed,
   }) {
-    return _then(_$_CourseItem(
+    return _then(_$CourseItemImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -406,8 +409,8 @@ class __$$_CourseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CourseItem implements _CourseItem {
-  const _$_CourseItem(
+class _$CourseItemImpl implements _CourseItem {
+  const _$CourseItemImpl(
       {this.id,
       this.coursename,
       this.numbercredits,
@@ -421,8 +424,8 @@ class _$_CourseItem implements _CourseItem {
       this.lession,
       this.rank});
 
-  factory _$_CourseItem.fromJson(Map<String, dynamic> json) =>
-      _$$_CourseItemFromJson(json);
+  factory _$CourseItemImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CourseItemImplFromJson(json);
 
   @override
   final int? id;
@@ -455,10 +458,10 @@ class _$_CourseItem implements _CourseItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CourseItem &&
+            other is _$CourseItemImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.coursename, coursename) ||
                 other.coursename == coursename) &&
@@ -500,12 +503,12 @@ class _$_CourseItem implements _CourseItem {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CourseItemCopyWith<_$_CourseItem> get copyWith =>
-      __$$_CourseItemCopyWithImpl<_$_CourseItem>(this, _$identity);
+  _$$CourseItemImplCopyWith<_$CourseItemImpl> get copyWith =>
+      __$$CourseItemImplCopyWithImpl<_$CourseItemImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CourseItemToJson(
+    return _$$CourseItemImplToJson(
       this,
     );
   }
@@ -524,10 +527,10 @@ abstract class _CourseItem implements CourseItem {
       final DateTime? timestart,
       final DateTime? timeend,
       final String? lession,
-      final int? rank}) = _$_CourseItem;
+      final int? rank}) = _$CourseItemImpl;
 
   factory _CourseItem.fromJson(Map<String, dynamic> json) =
-      _$_CourseItem.fromJson;
+      _$CourseItemImpl.fromJson;
 
   @override
   int? get id;
@@ -555,6 +558,6 @@ abstract class _CourseItem implements CourseItem {
   int? get rank;
   @override
   @JsonKey(ignore: true)
-  _$$_CourseItemCopyWith<_$_CourseItem> get copyWith =>
+  _$$CourseItemImplCopyWith<_$CourseItemImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

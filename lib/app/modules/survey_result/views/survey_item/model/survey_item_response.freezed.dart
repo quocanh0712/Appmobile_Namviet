@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'survey_item_response.dart';
 
@@ -12,7 +12,7 @@ part of 'survey_item_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SurveyItemResponse _$SurveyItemResponseFromJson(Map<String, dynamic> json) {
   return _SurveyItemResponse.fromJson(json);
@@ -80,22 +80,22 @@ class _$SurveyItemResponseCopyWithImpl<$Res, $Val extends SurveyItemResponse>
 }
 
 /// @nodoc
-abstract class _$$_SurveyItemResponseCopyWith<$Res>
+abstract class _$$SurveyItemResponseImplCopyWith<$Res>
     implements $SurveyItemResponseCopyWith<$Res> {
-  factory _$$_SurveyItemResponseCopyWith(_$_SurveyItemResponse value,
-          $Res Function(_$_SurveyItemResponse) then) =
-      __$$_SurveyItemResponseCopyWithImpl<$Res>;
+  factory _$$SurveyItemResponseImplCopyWith(_$SurveyItemResponseImpl value,
+          $Res Function(_$SurveyItemResponseImpl) then) =
+      __$$SurveyItemResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? criteria, String? result, int? count, int? total});
 }
 
 /// @nodoc
-class __$$_SurveyItemResponseCopyWithImpl<$Res>
-    extends _$SurveyItemResponseCopyWithImpl<$Res, _$_SurveyItemResponse>
-    implements _$$_SurveyItemResponseCopyWith<$Res> {
-  __$$_SurveyItemResponseCopyWithImpl(
-      _$_SurveyItemResponse _value, $Res Function(_$_SurveyItemResponse) _then)
+class __$$SurveyItemResponseImplCopyWithImpl<$Res>
+    extends _$SurveyItemResponseCopyWithImpl<$Res, _$SurveyItemResponseImpl>
+    implements _$$SurveyItemResponseImplCopyWith<$Res> {
+  __$$SurveyItemResponseImplCopyWithImpl(_$SurveyItemResponseImpl _value,
+      $Res Function(_$SurveyItemResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -106,7 +106,7 @@ class __$$_SurveyItemResponseCopyWithImpl<$Res>
     Object? count = freezed,
     Object? total = freezed,
   }) {
-    return _then(_$_SurveyItemResponse(
+    return _then(_$SurveyItemResponseImpl(
       criteria: freezed == criteria
           ? _value.criteria
           : criteria // ignore: cast_nullable_to_non_nullable
@@ -129,12 +129,12 @@ class __$$_SurveyItemResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SurveyItemResponse implements _SurveyItemResponse {
-  const _$_SurveyItemResponse(
+class _$SurveyItemResponseImpl implements _SurveyItemResponse {
+  const _$SurveyItemResponseImpl(
       {this.criteria, this.result, this.count, this.total});
 
-  factory _$_SurveyItemResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_SurveyItemResponseFromJson(json);
+  factory _$SurveyItemResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SurveyItemResponseImplFromJson(json);
 
   @override
   final String? criteria;
@@ -151,10 +151,10 @@ class _$_SurveyItemResponse implements _SurveyItemResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SurveyItemResponse &&
+            other is _$SurveyItemResponseImpl &&
             (identical(other.criteria, criteria) ||
                 other.criteria == criteria) &&
             (identical(other.result, result) || other.result == result) &&
@@ -169,13 +169,13 @@ class _$_SurveyItemResponse implements _SurveyItemResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SurveyItemResponseCopyWith<_$_SurveyItemResponse> get copyWith =>
-      __$$_SurveyItemResponseCopyWithImpl<_$_SurveyItemResponse>(
+  _$$SurveyItemResponseImplCopyWith<_$SurveyItemResponseImpl> get copyWith =>
+      __$$SurveyItemResponseImplCopyWithImpl<_$SurveyItemResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SurveyItemResponseToJson(
+    return _$$SurveyItemResponseImplToJson(
       this,
     );
   }
@@ -186,10 +186,10 @@ abstract class _SurveyItemResponse implements SurveyItemResponse {
       {final String? criteria,
       final String? result,
       final int? count,
-      final int? total}) = _$_SurveyItemResponse;
+      final int? total}) = _$SurveyItemResponseImpl;
 
   factory _SurveyItemResponse.fromJson(Map<String, dynamic> json) =
-      _$_SurveyItemResponse.fromJson;
+      _$SurveyItemResponseImpl.fromJson;
 
   @override
   String? get criteria;
@@ -201,6 +201,6 @@ abstract class _SurveyItemResponse implements SurveyItemResponse {
   int? get total;
   @override
   @JsonKey(ignore: true)
-  _$$_SurveyItemResponseCopyWith<_$_SurveyItemResponse> get copyWith =>
+  _$$SurveyItemResponseImplCopyWith<_$SurveyItemResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

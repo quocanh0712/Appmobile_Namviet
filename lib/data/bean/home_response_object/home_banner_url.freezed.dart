@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'home_banner_url.dart';
 
@@ -12,7 +12,7 @@ part of 'home_banner_url.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 HomeBannerUrl _$HomeBannerUrlFromJson(Map<String, dynamic> json) {
   return _HomeBannerUrl.fromJson(json);
@@ -68,22 +68,22 @@ class _$HomeBannerUrlCopyWithImpl<$Res, $Val extends HomeBannerUrl>
 }
 
 /// @nodoc
-abstract class _$$_HomeBannerUrlCopyWith<$Res>
+abstract class _$$HomeBannerUrlImplCopyWith<$Res>
     implements $HomeBannerUrlCopyWith<$Res> {
-  factory _$$_HomeBannerUrlCopyWith(
-          _$_HomeBannerUrl value, $Res Function(_$_HomeBannerUrl) then) =
-      __$$_HomeBannerUrlCopyWithImpl<$Res>;
+  factory _$$HomeBannerUrlImplCopyWith(
+          _$HomeBannerUrlImpl value, $Res Function(_$HomeBannerUrlImpl) then) =
+      __$$HomeBannerUrlImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? imageurl, String? href});
 }
 
 /// @nodoc
-class __$$_HomeBannerUrlCopyWithImpl<$Res>
-    extends _$HomeBannerUrlCopyWithImpl<$Res, _$_HomeBannerUrl>
-    implements _$$_HomeBannerUrlCopyWith<$Res> {
-  __$$_HomeBannerUrlCopyWithImpl(
-      _$_HomeBannerUrl _value, $Res Function(_$_HomeBannerUrl) _then)
+class __$$HomeBannerUrlImplCopyWithImpl<$Res>
+    extends _$HomeBannerUrlCopyWithImpl<$Res, _$HomeBannerUrlImpl>
+    implements _$$HomeBannerUrlImplCopyWith<$Res> {
+  __$$HomeBannerUrlImplCopyWithImpl(
+      _$HomeBannerUrlImpl _value, $Res Function(_$HomeBannerUrlImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -92,7 +92,7 @@ class __$$_HomeBannerUrlCopyWithImpl<$Res>
     Object? imageurl = freezed,
     Object? href = freezed,
   }) {
-    return _then(_$_HomeBannerUrl(
+    return _then(_$HomeBannerUrlImpl(
       imageurl: freezed == imageurl
           ? _value.imageurl
           : imageurl // ignore: cast_nullable_to_non_nullable
@@ -107,11 +107,11 @@ class __$$_HomeBannerUrlCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_HomeBannerUrl implements _HomeBannerUrl {
-  _$_HomeBannerUrl({this.imageurl, this.href});
+class _$HomeBannerUrlImpl implements _HomeBannerUrl {
+  _$HomeBannerUrlImpl({this.imageurl, this.href});
 
-  factory _$_HomeBannerUrl.fromJson(Map<String, dynamic> json) =>
-      _$$_HomeBannerUrlFromJson(json);
+  factory _$HomeBannerUrlImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HomeBannerUrlImplFromJson(json);
 
   @override
   final String? imageurl;
@@ -124,10 +124,10 @@ class _$_HomeBannerUrl implements _HomeBannerUrl {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_HomeBannerUrl &&
+            other is _$HomeBannerUrlImpl &&
             (identical(other.imageurl, imageurl) ||
                 other.imageurl == imageurl) &&
             (identical(other.href, href) || other.href == href));
@@ -140,12 +140,12 @@ class _$_HomeBannerUrl implements _HomeBannerUrl {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_HomeBannerUrlCopyWith<_$_HomeBannerUrl> get copyWith =>
-      __$$_HomeBannerUrlCopyWithImpl<_$_HomeBannerUrl>(this, _$identity);
+  _$$HomeBannerUrlImplCopyWith<_$HomeBannerUrlImpl> get copyWith =>
+      __$$HomeBannerUrlImplCopyWithImpl<_$HomeBannerUrlImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HomeBannerUrlToJson(
+    return _$$HomeBannerUrlImplToJson(
       this,
     );
   }
@@ -153,10 +153,10 @@ class _$_HomeBannerUrl implements _HomeBannerUrl {
 
 abstract class _HomeBannerUrl implements HomeBannerUrl {
   factory _HomeBannerUrl({final String? imageurl, final String? href}) =
-      _$_HomeBannerUrl;
+      _$HomeBannerUrlImpl;
 
   factory _HomeBannerUrl.fromJson(Map<String, dynamic> json) =
-      _$_HomeBannerUrl.fromJson;
+      _$HomeBannerUrlImpl.fromJson;
 
   @override
   String? get imageurl;
@@ -164,6 +164,6 @@ abstract class _HomeBannerUrl implements HomeBannerUrl {
   String? get href;
   @override
   @JsonKey(ignore: true)
-  _$$_HomeBannerUrlCopyWith<_$_HomeBannerUrl> get copyWith =>
+  _$$HomeBannerUrlImplCopyWith<_$HomeBannerUrlImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

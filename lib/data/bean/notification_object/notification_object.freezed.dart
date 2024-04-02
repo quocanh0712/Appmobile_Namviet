@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notification_object.dart';
 
@@ -12,7 +12,7 @@ part of 'notification_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 NotificationObject _$NotificationObjectFromJson(Map<String, dynamic> json) {
   return _NotificationObject.fromJson(json);
@@ -134,11 +134,11 @@ class _$NotificationObjectCopyWithImpl<$Res, $Val extends NotificationObject>
 }
 
 /// @nodoc
-abstract class _$$_NotificationObjectCopyWith<$Res>
+abstract class _$$NotificationObjectImplCopyWith<$Res>
     implements $NotificationObjectCopyWith<$Res> {
-  factory _$$_NotificationObjectCopyWith(_$_NotificationObject value,
-          $Res Function(_$_NotificationObject) then) =
-      __$$_NotificationObjectCopyWithImpl<$Res>;
+  factory _$$NotificationObjectImplCopyWith(_$NotificationObjectImpl value,
+          $Res Function(_$NotificationObjectImpl) then) =
+      __$$NotificationObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -156,11 +156,11 @@ abstract class _$$_NotificationObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NotificationObjectCopyWithImpl<$Res>
-    extends _$NotificationObjectCopyWithImpl<$Res, _$_NotificationObject>
-    implements _$$_NotificationObjectCopyWith<$Res> {
-  __$$_NotificationObjectCopyWithImpl(
-      _$_NotificationObject _value, $Res Function(_$_NotificationObject) _then)
+class __$$NotificationObjectImplCopyWithImpl<$Res>
+    extends _$NotificationObjectCopyWithImpl<$Res, _$NotificationObjectImpl>
+    implements _$$NotificationObjectImplCopyWith<$Res> {
+  __$$NotificationObjectImplCopyWithImpl(_$NotificationObjectImpl _value,
+      $Res Function(_$NotificationObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -178,7 +178,7 @@ class __$$_NotificationObjectCopyWithImpl<$Res>
     Object? status = freezed,
     Object? isLast = freezed,
   }) {
-    return _then(_$_NotificationObject(
+    return _then(_$NotificationObjectImpl(
       isLabel: freezed == isLabel
           ? _value.isLabel
           : isLabel // ignore: cast_nullable_to_non_nullable
@@ -229,8 +229,8 @@ class __$$_NotificationObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NotificationObject implements _NotificationObject {
-  _$_NotificationObject(
+class _$NotificationObjectImpl implements _NotificationObject {
+  _$NotificationObjectImpl(
       {this.isLabel,
       this.pushId,
       this.title,
@@ -243,8 +243,8 @@ class _$_NotificationObject implements _NotificationObject {
       this.status,
       this.isLast});
 
-  factory _$_NotificationObject.fromJson(Map<String, dynamic> json) =>
-      _$$_NotificationObjectFromJson(json);
+  factory _$NotificationObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NotificationObjectImplFromJson(json);
 
   @override
   final bool? isLabel;
@@ -276,10 +276,10 @@ class _$_NotificationObject implements _NotificationObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NotificationObject &&
+            other is _$NotificationObjectImpl &&
             (identical(other.isLabel, isLabel) || other.isLabel == isLabel) &&
             (identical(other.pushId, pushId) || other.pushId == pushId) &&
             (identical(other.title, title) || other.title == title) &&
@@ -303,13 +303,13 @@ class _$_NotificationObject implements _NotificationObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NotificationObjectCopyWith<_$_NotificationObject> get copyWith =>
-      __$$_NotificationObjectCopyWithImpl<_$_NotificationObject>(
+  _$$NotificationObjectImplCopyWith<_$NotificationObjectImpl> get copyWith =>
+      __$$NotificationObjectImplCopyWithImpl<_$NotificationObjectImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NotificationObjectToJson(
+    return _$$NotificationObjectImplToJson(
       this,
     );
   }
@@ -327,10 +327,10 @@ abstract class _NotificationObject implements NotificationObject {
       @JiffyJsonConverter() final Jiffy? createdAt,
       final String? type,
       final int? status,
-      final bool? isLast}) = _$_NotificationObject;
+      final bool? isLast}) = _$NotificationObjectImpl;
 
   factory _NotificationObject.fromJson(Map<String, dynamic> json) =
-      _$_NotificationObject.fromJson;
+      _$NotificationObjectImpl.fromJson;
 
   @override
   bool? get isLabel;
@@ -357,6 +357,6 @@ abstract class _NotificationObject implements NotificationObject {
   bool? get isLast;
   @override
   @JsonKey(ignore: true)
-  _$$_NotificationObjectCopyWith<_$_NotificationObject> get copyWith =>
+  _$$NotificationObjectImplCopyWith<_$NotificationObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

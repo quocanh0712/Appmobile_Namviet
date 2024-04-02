@@ -6,17 +6,17 @@ part of 'survey_result_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SurveyResultRequest _$$_SurveyResultRequestFromJson(
+_$SurveyResultRequestImpl _$$SurveyResultRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SurveyResultRequest(
+    _$SurveyResultRequestImpl(
       year: json['year'] as String?,
       semester: json['semester'] as int?,
       startindex: json['startindex'] as int?,
       length: json['length'] as int?,
     );
 
-Map<String, dynamic> _$$_SurveyResultRequestToJson(
-        _$_SurveyResultRequest instance) =>
+Map<String, dynamic> _$$SurveyResultRequestImplToJson(
+        _$SurveyResultRequestImpl instance) =>
     <String, dynamic>{
       'year': instance.year,
       'semester': instance.semester,

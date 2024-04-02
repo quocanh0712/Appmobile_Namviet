@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'discipline_response.dart';
 
@@ -12,7 +12,7 @@ part of 'discipline_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 DisciplineResponse _$DisciplineResponseFromJson(Map<String, dynamic> json) {
   return _DisciplineResponse.fromJson(json);
@@ -91,11 +91,11 @@ class _$DisciplineResponseCopyWithImpl<$Res, $Val extends DisciplineResponse>
 }
 
 /// @nodoc
-abstract class _$$_DisciplineResponseCopyWith<$Res>
+abstract class _$$DisciplineResponseImplCopyWith<$Res>
     implements $DisciplineResponseCopyWith<$Res> {
-  factory _$$_DisciplineResponseCopyWith(_$_DisciplineResponse value,
-          $Res Function(_$_DisciplineResponse) then) =
-      __$$_DisciplineResponseCopyWithImpl<$Res>;
+  factory _$$DisciplineResponseImplCopyWith(_$DisciplineResponseImpl value,
+          $Res Function(_$DisciplineResponseImpl) then) =
+      __$$DisciplineResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -107,11 +107,11 @@ abstract class _$$_DisciplineResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DisciplineResponseCopyWithImpl<$Res>
-    extends _$DisciplineResponseCopyWithImpl<$Res, _$_DisciplineResponse>
-    implements _$$_DisciplineResponseCopyWith<$Res> {
-  __$$_DisciplineResponseCopyWithImpl(
-      _$_DisciplineResponse _value, $Res Function(_$_DisciplineResponse) _then)
+class __$$DisciplineResponseImplCopyWithImpl<$Res>
+    extends _$DisciplineResponseCopyWithImpl<$Res, _$DisciplineResponseImpl>
+    implements _$$DisciplineResponseImplCopyWith<$Res> {
+  __$$DisciplineResponseImplCopyWithImpl(_$DisciplineResponseImpl _value,
+      $Res Function(_$DisciplineResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +123,7 @@ class __$$_DisciplineResponseCopyWithImpl<$Res>
     Object? icon = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_DisciplineResponse(
+    return _then(_$DisciplineResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -150,12 +150,12 @@ class __$$_DisciplineResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DisciplineResponse implements _DisciplineResponse {
-  const _$_DisciplineResponse(
+class _$DisciplineResponseImpl implements _DisciplineResponse {
+  const _$DisciplineResponseImpl(
       {this.id, this.discipline, this.content, this.icon, this.status});
 
-  factory _$_DisciplineResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_DisciplineResponseFromJson(json);
+  factory _$DisciplineResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DisciplineResponseImplFromJson(json);
 
   @override
   final int? id;
@@ -174,10 +174,10 @@ class _$_DisciplineResponse implements _DisciplineResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DisciplineResponse &&
+            other is _$DisciplineResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.discipline, discipline) ||
                 other.discipline == discipline) &&
@@ -194,13 +194,13 @@ class _$_DisciplineResponse implements _DisciplineResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DisciplineResponseCopyWith<_$_DisciplineResponse> get copyWith =>
-      __$$_DisciplineResponseCopyWithImpl<_$_DisciplineResponse>(
+  _$$DisciplineResponseImplCopyWith<_$DisciplineResponseImpl> get copyWith =>
+      __$$DisciplineResponseImplCopyWithImpl<_$DisciplineResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DisciplineResponseToJson(
+    return _$$DisciplineResponseImplToJson(
       this,
     );
   }
@@ -212,10 +212,10 @@ abstract class _DisciplineResponse implements DisciplineResponse {
       final String? discipline,
       final String? content,
       final String? icon,
-      final int? status}) = _$_DisciplineResponse;
+      final int? status}) = _$DisciplineResponseImpl;
 
   factory _DisciplineResponse.fromJson(Map<String, dynamic> json) =
-      _$_DisciplineResponse.fromJson;
+      _$DisciplineResponseImpl.fromJson;
 
   @override
   int? get id;
@@ -229,6 +229,6 @@ abstract class _DisciplineResponse implements DisciplineResponse {
   int? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_DisciplineResponseCopyWith<_$_DisciplineResponse> get copyWith =>
+  _$$DisciplineResponseImplCopyWith<_$DisciplineResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

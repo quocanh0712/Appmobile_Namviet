@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'elearning_client.dart';
 
@@ -12,7 +12,7 @@ part of 'elearning_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ELearningClient {
@@ -103,11 +103,11 @@ class _$ELearningClientCopyWithImpl<$Res, $Val extends ELearningClient>
 }
 
 /// @nodoc
-abstract class _$$_ELearningListCopyWith<$Res>
+abstract class _$$ELearningListImplCopyWith<$Res>
     implements $ELearningClientCopyWith<$Res> {
-  factory _$$_ELearningListCopyWith(
-          _$_ELearningList value, $Res Function(_$_ELearningList) then) =
-      __$$_ELearningListCopyWithImpl<$Res>;
+  factory _$$ELearningListImplCopyWith(
+          _$ELearningListImpl value, $Res Function(_$ELearningListImpl) then) =
+      __$$ELearningListImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({ELearningRequest? model});
@@ -117,11 +117,11 @@ abstract class _$$_ELearningListCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ELearningListCopyWithImpl<$Res>
-    extends _$ELearningClientCopyWithImpl<$Res, _$_ELearningList>
-    implements _$$_ELearningListCopyWith<$Res> {
-  __$$_ELearningListCopyWithImpl(
-      _$_ELearningList _value, $Res Function(_$_ELearningList) _then)
+class __$$ELearningListImplCopyWithImpl<$Res>
+    extends _$ELearningClientCopyWithImpl<$Res, _$ELearningListImpl>
+    implements _$$ELearningListImplCopyWith<$Res> {
+  __$$ELearningListImplCopyWithImpl(
+      _$ELearningListImpl _value, $Res Function(_$ELearningListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -129,7 +129,7 @@ class __$$_ELearningListCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_ELearningList(
+    return _then(_$ELearningListImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -140,8 +140,8 @@ class __$$_ELearningListCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ELearningList extends _ELearningList {
-  _$_ELearningList(this.model) : super._();
+class _$ELearningListImpl extends _ELearningList {
+  _$ELearningListImpl(this.model) : super._();
 
   @override
   final ELearningRequest? model;
@@ -152,10 +152,10 @@ class _$_ELearningList extends _ELearningList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ELearningList &&
+            other is _$ELearningListImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -165,8 +165,8 @@ class _$_ELearningList extends _ELearningList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ELearningListCopyWith<_$_ELearningList> get copyWith =>
-      __$$_ELearningListCopyWithImpl<_$_ELearningList>(this, _$identity);
+  _$$ELearningListImplCopyWith<_$ELearningListImpl> get copyWith =>
+      __$$ELearningListImplCopyWithImpl<_$ELearningListImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -226,13 +226,13 @@ class _$_ELearningList extends _ELearningList {
 }
 
 abstract class _ELearningList extends ELearningClient {
-  factory _ELearningList(final ELearningRequest? model) = _$_ELearningList;
+  factory _ELearningList(final ELearningRequest? model) = _$ELearningListImpl;
   _ELearningList._() : super._();
 
   @override
   ELearningRequest? get model;
   @override
   @JsonKey(ignore: true)
-  _$$_ELearningListCopyWith<_$_ELearningList> get copyWith =>
+  _$$ELearningListImplCopyWith<_$ELearningListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

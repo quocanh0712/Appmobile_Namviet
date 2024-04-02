@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'document_form_client.dart';
 
@@ -12,10 +12,11 @@ part of 'document_form_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$DocumentFormClient {
+  Object? get model => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(DocumentFormRequest? model) getDocumentForm,
@@ -113,10 +114,10 @@ class _$DocumentFormClientCopyWithImpl<$Res, $Val extends DocumentFormClient>
 }
 
 /// @nodoc
-abstract class _$$_DocumentFormClientCopyWith<$Res> {
-  factory _$$_DocumentFormClientCopyWith(_$_DocumentFormClient value,
-          $Res Function(_$_DocumentFormClient) then) =
-      __$$_DocumentFormClientCopyWithImpl<$Res>;
+abstract class _$$DocumentFormClientImplCopyWith<$Res> {
+  factory _$$DocumentFormClientImplCopyWith(_$DocumentFormClientImpl value,
+          $Res Function(_$DocumentFormClientImpl) then) =
+      __$$DocumentFormClientImplCopyWithImpl<$Res>;
   @useResult
   $Res call({DocumentFormRequest? model});
 
@@ -124,11 +125,11 @@ abstract class _$$_DocumentFormClientCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_DocumentFormClientCopyWithImpl<$Res>
-    extends _$DocumentFormClientCopyWithImpl<$Res, _$_DocumentFormClient>
-    implements _$$_DocumentFormClientCopyWith<$Res> {
-  __$$_DocumentFormClientCopyWithImpl(
-      _$_DocumentFormClient _value, $Res Function(_$_DocumentFormClient) _then)
+class __$$DocumentFormClientImplCopyWithImpl<$Res>
+    extends _$DocumentFormClientCopyWithImpl<$Res, _$DocumentFormClientImpl>
+    implements _$$DocumentFormClientImplCopyWith<$Res> {
+  __$$DocumentFormClientImplCopyWithImpl(_$DocumentFormClientImpl _value,
+      $Res Function(_$DocumentFormClientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -136,7 +137,7 @@ class __$$_DocumentFormClientCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_DocumentFormClient(
+    return _then(_$DocumentFormClientImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -159,8 +160,8 @@ class __$$_DocumentFormClientCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DocumentFormClient extends _DocumentFormClient {
-  _$_DocumentFormClient(this.model) : super._();
+class _$DocumentFormClientImpl extends _DocumentFormClient {
+  _$DocumentFormClientImpl(this.model) : super._();
 
   @override
   final DocumentFormRequest? model;
@@ -171,10 +172,10 @@ class _$_DocumentFormClient extends _DocumentFormClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentFormClient &&
+            other is _$DocumentFormClientImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -184,8 +185,8 @@ class _$_DocumentFormClient extends _DocumentFormClient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentFormClientCopyWith<_$_DocumentFormClient> get copyWith =>
-      __$$_DocumentFormClientCopyWithImpl<_$_DocumentFormClient>(
+  _$$DocumentFormClientImplCopyWith<_$DocumentFormClientImpl> get copyWith =>
+      __$$DocumentFormClientImplCopyWithImpl<_$DocumentFormClientImpl>(
           this, _$identity);
 
   @override
@@ -291,20 +292,21 @@ class _$_DocumentFormClient extends _DocumentFormClient {
 
 abstract class _DocumentFormClient extends DocumentFormClient {
   factory _DocumentFormClient(final DocumentFormRequest? model) =
-      _$_DocumentFormClient;
+      _$DocumentFormClientImpl;
   _DocumentFormClient._() : super._();
 
+  @override
   DocumentFormRequest? get model;
   @JsonKey(ignore: true)
-  _$$_DocumentFormClientCopyWith<_$_DocumentFormClient> get copyWith =>
+  _$$DocumentFormClientImplCopyWith<_$DocumentFormClientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_UploadFileClientCopyWith<$Res> {
-  factory _$$_UploadFileClientCopyWith(
-          _$_UploadFileClient value, $Res Function(_$_UploadFileClient) then) =
-      __$$_UploadFileClientCopyWithImpl<$Res>;
+abstract class _$$UploadFileClientImplCopyWith<$Res> {
+  factory _$$UploadFileClientImplCopyWith(_$UploadFileClientImpl value,
+          $Res Function(_$UploadFileClientImpl) then) =
+      __$$UploadFileClientImplCopyWithImpl<$Res>;
   @useResult
   $Res call({UploadFileRequest? model});
 
@@ -312,11 +314,11 @@ abstract class _$$_UploadFileClientCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_UploadFileClientCopyWithImpl<$Res>
-    extends _$DocumentFormClientCopyWithImpl<$Res, _$_UploadFileClient>
-    implements _$$_UploadFileClientCopyWith<$Res> {
-  __$$_UploadFileClientCopyWithImpl(
-      _$_UploadFileClient _value, $Res Function(_$_UploadFileClient) _then)
+class __$$UploadFileClientImplCopyWithImpl<$Res>
+    extends _$DocumentFormClientCopyWithImpl<$Res, _$UploadFileClientImpl>
+    implements _$$UploadFileClientImplCopyWith<$Res> {
+  __$$UploadFileClientImplCopyWithImpl(_$UploadFileClientImpl _value,
+      $Res Function(_$UploadFileClientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -324,7 +326,7 @@ class __$$_UploadFileClientCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_UploadFileClient(
+    return _then(_$UploadFileClientImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -347,8 +349,8 @@ class __$$_UploadFileClientCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UploadFileClient extends _UploadFileClient {
-  _$_UploadFileClient(this.model) : super._();
+class _$UploadFileClientImpl extends _UploadFileClient {
+  _$UploadFileClientImpl(this.model) : super._();
 
   @override
   final UploadFileRequest? model;
@@ -359,10 +361,10 @@ class _$_UploadFileClient extends _UploadFileClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UploadFileClient &&
+            other is _$UploadFileClientImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -372,8 +374,9 @@ class _$_UploadFileClient extends _UploadFileClient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UploadFileClientCopyWith<_$_UploadFileClient> get copyWith =>
-      __$$_UploadFileClientCopyWithImpl<_$_UploadFileClient>(this, _$identity);
+  _$$UploadFileClientImplCopyWith<_$UploadFileClientImpl> get copyWith =>
+      __$$UploadFileClientImplCopyWithImpl<_$UploadFileClientImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -478,20 +481,21 @@ class _$_UploadFileClient extends _UploadFileClient {
 
 abstract class _UploadFileClient extends DocumentFormClient {
   factory _UploadFileClient(final UploadFileRequest? model) =
-      _$_UploadFileClient;
+      _$UploadFileClientImpl;
   _UploadFileClient._() : super._();
 
+  @override
   UploadFileRequest? get model;
   @JsonKey(ignore: true)
-  _$$_UploadFileClientCopyWith<_$_UploadFileClient> get copyWith =>
+  _$$UploadFileClientImplCopyWith<_$UploadFileClientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_MyRequestClientCopyWith<$Res> {
-  factory _$$_MyRequestClientCopyWith(
-          _$_MyRequestClient value, $Res Function(_$_MyRequestClient) then) =
-      __$$_MyRequestClientCopyWithImpl<$Res>;
+abstract class _$$MyRequestClientImplCopyWith<$Res> {
+  factory _$$MyRequestClientImplCopyWith(_$MyRequestClientImpl value,
+          $Res Function(_$MyRequestClientImpl) then) =
+      __$$MyRequestClientImplCopyWithImpl<$Res>;
   @useResult
   $Res call({MyRequestDocumentRequest? model});
 
@@ -499,11 +503,11 @@ abstract class _$$_MyRequestClientCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_MyRequestClientCopyWithImpl<$Res>
-    extends _$DocumentFormClientCopyWithImpl<$Res, _$_MyRequestClient>
-    implements _$$_MyRequestClientCopyWith<$Res> {
-  __$$_MyRequestClientCopyWithImpl(
-      _$_MyRequestClient _value, $Res Function(_$_MyRequestClient) _then)
+class __$$MyRequestClientImplCopyWithImpl<$Res>
+    extends _$DocumentFormClientCopyWithImpl<$Res, _$MyRequestClientImpl>
+    implements _$$MyRequestClientImplCopyWith<$Res> {
+  __$$MyRequestClientImplCopyWithImpl(
+      _$MyRequestClientImpl _value, $Res Function(_$MyRequestClientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -511,7 +515,7 @@ class __$$_MyRequestClientCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_MyRequestClient(
+    return _then(_$MyRequestClientImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -534,8 +538,8 @@ class __$$_MyRequestClientCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_MyRequestClient extends _MyRequestClient {
-  _$_MyRequestClient(this.model) : super._();
+class _$MyRequestClientImpl extends _MyRequestClient {
+  _$MyRequestClientImpl(this.model) : super._();
 
   @override
   final MyRequestDocumentRequest? model;
@@ -546,10 +550,10 @@ class _$_MyRequestClient extends _MyRequestClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MyRequestClient &&
+            other is _$MyRequestClientImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -559,8 +563,9 @@ class _$_MyRequestClient extends _MyRequestClient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MyRequestClientCopyWith<_$_MyRequestClient> get copyWith =>
-      __$$_MyRequestClientCopyWithImpl<_$_MyRequestClient>(this, _$identity);
+  _$$MyRequestClientImplCopyWith<_$MyRequestClientImpl> get copyWith =>
+      __$$MyRequestClientImplCopyWithImpl<_$MyRequestClientImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -665,20 +670,21 @@ class _$_MyRequestClient extends _MyRequestClient {
 
 abstract class _MyRequestClient extends DocumentFormClient {
   factory _MyRequestClient(final MyRequestDocumentRequest? model) =
-      _$_MyRequestClient;
+      _$MyRequestClientImpl;
   _MyRequestClient._() : super._();
 
+  @override
   MyRequestDocumentRequest? get model;
   @JsonKey(ignore: true)
-  _$$_MyRequestClientCopyWith<_$_MyRequestClient> get copyWith =>
+  _$$MyRequestClientImplCopyWith<_$MyRequestClientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_DetailRequestClientCopyWith<$Res> {
-  factory _$$_DetailRequestClientCopyWith(_$_DetailRequestClient value,
-          $Res Function(_$_DetailRequestClient) then) =
-      __$$_DetailRequestClientCopyWithImpl<$Res>;
+abstract class _$$DetailRequestClientImplCopyWith<$Res> {
+  factory _$$DetailRequestClientImplCopyWith(_$DetailRequestClientImpl value,
+          $Res Function(_$DetailRequestClientImpl) then) =
+      __$$DetailRequestClientImplCopyWithImpl<$Res>;
   @useResult
   $Res call({DetailRequestDocumentRequest? model});
 
@@ -686,11 +692,11 @@ abstract class _$$_DetailRequestClientCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_DetailRequestClientCopyWithImpl<$Res>
-    extends _$DocumentFormClientCopyWithImpl<$Res, _$_DetailRequestClient>
-    implements _$$_DetailRequestClientCopyWith<$Res> {
-  __$$_DetailRequestClientCopyWithImpl(_$_DetailRequestClient _value,
-      $Res Function(_$_DetailRequestClient) _then)
+class __$$DetailRequestClientImplCopyWithImpl<$Res>
+    extends _$DocumentFormClientCopyWithImpl<$Res, _$DetailRequestClientImpl>
+    implements _$$DetailRequestClientImplCopyWith<$Res> {
+  __$$DetailRequestClientImplCopyWithImpl(_$DetailRequestClientImpl _value,
+      $Res Function(_$DetailRequestClientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -698,7 +704,7 @@ class __$$_DetailRequestClientCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_DetailRequestClient(
+    return _then(_$DetailRequestClientImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -721,8 +727,8 @@ class __$$_DetailRequestClientCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DetailRequestClient extends _DetailRequestClient {
-  _$_DetailRequestClient(this.model) : super._();
+class _$DetailRequestClientImpl extends _DetailRequestClient {
+  _$DetailRequestClientImpl(this.model) : super._();
 
   @override
   final DetailRequestDocumentRequest? model;
@@ -733,10 +739,10 @@ class _$_DetailRequestClient extends _DetailRequestClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DetailRequestClient &&
+            other is _$DetailRequestClientImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -746,8 +752,8 @@ class _$_DetailRequestClient extends _DetailRequestClient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DetailRequestClientCopyWith<_$_DetailRequestClient> get copyWith =>
-      __$$_DetailRequestClientCopyWithImpl<_$_DetailRequestClient>(
+  _$$DetailRequestClientImplCopyWith<_$DetailRequestClientImpl> get copyWith =>
+      __$$DetailRequestClientImplCopyWithImpl<_$DetailRequestClientImpl>(
           this, _$identity);
 
   @override
@@ -853,20 +859,22 @@ class _$_DetailRequestClient extends _DetailRequestClient {
 
 abstract class _DetailRequestClient extends DocumentFormClient {
   factory _DetailRequestClient(final DetailRequestDocumentRequest? model) =
-      _$_DetailRequestClient;
+      _$DetailRequestClientImpl;
   _DetailRequestClient._() : super._();
 
+  @override
   DetailRequestDocumentRequest? get model;
   @JsonKey(ignore: true)
-  _$$_DetailRequestClientCopyWith<_$_DetailRequestClient> get copyWith =>
+  _$$DetailRequestClientImplCopyWith<_$DetailRequestClientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_InsertNewRequestClientCopyWith<$Res> {
-  factory _$$_InsertNewRequestClientCopyWith(_$_InsertNewRequestClient value,
-          $Res Function(_$_InsertNewRequestClient) then) =
-      __$$_InsertNewRequestClientCopyWithImpl<$Res>;
+abstract class _$$InsertNewRequestClientImplCopyWith<$Res> {
+  factory _$$InsertNewRequestClientImplCopyWith(
+          _$InsertNewRequestClientImpl value,
+          $Res Function(_$InsertNewRequestClientImpl) then) =
+      __$$InsertNewRequestClientImplCopyWithImpl<$Res>;
   @useResult
   $Res call({DocumentFormResponse? model});
 
@@ -874,11 +882,12 @@ abstract class _$$_InsertNewRequestClientCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_InsertNewRequestClientCopyWithImpl<$Res>
-    extends _$DocumentFormClientCopyWithImpl<$Res, _$_InsertNewRequestClient>
-    implements _$$_InsertNewRequestClientCopyWith<$Res> {
-  __$$_InsertNewRequestClientCopyWithImpl(_$_InsertNewRequestClient _value,
-      $Res Function(_$_InsertNewRequestClient) _then)
+class __$$InsertNewRequestClientImplCopyWithImpl<$Res>
+    extends _$DocumentFormClientCopyWithImpl<$Res, _$InsertNewRequestClientImpl>
+    implements _$$InsertNewRequestClientImplCopyWith<$Res> {
+  __$$InsertNewRequestClientImplCopyWithImpl(
+      _$InsertNewRequestClientImpl _value,
+      $Res Function(_$InsertNewRequestClientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -886,7 +895,7 @@ class __$$_InsertNewRequestClientCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_InsertNewRequestClient(
+    return _then(_$InsertNewRequestClientImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -909,8 +918,8 @@ class __$$_InsertNewRequestClientCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InsertNewRequestClient extends _InsertNewRequestClient {
-  _$_InsertNewRequestClient(this.model) : super._();
+class _$InsertNewRequestClientImpl extends _InsertNewRequestClient {
+  _$InsertNewRequestClientImpl(this.model) : super._();
 
   @override
   final DocumentFormResponse? model;
@@ -921,10 +930,10 @@ class _$_InsertNewRequestClient extends _InsertNewRequestClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InsertNewRequestClient &&
+            other is _$InsertNewRequestClientImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -934,9 +943,9 @@ class _$_InsertNewRequestClient extends _InsertNewRequestClient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InsertNewRequestClientCopyWith<_$_InsertNewRequestClient> get copyWith =>
-      __$$_InsertNewRequestClientCopyWithImpl<_$_InsertNewRequestClient>(
-          this, _$identity);
+  _$$InsertNewRequestClientImplCopyWith<_$InsertNewRequestClientImpl>
+      get copyWith => __$$InsertNewRequestClientImplCopyWithImpl<
+          _$InsertNewRequestClientImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1041,20 +1050,21 @@ class _$_InsertNewRequestClient extends _InsertNewRequestClient {
 
 abstract class _InsertNewRequestClient extends DocumentFormClient {
   factory _InsertNewRequestClient(final DocumentFormResponse? model) =
-      _$_InsertNewRequestClient;
+      _$InsertNewRequestClientImpl;
   _InsertNewRequestClient._() : super._();
 
+  @override
   DocumentFormResponse? get model;
   @JsonKey(ignore: true)
-  _$$_InsertNewRequestClientCopyWith<_$_InsertNewRequestClient> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InsertNewRequestClientImplCopyWith<_$InsertNewRequestClientImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_DeleteRequestClientCopyWith<$Res> {
-  factory _$$_DeleteRequestClientCopyWith(_$_DeleteRequestClient value,
-          $Res Function(_$_DeleteRequestClient) then) =
-      __$$_DeleteRequestClientCopyWithImpl<$Res>;
+abstract class _$$DeleteRequestClientImplCopyWith<$Res> {
+  factory _$$DeleteRequestClientImplCopyWith(_$DeleteRequestClientImpl value,
+          $Res Function(_$DeleteRequestClientImpl) then) =
+      __$$DeleteRequestClientImplCopyWithImpl<$Res>;
   @useResult
   $Res call({DeleteRequestModel? model});
 
@@ -1062,11 +1072,11 @@ abstract class _$$_DeleteRequestClientCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_DeleteRequestClientCopyWithImpl<$Res>
-    extends _$DocumentFormClientCopyWithImpl<$Res, _$_DeleteRequestClient>
-    implements _$$_DeleteRequestClientCopyWith<$Res> {
-  __$$_DeleteRequestClientCopyWithImpl(_$_DeleteRequestClient _value,
-      $Res Function(_$_DeleteRequestClient) _then)
+class __$$DeleteRequestClientImplCopyWithImpl<$Res>
+    extends _$DocumentFormClientCopyWithImpl<$Res, _$DeleteRequestClientImpl>
+    implements _$$DeleteRequestClientImplCopyWith<$Res> {
+  __$$DeleteRequestClientImplCopyWithImpl(_$DeleteRequestClientImpl _value,
+      $Res Function(_$DeleteRequestClientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1074,7 +1084,7 @@ class __$$_DeleteRequestClientCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_DeleteRequestClient(
+    return _then(_$DeleteRequestClientImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -1097,8 +1107,8 @@ class __$$_DeleteRequestClientCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DeleteRequestClient extends _DeleteRequestClient {
-  _$_DeleteRequestClient(this.model) : super._();
+class _$DeleteRequestClientImpl extends _DeleteRequestClient {
+  _$DeleteRequestClientImpl(this.model) : super._();
 
   @override
   final DeleteRequestModel? model;
@@ -1109,10 +1119,10 @@ class _$_DeleteRequestClient extends _DeleteRequestClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DeleteRequestClient &&
+            other is _$DeleteRequestClientImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -1122,8 +1132,8 @@ class _$_DeleteRequestClient extends _DeleteRequestClient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DeleteRequestClientCopyWith<_$_DeleteRequestClient> get copyWith =>
-      __$$_DeleteRequestClientCopyWithImpl<_$_DeleteRequestClient>(
+  _$$DeleteRequestClientImplCopyWith<_$DeleteRequestClientImpl> get copyWith =>
+      __$$DeleteRequestClientImplCopyWithImpl<_$DeleteRequestClientImpl>(
           this, _$identity);
 
   @override
@@ -1229,20 +1239,21 @@ class _$_DeleteRequestClient extends _DeleteRequestClient {
 
 abstract class _DeleteRequestClient extends DocumentFormClient {
   factory _DeleteRequestClient(final DeleteRequestModel? model) =
-      _$_DeleteRequestClient;
+      _$DeleteRequestClientImpl;
   _DeleteRequestClient._() : super._();
 
+  @override
   DeleteRequestModel? get model;
   @JsonKey(ignore: true)
-  _$$_DeleteRequestClientCopyWith<_$_DeleteRequestClient> get copyWith =>
+  _$$DeleteRequestClientImplCopyWith<_$DeleteRequestClientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_UpdateRequestClientCopyWith<$Res> {
-  factory _$$_UpdateRequestClientCopyWith(_$_UpdateRequestClient value,
-          $Res Function(_$_UpdateRequestClient) then) =
-      __$$_UpdateRequestClientCopyWithImpl<$Res>;
+abstract class _$$UpdateRequestClientImplCopyWith<$Res> {
+  factory _$$UpdateRequestClientImplCopyWith(_$UpdateRequestClientImpl value,
+          $Res Function(_$UpdateRequestClientImpl) then) =
+      __$$UpdateRequestClientImplCopyWithImpl<$Res>;
   @useResult
   $Res call({DocumentFormResponse? model});
 
@@ -1250,11 +1261,11 @@ abstract class _$$_UpdateRequestClientCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_UpdateRequestClientCopyWithImpl<$Res>
-    extends _$DocumentFormClientCopyWithImpl<$Res, _$_UpdateRequestClient>
-    implements _$$_UpdateRequestClientCopyWith<$Res> {
-  __$$_UpdateRequestClientCopyWithImpl(_$_UpdateRequestClient _value,
-      $Res Function(_$_UpdateRequestClient) _then)
+class __$$UpdateRequestClientImplCopyWithImpl<$Res>
+    extends _$DocumentFormClientCopyWithImpl<$Res, _$UpdateRequestClientImpl>
+    implements _$$UpdateRequestClientImplCopyWith<$Res> {
+  __$$UpdateRequestClientImplCopyWithImpl(_$UpdateRequestClientImpl _value,
+      $Res Function(_$UpdateRequestClientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1262,7 +1273,7 @@ class __$$_UpdateRequestClientCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_UpdateRequestClient(
+    return _then(_$UpdateRequestClientImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -1285,8 +1296,8 @@ class __$$_UpdateRequestClientCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateRequestClient extends _UpdateRequestClient {
-  _$_UpdateRequestClient(this.model) : super._();
+class _$UpdateRequestClientImpl extends _UpdateRequestClient {
+  _$UpdateRequestClientImpl(this.model) : super._();
 
   @override
   final DocumentFormResponse? model;
@@ -1297,10 +1308,10 @@ class _$_UpdateRequestClient extends _UpdateRequestClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UpdateRequestClient &&
+            other is _$UpdateRequestClientImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -1310,8 +1321,8 @@ class _$_UpdateRequestClient extends _UpdateRequestClient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateRequestClientCopyWith<_$_UpdateRequestClient> get copyWith =>
-      __$$_UpdateRequestClientCopyWithImpl<_$_UpdateRequestClient>(
+  _$$UpdateRequestClientImplCopyWith<_$UpdateRequestClientImpl> get copyWith =>
+      __$$UpdateRequestClientImplCopyWithImpl<_$UpdateRequestClientImpl>(
           this, _$identity);
 
   @override
@@ -1417,11 +1428,12 @@ class _$_UpdateRequestClient extends _UpdateRequestClient {
 
 abstract class _UpdateRequestClient extends DocumentFormClient {
   factory _UpdateRequestClient(final DocumentFormResponse? model) =
-      _$_UpdateRequestClient;
+      _$UpdateRequestClientImpl;
   _UpdateRequestClient._() : super._();
 
+  @override
   DocumentFormResponse? get model;
   @JsonKey(ignore: true)
-  _$$_UpdateRequestClientCopyWith<_$_UpdateRequestClient> get copyWith =>
+  _$$UpdateRequestClientImplCopyWith<_$UpdateRequestClientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

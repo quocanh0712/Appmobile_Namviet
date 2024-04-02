@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'practice_point_detail_response_object.dart';
 
@@ -12,7 +12,7 @@ part of 'practice_point_detail_response_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PracticePointDetailResponseObject _$PracticePointDetailResponseObjectFromJson(
     Map<String, dynamic> json) {
@@ -89,12 +89,12 @@ class _$PracticePointDetailResponseObjectCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PracticePointDetailResponseObjectCopyWith<$Res>
+abstract class _$$PracticePointDetailResponseObjectImplCopyWith<$Res>
     implements $PracticePointDetailResponseObjectCopyWith<$Res> {
-  factory _$$_PracticePointDetailResponseObjectCopyWith(
-          _$_PracticePointDetailResponseObject value,
-          $Res Function(_$_PracticePointDetailResponseObject) then) =
-      __$$_PracticePointDetailResponseObjectCopyWithImpl<$Res>;
+  factory _$$PracticePointDetailResponseObjectImplCopyWith(
+          _$PracticePointDetailResponseObjectImpl value,
+          $Res Function(_$PracticePointDetailResponseObjectImpl) then) =
+      __$$PracticePointDetailResponseObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -105,13 +105,13 @@ abstract class _$$_PracticePointDetailResponseObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PracticePointDetailResponseObjectCopyWithImpl<$Res>
+class __$$PracticePointDetailResponseObjectImplCopyWithImpl<$Res>
     extends _$PracticePointDetailResponseObjectCopyWithImpl<$Res,
-        _$_PracticePointDetailResponseObject>
-    implements _$$_PracticePointDetailResponseObjectCopyWith<$Res> {
-  __$$_PracticePointDetailResponseObjectCopyWithImpl(
-      _$_PracticePointDetailResponseObject _value,
-      $Res Function(_$_PracticePointDetailResponseObject) _then)
+        _$PracticePointDetailResponseObjectImpl>
+    implements _$$PracticePointDetailResponseObjectImplCopyWith<$Res> {
+  __$$PracticePointDetailResponseObjectImplCopyWithImpl(
+      _$PracticePointDetailResponseObjectImpl _value,
+      $Res Function(_$PracticePointDetailResponseObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -122,7 +122,7 @@ class __$$_PracticePointDetailResponseObjectCopyWithImpl<$Res>
     Object? score = freezed,
     Object? criterias = freezed,
   }) {
-    return _then(_$_PracticePointDetailResponseObject(
+    return _then(_$PracticePointDetailResponseObjectImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -145,18 +145,18 @@ class __$$_PracticePointDetailResponseObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PracticePointDetailResponseObject
+class _$PracticePointDetailResponseObjectImpl
     implements _PracticePointDetailResponseObject {
-  _$_PracticePointDetailResponseObject(
+  _$PracticePointDetailResponseObjectImpl(
       {this.id,
       this.criteriaName,
       this.score,
       final List<ChildPracticeCriteriaObject>? criterias})
       : _criterias = criterias;
 
-  factory _$_PracticePointDetailResponseObject.fromJson(
+  factory _$PracticePointDetailResponseObjectImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_PracticePointDetailResponseObjectFromJson(json);
+      _$$PracticePointDetailResponseObjectImplFromJson(json);
 
   @override
   final int? id;
@@ -169,6 +169,7 @@ class _$_PracticePointDetailResponseObject
   List<ChildPracticeCriteriaObject>? get criterias {
     final value = _criterias;
     if (value == null) return null;
+    if (_criterias is EqualUnmodifiableListView) return _criterias;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -179,10 +180,10 @@ class _$_PracticePointDetailResponseObject
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PracticePointDetailResponseObject &&
+            other is _$PracticePointDetailResponseObjectImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.criteriaName, criteriaName) ||
                 other.criteriaName == criteriaName) &&
@@ -199,14 +200,14 @@ class _$_PracticePointDetailResponseObject
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PracticePointDetailResponseObjectCopyWith<
-          _$_PracticePointDetailResponseObject>
-      get copyWith => __$$_PracticePointDetailResponseObjectCopyWithImpl<
-          _$_PracticePointDetailResponseObject>(this, _$identity);
+  _$$PracticePointDetailResponseObjectImplCopyWith<
+          _$PracticePointDetailResponseObjectImpl>
+      get copyWith => __$$PracticePointDetailResponseObjectImplCopyWithImpl<
+          _$PracticePointDetailResponseObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PracticePointDetailResponseObjectToJson(
+    return _$$PracticePointDetailResponseObjectImplToJson(
       this,
     );
   }
@@ -219,11 +220,11 @@ abstract class _PracticePointDetailResponseObject
           final String? criteriaName,
           final int? score,
           final List<ChildPracticeCriteriaObject>? criterias}) =
-      _$_PracticePointDetailResponseObject;
+      _$PracticePointDetailResponseObjectImpl;
 
   factory _PracticePointDetailResponseObject.fromJson(
           Map<String, dynamic> json) =
-      _$_PracticePointDetailResponseObject.fromJson;
+      _$PracticePointDetailResponseObjectImpl.fromJson;
 
   @override
   int? get id;
@@ -235,7 +236,7 @@ abstract class _PracticePointDetailResponseObject
   List<ChildPracticeCriteriaObject>? get criterias;
   @override
   @JsonKey(ignore: true)
-  _$$_PracticePointDetailResponseObjectCopyWith<
-          _$_PracticePointDetailResponseObject>
+  _$$PracticePointDetailResponseObjectImplCopyWith<
+          _$PracticePointDetailResponseObjectImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

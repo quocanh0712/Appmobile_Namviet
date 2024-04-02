@@ -56,8 +56,9 @@ class AppConfigurationsAdapter extends TypeAdapter<AppConfigurations> {
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AppConfigurations _$$_AppConfigurationsFromJson(Map<String, dynamic> json) =>
-    _$_AppConfigurations(
+_$AppConfigurationsImpl _$$AppConfigurationsImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AppConfigurationsImpl(
       latestSyncedTime: json['latestSyncedTime'] as int?,
       accessToken: json['accessToken'] as String?,
       refreshToken: json['refreshToken'] as String?,
@@ -65,8 +66,8 @@ _$_AppConfigurations _$$_AppConfigurationsFromJson(Map<String, dynamic> json) =>
       idDonVi: json['idDonVi'] as int?,
     );
 
-Map<String, dynamic> _$$_AppConfigurationsToJson(
-        _$_AppConfigurations instance) =>
+Map<String, dynamic> _$$AppConfigurationsImplToJson(
+        _$AppConfigurationsImpl instance) =>
     <String, dynamic>{
       'latestSyncedTime': instance.latestSyncedTime,
       'accessToken': instance.accessToken,

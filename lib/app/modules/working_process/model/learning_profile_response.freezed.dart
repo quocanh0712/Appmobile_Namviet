@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'learning_profile_response.dart';
 
@@ -12,7 +12,7 @@ part of 'learning_profile_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LearningProfileResponse _$LearningProfileResponseFromJson(
     Map<String, dynamic> json) {
@@ -142,11 +142,12 @@ class _$LearningProfileResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_LearningProfileResponseCopyWith<$Res>
+abstract class _$$LearningProfileResponseImplCopyWith<$Res>
     implements $LearningProfileResponseCopyWith<$Res> {
-  factory _$$_LearningProfileResponseCopyWith(_$_LearningProfileResponse value,
-          $Res Function(_$_LearningProfileResponse) then) =
-      __$$_LearningProfileResponseCopyWithImpl<$Res>;
+  factory _$$LearningProfileResponseImplCopyWith(
+          _$LearningProfileResponseImpl value,
+          $Res Function(_$LearningProfileResponseImpl) then) =
+      __$$LearningProfileResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -165,12 +166,13 @@ abstract class _$$_LearningProfileResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LearningProfileResponseCopyWithImpl<$Res>
+class __$$LearningProfileResponseImplCopyWithImpl<$Res>
     extends _$LearningProfileResponseCopyWithImpl<$Res,
-        _$_LearningProfileResponse>
-    implements _$$_LearningProfileResponseCopyWith<$Res> {
-  __$$_LearningProfileResponseCopyWithImpl(_$_LearningProfileResponse _value,
-      $Res Function(_$_LearningProfileResponse) _then)
+        _$LearningProfileResponseImpl>
+    implements _$$LearningProfileResponseImplCopyWith<$Res> {
+  __$$LearningProfileResponseImplCopyWithImpl(
+      _$LearningProfileResponseImpl _value,
+      $Res Function(_$LearningProfileResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -189,7 +191,7 @@ class __$$_LearningProfileResponseCopyWithImpl<$Res>
     Object? email = freezed,
     Object? agencyname = freezed,
   }) {
-    return _then(_$_LearningProfileResponse(
+    return _then(_$LearningProfileResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -244,8 +246,8 @@ class __$$_LearningProfileResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LearningProfileResponse implements _LearningProfileResponse {
-  const _$_LearningProfileResponse(
+class _$LearningProfileResponseImpl implements _LearningProfileResponse {
+  const _$LearningProfileResponseImpl(
       {this.id,
       this.name,
       this.academicrankid,
@@ -259,8 +261,8 @@ class _$_LearningProfileResponse implements _LearningProfileResponse {
       this.email,
       this.agencyname});
 
-  factory _$_LearningProfileResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_LearningProfileResponseFromJson(json);
+  factory _$LearningProfileResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LearningProfileResponseImplFromJson(json);
 
   @override
   final int? id;
@@ -293,10 +295,10 @@ class _$_LearningProfileResponse implements _LearningProfileResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LearningProfileResponse &&
+            other is _$LearningProfileResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.academicrankid, academicrankid) ||
@@ -339,14 +341,13 @@ class _$_LearningProfileResponse implements _LearningProfileResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LearningProfileResponseCopyWith<_$_LearningProfileResponse>
-      get copyWith =>
-          __$$_LearningProfileResponseCopyWithImpl<_$_LearningProfileResponse>(
-              this, _$identity);
+  _$$LearningProfileResponseImplCopyWith<_$LearningProfileResponseImpl>
+      get copyWith => __$$LearningProfileResponseImplCopyWithImpl<
+          _$LearningProfileResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LearningProfileResponseToJson(
+    return _$$LearningProfileResponseImplToJson(
       this,
     );
   }
@@ -365,10 +366,10 @@ abstract class _LearningProfileResponse implements LearningProfileResponse {
       final String? placeofbirth,
       final String? phonenumber,
       final String? email,
-      final String? agencyname}) = _$_LearningProfileResponse;
+      final String? agencyname}) = _$LearningProfileResponseImpl;
 
   factory _LearningProfileResponse.fromJson(Map<String, dynamic> json) =
-      _$_LearningProfileResponse.fromJson;
+      _$LearningProfileResponseImpl.fromJson;
 
   @override
   int? get id;
@@ -396,6 +397,6 @@ abstract class _LearningProfileResponse implements LearningProfileResponse {
   String? get agencyname;
   @override
   @JsonKey(ignore: true)
-  _$$_LearningProfileResponseCopyWith<_$_LearningProfileResponse>
+  _$$LearningProfileResponseImplCopyWith<_$LearningProfileResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

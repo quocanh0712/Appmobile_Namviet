@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'comment_insert_request.dart';
 
@@ -12,7 +12,7 @@ part of 'comment_insert_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CommentInsertRequest _$CommentInsertRequestFromJson(Map<String, dynamic> json) {
   return _CommentInsertRequest.fromJson(json);
@@ -69,22 +69,22 @@ class _$CommentInsertRequestCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CommentInsertRequestCopyWith<$Res>
+abstract class _$$CommentInsertRequestImplCopyWith<$Res>
     implements $CommentInsertRequestCopyWith<$Res> {
-  factory _$$_CommentInsertRequestCopyWith(_$_CommentInsertRequest value,
-          $Res Function(_$_CommentInsertRequest) then) =
-      __$$_CommentInsertRequestCopyWithImpl<$Res>;
+  factory _$$CommentInsertRequestImplCopyWith(_$CommentInsertRequestImpl value,
+          $Res Function(_$CommentInsertRequestImpl) then) =
+      __$$CommentInsertRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? id, String? content});
 }
 
 /// @nodoc
-class __$$_CommentInsertRequestCopyWithImpl<$Res>
-    extends _$CommentInsertRequestCopyWithImpl<$Res, _$_CommentInsertRequest>
-    implements _$$_CommentInsertRequestCopyWith<$Res> {
-  __$$_CommentInsertRequestCopyWithImpl(_$_CommentInsertRequest _value,
-      $Res Function(_$_CommentInsertRequest) _then)
+class __$$CommentInsertRequestImplCopyWithImpl<$Res>
+    extends _$CommentInsertRequestCopyWithImpl<$Res, _$CommentInsertRequestImpl>
+    implements _$$CommentInsertRequestImplCopyWith<$Res> {
+  __$$CommentInsertRequestImplCopyWithImpl(_$CommentInsertRequestImpl _value,
+      $Res Function(_$CommentInsertRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -93,7 +93,7 @@ class __$$_CommentInsertRequestCopyWithImpl<$Res>
     Object? id = freezed,
     Object? content = freezed,
   }) {
-    return _then(_$_CommentInsertRequest(
+    return _then(_$CommentInsertRequestImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -108,11 +108,11 @@ class __$$_CommentInsertRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CommentInsertRequest implements _CommentInsertRequest {
-  const _$_CommentInsertRequest({this.id, this.content});
+class _$CommentInsertRequestImpl implements _CommentInsertRequest {
+  const _$CommentInsertRequestImpl({this.id, this.content});
 
-  factory _$_CommentInsertRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_CommentInsertRequestFromJson(json);
+  factory _$CommentInsertRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentInsertRequestImplFromJson(json);
 
   @override
   final int? id;
@@ -125,10 +125,10 @@ class _$_CommentInsertRequest implements _CommentInsertRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommentInsertRequest &&
+            other is _$CommentInsertRequestImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.content, content) || other.content == content));
   }
@@ -140,13 +140,14 @@ class _$_CommentInsertRequest implements _CommentInsertRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentInsertRequestCopyWith<_$_CommentInsertRequest> get copyWith =>
-      __$$_CommentInsertRequestCopyWithImpl<_$_CommentInsertRequest>(
-          this, _$identity);
+  _$$CommentInsertRequestImplCopyWith<_$CommentInsertRequestImpl>
+      get copyWith =>
+          __$$CommentInsertRequestImplCopyWithImpl<_$CommentInsertRequestImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentInsertRequestToJson(
+    return _$$CommentInsertRequestImplToJson(
       this,
     );
   }
@@ -154,10 +155,10 @@ class _$_CommentInsertRequest implements _CommentInsertRequest {
 
 abstract class _CommentInsertRequest implements CommentInsertRequest {
   const factory _CommentInsertRequest({final int? id, final String? content}) =
-      _$_CommentInsertRequest;
+      _$CommentInsertRequestImpl;
 
   factory _CommentInsertRequest.fromJson(Map<String, dynamic> json) =
-      _$_CommentInsertRequest.fromJson;
+      _$CommentInsertRequestImpl.fromJson;
 
   @override
   int? get id;
@@ -165,6 +166,6 @@ abstract class _CommentInsertRequest implements CommentInsertRequest {
   String? get content;
   @override
   @JsonKey(ignore: true)
-  _$$_CommentInsertRequestCopyWith<_$_CommentInsertRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CommentInsertRequestImplCopyWith<_$CommentInsertRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

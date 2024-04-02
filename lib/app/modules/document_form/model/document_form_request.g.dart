@@ -6,16 +6,16 @@ part of 'document_form_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DocumentFormRequest _$$_DocumentFormRequestFromJson(
+_$DocumentFormRequestImpl _$$DocumentFormRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DocumentFormRequest(
+    _$DocumentFormRequestImpl(
       startindex: json['startindex'] as int?,
       length: json['length'] as int?,
       keyword: json['keyword'] as String?,
     );
 
-Map<String, dynamic> _$$_DocumentFormRequestToJson(
-        _$_DocumentFormRequest instance) =>
+Map<String, dynamic> _$$DocumentFormRequestImplToJson(
+        _$DocumentFormRequestImpl instance) =>
     <String, dynamic>{
       'startindex': instance.startindex,
       'length': instance.length,

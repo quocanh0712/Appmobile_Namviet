@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'certificate_client.dart';
 
@@ -12,10 +12,11 @@ part of 'certificate_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CertificateClient {
+  Object? get model => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(CertificateRequest? model) getCertificateList,
@@ -76,10 +77,10 @@ class _$CertificateClientCopyWithImpl<$Res, $Val extends CertificateClient>
 }
 
 /// @nodoc
-abstract class _$$_CertificateListCopyWith<$Res> {
-  factory _$$_CertificateListCopyWith(
-          _$_CertificateList value, $Res Function(_$_CertificateList) then) =
-      __$$_CertificateListCopyWithImpl<$Res>;
+abstract class _$$CertificateListImplCopyWith<$Res> {
+  factory _$$CertificateListImplCopyWith(_$CertificateListImpl value,
+          $Res Function(_$CertificateListImpl) then) =
+      __$$CertificateListImplCopyWithImpl<$Res>;
   @useResult
   $Res call({CertificateRequest? model});
 
@@ -87,11 +88,11 @@ abstract class _$$_CertificateListCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CertificateListCopyWithImpl<$Res>
-    extends _$CertificateClientCopyWithImpl<$Res, _$_CertificateList>
-    implements _$$_CertificateListCopyWith<$Res> {
-  __$$_CertificateListCopyWithImpl(
-      _$_CertificateList _value, $Res Function(_$_CertificateList) _then)
+class __$$CertificateListImplCopyWithImpl<$Res>
+    extends _$CertificateClientCopyWithImpl<$Res, _$CertificateListImpl>
+    implements _$$CertificateListImplCopyWith<$Res> {
+  __$$CertificateListImplCopyWithImpl(
+      _$CertificateListImpl _value, $Res Function(_$CertificateListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +100,7 @@ class __$$_CertificateListCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_CertificateList(
+    return _then(_$CertificateListImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -122,8 +123,8 @@ class __$$_CertificateListCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_CertificateList extends _CertificateList {
-  _$_CertificateList(this.model) : super._();
+class _$CertificateListImpl extends _CertificateList {
+  _$CertificateListImpl(this.model) : super._();
 
   @override
   final CertificateRequest? model;
@@ -134,10 +135,10 @@ class _$_CertificateList extends _CertificateList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CertificateList &&
+            other is _$CertificateListImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -147,8 +148,9 @@ class _$_CertificateList extends _CertificateList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CertificateListCopyWith<_$_CertificateList> get copyWith =>
-      __$$_CertificateListCopyWithImpl<_$_CertificateList>(this, _$identity);
+  _$$CertificateListImplCopyWith<_$CertificateListImpl> get copyWith =>
+      __$$CertificateListImplCopyWithImpl<_$CertificateListImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -216,20 +218,21 @@ class _$_CertificateList extends _CertificateList {
 
 abstract class _CertificateList extends CertificateClient {
   factory _CertificateList(final CertificateRequest? model) =
-      _$_CertificateList;
+      _$CertificateListImpl;
   _CertificateList._() : super._();
 
+  @override
   CertificateRequest? get model;
   @JsonKey(ignore: true)
-  _$$_CertificateListCopyWith<_$_CertificateList> get copyWith =>
+  _$$CertificateListImplCopyWith<_$CertificateListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_InsertCertificateCopyWith<$Res> {
-  factory _$$_InsertCertificateCopyWith(_$_InsertCertificate value,
-          $Res Function(_$_InsertCertificate) then) =
-      __$$_InsertCertificateCopyWithImpl<$Res>;
+abstract class _$$InsertCertificateImplCopyWith<$Res> {
+  factory _$$InsertCertificateImplCopyWith(_$InsertCertificateImpl value,
+          $Res Function(_$InsertCertificateImpl) then) =
+      __$$InsertCertificateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({CertificateInsertRequest? model});
 
@@ -237,11 +240,11 @@ abstract class _$$_InsertCertificateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_InsertCertificateCopyWithImpl<$Res>
-    extends _$CertificateClientCopyWithImpl<$Res, _$_InsertCertificate>
-    implements _$$_InsertCertificateCopyWith<$Res> {
-  __$$_InsertCertificateCopyWithImpl(
-      _$_InsertCertificate _value, $Res Function(_$_InsertCertificate) _then)
+class __$$InsertCertificateImplCopyWithImpl<$Res>
+    extends _$CertificateClientCopyWithImpl<$Res, _$InsertCertificateImpl>
+    implements _$$InsertCertificateImplCopyWith<$Res> {
+  __$$InsertCertificateImplCopyWithImpl(_$InsertCertificateImpl _value,
+      $Res Function(_$InsertCertificateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -249,7 +252,7 @@ class __$$_InsertCertificateCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_InsertCertificate(
+    return _then(_$InsertCertificateImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -272,8 +275,8 @@ class __$$_InsertCertificateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InsertCertificate extends _InsertCertificate {
-  _$_InsertCertificate(this.model) : super._();
+class _$InsertCertificateImpl extends _InsertCertificate {
+  _$InsertCertificateImpl(this.model) : super._();
 
   @override
   final CertificateInsertRequest? model;
@@ -284,10 +287,10 @@ class _$_InsertCertificate extends _InsertCertificate {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InsertCertificate &&
+            other is _$InsertCertificateImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -297,8 +300,8 @@ class _$_InsertCertificate extends _InsertCertificate {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InsertCertificateCopyWith<_$_InsertCertificate> get copyWith =>
-      __$$_InsertCertificateCopyWithImpl<_$_InsertCertificate>(
+  _$$InsertCertificateImplCopyWith<_$InsertCertificateImpl> get copyWith =>
+      __$$InsertCertificateImplCopyWithImpl<_$InsertCertificateImpl>(
           this, _$identity);
 
   @override
@@ -367,11 +370,12 @@ class _$_InsertCertificate extends _InsertCertificate {
 
 abstract class _InsertCertificate extends CertificateClient {
   factory _InsertCertificate(final CertificateInsertRequest? model) =
-      _$_InsertCertificate;
+      _$InsertCertificateImpl;
   _InsertCertificate._() : super._();
 
+  @override
   CertificateInsertRequest? get model;
   @JsonKey(ignore: true)
-  _$$_InsertCertificateCopyWith<_$_InsertCertificate> get copyWith =>
+  _$$InsertCertificateImplCopyWith<_$InsertCertificateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

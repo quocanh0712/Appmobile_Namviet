@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'certificate_insert_request.dart';
 
@@ -12,7 +12,7 @@ part of 'certificate_insert_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CertificateInsertRequest _$CertificateInsertRequestFromJson(
     Map<String, dynamic> json) {
@@ -100,12 +100,12 @@ class _$CertificateInsertRequestCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CertificateInsertRequestCopyWith<$Res>
+abstract class _$$CertificateInsertRequestImplCopyWith<$Res>
     implements $CertificateInsertRequestCopyWith<$Res> {
-  factory _$$_CertificateInsertRequestCopyWith(
-          _$_CertificateInsertRequest value,
-          $Res Function(_$_CertificateInsertRequest) then) =
-      __$$_CertificateInsertRequestCopyWithImpl<$Res>;
+  factory _$$CertificateInsertRequestImplCopyWith(
+          _$CertificateInsertRequestImpl value,
+          $Res Function(_$CertificateInsertRequestImpl) then) =
+      __$$CertificateInsertRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -118,12 +118,13 @@ abstract class _$$_CertificateInsertRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CertificateInsertRequestCopyWithImpl<$Res>
+class __$$CertificateInsertRequestImplCopyWithImpl<$Res>
     extends _$CertificateInsertRequestCopyWithImpl<$Res,
-        _$_CertificateInsertRequest>
-    implements _$$_CertificateInsertRequestCopyWith<$Res> {
-  __$$_CertificateInsertRequestCopyWithImpl(_$_CertificateInsertRequest _value,
-      $Res Function(_$_CertificateInsertRequest) _then)
+        _$CertificateInsertRequestImpl>
+    implements _$$CertificateInsertRequestImplCopyWith<$Res> {
+  __$$CertificateInsertRequestImplCopyWithImpl(
+      _$CertificateInsertRequestImpl _value,
+      $Res Function(_$CertificateInsertRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -136,7 +137,7 @@ class __$$_CertificateInsertRequestCopyWithImpl<$Res>
     Object? studyPlace = freezed,
     Object? fileName = freezed,
   }) {
-    return _then(_$_CertificateInsertRequest(
+    return _then(_$CertificateInsertRequestImpl(
       certificateName: freezed == certificateName
           ? _value.certificateName
           : certificateName // ignore: cast_nullable_to_non_nullable
@@ -167,8 +168,8 @@ class __$$_CertificateInsertRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CertificateInsertRequest implements _CertificateInsertRequest {
-  const _$_CertificateInsertRequest(
+class _$CertificateInsertRequestImpl implements _CertificateInsertRequest {
+  const _$CertificateInsertRequestImpl(
       {this.certificateName,
       this.graduationYear,
       this.degree,
@@ -176,8 +177,8 @@ class _$_CertificateInsertRequest implements _CertificateInsertRequest {
       this.studyPlace,
       this.fileName});
 
-  factory _$_CertificateInsertRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_CertificateInsertRequestFromJson(json);
+  factory _$CertificateInsertRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CertificateInsertRequestImplFromJson(json);
 
   @override
   final String? certificateName;
@@ -198,10 +199,10 @@ class _$_CertificateInsertRequest implements _CertificateInsertRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CertificateInsertRequest &&
+            other is _$CertificateInsertRequestImpl &&
             (identical(other.certificateName, certificateName) ||
                 other.certificateName == certificateName) &&
             (identical(other.graduationYear, graduationYear) ||
@@ -223,13 +224,13 @@ class _$_CertificateInsertRequest implements _CertificateInsertRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CertificateInsertRequestCopyWith<_$_CertificateInsertRequest>
-      get copyWith => __$$_CertificateInsertRequestCopyWithImpl<
-          _$_CertificateInsertRequest>(this, _$identity);
+  _$$CertificateInsertRequestImplCopyWith<_$CertificateInsertRequestImpl>
+      get copyWith => __$$CertificateInsertRequestImplCopyWithImpl<
+          _$CertificateInsertRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CertificateInsertRequestToJson(
+    return _$$CertificateInsertRequestImplToJson(
       this,
     );
   }
@@ -242,10 +243,10 @@ abstract class _CertificateInsertRequest implements CertificateInsertRequest {
       final String? degree,
       final String? academicRank,
       final String? studyPlace,
-      final String? fileName}) = _$_CertificateInsertRequest;
+      final String? fileName}) = _$CertificateInsertRequestImpl;
 
   factory _CertificateInsertRequest.fromJson(Map<String, dynamic> json) =
-      _$_CertificateInsertRequest.fromJson;
+      _$CertificateInsertRequestImpl.fromJson;
 
   @override
   String? get certificateName;
@@ -261,6 +262,6 @@ abstract class _CertificateInsertRequest implements CertificateInsertRequest {
   String? get fileName;
   @override
   @JsonKey(ignore: true)
-  _$$_CertificateInsertRequestCopyWith<_$_CertificateInsertRequest>
+  _$$CertificateInsertRequestImplCopyWith<_$CertificateInsertRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

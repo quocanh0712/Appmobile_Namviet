@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'working_process_request.dart';
 
@@ -12,7 +12,7 @@ part of 'working_process_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 WorkingProcessRequest _$WorkingProcessRequestFromJson(
     Map<String, dynamic> json) {
@@ -76,22 +76,24 @@ class _$WorkingProcessRequestCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_WorkingProcessRequestCopyWith<$Res>
+abstract class _$$WorkingProcessRequestImplCopyWith<$Res>
     implements $WorkingProcessRequestCopyWith<$Res> {
-  factory _$$_WorkingProcessRequestCopyWith(_$_WorkingProcessRequest value,
-          $Res Function(_$_WorkingProcessRequest) then) =
-      __$$_WorkingProcessRequestCopyWithImpl<$Res>;
+  factory _$$WorkingProcessRequestImplCopyWith(
+          _$WorkingProcessRequestImpl value,
+          $Res Function(_$WorkingProcessRequestImpl) then) =
+      __$$WorkingProcessRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? startindex, int? length, String? keyword});
 }
 
 /// @nodoc
-class __$$_WorkingProcessRequestCopyWithImpl<$Res>
-    extends _$WorkingProcessRequestCopyWithImpl<$Res, _$_WorkingProcessRequest>
-    implements _$$_WorkingProcessRequestCopyWith<$Res> {
-  __$$_WorkingProcessRequestCopyWithImpl(_$_WorkingProcessRequest _value,
-      $Res Function(_$_WorkingProcessRequest) _then)
+class __$$WorkingProcessRequestImplCopyWithImpl<$Res>
+    extends _$WorkingProcessRequestCopyWithImpl<$Res,
+        _$WorkingProcessRequestImpl>
+    implements _$$WorkingProcessRequestImplCopyWith<$Res> {
+  __$$WorkingProcessRequestImplCopyWithImpl(_$WorkingProcessRequestImpl _value,
+      $Res Function(_$WorkingProcessRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +103,7 @@ class __$$_WorkingProcessRequestCopyWithImpl<$Res>
     Object? length = freezed,
     Object? keyword = freezed,
   }) {
-    return _then(_$_WorkingProcessRequest(
+    return _then(_$WorkingProcessRequestImpl(
       startindex: freezed == startindex
           ? _value.startindex
           : startindex // ignore: cast_nullable_to_non_nullable
@@ -120,11 +122,12 @@ class __$$_WorkingProcessRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_WorkingProcessRequest implements _WorkingProcessRequest {
-  const _$_WorkingProcessRequest({this.startindex, this.length, this.keyword});
+class _$WorkingProcessRequestImpl implements _WorkingProcessRequest {
+  const _$WorkingProcessRequestImpl(
+      {this.startindex, this.length, this.keyword});
 
-  factory _$_WorkingProcessRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_WorkingProcessRequestFromJson(json);
+  factory _$WorkingProcessRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$WorkingProcessRequestImplFromJson(json);
 
   @override
   final int? startindex;
@@ -139,10 +142,10 @@ class _$_WorkingProcessRequest implements _WorkingProcessRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_WorkingProcessRequest &&
+            other is _$WorkingProcessRequestImpl &&
             (identical(other.startindex, startindex) ||
                 other.startindex == startindex) &&
             (identical(other.length, length) || other.length == length) &&
@@ -156,13 +159,13 @@ class _$_WorkingProcessRequest implements _WorkingProcessRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_WorkingProcessRequestCopyWith<_$_WorkingProcessRequest> get copyWith =>
-      __$$_WorkingProcessRequestCopyWithImpl<_$_WorkingProcessRequest>(
-          this, _$identity);
+  _$$WorkingProcessRequestImplCopyWith<_$WorkingProcessRequestImpl>
+      get copyWith => __$$WorkingProcessRequestImplCopyWithImpl<
+          _$WorkingProcessRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_WorkingProcessRequestToJson(
+    return _$$WorkingProcessRequestImplToJson(
       this,
     );
   }
@@ -172,10 +175,10 @@ abstract class _WorkingProcessRequest implements WorkingProcessRequest {
   const factory _WorkingProcessRequest(
       {final int? startindex,
       final int? length,
-      final String? keyword}) = _$_WorkingProcessRequest;
+      final String? keyword}) = _$WorkingProcessRequestImpl;
 
   factory _WorkingProcessRequest.fromJson(Map<String, dynamic> json) =
-      _$_WorkingProcessRequest.fromJson;
+      _$WorkingProcessRequestImpl.fromJson;
 
   @override
   int? get startindex;
@@ -185,6 +188,6 @@ abstract class _WorkingProcessRequest implements WorkingProcessRequest {
   String? get keyword;
   @override
   @JsonKey(ignore: true)
-  _$$_WorkingProcessRequestCopyWith<_$_WorkingProcessRequest> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$WorkingProcessRequestImplCopyWith<_$WorkingProcessRequestImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'checkin_object.dart';
 
@@ -12,7 +12,7 @@ part of 'checkin_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CheckInObject _$CheckInObjectFromJson(Map<String, dynamic> json) {
   return _CheckInObject.fromJson(json);
@@ -160,11 +160,11 @@ class _$CheckInObjectCopyWithImpl<$Res, $Val extends CheckInObject>
 }
 
 /// @nodoc
-abstract class _$$_CheckInObjectCopyWith<$Res>
+abstract class _$$CheckInObjectImplCopyWith<$Res>
     implements $CheckInObjectCopyWith<$Res> {
-  factory _$$_CheckInObjectCopyWith(
-          _$_CheckInObject value, $Res Function(_$_CheckInObject) then) =
-      __$$_CheckInObjectCopyWithImpl<$Res>;
+  factory _$$CheckInObjectImplCopyWith(
+          _$CheckInObjectImpl value, $Res Function(_$CheckInObjectImpl) then) =
+      __$$CheckInObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -184,11 +184,11 @@ abstract class _$$_CheckInObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CheckInObjectCopyWithImpl<$Res>
-    extends _$CheckInObjectCopyWithImpl<$Res, _$_CheckInObject>
-    implements _$$_CheckInObjectCopyWith<$Res> {
-  __$$_CheckInObjectCopyWithImpl(
-      _$_CheckInObject _value, $Res Function(_$_CheckInObject) _then)
+class __$$CheckInObjectImplCopyWithImpl<$Res>
+    extends _$CheckInObjectCopyWithImpl<$Res, _$CheckInObjectImpl>
+    implements _$$CheckInObjectImplCopyWith<$Res> {
+  __$$CheckInObjectImplCopyWithImpl(
+      _$CheckInObjectImpl _value, $Res Function(_$CheckInObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -208,7 +208,7 @@ class __$$_CheckInObjectCopyWithImpl<$Res>
     Object? ghi_chu = freezed,
     Object? str_ngay_bdsd = freezed,
   }) {
-    return _then(_$_CheckInObject(
+    return _then(_$CheckInObjectImpl(
       ma_ts: freezed == ma_ts
           ? _value.ma_ts
           : ma_ts // ignore: cast_nullable_to_non_nullable
@@ -267,8 +267,8 @@ class __$$_CheckInObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CheckInObject implements _CheckInObject {
-  _$_CheckInObject(
+class _$CheckInObjectImpl implements _CheckInObject {
+  _$CheckInObjectImpl(
       {@HiveField(0) this.ma_ts,
       @HiveField(1) this.ten_ts,
       @HiveField(2) this.nam_sx,
@@ -283,8 +283,8 @@ class _$_CheckInObject implements _CheckInObject {
       @HiveField(11) this.ghi_chu,
       @HiveField(12) this.str_ngay_bdsd});
 
-  factory _$_CheckInObject.fromJson(Map<String, dynamic> json) =>
-      _$$_CheckInObjectFromJson(json);
+  factory _$CheckInObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CheckInObjectImplFromJson(json);
 
   @override
   @HiveField(0)
@@ -332,10 +332,10 @@ class _$_CheckInObject implements _CheckInObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CheckInObject &&
+            other is _$CheckInObjectImpl &&
             (identical(other.ma_ts, ma_ts) || other.ma_ts == ma_ts) &&
             (identical(other.ten_ts, ten_ts) || other.ten_ts == ten_ts) &&
             (identical(other.nam_sx, nam_sx) || other.nam_sx == nam_sx) &&
@@ -376,12 +376,12 @@ class _$_CheckInObject implements _CheckInObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CheckInObjectCopyWith<_$_CheckInObject> get copyWith =>
-      __$$_CheckInObjectCopyWithImpl<_$_CheckInObject>(this, _$identity);
+  _$$CheckInObjectImplCopyWith<_$CheckInObjectImpl> get copyWith =>
+      __$$CheckInObjectImplCopyWithImpl<_$CheckInObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CheckInObjectToJson(
+    return _$$CheckInObjectImplToJson(
       this,
     );
   }
@@ -401,10 +401,10 @@ abstract class _CheckInObject implements CheckInObject {
       @HiveField(9) final String? str_ngay_ct,
       @HiveField(10) final int? so_luong,
       @HiveField(11) final String? ghi_chu,
-      @HiveField(12) final String? str_ngay_bdsd}) = _$_CheckInObject;
+      @HiveField(12) final String? str_ngay_bdsd}) = _$CheckInObjectImpl;
 
   factory _CheckInObject.fromJson(Map<String, dynamic> json) =
-      _$_CheckInObject.fromJson;
+      _$CheckInObjectImpl.fromJson;
 
   @override
   @HiveField(0)
@@ -447,6 +447,6 @@ abstract class _CheckInObject implements CheckInObject {
   String? get str_ngay_bdsd;
   @override
   @JsonKey(ignore: true)
-  _$$_CheckInObjectCopyWith<_$_CheckInObject> get copyWith =>
+  _$$CheckInObjectImplCopyWith<_$CheckInObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'assign_document_response.dart';
 
@@ -12,7 +12,7 @@ part of 'assign_document_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AssignDocumentResponse _$AssignDocumentResponseFromJson(
     Map<String, dynamic> json) {
@@ -93,11 +93,12 @@ class _$AssignDocumentResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_AssignDocumentResponseCopyWith<$Res>
+abstract class _$$AssignDocumentResponseImplCopyWith<$Res>
     implements $AssignDocumentResponseCopyWith<$Res> {
-  factory _$$_AssignDocumentResponseCopyWith(_$_AssignDocumentResponse value,
-          $Res Function(_$_AssignDocumentResponse) then) =
-      __$$_AssignDocumentResponseCopyWithImpl<$Res>;
+  factory _$$AssignDocumentResponseImplCopyWith(
+          _$AssignDocumentResponseImpl value,
+          $Res Function(_$AssignDocumentResponseImpl) then) =
+      __$$AssignDocumentResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -109,12 +110,13 @@ abstract class _$$_AssignDocumentResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AssignDocumentResponseCopyWithImpl<$Res>
+class __$$AssignDocumentResponseImplCopyWithImpl<$Res>
     extends _$AssignDocumentResponseCopyWithImpl<$Res,
-        _$_AssignDocumentResponse>
-    implements _$$_AssignDocumentResponseCopyWith<$Res> {
-  __$$_AssignDocumentResponseCopyWithImpl(_$_AssignDocumentResponse _value,
-      $Res Function(_$_AssignDocumentResponse) _then)
+        _$AssignDocumentResponseImpl>
+    implements _$$AssignDocumentResponseImplCopyWith<$Res> {
+  __$$AssignDocumentResponseImplCopyWithImpl(
+      _$AssignDocumentResponseImpl _value,
+      $Res Function(_$AssignDocumentResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -126,7 +128,7 @@ class __$$_AssignDocumentResponseCopyWithImpl<$Res>
     Object? DonVi = freezed,
     Object? TrangThai = freezed,
   }) {
-    return _then(_$_AssignDocumentResponse(
+    return _then(_$AssignDocumentResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -153,12 +155,12 @@ class __$$_AssignDocumentResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AssignDocumentResponse implements _AssignDocumentResponse {
-  const _$_AssignDocumentResponse(
+class _$AssignDocumentResponseImpl implements _AssignDocumentResponse {
+  const _$AssignDocumentResponseImpl(
       {this.id, this.TrichYeu, this.NgayBanHanh, this.DonVi, this.TrangThai});
 
-  factory _$_AssignDocumentResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_AssignDocumentResponseFromJson(json);
+  factory _$AssignDocumentResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AssignDocumentResponseImplFromJson(json);
 
   @override
   final int? id;
@@ -177,10 +179,10 @@ class _$_AssignDocumentResponse implements _AssignDocumentResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AssignDocumentResponse &&
+            other is _$AssignDocumentResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.TrichYeu, TrichYeu) ||
                 other.TrichYeu == TrichYeu) &&
@@ -199,13 +201,13 @@ class _$_AssignDocumentResponse implements _AssignDocumentResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AssignDocumentResponseCopyWith<_$_AssignDocumentResponse> get copyWith =>
-      __$$_AssignDocumentResponseCopyWithImpl<_$_AssignDocumentResponse>(
-          this, _$identity);
+  _$$AssignDocumentResponseImplCopyWith<_$AssignDocumentResponseImpl>
+      get copyWith => __$$AssignDocumentResponseImplCopyWithImpl<
+          _$AssignDocumentResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AssignDocumentResponseToJson(
+    return _$$AssignDocumentResponseImplToJson(
       this,
     );
   }
@@ -217,10 +219,10 @@ abstract class _AssignDocumentResponse implements AssignDocumentResponse {
       final String? TrichYeu,
       final String? NgayBanHanh,
       final String? DonVi,
-      final String? TrangThai}) = _$_AssignDocumentResponse;
+      final String? TrangThai}) = _$AssignDocumentResponseImpl;
 
   factory _AssignDocumentResponse.fromJson(Map<String, dynamic> json) =
-      _$_AssignDocumentResponse.fromJson;
+      _$AssignDocumentResponseImpl.fromJson;
 
   @override
   int? get id;
@@ -234,6 +236,6 @@ abstract class _AssignDocumentResponse implements AssignDocumentResponse {
   String? get TrangThai;
   @override
   @JsonKey(ignore: true)
-  _$$_AssignDocumentResponseCopyWith<_$_AssignDocumentResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AssignDocumentResponseImplCopyWith<_$AssignDocumentResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

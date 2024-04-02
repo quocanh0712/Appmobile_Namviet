@@ -3,37 +3,12 @@
 part of 'semester_bill_response_object.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-SemesterBillResponseObject? jsonToNullableSemesterBillResponseObject(
-        Object? json) =>
-    SemesterBillResponseObject.fromJson(json as Map<String, dynamic>);
-
-SemesterBillResponseObject jsonToSemesterBillResponseObject(Object? json) =>
-    SemesterBillResponseObject.fromJson(json as Map<String, dynamic>);
-
-List<SemesterBillResponseObject?> jsonToListNullableSemesterBillResponseObjects(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) =>
-            SemesterBillResponseObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<SemesterBillResponseObject> jsonToListSemesterBillResponseObjects(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) =>
-            SemesterBillResponseObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SemesterBillResponseObject _$$_SemesterBillResponseObjectFromJson(
+_$SemesterBillResponseObjectImpl _$$SemesterBillResponseObjectImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SemesterBillResponseObject(
+    _$SemesterBillResponseObjectImpl(
       feeId: json['feeId'] as int?,
       feeName: json['feeName'] as String?,
       value: json['value'] as int?,
@@ -43,8 +18,8 @@ _$_SemesterBillResponseObject _$$_SemesterBillResponseObjectFromJson(
       qrCode: json['qrCode'] as String?,
     );
 
-Map<String, dynamic> _$$_SemesterBillResponseObjectToJson(
-        _$_SemesterBillResponseObject instance) =>
+Map<String, dynamic> _$$SemesterBillResponseObjectImplToJson(
+        _$SemesterBillResponseObjectImpl instance) =>
     <String, dynamic>{
       'feeId': instance.feeId,
       'feeName': instance.feeName,

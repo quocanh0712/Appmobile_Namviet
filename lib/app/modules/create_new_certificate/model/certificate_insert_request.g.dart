@@ -6,9 +6,9 @@ part of 'certificate_insert_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CertificateInsertRequest _$$_CertificateInsertRequestFromJson(
+_$CertificateInsertRequestImpl _$$CertificateInsertRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CertificateInsertRequest(
+    _$CertificateInsertRequestImpl(
       certificateName: json['certificateName'] as String?,
       graduationYear: json['graduationYear'] as int?,
       degree: json['degree'] as String?,
@@ -17,8 +17,8 @@ _$_CertificateInsertRequest _$$_CertificateInsertRequestFromJson(
       fileName: json['fileName'] as String?,
     );
 
-Map<String, dynamic> _$$_CertificateInsertRequestToJson(
-        _$_CertificateInsertRequest instance) =>
+Map<String, dynamic> _$$CertificateInsertRequestImplToJson(
+        _$CertificateInsertRequestImpl instance) =>
     <String, dynamic>{
       'certificateName': instance.certificateName,
       'graduationYear': instance.graduationYear,

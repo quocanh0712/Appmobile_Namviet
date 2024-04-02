@@ -6,15 +6,15 @@ part of 'scientific_research_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ScientificResearchRequest _$$_ScientificResearchRequestFromJson(
+_$ScientificResearchRequestImpl _$$ScientificResearchRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ScientificResearchRequest(
+    _$ScientificResearchRequestImpl(
       startindex: json['startindex'] as int?,
       length: json['length'] as int?,
     );
 
-Map<String, dynamic> _$$_ScientificResearchRequestToJson(
-        _$_ScientificResearchRequest instance) =>
+Map<String, dynamic> _$$ScientificResearchRequestImplToJson(
+        _$ScientificResearchRequestImpl instance) =>
     <String, dynamic>{
       'startindex': instance.startindex,
       'length': instance.length,

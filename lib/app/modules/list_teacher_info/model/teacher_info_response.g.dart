@@ -3,33 +3,12 @@
 part of 'teacher_info_response.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-TeacherInfoResponse? jsonToNullableTeacherInfoResponse(Object? json) =>
-    TeacherInfoResponse.fromJson(json as Map<String, dynamic>);
-
-TeacherInfoResponse jsonToTeacherInfoResponse(Object? json) =>
-    TeacherInfoResponse.fromJson(json as Map<String, dynamic>);
-
-List<TeacherInfoResponse?> jsonToListNullableTeacherInfoResponses(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => TeacherInfoResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<TeacherInfoResponse> jsonToListTeacherInfoResponses(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => TeacherInfoResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TeacherInfoResponse _$$_TeacherInfoResponseFromJson(
+_$TeacherInfoResponseImpl _$$TeacherInfoResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TeacherInfoResponse(
+    _$TeacherInfoResponseImpl(
       id: json['id'] as int?,
       teacherName: json['teacherName'] as String?,
       image: json['image'] as String?,
@@ -41,8 +20,8 @@ _$_TeacherInfoResponse _$$_TeacherInfoResponseFromJson(
       email: json['email'] as String?,
     );
 
-Map<String, dynamic> _$$_TeacherInfoResponseToJson(
-        _$_TeacherInfoResponse instance) =>
+Map<String, dynamic> _$$TeacherInfoResponseImplToJson(
+        _$TeacherInfoResponseImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'teacherName': instance.teacherName,

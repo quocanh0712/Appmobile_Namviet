@@ -3,34 +3,12 @@
 part of 'learning_profile_response.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-LearningProfileResponse? jsonToNullableLearningProfileResponse(Object? json) =>
-    LearningProfileResponse.fromJson(json as Map<String, dynamic>);
-
-LearningProfileResponse jsonToLearningProfileResponse(Object? json) =>
-    LearningProfileResponse.fromJson(json as Map<String, dynamic>);
-
-List<LearningProfileResponse?> jsonToListNullableLearningProfileResponses(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => LearningProfileResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<LearningProfileResponse> jsonToListLearningProfileResponses(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => LearningProfileResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LearningProfileResponse _$$_LearningProfileResponseFromJson(
+_$LearningProfileResponseImpl _$$LearningProfileResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_LearningProfileResponse(
+    _$LearningProfileResponseImpl(
       id: json['id'] as int?,
       name: json['name'] as String?,
       academicrankid: json['academicrankid'] as int?,
@@ -45,8 +23,8 @@ _$_LearningProfileResponse _$$_LearningProfileResponseFromJson(
       agencyname: json['agencyname'] as String?,
     );
 
-Map<String, dynamic> _$$_LearningProfileResponseToJson(
-        _$_LearningProfileResponse instance) =>
+Map<String, dynamic> _$$LearningProfileResponseImplToJson(
+        _$LearningProfileResponseImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

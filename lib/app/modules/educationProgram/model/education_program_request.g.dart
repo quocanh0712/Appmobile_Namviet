@@ -6,17 +6,17 @@ part of 'education_program_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_EducationProgramRequest _$$_EducationProgramRequestFromJson(
+_$EducationProgramRequestImpl _$$EducationProgramRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_EducationProgramRequest(
+    _$EducationProgramRequestImpl(
       year: json['year'] as String?,
       semester: json['semester'] as int?,
       startindex: json['startindex'] as int?,
       length: json['length'] as int?,
     );
 
-Map<String, dynamic> _$$_EducationProgramRequestToJson(
-        _$_EducationProgramRequest instance) =>
+Map<String, dynamic> _$$EducationProgramRequestImplToJson(
+        _$EducationProgramRequestImpl instance) =>
     <String, dynamic>{
       'year': instance.year,
       'semester': instance.semester,

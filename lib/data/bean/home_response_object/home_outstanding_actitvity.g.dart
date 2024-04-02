@@ -6,17 +6,17 @@ part of 'home_outstanding_actitvity.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_HomeOutstandingActitvity _$$_HomeOutstandingActitvityFromJson(
+_$HomeOutstandingActitvityImpl _$$HomeOutstandingActitvityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_HomeOutstandingActitvity(
+    _$HomeOutstandingActitvityImpl(
       id: json['id'] as int?,
       image: json['image'] as String?,
       title: json['title'] as String?,
       content: json['content'] as String?,
     );
 
-Map<String, dynamic> _$$_HomeOutstandingActitvityToJson(
-        _$_HomeOutstandingActitvity instance) =>
+Map<String, dynamic> _$$HomeOutstandingActitvityImplToJson(
+        _$HomeOutstandingActitvityImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'image': instance.image,

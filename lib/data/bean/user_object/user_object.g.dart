@@ -2,25 +2,7 @@
 
 part of 'user_object.dart';
 
-// **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
 
-UserObject? jsonToNullableUserObject(Object? json) =>
-    UserObject.fromJson(json as Map<String, dynamic>);
-
-UserObject jsonToUserObject(Object? json) =>
-    UserObject.fromJson(json as Map<String, dynamic>);
-
-List<UserObject?> jsonToListNullableUserObjects(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => UserObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<UserObject> jsonToListUserObjects(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => UserObject.fromJson(e as Map<String, dynamic>))
-        .toList();
 
 // **************************************************************************
 // TypeAdapterGenerator
@@ -136,8 +118,8 @@ class UserObjectAdapter extends TypeAdapter<UserObject> {
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_UserObject _$$_UserObjectFromJson(Map<String, dynamic> json) =>
-    _$_UserObject(
+_$UserObjectImpl _$$UserObjectImplFromJson(Map<String, dynamic> json) =>
+    _$UserObjectImpl(
       iduser: json['iduser'] as String?,
       role: json['role'] as int?,
       username: json['username'] as String?,
@@ -165,7 +147,7 @@ _$_UserObject _$$_UserObjectFromJson(Map<String, dynamic> json) =>
       idDonVi: json['idDonVi'] as int?,
     );
 
-Map<String, dynamic> _$$_UserObjectToJson(_$_UserObject instance) =>
+Map<String, dynamic> _$$UserObjectImplToJson(_$UserObjectImpl instance) =>
     <String, dynamic>{
       'iduser': instance.iduser,
       'role': instance.role,

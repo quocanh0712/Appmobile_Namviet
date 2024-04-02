@@ -3,33 +3,12 @@
 part of 'semester_point_object.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-SemesterPointObject? jsonToNullableSemesterPointObject(Object? json) =>
-    SemesterPointObject.fromJson(json as Map<String, dynamic>);
-
-SemesterPointObject jsonToSemesterPointObject(Object? json) =>
-    SemesterPointObject.fromJson(json as Map<String, dynamic>);
-
-List<SemesterPointObject?> jsonToListNullableSemesterPointObjects(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => SemesterPointObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<SemesterPointObject> jsonToListSemesterPointObjects(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => SemesterPointObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_SemesterPointObject _$$_SemesterPointObjectFromJson(
+_$SemesterPointObjectImpl _$$SemesterPointObjectImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SemesterPointObject(
+    _$SemesterPointObjectImpl(
       classification: json['classification'] as String?,
       classification10: json['classification10'] as String?,
       rank: (json['rank'] as num?)?.toDouble(),
@@ -43,8 +22,8 @@ _$_SemesterPointObject _$$_SemesterPointObjectFromJson(
       namHoc: json['nam_hoc'],
     );
 
-Map<String, dynamic> _$$_SemesterPointObjectToJson(
-        _$_SemesterPointObject instance) =>
+Map<String, dynamic> _$$SemesterPointObjectImplToJson(
+        _$SemesterPointObjectImpl instance) =>
     <String, dynamic>{
       'classification': instance.classification,
       'classification10': instance.classification10,

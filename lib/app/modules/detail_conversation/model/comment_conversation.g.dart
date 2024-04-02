@@ -3,33 +3,12 @@
 part of 'comment_conversation.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-CommentConversation? jsonToNullableCommentConversation(Object? json) =>
-    CommentConversation.fromJson(json as Map<String, dynamic>);
-
-CommentConversation jsonToCommentConversation(Object? json) =>
-    CommentConversation.fromJson(json as Map<String, dynamic>);
-
-List<CommentConversation?> jsonToListNullableCommentConversations(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => CommentConversation.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<CommentConversation> jsonToListCommentConversations(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => CommentConversation.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CommentConversation _$$_CommentConversationFromJson(
+_$CommentConversationImpl _$$CommentConversationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CommentConversation(
+    _$CommentConversationImpl(
       id: json['id'] as int?,
       content: json['content'] as String?,
       teacher: json['teacher'] as String?,
@@ -41,8 +20,8 @@ _$_CommentConversation _$$_CommentConversationFromJson(
           : DateTime.parse(json['updateAt'] as String),
     );
 
-Map<String, dynamic> _$$_CommentConversationToJson(
-        _$_CommentConversation instance) =>
+Map<String, dynamic> _$$CommentConversationImplToJson(
+        _$CommentConversationImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'content': instance.content,

@@ -3,44 +3,19 @@
 part of 'parent_practice_criteria_object.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-ParentPracticeCriteriaObject? jsonToNullableParentPracticeCriteriaObject(
-        Object? json) =>
-    ParentPracticeCriteriaObject.fromJson(json as Map<String, dynamic>);
-
-ParentPracticeCriteriaObject jsonToParentPracticeCriteriaObject(Object? json) =>
-    ParentPracticeCriteriaObject.fromJson(json as Map<String, dynamic>);
-
-List<ParentPracticeCriteriaObject?>
-    jsonToListNullableParentPracticeCriteriaObjects(Object? json) =>
-        List<Object>.from(json as List)
-            .map((e) => ParentPracticeCriteriaObject.fromJson(
-                e as Map<String, dynamic>))
-            .toList();
-
-List<ParentPracticeCriteriaObject> jsonToListParentPracticeCriteriaObjects(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) =>
-            ParentPracticeCriteriaObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ParentPracticeCriteriaObject _$$_ParentPracticeCriteriaObjectFromJson(
+_$ParentPracticeCriteriaObjectImpl _$$ParentPracticeCriteriaObjectImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ParentPracticeCriteriaObject(
+    _$ParentPracticeCriteriaObjectImpl(
       id: json['id'] as int?,
       typeCriteriaName: json['typeCriteriaName'] as String?,
       totalScore: json['totalScore'] as int?,
     );
 
-Map<String, dynamic> _$$_ParentPracticeCriteriaObjectToJson(
-        _$_ParentPracticeCriteriaObject instance) =>
+Map<String, dynamic> _$$ParentPracticeCriteriaObjectImplToJson(
+        _$ParentPracticeCriteriaObjectImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'typeCriteriaName': instance.typeCriteriaName,

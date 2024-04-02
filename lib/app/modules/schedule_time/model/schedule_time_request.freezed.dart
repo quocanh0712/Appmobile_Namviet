@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'schedule_time_request.dart';
 
@@ -12,7 +12,7 @@ part of 'schedule_time_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ScheduleTimeRequest _$ScheduleTimeRequestFromJson(Map<String, dynamic> json) {
   return _ScheduleTimeRequest.fromJson(json);
@@ -91,11 +91,11 @@ class _$ScheduleTimeRequestCopyWithImpl<$Res, $Val extends ScheduleTimeRequest>
 }
 
 /// @nodoc
-abstract class _$$_ScheduleTimeRequestCopyWith<$Res>
+abstract class _$$ScheduleTimeRequestImplCopyWith<$Res>
     implements $ScheduleTimeRequestCopyWith<$Res> {
-  factory _$$_ScheduleTimeRequestCopyWith(_$_ScheduleTimeRequest value,
-          $Res Function(_$_ScheduleTimeRequest) then) =
-      __$$_ScheduleTimeRequestCopyWithImpl<$Res>;
+  factory _$$ScheduleTimeRequestImplCopyWith(_$ScheduleTimeRequestImpl value,
+          $Res Function(_$ScheduleTimeRequestImpl) then) =
+      __$$ScheduleTimeRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -107,11 +107,11 @@ abstract class _$$_ScheduleTimeRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ScheduleTimeRequestCopyWithImpl<$Res>
-    extends _$ScheduleTimeRequestCopyWithImpl<$Res, _$_ScheduleTimeRequest>
-    implements _$$_ScheduleTimeRequestCopyWith<$Res> {
-  __$$_ScheduleTimeRequestCopyWithImpl(_$_ScheduleTimeRequest _value,
-      $Res Function(_$_ScheduleTimeRequest) _then)
+class __$$ScheduleTimeRequestImplCopyWithImpl<$Res>
+    extends _$ScheduleTimeRequestCopyWithImpl<$Res, _$ScheduleTimeRequestImpl>
+    implements _$$ScheduleTimeRequestImplCopyWith<$Res> {
+  __$$ScheduleTimeRequestImplCopyWithImpl(_$ScheduleTimeRequestImpl _value,
+      $Res Function(_$ScheduleTimeRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +123,7 @@ class __$$_ScheduleTimeRequestCopyWithImpl<$Res>
     Object? startindex = freezed,
     Object? length = freezed,
   }) {
-    return _then(_$_ScheduleTimeRequest(
+    return _then(_$ScheduleTimeRequestImpl(
       year: freezed == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
@@ -150,12 +150,12 @@ class __$$_ScheduleTimeRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ScheduleTimeRequest implements _ScheduleTimeRequest {
-  const _$_ScheduleTimeRequest(
+class _$ScheduleTimeRequestImpl implements _ScheduleTimeRequest {
+  const _$ScheduleTimeRequestImpl(
       {this.year, this.semester, this.session, this.startindex, this.length});
 
-  factory _$_ScheduleTimeRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_ScheduleTimeRequestFromJson(json);
+  factory _$ScheduleTimeRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ScheduleTimeRequestImplFromJson(json);
 
   @override
   final String? year;
@@ -174,10 +174,10 @@ class _$_ScheduleTimeRequest implements _ScheduleTimeRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ScheduleTimeRequest &&
+            other is _$ScheduleTimeRequestImpl &&
             (identical(other.year, year) || other.year == year) &&
             (identical(other.semester, semester) ||
                 other.semester == semester) &&
@@ -195,13 +195,13 @@ class _$_ScheduleTimeRequest implements _ScheduleTimeRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScheduleTimeRequestCopyWith<_$_ScheduleTimeRequest> get copyWith =>
-      __$$_ScheduleTimeRequestCopyWithImpl<_$_ScheduleTimeRequest>(
+  _$$ScheduleTimeRequestImplCopyWith<_$ScheduleTimeRequestImpl> get copyWith =>
+      __$$ScheduleTimeRequestImplCopyWithImpl<_$ScheduleTimeRequestImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScheduleTimeRequestToJson(
+    return _$$ScheduleTimeRequestImplToJson(
       this,
     );
   }
@@ -213,10 +213,10 @@ abstract class _ScheduleTimeRequest implements ScheduleTimeRequest {
       final int? semester,
       final int? session,
       final int? startindex,
-      final int? length}) = _$_ScheduleTimeRequest;
+      final int? length}) = _$ScheduleTimeRequestImpl;
 
   factory _ScheduleTimeRequest.fromJson(Map<String, dynamic> json) =
-      _$_ScheduleTimeRequest.fromJson;
+      _$ScheduleTimeRequestImpl.fromJson;
 
   @override
   String? get year;
@@ -230,6 +230,6 @@ abstract class _ScheduleTimeRequest implements ScheduleTimeRequest {
   int? get length;
   @override
   @JsonKey(ignore: true)
-  _$$_ScheduleTimeRequestCopyWith<_$_ScheduleTimeRequest> get copyWith =>
+  _$$ScheduleTimeRequestImplCopyWith<_$ScheduleTimeRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

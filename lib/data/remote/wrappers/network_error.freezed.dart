@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'network_error.dart';
 
@@ -12,7 +12,7 @@ part of 'network_error.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$NetworkError {
@@ -81,20 +81,20 @@ class _$NetworkErrorCopyWithImpl<$Res, $Val extends NetworkError>
 }
 
 /// @nodoc
-abstract class _$$_ResponseErrorCopyWith<$Res> {
-  factory _$$_ResponseErrorCopyWith(
-          _$_ResponseError value, $Res Function(_$_ResponseError) then) =
-      __$$_ResponseErrorCopyWithImpl<$Res>;
+abstract class _$$ResponseErrorImplCopyWith<$Res> {
+  factory _$$ResponseErrorImplCopyWith(
+          _$ResponseErrorImpl value, $Res Function(_$ResponseErrorImpl) then) =
+      __$$ResponseErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({DioError error});
 }
 
 /// @nodoc
-class __$$_ResponseErrorCopyWithImpl<$Res>
-    extends _$NetworkErrorCopyWithImpl<$Res, _$_ResponseError>
-    implements _$$_ResponseErrorCopyWith<$Res> {
-  __$$_ResponseErrorCopyWithImpl(
-      _$_ResponseError _value, $Res Function(_$_ResponseError) _then)
+class __$$ResponseErrorImplCopyWithImpl<$Res>
+    extends _$NetworkErrorCopyWithImpl<$Res, _$ResponseErrorImpl>
+    implements _$$ResponseErrorImplCopyWith<$Res> {
+  __$$ResponseErrorImplCopyWithImpl(
+      _$ResponseErrorImpl _value, $Res Function(_$ResponseErrorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -102,7 +102,7 @@ class __$$_ResponseErrorCopyWithImpl<$Res>
   $Res call({
     Object? error = null,
   }) {
-    return _then(_$_ResponseError(
+    return _then(_$ResponseErrorImpl(
       error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -113,8 +113,8 @@ class __$$_ResponseErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ResponseError extends _ResponseError {
-  const _$_ResponseError({required this.error}) : super._();
+class _$ResponseErrorImpl extends _ResponseError {
+  const _$ResponseErrorImpl({required this.error}) : super._();
 
   @override
   final DioError error;
@@ -125,10 +125,10 @@ class _$_ResponseError extends _ResponseError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ResponseError &&
+            other is _$ResponseErrorImpl &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -138,8 +138,8 @@ class _$_ResponseError extends _ResponseError {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ResponseErrorCopyWith<_$_ResponseError> get copyWith =>
-      __$$_ResponseErrorCopyWithImpl<_$_ResponseError>(this, _$identity);
+  _$$ResponseErrorImplCopyWith<_$ResponseErrorImpl> get copyWith =>
+      __$$ResponseErrorImplCopyWithImpl<_$ResponseErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -212,30 +212,30 @@ class _$_ResponseError extends _ResponseError {
 
 abstract class _ResponseError extends NetworkError {
   const factory _ResponseError({required final DioError error}) =
-      _$_ResponseError;
+      _$ResponseErrorImpl;
   const _ResponseError._() : super._();
 
   DioError get error;
   @JsonKey(ignore: true)
-  _$$_ResponseErrorCopyWith<_$_ResponseError> get copyWith =>
+  _$$ResponseErrorImplCopyWith<_$ResponseErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_DecodingErrorCopyWith<$Res> {
-  factory _$$_DecodingErrorCopyWith(
-          _$_DecodingError value, $Res Function(_$_DecodingError) then) =
-      __$$_DecodingErrorCopyWithImpl<$Res>;
+abstract class _$$DecodingErrorImplCopyWith<$Res> {
+  factory _$$DecodingErrorImplCopyWith(
+          _$DecodingErrorImpl value, $Res Function(_$DecodingErrorImpl) then) =
+      __$$DecodingErrorImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? error});
 }
 
 /// @nodoc
-class __$$_DecodingErrorCopyWithImpl<$Res>
-    extends _$NetworkErrorCopyWithImpl<$Res, _$_DecodingError>
-    implements _$$_DecodingErrorCopyWith<$Res> {
-  __$$_DecodingErrorCopyWithImpl(
-      _$_DecodingError _value, $Res Function(_$_DecodingError) _then)
+class __$$DecodingErrorImplCopyWithImpl<$Res>
+    extends _$NetworkErrorCopyWithImpl<$Res, _$DecodingErrorImpl>
+    implements _$$DecodingErrorImplCopyWith<$Res> {
+  __$$DecodingErrorImplCopyWithImpl(
+      _$DecodingErrorImpl _value, $Res Function(_$DecodingErrorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -243,7 +243,7 @@ class __$$_DecodingErrorCopyWithImpl<$Res>
   $Res call({
     Object? error = freezed,
   }) {
-    return _then(_$_DecodingError(
+    return _then(_$DecodingErrorImpl(
       error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -254,8 +254,8 @@ class __$$_DecodingErrorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DecodingError extends _DecodingError {
-  const _$_DecodingError({this.error}) : super._();
+class _$DecodingErrorImpl extends _DecodingError {
+  const _$DecodingErrorImpl({this.error}) : super._();
 
   @override
   final String? error;
@@ -266,10 +266,10 @@ class _$_DecodingError extends _DecodingError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DecodingError &&
+            other is _$DecodingErrorImpl &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -279,8 +279,8 @@ class _$_DecodingError extends _DecodingError {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DecodingErrorCopyWith<_$_DecodingError> get copyWith =>
-      __$$_DecodingErrorCopyWithImpl<_$_DecodingError>(this, _$identity);
+  _$$DecodingErrorImplCopyWith<_$DecodingErrorImpl> get copyWith =>
+      __$$DecodingErrorImplCopyWithImpl<_$DecodingErrorImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -352,30 +352,30 @@ class _$_DecodingError extends _DecodingError {
 }
 
 abstract class _DecodingError extends NetworkError {
-  const factory _DecodingError({final String? error}) = _$_DecodingError;
+  const factory _DecodingError({final String? error}) = _$DecodingErrorImpl;
   const _DecodingError._() : super._();
 
   String? get error;
   @JsonKey(ignore: true)
-  _$$_DecodingErrorCopyWith<_$_DecodingError> get copyWith =>
+  _$$DecodingErrorImplCopyWith<_$DecodingErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_ConnectivityCopyWith<$Res> {
-  factory _$$_ConnectivityCopyWith(
-          _$_Connectivity value, $Res Function(_$_Connectivity) then) =
-      __$$_ConnectivityCopyWithImpl<$Res>;
+abstract class _$$ConnectivityImplCopyWith<$Res> {
+  factory _$$ConnectivityImplCopyWith(
+          _$ConnectivityImpl value, $Res Function(_$ConnectivityImpl) then) =
+      __$$ConnectivityImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? message});
 }
 
 /// @nodoc
-class __$$_ConnectivityCopyWithImpl<$Res>
-    extends _$NetworkErrorCopyWithImpl<$Res, _$_Connectivity>
-    implements _$$_ConnectivityCopyWith<$Res> {
-  __$$_ConnectivityCopyWithImpl(
-      _$_Connectivity _value, $Res Function(_$_Connectivity) _then)
+class __$$ConnectivityImplCopyWithImpl<$Res>
+    extends _$NetworkErrorCopyWithImpl<$Res, _$ConnectivityImpl>
+    implements _$$ConnectivityImplCopyWith<$Res> {
+  __$$ConnectivityImplCopyWithImpl(
+      _$ConnectivityImpl _value, $Res Function(_$ConnectivityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -383,7 +383,7 @@ class __$$_ConnectivityCopyWithImpl<$Res>
   $Res call({
     Object? message = freezed,
   }) {
-    return _then(_$_Connectivity(
+    return _then(_$ConnectivityImpl(
       message: freezed == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -394,8 +394,8 @@ class __$$_ConnectivityCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Connectivity extends _Connectivity {
-  const _$_Connectivity({this.message}) : super._();
+class _$ConnectivityImpl extends _Connectivity {
+  const _$ConnectivityImpl({this.message}) : super._();
 
   @override
   final String? message;
@@ -406,10 +406,10 @@ class _$_Connectivity extends _Connectivity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Connectivity &&
+            other is _$ConnectivityImpl &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -419,8 +419,8 @@ class _$_Connectivity extends _Connectivity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ConnectivityCopyWith<_$_Connectivity> get copyWith =>
-      __$$_ConnectivityCopyWithImpl<_$_Connectivity>(this, _$identity);
+  _$$ConnectivityImplCopyWith<_$ConnectivityImpl> get copyWith =>
+      __$$ConnectivityImplCopyWithImpl<_$ConnectivityImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -492,11 +492,11 @@ class _$_Connectivity extends _Connectivity {
 }
 
 abstract class _Connectivity extends NetworkError {
-  const factory _Connectivity({final String? message}) = _$_Connectivity;
+  const factory _Connectivity({final String? message}) = _$ConnectivityImpl;
   const _Connectivity._() : super._();
 
   String? get message;
   @JsonKey(ignore: true)
-  _$$_ConnectivityCopyWith<_$_Connectivity> get copyWith =>
+  _$$ConnectivityImplCopyWith<_$ConnectivityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

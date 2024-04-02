@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'edit_report_task_response.dart';
 
@@ -12,7 +12,7 @@ part of 'edit_report_task_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 EditReportTaskResponse _$EditReportTaskResponseFromJson(
     Map<String, dynamic> json) {
@@ -64,23 +64,25 @@ class _$EditReportTaskResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EditReportTaskResponseCopyWith<$Res>
+abstract class _$$EditReportTaskResponseImplCopyWith<$Res>
     implements $EditReportTaskResponseCopyWith<$Res> {
-  factory _$$_EditReportTaskResponseCopyWith(_$_EditReportTaskResponse value,
-          $Res Function(_$_EditReportTaskResponse) then) =
-      __$$_EditReportTaskResponseCopyWithImpl<$Res>;
+  factory _$$EditReportTaskResponseImplCopyWith(
+          _$EditReportTaskResponseImpl value,
+          $Res Function(_$EditReportTaskResponseImpl) then) =
+      __$$EditReportTaskResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<FormFieldData>? listForm});
 }
 
 /// @nodoc
-class __$$_EditReportTaskResponseCopyWithImpl<$Res>
+class __$$EditReportTaskResponseImplCopyWithImpl<$Res>
     extends _$EditReportTaskResponseCopyWithImpl<$Res,
-        _$_EditReportTaskResponse>
-    implements _$$_EditReportTaskResponseCopyWith<$Res> {
-  __$$_EditReportTaskResponseCopyWithImpl(_$_EditReportTaskResponse _value,
-      $Res Function(_$_EditReportTaskResponse) _then)
+        _$EditReportTaskResponseImpl>
+    implements _$$EditReportTaskResponseImplCopyWith<$Res> {
+  __$$EditReportTaskResponseImplCopyWithImpl(
+      _$EditReportTaskResponseImpl _value,
+      $Res Function(_$EditReportTaskResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -88,7 +90,7 @@ class __$$_EditReportTaskResponseCopyWithImpl<$Res>
   $Res call({
     Object? listForm = freezed,
   }) {
-    return _then(_$_EditReportTaskResponse(
+    return _then(_$EditReportTaskResponseImpl(
       listForm: freezed == listForm
           ? _value._listForm
           : listForm // ignore: cast_nullable_to_non_nullable
@@ -99,18 +101,19 @@ class __$$_EditReportTaskResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EditReportTaskResponse implements _EditReportTaskResponse {
-  const _$_EditReportTaskResponse({final List<FormFieldData>? listForm})
+class _$EditReportTaskResponseImpl implements _EditReportTaskResponse {
+  const _$EditReportTaskResponseImpl({final List<FormFieldData>? listForm})
       : _listForm = listForm;
 
-  factory _$_EditReportTaskResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_EditReportTaskResponseFromJson(json);
+  factory _$EditReportTaskResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EditReportTaskResponseImplFromJson(json);
 
   final List<FormFieldData>? _listForm;
   @override
   List<FormFieldData>? get listForm {
     final value = _listForm;
     if (value == null) return null;
+    if (_listForm is EqualUnmodifiableListView) return _listForm;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -121,10 +124,10 @@ class _$_EditReportTaskResponse implements _EditReportTaskResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EditReportTaskResponse &&
+            other is _$EditReportTaskResponseImpl &&
             const DeepCollectionEquality().equals(other._listForm, _listForm));
   }
 
@@ -136,13 +139,13 @@ class _$_EditReportTaskResponse implements _EditReportTaskResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EditReportTaskResponseCopyWith<_$_EditReportTaskResponse> get copyWith =>
-      __$$_EditReportTaskResponseCopyWithImpl<_$_EditReportTaskResponse>(
-          this, _$identity);
+  _$$EditReportTaskResponseImplCopyWith<_$EditReportTaskResponseImpl>
+      get copyWith => __$$EditReportTaskResponseImplCopyWithImpl<
+          _$EditReportTaskResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EditReportTaskResponseToJson(
+    return _$$EditReportTaskResponseImplToJson(
       this,
     );
   }
@@ -150,15 +153,15 @@ class _$_EditReportTaskResponse implements _EditReportTaskResponse {
 
 abstract class _EditReportTaskResponse implements EditReportTaskResponse {
   const factory _EditReportTaskResponse({final List<FormFieldData>? listForm}) =
-      _$_EditReportTaskResponse;
+      _$EditReportTaskResponseImpl;
 
   factory _EditReportTaskResponse.fromJson(Map<String, dynamic> json) =
-      _$_EditReportTaskResponse.fromJson;
+      _$EditReportTaskResponseImpl.fromJson;
 
   @override
   List<FormFieldData>? get listForm;
   @override
   @JsonKey(ignore: true)
-  _$$_EditReportTaskResponseCopyWith<_$_EditReportTaskResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$EditReportTaskResponseImplCopyWith<_$EditReportTaskResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

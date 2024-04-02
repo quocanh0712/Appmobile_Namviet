@@ -3,44 +3,19 @@
 part of 'edit_assign_document_response.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-EditAssignDocumentResponse? jsonToNullableEditAssignDocumentResponse(
-        Object? json) =>
-    EditAssignDocumentResponse.fromJson(json as Map<String, dynamic>);
-
-EditAssignDocumentResponse jsonToEditAssignDocumentResponse(Object? json) =>
-    EditAssignDocumentResponse.fromJson(json as Map<String, dynamic>);
-
-List<EditAssignDocumentResponse?> jsonToListNullableEditAssignDocumentResponses(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) =>
-            EditAssignDocumentResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<EditAssignDocumentResponse> jsonToListEditAssignDocumentResponses(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) =>
-            EditAssignDocumentResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_EditAssignDocumentResponse _$$_EditAssignDocumentResponseFromJson(
+_$EditAssignDocumentResponseImpl _$$EditAssignDocumentResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_EditAssignDocumentResponse(
+    _$EditAssignDocumentResponseImpl(
       listForm: (json['listForm'] as List<dynamic>?)
           ?.map((e) => FormFieldData.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_EditAssignDocumentResponseToJson(
-        _$_EditAssignDocumentResponse instance) =>
+Map<String, dynamic> _$$EditAssignDocumentResponseImplToJson(
+        _$EditAssignDocumentResponseImpl instance) =>
     <String, dynamic>{
       'listForm': instance.listForm,
     };

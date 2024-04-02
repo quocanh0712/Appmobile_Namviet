@@ -20,7 +20,7 @@ class HomeResponseObject with _$HomeResponseObject {
   factory HomeResponseObject({
     @JsonKey(name: 'listnowtask') List<HomeRecentTask>? homeRecentTasks,
     @JsonKey(name: 'listrecentlyactitvity') List<HomeRecentActitvity>? homeRecentActitvities,
-    //@JsonKey(name: 'listNewActivity') List<HomeNewActivity>? homeNewActivities,
+    @JsonKey(name: 'listNewActivity') List<HomeNewActivity>? homeNewActivities,
     @JsonKey(name: 'listoutstandingactitvity') List<HomeOutstandingActitvity>? homeOutstandingActitvities,
     @JsonKey(name: 'listurlbanner') List<HomeBannerUrl>? homeBannerUrls,
   }) = _HomeResponseObject;

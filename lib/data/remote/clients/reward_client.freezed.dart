@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'reward_client.dart';
 
@@ -12,7 +12,7 @@ part of 'reward_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$RewardClient {
@@ -103,11 +103,11 @@ class _$RewardClientCopyWithImpl<$Res, $Val extends RewardClient>
 }
 
 /// @nodoc
-abstract class _$$_RewardClientCopyWith<$Res>
+abstract class _$$RewardClientImplCopyWith<$Res>
     implements $RewardClientCopyWith<$Res> {
-  factory _$$_RewardClientCopyWith(
-          _$_RewardClient value, $Res Function(_$_RewardClient) then) =
-      __$$_RewardClientCopyWithImpl<$Res>;
+  factory _$$RewardClientImplCopyWith(
+          _$RewardClientImpl value, $Res Function(_$RewardClientImpl) then) =
+      __$$RewardClientImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({RewardDisciplineRequest? model});
@@ -117,11 +117,11 @@ abstract class _$$_RewardClientCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RewardClientCopyWithImpl<$Res>
-    extends _$RewardClientCopyWithImpl<$Res, _$_RewardClient>
-    implements _$$_RewardClientCopyWith<$Res> {
-  __$$_RewardClientCopyWithImpl(
-      _$_RewardClient _value, $Res Function(_$_RewardClient) _then)
+class __$$RewardClientImplCopyWithImpl<$Res>
+    extends _$RewardClientCopyWithImpl<$Res, _$RewardClientImpl>
+    implements _$$RewardClientImplCopyWith<$Res> {
+  __$$RewardClientImplCopyWithImpl(
+      _$RewardClientImpl _value, $Res Function(_$RewardClientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -129,7 +129,7 @@ class __$$_RewardClientCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_RewardClient(
+    return _then(_$RewardClientImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -140,8 +140,8 @@ class __$$_RewardClientCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_RewardClient extends _RewardClient {
-  _$_RewardClient(this.model) : super._();
+class _$RewardClientImpl extends _RewardClient {
+  _$RewardClientImpl(this.model) : super._();
 
   @override
   final RewardDisciplineRequest? model;
@@ -152,10 +152,10 @@ class _$_RewardClient extends _RewardClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RewardClient &&
+            other is _$RewardClientImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -165,8 +165,8 @@ class _$_RewardClient extends _RewardClient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RewardClientCopyWith<_$_RewardClient> get copyWith =>
-      __$$_RewardClientCopyWithImpl<_$_RewardClient>(this, _$identity);
+  _$$RewardClientImplCopyWith<_$RewardClientImpl> get copyWith =>
+      __$$RewardClientImplCopyWithImpl<_$RewardClientImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -226,13 +226,14 @@ class _$_RewardClient extends _RewardClient {
 }
 
 abstract class _RewardClient extends RewardClient {
-  factory _RewardClient(final RewardDisciplineRequest? model) = _$_RewardClient;
+  factory _RewardClient(final RewardDisciplineRequest? model) =
+      _$RewardClientImpl;
   _RewardClient._() : super._();
 
   @override
   RewardDisciplineRequest? get model;
   @override
   @JsonKey(ignore: true)
-  _$$_RewardClientCopyWith<_$_RewardClient> get copyWith =>
+  _$$RewardClientImplCopyWith<_$RewardClientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

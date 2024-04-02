@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'scientific_research_request.dart';
 
@@ -12,7 +12,7 @@ part of 'scientific_research_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ScientificResearchRequest _$ScientificResearchRequestFromJson(
     Map<String, dynamic> json) {
@@ -70,25 +70,25 @@ class _$ScientificResearchRequestCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ScientificResearchRequestCopyWith<$Res>
+abstract class _$$ScientificResearchRequestImplCopyWith<$Res>
     implements $ScientificResearchRequestCopyWith<$Res> {
-  factory _$$_ScientificResearchRequestCopyWith(
-          _$_ScientificResearchRequest value,
-          $Res Function(_$_ScientificResearchRequest) then) =
-      __$$_ScientificResearchRequestCopyWithImpl<$Res>;
+  factory _$$ScientificResearchRequestImplCopyWith(
+          _$ScientificResearchRequestImpl value,
+          $Res Function(_$ScientificResearchRequestImpl) then) =
+      __$$ScientificResearchRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? startindex, int? length});
 }
 
 /// @nodoc
-class __$$_ScientificResearchRequestCopyWithImpl<$Res>
+class __$$ScientificResearchRequestImplCopyWithImpl<$Res>
     extends _$ScientificResearchRequestCopyWithImpl<$Res,
-        _$_ScientificResearchRequest>
-    implements _$$_ScientificResearchRequestCopyWith<$Res> {
-  __$$_ScientificResearchRequestCopyWithImpl(
-      _$_ScientificResearchRequest _value,
-      $Res Function(_$_ScientificResearchRequest) _then)
+        _$ScientificResearchRequestImpl>
+    implements _$$ScientificResearchRequestImplCopyWith<$Res> {
+  __$$ScientificResearchRequestImplCopyWithImpl(
+      _$ScientificResearchRequestImpl _value,
+      $Res Function(_$ScientificResearchRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -97,7 +97,7 @@ class __$$_ScientificResearchRequestCopyWithImpl<$Res>
     Object? startindex = freezed,
     Object? length = freezed,
   }) {
-    return _then(_$_ScientificResearchRequest(
+    return _then(_$ScientificResearchRequestImpl(
       startindex: freezed == startindex
           ? _value.startindex
           : startindex // ignore: cast_nullable_to_non_nullable
@@ -112,11 +112,11 @@ class __$$_ScientificResearchRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ScientificResearchRequest implements _ScientificResearchRequest {
-  const _$_ScientificResearchRequest({this.startindex, this.length});
+class _$ScientificResearchRequestImpl implements _ScientificResearchRequest {
+  const _$ScientificResearchRequestImpl({this.startindex, this.length});
 
-  factory _$_ScientificResearchRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_ScientificResearchRequestFromJson(json);
+  factory _$ScientificResearchRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ScientificResearchRequestImplFromJson(json);
 
   @override
   final int? startindex;
@@ -129,10 +129,10 @@ class _$_ScientificResearchRequest implements _ScientificResearchRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ScientificResearchRequest &&
+            other is _$ScientificResearchRequestImpl &&
             (identical(other.startindex, startindex) ||
                 other.startindex == startindex) &&
             (identical(other.length, length) || other.length == length));
@@ -145,13 +145,13 @@ class _$_ScientificResearchRequest implements _ScientificResearchRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScientificResearchRequestCopyWith<_$_ScientificResearchRequest>
-      get copyWith => __$$_ScientificResearchRequestCopyWithImpl<
-          _$_ScientificResearchRequest>(this, _$identity);
+  _$$ScientificResearchRequestImplCopyWith<_$ScientificResearchRequestImpl>
+      get copyWith => __$$ScientificResearchRequestImplCopyWithImpl<
+          _$ScientificResearchRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScientificResearchRequestToJson(
+    return _$$ScientificResearchRequestImplToJson(
       this,
     );
   }
@@ -160,10 +160,10 @@ class _$_ScientificResearchRequest implements _ScientificResearchRequest {
 abstract class _ScientificResearchRequest implements ScientificResearchRequest {
   const factory _ScientificResearchRequest(
       {final int? startindex,
-      final int? length}) = _$_ScientificResearchRequest;
+      final int? length}) = _$ScientificResearchRequestImpl;
 
   factory _ScientificResearchRequest.fromJson(Map<String, dynamic> json) =
-      _$_ScientificResearchRequest.fromJson;
+      _$ScientificResearchRequestImpl.fromJson;
 
   @override
   int? get startindex;
@@ -171,6 +171,6 @@ abstract class _ScientificResearchRequest implements ScientificResearchRequest {
   int? get length;
   @override
   @JsonKey(ignore: true)
-  _$$_ScientificResearchRequestCopyWith<_$_ScientificResearchRequest>
+  _$$ScientificResearchRequestImplCopyWith<_$ScientificResearchRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

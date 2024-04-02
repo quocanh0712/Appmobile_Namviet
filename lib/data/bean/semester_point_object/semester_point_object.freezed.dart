@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'semester_point_object.dart';
 
@@ -12,7 +12,7 @@ part of 'semester_point_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SemesterPointObject _$SemesterPointObjectFromJson(Map<String, dynamic> json) {
   return _SemesterPointObject.fromJson(json);
@@ -83,7 +83,7 @@ class _$SemesterPointObjectCopyWithImpl<$Res, $Val extends SemesterPointObject>
     Object? accumulatedCredits = freezed,
     Object? academicCredits = freezed,
     Object? hocKy = freezed,
-    Object? namHoc = null,
+    Object? namHoc = freezed,
   }) {
     return _then(_value.copyWith(
       classification: freezed == classification
@@ -126,7 +126,7 @@ class _$SemesterPointObjectCopyWithImpl<$Res, $Val extends SemesterPointObject>
           ? _value.hocKy
           : hocKy // ignore: cast_nullable_to_non_nullable
               as int?,
-      namHoc: null == namHoc
+      namHoc: freezed == namHoc
           ? _value.namHoc
           : namHoc // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -135,11 +135,11 @@ class _$SemesterPointObjectCopyWithImpl<$Res, $Val extends SemesterPointObject>
 }
 
 /// @nodoc
-abstract class _$$_SemesterPointObjectCopyWith<$Res>
+abstract class _$$SemesterPointObjectImplCopyWith<$Res>
     implements $SemesterPointObjectCopyWith<$Res> {
-  factory _$$_SemesterPointObjectCopyWith(_$_SemesterPointObject value,
-          $Res Function(_$_SemesterPointObject) then) =
-      __$$_SemesterPointObjectCopyWithImpl<$Res>;
+  factory _$$SemesterPointObjectImplCopyWith(_$SemesterPointObjectImpl value,
+          $Res Function(_$SemesterPointObjectImpl) then) =
+      __$$SemesterPointObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -157,11 +157,11 @@ abstract class _$$_SemesterPointObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SemesterPointObjectCopyWithImpl<$Res>
-    extends _$SemesterPointObjectCopyWithImpl<$Res, _$_SemesterPointObject>
-    implements _$$_SemesterPointObjectCopyWith<$Res> {
-  __$$_SemesterPointObjectCopyWithImpl(_$_SemesterPointObject _value,
-      $Res Function(_$_SemesterPointObject) _then)
+class __$$SemesterPointObjectImplCopyWithImpl<$Res>
+    extends _$SemesterPointObjectCopyWithImpl<$Res, _$SemesterPointObjectImpl>
+    implements _$$SemesterPointObjectImplCopyWith<$Res> {
+  __$$SemesterPointObjectImplCopyWithImpl(_$SemesterPointObjectImpl _value,
+      $Res Function(_$SemesterPointObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -177,9 +177,9 @@ class __$$_SemesterPointObjectCopyWithImpl<$Res>
     Object? accumulatedCredits = freezed,
     Object? academicCredits = freezed,
     Object? hocKy = freezed,
-    Object? namHoc = null,
+    Object? namHoc = freezed,
   }) {
-    return _then(_$_SemesterPointObject(
+    return _then(_$SemesterPointObjectImpl(
       classification: freezed == classification
           ? _value.classification
           : classification // ignore: cast_nullable_to_non_nullable
@@ -220,7 +220,7 @@ class __$$_SemesterPointObjectCopyWithImpl<$Res>
           ? _value.hocKy
           : hocKy // ignore: cast_nullable_to_non_nullable
               as int?,
-      namHoc: null == namHoc
+      namHoc: freezed == namHoc
           ? _value.namHoc
           : namHoc // ignore: cast_nullable_to_non_nullable
               as dynamic,
@@ -230,8 +230,8 @@ class __$$_SemesterPointObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SemesterPointObject implements _SemesterPointObject {
-  _$_SemesterPointObject(
+class _$SemesterPointObjectImpl implements _SemesterPointObject {
+  _$SemesterPointObjectImpl(
       {this.classification,
       this.classification10,
       this.rank,
@@ -244,8 +244,8 @@ class _$_SemesterPointObject implements _SemesterPointObject {
       @JsonKey(name: 'hoc_ky') this.hocKy,
       @JsonKey(name: 'nam_hoc') this.namHoc});
 
-  factory _$_SemesterPointObject.fromJson(Map<String, dynamic> json) =>
-      _$$_SemesterPointObjectFromJson(json);
+  factory _$SemesterPointObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SemesterPointObjectImplFromJson(json);
 
   @override
   final String? classification;
@@ -278,10 +278,10 @@ class _$_SemesterPointObject implements _SemesterPointObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SemesterPointObject &&
+            other is _$SemesterPointObjectImpl &&
             (identical(other.classification, classification) ||
                 other.classification == classification) &&
             (identical(other.classification10, classification10) ||
@@ -319,13 +319,13 @@ class _$_SemesterPointObject implements _SemesterPointObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SemesterPointObjectCopyWith<_$_SemesterPointObject> get copyWith =>
-      __$$_SemesterPointObjectCopyWithImpl<_$_SemesterPointObject>(
+  _$$SemesterPointObjectImplCopyWith<_$SemesterPointObjectImpl> get copyWith =>
+      __$$SemesterPointObjectImplCopyWithImpl<_$SemesterPointObjectImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SemesterPointObjectToJson(
+    return _$$SemesterPointObjectImplToJson(
       this,
     );
   }
@@ -333,20 +333,21 @@ class _$_SemesterPointObject implements _SemesterPointObject {
 
 abstract class _SemesterPointObject implements SemesterPointObject {
   factory _SemesterPointObject(
-      {final String? classification,
-      final String? classification10,
-      final double? rank,
-      final double? rank10,
-      final double? learningAverage,
-      final double? gpA4,
-      final double? gpA10,
-      final int? accumulatedCredits,
-      final int? academicCredits,
-      @JsonKey(name: 'hoc_ky') final int? hocKy,
-      @JsonKey(name: 'nam_hoc') final dynamic namHoc}) = _$_SemesterPointObject;
+          {final String? classification,
+          final String? classification10,
+          final double? rank,
+          final double? rank10,
+          final double? learningAverage,
+          final double? gpA4,
+          final double? gpA10,
+          final int? accumulatedCredits,
+          final int? academicCredits,
+          @JsonKey(name: 'hoc_ky') final int? hocKy,
+          @JsonKey(name: 'nam_hoc') final dynamic namHoc}) =
+      _$SemesterPointObjectImpl;
 
   factory _SemesterPointObject.fromJson(Map<String, dynamic> json) =
-      _$_SemesterPointObject.fromJson;
+      _$SemesterPointObjectImpl.fromJson;
 
   @override
   String? get classification;
@@ -374,6 +375,6 @@ abstract class _SemesterPointObject implements SemesterPointObject {
   dynamic get namHoc;
   @override
   @JsonKey(ignore: true)
-  _$$_SemesterPointObjectCopyWith<_$_SemesterPointObject> get copyWith =>
+  _$$SemesterPointObjectImplCopyWith<_$SemesterPointObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

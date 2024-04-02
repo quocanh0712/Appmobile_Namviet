@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'photo_client.dart';
 
@@ -12,7 +12,7 @@ part of 'photo_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$PhotoClient {
@@ -89,22 +89,22 @@ class _$PhotoClientCopyWithImpl<$Res, $Val extends PhotoClient>
 }
 
 /// @nodoc
-abstract class _$$_LoadPhotosCopyWith<$Res>
+abstract class _$$LoadPhotosImplCopyWith<$Res>
     implements $PhotoClientCopyWith<$Res> {
-  factory _$$_LoadPhotosCopyWith(
-          _$_LoadPhotos value, $Res Function(_$_LoadPhotos) then) =
-      __$$_LoadPhotosCopyWithImpl<$Res>;
+  factory _$$LoadPhotosImplCopyWith(
+          _$LoadPhotosImpl value, $Res Function(_$LoadPhotosImpl) then) =
+      __$$LoadPhotosImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? pageNumber});
 }
 
 /// @nodoc
-class __$$_LoadPhotosCopyWithImpl<$Res>
-    extends _$PhotoClientCopyWithImpl<$Res, _$_LoadPhotos>
-    implements _$$_LoadPhotosCopyWith<$Res> {
-  __$$_LoadPhotosCopyWithImpl(
-      _$_LoadPhotos _value, $Res Function(_$_LoadPhotos) _then)
+class __$$LoadPhotosImplCopyWithImpl<$Res>
+    extends _$PhotoClientCopyWithImpl<$Res, _$LoadPhotosImpl>
+    implements _$$LoadPhotosImplCopyWith<$Res> {
+  __$$LoadPhotosImplCopyWithImpl(
+      _$LoadPhotosImpl _value, $Res Function(_$LoadPhotosImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -112,7 +112,7 @@ class __$$_LoadPhotosCopyWithImpl<$Res>
   $Res call({
     Object? pageNumber = freezed,
   }) {
-    return _then(_$_LoadPhotos(
+    return _then(_$LoadPhotosImpl(
       freezed == pageNumber
           ? _value.pageNumber
           : pageNumber // ignore: cast_nullable_to_non_nullable
@@ -123,8 +123,8 @@ class __$$_LoadPhotosCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadPhotos extends _LoadPhotos {
-  _$_LoadPhotos(this.pageNumber) : super._();
+class _$LoadPhotosImpl extends _LoadPhotos {
+  _$LoadPhotosImpl(this.pageNumber) : super._();
 
   @override
   final int? pageNumber;
@@ -135,10 +135,10 @@ class _$_LoadPhotos extends _LoadPhotos {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadPhotos &&
+            other is _$LoadPhotosImpl &&
             (identical(other.pageNumber, pageNumber) ||
                 other.pageNumber == pageNumber));
   }
@@ -149,8 +149,8 @@ class _$_LoadPhotos extends _LoadPhotos {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoadPhotosCopyWith<_$_LoadPhotos> get copyWith =>
-      __$$_LoadPhotosCopyWithImpl<_$_LoadPhotos>(this, _$identity);
+  _$$LoadPhotosImplCopyWith<_$LoadPhotosImpl> get copyWith =>
+      __$$LoadPhotosImplCopyWithImpl<_$LoadPhotosImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -210,13 +210,13 @@ class _$_LoadPhotos extends _LoadPhotos {
 }
 
 abstract class _LoadPhotos extends PhotoClient {
-  factory _LoadPhotos(final int? pageNumber) = _$_LoadPhotos;
+  factory _LoadPhotos(final int? pageNumber) = _$LoadPhotosImpl;
   _LoadPhotos._() : super._();
 
   @override
   int? get pageNumber;
   @override
   @JsonKey(ignore: true)
-  _$$_LoadPhotosCopyWith<_$_LoadPhotos> get copyWith =>
+  _$$LoadPhotosImplCopyWith<_$LoadPhotosImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

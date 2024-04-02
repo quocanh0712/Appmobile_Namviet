@@ -3,31 +3,12 @@
 part of 'testing_plan_object.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-TestingPlanObject? jsonToNullableTestingPlanObject(Object? json) =>
-    TestingPlanObject.fromJson(json as Map<String, dynamic>);
-
-TestingPlanObject jsonToTestingPlanObject(Object? json) =>
-    TestingPlanObject.fromJson(json as Map<String, dynamic>);
-
-List<TestingPlanObject?> jsonToListNullableTestingPlanObjects(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => TestingPlanObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<TestingPlanObject> jsonToListTestingPlanObjects(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => TestingPlanObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TestingPlanObject _$$_TestingPlanObjectFromJson(Map<String, dynamic> json) =>
-    _$_TestingPlanObject(
+_$TestingPlanObjectImpl _$$TestingPlanObjectImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TestingPlanObjectImpl(
       isLabel: json['isLabel'] as bool?,
       course: json['course'] as String?,
       time: json['time'] as String?,
@@ -40,8 +21,8 @@ _$_TestingPlanObject _$$_TestingPlanObjectFromJson(Map<String, dynamic> json) =>
       isLast: json['isLast'] as bool?,
     );
 
-Map<String, dynamic> _$$_TestingPlanObjectToJson(
-        _$_TestingPlanObject instance) =>
+Map<String, dynamic> _$$TestingPlanObjectImplToJson(
+        _$TestingPlanObjectImpl instance) =>
     <String, dynamic>{
       'isLabel': instance.isLabel,
       'course': instance.course,

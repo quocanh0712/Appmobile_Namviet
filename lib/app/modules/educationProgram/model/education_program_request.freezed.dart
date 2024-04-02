@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'education_program_request.dart';
 
@@ -12,7 +12,7 @@ part of 'education_program_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 EducationProgramRequest _$EducationProgramRequestFromJson(
     Map<String, dynamic> json) {
@@ -82,23 +82,25 @@ class _$EducationProgramRequestCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EducationProgramRequestCopyWith<$Res>
+abstract class _$$EducationProgramRequestImplCopyWith<$Res>
     implements $EducationProgramRequestCopyWith<$Res> {
-  factory _$$_EducationProgramRequestCopyWith(_$_EducationProgramRequest value,
-          $Res Function(_$_EducationProgramRequest) then) =
-      __$$_EducationProgramRequestCopyWithImpl<$Res>;
+  factory _$$EducationProgramRequestImplCopyWith(
+          _$EducationProgramRequestImpl value,
+          $Res Function(_$EducationProgramRequestImpl) then) =
+      __$$EducationProgramRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? year, int? semester, int? startindex, int? length});
 }
 
 /// @nodoc
-class __$$_EducationProgramRequestCopyWithImpl<$Res>
+class __$$EducationProgramRequestImplCopyWithImpl<$Res>
     extends _$EducationProgramRequestCopyWithImpl<$Res,
-        _$_EducationProgramRequest>
-    implements _$$_EducationProgramRequestCopyWith<$Res> {
-  __$$_EducationProgramRequestCopyWithImpl(_$_EducationProgramRequest _value,
-      $Res Function(_$_EducationProgramRequest) _then)
+        _$EducationProgramRequestImpl>
+    implements _$$EducationProgramRequestImplCopyWith<$Res> {
+  __$$EducationProgramRequestImplCopyWithImpl(
+      _$EducationProgramRequestImpl _value,
+      $Res Function(_$EducationProgramRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -109,7 +111,7 @@ class __$$_EducationProgramRequestCopyWithImpl<$Res>
     Object? startindex = freezed,
     Object? length = freezed,
   }) {
-    return _then(_$_EducationProgramRequest(
+    return _then(_$EducationProgramRequestImpl(
       year: freezed == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
@@ -132,12 +134,12 @@ class __$$_EducationProgramRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EducationProgramRequest implements _EducationProgramRequest {
-  const _$_EducationProgramRequest(
+class _$EducationProgramRequestImpl implements _EducationProgramRequest {
+  const _$EducationProgramRequestImpl(
       {this.year, this.semester, this.startindex, this.length});
 
-  factory _$_EducationProgramRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_EducationProgramRequestFromJson(json);
+  factory _$EducationProgramRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EducationProgramRequestImplFromJson(json);
 
   @override
   final String? year;
@@ -154,10 +156,10 @@ class _$_EducationProgramRequest implements _EducationProgramRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EducationProgramRequest &&
+            other is _$EducationProgramRequestImpl &&
             (identical(other.year, year) || other.year == year) &&
             (identical(other.semester, semester) ||
                 other.semester == semester) &&
@@ -174,14 +176,13 @@ class _$_EducationProgramRequest implements _EducationProgramRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EducationProgramRequestCopyWith<_$_EducationProgramRequest>
-      get copyWith =>
-          __$$_EducationProgramRequestCopyWithImpl<_$_EducationProgramRequest>(
-              this, _$identity);
+  _$$EducationProgramRequestImplCopyWith<_$EducationProgramRequestImpl>
+      get copyWith => __$$EducationProgramRequestImplCopyWithImpl<
+          _$EducationProgramRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EducationProgramRequestToJson(
+    return _$$EducationProgramRequestImplToJson(
       this,
     );
   }
@@ -192,10 +193,10 @@ abstract class _EducationProgramRequest implements EducationProgramRequest {
       {final String? year,
       final int? semester,
       final int? startindex,
-      final int? length}) = _$_EducationProgramRequest;
+      final int? length}) = _$EducationProgramRequestImpl;
 
   factory _EducationProgramRequest.fromJson(Map<String, dynamic> json) =
-      _$_EducationProgramRequest.fromJson;
+      _$EducationProgramRequestImpl.fromJson;
 
   @override
   String? get year;
@@ -207,6 +208,6 @@ abstract class _EducationProgramRequest implements EducationProgramRequest {
   int? get length;
   @override
   @JsonKey(ignore: true)
-  _$$_EducationProgramRequestCopyWith<_$_EducationProgramRequest>
+  _$$EducationProgramRequestImplCopyWith<_$EducationProgramRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

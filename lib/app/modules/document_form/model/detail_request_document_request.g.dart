@@ -6,14 +6,14 @@ part of 'detail_request_document_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DetailRequestDocumentRequest _$$_DetailRequestDocumentRequestFromJson(
+_$DetailRequestDocumentRequestImpl _$$DetailRequestDocumentRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DetailRequestDocumentRequest(
+    _$DetailRequestDocumentRequestImpl(
       id: json['id'] as int?,
     );
 
-Map<String, dynamic> _$$_DetailRequestDocumentRequestToJson(
-        _$_DetailRequestDocumentRequest instance) =>
+Map<String, dynamic> _$$DetailRequestDocumentRequestImplToJson(
+        _$DetailRequestDocumentRequestImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
     };

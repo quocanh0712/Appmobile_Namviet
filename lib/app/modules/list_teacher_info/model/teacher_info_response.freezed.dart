@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'teacher_info_response.dart';
 
@@ -12,7 +12,7 @@ part of 'teacher_info_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 TeacherInfoResponse _$TeacherInfoResponseFromJson(Map<String, dynamic> json) {
   return _TeacherInfoResponse.fromJson(json);
@@ -119,11 +119,11 @@ class _$TeacherInfoResponseCopyWithImpl<$Res, $Val extends TeacherInfoResponse>
 }
 
 /// @nodoc
-abstract class _$$_TeacherInfoResponseCopyWith<$Res>
+abstract class _$$TeacherInfoResponseImplCopyWith<$Res>
     implements $TeacherInfoResponseCopyWith<$Res> {
-  factory _$$_TeacherInfoResponseCopyWith(_$_TeacherInfoResponse value,
-          $Res Function(_$_TeacherInfoResponse) then) =
-      __$$_TeacherInfoResponseCopyWithImpl<$Res>;
+  factory _$$TeacherInfoResponseImplCopyWith(_$TeacherInfoResponseImpl value,
+          $Res Function(_$TeacherInfoResponseImpl) then) =
+      __$$TeacherInfoResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -139,11 +139,11 @@ abstract class _$$_TeacherInfoResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TeacherInfoResponseCopyWithImpl<$Res>
-    extends _$TeacherInfoResponseCopyWithImpl<$Res, _$_TeacherInfoResponse>
-    implements _$$_TeacherInfoResponseCopyWith<$Res> {
-  __$$_TeacherInfoResponseCopyWithImpl(_$_TeacherInfoResponse _value,
-      $Res Function(_$_TeacherInfoResponse) _then)
+class __$$TeacherInfoResponseImplCopyWithImpl<$Res>
+    extends _$TeacherInfoResponseCopyWithImpl<$Res, _$TeacherInfoResponseImpl>
+    implements _$$TeacherInfoResponseImplCopyWith<$Res> {
+  __$$TeacherInfoResponseImplCopyWithImpl(_$TeacherInfoResponseImpl _value,
+      $Res Function(_$TeacherInfoResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -159,7 +159,7 @@ class __$$_TeacherInfoResponseCopyWithImpl<$Res>
     Object? telephone = freezed,
     Object? email = freezed,
   }) {
-    return _then(_$_TeacherInfoResponse(
+    return _then(_$TeacherInfoResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -202,8 +202,8 @@ class __$$_TeacherInfoResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TeacherInfoResponse implements _TeacherInfoResponse {
-  const _$_TeacherInfoResponse(
+class _$TeacherInfoResponseImpl implements _TeacherInfoResponse {
+  const _$TeacherInfoResponseImpl(
       {this.id,
       this.teacherName,
       this.image,
@@ -214,8 +214,8 @@ class _$_TeacherInfoResponse implements _TeacherInfoResponse {
       this.telephone,
       this.email});
 
-  factory _$_TeacherInfoResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_TeacherInfoResponseFromJson(json);
+  factory _$TeacherInfoResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TeacherInfoResponseImplFromJson(json);
 
   @override
   final int? id;
@@ -242,10 +242,10 @@ class _$_TeacherInfoResponse implements _TeacherInfoResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TeacherInfoResponse &&
+            other is _$TeacherInfoResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.teacherName, teacherName) ||
                 other.teacherName == teacherName) &&
@@ -270,13 +270,13 @@ class _$_TeacherInfoResponse implements _TeacherInfoResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TeacherInfoResponseCopyWith<_$_TeacherInfoResponse> get copyWith =>
-      __$$_TeacherInfoResponseCopyWithImpl<_$_TeacherInfoResponse>(
+  _$$TeacherInfoResponseImplCopyWith<_$TeacherInfoResponseImpl> get copyWith =>
+      __$$TeacherInfoResponseImplCopyWithImpl<_$TeacherInfoResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TeacherInfoResponseToJson(
+    return _$$TeacherInfoResponseImplToJson(
       this,
     );
   }
@@ -292,10 +292,10 @@ abstract class _TeacherInfoResponse implements TeacherInfoResponse {
       final String? branch,
       final int? positionId,
       final String? telephone,
-      final String? email}) = _$_TeacherInfoResponse;
+      final String? email}) = _$TeacherInfoResponseImpl;
 
   factory _TeacherInfoResponse.fromJson(Map<String, dynamic> json) =
-      _$_TeacherInfoResponse.fromJson;
+      _$TeacherInfoResponseImpl.fromJson;
 
   @override
   int? get id;
@@ -317,6 +317,6 @@ abstract class _TeacherInfoResponse implements TeacherInfoResponse {
   String? get email;
   @override
   @JsonKey(ignore: true)
-  _$$_TeacherInfoResponseCopyWith<_$_TeacherInfoResponse> get copyWith =>
+  _$$TeacherInfoResponseImplCopyWith<_$TeacherInfoResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

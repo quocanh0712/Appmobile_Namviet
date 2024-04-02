@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'schedule_checkin_object.dart';
 
@@ -12,7 +12,7 @@ part of 'schedule_checkin_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ScheDuleCheckInObject _$ScheDuleCheckInObjectFromJson(
     Map<String, dynamic> json) {
@@ -82,11 +82,12 @@ class _$ScheDuleCheckInObjectCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ScheDuleCheckInObjectCopyWith<$Res>
+abstract class _$$ScheDuleCheckInObjectImplCopyWith<$Res>
     implements $ScheDuleCheckInObjectCopyWith<$Res> {
-  factory _$$_ScheDuleCheckInObjectCopyWith(_$_ScheDuleCheckInObject value,
-          $Res Function(_$_ScheDuleCheckInObject) then) =
-      __$$_ScheDuleCheckInObjectCopyWithImpl<$Res>;
+  factory _$$ScheDuleCheckInObjectImplCopyWith(
+          _$ScheDuleCheckInObjectImpl value,
+          $Res Function(_$ScheDuleCheckInObjectImpl) then) =
+      __$$ScheDuleCheckInObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -96,11 +97,12 @@ abstract class _$$_ScheDuleCheckInObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ScheDuleCheckInObjectCopyWithImpl<$Res>
-    extends _$ScheDuleCheckInObjectCopyWithImpl<$Res, _$_ScheDuleCheckInObject>
-    implements _$$_ScheDuleCheckInObjectCopyWith<$Res> {
-  __$$_ScheDuleCheckInObjectCopyWithImpl(_$_ScheDuleCheckInObject _value,
-      $Res Function(_$_ScheDuleCheckInObject) _then)
+class __$$ScheDuleCheckInObjectImplCopyWithImpl<$Res>
+    extends _$ScheDuleCheckInObjectCopyWithImpl<$Res,
+        _$ScheDuleCheckInObjectImpl>
+    implements _$$ScheDuleCheckInObjectImplCopyWith<$Res> {
+  __$$ScheDuleCheckInObjectImplCopyWithImpl(_$ScheDuleCheckInObjectImpl _value,
+      $Res Function(_$ScheDuleCheckInObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -110,7 +112,7 @@ class __$$_ScheDuleCheckInObjectCopyWithImpl<$Res>
     Object? ma_khkk = freezed,
     Object? ten_khkk = freezed,
   }) {
-    return _then(_$_ScheDuleCheckInObject(
+    return _then(_$ScheDuleCheckInObjectImpl(
       id_khkk: freezed == id_khkk
           ? _value.id_khkk
           : id_khkk // ignore: cast_nullable_to_non_nullable
@@ -129,14 +131,14 @@ class __$$_ScheDuleCheckInObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ScheDuleCheckInObject implements _ScheDuleCheckInObject {
-  _$_ScheDuleCheckInObject(
+class _$ScheDuleCheckInObjectImpl implements _ScheDuleCheckInObject {
+  _$ScheDuleCheckInObjectImpl(
       {@HiveField(0) this.id_khkk,
       @HiveField(1) this.ma_khkk,
       @HiveField(2) this.ten_khkk});
 
-  factory _$_ScheDuleCheckInObject.fromJson(Map<String, dynamic> json) =>
-      _$$_ScheDuleCheckInObjectFromJson(json);
+  factory _$ScheDuleCheckInObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ScheDuleCheckInObjectImplFromJson(json);
 
   @override
   @HiveField(0)
@@ -154,10 +156,10 @@ class _$_ScheDuleCheckInObject implements _ScheDuleCheckInObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ScheDuleCheckInObject &&
+            other is _$ScheDuleCheckInObjectImpl &&
             (identical(other.id_khkk, id_khkk) || other.id_khkk == id_khkk) &&
             (identical(other.ma_khkk, ma_khkk) || other.ma_khkk == ma_khkk) &&
             (identical(other.ten_khkk, ten_khkk) ||
@@ -171,13 +173,13 @@ class _$_ScheDuleCheckInObject implements _ScheDuleCheckInObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScheDuleCheckInObjectCopyWith<_$_ScheDuleCheckInObject> get copyWith =>
-      __$$_ScheDuleCheckInObjectCopyWithImpl<_$_ScheDuleCheckInObject>(
-          this, _$identity);
+  _$$ScheDuleCheckInObjectImplCopyWith<_$ScheDuleCheckInObjectImpl>
+      get copyWith => __$$ScheDuleCheckInObjectImplCopyWithImpl<
+          _$ScheDuleCheckInObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScheDuleCheckInObjectToJson(
+    return _$$ScheDuleCheckInObjectImplToJson(
       this,
     );
   }
@@ -187,10 +189,10 @@ abstract class _ScheDuleCheckInObject implements ScheDuleCheckInObject {
   factory _ScheDuleCheckInObject(
       {@HiveField(0) final int? id_khkk,
       @HiveField(1) final String? ma_khkk,
-      @HiveField(2) final String? ten_khkk}) = _$_ScheDuleCheckInObject;
+      @HiveField(2) final String? ten_khkk}) = _$ScheDuleCheckInObjectImpl;
 
   factory _ScheDuleCheckInObject.fromJson(Map<String, dynamic> json) =
-      _$_ScheDuleCheckInObject.fromJson;
+      _$ScheDuleCheckInObjectImpl.fromJson;
 
   @override
   @HiveField(0)
@@ -203,6 +205,6 @@ abstract class _ScheDuleCheckInObject implements ScheDuleCheckInObject {
   String? get ten_khkk;
   @override
   @JsonKey(ignore: true)
-  _$$_ScheDuleCheckInObjectCopyWith<_$_ScheDuleCheckInObject> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ScheDuleCheckInObjectImplCopyWith<_$ScheDuleCheckInObjectImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

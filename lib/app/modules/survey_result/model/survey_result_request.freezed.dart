@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'survey_result_request.dart';
 
@@ -12,7 +12,7 @@ part of 'survey_result_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SurveyResultRequest _$SurveyResultRequestFromJson(Map<String, dynamic> json) {
   return _SurveyResultRequest.fromJson(json);
@@ -80,22 +80,22 @@ class _$SurveyResultRequestCopyWithImpl<$Res, $Val extends SurveyResultRequest>
 }
 
 /// @nodoc
-abstract class _$$_SurveyResultRequestCopyWith<$Res>
+abstract class _$$SurveyResultRequestImplCopyWith<$Res>
     implements $SurveyResultRequestCopyWith<$Res> {
-  factory _$$_SurveyResultRequestCopyWith(_$_SurveyResultRequest value,
-          $Res Function(_$_SurveyResultRequest) then) =
-      __$$_SurveyResultRequestCopyWithImpl<$Res>;
+  factory _$$SurveyResultRequestImplCopyWith(_$SurveyResultRequestImpl value,
+          $Res Function(_$SurveyResultRequestImpl) then) =
+      __$$SurveyResultRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? year, int? semester, int? startindex, int? length});
 }
 
 /// @nodoc
-class __$$_SurveyResultRequestCopyWithImpl<$Res>
-    extends _$SurveyResultRequestCopyWithImpl<$Res, _$_SurveyResultRequest>
-    implements _$$_SurveyResultRequestCopyWith<$Res> {
-  __$$_SurveyResultRequestCopyWithImpl(_$_SurveyResultRequest _value,
-      $Res Function(_$_SurveyResultRequest) _then)
+class __$$SurveyResultRequestImplCopyWithImpl<$Res>
+    extends _$SurveyResultRequestCopyWithImpl<$Res, _$SurveyResultRequestImpl>
+    implements _$$SurveyResultRequestImplCopyWith<$Res> {
+  __$$SurveyResultRequestImplCopyWithImpl(_$SurveyResultRequestImpl _value,
+      $Res Function(_$SurveyResultRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -106,7 +106,7 @@ class __$$_SurveyResultRequestCopyWithImpl<$Res>
     Object? startindex = freezed,
     Object? length = freezed,
   }) {
-    return _then(_$_SurveyResultRequest(
+    return _then(_$SurveyResultRequestImpl(
       year: freezed == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
@@ -129,12 +129,12 @@ class __$$_SurveyResultRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SurveyResultRequest implements _SurveyResultRequest {
-  const _$_SurveyResultRequest(
+class _$SurveyResultRequestImpl implements _SurveyResultRequest {
+  const _$SurveyResultRequestImpl(
       {this.year, this.semester, this.startindex, this.length});
 
-  factory _$_SurveyResultRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_SurveyResultRequestFromJson(json);
+  factory _$SurveyResultRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SurveyResultRequestImplFromJson(json);
 
   @override
   final String? year;
@@ -151,10 +151,10 @@ class _$_SurveyResultRequest implements _SurveyResultRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SurveyResultRequest &&
+            other is _$SurveyResultRequestImpl &&
             (identical(other.year, year) || other.year == year) &&
             (identical(other.semester, semester) ||
                 other.semester == semester) &&
@@ -171,13 +171,13 @@ class _$_SurveyResultRequest implements _SurveyResultRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SurveyResultRequestCopyWith<_$_SurveyResultRequest> get copyWith =>
-      __$$_SurveyResultRequestCopyWithImpl<_$_SurveyResultRequest>(
+  _$$SurveyResultRequestImplCopyWith<_$SurveyResultRequestImpl> get copyWith =>
+      __$$SurveyResultRequestImplCopyWithImpl<_$SurveyResultRequestImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SurveyResultRequestToJson(
+    return _$$SurveyResultRequestImplToJson(
       this,
     );
   }
@@ -188,10 +188,10 @@ abstract class _SurveyResultRequest implements SurveyResultRequest {
       {final String? year,
       final int? semester,
       final int? startindex,
-      final int? length}) = _$_SurveyResultRequest;
+      final int? length}) = _$SurveyResultRequestImpl;
 
   factory _SurveyResultRequest.fromJson(Map<String, dynamic> json) =
-      _$_SurveyResultRequest.fromJson;
+      _$SurveyResultRequestImpl.fromJson;
 
   @override
   String? get year;
@@ -203,6 +203,6 @@ abstract class _SurveyResultRequest implements SurveyResultRequest {
   int? get length;
   @override
   @JsonKey(ignore: true)
-  _$$_SurveyResultRequestCopyWith<_$_SurveyResultRequest> get copyWith =>
+  _$$SurveyResultRequestImplCopyWith<_$SurveyResultRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

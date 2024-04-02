@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'learning_result_request_params.dart';
 
@@ -12,7 +12,7 @@ part of 'learning_result_request_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LearningResultRequestParams _$LearningResultRequestParamsFromJson(
     Map<String, dynamic> json) {
@@ -95,12 +95,12 @@ class _$LearningResultRequestParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_LearningResultRequestParamsCopyWith<$Res>
+abstract class _$$LearningResultRequestParamsImplCopyWith<$Res>
     implements $LearningResultRequestParamsCopyWith<$Res> {
-  factory _$$_LearningResultRequestParamsCopyWith(
-          _$_LearningResultRequestParams value,
-          $Res Function(_$_LearningResultRequestParams) then) =
-      __$$_LearningResultRequestParamsCopyWithImpl<$Res>;
+  factory _$$LearningResultRequestParamsImplCopyWith(
+          _$LearningResultRequestParamsImpl value,
+          $Res Function(_$LearningResultRequestParamsImpl) then) =
+      __$$LearningResultRequestParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -112,13 +112,13 @@ abstract class _$$_LearningResultRequestParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LearningResultRequestParamsCopyWithImpl<$Res>
+class __$$LearningResultRequestParamsImplCopyWithImpl<$Res>
     extends _$LearningResultRequestParamsCopyWithImpl<$Res,
-        _$_LearningResultRequestParams>
-    implements _$$_LearningResultRequestParamsCopyWith<$Res> {
-  __$$_LearningResultRequestParamsCopyWithImpl(
-      _$_LearningResultRequestParams _value,
-      $Res Function(_$_LearningResultRequestParams) _then)
+        _$LearningResultRequestParamsImpl>
+    implements _$$LearningResultRequestParamsImplCopyWith<$Res> {
+  __$$LearningResultRequestParamsImplCopyWithImpl(
+      _$LearningResultRequestParamsImpl _value,
+      $Res Function(_$LearningResultRequestParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -130,7 +130,7 @@ class __$$_LearningResultRequestParamsCopyWithImpl<$Res>
     Object? startindex = freezed,
     Object? length = freezed,
   }) {
-    return _then(_$_LearningResultRequestParams(
+    return _then(_$LearningResultRequestParamsImpl(
       semester: freezed == semester
           ? _value.semester
           : semester // ignore: cast_nullable_to_non_nullable
@@ -157,12 +157,14 @@ class __$$_LearningResultRequestParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LearningResultRequestParams implements _LearningResultRequestParams {
-  _$_LearningResultRequestParams(
+class _$LearningResultRequestParamsImpl
+    implements _LearningResultRequestParams {
+  _$LearningResultRequestParamsImpl(
       {this.semester, this.year, this.courseId, this.startindex, this.length});
 
-  factory _$_LearningResultRequestParams.fromJson(Map<String, dynamic> json) =>
-      _$$_LearningResultRequestParamsFromJson(json);
+  factory _$LearningResultRequestParamsImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$LearningResultRequestParamsImplFromJson(json);
 
   @override
   final int? semester;
@@ -181,10 +183,10 @@ class _$_LearningResultRequestParams implements _LearningResultRequestParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LearningResultRequestParams &&
+            other is _$LearningResultRequestParamsImpl &&
             (identical(other.semester, semester) ||
                 other.semester == semester) &&
             (identical(other.year, year) || other.year == year) &&
@@ -203,13 +205,13 @@ class _$_LearningResultRequestParams implements _LearningResultRequestParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LearningResultRequestParamsCopyWith<_$_LearningResultRequestParams>
-      get copyWith => __$$_LearningResultRequestParamsCopyWithImpl<
-          _$_LearningResultRequestParams>(this, _$identity);
+  _$$LearningResultRequestParamsImplCopyWith<_$LearningResultRequestParamsImpl>
+      get copyWith => __$$LearningResultRequestParamsImplCopyWithImpl<
+          _$LearningResultRequestParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LearningResultRequestParamsToJson(
+    return _$$LearningResultRequestParamsImplToJson(
       this,
     );
   }
@@ -222,10 +224,10 @@ abstract class _LearningResultRequestParams
       final String? year,
       final int? courseId,
       final int? startindex,
-      final int? length}) = _$_LearningResultRequestParams;
+      final int? length}) = _$LearningResultRequestParamsImpl;
 
   factory _LearningResultRequestParams.fromJson(Map<String, dynamic> json) =
-      _$_LearningResultRequestParams.fromJson;
+      _$LearningResultRequestParamsImpl.fromJson;
 
   @override
   int? get semester;
@@ -239,6 +241,6 @@ abstract class _LearningResultRequestParams
   int? get length;
   @override
   @JsonKey(ignore: true)
-  _$$_LearningResultRequestParamsCopyWith<_$_LearningResultRequestParams>
+  _$$LearningResultRequestParamsImplCopyWith<_$LearningResultRequestParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

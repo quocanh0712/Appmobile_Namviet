@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'schedule_daily_response.dart';
 
@@ -12,7 +12,7 @@ part of 'schedule_daily_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ScheduleDailyResponse _$ScheduleDailyResponseFromJson(
     Map<String, dynamic> json) {
@@ -100,11 +100,12 @@ class _$ScheduleDailyResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ScheduleDailyResponseCopyWith<$Res>
+abstract class _$$ScheduleDailyResponseImplCopyWith<$Res>
     implements $ScheduleDailyResponseCopyWith<$Res> {
-  factory _$$_ScheduleDailyResponseCopyWith(_$_ScheduleDailyResponse value,
-          $Res Function(_$_ScheduleDailyResponse) then) =
-      __$$_ScheduleDailyResponseCopyWithImpl<$Res>;
+  factory _$$ScheduleDailyResponseImplCopyWith(
+          _$ScheduleDailyResponseImpl value,
+          $Res Function(_$ScheduleDailyResponseImpl) then) =
+      __$$ScheduleDailyResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -117,11 +118,12 @@ abstract class _$$_ScheduleDailyResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ScheduleDailyResponseCopyWithImpl<$Res>
-    extends _$ScheduleDailyResponseCopyWithImpl<$Res, _$_ScheduleDailyResponse>
-    implements _$$_ScheduleDailyResponseCopyWith<$Res> {
-  __$$_ScheduleDailyResponseCopyWithImpl(_$_ScheduleDailyResponse _value,
-      $Res Function(_$_ScheduleDailyResponse) _then)
+class __$$ScheduleDailyResponseImplCopyWithImpl<$Res>
+    extends _$ScheduleDailyResponseCopyWithImpl<$Res,
+        _$ScheduleDailyResponseImpl>
+    implements _$$ScheduleDailyResponseImplCopyWith<$Res> {
+  __$$ScheduleDailyResponseImplCopyWithImpl(_$ScheduleDailyResponseImpl _value,
+      $Res Function(_$ScheduleDailyResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -134,7 +136,7 @@ class __$$_ScheduleDailyResponseCopyWithImpl<$Res>
     Object? roomname = freezed,
     Object? lesson = freezed,
   }) {
-    return _then(_$_ScheduleDailyResponse(
+    return _then(_$ScheduleDailyResponseImpl(
       timestart: freezed == timestart
           ? _value.timestart
           : timestart // ignore: cast_nullable_to_non_nullable
@@ -165,8 +167,8 @@ class __$$_ScheduleDailyResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ScheduleDailyResponse implements _ScheduleDailyResponse {
-  const _$_ScheduleDailyResponse(
+class _$ScheduleDailyResponseImpl implements _ScheduleDailyResponse {
+  const _$ScheduleDailyResponseImpl(
       {this.timestart,
       this.timeend,
       this.id,
@@ -174,8 +176,8 @@ class _$_ScheduleDailyResponse implements _ScheduleDailyResponse {
       this.roomname,
       this.lesson});
 
-  factory _$_ScheduleDailyResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_ScheduleDailyResponseFromJson(json);
+  factory _$ScheduleDailyResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ScheduleDailyResponseImplFromJson(json);
 
   @override
   final DateTime? timestart;
@@ -196,10 +198,10 @@ class _$_ScheduleDailyResponse implements _ScheduleDailyResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ScheduleDailyResponse &&
+            other is _$ScheduleDailyResponseImpl &&
             (identical(other.timestart, timestart) ||
                 other.timestart == timestart) &&
             (identical(other.timeend, timeend) || other.timeend == timeend) &&
@@ -219,13 +221,13 @@ class _$_ScheduleDailyResponse implements _ScheduleDailyResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScheduleDailyResponseCopyWith<_$_ScheduleDailyResponse> get copyWith =>
-      __$$_ScheduleDailyResponseCopyWithImpl<_$_ScheduleDailyResponse>(
-          this, _$identity);
+  _$$ScheduleDailyResponseImplCopyWith<_$ScheduleDailyResponseImpl>
+      get copyWith => __$$ScheduleDailyResponseImplCopyWithImpl<
+          _$ScheduleDailyResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ScheduleDailyResponseToJson(
+    return _$$ScheduleDailyResponseImplToJson(
       this,
     );
   }
@@ -238,10 +240,10 @@ abstract class _ScheduleDailyResponse implements ScheduleDailyResponse {
       final int? id,
       final String? coursename,
       final String? roomname,
-      final String? lesson}) = _$_ScheduleDailyResponse;
+      final String? lesson}) = _$ScheduleDailyResponseImpl;
 
   factory _ScheduleDailyResponse.fromJson(Map<String, dynamic> json) =
-      _$_ScheduleDailyResponse.fromJson;
+      _$ScheduleDailyResponseImpl.fromJson;
 
   @override
   DateTime? get timestart;
@@ -257,6 +259,6 @@ abstract class _ScheduleDailyResponse implements ScheduleDailyResponse {
   String? get lesson;
   @override
   @JsonKey(ignore: true)
-  _$$_ScheduleDailyResponseCopyWith<_$_ScheduleDailyResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ScheduleDailyResponseImplCopyWith<_$ScheduleDailyResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

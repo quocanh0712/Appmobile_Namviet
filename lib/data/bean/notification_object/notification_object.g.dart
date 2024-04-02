@@ -3,32 +3,12 @@
 part of 'notification_object.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-NotificationObject? jsonToNullableNotificationObject(Object? json) =>
-    NotificationObject.fromJson(json as Map<String, dynamic>);
-
-NotificationObject jsonToNotificationObject(Object? json) =>
-    NotificationObject.fromJson(json as Map<String, dynamic>);
-
-List<NotificationObject?> jsonToListNullableNotificationObjects(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => NotificationObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<NotificationObject> jsonToListNotificationObjects(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => NotificationObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_NotificationObject _$$_NotificationObjectFromJson(
+_$NotificationObjectImpl _$$NotificationObjectImplFromJson(
         Map<String, dynamic> json) =>
-    _$_NotificationObject(
+    _$NotificationObjectImpl(
       isLabel: json['isLabel'] as bool?,
       pushId: json['pushId'] as int?,
       title: json['title'] as String?,
@@ -43,8 +23,8 @@ _$_NotificationObject _$$_NotificationObjectFromJson(
       isLast: json['isLast'] as bool?,
     );
 
-Map<String, dynamic> _$$_NotificationObjectToJson(
-        _$_NotificationObject instance) =>
+Map<String, dynamic> _$$NotificationObjectImplToJson(
+        _$NotificationObjectImpl instance) =>
     <String, dynamic>{
       'isLabel': instance.isLabel,
       'pushId': instance.pushId,

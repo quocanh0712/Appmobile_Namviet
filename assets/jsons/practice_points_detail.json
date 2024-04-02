@@ -1,0 +1,81 @@
+{
+  "code": "0000",
+  "message": "Thành Công",
+  "result": [
+    {
+      "id": 1,
+      "criteriaName": "Ý thức thái độ học tập",
+      "score": 9,
+      "criterias": [
+        {
+          "id": 1,
+          "levelCriteriaName": "Tích cực phát biểu xây dựng bài",
+          "maxPoint": 9,
+          "point": 9
+        },
+        {
+          "id": 2,
+          "levelCriteriaName": "Đi học đầy đủ, đúng giờ",
+          "maxPoint": 9,
+          "point": 5
+        },
+        {
+          "id": 3,
+          "levelCriteriaName": "Tham gia đầy đủ buổi học",
+          "maxPoint": 9,
+          "point": 5
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "criteriaName": "Điểm học kỳ",
+      "score": 5,
+      "criterias": [
+        {
+          "id": 1,
+          "levelCriteriaName": "Tích cực phát biểu xây dựng bài",
+          "maxPoint": 9,
+          "point": 9
+        },
+        {
+          "id": 2,
+          "levelCriteriaName": "Đi học đầy đủ, đúng giờ",
+          "maxPoint": 9,
+          "point": 5
+        },
+        {
+          "id": 3,
+          "levelCriteriaName": "Tham gia đầy đủ buổi học",
+          "maxPoint": 9,
+          "point": 5
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "criteriaName": "Tham gia CLB",
+      "score": 5,
+      "criterias": [
+        {
+          "id": 1,
+          "levelCriteriaName": "Tích cực phát biểu xây dựng bài",
+          "maxPoint": 9,
+          "point": 9
+        },
+        {
+          "id": 2,
+          "levelCriteriaName": "Đi học đầy đủ, đúng giờ",
+          "maxPoint": 9,
+          "point": 5
+        },
+        {
+          "id": 3,
+          "levelCriteriaName": "Tham gia đầy đủ buổi học",
+          "maxPoint": 9,
+          "point": 5
+        }
+      ]
+    }
+  ]
+}

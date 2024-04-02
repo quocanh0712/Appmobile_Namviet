@@ -6,9 +6,9 @@ part of 'schedule_time_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ScheduleTimeRequest _$$_ScheduleTimeRequestFromJson(
+_$ScheduleTimeRequestImpl _$$ScheduleTimeRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ScheduleTimeRequest(
+    _$ScheduleTimeRequestImpl(
       year: json['year'] as String?,
       semester: json['semester'] as int?,
       session: json['session'] as int?,
@@ -16,8 +16,8 @@ _$_ScheduleTimeRequest _$$_ScheduleTimeRequestFromJson(
       length: json['length'] as int?,
     );
 
-Map<String, dynamic> _$$_ScheduleTimeRequestToJson(
-        _$_ScheduleTimeRequest instance) =>
+Map<String, dynamic> _$$ScheduleTimeRequestImplToJson(
+        _$ScheduleTimeRequestImpl instance) =>
     <String, dynamic>{
       'year': instance.year,
       'semester': instance.semester,

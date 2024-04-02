@@ -6,15 +6,15 @@ part of 'reward_discipline_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_RewardDisciplineRequest _$$_RewardDisciplineRequestFromJson(
+_$RewardDisciplineRequestImpl _$$RewardDisciplineRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_RewardDisciplineRequest(
+    _$RewardDisciplineRequestImpl(
       startindex: json['startindex'] as int?,
       length: json['length'] as int?,
     );
 
-Map<String, dynamic> _$$_RewardDisciplineRequestToJson(
-        _$_RewardDisciplineRequest instance) =>
+Map<String, dynamic> _$$RewardDisciplineRequestImplToJson(
+        _$RewardDisciplineRequestImpl instance) =>
     <String, dynamic>{
       'startindex': instance.startindex,
       'length': instance.length,

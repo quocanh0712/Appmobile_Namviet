@@ -3,33 +3,12 @@
 part of 'conversation_response.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-ConversationResponse? jsonToNullableConversationResponse(Object? json) =>
-    ConversationResponse.fromJson(json as Map<String, dynamic>);
-
-ConversationResponse jsonToConversationResponse(Object? json) =>
-    ConversationResponse.fromJson(json as Map<String, dynamic>);
-
-List<ConversationResponse?> jsonToListNullableConversationResponses(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => ConversationResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<ConversationResponse> jsonToListConversationResponses(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => ConversationResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ConversationResponse _$$_ConversationResponseFromJson(
+_$ConversationResponseImpl _$$ConversationResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ConversationResponse(
+    _$ConversationResponseImpl(
       id: json['id'] as int?,
       conversationname: json['conversationname'] as String?,
       content: json['content'] as String?,
@@ -43,8 +22,8 @@ _$_ConversationResponse _$$_ConversationResponseFromJson(
       status: json['status'] as int?,
     );
 
-Map<String, dynamic> _$$_ConversationResponseToJson(
-        _$_ConversationResponse instance) =>
+Map<String, dynamic> _$$ConversationResponseImplToJson(
+        _$ConversationResponseImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'conversationname': instance.conversationname,

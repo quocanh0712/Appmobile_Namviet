@@ -3,33 +3,12 @@
 part of 'schedule_time_response.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-ScheduleTimeResponse? jsonToNullableScheduleTimeResponse(Object? json) =>
-    ScheduleTimeResponse.fromJson(json as Map<String, dynamic>);
-
-ScheduleTimeResponse jsonToScheduleTimeResponse(Object? json) =>
-    ScheduleTimeResponse.fromJson(json as Map<String, dynamic>);
-
-List<ScheduleTimeResponse?> jsonToListNullableScheduleTimeResponses(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => ScheduleTimeResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<ScheduleTimeResponse> jsonToListScheduleTimeResponses(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => ScheduleTimeResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ScheduleTimeResponse _$$_ScheduleTimeResponseFromJson(
+_$ScheduleTimeResponseImpl _$$ScheduleTimeResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ScheduleTimeResponse(
+    _$ScheduleTimeResponseImpl(
       date:
           json['date'] == null ? null : DateTime.parse(json['date'] as String),
       listcourse: (json['listcourse'] as List<dynamic>?)
@@ -37,15 +16,15 @@ _$_ScheduleTimeResponse _$$_ScheduleTimeResponseFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ScheduleTimeResponseToJson(
-        _$_ScheduleTimeResponse instance) =>
+Map<String, dynamic> _$$ScheduleTimeResponseImplToJson(
+        _$ScheduleTimeResponseImpl instance) =>
     <String, dynamic>{
       'date': instance.date?.toIso8601String(),
       'listcourse': instance.listcourse,
     };
 
-_$_CourseItem _$$_CourseItemFromJson(Map<String, dynamic> json) =>
-    _$_CourseItem(
+_$CourseItemImpl _$$CourseItemImplFromJson(Map<String, dynamic> json) =>
+    _$CourseItemImpl(
       id: json['id'] as int?,
       coursename: json['coursename'] as String?,
       numbercredits: json['numbercredits'] as int?,
@@ -64,7 +43,7 @@ _$_CourseItem _$$_CourseItemFromJson(Map<String, dynamic> json) =>
       rank: json['rank'] as int?,
     );
 
-Map<String, dynamic> _$$_CourseItemToJson(_$_CourseItem instance) =>
+Map<String, dynamic> _$$CourseItemImplToJson(_$CourseItemImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'coursename': instance.coursename,

@@ -6,13 +6,13 @@ part of 'home_banner_url.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_HomeBannerUrl _$$_HomeBannerUrlFromJson(Map<String, dynamic> json) =>
-    _$_HomeBannerUrl(
+_$HomeBannerUrlImpl _$$HomeBannerUrlImplFromJson(Map<String, dynamic> json) =>
+    _$HomeBannerUrlImpl(
       imageurl: json['imageurl'] as String?,
       href: json['href'] as String?,
     );
 
-Map<String, dynamic> _$$_HomeBannerUrlToJson(_$_HomeBannerUrl instance) =>
+Map<String, dynamic> _$$HomeBannerUrlImplToJson(_$HomeBannerUrlImpl instance) =>
     <String, dynamic>{
       'imageurl': instance.imageurl,
       'href': instance.href,

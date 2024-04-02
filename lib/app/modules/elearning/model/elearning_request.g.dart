@@ -6,8 +6,9 @@ part of 'elearning_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ELearningRequest _$$_ELearningRequestFromJson(Map<String, dynamic> json) =>
-    _$_ELearningRequest(
+_$ELearningRequestImpl _$$ELearningRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ELearningRequestImpl(
       nowdate: json['nowdate'] == null
           ? null
           : DateTime.parse(json['nowdate'] as String),
@@ -16,7 +17,8 @@ _$_ELearningRequest _$$_ELearningRequestFromJson(Map<String, dynamic> json) =>
       keyword: json['keyword'] as String?,
     );
 
-Map<String, dynamic> _$$_ELearningRequestToJson(_$_ELearningRequest instance) =>
+Map<String, dynamic> _$$ELearningRequestImplToJson(
+        _$ELearningRequestImpl instance) =>
     <String, dynamic>{
       'nowdate': instance.nowdate?.toIso8601String(),
       'startindex': instance.startindex,

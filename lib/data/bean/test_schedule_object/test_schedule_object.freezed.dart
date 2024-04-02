@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'test_schedule_object.dart';
 
@@ -12,7 +12,7 @@ part of 'test_schedule_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 TestScheduleObject _$TestScheduleObjectFromJson(Map<String, dynamic> json) {
   return _TestScheduleObject.fromJson(json);
@@ -85,11 +85,11 @@ class _$TestScheduleObjectCopyWithImpl<$Res, $Val extends TestScheduleObject>
 }
 
 /// @nodoc
-abstract class _$$_TestScheduleObjectCopyWith<$Res>
+abstract class _$$TestScheduleObjectImplCopyWith<$Res>
     implements $TestScheduleObjectCopyWith<$Res> {
-  factory _$$_TestScheduleObjectCopyWith(_$_TestScheduleObject value,
-          $Res Function(_$_TestScheduleObject) then) =
-      __$$_TestScheduleObjectCopyWithImpl<$Res>;
+  factory _$$TestScheduleObjectImplCopyWith(_$TestScheduleObjectImpl value,
+          $Res Function(_$TestScheduleObjectImpl) then) =
+      __$$TestScheduleObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -100,11 +100,11 @@ abstract class _$$_TestScheduleObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TestScheduleObjectCopyWithImpl<$Res>
-    extends _$TestScheduleObjectCopyWithImpl<$Res, _$_TestScheduleObject>
-    implements _$$_TestScheduleObjectCopyWith<$Res> {
-  __$$_TestScheduleObjectCopyWithImpl(
-      _$_TestScheduleObject _value, $Res Function(_$_TestScheduleObject) _then)
+class __$$TestScheduleObjectImplCopyWithImpl<$Res>
+    extends _$TestScheduleObjectCopyWithImpl<$Res, _$TestScheduleObjectImpl>
+    implements _$$TestScheduleObjectImplCopyWith<$Res> {
+  __$$TestScheduleObjectImplCopyWithImpl(_$TestScheduleObjectImpl _value,
+      $Res Function(_$TestScheduleObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -115,7 +115,7 @@ class __$$_TestScheduleObjectCopyWithImpl<$Res>
     Object? month = freezed,
     Object? lstCourses = freezed,
   }) {
-    return _then(_$_TestScheduleObject(
+    return _then(_$TestScheduleObjectImpl(
       dayofweeks: freezed == dayofweeks
           ? _value.dayofweeks
           : dayofweeks // ignore: cast_nullable_to_non_nullable
@@ -138,16 +138,16 @@ class __$$_TestScheduleObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TestScheduleObject implements _TestScheduleObject {
-  _$_TestScheduleObject(
+class _$TestScheduleObjectImpl implements _TestScheduleObject {
+  _$TestScheduleObjectImpl(
       {this.dayofweeks,
       this.date,
       this.month,
       @JsonKey(name: 'listcourse') final List<CourseObject?>? lstCourses})
       : _lstCourses = lstCourses;
 
-  factory _$_TestScheduleObject.fromJson(Map<String, dynamic> json) =>
-      _$$_TestScheduleObjectFromJson(json);
+  factory _$TestScheduleObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TestScheduleObjectImplFromJson(json);
 
   @override
   final String? dayofweeks;
@@ -161,6 +161,7 @@ class _$_TestScheduleObject implements _TestScheduleObject {
   List<CourseObject?>? get lstCourses {
     final value = _lstCourses;
     if (value == null) return null;
+    if (_lstCourses is EqualUnmodifiableListView) return _lstCourses;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -171,10 +172,10 @@ class _$_TestScheduleObject implements _TestScheduleObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TestScheduleObject &&
+            other is _$TestScheduleObjectImpl &&
             (identical(other.dayofweeks, dayofweeks) ||
                 other.dayofweeks == dayofweeks) &&
             (identical(other.date, date) || other.date == date) &&
@@ -191,13 +192,13 @@ class _$_TestScheduleObject implements _TestScheduleObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TestScheduleObjectCopyWith<_$_TestScheduleObject> get copyWith =>
-      __$$_TestScheduleObjectCopyWithImpl<_$_TestScheduleObject>(
+  _$$TestScheduleObjectImplCopyWith<_$TestScheduleObjectImpl> get copyWith =>
+      __$$TestScheduleObjectImplCopyWithImpl<_$TestScheduleObjectImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScheduleObjectToJson(
+    return _$$TestScheduleObjectImplToJson(
       this,
     );
   }
@@ -209,10 +210,10 @@ abstract class _TestScheduleObject implements TestScheduleObject {
           final int? date,
           final String? month,
           @JsonKey(name: 'listcourse') final List<CourseObject?>? lstCourses}) =
-      _$_TestScheduleObject;
+      _$TestScheduleObjectImpl;
 
   factory _TestScheduleObject.fromJson(Map<String, dynamic> json) =
-      _$_TestScheduleObject.fromJson;
+      _$TestScheduleObjectImpl.fromJson;
 
   @override
   String? get dayofweeks;
@@ -225,6 +226,6 @@ abstract class _TestScheduleObject implements TestScheduleObject {
   List<CourseObject?>? get lstCourses;
   @override
   @JsonKey(ignore: true)
-  _$$_TestScheduleObjectCopyWith<_$_TestScheduleObject> get copyWith =>
+  _$$TestScheduleObjectImplCopyWith<_$TestScheduleObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

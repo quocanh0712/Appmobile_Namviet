@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'user_object.dart';
 
@@ -12,7 +12,7 @@ part of 'user_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 UserObject _$UserObjectFromJson(Map<String, dynamic> json) {
   return _UserObject.fromJson(json);
@@ -259,11 +259,11 @@ class _$UserObjectCopyWithImpl<$Res, $Val extends UserObject>
 }
 
 /// @nodoc
-abstract class _$$_UserObjectCopyWith<$Res>
+abstract class _$$UserObjectImplCopyWith<$Res>
     implements $UserObjectCopyWith<$Res> {
-  factory _$$_UserObjectCopyWith(
-          _$_UserObject value, $Res Function(_$_UserObject) then) =
-      __$$_UserObjectCopyWithImpl<$Res>;
+  factory _$$UserObjectImplCopyWith(
+          _$UserObjectImpl value, $Res Function(_$UserObjectImpl) then) =
+      __$$UserObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -295,11 +295,11 @@ abstract class _$$_UserObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_UserObjectCopyWithImpl<$Res>
-    extends _$UserObjectCopyWithImpl<$Res, _$_UserObject>
-    implements _$$_UserObjectCopyWith<$Res> {
-  __$$_UserObjectCopyWithImpl(
-      _$_UserObject _value, $Res Function(_$_UserObject) _then)
+class __$$UserObjectImplCopyWithImpl<$Res>
+    extends _$UserObjectCopyWithImpl<$Res, _$UserObjectImpl>
+    implements _$$UserObjectImplCopyWith<$Res> {
+  __$$UserObjectImplCopyWithImpl(
+      _$UserObjectImpl _value, $Res Function(_$UserObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -331,7 +331,7 @@ class __$$_UserObjectCopyWithImpl<$Res>
     Object? password = freezed,
     Object? idDonVi = freezed,
   }) {
-    return _then(_$_UserObject(
+    return _then(_$UserObjectImpl(
       iduser: freezed == iduser
           ? _value.iduser
           : iduser // ignore: cast_nullable_to_non_nullable
@@ -438,8 +438,8 @@ class __$$_UserObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_UserObject implements _UserObject {
-  _$_UserObject(
+class _$UserObjectImpl implements _UserObject {
+  _$UserObjectImpl(
       {@HiveField(0) this.iduser,
       @HiveField(1) this.role,
       @HiveField(2) this.username,
@@ -466,8 +466,8 @@ class _$_UserObject implements _UserObject {
       @HiveField(23) this.password,
       @HiveField(24) this.idDonVi});
 
-  factory _$_UserObject.fromJson(Map<String, dynamic> json) =>
-      _$$_UserObjectFromJson(json);
+  factory _$UserObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserObjectImplFromJson(json);
 
   @override
   @HiveField(0)
@@ -554,10 +554,10 @@ class _$_UserObject implements _UserObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UserObject &&
+            other is _$UserObjectImpl &&
             (identical(other.iduser, iduser) || other.iduser == iduser) &&
             (identical(other.role, role) || other.role == role) &&
             (identical(other.username, username) ||
@@ -632,12 +632,12 @@ class _$_UserObject implements _UserObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UserObjectCopyWith<_$_UserObject> get copyWith =>
-      __$$_UserObjectCopyWithImpl<_$_UserObject>(this, _$identity);
+  _$$UserObjectImplCopyWith<_$UserObjectImpl> get copyWith =>
+      __$$UserObjectImplCopyWithImpl<_$UserObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_UserObjectToJson(
+    return _$$UserObjectImplToJson(
       this,
     );
   }
@@ -669,10 +669,10 @@ abstract class _UserObject implements UserObject {
       @HiveField(21) final bool? biometricAuth,
       @HiveField(22) final String? avatar,
       @HiveField(23) final String? password,
-      @HiveField(24) final int? idDonVi}) = _$_UserObject;
+      @HiveField(24) final int? idDonVi}) = _$UserObjectImpl;
 
   factory _UserObject.fromJson(Map<String, dynamic> json) =
-      _$_UserObject.fromJson;
+      _$UserObjectImpl.fromJson;
 
   @override
   @HiveField(0)
@@ -754,6 +754,6 @@ abstract class _UserObject implements UserObject {
   int? get idDonVi;
   @override
   @JsonKey(ignore: true)
-  _$$_UserObjectCopyWith<_$_UserObject> get copyWith =>
+  _$$UserObjectImplCopyWith<_$UserObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

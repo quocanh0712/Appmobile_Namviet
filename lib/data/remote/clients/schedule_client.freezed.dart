@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'schedule_client.dart';
 
@@ -12,10 +12,11 @@ part of 'schedule_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ScheduleClient {
+  Object? get model => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(ScheduleTimeRequest? model) getScheduleTime,
@@ -75,10 +76,10 @@ class _$ScheduleClientCopyWithImpl<$Res, $Val extends ScheduleClient>
 }
 
 /// @nodoc
-abstract class _$$_ScheduleTimeClientCopyWith<$Res> {
-  factory _$$_ScheduleTimeClientCopyWith(_$_ScheduleTimeClient value,
-          $Res Function(_$_ScheduleTimeClient) then) =
-      __$$_ScheduleTimeClientCopyWithImpl<$Res>;
+abstract class _$$ScheduleTimeClientImplCopyWith<$Res> {
+  factory _$$ScheduleTimeClientImplCopyWith(_$ScheduleTimeClientImpl value,
+          $Res Function(_$ScheduleTimeClientImpl) then) =
+      __$$ScheduleTimeClientImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ScheduleTimeRequest? model});
 
@@ -86,11 +87,11 @@ abstract class _$$_ScheduleTimeClientCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ScheduleTimeClientCopyWithImpl<$Res>
-    extends _$ScheduleClientCopyWithImpl<$Res, _$_ScheduleTimeClient>
-    implements _$$_ScheduleTimeClientCopyWith<$Res> {
-  __$$_ScheduleTimeClientCopyWithImpl(
-      _$_ScheduleTimeClient _value, $Res Function(_$_ScheduleTimeClient) _then)
+class __$$ScheduleTimeClientImplCopyWithImpl<$Res>
+    extends _$ScheduleClientCopyWithImpl<$Res, _$ScheduleTimeClientImpl>
+    implements _$$ScheduleTimeClientImplCopyWith<$Res> {
+  __$$ScheduleTimeClientImplCopyWithImpl(_$ScheduleTimeClientImpl _value,
+      $Res Function(_$ScheduleTimeClientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +99,7 @@ class __$$_ScheduleTimeClientCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_ScheduleTimeClient(
+    return _then(_$ScheduleTimeClientImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -121,8 +122,8 @@ class __$$_ScheduleTimeClientCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ScheduleTimeClient extends _ScheduleTimeClient {
-  _$_ScheduleTimeClient(this.model) : super._();
+class _$ScheduleTimeClientImpl extends _ScheduleTimeClient {
+  _$ScheduleTimeClientImpl(this.model) : super._();
 
   @override
   final ScheduleTimeRequest? model;
@@ -133,10 +134,10 @@ class _$_ScheduleTimeClient extends _ScheduleTimeClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ScheduleTimeClient &&
+            other is _$ScheduleTimeClientImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -146,8 +147,8 @@ class _$_ScheduleTimeClient extends _ScheduleTimeClient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScheduleTimeClientCopyWith<_$_ScheduleTimeClient> get copyWith =>
-      __$$_ScheduleTimeClientCopyWithImpl<_$_ScheduleTimeClient>(
+  _$$ScheduleTimeClientImplCopyWith<_$ScheduleTimeClientImpl> get copyWith =>
+      __$$ScheduleTimeClientImplCopyWithImpl<_$ScheduleTimeClientImpl>(
           this, _$identity);
 
   @override
@@ -215,20 +216,21 @@ class _$_ScheduleTimeClient extends _ScheduleTimeClient {
 
 abstract class _ScheduleTimeClient extends ScheduleClient {
   factory _ScheduleTimeClient(final ScheduleTimeRequest? model) =
-      _$_ScheduleTimeClient;
+      _$ScheduleTimeClientImpl;
   _ScheduleTimeClient._() : super._();
 
+  @override
   ScheduleTimeRequest? get model;
   @JsonKey(ignore: true)
-  _$$_ScheduleTimeClientCopyWith<_$_ScheduleTimeClient> get copyWith =>
+  _$$ScheduleTimeClientImplCopyWith<_$ScheduleTimeClientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_ScheduleDailyClientCopyWith<$Res> {
-  factory _$$_ScheduleDailyClientCopyWith(_$_ScheduleDailyClient value,
-          $Res Function(_$_ScheduleDailyClient) then) =
-      __$$_ScheduleDailyClientCopyWithImpl<$Res>;
+abstract class _$$ScheduleDailyClientImplCopyWith<$Res> {
+  factory _$$ScheduleDailyClientImplCopyWith(_$ScheduleDailyClientImpl value,
+          $Res Function(_$ScheduleDailyClientImpl) then) =
+      __$$ScheduleDailyClientImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ScheduleDailyRequest? model});
 
@@ -236,11 +238,11 @@ abstract class _$$_ScheduleDailyClientCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ScheduleDailyClientCopyWithImpl<$Res>
-    extends _$ScheduleClientCopyWithImpl<$Res, _$_ScheduleDailyClient>
-    implements _$$_ScheduleDailyClientCopyWith<$Res> {
-  __$$_ScheduleDailyClientCopyWithImpl(_$_ScheduleDailyClient _value,
-      $Res Function(_$_ScheduleDailyClient) _then)
+class __$$ScheduleDailyClientImplCopyWithImpl<$Res>
+    extends _$ScheduleClientCopyWithImpl<$Res, _$ScheduleDailyClientImpl>
+    implements _$$ScheduleDailyClientImplCopyWith<$Res> {
+  __$$ScheduleDailyClientImplCopyWithImpl(_$ScheduleDailyClientImpl _value,
+      $Res Function(_$ScheduleDailyClientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -248,7 +250,7 @@ class __$$_ScheduleDailyClientCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_ScheduleDailyClient(
+    return _then(_$ScheduleDailyClientImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -271,8 +273,8 @@ class __$$_ScheduleDailyClientCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ScheduleDailyClient extends _ScheduleDailyClient {
-  _$_ScheduleDailyClient(this.model) : super._();
+class _$ScheduleDailyClientImpl extends _ScheduleDailyClient {
+  _$ScheduleDailyClientImpl(this.model) : super._();
 
   @override
   final ScheduleDailyRequest? model;
@@ -283,10 +285,10 @@ class _$_ScheduleDailyClient extends _ScheduleDailyClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ScheduleDailyClient &&
+            other is _$ScheduleDailyClientImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -296,8 +298,8 @@ class _$_ScheduleDailyClient extends _ScheduleDailyClient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScheduleDailyClientCopyWith<_$_ScheduleDailyClient> get copyWith =>
-      __$$_ScheduleDailyClientCopyWithImpl<_$_ScheduleDailyClient>(
+  _$$ScheduleDailyClientImplCopyWith<_$ScheduleDailyClientImpl> get copyWith =>
+      __$$ScheduleDailyClientImplCopyWithImpl<_$ScheduleDailyClientImpl>(
           this, _$identity);
 
   @override
@@ -365,11 +367,12 @@ class _$_ScheduleDailyClient extends _ScheduleDailyClient {
 
 abstract class _ScheduleDailyClient extends ScheduleClient {
   factory _ScheduleDailyClient(final ScheduleDailyRequest? model) =
-      _$_ScheduleDailyClient;
+      _$ScheduleDailyClientImpl;
   _ScheduleDailyClient._() : super._();
 
+  @override
   ScheduleDailyRequest? get model;
   @JsonKey(ignore: true)
-  _$$_ScheduleDailyClientCopyWith<_$_ScheduleDailyClient> get copyWith =>
+  _$$ScheduleDailyClientImplCopyWith<_$ScheduleDailyClientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

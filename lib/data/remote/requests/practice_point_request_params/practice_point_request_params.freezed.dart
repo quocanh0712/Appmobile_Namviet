@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'practice_point_request_params.dart';
 
@@ -12,7 +12,7 @@ part of 'practice_point_request_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PracticePointRequestParams _$PracticePointRequestParamsFromJson(
     Map<String, dynamic> json) {
@@ -94,12 +94,12 @@ class _$PracticePointRequestParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PracticePointRequestParamsCopyWith<$Res>
+abstract class _$$PracticePointRequestParamsImplCopyWith<$Res>
     implements $PracticePointRequestParamsCopyWith<$Res> {
-  factory _$$_PracticePointRequestParamsCopyWith(
-          _$_PracticePointRequestParams value,
-          $Res Function(_$_PracticePointRequestParams) then) =
-      __$$_PracticePointRequestParamsCopyWithImpl<$Res>;
+  factory _$$PracticePointRequestParamsImplCopyWith(
+          _$PracticePointRequestParamsImpl value,
+          $Res Function(_$PracticePointRequestParamsImpl) then) =
+      __$$PracticePointRequestParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -111,13 +111,13 @@ abstract class _$$_PracticePointRequestParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PracticePointRequestParamsCopyWithImpl<$Res>
+class __$$PracticePointRequestParamsImplCopyWithImpl<$Res>
     extends _$PracticePointRequestParamsCopyWithImpl<$Res,
-        _$_PracticePointRequestParams>
-    implements _$$_PracticePointRequestParamsCopyWith<$Res> {
-  __$$_PracticePointRequestParamsCopyWithImpl(
-      _$_PracticePointRequestParams _value,
-      $Res Function(_$_PracticePointRequestParams) _then)
+        _$PracticePointRequestParamsImpl>
+    implements _$$PracticePointRequestParamsImplCopyWith<$Res> {
+  __$$PracticePointRequestParamsImplCopyWithImpl(
+      _$PracticePointRequestParamsImpl _value,
+      $Res Function(_$PracticePointRequestParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -129,7 +129,7 @@ class __$$_PracticePointRequestParamsCopyWithImpl<$Res>
     Object? startindex = freezed,
     Object? length = freezed,
   }) {
-    return _then(_$_PracticePointRequestParams(
+    return _then(_$PracticePointRequestParamsImpl(
       semester: freezed == semester
           ? _value.semester
           : semester // ignore: cast_nullable_to_non_nullable
@@ -156,16 +156,17 @@ class __$$_PracticePointRequestParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PracticePointRequestParams implements _PracticePointRequestParams {
-  _$_PracticePointRequestParams(
+class _$PracticePointRequestParamsImpl implements _PracticePointRequestParams {
+  _$PracticePointRequestParamsImpl(
       {this.semester,
       this.year,
       this.subCriteriaId,
       this.startindex,
       this.length});
 
-  factory _$_PracticePointRequestParams.fromJson(Map<String, dynamic> json) =>
-      _$$_PracticePointRequestParamsFromJson(json);
+  factory _$PracticePointRequestParamsImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$PracticePointRequestParamsImplFromJson(json);
 
   @override
   final int? semester;
@@ -184,10 +185,10 @@ class _$_PracticePointRequestParams implements _PracticePointRequestParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PracticePointRequestParams &&
+            other is _$PracticePointRequestParamsImpl &&
             (identical(other.semester, semester) ||
                 other.semester == semester) &&
             (identical(other.year, year) || other.year == year) &&
@@ -206,13 +207,13 @@ class _$_PracticePointRequestParams implements _PracticePointRequestParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PracticePointRequestParamsCopyWith<_$_PracticePointRequestParams>
-      get copyWith => __$$_PracticePointRequestParamsCopyWithImpl<
-          _$_PracticePointRequestParams>(this, _$identity);
+  _$$PracticePointRequestParamsImplCopyWith<_$PracticePointRequestParamsImpl>
+      get copyWith => __$$PracticePointRequestParamsImplCopyWithImpl<
+          _$PracticePointRequestParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PracticePointRequestParamsToJson(
+    return _$$PracticePointRequestParamsImplToJson(
       this,
     );
   }
@@ -225,10 +226,10 @@ abstract class _PracticePointRequestParams
       final String? year,
       final int? subCriteriaId,
       final int? startindex,
-      final int? length}) = _$_PracticePointRequestParams;
+      final int? length}) = _$PracticePointRequestParamsImpl;
 
   factory _PracticePointRequestParams.fromJson(Map<String, dynamic> json) =
-      _$_PracticePointRequestParams.fromJson;
+      _$PracticePointRequestParamsImpl.fromJson;
 
   @override
   int? get semester;
@@ -242,6 +243,6 @@ abstract class _PracticePointRequestParams
   int? get length;
   @override
   @JsonKey(ignore: true)
-  _$$_PracticePointRequestParamsCopyWith<_$_PracticePointRequestParams>
+  _$$PracticePointRequestParamsImplCopyWith<_$PracticePointRequestParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

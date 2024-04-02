@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'category_config_client.dart';
 
@@ -12,7 +12,7 @@ part of 'category_config_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$CategoryConfigClient {
@@ -88,25 +88,25 @@ class _$CategoryConfigClientCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_AcademicRankConfigCopyWith<$Res> {
-  factory _$$_AcademicRankConfigCopyWith(_$_AcademicRankConfig value,
-          $Res Function(_$_AcademicRankConfig) then) =
-      __$$_AcademicRankConfigCopyWithImpl<$Res>;
+abstract class _$$AcademicRankConfigImplCopyWith<$Res> {
+  factory _$$AcademicRankConfigImplCopyWith(_$AcademicRankConfigImpl value,
+          $Res Function(_$AcademicRankConfigImpl) then) =
+      __$$AcademicRankConfigImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_AcademicRankConfigCopyWithImpl<$Res>
-    extends _$CategoryConfigClientCopyWithImpl<$Res, _$_AcademicRankConfig>
-    implements _$$_AcademicRankConfigCopyWith<$Res> {
-  __$$_AcademicRankConfigCopyWithImpl(
-      _$_AcademicRankConfig _value, $Res Function(_$_AcademicRankConfig) _then)
+class __$$AcademicRankConfigImplCopyWithImpl<$Res>
+    extends _$CategoryConfigClientCopyWithImpl<$Res, _$AcademicRankConfigImpl>
+    implements _$$AcademicRankConfigImplCopyWith<$Res> {
+  __$$AcademicRankConfigImplCopyWithImpl(_$AcademicRankConfigImpl _value,
+      $Res Function(_$AcademicRankConfigImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_AcademicRankConfig extends _AcademicRankConfig {
-  _$_AcademicRankConfig() : super._();
+class _$AcademicRankConfigImpl extends _AcademicRankConfig {
+  _$AcademicRankConfigImpl() : super._();
 
   @override
   String toString() {
@@ -114,9 +114,9 @@ class _$_AcademicRankConfig extends _AcademicRankConfig {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_AcademicRankConfig);
+        (other.runtimeType == runtimeType && other is _$AcademicRankConfigImpl);
   }
 
   @override
@@ -198,30 +198,30 @@ class _$_AcademicRankConfig extends _AcademicRankConfig {
 }
 
 abstract class _AcademicRankConfig extends CategoryConfigClient {
-  factory _AcademicRankConfig() = _$_AcademicRankConfig;
+  factory _AcademicRankConfig() = _$AcademicRankConfigImpl;
   _AcademicRankConfig._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_DegreeConfigCopyWith<$Res> {
-  factory _$$_DegreeConfigCopyWith(
-          _$_DegreeConfig value, $Res Function(_$_DegreeConfig) then) =
-      __$$_DegreeConfigCopyWithImpl<$Res>;
+abstract class _$$DegreeConfigImplCopyWith<$Res> {
+  factory _$$DegreeConfigImplCopyWith(
+          _$DegreeConfigImpl value, $Res Function(_$DegreeConfigImpl) then) =
+      __$$DegreeConfigImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_DegreeConfigCopyWithImpl<$Res>
-    extends _$CategoryConfigClientCopyWithImpl<$Res, _$_DegreeConfig>
-    implements _$$_DegreeConfigCopyWith<$Res> {
-  __$$_DegreeConfigCopyWithImpl(
-      _$_DegreeConfig _value, $Res Function(_$_DegreeConfig) _then)
+class __$$DegreeConfigImplCopyWithImpl<$Res>
+    extends _$CategoryConfigClientCopyWithImpl<$Res, _$DegreeConfigImpl>
+    implements _$$DegreeConfigImplCopyWith<$Res> {
+  __$$DegreeConfigImplCopyWithImpl(
+      _$DegreeConfigImpl _value, $Res Function(_$DegreeConfigImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_DegreeConfig extends _DegreeConfig {
-  _$_DegreeConfig() : super._();
+class _$DegreeConfigImpl extends _DegreeConfig {
+  _$DegreeConfigImpl() : super._();
 
   @override
   String toString() {
@@ -229,9 +229,9 @@ class _$_DegreeConfig extends _DegreeConfig {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_DegreeConfig);
+        (other.runtimeType == runtimeType && other is _$DegreeConfigImpl);
   }
 
   @override
@@ -313,30 +313,30 @@ class _$_DegreeConfig extends _DegreeConfig {
 }
 
 abstract class _DegreeConfig extends CategoryConfigClient {
-  factory _DegreeConfig() = _$_DegreeConfig;
+  factory _DegreeConfig() = _$DegreeConfigImpl;
   _DegreeConfig._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_TitleConfigCopyWith<$Res> {
-  factory _$$_TitleConfigCopyWith(
-          _$_TitleConfig value, $Res Function(_$_TitleConfig) then) =
-      __$$_TitleConfigCopyWithImpl<$Res>;
+abstract class _$$TitleConfigImplCopyWith<$Res> {
+  factory _$$TitleConfigImplCopyWith(
+          _$TitleConfigImpl value, $Res Function(_$TitleConfigImpl) then) =
+      __$$TitleConfigImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_TitleConfigCopyWithImpl<$Res>
-    extends _$CategoryConfigClientCopyWithImpl<$Res, _$_TitleConfig>
-    implements _$$_TitleConfigCopyWith<$Res> {
-  __$$_TitleConfigCopyWithImpl(
-      _$_TitleConfig _value, $Res Function(_$_TitleConfig) _then)
+class __$$TitleConfigImplCopyWithImpl<$Res>
+    extends _$CategoryConfigClientCopyWithImpl<$Res, _$TitleConfigImpl>
+    implements _$$TitleConfigImplCopyWith<$Res> {
+  __$$TitleConfigImplCopyWithImpl(
+      _$TitleConfigImpl _value, $Res Function(_$TitleConfigImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_TitleConfig extends _TitleConfig {
-  _$_TitleConfig() : super._();
+class _$TitleConfigImpl extends _TitleConfig {
+  _$TitleConfigImpl() : super._();
 
   @override
   String toString() {
@@ -344,9 +344,9 @@ class _$_TitleConfig extends _TitleConfig {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_TitleConfig);
+        (other.runtimeType == runtimeType && other is _$TitleConfigImpl);
   }
 
   @override
@@ -428,30 +428,30 @@ class _$_TitleConfig extends _TitleConfig {
 }
 
 abstract class _TitleConfig extends CategoryConfigClient {
-  factory _TitleConfig() = _$_TitleConfig;
+  factory _TitleConfig() = _$TitleConfigImpl;
   _TitleConfig._() : super._();
 }
 
 /// @nodoc
-abstract class _$$_PositionConfigCopyWith<$Res> {
-  factory _$$_PositionConfigCopyWith(
-          _$_PositionConfig value, $Res Function(_$_PositionConfig) then) =
-      __$$_PositionConfigCopyWithImpl<$Res>;
+abstract class _$$PositionConfigImplCopyWith<$Res> {
+  factory _$$PositionConfigImplCopyWith(_$PositionConfigImpl value,
+          $Res Function(_$PositionConfigImpl) then) =
+      __$$PositionConfigImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_PositionConfigCopyWithImpl<$Res>
-    extends _$CategoryConfigClientCopyWithImpl<$Res, _$_PositionConfig>
-    implements _$$_PositionConfigCopyWith<$Res> {
-  __$$_PositionConfigCopyWithImpl(
-      _$_PositionConfig _value, $Res Function(_$_PositionConfig) _then)
+class __$$PositionConfigImplCopyWithImpl<$Res>
+    extends _$CategoryConfigClientCopyWithImpl<$Res, _$PositionConfigImpl>
+    implements _$$PositionConfigImplCopyWith<$Res> {
+  __$$PositionConfigImplCopyWithImpl(
+      _$PositionConfigImpl _value, $Res Function(_$PositionConfigImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_PositionConfig extends _PositionConfig {
-  _$_PositionConfig() : super._();
+class _$PositionConfigImpl extends _PositionConfig {
+  _$PositionConfigImpl() : super._();
 
   @override
   String toString() {
@@ -459,9 +459,9 @@ class _$_PositionConfig extends _PositionConfig {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_PositionConfig);
+        (other.runtimeType == runtimeType && other is _$PositionConfigImpl);
   }
 
   @override
@@ -543,6 +543,6 @@ class _$_PositionConfig extends _PositionConfig {
 }
 
 abstract class _PositionConfig extends CategoryConfigClient {
-  factory _PositionConfig() = _$_PositionConfig;
+  factory _PositionConfig() = _$PositionConfigImpl;
   _PositionConfig._() : super._();
 }

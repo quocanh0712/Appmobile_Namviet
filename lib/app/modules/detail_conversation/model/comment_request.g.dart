@@ -6,15 +6,16 @@ part of 'comment_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CommentRequest _$$_CommentRequestFromJson(Map<String, dynamic> json) =>
-    _$_CommentRequest(
+_$CommentRequestImpl _$$CommentRequestImplFromJson(Map<String, dynamic> json) =>
+    _$CommentRequestImpl(
       startindex: json['startindex'] as int?,
       length: json['length'] as int?,
       keyword: json['keyword'] as String?,
       id: json['id'] as int?,
     );
 
-Map<String, dynamic> _$$_CommentRequestToJson(_$_CommentRequest instance) =>
+Map<String, dynamic> _$$CommentRequestImplToJson(
+        _$CommentRequestImpl instance) =>
     <String, dynamic>{
       'startindex': instance.startindex,
       'length': instance.length,

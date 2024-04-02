@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'home_outstanding_actitvity.dart';
 
@@ -12,7 +12,7 @@ part of 'home_outstanding_actitvity.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 HomeOutstandingActitvity _$HomeOutstandingActitvityFromJson(
     Map<String, dynamic> json) {
@@ -82,24 +82,25 @@ class _$HomeOutstandingActitvityCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_HomeOutstandingActitvityCopyWith<$Res>
+abstract class _$$HomeOutstandingActitvityImplCopyWith<$Res>
     implements $HomeOutstandingActitvityCopyWith<$Res> {
-  factory _$$_HomeOutstandingActitvityCopyWith(
-          _$_HomeOutstandingActitvity value,
-          $Res Function(_$_HomeOutstandingActitvity) then) =
-      __$$_HomeOutstandingActitvityCopyWithImpl<$Res>;
+  factory _$$HomeOutstandingActitvityImplCopyWith(
+          _$HomeOutstandingActitvityImpl value,
+          $Res Function(_$HomeOutstandingActitvityImpl) then) =
+      __$$HomeOutstandingActitvityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? id, String? image, String? title, String? content});
 }
 
 /// @nodoc
-class __$$_HomeOutstandingActitvityCopyWithImpl<$Res>
+class __$$HomeOutstandingActitvityImplCopyWithImpl<$Res>
     extends _$HomeOutstandingActitvityCopyWithImpl<$Res,
-        _$_HomeOutstandingActitvity>
-    implements _$$_HomeOutstandingActitvityCopyWith<$Res> {
-  __$$_HomeOutstandingActitvityCopyWithImpl(_$_HomeOutstandingActitvity _value,
-      $Res Function(_$_HomeOutstandingActitvity) _then)
+        _$HomeOutstandingActitvityImpl>
+    implements _$$HomeOutstandingActitvityImplCopyWith<$Res> {
+  __$$HomeOutstandingActitvityImplCopyWithImpl(
+      _$HomeOutstandingActitvityImpl _value,
+      $Res Function(_$HomeOutstandingActitvityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -110,7 +111,7 @@ class __$$_HomeOutstandingActitvityCopyWithImpl<$Res>
     Object? title = freezed,
     Object? content = freezed,
   }) {
-    return _then(_$_HomeOutstandingActitvity(
+    return _then(_$HomeOutstandingActitvityImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -133,11 +134,12 @@ class __$$_HomeOutstandingActitvityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_HomeOutstandingActitvity implements _HomeOutstandingActitvity {
-  _$_HomeOutstandingActitvity({this.id, this.image, this.title, this.content});
+class _$HomeOutstandingActitvityImpl implements _HomeOutstandingActitvity {
+  _$HomeOutstandingActitvityImpl(
+      {this.id, this.image, this.title, this.content});
 
-  factory _$_HomeOutstandingActitvity.fromJson(Map<String, dynamic> json) =>
-      _$$_HomeOutstandingActitvityFromJson(json);
+  factory _$HomeOutstandingActitvityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HomeOutstandingActitvityImplFromJson(json);
 
   @override
   final int? id;
@@ -154,10 +156,10 @@ class _$_HomeOutstandingActitvity implements _HomeOutstandingActitvity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_HomeOutstandingActitvity &&
+            other is _$HomeOutstandingActitvityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.image, image) || other.image == image) &&
             (identical(other.title, title) || other.title == title) &&
@@ -171,13 +173,13 @@ class _$_HomeOutstandingActitvity implements _HomeOutstandingActitvity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_HomeOutstandingActitvityCopyWith<_$_HomeOutstandingActitvity>
-      get copyWith => __$$_HomeOutstandingActitvityCopyWithImpl<
-          _$_HomeOutstandingActitvity>(this, _$identity);
+  _$$HomeOutstandingActitvityImplCopyWith<_$HomeOutstandingActitvityImpl>
+      get copyWith => __$$HomeOutstandingActitvityImplCopyWithImpl<
+          _$HomeOutstandingActitvityImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HomeOutstandingActitvityToJson(
+    return _$$HomeOutstandingActitvityImplToJson(
       this,
     );
   }
@@ -188,10 +190,10 @@ abstract class _HomeOutstandingActitvity implements HomeOutstandingActitvity {
       {final int? id,
       final String? image,
       final String? title,
-      final String? content}) = _$_HomeOutstandingActitvity;
+      final String? content}) = _$HomeOutstandingActitvityImpl;
 
   factory _HomeOutstandingActitvity.fromJson(Map<String, dynamic> json) =
-      _$_HomeOutstandingActitvity.fromJson;
+      _$HomeOutstandingActitvityImpl.fromJson;
 
   @override
   int? get id;
@@ -203,6 +205,6 @@ abstract class _HomeOutstandingActitvity implements HomeOutstandingActitvity {
   String? get content;
   @override
   @JsonKey(ignore: true)
-  _$$_HomeOutstandingActitvityCopyWith<_$_HomeOutstandingActitvity>
+  _$$HomeOutstandingActitvityImplCopyWith<_$HomeOutstandingActitvityImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

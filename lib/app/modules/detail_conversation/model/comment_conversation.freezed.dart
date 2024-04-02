@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'comment_conversation.dart';
 
@@ -12,7 +12,7 @@ part of 'comment_conversation.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CommentConversation _$CommentConversationFromJson(Map<String, dynamic> json) {
   return _CommentConversation.fromJson(json);
@@ -105,11 +105,11 @@ class _$CommentConversationCopyWithImpl<$Res, $Val extends CommentConversation>
 }
 
 /// @nodoc
-abstract class _$$_CommentConversationCopyWith<$Res>
+abstract class _$$CommentConversationImplCopyWith<$Res>
     implements $CommentConversationCopyWith<$Res> {
-  factory _$$_CommentConversationCopyWith(_$_CommentConversation value,
-          $Res Function(_$_CommentConversation) then) =
-      __$$_CommentConversationCopyWithImpl<$Res>;
+  factory _$$CommentConversationImplCopyWith(_$CommentConversationImpl value,
+          $Res Function(_$CommentConversationImpl) then) =
+      __$$CommentConversationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -123,11 +123,11 @@ abstract class _$$_CommentConversationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CommentConversationCopyWithImpl<$Res>
-    extends _$CommentConversationCopyWithImpl<$Res, _$_CommentConversation>
-    implements _$$_CommentConversationCopyWith<$Res> {
-  __$$_CommentConversationCopyWithImpl(_$_CommentConversation _value,
-      $Res Function(_$_CommentConversation) _then)
+class __$$CommentConversationImplCopyWithImpl<$Res>
+    extends _$CommentConversationCopyWithImpl<$Res, _$CommentConversationImpl>
+    implements _$$CommentConversationImplCopyWith<$Res> {
+  __$$CommentConversationImplCopyWithImpl(_$CommentConversationImpl _value,
+      $Res Function(_$CommentConversationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -141,7 +141,7 @@ class __$$_CommentConversationCopyWithImpl<$Res>
     Object? image = freezed,
     Object? updateAt = freezed,
   }) {
-    return _then(_$_CommentConversation(
+    return _then(_$CommentConversationImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -176,8 +176,8 @@ class __$$_CommentConversationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CommentConversation implements _CommentConversation {
-  const _$_CommentConversation(
+class _$CommentConversationImpl implements _CommentConversation {
+  const _$CommentConversationImpl(
       {this.id,
       this.content,
       this.teacher,
@@ -186,8 +186,8 @@ class _$_CommentConversation implements _CommentConversation {
       this.image,
       this.updateAt});
 
-  factory _$_CommentConversation.fromJson(Map<String, dynamic> json) =>
-      _$$_CommentConversationFromJson(json);
+  factory _$CommentConversationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CommentConversationImplFromJson(json);
 
   @override
   final int? id;
@@ -210,10 +210,10 @@ class _$_CommentConversation implements _CommentConversation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommentConversation &&
+            other is _$CommentConversationImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.content, content) || other.content == content) &&
             (identical(other.teacher, teacher) || other.teacher == teacher) &&
@@ -233,13 +233,13 @@ class _$_CommentConversation implements _CommentConversation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentConversationCopyWith<_$_CommentConversation> get copyWith =>
-      __$$_CommentConversationCopyWithImpl<_$_CommentConversation>(
+  _$$CommentConversationImplCopyWith<_$CommentConversationImpl> get copyWith =>
+      __$$CommentConversationImplCopyWithImpl<_$CommentConversationImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CommentConversationToJson(
+    return _$$CommentConversationImplToJson(
       this,
     );
   }
@@ -253,10 +253,10 @@ abstract class _CommentConversation implements CommentConversation {
       final String? iDCb,
       final String? employeePosition,
       final String? image,
-      final DateTime? updateAt}) = _$_CommentConversation;
+      final DateTime? updateAt}) = _$CommentConversationImpl;
 
   factory _CommentConversation.fromJson(Map<String, dynamic> json) =
-      _$_CommentConversation.fromJson;
+      _$CommentConversationImpl.fromJson;
 
   @override
   int? get id;
@@ -274,6 +274,6 @@ abstract class _CommentConversation implements CommentConversation {
   DateTime? get updateAt;
   @override
   @JsonKey(ignore: true)
-  _$$_CommentConversationCopyWith<_$_CommentConversation> get copyWith =>
+  _$$CommentConversationImplCopyWith<_$CommentConversationImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

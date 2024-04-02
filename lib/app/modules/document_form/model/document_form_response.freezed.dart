@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'document_form_response.dart';
 
@@ -12,7 +12,7 @@ part of 'document_form_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 DocumentFormResponse _$DocumentFormResponseFromJson(Map<String, dynamic> json) {
   return _DocumentFormResponse.fromJson(json);
@@ -120,11 +120,11 @@ class _$DocumentFormResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_DocumentFormResponseCopyWith<$Res>
+abstract class _$$DocumentFormResponseImplCopyWith<$Res>
     implements $DocumentFormResponseCopyWith<$Res> {
-  factory _$$_DocumentFormResponseCopyWith(_$_DocumentFormResponse value,
-          $Res Function(_$_DocumentFormResponse) then) =
-      __$$_DocumentFormResponseCopyWithImpl<$Res>;
+  factory _$$DocumentFormResponseImplCopyWith(_$DocumentFormResponseImpl value,
+          $Res Function(_$DocumentFormResponseImpl) then) =
+      __$$DocumentFormResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -140,11 +140,11 @@ abstract class _$$_DocumentFormResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentFormResponseCopyWithImpl<$Res>
-    extends _$DocumentFormResponseCopyWithImpl<$Res, _$_DocumentFormResponse>
-    implements _$$_DocumentFormResponseCopyWith<$Res> {
-  __$$_DocumentFormResponseCopyWithImpl(_$_DocumentFormResponse _value,
-      $Res Function(_$_DocumentFormResponse) _then)
+class __$$DocumentFormResponseImplCopyWithImpl<$Res>
+    extends _$DocumentFormResponseCopyWithImpl<$Res, _$DocumentFormResponseImpl>
+    implements _$$DocumentFormResponseImplCopyWith<$Res> {
+  __$$DocumentFormResponseImplCopyWithImpl(_$DocumentFormResponseImpl _value,
+      $Res Function(_$DocumentFormResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -160,7 +160,7 @@ class __$$_DocumentFormResponseCopyWithImpl<$Res>
     Object? linkDownload = freezed,
     Object? listForm = freezed,
   }) {
-    return _then(_$_DocumentFormResponse(
+    return _then(_$DocumentFormResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -203,8 +203,8 @@ class __$$_DocumentFormResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentFormResponse implements _DocumentFormResponse {
-  const _$_DocumentFormResponse(
+class _$DocumentFormResponseImpl implements _DocumentFormResponse {
+  const _$DocumentFormResponseImpl(
       {this.id,
       this.idForm,
       this.formname,
@@ -216,8 +216,8 @@ class _$_DocumentFormResponse implements _DocumentFormResponse {
       final List<FormFieldData>? listForm})
       : _listForm = listForm;
 
-  factory _$_DocumentFormResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentFormResponseFromJson(json);
+  factory _$DocumentFormResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DocumentFormResponseImplFromJson(json);
 
   @override
   final String? id;
@@ -240,6 +240,7 @@ class _$_DocumentFormResponse implements _DocumentFormResponse {
   List<FormFieldData>? get listForm {
     final value = _listForm;
     if (value == null) return null;
+    if (_listForm is EqualUnmodifiableListView) return _listForm;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -250,10 +251,10 @@ class _$_DocumentFormResponse implements _DocumentFormResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentFormResponse &&
+            other is _$DocumentFormResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.idForm, idForm) || other.idForm == idForm) &&
             (identical(other.formname, formname) ||
@@ -287,13 +288,14 @@ class _$_DocumentFormResponse implements _DocumentFormResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentFormResponseCopyWith<_$_DocumentFormResponse> get copyWith =>
-      __$$_DocumentFormResponseCopyWithImpl<_$_DocumentFormResponse>(
-          this, _$identity);
+  _$$DocumentFormResponseImplCopyWith<_$DocumentFormResponseImpl>
+      get copyWith =>
+          __$$DocumentFormResponseImplCopyWithImpl<_$DocumentFormResponseImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentFormResponseToJson(
+    return _$$DocumentFormResponseImplToJson(
       this,
     );
   }
@@ -309,10 +311,10 @@ abstract class _DocumentFormResponse implements DocumentFormResponse {
       final int? status,
       final String? linkImageOnl,
       final String? linkDownload,
-      final List<FormFieldData>? listForm}) = _$_DocumentFormResponse;
+      final List<FormFieldData>? listForm}) = _$DocumentFormResponseImpl;
 
   factory _DocumentFormResponse.fromJson(Map<String, dynamic> json) =
-      _$_DocumentFormResponse.fromJson;
+      _$DocumentFormResponseImpl.fromJson;
 
   @override
   String? get id;
@@ -334,6 +336,6 @@ abstract class _DocumentFormResponse implements DocumentFormResponse {
   List<FormFieldData>? get listForm;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentFormResponseCopyWith<_$_DocumentFormResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DocumentFormResponseImplCopyWith<_$DocumentFormResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

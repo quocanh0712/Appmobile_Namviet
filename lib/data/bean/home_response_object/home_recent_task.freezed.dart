@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'home_recent_task.dart';
 
@@ -12,7 +12,7 @@ part of 'home_recent_task.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 HomeRecentTask _$HomeRecentTaskFromJson(Map<String, dynamic> json) {
   return _HomeRecentTask.fromJson(json);
@@ -74,22 +74,22 @@ class _$HomeRecentTaskCopyWithImpl<$Res, $Val extends HomeRecentTask>
 }
 
 /// @nodoc
-abstract class _$$_HomeRecentTaskCopyWith<$Res>
+abstract class _$$HomeRecentTaskImplCopyWith<$Res>
     implements $HomeRecentTaskCopyWith<$Res> {
-  factory _$$_HomeRecentTaskCopyWith(
-          _$_HomeRecentTask value, $Res Function(_$_HomeRecentTask) then) =
-      __$$_HomeRecentTaskCopyWithImpl<$Res>;
+  factory _$$HomeRecentTaskImplCopyWith(_$HomeRecentTaskImpl value,
+          $Res Function(_$HomeRecentTaskImpl) then) =
+      __$$HomeRecentTaskImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? id, String? tasktime, String? content});
 }
 
 /// @nodoc
-class __$$_HomeRecentTaskCopyWithImpl<$Res>
-    extends _$HomeRecentTaskCopyWithImpl<$Res, _$_HomeRecentTask>
-    implements _$$_HomeRecentTaskCopyWith<$Res> {
-  __$$_HomeRecentTaskCopyWithImpl(
-      _$_HomeRecentTask _value, $Res Function(_$_HomeRecentTask) _then)
+class __$$HomeRecentTaskImplCopyWithImpl<$Res>
+    extends _$HomeRecentTaskCopyWithImpl<$Res, _$HomeRecentTaskImpl>
+    implements _$$HomeRecentTaskImplCopyWith<$Res> {
+  __$$HomeRecentTaskImplCopyWithImpl(
+      _$HomeRecentTaskImpl _value, $Res Function(_$HomeRecentTaskImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_HomeRecentTaskCopyWithImpl<$Res>
     Object? tasktime = freezed,
     Object? content = freezed,
   }) {
-    return _then(_$_HomeRecentTask(
+    return _then(_$HomeRecentTaskImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -118,11 +118,11 @@ class __$$_HomeRecentTaskCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_HomeRecentTask implements _HomeRecentTask {
-  _$_HomeRecentTask({this.id, this.tasktime, this.content});
+class _$HomeRecentTaskImpl implements _HomeRecentTask {
+  _$HomeRecentTaskImpl({this.id, this.tasktime, this.content});
 
-  factory _$_HomeRecentTask.fromJson(Map<String, dynamic> json) =>
-      _$$_HomeRecentTaskFromJson(json);
+  factory _$HomeRecentTaskImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HomeRecentTaskImplFromJson(json);
 
   @override
   final int? id;
@@ -137,10 +137,10 @@ class _$_HomeRecentTask implements _HomeRecentTask {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_HomeRecentTask &&
+            other is _$HomeRecentTaskImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.tasktime, tasktime) ||
                 other.tasktime == tasktime) &&
@@ -154,12 +154,13 @@ class _$_HomeRecentTask implements _HomeRecentTask {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_HomeRecentTaskCopyWith<_$_HomeRecentTask> get copyWith =>
-      __$$_HomeRecentTaskCopyWithImpl<_$_HomeRecentTask>(this, _$identity);
+  _$$HomeRecentTaskImplCopyWith<_$HomeRecentTaskImpl> get copyWith =>
+      __$$HomeRecentTaskImplCopyWithImpl<_$HomeRecentTaskImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_HomeRecentTaskToJson(
+    return _$$HomeRecentTaskImplToJson(
       this,
     );
   }
@@ -169,10 +170,10 @@ abstract class _HomeRecentTask implements HomeRecentTask {
   factory _HomeRecentTask(
       {final int? id,
       final String? tasktime,
-      final String? content}) = _$_HomeRecentTask;
+      final String? content}) = _$HomeRecentTaskImpl;
 
   factory _HomeRecentTask.fromJson(Map<String, dynamic> json) =
-      _$_HomeRecentTask.fromJson;
+      _$HomeRecentTaskImpl.fromJson;
 
   @override
   int? get id;
@@ -182,6 +183,6 @@ abstract class _HomeRecentTask implements HomeRecentTask {
   String? get content;
   @override
   @JsonKey(ignore: true)
-  _$$_HomeRecentTaskCopyWith<_$_HomeRecentTask> get copyWith =>
+  _$$HomeRecentTaskImplCopyWith<_$HomeRecentTaskImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

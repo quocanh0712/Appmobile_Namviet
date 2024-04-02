@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'education_program_response.dart';
 
@@ -12,7 +12,7 @@ part of 'education_program_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 EducationProgramResponse _$EducationProgramResponseFromJson(
     Map<String, dynamic> json) {
@@ -83,12 +83,12 @@ class _$EducationProgramResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EducationProgramResponseCopyWith<$Res>
+abstract class _$$EducationProgramResponseImplCopyWith<$Res>
     implements $EducationProgramResponseCopyWith<$Res> {
-  factory _$$_EducationProgramResponseCopyWith(
-          _$_EducationProgramResponse value,
-          $Res Function(_$_EducationProgramResponse) then) =
-      __$$_EducationProgramResponseCopyWithImpl<$Res>;
+  factory _$$EducationProgramResponseImplCopyWith(
+          _$EducationProgramResponseImpl value,
+          $Res Function(_$EducationProgramResponseImpl) then) =
+      __$$EducationProgramResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -96,12 +96,13 @@ abstract class _$$_EducationProgramResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EducationProgramResponseCopyWithImpl<$Res>
+class __$$EducationProgramResponseImplCopyWithImpl<$Res>
     extends _$EducationProgramResponseCopyWithImpl<$Res,
-        _$_EducationProgramResponse>
-    implements _$$_EducationProgramResponseCopyWith<$Res> {
-  __$$_EducationProgramResponseCopyWithImpl(_$_EducationProgramResponse _value,
-      $Res Function(_$_EducationProgramResponse) _then)
+        _$EducationProgramResponseImpl>
+    implements _$$EducationProgramResponseImplCopyWith<$Res> {
+  __$$EducationProgramResponseImplCopyWithImpl(
+      _$EducationProgramResponseImpl _value,
+      $Res Function(_$EducationProgramResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -112,7 +113,7 @@ class __$$_EducationProgramResponseCopyWithImpl<$Res>
     Object? numbercredits = freezed,
     Object? numberlession = freezed,
   }) {
-    return _then(_$_EducationProgramResponse(
+    return _then(_$EducationProgramResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -135,12 +136,12 @@ class __$$_EducationProgramResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EducationProgramResponse implements _EducationProgramResponse {
-  const _$_EducationProgramResponse(
+class _$EducationProgramResponseImpl implements _EducationProgramResponse {
+  const _$EducationProgramResponseImpl(
       {this.id, this.coursename, this.numbercredits, this.numberlession});
 
-  factory _$_EducationProgramResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_EducationProgramResponseFromJson(json);
+  factory _$EducationProgramResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EducationProgramResponseImplFromJson(json);
 
   @override
   final int? id;
@@ -157,10 +158,10 @@ class _$_EducationProgramResponse implements _EducationProgramResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EducationProgramResponse &&
+            other is _$EducationProgramResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.coursename, coursename) ||
                 other.coursename == coursename) &&
@@ -178,13 +179,13 @@ class _$_EducationProgramResponse implements _EducationProgramResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EducationProgramResponseCopyWith<_$_EducationProgramResponse>
-      get copyWith => __$$_EducationProgramResponseCopyWithImpl<
-          _$_EducationProgramResponse>(this, _$identity);
+  _$$EducationProgramResponseImplCopyWith<_$EducationProgramResponseImpl>
+      get copyWith => __$$EducationProgramResponseImplCopyWithImpl<
+          _$EducationProgramResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EducationProgramResponseToJson(
+    return _$$EducationProgramResponseImplToJson(
       this,
     );
   }
@@ -195,10 +196,10 @@ abstract class _EducationProgramResponse implements EducationProgramResponse {
       {final int? id,
       final String? coursename,
       final int? numbercredits,
-      final int? numberlession}) = _$_EducationProgramResponse;
+      final int? numberlession}) = _$EducationProgramResponseImpl;
 
   factory _EducationProgramResponse.fromJson(Map<String, dynamic> json) =
-      _$_EducationProgramResponse.fromJson;
+      _$EducationProgramResponseImpl.fromJson;
 
   @override
   int? get id;
@@ -210,6 +211,6 @@ abstract class _EducationProgramResponse implements EducationProgramResponse {
   int? get numberlession;
   @override
   @JsonKey(ignore: true)
-  _$$_EducationProgramResponseCopyWith<_$_EducationProgramResponse>
+  _$$EducationProgramResponseImplCopyWith<_$EducationProgramResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

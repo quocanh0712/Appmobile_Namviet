@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'learning_result_client.dart';
 
@@ -12,7 +12,7 @@ part of 'learning_result_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$LearningResultClient {
@@ -124,11 +124,11 @@ class _$LearningResultClientCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SemesterPointCopyWith<$Res>
+abstract class _$$SemesterPointImplCopyWith<$Res>
     implements $LearningResultClientCopyWith<$Res> {
-  factory _$$_SemesterPointCopyWith(
-          _$_SemesterPoint value, $Res Function(_$_SemesterPoint) then) =
-      __$$_SemesterPointCopyWithImpl<$Res>;
+  factory _$$SemesterPointImplCopyWith(
+          _$SemesterPointImpl value, $Res Function(_$SemesterPointImpl) then) =
+      __$$SemesterPointImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({LearningResultRequestParams? params});
@@ -138,11 +138,11 @@ abstract class _$$_SemesterPointCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SemesterPointCopyWithImpl<$Res>
-    extends _$LearningResultClientCopyWithImpl<$Res, _$_SemesterPoint>
-    implements _$$_SemesterPointCopyWith<$Res> {
-  __$$_SemesterPointCopyWithImpl(
-      _$_SemesterPoint _value, $Res Function(_$_SemesterPoint) _then)
+class __$$SemesterPointImplCopyWithImpl<$Res>
+    extends _$LearningResultClientCopyWithImpl<$Res, _$SemesterPointImpl>
+    implements _$$SemesterPointImplCopyWith<$Res> {
+  __$$SemesterPointImplCopyWithImpl(
+      _$SemesterPointImpl _value, $Res Function(_$SemesterPointImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -150,7 +150,7 @@ class __$$_SemesterPointCopyWithImpl<$Res>
   $Res call({
     Object? params = freezed,
   }) {
-    return _then(_$_SemesterPoint(
+    return _then(_$SemesterPointImpl(
       freezed == params
           ? _value.params
           : params // ignore: cast_nullable_to_non_nullable
@@ -161,8 +161,8 @@ class __$$_SemesterPointCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SemesterPoint extends _SemesterPoint {
-  _$_SemesterPoint(this.params) : super._();
+class _$SemesterPointImpl extends _SemesterPoint {
+  _$SemesterPointImpl(this.params) : super._();
 
   @override
   final LearningResultRequestParams? params;
@@ -173,10 +173,10 @@ class _$_SemesterPoint extends _SemesterPoint {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SemesterPoint &&
+            other is _$SemesterPointImpl &&
             (identical(other.params, params) || other.params == params));
   }
 
@@ -186,8 +186,8 @@ class _$_SemesterPoint extends _SemesterPoint {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SemesterPointCopyWith<_$_SemesterPoint> get copyWith =>
-      __$$_SemesterPointCopyWithImpl<_$_SemesterPoint>(this, _$identity);
+  _$$SemesterPointImplCopyWith<_$SemesterPointImpl> get copyWith =>
+      __$$SemesterPointImplCopyWithImpl<_$SemesterPointImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -268,23 +268,23 @@ class _$_SemesterPoint extends _SemesterPoint {
 
 abstract class _SemesterPoint extends LearningResultClient {
   factory _SemesterPoint(final LearningResultRequestParams? params) =
-      _$_SemesterPoint;
+      _$SemesterPointImpl;
   _SemesterPoint._() : super._();
 
   @override
   LearningResultRequestParams? get params;
   @override
   @JsonKey(ignore: true)
-  _$$_SemesterPointCopyWith<_$_SemesterPoint> get copyWith =>
+  _$$SemesterPointImplCopyWith<_$SemesterPointImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_AllCoursesPointsCopyWith<$Res>
+abstract class _$$AllCoursesPointsImplCopyWith<$Res>
     implements $LearningResultClientCopyWith<$Res> {
-  factory _$$_AllCoursesPointsCopyWith(
-          _$_AllCoursesPoints value, $Res Function(_$_AllCoursesPoints) then) =
-      __$$_AllCoursesPointsCopyWithImpl<$Res>;
+  factory _$$AllCoursesPointsImplCopyWith(_$AllCoursesPointsImpl value,
+          $Res Function(_$AllCoursesPointsImpl) then) =
+      __$$AllCoursesPointsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({LearningResultRequestParams? params});
@@ -294,11 +294,11 @@ abstract class _$$_AllCoursesPointsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AllCoursesPointsCopyWithImpl<$Res>
-    extends _$LearningResultClientCopyWithImpl<$Res, _$_AllCoursesPoints>
-    implements _$$_AllCoursesPointsCopyWith<$Res> {
-  __$$_AllCoursesPointsCopyWithImpl(
-      _$_AllCoursesPoints _value, $Res Function(_$_AllCoursesPoints) _then)
+class __$$AllCoursesPointsImplCopyWithImpl<$Res>
+    extends _$LearningResultClientCopyWithImpl<$Res, _$AllCoursesPointsImpl>
+    implements _$$AllCoursesPointsImplCopyWith<$Res> {
+  __$$AllCoursesPointsImplCopyWithImpl(_$AllCoursesPointsImpl _value,
+      $Res Function(_$AllCoursesPointsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -306,7 +306,7 @@ class __$$_AllCoursesPointsCopyWithImpl<$Res>
   $Res call({
     Object? params = freezed,
   }) {
-    return _then(_$_AllCoursesPoints(
+    return _then(_$AllCoursesPointsImpl(
       freezed == params
           ? _value.params
           : params // ignore: cast_nullable_to_non_nullable
@@ -317,8 +317,8 @@ class __$$_AllCoursesPointsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AllCoursesPoints extends _AllCoursesPoints {
-  _$_AllCoursesPoints(this.params) : super._();
+class _$AllCoursesPointsImpl extends _AllCoursesPoints {
+  _$AllCoursesPointsImpl(this.params) : super._();
 
   @override
   final LearningResultRequestParams? params;
@@ -329,10 +329,10 @@ class _$_AllCoursesPoints extends _AllCoursesPoints {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AllCoursesPoints &&
+            other is _$AllCoursesPointsImpl &&
             (identical(other.params, params) || other.params == params));
   }
 
@@ -342,8 +342,9 @@ class _$_AllCoursesPoints extends _AllCoursesPoints {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AllCoursesPointsCopyWith<_$_AllCoursesPoints> get copyWith =>
-      __$$_AllCoursesPointsCopyWithImpl<_$_AllCoursesPoints>(this, _$identity);
+  _$$AllCoursesPointsImplCopyWith<_$AllCoursesPointsImpl> get copyWith =>
+      __$$AllCoursesPointsImplCopyWithImpl<_$AllCoursesPointsImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -424,23 +425,23 @@ class _$_AllCoursesPoints extends _AllCoursesPoints {
 
 abstract class _AllCoursesPoints extends LearningResultClient {
   factory _AllCoursesPoints(final LearningResultRequestParams? params) =
-      _$_AllCoursesPoints;
+      _$AllCoursesPointsImpl;
   _AllCoursesPoints._() : super._();
 
   @override
   LearningResultRequestParams? get params;
   @override
   @JsonKey(ignore: true)
-  _$$_AllCoursesPointsCopyWith<_$_AllCoursesPoints> get copyWith =>
+  _$$AllCoursesPointsImplCopyWith<_$AllCoursesPointsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_SingleCoursePointsCopyWith<$Res>
+abstract class _$$SingleCoursePointsImplCopyWith<$Res>
     implements $LearningResultClientCopyWith<$Res> {
-  factory _$$_SingleCoursePointsCopyWith(_$_SingleCoursePoints value,
-          $Res Function(_$_SingleCoursePoints) then) =
-      __$$_SingleCoursePointsCopyWithImpl<$Res>;
+  factory _$$SingleCoursePointsImplCopyWith(_$SingleCoursePointsImpl value,
+          $Res Function(_$SingleCoursePointsImpl) then) =
+      __$$SingleCoursePointsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({LearningResultRequestParams? params});
@@ -450,11 +451,11 @@ abstract class _$$_SingleCoursePointsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SingleCoursePointsCopyWithImpl<$Res>
-    extends _$LearningResultClientCopyWithImpl<$Res, _$_SingleCoursePoints>
-    implements _$$_SingleCoursePointsCopyWith<$Res> {
-  __$$_SingleCoursePointsCopyWithImpl(
-      _$_SingleCoursePoints _value, $Res Function(_$_SingleCoursePoints) _then)
+class __$$SingleCoursePointsImplCopyWithImpl<$Res>
+    extends _$LearningResultClientCopyWithImpl<$Res, _$SingleCoursePointsImpl>
+    implements _$$SingleCoursePointsImplCopyWith<$Res> {
+  __$$SingleCoursePointsImplCopyWithImpl(_$SingleCoursePointsImpl _value,
+      $Res Function(_$SingleCoursePointsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -462,7 +463,7 @@ class __$$_SingleCoursePointsCopyWithImpl<$Res>
   $Res call({
     Object? params = freezed,
   }) {
-    return _then(_$_SingleCoursePoints(
+    return _then(_$SingleCoursePointsImpl(
       freezed == params
           ? _value.params
           : params // ignore: cast_nullable_to_non_nullable
@@ -473,8 +474,8 @@ class __$$_SingleCoursePointsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SingleCoursePoints extends _SingleCoursePoints {
-  _$_SingleCoursePoints(this.params) : super._();
+class _$SingleCoursePointsImpl extends _SingleCoursePoints {
+  _$SingleCoursePointsImpl(this.params) : super._();
 
   @override
   final LearningResultRequestParams? params;
@@ -485,10 +486,10 @@ class _$_SingleCoursePoints extends _SingleCoursePoints {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SingleCoursePoints &&
+            other is _$SingleCoursePointsImpl &&
             (identical(other.params, params) || other.params == params));
   }
 
@@ -498,8 +499,8 @@ class _$_SingleCoursePoints extends _SingleCoursePoints {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SingleCoursePointsCopyWith<_$_SingleCoursePoints> get copyWith =>
-      __$$_SingleCoursePointsCopyWithImpl<_$_SingleCoursePoints>(
+  _$$SingleCoursePointsImplCopyWith<_$SingleCoursePointsImpl> get copyWith =>
+      __$$SingleCoursePointsImplCopyWithImpl<_$SingleCoursePointsImpl>(
           this, _$identity);
 
   @override
@@ -581,13 +582,13 @@ class _$_SingleCoursePoints extends _SingleCoursePoints {
 
 abstract class _SingleCoursePoints extends LearningResultClient {
   factory _SingleCoursePoints(final LearningResultRequestParams? params) =
-      _$_SingleCoursePoints;
+      _$SingleCoursePointsImpl;
   _SingleCoursePoints._() : super._();
 
   @override
   LearningResultRequestParams? get params;
   @override
   @JsonKey(ignore: true)
-  _$$_SingleCoursePointsCopyWith<_$_SingleCoursePoints> get copyWith =>
+  _$$SingleCoursePointsImplCopyWith<_$SingleCoursePointsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

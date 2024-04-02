@@ -3,27 +3,6 @@
 part of 'schedule_checkin_object.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-ScheDuleCheckInObject? jsonToNullableScheDuleCheckInObject(Object? json) =>
-    ScheDuleCheckInObject.fromJson(json as Map<String, dynamic>);
-
-ScheDuleCheckInObject jsonToScheDuleCheckInObject(Object? json) =>
-    ScheDuleCheckInObject.fromJson(json as Map<String, dynamic>);
-
-List<ScheDuleCheckInObject?> jsonToListNullableScheDuleCheckInObjects(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => ScheDuleCheckInObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<ScheDuleCheckInObject> jsonToListScheDuleCheckInObjects(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => ScheDuleCheckInObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
@@ -71,16 +50,16 @@ class ScheDuleCheckInObjectAdapter extends TypeAdapter<ScheDuleCheckInObject> {
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ScheDuleCheckInObject _$$_ScheDuleCheckInObjectFromJson(
+_$ScheDuleCheckInObjectImpl _$$ScheDuleCheckInObjectImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ScheDuleCheckInObject(
+    _$ScheDuleCheckInObjectImpl(
       id_khkk: json['id_khkk'] as int?,
       ma_khkk: json['ma_khkk'] as String?,
       ten_khkk: json['ten_khkk'] as String?,
     );
 
-Map<String, dynamic> _$$_ScheDuleCheckInObjectToJson(
-        _$_ScheDuleCheckInObject instance) =>
+Map<String, dynamic> _$$ScheDuleCheckInObjectImplToJson(
+        _$ScheDuleCheckInObjectImpl instance) =>
     <String, dynamic>{
       'id_khkk': instance.id_khkk,
       'ma_khkk': instance.ma_khkk,

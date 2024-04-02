@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'semester_bill_response_object.dart';
 
@@ -12,7 +12,7 @@ part of 'semester_bill_response_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SemesterBillResponseObject _$SemesterBillResponseObjectFromJson(
     Map<String, dynamic> json) {
@@ -108,12 +108,12 @@ class _$SemesterBillResponseObjectCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SemesterBillResponseObjectCopyWith<$Res>
+abstract class _$$SemesterBillResponseObjectImplCopyWith<$Res>
     implements $SemesterBillResponseObjectCopyWith<$Res> {
-  factory _$$_SemesterBillResponseObjectCopyWith(
-          _$_SemesterBillResponseObject value,
-          $Res Function(_$_SemesterBillResponseObject) then) =
-      __$$_SemesterBillResponseObjectCopyWithImpl<$Res>;
+  factory _$$SemesterBillResponseObjectImplCopyWith(
+          _$SemesterBillResponseObjectImpl value,
+          $Res Function(_$SemesterBillResponseObjectImpl) then) =
+      __$$SemesterBillResponseObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -127,13 +127,13 @@ abstract class _$$_SemesterBillResponseObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SemesterBillResponseObjectCopyWithImpl<$Res>
+class __$$SemesterBillResponseObjectImplCopyWithImpl<$Res>
     extends _$SemesterBillResponseObjectCopyWithImpl<$Res,
-        _$_SemesterBillResponseObject>
-    implements _$$_SemesterBillResponseObjectCopyWith<$Res> {
-  __$$_SemesterBillResponseObjectCopyWithImpl(
-      _$_SemesterBillResponseObject _value,
-      $Res Function(_$_SemesterBillResponseObject) _then)
+        _$SemesterBillResponseObjectImpl>
+    implements _$$SemesterBillResponseObjectImplCopyWith<$Res> {
+  __$$SemesterBillResponseObjectImplCopyWithImpl(
+      _$SemesterBillResponseObjectImpl _value,
+      $Res Function(_$SemesterBillResponseObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -147,7 +147,7 @@ class __$$_SemesterBillResponseObjectCopyWithImpl<$Res>
     Object? status = freezed,
     Object? qrCode = freezed,
   }) {
-    return _then(_$_SemesterBillResponseObject(
+    return _then(_$SemesterBillResponseObjectImpl(
       feeId: freezed == feeId
           ? _value.feeId
           : feeId // ignore: cast_nullable_to_non_nullable
@@ -182,8 +182,8 @@ class __$$_SemesterBillResponseObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SemesterBillResponseObject implements _SemesterBillResponseObject {
-  _$_SemesterBillResponseObject(
+class _$SemesterBillResponseObjectImpl implements _SemesterBillResponseObject {
+  _$SemesterBillResponseObjectImpl(
       {this.feeId,
       this.feeName,
       this.value,
@@ -192,8 +192,9 @@ class _$_SemesterBillResponseObject implements _SemesterBillResponseObject {
       this.status,
       this.qrCode});
 
-  factory _$_SemesterBillResponseObject.fromJson(Map<String, dynamic> json) =>
-      _$$_SemesterBillResponseObjectFromJson(json);
+  factory _$SemesterBillResponseObjectImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$SemesterBillResponseObjectImplFromJson(json);
 
   @override
   final int? feeId;
@@ -216,10 +217,10 @@ class _$_SemesterBillResponseObject implements _SemesterBillResponseObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SemesterBillResponseObject &&
+            other is _$SemesterBillResponseObjectImpl &&
             (identical(other.feeId, feeId) || other.feeId == feeId) &&
             (identical(other.feeName, feeName) || other.feeName == feeName) &&
             (identical(other.value, value) || other.value == value) &&
@@ -238,13 +239,13 @@ class _$_SemesterBillResponseObject implements _SemesterBillResponseObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SemesterBillResponseObjectCopyWith<_$_SemesterBillResponseObject>
-      get copyWith => __$$_SemesterBillResponseObjectCopyWithImpl<
-          _$_SemesterBillResponseObject>(this, _$identity);
+  _$$SemesterBillResponseObjectImplCopyWith<_$SemesterBillResponseObjectImpl>
+      get copyWith => __$$SemesterBillResponseObjectImplCopyWithImpl<
+          _$SemesterBillResponseObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SemesterBillResponseObjectToJson(
+    return _$$SemesterBillResponseObjectImplToJson(
       this,
     );
   }
@@ -259,10 +260,10 @@ abstract class _SemesterBillResponseObject
       final int? semester,
       final String? year,
       final int? status,
-      final String? qrCode}) = _$_SemesterBillResponseObject;
+      final String? qrCode}) = _$SemesterBillResponseObjectImpl;
 
   factory _SemesterBillResponseObject.fromJson(Map<String, dynamic> json) =
-      _$_SemesterBillResponseObject.fromJson;
+      _$SemesterBillResponseObjectImpl.fromJson;
 
   @override
   int? get feeId;
@@ -280,6 +281,6 @@ abstract class _SemesterBillResponseObject
   String? get qrCode;
   @override
   @JsonKey(ignore: true)
-  _$$_SemesterBillResponseObjectCopyWith<_$_SemesterBillResponseObject>
+  _$$SemesterBillResponseObjectImplCopyWith<_$SemesterBillResponseObjectImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

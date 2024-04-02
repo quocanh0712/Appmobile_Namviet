@@ -3,39 +3,13 @@
 part of 'practice_point_detail_response_object.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-PracticePointDetailResponseObject?
-    jsonToNullablePracticePointDetailResponseObject(Object? json) =>
-        PracticePointDetailResponseObject.fromJson(
-            json as Map<String, dynamic>);
-
-PracticePointDetailResponseObject jsonToPracticePointDetailResponseObject(
-        Object? json) =>
-    PracticePointDetailResponseObject.fromJson(json as Map<String, dynamic>);
-
-List<PracticePointDetailResponseObject?>
-    jsonToListNullablePracticePointDetailResponseObjects(Object? json) =>
-        List<Object>.from(json as List)
-            .map((e) => PracticePointDetailResponseObject.fromJson(
-                e as Map<String, dynamic>))
-            .toList();
-
-List<PracticePointDetailResponseObject>
-    jsonToListPracticePointDetailResponseObjects(Object? json) =>
-        List<Object>.from(json as List)
-            .map((e) => PracticePointDetailResponseObject.fromJson(
-                e as Map<String, dynamic>))
-            .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PracticePointDetailResponseObject
-    _$$_PracticePointDetailResponseObjectFromJson(Map<String, dynamic> json) =>
-        _$_PracticePointDetailResponseObject(
+_$PracticePointDetailResponseObjectImpl
+    _$$PracticePointDetailResponseObjectImplFromJson(
+            Map<String, dynamic> json) =>
+        _$PracticePointDetailResponseObjectImpl(
           id: json['id'] as int?,
           criteriaName: json['criteriaName'] as String?,
           score: json['score'] as int?,
@@ -45,8 +19,8 @@ _$_PracticePointDetailResponseObject
               .toList(),
         );
 
-Map<String, dynamic> _$$_PracticePointDetailResponseObjectToJson(
-        _$_PracticePointDetailResponseObject instance) =>
+Map<String, dynamic> _$$PracticePointDetailResponseObjectImplToJson(
+        _$PracticePointDetailResponseObjectImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'criteriaName': instance.criteriaName,

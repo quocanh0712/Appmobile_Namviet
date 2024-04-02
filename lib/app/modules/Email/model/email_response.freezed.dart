@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'email_response.dart';
 
@@ -12,7 +12,7 @@ part of 'email_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 EmailResponse _$EmailResponseFromJson(Map<String, dynamic> json) {
   return _EmailResponse.fromJson(json);
@@ -80,22 +80,22 @@ class _$EmailResponseCopyWithImpl<$Res, $Val extends EmailResponse>
 }
 
 /// @nodoc
-abstract class _$$_EmailResponseCopyWith<$Res>
+abstract class _$$EmailResponseImplCopyWith<$Res>
     implements $EmailResponseCopyWith<$Res> {
-  factory _$$_EmailResponseCopyWith(
-          _$_EmailResponse value, $Res Function(_$_EmailResponse) then) =
-      __$$_EmailResponseCopyWithImpl<$Res>;
+  factory _$$EmailResponseImplCopyWith(
+          _$EmailResponseImpl value, $Res Function(_$EmailResponseImpl) then) =
+      __$$EmailResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? id, String? NguoiGui, String? TieuDe, String? ThoiGian});
 }
 
 /// @nodoc
-class __$$_EmailResponseCopyWithImpl<$Res>
-    extends _$EmailResponseCopyWithImpl<$Res, _$_EmailResponse>
-    implements _$$_EmailResponseCopyWith<$Res> {
-  __$$_EmailResponseCopyWithImpl(
-      _$_EmailResponse _value, $Res Function(_$_EmailResponse) _then)
+class __$$EmailResponseImplCopyWithImpl<$Res>
+    extends _$EmailResponseCopyWithImpl<$Res, _$EmailResponseImpl>
+    implements _$$EmailResponseImplCopyWith<$Res> {
+  __$$EmailResponseImplCopyWithImpl(
+      _$EmailResponseImpl _value, $Res Function(_$EmailResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -106,7 +106,7 @@ class __$$_EmailResponseCopyWithImpl<$Res>
     Object? TieuDe = freezed,
     Object? ThoiGian = freezed,
   }) {
-    return _then(_$_EmailResponse(
+    return _then(_$EmailResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -129,11 +129,12 @@ class __$$_EmailResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EmailResponse implements _EmailResponse {
-  const _$_EmailResponse({this.id, this.NguoiGui, this.TieuDe, this.ThoiGian});
+class _$EmailResponseImpl implements _EmailResponse {
+  const _$EmailResponseImpl(
+      {this.id, this.NguoiGui, this.TieuDe, this.ThoiGian});
 
-  factory _$_EmailResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_EmailResponseFromJson(json);
+  factory _$EmailResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EmailResponseImplFromJson(json);
 
   @override
   final int? id;
@@ -150,10 +151,10 @@ class _$_EmailResponse implements _EmailResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EmailResponse &&
+            other is _$EmailResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.NguoiGui, NguoiGui) ||
                 other.NguoiGui == NguoiGui) &&
@@ -169,12 +170,12 @@ class _$_EmailResponse implements _EmailResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EmailResponseCopyWith<_$_EmailResponse> get copyWith =>
-      __$$_EmailResponseCopyWithImpl<_$_EmailResponse>(this, _$identity);
+  _$$EmailResponseImplCopyWith<_$EmailResponseImpl> get copyWith =>
+      __$$EmailResponseImplCopyWithImpl<_$EmailResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EmailResponseToJson(
+    return _$$EmailResponseImplToJson(
       this,
     );
   }
@@ -185,10 +186,10 @@ abstract class _EmailResponse implements EmailResponse {
       {final int? id,
       final String? NguoiGui,
       final String? TieuDe,
-      final String? ThoiGian}) = _$_EmailResponse;
+      final String? ThoiGian}) = _$EmailResponseImpl;
 
   factory _EmailResponse.fromJson(Map<String, dynamic> json) =
-      _$_EmailResponse.fromJson;
+      _$EmailResponseImpl.fromJson;
 
   @override
   int? get id;
@@ -200,6 +201,6 @@ abstract class _EmailResponse implements EmailResponse {
   String? get ThoiGian;
   @override
   @JsonKey(ignore: true)
-  _$$_EmailResponseCopyWith<_$_EmailResponse> get copyWith =>
+  _$$EmailResponseImplCopyWith<_$EmailResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

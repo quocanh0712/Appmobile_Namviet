@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'service_request_object.dart';
 
@@ -12,7 +12,7 @@ part of 'service_request_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ServiceRequestObject _$ServiceRequestObjectFromJson(Map<String, dynamic> json) {
   return _ServiceRequestObject.fromJson(json);
@@ -99,11 +99,11 @@ class _$ServiceRequestObjectCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ServiceRequestObjectCopyWith<$Res>
+abstract class _$$ServiceRequestObjectImplCopyWith<$Res>
     implements $ServiceRequestObjectCopyWith<$Res> {
-  factory _$$_ServiceRequestObjectCopyWith(_$_ServiceRequestObject value,
-          $Res Function(_$_ServiceRequestObject) then) =
-      __$$_ServiceRequestObjectCopyWithImpl<$Res>;
+  factory _$$ServiceRequestObjectImplCopyWith(_$ServiceRequestObjectImpl value,
+          $Res Function(_$ServiceRequestObjectImpl) then) =
+      __$$ServiceRequestObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -116,11 +116,11 @@ abstract class _$$_ServiceRequestObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ServiceRequestObjectCopyWithImpl<$Res>
-    extends _$ServiceRequestObjectCopyWithImpl<$Res, _$_ServiceRequestObject>
-    implements _$$_ServiceRequestObjectCopyWith<$Res> {
-  __$$_ServiceRequestObjectCopyWithImpl(_$_ServiceRequestObject _value,
-      $Res Function(_$_ServiceRequestObject) _then)
+class __$$ServiceRequestObjectImplCopyWithImpl<$Res>
+    extends _$ServiceRequestObjectCopyWithImpl<$Res, _$ServiceRequestObjectImpl>
+    implements _$$ServiceRequestObjectImplCopyWith<$Res> {
+  __$$ServiceRequestObjectImplCopyWithImpl(_$ServiceRequestObjectImpl _value,
+      $Res Function(_$ServiceRequestObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +133,7 @@ class __$$_ServiceRequestObjectCopyWithImpl<$Res>
     Object? status = freezed,
     Object? listForm = freezed,
   }) {
-    return _then(_$_ServiceRequestObject(
+    return _then(_$ServiceRequestObjectImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -164,8 +164,8 @@ class __$$_ServiceRequestObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ServiceRequestObject implements _ServiceRequestObject {
-  _$_ServiceRequestObject(
+class _$ServiceRequestObjectImpl implements _ServiceRequestObject {
+  _$ServiceRequestObjectImpl(
       {this.id,
       this.idForm,
       this.formname,
@@ -174,8 +174,8 @@ class _$_ServiceRequestObject implements _ServiceRequestObject {
       final List<FormFieldData>? listForm})
       : _listForm = listForm;
 
-  factory _$_ServiceRequestObject.fromJson(Map<String, dynamic> json) =>
-      _$$_ServiceRequestObjectFromJson(json);
+  factory _$ServiceRequestObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ServiceRequestObjectImplFromJson(json);
 
   @override
   final String? id;
@@ -192,6 +192,7 @@ class _$_ServiceRequestObject implements _ServiceRequestObject {
   List<FormFieldData>? get listForm {
     final value = _listForm;
     if (value == null) return null;
+    if (_listForm is EqualUnmodifiableListView) return _listForm;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -202,10 +203,10 @@ class _$_ServiceRequestObject implements _ServiceRequestObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ServiceRequestObject &&
+            other is _$ServiceRequestObjectImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.idForm, idForm) || other.idForm == idForm) &&
             (identical(other.formname, formname) ||
@@ -224,13 +225,14 @@ class _$_ServiceRequestObject implements _ServiceRequestObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ServiceRequestObjectCopyWith<_$_ServiceRequestObject> get copyWith =>
-      __$$_ServiceRequestObjectCopyWithImpl<_$_ServiceRequestObject>(
-          this, _$identity);
+  _$$ServiceRequestObjectImplCopyWith<_$ServiceRequestObjectImpl>
+      get copyWith =>
+          __$$ServiceRequestObjectImplCopyWithImpl<_$ServiceRequestObjectImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ServiceRequestObjectToJson(
+    return _$$ServiceRequestObjectImplToJson(
       this,
     );
   }
@@ -243,10 +245,10 @@ abstract class _ServiceRequestObject implements ServiceRequestObject {
       final String? formname,
       final DateTime? updateTime,
       final int? status,
-      final List<FormFieldData>? listForm}) = _$_ServiceRequestObject;
+      final List<FormFieldData>? listForm}) = _$ServiceRequestObjectImpl;
 
   factory _ServiceRequestObject.fromJson(Map<String, dynamic> json) =
-      _$_ServiceRequestObject.fromJson;
+      _$ServiceRequestObjectImpl.fromJson;
 
   @override
   String? get id;
@@ -262,6 +264,6 @@ abstract class _ServiceRequestObject implements ServiceRequestObject {
   List<FormFieldData>? get listForm;
   @override
   @JsonKey(ignore: true)
-  _$$_ServiceRequestObjectCopyWith<_$_ServiceRequestObject> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ServiceRequestObjectImplCopyWith<_$ServiceRequestObjectImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -6,14 +6,15 @@ part of 'home_recent_task.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_HomeRecentTask _$$_HomeRecentTaskFromJson(Map<String, dynamic> json) =>
-    _$_HomeRecentTask(
+_$HomeRecentTaskImpl _$$HomeRecentTaskImplFromJson(Map<String, dynamic> json) =>
+    _$HomeRecentTaskImpl(
       id: json['id'] as int?,
       tasktime: json['tasktime'] as String?,
       content: json['content'] as String?,
     );
 
-Map<String, dynamic> _$$_HomeRecentTaskToJson(_$_HomeRecentTask instance) =>
+Map<String, dynamic> _$$HomeRecentTaskImplToJson(
+        _$HomeRecentTaskImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'tasktime': instance.tasktime,

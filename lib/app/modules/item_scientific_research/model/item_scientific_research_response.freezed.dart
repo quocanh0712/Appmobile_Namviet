@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'item_scientific_research_response.dart';
 
@@ -12,7 +12,7 @@ part of 'item_scientific_research_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ItemScientificResearchResponse _$ItemScientificResearchResponseFromJson(
     Map<String, dynamic> json) {
@@ -102,12 +102,12 @@ class _$ItemScientificResearchResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ItemScientificResearchResponseCopyWith<$Res>
+abstract class _$$ItemScientificResearchResponseImplCopyWith<$Res>
     implements $ItemScientificResearchResponseCopyWith<$Res> {
-  factory _$$_ItemScientificResearchResponseCopyWith(
-          _$_ItemScientificResearchResponse value,
-          $Res Function(_$_ItemScientificResearchResponse) then) =
-      __$$_ItemScientificResearchResponseCopyWithImpl<$Res>;
+  factory _$$ItemScientificResearchResponseImplCopyWith(
+          _$ItemScientificResearchResponseImpl value,
+          $Res Function(_$ItemScientificResearchResponseImpl) then) =
+      __$$ItemScientificResearchResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -120,13 +120,13 @@ abstract class _$$_ItemScientificResearchResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ItemScientificResearchResponseCopyWithImpl<$Res>
+class __$$ItemScientificResearchResponseImplCopyWithImpl<$Res>
     extends _$ItemScientificResearchResponseCopyWithImpl<$Res,
-        _$_ItemScientificResearchResponse>
-    implements _$$_ItemScientificResearchResponseCopyWith<$Res> {
-  __$$_ItemScientificResearchResponseCopyWithImpl(
-      _$_ItemScientificResearchResponse _value,
-      $Res Function(_$_ItemScientificResearchResponse) _then)
+        _$ItemScientificResearchResponseImpl>
+    implements _$$ItemScientificResearchResponseImplCopyWith<$Res> {
+  __$$ItemScientificResearchResponseImplCopyWithImpl(
+      _$ItemScientificResearchResponseImpl _value,
+      $Res Function(_$ItemScientificResearchResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -139,7 +139,7 @@ class __$$_ItemScientificResearchResponseCopyWithImpl<$Res>
     Object? imageUrl = freezed,
     Object? href = freezed,
   }) {
-    return _then(_$_ItemScientificResearchResponse(
+    return _then(_$ItemScientificResearchResponseImpl(
       nckhId: freezed == nckhId
           ? _value.nckhId
           : nckhId // ignore: cast_nullable_to_non_nullable
@@ -170,9 +170,9 @@ class __$$_ItemScientificResearchResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ItemScientificResearchResponse
+class _$ItemScientificResearchResponseImpl
     implements _ItemScientificResearchResponse {
-  const _$_ItemScientificResearchResponse(
+  const _$ItemScientificResearchResponseImpl(
       {this.nckhId,
       this.title,
       this.postOn,
@@ -180,9 +180,9 @@ class _$_ItemScientificResearchResponse
       this.imageUrl,
       this.href});
 
-  factory _$_ItemScientificResearchResponse.fromJson(
+  factory _$ItemScientificResearchResponseImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_ItemScientificResearchResponseFromJson(json);
+      _$$ItemScientificResearchResponseImplFromJson(json);
 
   @override
   final int? nckhId;
@@ -203,10 +203,10 @@ class _$_ItemScientificResearchResponse
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ItemScientificResearchResponse &&
+            other is _$ItemScientificResearchResponseImpl &&
             (identical(other.nckhId, nckhId) || other.nckhId == nckhId) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.postOn, postOn) || other.postOn == postOn) &&
@@ -224,13 +224,14 @@ class _$_ItemScientificResearchResponse
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ItemScientificResearchResponseCopyWith<_$_ItemScientificResearchResponse>
-      get copyWith => __$$_ItemScientificResearchResponseCopyWithImpl<
-          _$_ItemScientificResearchResponse>(this, _$identity);
+  _$$ItemScientificResearchResponseImplCopyWith<
+          _$ItemScientificResearchResponseImpl>
+      get copyWith => __$$ItemScientificResearchResponseImplCopyWithImpl<
+          _$ItemScientificResearchResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ItemScientificResearchResponseToJson(
+    return _$$ItemScientificResearchResponseImplToJson(
       this,
     );
   }
@@ -244,10 +245,10 @@ abstract class _ItemScientificResearchResponse
       final String? postOn,
       final String? postAt,
       final String? imageUrl,
-      final String? href}) = _$_ItemScientificResearchResponse;
+      final String? href}) = _$ItemScientificResearchResponseImpl;
 
   factory _ItemScientificResearchResponse.fromJson(Map<String, dynamic> json) =
-      _$_ItemScientificResearchResponse.fromJson;
+      _$ItemScientificResearchResponseImpl.fromJson;
 
   @override
   int? get nckhId;
@@ -263,6 +264,7 @@ abstract class _ItemScientificResearchResponse
   String? get href;
   @override
   @JsonKey(ignore: true)
-  _$$_ItemScientificResearchResponseCopyWith<_$_ItemScientificResearchResponse>
+  _$$ItemScientificResearchResponseImplCopyWith<
+          _$ItemScientificResearchResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

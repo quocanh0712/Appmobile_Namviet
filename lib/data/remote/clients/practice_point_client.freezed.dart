@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'practice_point_client.dart';
 
@@ -12,7 +12,7 @@ part of 'practice_point_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$PracticePointsClient {
@@ -110,10 +110,11 @@ class _$PracticePointsClientCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_GetAllCopyWith<$Res>
+abstract class _$$GetAllImplCopyWith<$Res>
     implements $PracticePointsClientCopyWith<$Res> {
-  factory _$$_GetAllCopyWith(_$_GetAll value, $Res Function(_$_GetAll) then) =
-      __$$_GetAllCopyWithImpl<$Res>;
+  factory _$$GetAllImplCopyWith(
+          _$GetAllImpl value, $Res Function(_$GetAllImpl) then) =
+      __$$GetAllImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PracticePointRequestParams? params});
@@ -123,10 +124,11 @@ abstract class _$$_GetAllCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetAllCopyWithImpl<$Res>
-    extends _$PracticePointsClientCopyWithImpl<$Res, _$_GetAll>
-    implements _$$_GetAllCopyWith<$Res> {
-  __$$_GetAllCopyWithImpl(_$_GetAll _value, $Res Function(_$_GetAll) _then)
+class __$$GetAllImplCopyWithImpl<$Res>
+    extends _$PracticePointsClientCopyWithImpl<$Res, _$GetAllImpl>
+    implements _$$GetAllImplCopyWith<$Res> {
+  __$$GetAllImplCopyWithImpl(
+      _$GetAllImpl _value, $Res Function(_$GetAllImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -134,7 +136,7 @@ class __$$_GetAllCopyWithImpl<$Res>
   $Res call({
     Object? params = freezed,
   }) {
-    return _then(_$_GetAll(
+    return _then(_$GetAllImpl(
       freezed == params
           ? _value.params
           : params // ignore: cast_nullable_to_non_nullable
@@ -145,8 +147,8 @@ class __$$_GetAllCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_GetAll extends _GetAll {
-  _$_GetAll(this.params) : super._();
+class _$GetAllImpl extends _GetAll {
+  _$GetAllImpl(this.params) : super._();
 
   @override
   final PracticePointRequestParams? params;
@@ -157,10 +159,10 @@ class _$_GetAll extends _GetAll {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetAll &&
+            other is _$GetAllImpl &&
             (identical(other.params, params) || other.params == params));
   }
 
@@ -170,8 +172,8 @@ class _$_GetAll extends _GetAll {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetAllCopyWith<_$_GetAll> get copyWith =>
-      __$$_GetAllCopyWithImpl<_$_GetAll>(this, _$identity);
+  _$$GetAllImplCopyWith<_$GetAllImpl> get copyWith =>
+      __$$GetAllImplCopyWithImpl<_$GetAllImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -237,23 +239,23 @@ class _$_GetAll extends _GetAll {
 }
 
 abstract class _GetAll extends PracticePointsClient {
-  factory _GetAll(final PracticePointRequestParams? params) = _$_GetAll;
+  factory _GetAll(final PracticePointRequestParams? params) = _$GetAllImpl;
   _GetAll._() : super._();
 
   @override
   PracticePointRequestParams? get params;
   @override
   @JsonKey(ignore: true)
-  _$$_GetAllCopyWith<_$_GetAll> get copyWith =>
+  _$$GetAllImplCopyWith<_$GetAllImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_GetChiTietCopyWith<$Res>
+abstract class _$$GetChiTietImplCopyWith<$Res>
     implements $PracticePointsClientCopyWith<$Res> {
-  factory _$$_GetChiTietCopyWith(
-          _$_GetChiTiet value, $Res Function(_$_GetChiTiet) then) =
-      __$$_GetChiTietCopyWithImpl<$Res>;
+  factory _$$GetChiTietImplCopyWith(
+          _$GetChiTietImpl value, $Res Function(_$GetChiTietImpl) then) =
+      __$$GetChiTietImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({PracticePointRequestParams? params});
@@ -263,11 +265,11 @@ abstract class _$$_GetChiTietCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetChiTietCopyWithImpl<$Res>
-    extends _$PracticePointsClientCopyWithImpl<$Res, _$_GetChiTiet>
-    implements _$$_GetChiTietCopyWith<$Res> {
-  __$$_GetChiTietCopyWithImpl(
-      _$_GetChiTiet _value, $Res Function(_$_GetChiTiet) _then)
+class __$$GetChiTietImplCopyWithImpl<$Res>
+    extends _$PracticePointsClientCopyWithImpl<$Res, _$GetChiTietImpl>
+    implements _$$GetChiTietImplCopyWith<$Res> {
+  __$$GetChiTietImplCopyWithImpl(
+      _$GetChiTietImpl _value, $Res Function(_$GetChiTietImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -275,7 +277,7 @@ class __$$_GetChiTietCopyWithImpl<$Res>
   $Res call({
     Object? params = freezed,
   }) {
-    return _then(_$_GetChiTiet(
+    return _then(_$GetChiTietImpl(
       freezed == params
           ? _value.params
           : params // ignore: cast_nullable_to_non_nullable
@@ -286,8 +288,8 @@ class __$$_GetChiTietCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_GetChiTiet extends _GetChiTiet {
-  _$_GetChiTiet(this.params) : super._();
+class _$GetChiTietImpl extends _GetChiTiet {
+  _$GetChiTietImpl(this.params) : super._();
 
   @override
   final PracticePointRequestParams? params;
@@ -298,10 +300,10 @@ class _$_GetChiTiet extends _GetChiTiet {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetChiTiet &&
+            other is _$GetChiTietImpl &&
             (identical(other.params, params) || other.params == params));
   }
 
@@ -311,8 +313,8 @@ class _$_GetChiTiet extends _GetChiTiet {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetChiTietCopyWith<_$_GetChiTiet> get copyWith =>
-      __$$_GetChiTietCopyWithImpl<_$_GetChiTiet>(this, _$identity);
+  _$$GetChiTietImplCopyWith<_$GetChiTietImpl> get copyWith =>
+      __$$GetChiTietImplCopyWithImpl<_$GetChiTietImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -378,13 +380,14 @@ class _$_GetChiTiet extends _GetChiTiet {
 }
 
 abstract class _GetChiTiet extends PracticePointsClient {
-  factory _GetChiTiet(final PracticePointRequestParams? params) = _$_GetChiTiet;
+  factory _GetChiTiet(final PracticePointRequestParams? params) =
+      _$GetChiTietImpl;
   _GetChiTiet._() : super._();
 
   @override
   PracticePointRequestParams? get params;
   @override
   @JsonKey(ignore: true)
-  _$$_GetChiTietCopyWith<_$_GetChiTiet> get copyWith =>
+  _$$GetChiTietImplCopyWith<_$GetChiTietImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

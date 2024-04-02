@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'semester_finance.dart';
 
@@ -12,7 +12,7 @@ part of 'semester_finance.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SemesterFinance _$SemesterFinanceFromJson(Map<String, dynamic> json) {
   return _SemesterFinance.fromJson(json);
@@ -91,11 +91,11 @@ class _$SemesterFinanceCopyWithImpl<$Res, $Val extends SemesterFinance>
 }
 
 /// @nodoc
-abstract class _$$_SemesterFinanceCopyWith<$Res>
+abstract class _$$SemesterFinanceImplCopyWith<$Res>
     implements $SemesterFinanceCopyWith<$Res> {
-  factory _$$_SemesterFinanceCopyWith(
-          _$_SemesterFinance value, $Res Function(_$_SemesterFinance) then) =
-      __$$_SemesterFinanceCopyWithImpl<$Res>;
+  factory _$$SemesterFinanceImplCopyWith(_$SemesterFinanceImpl value,
+          $Res Function(_$SemesterFinanceImpl) then) =
+      __$$SemesterFinanceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -107,11 +107,11 @@ abstract class _$$_SemesterFinanceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_SemesterFinanceCopyWithImpl<$Res>
-    extends _$SemesterFinanceCopyWithImpl<$Res, _$_SemesterFinance>
-    implements _$$_SemesterFinanceCopyWith<$Res> {
-  __$$_SemesterFinanceCopyWithImpl(
-      _$_SemesterFinance _value, $Res Function(_$_SemesterFinance) _then)
+class __$$SemesterFinanceImplCopyWithImpl<$Res>
+    extends _$SemesterFinanceCopyWithImpl<$Res, _$SemesterFinanceImpl>
+    implements _$$SemesterFinanceImplCopyWith<$Res> {
+  __$$SemesterFinanceImplCopyWithImpl(
+      _$SemesterFinanceImpl _value, $Res Function(_$SemesterFinanceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +123,7 @@ class __$$_SemesterFinanceCopyWithImpl<$Res>
     Object? feePaid = freezed,
     Object? excessFee = freezed,
   }) {
-    return _then(_$_SemesterFinance(
+    return _then(_$SemesterFinanceImpl(
       year: freezed == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
@@ -150,12 +150,12 @@ class __$$_SemesterFinanceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SemesterFinance implements _SemesterFinance {
-  _$_SemesterFinance(
+class _$SemesterFinanceImpl implements _SemesterFinance {
+  _$SemesterFinanceImpl(
       {this.year, this.semester, this.totalFee, this.feePaid, this.excessFee});
 
-  factory _$_SemesterFinance.fromJson(Map<String, dynamic> json) =>
-      _$$_SemesterFinanceFromJson(json);
+  factory _$SemesterFinanceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SemesterFinanceImplFromJson(json);
 
   @override
   final String? year;
@@ -174,10 +174,10 @@ class _$_SemesterFinance implements _SemesterFinance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SemesterFinance &&
+            other is _$SemesterFinanceImpl &&
             (identical(other.year, year) || other.year == year) &&
             (identical(other.semester, semester) ||
                 other.semester == semester) &&
@@ -196,12 +196,13 @@ class _$_SemesterFinance implements _SemesterFinance {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SemesterFinanceCopyWith<_$_SemesterFinance> get copyWith =>
-      __$$_SemesterFinanceCopyWithImpl<_$_SemesterFinance>(this, _$identity);
+  _$$SemesterFinanceImplCopyWith<_$SemesterFinanceImpl> get copyWith =>
+      __$$SemesterFinanceImplCopyWithImpl<_$SemesterFinanceImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SemesterFinanceToJson(
+    return _$$SemesterFinanceImplToJson(
       this,
     );
   }
@@ -213,10 +214,10 @@ abstract class _SemesterFinance implements SemesterFinance {
       final int? semester,
       final int? totalFee,
       final int? feePaid,
-      final int? excessFee}) = _$_SemesterFinance;
+      final int? excessFee}) = _$SemesterFinanceImpl;
 
   factory _SemesterFinance.fromJson(Map<String, dynamic> json) =
-      _$_SemesterFinance.fromJson;
+      _$SemesterFinanceImpl.fromJson;
 
   @override
   String? get year;
@@ -230,6 +231,6 @@ abstract class _SemesterFinance implements SemesterFinance {
   int? get excessFee;
   @override
   @JsonKey(ignore: true)
-  _$$_SemesterFinanceCopyWith<_$_SemesterFinance> get copyWith =>
+  _$$SemesterFinanceImplCopyWith<_$SemesterFinanceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

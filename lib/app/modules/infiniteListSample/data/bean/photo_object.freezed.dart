@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'photo_object.dart';
 
@@ -12,7 +12,7 @@ part of 'photo_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PhotoObject _$PhotoObjectFromJson(Map<String, dynamic> json) {
   return _PhotoObject.fromJson(json);
@@ -67,7 +67,7 @@ class _$PhotoObjectCopyWithImpl<$Res, $Val extends PhotoObject>
     Object? title = freezed,
     Object? url = freezed,
     Object? thumbnailUrl = freezed,
-    Object? color = null,
+    Object? color = freezed,
   }) {
     return _then(_value.copyWith(
       albumId: freezed == albumId
@@ -90,7 +90,7 @@ class _$PhotoObjectCopyWithImpl<$Res, $Val extends PhotoObject>
           ? _value.thumbnailUrl
           : thumbnailUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      color: null == color
+      color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as Color?,
@@ -99,11 +99,11 @@ class _$PhotoObjectCopyWithImpl<$Res, $Val extends PhotoObject>
 }
 
 /// @nodoc
-abstract class _$$_PhotoObjectCopyWith<$Res>
+abstract class _$$PhotoObjectImplCopyWith<$Res>
     implements $PhotoObjectCopyWith<$Res> {
-  factory _$$_PhotoObjectCopyWith(
-          _$_PhotoObject value, $Res Function(_$_PhotoObject) then) =
-      __$$_PhotoObjectCopyWithImpl<$Res>;
+  factory _$$PhotoObjectImplCopyWith(
+          _$PhotoObjectImpl value, $Res Function(_$PhotoObjectImpl) then) =
+      __$$PhotoObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -116,11 +116,11 @@ abstract class _$$_PhotoObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PhotoObjectCopyWithImpl<$Res>
-    extends _$PhotoObjectCopyWithImpl<$Res, _$_PhotoObject>
-    implements _$$_PhotoObjectCopyWith<$Res> {
-  __$$_PhotoObjectCopyWithImpl(
-      _$_PhotoObject _value, $Res Function(_$_PhotoObject) _then)
+class __$$PhotoObjectImplCopyWithImpl<$Res>
+    extends _$PhotoObjectCopyWithImpl<$Res, _$PhotoObjectImpl>
+    implements _$$PhotoObjectImplCopyWith<$Res> {
+  __$$PhotoObjectImplCopyWithImpl(
+      _$PhotoObjectImpl _value, $Res Function(_$PhotoObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -131,9 +131,9 @@ class __$$_PhotoObjectCopyWithImpl<$Res>
     Object? title = freezed,
     Object? url = freezed,
     Object? thumbnailUrl = freezed,
-    Object? color = null,
+    Object? color = freezed,
   }) {
-    return _then(_$_PhotoObject(
+    return _then(_$PhotoObjectImpl(
       albumId: freezed == albumId
           ? _value.albumId
           : albumId // ignore: cast_nullable_to_non_nullable
@@ -154,7 +154,7 @@ class __$$_PhotoObjectCopyWithImpl<$Res>
           ? _value.thumbnailUrl
           : thumbnailUrl // ignore: cast_nullable_to_non_nullable
               as String?,
-      color: null == color
+      color: freezed == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
               as Color?,
@@ -164,8 +164,8 @@ class __$$_PhotoObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PhotoObject implements _PhotoObject {
-  _$_PhotoObject(
+class _$PhotoObjectImpl implements _PhotoObject {
+  _$PhotoObjectImpl(
       {this.albumId,
       this.id,
       this.title,
@@ -173,8 +173,8 @@ class _$_PhotoObject implements _PhotoObject {
       this.thumbnailUrl,
       @ColorJsonConverter() this.color});
 
-  factory _$_PhotoObject.fromJson(Map<String, dynamic> json) =>
-      _$$_PhotoObjectFromJson(json);
+  factory _$PhotoObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PhotoObjectImplFromJson(json);
 
   @override
   final int? albumId;
@@ -196,33 +196,33 @@ class _$_PhotoObject implements _PhotoObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PhotoObject &&
+            other is _$PhotoObjectImpl &&
             (identical(other.albumId, albumId) || other.albumId == albumId) &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
             (identical(other.url, url) || other.url == url) &&
             (identical(other.thumbnailUrl, thumbnailUrl) ||
                 other.thumbnailUrl == thumbnailUrl) &&
-            const DeepCollectionEquality().equals(other.color, color));
+            (identical(other.color, color) || other.color == color));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, albumId, id, title, url,
-      thumbnailUrl, const DeepCollectionEquality().hash(color));
+  int get hashCode =>
+      Object.hash(runtimeType, albumId, id, title, url, thumbnailUrl, color);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PhotoObjectCopyWith<_$_PhotoObject> get copyWith =>
-      __$$_PhotoObjectCopyWithImpl<_$_PhotoObject>(this, _$identity);
+  _$$PhotoObjectImplCopyWith<_$PhotoObjectImpl> get copyWith =>
+      __$$PhotoObjectImplCopyWithImpl<_$PhotoObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PhotoObjectToJson(
+    return _$$PhotoObjectImplToJson(
       this,
     );
   }
@@ -235,10 +235,10 @@ abstract class _PhotoObject implements PhotoObject {
       final String? title,
       final String? url,
       final String? thumbnailUrl,
-      @ColorJsonConverter() final Color? color}) = _$_PhotoObject;
+      @ColorJsonConverter() final Color? color}) = _$PhotoObjectImpl;
 
   factory _PhotoObject.fromJson(Map<String, dynamic> json) =
-      _$_PhotoObject.fromJson;
+      _$PhotoObjectImpl.fromJson;
 
   @override
   int? get albumId;
@@ -255,6 +255,6 @@ abstract class _PhotoObject implements PhotoObject {
   Color? get color;
   @override
   @JsonKey(ignore: true)
-  _$$_PhotoObjectCopyWith<_$_PhotoObject> get copyWith =>
+  _$$PhotoObjectImplCopyWith<_$PhotoObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

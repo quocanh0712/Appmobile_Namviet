@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'reward_discipline_request.dart';
 
@@ -12,7 +12,7 @@ part of 'reward_discipline_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RewardDisciplineRequest _$RewardDisciplineRequestFromJson(
     Map<String, dynamic> json) {
@@ -70,23 +70,25 @@ class _$RewardDisciplineRequestCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_RewardDisciplineRequestCopyWith<$Res>
+abstract class _$$RewardDisciplineRequestImplCopyWith<$Res>
     implements $RewardDisciplineRequestCopyWith<$Res> {
-  factory _$$_RewardDisciplineRequestCopyWith(_$_RewardDisciplineRequest value,
-          $Res Function(_$_RewardDisciplineRequest) then) =
-      __$$_RewardDisciplineRequestCopyWithImpl<$Res>;
+  factory _$$RewardDisciplineRequestImplCopyWith(
+          _$RewardDisciplineRequestImpl value,
+          $Res Function(_$RewardDisciplineRequestImpl) then) =
+      __$$RewardDisciplineRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? startindex, int? length});
 }
 
 /// @nodoc
-class __$$_RewardDisciplineRequestCopyWithImpl<$Res>
+class __$$RewardDisciplineRequestImplCopyWithImpl<$Res>
     extends _$RewardDisciplineRequestCopyWithImpl<$Res,
-        _$_RewardDisciplineRequest>
-    implements _$$_RewardDisciplineRequestCopyWith<$Res> {
-  __$$_RewardDisciplineRequestCopyWithImpl(_$_RewardDisciplineRequest _value,
-      $Res Function(_$_RewardDisciplineRequest) _then)
+        _$RewardDisciplineRequestImpl>
+    implements _$$RewardDisciplineRequestImplCopyWith<$Res> {
+  __$$RewardDisciplineRequestImplCopyWithImpl(
+      _$RewardDisciplineRequestImpl _value,
+      $Res Function(_$RewardDisciplineRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -95,7 +97,7 @@ class __$$_RewardDisciplineRequestCopyWithImpl<$Res>
     Object? startindex = freezed,
     Object? length = freezed,
   }) {
-    return _then(_$_RewardDisciplineRequest(
+    return _then(_$RewardDisciplineRequestImpl(
       startindex: freezed == startindex
           ? _value.startindex
           : startindex // ignore: cast_nullable_to_non_nullable
@@ -110,11 +112,11 @@ class __$$_RewardDisciplineRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RewardDisciplineRequest implements _RewardDisciplineRequest {
-  const _$_RewardDisciplineRequest({this.startindex, this.length});
+class _$RewardDisciplineRequestImpl implements _RewardDisciplineRequest {
+  const _$RewardDisciplineRequestImpl({this.startindex, this.length});
 
-  factory _$_RewardDisciplineRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_RewardDisciplineRequestFromJson(json);
+  factory _$RewardDisciplineRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RewardDisciplineRequestImplFromJson(json);
 
   @override
   final int? startindex;
@@ -127,10 +129,10 @@ class _$_RewardDisciplineRequest implements _RewardDisciplineRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RewardDisciplineRequest &&
+            other is _$RewardDisciplineRequestImpl &&
             (identical(other.startindex, startindex) ||
                 other.startindex == startindex) &&
             (identical(other.length, length) || other.length == length));
@@ -143,14 +145,13 @@ class _$_RewardDisciplineRequest implements _RewardDisciplineRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RewardDisciplineRequestCopyWith<_$_RewardDisciplineRequest>
-      get copyWith =>
-          __$$_RewardDisciplineRequestCopyWithImpl<_$_RewardDisciplineRequest>(
-              this, _$identity);
+  _$$RewardDisciplineRequestImplCopyWith<_$RewardDisciplineRequestImpl>
+      get copyWith => __$$RewardDisciplineRequestImplCopyWithImpl<
+          _$RewardDisciplineRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RewardDisciplineRequestToJson(
+    return _$$RewardDisciplineRequestImplToJson(
       this,
     );
   }
@@ -158,10 +159,11 @@ class _$_RewardDisciplineRequest implements _RewardDisciplineRequest {
 
 abstract class _RewardDisciplineRequest implements RewardDisciplineRequest {
   const factory _RewardDisciplineRequest(
-      {final int? startindex, final int? length}) = _$_RewardDisciplineRequest;
+      {final int? startindex,
+      final int? length}) = _$RewardDisciplineRequestImpl;
 
   factory _RewardDisciplineRequest.fromJson(Map<String, dynamic> json) =
-      _$_RewardDisciplineRequest.fromJson;
+      _$RewardDisciplineRequestImpl.fromJson;
 
   @override
   int? get startindex;
@@ -169,6 +171,6 @@ abstract class _RewardDisciplineRequest implements RewardDisciplineRequest {
   int? get length;
   @override
   @JsonKey(ignore: true)
-  _$$_RewardDisciplineRequestCopyWith<_$_RewardDisciplineRequest>
+  _$$RewardDisciplineRequestImplCopyWith<_$RewardDisciplineRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

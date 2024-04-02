@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'learning_process_client.dart';
 
@@ -12,10 +12,11 @@ part of 'learning_process_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$LearningProcessClient {
+  Object? get model => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(WorkingProcessRequest? model)
@@ -115,10 +116,10 @@ class _$LearningProcessClientCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_LearningProcessListCopyWith<$Res> {
-  factory _$$_LearningProcessListCopyWith(_$_LearningProcessList value,
-          $Res Function(_$_LearningProcessList) then) =
-      __$$_LearningProcessListCopyWithImpl<$Res>;
+abstract class _$$LearningProcessListImplCopyWith<$Res> {
+  factory _$$LearningProcessListImplCopyWith(_$LearningProcessListImpl value,
+          $Res Function(_$LearningProcessListImpl) then) =
+      __$$LearningProcessListImplCopyWithImpl<$Res>;
   @useResult
   $Res call({WorkingProcessRequest? model});
 
@@ -126,11 +127,11 @@ abstract class _$$_LearningProcessListCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_LearningProcessListCopyWithImpl<$Res>
-    extends _$LearningProcessClientCopyWithImpl<$Res, _$_LearningProcessList>
-    implements _$$_LearningProcessListCopyWith<$Res> {
-  __$$_LearningProcessListCopyWithImpl(_$_LearningProcessList _value,
-      $Res Function(_$_LearningProcessList) _then)
+class __$$LearningProcessListImplCopyWithImpl<$Res>
+    extends _$LearningProcessClientCopyWithImpl<$Res, _$LearningProcessListImpl>
+    implements _$$LearningProcessListImplCopyWith<$Res> {
+  __$$LearningProcessListImplCopyWithImpl(_$LearningProcessListImpl _value,
+      $Res Function(_$LearningProcessListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -138,7 +139,7 @@ class __$$_LearningProcessListCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_LearningProcessList(
+    return _then(_$LearningProcessListImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -161,8 +162,8 @@ class __$$_LearningProcessListCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LearningProcessList extends _LearningProcessList {
-  _$_LearningProcessList(this.model) : super._();
+class _$LearningProcessListImpl extends _LearningProcessList {
+  _$LearningProcessListImpl(this.model) : super._();
 
   @override
   final WorkingProcessRequest? model;
@@ -173,10 +174,10 @@ class _$_LearningProcessList extends _LearningProcessList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LearningProcessList &&
+            other is _$LearningProcessListImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -186,8 +187,8 @@ class _$_LearningProcessList extends _LearningProcessList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LearningProcessListCopyWith<_$_LearningProcessList> get copyWith =>
-      __$$_LearningProcessListCopyWithImpl<_$_LearningProcessList>(
+  _$$LearningProcessListImplCopyWith<_$LearningProcessListImpl> get copyWith =>
+      __$$LearningProcessListImplCopyWithImpl<_$LearningProcessListImpl>(
           this, _$identity);
 
   @override
@@ -294,20 +295,21 @@ class _$_LearningProcessList extends _LearningProcessList {
 
 abstract class _LearningProcessList extends LearningProcessClient {
   factory _LearningProcessList(final WorkingProcessRequest? model) =
-      _$_LearningProcessList;
+      _$LearningProcessListImpl;
   _LearningProcessList._() : super._();
 
+  @override
   WorkingProcessRequest? get model;
   @JsonKey(ignore: true)
-  _$$_LearningProcessListCopyWith<_$_LearningProcessList> get copyWith =>
+  _$$LearningProcessListImplCopyWith<_$LearningProcessListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_LearningProfileListCopyWith<$Res> {
-  factory _$$_LearningProfileListCopyWith(_$_LearningProfileList value,
-          $Res Function(_$_LearningProfileList) then) =
-      __$$_LearningProfileListCopyWithImpl<$Res>;
+abstract class _$$LearningProfileListImplCopyWith<$Res> {
+  factory _$$LearningProfileListImplCopyWith(_$LearningProfileListImpl value,
+          $Res Function(_$LearningProfileListImpl) then) =
+      __$$LearningProfileListImplCopyWithImpl<$Res>;
   @useResult
   $Res call({WorkingProcessRequest? model});
 
@@ -315,11 +317,11 @@ abstract class _$$_LearningProfileListCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_LearningProfileListCopyWithImpl<$Res>
-    extends _$LearningProcessClientCopyWithImpl<$Res, _$_LearningProfileList>
-    implements _$$_LearningProfileListCopyWith<$Res> {
-  __$$_LearningProfileListCopyWithImpl(_$_LearningProfileList _value,
-      $Res Function(_$_LearningProfileList) _then)
+class __$$LearningProfileListImplCopyWithImpl<$Res>
+    extends _$LearningProcessClientCopyWithImpl<$Res, _$LearningProfileListImpl>
+    implements _$$LearningProfileListImplCopyWith<$Res> {
+  __$$LearningProfileListImplCopyWithImpl(_$LearningProfileListImpl _value,
+      $Res Function(_$LearningProfileListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -327,7 +329,7 @@ class __$$_LearningProfileListCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_LearningProfileList(
+    return _then(_$LearningProfileListImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -350,8 +352,8 @@ class __$$_LearningProfileListCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LearningProfileList extends _LearningProfileList {
-  _$_LearningProfileList(this.model) : super._();
+class _$LearningProfileListImpl extends _LearningProfileList {
+  _$LearningProfileListImpl(this.model) : super._();
 
   @override
   final WorkingProcessRequest? model;
@@ -362,10 +364,10 @@ class _$_LearningProfileList extends _LearningProfileList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LearningProfileList &&
+            other is _$LearningProfileListImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -375,8 +377,8 @@ class _$_LearningProfileList extends _LearningProfileList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LearningProfileListCopyWith<_$_LearningProfileList> get copyWith =>
-      __$$_LearningProfileListCopyWithImpl<_$_LearningProfileList>(
+  _$$LearningProfileListImplCopyWith<_$LearningProfileListImpl> get copyWith =>
+      __$$LearningProfileListImplCopyWithImpl<_$LearningProfileListImpl>(
           this, _$identity);
 
   @override
@@ -483,21 +485,22 @@ class _$_LearningProfileList extends _LearningProfileList {
 
 abstract class _LearningProfileList extends LearningProcessClient {
   factory _LearningProfileList(final WorkingProcessRequest? model) =
-      _$_LearningProfileList;
+      _$LearningProfileListImpl;
   _LearningProfileList._() : super._();
 
+  @override
   WorkingProcessRequest? get model;
   @JsonKey(ignore: true)
-  _$$_LearningProfileListCopyWith<_$_LearningProfileList> get copyWith =>
+  _$$LearningProfileListImplCopyWith<_$LearningProfileListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_UpdateLearningProfileListCopyWith<$Res> {
-  factory _$$_UpdateLearningProfileListCopyWith(
-          _$_UpdateLearningProfileList value,
-          $Res Function(_$_UpdateLearningProfileList) then) =
-      __$$_UpdateLearningProfileListCopyWithImpl<$Res>;
+abstract class _$$UpdateLearningProfileListImplCopyWith<$Res> {
+  factory _$$UpdateLearningProfileListImplCopyWith(
+          _$UpdateLearningProfileListImpl value,
+          $Res Function(_$UpdateLearningProfileListImpl) then) =
+      __$$UpdateLearningProfileListImplCopyWithImpl<$Res>;
   @useResult
   $Res call({LearningProfileResponse? model});
 
@@ -505,13 +508,13 @@ abstract class _$$_UpdateLearningProfileListCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_UpdateLearningProfileListCopyWithImpl<$Res>
+class __$$UpdateLearningProfileListImplCopyWithImpl<$Res>
     extends _$LearningProcessClientCopyWithImpl<$Res,
-        _$_UpdateLearningProfileList>
-    implements _$$_UpdateLearningProfileListCopyWith<$Res> {
-  __$$_UpdateLearningProfileListCopyWithImpl(
-      _$_UpdateLearningProfileList _value,
-      $Res Function(_$_UpdateLearningProfileList) _then)
+        _$UpdateLearningProfileListImpl>
+    implements _$$UpdateLearningProfileListImplCopyWith<$Res> {
+  __$$UpdateLearningProfileListImplCopyWithImpl(
+      _$UpdateLearningProfileListImpl _value,
+      $Res Function(_$UpdateLearningProfileListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -519,7 +522,7 @@ class __$$_UpdateLearningProfileListCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_UpdateLearningProfileList(
+    return _then(_$UpdateLearningProfileListImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -542,8 +545,8 @@ class __$$_UpdateLearningProfileListCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateLearningProfileList extends _UpdateLearningProfileList {
-  _$_UpdateLearningProfileList(this.model) : super._();
+class _$UpdateLearningProfileListImpl extends _UpdateLearningProfileList {
+  _$UpdateLearningProfileListImpl(this.model) : super._();
 
   @override
   final LearningProfileResponse? model;
@@ -554,10 +557,10 @@ class _$_UpdateLearningProfileList extends _UpdateLearningProfileList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UpdateLearningProfileList &&
+            other is _$UpdateLearningProfileListImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -567,9 +570,9 @@ class _$_UpdateLearningProfileList extends _UpdateLearningProfileList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateLearningProfileListCopyWith<_$_UpdateLearningProfileList>
-      get copyWith => __$$_UpdateLearningProfileListCopyWithImpl<
-          _$_UpdateLearningProfileList>(this, _$identity);
+  _$$UpdateLearningProfileListImplCopyWith<_$UpdateLearningProfileListImpl>
+      get copyWith => __$$UpdateLearningProfileListImplCopyWithImpl<
+          _$UpdateLearningProfileListImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -675,20 +678,22 @@ class _$_UpdateLearningProfileList extends _UpdateLearningProfileList {
 
 abstract class _UpdateLearningProfileList extends LearningProcessClient {
   factory _UpdateLearningProfileList(final LearningProfileResponse? model) =
-      _$_UpdateLearningProfileList;
+      _$UpdateLearningProfileListImpl;
   _UpdateLearningProfileList._() : super._();
 
+  @override
   LearningProfileResponse? get model;
   @JsonKey(ignore: true)
-  _$$_UpdateLearningProfileListCopyWith<_$_UpdateLearningProfileList>
+  _$$UpdateLearningProfileListImplCopyWith<_$UpdateLearningProfileListImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_DeleteLearningProcessCopyWith<$Res> {
-  factory _$$_DeleteLearningProcessCopyWith(_$_DeleteLearningProcess value,
-          $Res Function(_$_DeleteLearningProcess) then) =
-      __$$_DeleteLearningProcessCopyWithImpl<$Res>;
+abstract class _$$DeleteLearningProcessImplCopyWith<$Res> {
+  factory _$$DeleteLearningProcessImplCopyWith(
+          _$DeleteLearningProcessImpl value,
+          $Res Function(_$DeleteLearningProcessImpl) then) =
+      __$$DeleteLearningProcessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({LearningProcessResponse? model});
 
@@ -696,11 +701,12 @@ abstract class _$$_DeleteLearningProcessCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_DeleteLearningProcessCopyWithImpl<$Res>
-    extends _$LearningProcessClientCopyWithImpl<$Res, _$_DeleteLearningProcess>
-    implements _$$_DeleteLearningProcessCopyWith<$Res> {
-  __$$_DeleteLearningProcessCopyWithImpl(_$_DeleteLearningProcess _value,
-      $Res Function(_$_DeleteLearningProcess) _then)
+class __$$DeleteLearningProcessImplCopyWithImpl<$Res>
+    extends _$LearningProcessClientCopyWithImpl<$Res,
+        _$DeleteLearningProcessImpl>
+    implements _$$DeleteLearningProcessImplCopyWith<$Res> {
+  __$$DeleteLearningProcessImplCopyWithImpl(_$DeleteLearningProcessImpl _value,
+      $Res Function(_$DeleteLearningProcessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -708,7 +714,7 @@ class __$$_DeleteLearningProcessCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_DeleteLearningProcess(
+    return _then(_$DeleteLearningProcessImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -731,8 +737,8 @@ class __$$_DeleteLearningProcessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DeleteLearningProcess extends _DeleteLearningProcess {
-  _$_DeleteLearningProcess(this.model) : super._();
+class _$DeleteLearningProcessImpl extends _DeleteLearningProcess {
+  _$DeleteLearningProcessImpl(this.model) : super._();
 
   @override
   final LearningProcessResponse? model;
@@ -743,10 +749,10 @@ class _$_DeleteLearningProcess extends _DeleteLearningProcess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DeleteLearningProcess &&
+            other is _$DeleteLearningProcessImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -756,9 +762,9 @@ class _$_DeleteLearningProcess extends _DeleteLearningProcess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DeleteLearningProcessCopyWith<_$_DeleteLearningProcess> get copyWith =>
-      __$$_DeleteLearningProcessCopyWithImpl<_$_DeleteLearningProcess>(
-          this, _$identity);
+  _$$DeleteLearningProcessImplCopyWith<_$DeleteLearningProcessImpl>
+      get copyWith => __$$DeleteLearningProcessImplCopyWithImpl<
+          _$DeleteLearningProcessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -864,20 +870,22 @@ class _$_DeleteLearningProcess extends _DeleteLearningProcess {
 
 abstract class _DeleteLearningProcess extends LearningProcessClient {
   factory _DeleteLearningProcess(final LearningProcessResponse? model) =
-      _$_DeleteLearningProcess;
+      _$DeleteLearningProcessImpl;
   _DeleteLearningProcess._() : super._();
 
+  @override
   LearningProcessResponse? get model;
   @JsonKey(ignore: true)
-  _$$_DeleteLearningProcessCopyWith<_$_DeleteLearningProcess> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DeleteLearningProcessImplCopyWith<_$DeleteLearningProcessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_UpdateLearningProcessCopyWith<$Res> {
-  factory _$$_UpdateLearningProcessCopyWith(_$_UpdateLearningProcess value,
-          $Res Function(_$_UpdateLearningProcess) then) =
-      __$$_UpdateLearningProcessCopyWithImpl<$Res>;
+abstract class _$$UpdateLearningProcessImplCopyWith<$Res> {
+  factory _$$UpdateLearningProcessImplCopyWith(
+          _$UpdateLearningProcessImpl value,
+          $Res Function(_$UpdateLearningProcessImpl) then) =
+      __$$UpdateLearningProcessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({LearningProcessResponse? model});
 
@@ -885,11 +893,12 @@ abstract class _$$_UpdateLearningProcessCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_UpdateLearningProcessCopyWithImpl<$Res>
-    extends _$LearningProcessClientCopyWithImpl<$Res, _$_UpdateLearningProcess>
-    implements _$$_UpdateLearningProcessCopyWith<$Res> {
-  __$$_UpdateLearningProcessCopyWithImpl(_$_UpdateLearningProcess _value,
-      $Res Function(_$_UpdateLearningProcess) _then)
+class __$$UpdateLearningProcessImplCopyWithImpl<$Res>
+    extends _$LearningProcessClientCopyWithImpl<$Res,
+        _$UpdateLearningProcessImpl>
+    implements _$$UpdateLearningProcessImplCopyWith<$Res> {
+  __$$UpdateLearningProcessImplCopyWithImpl(_$UpdateLearningProcessImpl _value,
+      $Res Function(_$UpdateLearningProcessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -897,7 +906,7 @@ class __$$_UpdateLearningProcessCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_UpdateLearningProcess(
+    return _then(_$UpdateLearningProcessImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -920,8 +929,8 @@ class __$$_UpdateLearningProcessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateLearningProcess extends _UpdateLearningProcess {
-  _$_UpdateLearningProcess(this.model) : super._();
+class _$UpdateLearningProcessImpl extends _UpdateLearningProcess {
+  _$UpdateLearningProcessImpl(this.model) : super._();
 
   @override
   final LearningProcessResponse? model;
@@ -932,10 +941,10 @@ class _$_UpdateLearningProcess extends _UpdateLearningProcess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UpdateLearningProcess &&
+            other is _$UpdateLearningProcessImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -945,9 +954,9 @@ class _$_UpdateLearningProcess extends _UpdateLearningProcess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateLearningProcessCopyWith<_$_UpdateLearningProcess> get copyWith =>
-      __$$_UpdateLearningProcessCopyWithImpl<_$_UpdateLearningProcess>(
-          this, _$identity);
+  _$$UpdateLearningProcessImplCopyWith<_$UpdateLearningProcessImpl>
+      get copyWith => __$$UpdateLearningProcessImplCopyWithImpl<
+          _$UpdateLearningProcessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1053,20 +1062,22 @@ class _$_UpdateLearningProcess extends _UpdateLearningProcess {
 
 abstract class _UpdateLearningProcess extends LearningProcessClient {
   factory _UpdateLearningProcess(final LearningProcessResponse? model) =
-      _$_UpdateLearningProcess;
+      _$UpdateLearningProcessImpl;
   _UpdateLearningProcess._() : super._();
 
+  @override
   LearningProcessResponse? get model;
   @JsonKey(ignore: true)
-  _$$_UpdateLearningProcessCopyWith<_$_UpdateLearningProcess> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$UpdateLearningProcessImplCopyWith<_$UpdateLearningProcessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_InsertLearningProcessCopyWith<$Res> {
-  factory _$$_InsertLearningProcessCopyWith(_$_InsertLearningProcess value,
-          $Res Function(_$_InsertLearningProcess) then) =
-      __$$_InsertLearningProcessCopyWithImpl<$Res>;
+abstract class _$$InsertLearningProcessImplCopyWith<$Res> {
+  factory _$$InsertLearningProcessImplCopyWith(
+          _$InsertLearningProcessImpl value,
+          $Res Function(_$InsertLearningProcessImpl) then) =
+      __$$InsertLearningProcessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({LearningProcessResponse? model});
 
@@ -1074,11 +1085,12 @@ abstract class _$$_InsertLearningProcessCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_InsertLearningProcessCopyWithImpl<$Res>
-    extends _$LearningProcessClientCopyWithImpl<$Res, _$_InsertLearningProcess>
-    implements _$$_InsertLearningProcessCopyWith<$Res> {
-  __$$_InsertLearningProcessCopyWithImpl(_$_InsertLearningProcess _value,
-      $Res Function(_$_InsertLearningProcess) _then)
+class __$$InsertLearningProcessImplCopyWithImpl<$Res>
+    extends _$LearningProcessClientCopyWithImpl<$Res,
+        _$InsertLearningProcessImpl>
+    implements _$$InsertLearningProcessImplCopyWith<$Res> {
+  __$$InsertLearningProcessImplCopyWithImpl(_$InsertLearningProcessImpl _value,
+      $Res Function(_$InsertLearningProcessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1086,7 +1098,7 @@ class __$$_InsertLearningProcessCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_InsertLearningProcess(
+    return _then(_$InsertLearningProcessImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -1109,8 +1121,8 @@ class __$$_InsertLearningProcessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InsertLearningProcess extends _InsertLearningProcess {
-  _$_InsertLearningProcess(this.model) : super._();
+class _$InsertLearningProcessImpl extends _InsertLearningProcess {
+  _$InsertLearningProcessImpl(this.model) : super._();
 
   @override
   final LearningProcessResponse? model;
@@ -1121,10 +1133,10 @@ class _$_InsertLearningProcess extends _InsertLearningProcess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InsertLearningProcess &&
+            other is _$InsertLearningProcessImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -1134,9 +1146,9 @@ class _$_InsertLearningProcess extends _InsertLearningProcess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InsertLearningProcessCopyWith<_$_InsertLearningProcess> get copyWith =>
-      __$$_InsertLearningProcessCopyWithImpl<_$_InsertLearningProcess>(
-          this, _$identity);
+  _$$InsertLearningProcessImplCopyWith<_$InsertLearningProcessImpl>
+      get copyWith => __$$InsertLearningProcessImplCopyWithImpl<
+          _$InsertLearningProcessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1242,11 +1254,12 @@ class _$_InsertLearningProcess extends _InsertLearningProcess {
 
 abstract class _InsertLearningProcess extends LearningProcessClient {
   factory _InsertLearningProcess(final LearningProcessResponse? model) =
-      _$_InsertLearningProcess;
+      _$InsertLearningProcessImpl;
   _InsertLearningProcess._() : super._();
 
+  @override
   LearningProcessResponse? get model;
   @JsonKey(ignore: true)
-  _$$_InsertLearningProcessCopyWith<_$_InsertLearningProcess> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InsertLearningProcessImplCopyWith<_$InsertLearningProcessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

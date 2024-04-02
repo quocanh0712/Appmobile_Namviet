@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'conversation_response.dart';
 
@@ -12,7 +12,7 @@ part of 'conversation_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ConversationResponse _$ConversationResponseFromJson(Map<String, dynamic> json) {
   return _ConversationResponse.fromJson(json);
@@ -120,11 +120,11 @@ class _$ConversationResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ConversationResponseCopyWith<$Res>
+abstract class _$$ConversationResponseImplCopyWith<$Res>
     implements $ConversationResponseCopyWith<$Res> {
-  factory _$$_ConversationResponseCopyWith(_$_ConversationResponse value,
-          $Res Function(_$_ConversationResponse) then) =
-      __$$_ConversationResponseCopyWithImpl<$Res>;
+  factory _$$ConversationResponseImplCopyWith(_$ConversationResponseImpl value,
+          $Res Function(_$ConversationResponseImpl) then) =
+      __$$ConversationResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -140,11 +140,11 @@ abstract class _$$_ConversationResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ConversationResponseCopyWithImpl<$Res>
-    extends _$ConversationResponseCopyWithImpl<$Res, _$_ConversationResponse>
-    implements _$$_ConversationResponseCopyWith<$Res> {
-  __$$_ConversationResponseCopyWithImpl(_$_ConversationResponse _value,
-      $Res Function(_$_ConversationResponse) _then)
+class __$$ConversationResponseImplCopyWithImpl<$Res>
+    extends _$ConversationResponseCopyWithImpl<$Res, _$ConversationResponseImpl>
+    implements _$$ConversationResponseImplCopyWith<$Res> {
+  __$$ConversationResponseImplCopyWithImpl(_$ConversationResponseImpl _value,
+      $Res Function(_$ConversationResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -160,7 +160,7 @@ class __$$_ConversationResponseCopyWithImpl<$Res>
     Object? updateAt = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_ConversationResponse(
+    return _then(_$ConversationResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -203,8 +203,8 @@ class __$$_ConversationResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ConversationResponse implements _ConversationResponse {
-  const _$_ConversationResponse(
+class _$ConversationResponseImpl implements _ConversationResponse {
+  const _$ConversationResponseImpl(
       {this.id,
       this.conversationname,
       this.content,
@@ -215,8 +215,8 @@ class _$_ConversationResponse implements _ConversationResponse {
       this.updateAt,
       this.status});
 
-  factory _$_ConversationResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_ConversationResponseFromJson(json);
+  factory _$ConversationResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ConversationResponseImplFromJson(json);
 
   @override
   final int? id;
@@ -243,10 +243,10 @@ class _$_ConversationResponse implements _ConversationResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ConversationResponse &&
+            other is _$ConversationResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.conversationname, conversationname) ||
                 other.conversationname == conversationname) &&
@@ -268,13 +268,14 @@ class _$_ConversationResponse implements _ConversationResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ConversationResponseCopyWith<_$_ConversationResponse> get copyWith =>
-      __$$_ConversationResponseCopyWithImpl<_$_ConversationResponse>(
-          this, _$identity);
+  _$$ConversationResponseImplCopyWith<_$ConversationResponseImpl>
+      get copyWith =>
+          __$$ConversationResponseImplCopyWithImpl<_$ConversationResponseImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConversationResponseToJson(
+    return _$$ConversationResponseImplToJson(
       this,
     );
   }
@@ -290,10 +291,10 @@ abstract class _ConversationResponse implements ConversationResponse {
       final String? iDCb,
       final String? teacher,
       final DateTime? updateAt,
-      final int? status}) = _$_ConversationResponse;
+      final int? status}) = _$ConversationResponseImpl;
 
   factory _ConversationResponse.fromJson(Map<String, dynamic> json) =
-      _$_ConversationResponse.fromJson;
+      _$ConversationResponseImpl.fromJson;
 
   @override
   int? get id;
@@ -315,6 +316,6 @@ abstract class _ConversationResponse implements ConversationResponse {
   int? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_ConversationResponseCopyWith<_$_ConversationResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ConversationResponseImplCopyWith<_$ConversationResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

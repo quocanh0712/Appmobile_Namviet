@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'notification_client.dart';
 
@@ -12,7 +12,7 @@ part of 'notification_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$NotificationClient {
@@ -81,20 +81,20 @@ class _$NotificationClientCopyWithImpl<$Res, $Val extends NotificationClient>
 }
 
 /// @nodoc
-abstract class _$$_LoadNotificationsCopyWith<$Res> {
-  factory _$$_LoadNotificationsCopyWith(_$_LoadNotifications value,
-          $Res Function(_$_LoadNotifications) then) =
-      __$$_LoadNotificationsCopyWithImpl<$Res>;
+abstract class _$$LoadNotificationsImplCopyWith<$Res> {
+  factory _$$LoadNotificationsImplCopyWith(_$LoadNotificationsImpl value,
+          $Res Function(_$LoadNotificationsImpl) then) =
+      __$$LoadNotificationsImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int? startindex, int? length});
 }
 
 /// @nodoc
-class __$$_LoadNotificationsCopyWithImpl<$Res>
-    extends _$NotificationClientCopyWithImpl<$Res, _$_LoadNotifications>
-    implements _$$_LoadNotificationsCopyWith<$Res> {
-  __$$_LoadNotificationsCopyWithImpl(
-      _$_LoadNotifications _value, $Res Function(_$_LoadNotifications) _then)
+class __$$LoadNotificationsImplCopyWithImpl<$Res>
+    extends _$NotificationClientCopyWithImpl<$Res, _$LoadNotificationsImpl>
+    implements _$$LoadNotificationsImplCopyWith<$Res> {
+  __$$LoadNotificationsImplCopyWithImpl(_$LoadNotificationsImpl _value,
+      $Res Function(_$LoadNotificationsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -103,7 +103,7 @@ class __$$_LoadNotificationsCopyWithImpl<$Res>
     Object? startindex = freezed,
     Object? length = freezed,
   }) {
-    return _then(_$_LoadNotifications(
+    return _then(_$LoadNotificationsImpl(
       freezed == startindex
           ? _value.startindex
           : startindex // ignore: cast_nullable_to_non_nullable
@@ -118,8 +118,8 @@ class __$$_LoadNotificationsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadNotifications extends _LoadNotifications {
-  _$_LoadNotifications(this.startindex, this.length) : super._();
+class _$LoadNotificationsImpl extends _LoadNotifications {
+  _$LoadNotificationsImpl(this.startindex, this.length) : super._();
 
   @override
   final int? startindex;
@@ -132,10 +132,10 @@ class _$_LoadNotifications extends _LoadNotifications {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadNotifications &&
+            other is _$LoadNotificationsImpl &&
             (identical(other.startindex, startindex) ||
                 other.startindex == startindex) &&
             (identical(other.length, length) || other.length == length));
@@ -147,8 +147,8 @@ class _$_LoadNotifications extends _LoadNotifications {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoadNotificationsCopyWith<_$_LoadNotifications> get copyWith =>
-      __$$_LoadNotificationsCopyWithImpl<_$_LoadNotifications>(
+  _$$LoadNotificationsImplCopyWith<_$LoadNotificationsImpl> get copyWith =>
+      __$$LoadNotificationsImplCopyWithImpl<_$LoadNotificationsImpl>(
           this, _$identity);
 
   @override
@@ -222,31 +222,31 @@ class _$_LoadNotifications extends _LoadNotifications {
 
 abstract class _LoadNotifications extends NotificationClient {
   factory _LoadNotifications(final int? startindex, final int? length) =
-      _$_LoadNotifications;
+      _$LoadNotificationsImpl;
   _LoadNotifications._() : super._();
 
   int? get startindex;
   int? get length;
   @JsonKey(ignore: true)
-  _$$_LoadNotificationsCopyWith<_$_LoadNotifications> get copyWith =>
+  _$$LoadNotificationsImplCopyWith<_$LoadNotificationsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_ReadNotificationsCopyWith<$Res> {
-  factory _$$_ReadNotificationsCopyWith(_$_ReadNotifications value,
-          $Res Function(_$_ReadNotifications) then) =
-      __$$_ReadNotificationsCopyWithImpl<$Res>;
+abstract class _$$ReadNotificationsImplCopyWith<$Res> {
+  factory _$$ReadNotificationsImplCopyWith(_$ReadNotificationsImpl value,
+          $Res Function(_$ReadNotificationsImpl) then) =
+      __$$ReadNotificationsImplCopyWithImpl<$Res>;
   @useResult
   $Res call({int? pushID});
 }
 
 /// @nodoc
-class __$$_ReadNotificationsCopyWithImpl<$Res>
-    extends _$NotificationClientCopyWithImpl<$Res, _$_ReadNotifications>
-    implements _$$_ReadNotificationsCopyWith<$Res> {
-  __$$_ReadNotificationsCopyWithImpl(
-      _$_ReadNotifications _value, $Res Function(_$_ReadNotifications) _then)
+class __$$ReadNotificationsImplCopyWithImpl<$Res>
+    extends _$NotificationClientCopyWithImpl<$Res, _$ReadNotificationsImpl>
+    implements _$$ReadNotificationsImplCopyWith<$Res> {
+  __$$ReadNotificationsImplCopyWithImpl(_$ReadNotificationsImpl _value,
+      $Res Function(_$ReadNotificationsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -254,7 +254,7 @@ class __$$_ReadNotificationsCopyWithImpl<$Res>
   $Res call({
     Object? pushID = freezed,
   }) {
-    return _then(_$_ReadNotifications(
+    return _then(_$ReadNotificationsImpl(
       freezed == pushID
           ? _value.pushID
           : pushID // ignore: cast_nullable_to_non_nullable
@@ -265,8 +265,8 @@ class __$$_ReadNotificationsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ReadNotifications extends _ReadNotifications {
-  _$_ReadNotifications(this.pushID) : super._();
+class _$ReadNotificationsImpl extends _ReadNotifications {
+  _$ReadNotificationsImpl(this.pushID) : super._();
 
   @override
   final int? pushID;
@@ -277,10 +277,10 @@ class _$_ReadNotifications extends _ReadNotifications {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ReadNotifications &&
+            other is _$ReadNotificationsImpl &&
             (identical(other.pushID, pushID) || other.pushID == pushID));
   }
 
@@ -290,8 +290,8 @@ class _$_ReadNotifications extends _ReadNotifications {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ReadNotificationsCopyWith<_$_ReadNotifications> get copyWith =>
-      __$$_ReadNotificationsCopyWithImpl<_$_ReadNotifications>(
+  _$$ReadNotificationsImplCopyWith<_$ReadNotificationsImpl> get copyWith =>
+      __$$ReadNotificationsImplCopyWithImpl<_$ReadNotificationsImpl>(
           this, _$identity);
 
   @override
@@ -364,34 +364,35 @@ class _$_ReadNotifications extends _ReadNotifications {
 }
 
 abstract class _ReadNotifications extends NotificationClient {
-  factory _ReadNotifications(final int? pushID) = _$_ReadNotifications;
+  factory _ReadNotifications(final int? pushID) = _$ReadNotificationsImpl;
   _ReadNotifications._() : super._();
 
   int? get pushID;
   @JsonKey(ignore: true)
-  _$$_ReadNotificationsCopyWith<_$_ReadNotifications> get copyWith =>
+  _$$ReadNotificationsImplCopyWith<_$ReadNotificationsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_ReadAllCopyWith<$Res> {
-  factory _$$_ReadAllCopyWith(
-          _$_ReadAll value, $Res Function(_$_ReadAll) then) =
-      __$$_ReadAllCopyWithImpl<$Res>;
+abstract class _$$ReadAllImplCopyWith<$Res> {
+  factory _$$ReadAllImplCopyWith(
+          _$ReadAllImpl value, $Res Function(_$ReadAllImpl) then) =
+      __$$ReadAllImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_ReadAllCopyWithImpl<$Res>
-    extends _$NotificationClientCopyWithImpl<$Res, _$_ReadAll>
-    implements _$$_ReadAllCopyWith<$Res> {
-  __$$_ReadAllCopyWithImpl(_$_ReadAll _value, $Res Function(_$_ReadAll) _then)
+class __$$ReadAllImplCopyWithImpl<$Res>
+    extends _$NotificationClientCopyWithImpl<$Res, _$ReadAllImpl>
+    implements _$$ReadAllImplCopyWith<$Res> {
+  __$$ReadAllImplCopyWithImpl(
+      _$ReadAllImpl _value, $Res Function(_$ReadAllImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_ReadAll extends _ReadAll {
-  _$_ReadAll() : super._();
+class _$ReadAllImpl extends _ReadAll {
+  _$ReadAllImpl() : super._();
 
   @override
   String toString() {
@@ -399,9 +400,9 @@ class _$_ReadAll extends _ReadAll {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_ReadAll);
+        (other.runtimeType == runtimeType && other is _$ReadAllImpl);
   }
 
   @override
@@ -477,6 +478,6 @@ class _$_ReadAll extends _ReadAll {
 }
 
 abstract class _ReadAll extends NotificationClient {
-  factory _ReadAll() = _$_ReadAll;
+  factory _ReadAll() = _$ReadAllImpl;
   _ReadAll._() : super._();
 }

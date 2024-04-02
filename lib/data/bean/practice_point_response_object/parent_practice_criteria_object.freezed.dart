@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'parent_practice_criteria_object.dart';
 
@@ -12,7 +12,7 @@ part of 'parent_practice_criteria_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ParentPracticeCriteriaObject _$ParentPracticeCriteriaObjectFromJson(
     Map<String, dynamic> json) {
@@ -78,25 +78,25 @@ class _$ParentPracticeCriteriaObjectCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ParentPracticeCriteriaObjectCopyWith<$Res>
+abstract class _$$ParentPracticeCriteriaObjectImplCopyWith<$Res>
     implements $ParentPracticeCriteriaObjectCopyWith<$Res> {
-  factory _$$_ParentPracticeCriteriaObjectCopyWith(
-          _$_ParentPracticeCriteriaObject value,
-          $Res Function(_$_ParentPracticeCriteriaObject) then) =
-      __$$_ParentPracticeCriteriaObjectCopyWithImpl<$Res>;
+  factory _$$ParentPracticeCriteriaObjectImplCopyWith(
+          _$ParentPracticeCriteriaObjectImpl value,
+          $Res Function(_$ParentPracticeCriteriaObjectImpl) then) =
+      __$$ParentPracticeCriteriaObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? id, String? typeCriteriaName, int? totalScore});
 }
 
 /// @nodoc
-class __$$_ParentPracticeCriteriaObjectCopyWithImpl<$Res>
+class __$$ParentPracticeCriteriaObjectImplCopyWithImpl<$Res>
     extends _$ParentPracticeCriteriaObjectCopyWithImpl<$Res,
-        _$_ParentPracticeCriteriaObject>
-    implements _$$_ParentPracticeCriteriaObjectCopyWith<$Res> {
-  __$$_ParentPracticeCriteriaObjectCopyWithImpl(
-      _$_ParentPracticeCriteriaObject _value,
-      $Res Function(_$_ParentPracticeCriteriaObject) _then)
+        _$ParentPracticeCriteriaObjectImpl>
+    implements _$$ParentPracticeCriteriaObjectImplCopyWith<$Res> {
+  __$$ParentPracticeCriteriaObjectImplCopyWithImpl(
+      _$ParentPracticeCriteriaObjectImpl _value,
+      $Res Function(_$ParentPracticeCriteriaObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -106,7 +106,7 @@ class __$$_ParentPracticeCriteriaObjectCopyWithImpl<$Res>
     Object? typeCriteriaName = freezed,
     Object? totalScore = freezed,
   }) {
-    return _then(_$_ParentPracticeCriteriaObject(
+    return _then(_$ParentPracticeCriteriaObjectImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -125,12 +125,14 @@ class __$$_ParentPracticeCriteriaObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ParentPracticeCriteriaObject implements _ParentPracticeCriteriaObject {
-  _$_ParentPracticeCriteriaObject(
+class _$ParentPracticeCriteriaObjectImpl
+    implements _ParentPracticeCriteriaObject {
+  _$ParentPracticeCriteriaObjectImpl(
       {this.id, this.typeCriteriaName, this.totalScore});
 
-  factory _$_ParentPracticeCriteriaObject.fromJson(Map<String, dynamic> json) =>
-      _$$_ParentPracticeCriteriaObjectFromJson(json);
+  factory _$ParentPracticeCriteriaObjectImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$ParentPracticeCriteriaObjectImplFromJson(json);
 
   @override
   final int? id;
@@ -145,10 +147,10 @@ class _$_ParentPracticeCriteriaObject implements _ParentPracticeCriteriaObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ParentPracticeCriteriaObject &&
+            other is _$ParentPracticeCriteriaObjectImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.typeCriteriaName, typeCriteriaName) ||
                 other.typeCriteriaName == typeCriteriaName) &&
@@ -164,13 +166,14 @@ class _$_ParentPracticeCriteriaObject implements _ParentPracticeCriteriaObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ParentPracticeCriteriaObjectCopyWith<_$_ParentPracticeCriteriaObject>
-      get copyWith => __$$_ParentPracticeCriteriaObjectCopyWithImpl<
-          _$_ParentPracticeCriteriaObject>(this, _$identity);
+  _$$ParentPracticeCriteriaObjectImplCopyWith<
+          _$ParentPracticeCriteriaObjectImpl>
+      get copyWith => __$$ParentPracticeCriteriaObjectImplCopyWithImpl<
+          _$ParentPracticeCriteriaObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ParentPracticeCriteriaObjectToJson(
+    return _$$ParentPracticeCriteriaObjectImplToJson(
       this,
     );
   }
@@ -181,10 +184,10 @@ abstract class _ParentPracticeCriteriaObject
   factory _ParentPracticeCriteriaObject(
       {final int? id,
       final String? typeCriteriaName,
-      final int? totalScore}) = _$_ParentPracticeCriteriaObject;
+      final int? totalScore}) = _$ParentPracticeCriteriaObjectImpl;
 
   factory _ParentPracticeCriteriaObject.fromJson(Map<String, dynamic> json) =
-      _$_ParentPracticeCriteriaObject.fromJson;
+      _$ParentPracticeCriteriaObjectImpl.fromJson;
 
   @override
   int? get id;
@@ -194,6 +197,7 @@ abstract class _ParentPracticeCriteriaObject
   int? get totalScore;
   @override
   @JsonKey(ignore: true)
-  _$$_ParentPracticeCriteriaObjectCopyWith<_$_ParentPracticeCriteriaObject>
+  _$$ParentPracticeCriteriaObjectImplCopyWith<
+          _$ParentPracticeCriteriaObjectImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

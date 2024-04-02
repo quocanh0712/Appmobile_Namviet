@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'practice_point_response_object.dart';
 
@@ -12,7 +12,7 @@ part of 'practice_point_response_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PracticePointResponseObject _$PracticePointResponseObjectFromJson(
     Map<String, dynamic> json) {
@@ -80,12 +80,12 @@ class _$PracticePointResponseObjectCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PracticePointResponseObjectCopyWith<$Res>
+abstract class _$$PracticePointResponseObjectImplCopyWith<$Res>
     implements $PracticePointResponseObjectCopyWith<$Res> {
-  factory _$$_PracticePointResponseObjectCopyWith(
-          _$_PracticePointResponseObject value,
-          $Res Function(_$_PracticePointResponseObject) then) =
-      __$$_PracticePointResponseObjectCopyWithImpl<$Res>;
+  factory _$$PracticePointResponseObjectImplCopyWith(
+          _$PracticePointResponseObjectImpl value,
+          $Res Function(_$PracticePointResponseObjectImpl) then) =
+      __$$PracticePointResponseObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -93,13 +93,13 @@ abstract class _$$_PracticePointResponseObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PracticePointResponseObjectCopyWithImpl<$Res>
+class __$$PracticePointResponseObjectImplCopyWithImpl<$Res>
     extends _$PracticePointResponseObjectCopyWithImpl<$Res,
-        _$_PracticePointResponseObject>
-    implements _$$_PracticePointResponseObjectCopyWith<$Res> {
-  __$$_PracticePointResponseObjectCopyWithImpl(
-      _$_PracticePointResponseObject _value,
-      $Res Function(_$_PracticePointResponseObject) _then)
+        _$PracticePointResponseObjectImpl>
+    implements _$$PracticePointResponseObjectImplCopyWith<$Res> {
+  __$$PracticePointResponseObjectImplCopyWithImpl(
+      _$PracticePointResponseObjectImpl _value,
+      $Res Function(_$PracticePointResponseObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -109,7 +109,7 @@ class __$$_PracticePointResponseObjectCopyWithImpl<$Res>
     Object? rank = freezed,
     Object? criterias = freezed,
   }) {
-    return _then(_$_PracticePointResponseObject(
+    return _then(_$PracticePointResponseObjectImpl(
       sum: freezed == sum
           ? _value.sum
           : sum // ignore: cast_nullable_to_non_nullable
@@ -128,15 +128,17 @@ class __$$_PracticePointResponseObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PracticePointResponseObject implements _PracticePointResponseObject {
-  _$_PracticePointResponseObject(
+class _$PracticePointResponseObjectImpl
+    implements _PracticePointResponseObject {
+  _$PracticePointResponseObjectImpl(
       {this.sum,
       this.rank,
       final List<ParentPracticeCriteriaObject?>? criterias})
       : _criterias = criterias;
 
-  factory _$_PracticePointResponseObject.fromJson(Map<String, dynamic> json) =>
-      _$$_PracticePointResponseObjectFromJson(json);
+  factory _$PracticePointResponseObjectImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$PracticePointResponseObjectImplFromJson(json);
 
   @override
   final int? sum;
@@ -147,6 +149,7 @@ class _$_PracticePointResponseObject implements _PracticePointResponseObject {
   List<ParentPracticeCriteriaObject?>? get criterias {
     final value = _criterias;
     if (value == null) return null;
+    if (_criterias is EqualUnmodifiableListView) return _criterias;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -157,10 +160,10 @@ class _$_PracticePointResponseObject implements _PracticePointResponseObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PracticePointResponseObject &&
+            other is _$PracticePointResponseObjectImpl &&
             (identical(other.sum, sum) || other.sum == sum) &&
             (identical(other.rank, rank) || other.rank == rank) &&
             const DeepCollectionEquality()
@@ -175,13 +178,13 @@ class _$_PracticePointResponseObject implements _PracticePointResponseObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PracticePointResponseObjectCopyWith<_$_PracticePointResponseObject>
-      get copyWith => __$$_PracticePointResponseObjectCopyWithImpl<
-          _$_PracticePointResponseObject>(this, _$identity);
+  _$$PracticePointResponseObjectImplCopyWith<_$PracticePointResponseObjectImpl>
+      get copyWith => __$$PracticePointResponseObjectImplCopyWithImpl<
+          _$PracticePointResponseObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PracticePointResponseObjectToJson(
+    return _$$PracticePointResponseObjectImplToJson(
       this,
     );
   }
@@ -193,10 +196,10 @@ abstract class _PracticePointResponseObject
           {final int? sum,
           final double? rank,
           final List<ParentPracticeCriteriaObject?>? criterias}) =
-      _$_PracticePointResponseObject;
+      _$PracticePointResponseObjectImpl;
 
   factory _PracticePointResponseObject.fromJson(Map<String, dynamic> json) =
-      _$_PracticePointResponseObject.fromJson;
+      _$PracticePointResponseObjectImpl.fromJson;
 
   @override
   int? get sum;
@@ -206,6 +209,6 @@ abstract class _PracticePointResponseObject
   List<ParentPracticeCriteriaObject?>? get criterias;
   @override
   @JsonKey(ignore: true)
-  _$$_PracticePointResponseObjectCopyWith<_$_PracticePointResponseObject>
+  _$$PracticePointResponseObjectImplCopyWith<_$PracticePointResponseObjectImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

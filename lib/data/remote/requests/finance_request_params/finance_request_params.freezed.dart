@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'finance_request_params.dart';
 
@@ -12,7 +12,7 @@ part of 'finance_request_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 FinanceRequestParams _$FinanceRequestParamsFromJson(Map<String, dynamic> json) {
   return _FinanceRequestParams.fromJson(json);
@@ -99,11 +99,11 @@ class _$FinanceRequestParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_FinanceRequestParamsCopyWith<$Res>
+abstract class _$$FinanceRequestParamsImplCopyWith<$Res>
     implements $FinanceRequestParamsCopyWith<$Res> {
-  factory _$$_FinanceRequestParamsCopyWith(_$_FinanceRequestParams value,
-          $Res Function(_$_FinanceRequestParams) then) =
-      __$$_FinanceRequestParamsCopyWithImpl<$Res>;
+  factory _$$FinanceRequestParamsImplCopyWith(_$FinanceRequestParamsImpl value,
+          $Res Function(_$FinanceRequestParamsImpl) then) =
+      __$$FinanceRequestParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -116,11 +116,11 @@ abstract class _$$_FinanceRequestParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FinanceRequestParamsCopyWithImpl<$Res>
-    extends _$FinanceRequestParamsCopyWithImpl<$Res, _$_FinanceRequestParams>
-    implements _$$_FinanceRequestParamsCopyWith<$Res> {
-  __$$_FinanceRequestParamsCopyWithImpl(_$_FinanceRequestParams _value,
-      $Res Function(_$_FinanceRequestParams) _then)
+class __$$FinanceRequestParamsImplCopyWithImpl<$Res>
+    extends _$FinanceRequestParamsCopyWithImpl<$Res, _$FinanceRequestParamsImpl>
+    implements _$$FinanceRequestParamsImplCopyWith<$Res> {
+  __$$FinanceRequestParamsImplCopyWithImpl(_$FinanceRequestParamsImpl _value,
+      $Res Function(_$FinanceRequestParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +133,7 @@ class __$$_FinanceRequestParamsCopyWithImpl<$Res>
     Object? startindex = freezed,
     Object? length = freezed,
   }) {
-    return _then(_$_FinanceRequestParams(
+    return _then(_$FinanceRequestParamsImpl(
       semester: freezed == semester
           ? _value.semester
           : semester // ignore: cast_nullable_to_non_nullable
@@ -164,8 +164,8 @@ class __$$_FinanceRequestParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FinanceRequestParams implements _FinanceRequestParams {
-  _$_FinanceRequestParams(
+class _$FinanceRequestParamsImpl implements _FinanceRequestParams {
+  _$FinanceRequestParamsImpl(
       {this.semester,
       this.year,
       this.idKhoanThu,
@@ -173,8 +173,8 @@ class _$_FinanceRequestParams implements _FinanceRequestParams {
       this.startindex = 1,
       this.length = 100});
 
-  factory _$_FinanceRequestParams.fromJson(Map<String, dynamic> json) =>
-      _$$_FinanceRequestParamsFromJson(json);
+  factory _$FinanceRequestParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FinanceRequestParamsImplFromJson(json);
 
   @override
   final int? semester;
@@ -197,10 +197,10 @@ class _$_FinanceRequestParams implements _FinanceRequestParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FinanceRequestParams &&
+            other is _$FinanceRequestParamsImpl &&
             (identical(other.semester, semester) ||
                 other.semester == semester) &&
             (identical(other.year, year) || other.year == year) &&
@@ -220,13 +220,14 @@ class _$_FinanceRequestParams implements _FinanceRequestParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FinanceRequestParamsCopyWith<_$_FinanceRequestParams> get copyWith =>
-      __$$_FinanceRequestParamsCopyWithImpl<_$_FinanceRequestParams>(
-          this, _$identity);
+  _$$FinanceRequestParamsImplCopyWith<_$FinanceRequestParamsImpl>
+      get copyWith =>
+          __$$FinanceRequestParamsImplCopyWithImpl<_$FinanceRequestParamsImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FinanceRequestParamsToJson(
+    return _$$FinanceRequestParamsImplToJson(
       this,
     );
   }
@@ -239,10 +240,10 @@ abstract class _FinanceRequestParams implements FinanceRequestParams {
       final int? idKhoanThu,
       final int? status,
       final int? startindex,
-      final int? length}) = _$_FinanceRequestParams;
+      final int? length}) = _$FinanceRequestParamsImpl;
 
   factory _FinanceRequestParams.fromJson(Map<String, dynamic> json) =
-      _$_FinanceRequestParams.fromJson;
+      _$FinanceRequestParamsImpl.fromJson;
 
   @override
   int? get semester;
@@ -258,6 +259,6 @@ abstract class _FinanceRequestParams implements FinanceRequestParams {
   int? get length;
   @override
   @JsonKey(ignore: true)
-  _$$_FinanceRequestParamsCopyWith<_$_FinanceRequestParams> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$FinanceRequestParamsImplCopyWith<_$FinanceRequestParamsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

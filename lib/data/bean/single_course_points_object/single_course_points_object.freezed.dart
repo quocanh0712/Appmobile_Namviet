@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'single_course_points_object.dart';
 
@@ -12,7 +12,7 @@ part of 'single_course_points_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 SingleCoursePointsObject _$SingleCoursePointsObjectFromJson(
     Map<String, dynamic> json) {
@@ -76,24 +76,25 @@ class _$SingleCoursePointsObjectCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_SingleCoursePointsObjectCopyWith<$Res>
+abstract class _$$SingleCoursePointsObjectImplCopyWith<$Res>
     implements $SingleCoursePointsObjectCopyWith<$Res> {
-  factory _$$_SingleCoursePointsObjectCopyWith(
-          _$_SingleCoursePointsObject value,
-          $Res Function(_$_SingleCoursePointsObject) then) =
-      __$$_SingleCoursePointsObjectCopyWithImpl<$Res>;
+  factory _$$SingleCoursePointsObjectImplCopyWith(
+          _$SingleCoursePointsObjectImpl value,
+          $Res Function(_$SingleCoursePointsObjectImpl) then) =
+      __$$SingleCoursePointsObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? id, String? pointname, int? point});
 }
 
 /// @nodoc
-class __$$_SingleCoursePointsObjectCopyWithImpl<$Res>
+class __$$SingleCoursePointsObjectImplCopyWithImpl<$Res>
     extends _$SingleCoursePointsObjectCopyWithImpl<$Res,
-        _$_SingleCoursePointsObject>
-    implements _$$_SingleCoursePointsObjectCopyWith<$Res> {
-  __$$_SingleCoursePointsObjectCopyWithImpl(_$_SingleCoursePointsObject _value,
-      $Res Function(_$_SingleCoursePointsObject) _then)
+        _$SingleCoursePointsObjectImpl>
+    implements _$$SingleCoursePointsObjectImplCopyWith<$Res> {
+  __$$SingleCoursePointsObjectImplCopyWithImpl(
+      _$SingleCoursePointsObjectImpl _value,
+      $Res Function(_$SingleCoursePointsObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -103,7 +104,7 @@ class __$$_SingleCoursePointsObjectCopyWithImpl<$Res>
     Object? pointname = freezed,
     Object? point = freezed,
   }) {
-    return _then(_$_SingleCoursePointsObject(
+    return _then(_$SingleCoursePointsObjectImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -122,11 +123,11 @@ class __$$_SingleCoursePointsObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_SingleCoursePointsObject implements _SingleCoursePointsObject {
-  _$_SingleCoursePointsObject({this.id, this.pointname, this.point});
+class _$SingleCoursePointsObjectImpl implements _SingleCoursePointsObject {
+  _$SingleCoursePointsObjectImpl({this.id, this.pointname, this.point});
 
-  factory _$_SingleCoursePointsObject.fromJson(Map<String, dynamic> json) =>
-      _$$_SingleCoursePointsObjectFromJson(json);
+  factory _$SingleCoursePointsObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$SingleCoursePointsObjectImplFromJson(json);
 
   @override
   final int? id;
@@ -141,10 +142,10 @@ class _$_SingleCoursePointsObject implements _SingleCoursePointsObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SingleCoursePointsObject &&
+            other is _$SingleCoursePointsObjectImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.pointname, pointname) ||
                 other.pointname == pointname) &&
@@ -158,13 +159,13 @@ class _$_SingleCoursePointsObject implements _SingleCoursePointsObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SingleCoursePointsObjectCopyWith<_$_SingleCoursePointsObject>
-      get copyWith => __$$_SingleCoursePointsObjectCopyWithImpl<
-          _$_SingleCoursePointsObject>(this, _$identity);
+  _$$SingleCoursePointsObjectImplCopyWith<_$SingleCoursePointsObjectImpl>
+      get copyWith => __$$SingleCoursePointsObjectImplCopyWithImpl<
+          _$SingleCoursePointsObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_SingleCoursePointsObjectToJson(
+    return _$$SingleCoursePointsObjectImplToJson(
       this,
     );
   }
@@ -174,10 +175,10 @@ abstract class _SingleCoursePointsObject implements SingleCoursePointsObject {
   factory _SingleCoursePointsObject(
       {final int? id,
       final String? pointname,
-      final int? point}) = _$_SingleCoursePointsObject;
+      final int? point}) = _$SingleCoursePointsObjectImpl;
 
   factory _SingleCoursePointsObject.fromJson(Map<String, dynamic> json) =
-      _$_SingleCoursePointsObject.fromJson;
+      _$SingleCoursePointsObjectImpl.fromJson;
 
   @override
   int? get id;
@@ -187,6 +188,6 @@ abstract class _SingleCoursePointsObject implements SingleCoursePointsObject {
   int? get point;
   @override
   @JsonKey(ignore: true)
-  _$$_SingleCoursePointsObjectCopyWith<_$_SingleCoursePointsObject>
+  _$$SingleCoursePointsObjectImplCopyWith<_$SingleCoursePointsObjectImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

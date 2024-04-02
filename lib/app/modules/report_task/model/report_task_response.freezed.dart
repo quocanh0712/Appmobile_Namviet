@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'report_task_response.dart';
 
@@ -12,7 +12,7 @@ part of 'report_task_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ReportTaskResponse _$ReportTaskResponseFromJson(Map<String, dynamic> json) {
   return _ReportTaskResponse.fromJson(json);
@@ -80,22 +80,22 @@ class _$ReportTaskResponseCopyWithImpl<$Res, $Val extends ReportTaskResponse>
 }
 
 /// @nodoc
-abstract class _$$_ReportTaskResponseCopyWith<$Res>
+abstract class _$$ReportTaskResponseImplCopyWith<$Res>
     implements $ReportTaskResponseCopyWith<$Res> {
-  factory _$$_ReportTaskResponseCopyWith(_$_ReportTaskResponse value,
-          $Res Function(_$_ReportTaskResponse) then) =
-      __$$_ReportTaskResponseCopyWithImpl<$Res>;
+  factory _$$ReportTaskResponseImplCopyWith(_$ReportTaskResponseImpl value,
+          $Res Function(_$ReportTaskResponseImpl) then) =
+      __$$ReportTaskResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? id, String? VanBan, String? NoiDung, String? TrangThai});
 }
 
 /// @nodoc
-class __$$_ReportTaskResponseCopyWithImpl<$Res>
-    extends _$ReportTaskResponseCopyWithImpl<$Res, _$_ReportTaskResponse>
-    implements _$$_ReportTaskResponseCopyWith<$Res> {
-  __$$_ReportTaskResponseCopyWithImpl(
-      _$_ReportTaskResponse _value, $Res Function(_$_ReportTaskResponse) _then)
+class __$$ReportTaskResponseImplCopyWithImpl<$Res>
+    extends _$ReportTaskResponseCopyWithImpl<$Res, _$ReportTaskResponseImpl>
+    implements _$$ReportTaskResponseImplCopyWith<$Res> {
+  __$$ReportTaskResponseImplCopyWithImpl(_$ReportTaskResponseImpl _value,
+      $Res Function(_$ReportTaskResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -106,7 +106,7 @@ class __$$_ReportTaskResponseCopyWithImpl<$Res>
     Object? NoiDung = freezed,
     Object? TrangThai = freezed,
   }) {
-    return _then(_$_ReportTaskResponse(
+    return _then(_$ReportTaskResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -129,12 +129,12 @@ class __$$_ReportTaskResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ReportTaskResponse implements _ReportTaskResponse {
-  const _$_ReportTaskResponse(
+class _$ReportTaskResponseImpl implements _ReportTaskResponse {
+  const _$ReportTaskResponseImpl(
       {this.id, this.VanBan, this.NoiDung, this.TrangThai});
 
-  factory _$_ReportTaskResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_ReportTaskResponseFromJson(json);
+  factory _$ReportTaskResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ReportTaskResponseImplFromJson(json);
 
   @override
   final int? id;
@@ -151,10 +151,10 @@ class _$_ReportTaskResponse implements _ReportTaskResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ReportTaskResponse &&
+            other is _$ReportTaskResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.VanBan, VanBan) || other.VanBan == VanBan) &&
             (identical(other.NoiDung, NoiDung) || other.NoiDung == NoiDung) &&
@@ -169,13 +169,13 @@ class _$_ReportTaskResponse implements _ReportTaskResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ReportTaskResponseCopyWith<_$_ReportTaskResponse> get copyWith =>
-      __$$_ReportTaskResponseCopyWithImpl<_$_ReportTaskResponse>(
+  _$$ReportTaskResponseImplCopyWith<_$ReportTaskResponseImpl> get copyWith =>
+      __$$ReportTaskResponseImplCopyWithImpl<_$ReportTaskResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ReportTaskResponseToJson(
+    return _$$ReportTaskResponseImplToJson(
       this,
     );
   }
@@ -186,10 +186,10 @@ abstract class _ReportTaskResponse implements ReportTaskResponse {
       {final int? id,
       final String? VanBan,
       final String? NoiDung,
-      final String? TrangThai}) = _$_ReportTaskResponse;
+      final String? TrangThai}) = _$ReportTaskResponseImpl;
 
   factory _ReportTaskResponse.fromJson(Map<String, dynamic> json) =
-      _$_ReportTaskResponse.fromJson;
+      _$ReportTaskResponseImpl.fromJson;
 
   @override
   int? get id;
@@ -201,6 +201,6 @@ abstract class _ReportTaskResponse implements ReportTaskResponse {
   String? get TrangThai;
   @override
   @JsonKey(ignore: true)
-  _$$_ReportTaskResponseCopyWith<_$_ReportTaskResponse> get copyWith =>
+  _$$ReportTaskResponseImplCopyWith<_$ReportTaskResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

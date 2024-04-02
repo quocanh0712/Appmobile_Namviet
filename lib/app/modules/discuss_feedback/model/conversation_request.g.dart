@@ -6,16 +6,16 @@ part of 'conversation_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ConversationRequest _$$_ConversationRequestFromJson(
+_$ConversationRequestImpl _$$ConversationRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ConversationRequest(
+    _$ConversationRequestImpl(
       startindex: json['startindex'] as int?,
       length: json['length'] as int?,
       keyword: json['keyword'] as String?,
     );
 
-Map<String, dynamic> _$$_ConversationRequestToJson(
-        _$_ConversationRequest instance) =>
+Map<String, dynamic> _$$ConversationRequestImplToJson(
+        _$ConversationRequestImpl instance) =>
     <String, dynamic>{
       'startindex': instance.startindex,
       'length': instance.length,

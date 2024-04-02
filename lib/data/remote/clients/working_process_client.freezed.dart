@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'working_process_client.dart';
 
@@ -12,10 +12,11 @@ part of 'working_process_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$WorkingProcessClient {
+  Object? get model => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(WorkingProcessRequest? model)
@@ -124,10 +125,10 @@ class _$WorkingProcessClientCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_WorkingProcessListCopyWith<$Res> {
-  factory _$$_WorkingProcessListCopyWith(_$_WorkingProcessList value,
-          $Res Function(_$_WorkingProcessList) then) =
-      __$$_WorkingProcessListCopyWithImpl<$Res>;
+abstract class _$$WorkingProcessListImplCopyWith<$Res> {
+  factory _$$WorkingProcessListImplCopyWith(_$WorkingProcessListImpl value,
+          $Res Function(_$WorkingProcessListImpl) then) =
+      __$$WorkingProcessListImplCopyWithImpl<$Res>;
   @useResult
   $Res call({WorkingProcessRequest? model});
 
@@ -135,11 +136,11 @@ abstract class _$$_WorkingProcessListCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_WorkingProcessListCopyWithImpl<$Res>
-    extends _$WorkingProcessClientCopyWithImpl<$Res, _$_WorkingProcessList>
-    implements _$$_WorkingProcessListCopyWith<$Res> {
-  __$$_WorkingProcessListCopyWithImpl(
-      _$_WorkingProcessList _value, $Res Function(_$_WorkingProcessList) _then)
+class __$$WorkingProcessListImplCopyWithImpl<$Res>
+    extends _$WorkingProcessClientCopyWithImpl<$Res, _$WorkingProcessListImpl>
+    implements _$$WorkingProcessListImplCopyWith<$Res> {
+  __$$WorkingProcessListImplCopyWithImpl(_$WorkingProcessListImpl _value,
+      $Res Function(_$WorkingProcessListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -147,7 +148,7 @@ class __$$_WorkingProcessListCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_WorkingProcessList(
+    return _then(_$WorkingProcessListImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -170,8 +171,8 @@ class __$$_WorkingProcessListCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_WorkingProcessList extends _WorkingProcessList {
-  _$_WorkingProcessList(this.model) : super._();
+class _$WorkingProcessListImpl extends _WorkingProcessList {
+  _$WorkingProcessListImpl(this.model) : super._();
 
   @override
   final WorkingProcessRequest? model;
@@ -182,10 +183,10 @@ class _$_WorkingProcessList extends _WorkingProcessList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_WorkingProcessList &&
+            other is _$WorkingProcessListImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -195,8 +196,8 @@ class _$_WorkingProcessList extends _WorkingProcessList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_WorkingProcessListCopyWith<_$_WorkingProcessList> get copyWith =>
-      __$$_WorkingProcessListCopyWithImpl<_$_WorkingProcessList>(
+  _$$WorkingProcessListImplCopyWith<_$WorkingProcessListImpl> get copyWith =>
+      __$$WorkingProcessListImplCopyWithImpl<_$WorkingProcessListImpl>(
           this, _$identity);
 
   @override
@@ -312,20 +313,21 @@ class _$_WorkingProcessList extends _WorkingProcessList {
 
 abstract class _WorkingProcessList extends WorkingProcessClient {
   factory _WorkingProcessList(final WorkingProcessRequest? model) =
-      _$_WorkingProcessList;
+      _$WorkingProcessListImpl;
   _WorkingProcessList._() : super._();
 
+  @override
   WorkingProcessRequest? get model;
   @JsonKey(ignore: true)
-  _$$_WorkingProcessListCopyWith<_$_WorkingProcessList> get copyWith =>
+  _$$WorkingProcessListImplCopyWith<_$WorkingProcessListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_LanguageProcessListCopyWith<$Res> {
-  factory _$$_LanguageProcessListCopyWith(_$_LanguageProcessList value,
-          $Res Function(_$_LanguageProcessList) then) =
-      __$$_LanguageProcessListCopyWithImpl<$Res>;
+abstract class _$$LanguageProcessListImplCopyWith<$Res> {
+  factory _$$LanguageProcessListImplCopyWith(_$LanguageProcessListImpl value,
+          $Res Function(_$LanguageProcessListImpl) then) =
+      __$$LanguageProcessListImplCopyWithImpl<$Res>;
   @useResult
   $Res call({WorkingProcessRequest? model});
 
@@ -333,11 +335,11 @@ abstract class _$$_LanguageProcessListCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_LanguageProcessListCopyWithImpl<$Res>
-    extends _$WorkingProcessClientCopyWithImpl<$Res, _$_LanguageProcessList>
-    implements _$$_LanguageProcessListCopyWith<$Res> {
-  __$$_LanguageProcessListCopyWithImpl(_$_LanguageProcessList _value,
-      $Res Function(_$_LanguageProcessList) _then)
+class __$$LanguageProcessListImplCopyWithImpl<$Res>
+    extends _$WorkingProcessClientCopyWithImpl<$Res, _$LanguageProcessListImpl>
+    implements _$$LanguageProcessListImplCopyWith<$Res> {
+  __$$LanguageProcessListImplCopyWithImpl(_$LanguageProcessListImpl _value,
+      $Res Function(_$LanguageProcessListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -345,7 +347,7 @@ class __$$_LanguageProcessListCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_LanguageProcessList(
+    return _then(_$LanguageProcessListImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -368,8 +370,8 @@ class __$$_LanguageProcessListCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LanguageProcessList extends _LanguageProcessList {
-  _$_LanguageProcessList(this.model) : super._();
+class _$LanguageProcessListImpl extends _LanguageProcessList {
+  _$LanguageProcessListImpl(this.model) : super._();
 
   @override
   final WorkingProcessRequest? model;
@@ -380,10 +382,10 @@ class _$_LanguageProcessList extends _LanguageProcessList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LanguageProcessList &&
+            other is _$LanguageProcessListImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -393,8 +395,8 @@ class _$_LanguageProcessList extends _LanguageProcessList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LanguageProcessListCopyWith<_$_LanguageProcessList> get copyWith =>
-      __$$_LanguageProcessListCopyWithImpl<_$_LanguageProcessList>(
+  _$$LanguageProcessListImplCopyWith<_$LanguageProcessListImpl> get copyWith =>
+      __$$LanguageProcessListImplCopyWithImpl<_$LanguageProcessListImpl>(
           this, _$identity);
 
   @override
@@ -510,20 +512,21 @@ class _$_LanguageProcessList extends _LanguageProcessList {
 
 abstract class _LanguageProcessList extends WorkingProcessClient {
   factory _LanguageProcessList(final WorkingProcessRequest? model) =
-      _$_LanguageProcessList;
+      _$LanguageProcessListImpl;
   _LanguageProcessList._() : super._();
 
+  @override
   WorkingProcessRequest? get model;
   @JsonKey(ignore: true)
-  _$$_LanguageProcessListCopyWith<_$_LanguageProcessList> get copyWith =>
+  _$$LanguageProcessListImplCopyWith<_$LanguageProcessListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_DeleteWorkingProcessCopyWith<$Res> {
-  factory _$$_DeleteWorkingProcessCopyWith(_$_DeleteWorkingProcess value,
-          $Res Function(_$_DeleteWorkingProcess) then) =
-      __$$_DeleteWorkingProcessCopyWithImpl<$Res>;
+abstract class _$$DeleteWorkingProcessImplCopyWith<$Res> {
+  factory _$$DeleteWorkingProcessImplCopyWith(_$DeleteWorkingProcessImpl value,
+          $Res Function(_$DeleteWorkingProcessImpl) then) =
+      __$$DeleteWorkingProcessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({WorkingProcessResponse? model});
 
@@ -531,11 +534,11 @@ abstract class _$$_DeleteWorkingProcessCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_DeleteWorkingProcessCopyWithImpl<$Res>
-    extends _$WorkingProcessClientCopyWithImpl<$Res, _$_DeleteWorkingProcess>
-    implements _$$_DeleteWorkingProcessCopyWith<$Res> {
-  __$$_DeleteWorkingProcessCopyWithImpl(_$_DeleteWorkingProcess _value,
-      $Res Function(_$_DeleteWorkingProcess) _then)
+class __$$DeleteWorkingProcessImplCopyWithImpl<$Res>
+    extends _$WorkingProcessClientCopyWithImpl<$Res, _$DeleteWorkingProcessImpl>
+    implements _$$DeleteWorkingProcessImplCopyWith<$Res> {
+  __$$DeleteWorkingProcessImplCopyWithImpl(_$DeleteWorkingProcessImpl _value,
+      $Res Function(_$DeleteWorkingProcessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -543,7 +546,7 @@ class __$$_DeleteWorkingProcessCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_DeleteWorkingProcess(
+    return _then(_$DeleteWorkingProcessImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -566,8 +569,8 @@ class __$$_DeleteWorkingProcessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DeleteWorkingProcess extends _DeleteWorkingProcess {
-  _$_DeleteWorkingProcess(this.model) : super._();
+class _$DeleteWorkingProcessImpl extends _DeleteWorkingProcess {
+  _$DeleteWorkingProcessImpl(this.model) : super._();
 
   @override
   final WorkingProcessResponse? model;
@@ -578,10 +581,10 @@ class _$_DeleteWorkingProcess extends _DeleteWorkingProcess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DeleteWorkingProcess &&
+            other is _$DeleteWorkingProcessImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -591,9 +594,10 @@ class _$_DeleteWorkingProcess extends _DeleteWorkingProcess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DeleteWorkingProcessCopyWith<_$_DeleteWorkingProcess> get copyWith =>
-      __$$_DeleteWorkingProcessCopyWithImpl<_$_DeleteWorkingProcess>(
-          this, _$identity);
+  _$$DeleteWorkingProcessImplCopyWith<_$DeleteWorkingProcessImpl>
+      get copyWith =>
+          __$$DeleteWorkingProcessImplCopyWithImpl<_$DeleteWorkingProcessImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -708,20 +712,22 @@ class _$_DeleteWorkingProcess extends _DeleteWorkingProcess {
 
 abstract class _DeleteWorkingProcess extends WorkingProcessClient {
   factory _DeleteWorkingProcess(final WorkingProcessResponse? model) =
-      _$_DeleteWorkingProcess;
+      _$DeleteWorkingProcessImpl;
   _DeleteWorkingProcess._() : super._();
 
+  @override
   WorkingProcessResponse? get model;
   @JsonKey(ignore: true)
-  _$$_DeleteWorkingProcessCopyWith<_$_DeleteWorkingProcess> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DeleteWorkingProcessImplCopyWith<_$DeleteWorkingProcessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_DeleteLanguageProcessCopyWith<$Res> {
-  factory _$$_DeleteLanguageProcessCopyWith(_$_DeleteLanguageProcess value,
-          $Res Function(_$_DeleteLanguageProcess) then) =
-      __$$_DeleteLanguageProcessCopyWithImpl<$Res>;
+abstract class _$$DeleteLanguageProcessImplCopyWith<$Res> {
+  factory _$$DeleteLanguageProcessImplCopyWith(
+          _$DeleteLanguageProcessImpl value,
+          $Res Function(_$DeleteLanguageProcessImpl) then) =
+      __$$DeleteLanguageProcessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({LanguageProcessResponse? model});
 
@@ -729,11 +735,12 @@ abstract class _$$_DeleteLanguageProcessCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_DeleteLanguageProcessCopyWithImpl<$Res>
-    extends _$WorkingProcessClientCopyWithImpl<$Res, _$_DeleteLanguageProcess>
-    implements _$$_DeleteLanguageProcessCopyWith<$Res> {
-  __$$_DeleteLanguageProcessCopyWithImpl(_$_DeleteLanguageProcess _value,
-      $Res Function(_$_DeleteLanguageProcess) _then)
+class __$$DeleteLanguageProcessImplCopyWithImpl<$Res>
+    extends _$WorkingProcessClientCopyWithImpl<$Res,
+        _$DeleteLanguageProcessImpl>
+    implements _$$DeleteLanguageProcessImplCopyWith<$Res> {
+  __$$DeleteLanguageProcessImplCopyWithImpl(_$DeleteLanguageProcessImpl _value,
+      $Res Function(_$DeleteLanguageProcessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -741,7 +748,7 @@ class __$$_DeleteLanguageProcessCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_DeleteLanguageProcess(
+    return _then(_$DeleteLanguageProcessImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -764,8 +771,8 @@ class __$$_DeleteLanguageProcessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DeleteLanguageProcess extends _DeleteLanguageProcess {
-  _$_DeleteLanguageProcess(this.model) : super._();
+class _$DeleteLanguageProcessImpl extends _DeleteLanguageProcess {
+  _$DeleteLanguageProcessImpl(this.model) : super._();
 
   @override
   final LanguageProcessResponse? model;
@@ -776,10 +783,10 @@ class _$_DeleteLanguageProcess extends _DeleteLanguageProcess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DeleteLanguageProcess &&
+            other is _$DeleteLanguageProcessImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -789,9 +796,9 @@ class _$_DeleteLanguageProcess extends _DeleteLanguageProcess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DeleteLanguageProcessCopyWith<_$_DeleteLanguageProcess> get copyWith =>
-      __$$_DeleteLanguageProcessCopyWithImpl<_$_DeleteLanguageProcess>(
-          this, _$identity);
+  _$$DeleteLanguageProcessImplCopyWith<_$DeleteLanguageProcessImpl>
+      get copyWith => __$$DeleteLanguageProcessImplCopyWithImpl<
+          _$DeleteLanguageProcessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -906,20 +913,21 @@ class _$_DeleteLanguageProcess extends _DeleteLanguageProcess {
 
 abstract class _DeleteLanguageProcess extends WorkingProcessClient {
   factory _DeleteLanguageProcess(final LanguageProcessResponse? model) =
-      _$_DeleteLanguageProcess;
+      _$DeleteLanguageProcessImpl;
   _DeleteLanguageProcess._() : super._();
 
+  @override
   LanguageProcessResponse? get model;
   @JsonKey(ignore: true)
-  _$$_DeleteLanguageProcessCopyWith<_$_DeleteLanguageProcess> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DeleteLanguageProcessImplCopyWith<_$DeleteLanguageProcessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_UpdateWorkingProcessCopyWith<$Res> {
-  factory _$$_UpdateWorkingProcessCopyWith(_$_UpdateWorkingProcess value,
-          $Res Function(_$_UpdateWorkingProcess) then) =
-      __$$_UpdateWorkingProcessCopyWithImpl<$Res>;
+abstract class _$$UpdateWorkingProcessImplCopyWith<$Res> {
+  factory _$$UpdateWorkingProcessImplCopyWith(_$UpdateWorkingProcessImpl value,
+          $Res Function(_$UpdateWorkingProcessImpl) then) =
+      __$$UpdateWorkingProcessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({WorkingProcessResponse? model});
 
@@ -927,11 +935,11 @@ abstract class _$$_UpdateWorkingProcessCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_UpdateWorkingProcessCopyWithImpl<$Res>
-    extends _$WorkingProcessClientCopyWithImpl<$Res, _$_UpdateWorkingProcess>
-    implements _$$_UpdateWorkingProcessCopyWith<$Res> {
-  __$$_UpdateWorkingProcessCopyWithImpl(_$_UpdateWorkingProcess _value,
-      $Res Function(_$_UpdateWorkingProcess) _then)
+class __$$UpdateWorkingProcessImplCopyWithImpl<$Res>
+    extends _$WorkingProcessClientCopyWithImpl<$Res, _$UpdateWorkingProcessImpl>
+    implements _$$UpdateWorkingProcessImplCopyWith<$Res> {
+  __$$UpdateWorkingProcessImplCopyWithImpl(_$UpdateWorkingProcessImpl _value,
+      $Res Function(_$UpdateWorkingProcessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -939,7 +947,7 @@ class __$$_UpdateWorkingProcessCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_UpdateWorkingProcess(
+    return _then(_$UpdateWorkingProcessImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -962,8 +970,8 @@ class __$$_UpdateWorkingProcessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateWorkingProcess extends _UpdateWorkingProcess {
-  _$_UpdateWorkingProcess(this.model) : super._();
+class _$UpdateWorkingProcessImpl extends _UpdateWorkingProcess {
+  _$UpdateWorkingProcessImpl(this.model) : super._();
 
   @override
   final WorkingProcessResponse? model;
@@ -974,10 +982,10 @@ class _$_UpdateWorkingProcess extends _UpdateWorkingProcess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UpdateWorkingProcess &&
+            other is _$UpdateWorkingProcessImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -987,9 +995,10 @@ class _$_UpdateWorkingProcess extends _UpdateWorkingProcess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateWorkingProcessCopyWith<_$_UpdateWorkingProcess> get copyWith =>
-      __$$_UpdateWorkingProcessCopyWithImpl<_$_UpdateWorkingProcess>(
-          this, _$identity);
+  _$$UpdateWorkingProcessImplCopyWith<_$UpdateWorkingProcessImpl>
+      get copyWith =>
+          __$$UpdateWorkingProcessImplCopyWithImpl<_$UpdateWorkingProcessImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1104,20 +1113,22 @@ class _$_UpdateWorkingProcess extends _UpdateWorkingProcess {
 
 abstract class _UpdateWorkingProcess extends WorkingProcessClient {
   factory _UpdateWorkingProcess(final WorkingProcessResponse? model) =
-      _$_UpdateWorkingProcess;
+      _$UpdateWorkingProcessImpl;
   _UpdateWorkingProcess._() : super._();
 
+  @override
   WorkingProcessResponse? get model;
   @JsonKey(ignore: true)
-  _$$_UpdateWorkingProcessCopyWith<_$_UpdateWorkingProcess> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$UpdateWorkingProcessImplCopyWith<_$UpdateWorkingProcessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_UpdateLanguageProcessCopyWith<$Res> {
-  factory _$$_UpdateLanguageProcessCopyWith(_$_UpdateLanguageProcess value,
-          $Res Function(_$_UpdateLanguageProcess) then) =
-      __$$_UpdateLanguageProcessCopyWithImpl<$Res>;
+abstract class _$$UpdateLanguageProcessImplCopyWith<$Res> {
+  factory _$$UpdateLanguageProcessImplCopyWith(
+          _$UpdateLanguageProcessImpl value,
+          $Res Function(_$UpdateLanguageProcessImpl) then) =
+      __$$UpdateLanguageProcessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({LanguageProcessResponse? model});
 
@@ -1125,11 +1136,12 @@ abstract class _$$_UpdateLanguageProcessCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_UpdateLanguageProcessCopyWithImpl<$Res>
-    extends _$WorkingProcessClientCopyWithImpl<$Res, _$_UpdateLanguageProcess>
-    implements _$$_UpdateLanguageProcessCopyWith<$Res> {
-  __$$_UpdateLanguageProcessCopyWithImpl(_$_UpdateLanguageProcess _value,
-      $Res Function(_$_UpdateLanguageProcess) _then)
+class __$$UpdateLanguageProcessImplCopyWithImpl<$Res>
+    extends _$WorkingProcessClientCopyWithImpl<$Res,
+        _$UpdateLanguageProcessImpl>
+    implements _$$UpdateLanguageProcessImplCopyWith<$Res> {
+  __$$UpdateLanguageProcessImplCopyWithImpl(_$UpdateLanguageProcessImpl _value,
+      $Res Function(_$UpdateLanguageProcessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1137,7 +1149,7 @@ class __$$_UpdateLanguageProcessCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_UpdateLanguageProcess(
+    return _then(_$UpdateLanguageProcessImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -1160,8 +1172,8 @@ class __$$_UpdateLanguageProcessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateLanguageProcess extends _UpdateLanguageProcess {
-  _$_UpdateLanguageProcess(this.model) : super._();
+class _$UpdateLanguageProcessImpl extends _UpdateLanguageProcess {
+  _$UpdateLanguageProcessImpl(this.model) : super._();
 
   @override
   final LanguageProcessResponse? model;
@@ -1172,10 +1184,10 @@ class _$_UpdateLanguageProcess extends _UpdateLanguageProcess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UpdateLanguageProcess &&
+            other is _$UpdateLanguageProcessImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -1185,9 +1197,9 @@ class _$_UpdateLanguageProcess extends _UpdateLanguageProcess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateLanguageProcessCopyWith<_$_UpdateLanguageProcess> get copyWith =>
-      __$$_UpdateLanguageProcessCopyWithImpl<_$_UpdateLanguageProcess>(
-          this, _$identity);
+  _$$UpdateLanguageProcessImplCopyWith<_$UpdateLanguageProcessImpl>
+      get copyWith => __$$UpdateLanguageProcessImplCopyWithImpl<
+          _$UpdateLanguageProcessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1302,20 +1314,21 @@ class _$_UpdateLanguageProcess extends _UpdateLanguageProcess {
 
 abstract class _UpdateLanguageProcess extends WorkingProcessClient {
   factory _UpdateLanguageProcess(final LanguageProcessResponse? model) =
-      _$_UpdateLanguageProcess;
+      _$UpdateLanguageProcessImpl;
   _UpdateLanguageProcess._() : super._();
 
+  @override
   LanguageProcessResponse? get model;
   @JsonKey(ignore: true)
-  _$$_UpdateLanguageProcessCopyWith<_$_UpdateLanguageProcess> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$UpdateLanguageProcessImplCopyWith<_$UpdateLanguageProcessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_InsertWorkingProcessCopyWith<$Res> {
-  factory _$$_InsertWorkingProcessCopyWith(_$_InsertWorkingProcess value,
-          $Res Function(_$_InsertWorkingProcess) then) =
-      __$$_InsertWorkingProcessCopyWithImpl<$Res>;
+abstract class _$$InsertWorkingProcessImplCopyWith<$Res> {
+  factory _$$InsertWorkingProcessImplCopyWith(_$InsertWorkingProcessImpl value,
+          $Res Function(_$InsertWorkingProcessImpl) then) =
+      __$$InsertWorkingProcessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({WorkingProcessResponse? model});
 
@@ -1323,11 +1336,11 @@ abstract class _$$_InsertWorkingProcessCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_InsertWorkingProcessCopyWithImpl<$Res>
-    extends _$WorkingProcessClientCopyWithImpl<$Res, _$_InsertWorkingProcess>
-    implements _$$_InsertWorkingProcessCopyWith<$Res> {
-  __$$_InsertWorkingProcessCopyWithImpl(_$_InsertWorkingProcess _value,
-      $Res Function(_$_InsertWorkingProcess) _then)
+class __$$InsertWorkingProcessImplCopyWithImpl<$Res>
+    extends _$WorkingProcessClientCopyWithImpl<$Res, _$InsertWorkingProcessImpl>
+    implements _$$InsertWorkingProcessImplCopyWith<$Res> {
+  __$$InsertWorkingProcessImplCopyWithImpl(_$InsertWorkingProcessImpl _value,
+      $Res Function(_$InsertWorkingProcessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1335,7 +1348,7 @@ class __$$_InsertWorkingProcessCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_InsertWorkingProcess(
+    return _then(_$InsertWorkingProcessImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -1358,8 +1371,8 @@ class __$$_InsertWorkingProcessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InsertWorkingProcess extends _InsertWorkingProcess {
-  _$_InsertWorkingProcess(this.model) : super._();
+class _$InsertWorkingProcessImpl extends _InsertWorkingProcess {
+  _$InsertWorkingProcessImpl(this.model) : super._();
 
   @override
   final WorkingProcessResponse? model;
@@ -1370,10 +1383,10 @@ class _$_InsertWorkingProcess extends _InsertWorkingProcess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InsertWorkingProcess &&
+            other is _$InsertWorkingProcessImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -1383,9 +1396,10 @@ class _$_InsertWorkingProcess extends _InsertWorkingProcess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InsertWorkingProcessCopyWith<_$_InsertWorkingProcess> get copyWith =>
-      __$$_InsertWorkingProcessCopyWithImpl<_$_InsertWorkingProcess>(
-          this, _$identity);
+  _$$InsertWorkingProcessImplCopyWith<_$InsertWorkingProcessImpl>
+      get copyWith =>
+          __$$InsertWorkingProcessImplCopyWithImpl<_$InsertWorkingProcessImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1500,20 +1514,22 @@ class _$_InsertWorkingProcess extends _InsertWorkingProcess {
 
 abstract class _InsertWorkingProcess extends WorkingProcessClient {
   factory _InsertWorkingProcess(final WorkingProcessResponse? model) =
-      _$_InsertWorkingProcess;
+      _$InsertWorkingProcessImpl;
   _InsertWorkingProcess._() : super._();
 
+  @override
   WorkingProcessResponse? get model;
   @JsonKey(ignore: true)
-  _$$_InsertWorkingProcessCopyWith<_$_InsertWorkingProcess> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InsertWorkingProcessImplCopyWith<_$InsertWorkingProcessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_InsertLanguageProcessCopyWith<$Res> {
-  factory _$$_InsertLanguageProcessCopyWith(_$_InsertLanguageProcess value,
-          $Res Function(_$_InsertLanguageProcess) then) =
-      __$$_InsertLanguageProcessCopyWithImpl<$Res>;
+abstract class _$$InsertLanguageProcessImplCopyWith<$Res> {
+  factory _$$InsertLanguageProcessImplCopyWith(
+          _$InsertLanguageProcessImpl value,
+          $Res Function(_$InsertLanguageProcessImpl) then) =
+      __$$InsertLanguageProcessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({LanguageProcessResponse? model});
 
@@ -1521,11 +1537,12 @@ abstract class _$$_InsertLanguageProcessCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_InsertLanguageProcessCopyWithImpl<$Res>
-    extends _$WorkingProcessClientCopyWithImpl<$Res, _$_InsertLanguageProcess>
-    implements _$$_InsertLanguageProcessCopyWith<$Res> {
-  __$$_InsertLanguageProcessCopyWithImpl(_$_InsertLanguageProcess _value,
-      $Res Function(_$_InsertLanguageProcess) _then)
+class __$$InsertLanguageProcessImplCopyWithImpl<$Res>
+    extends _$WorkingProcessClientCopyWithImpl<$Res,
+        _$InsertLanguageProcessImpl>
+    implements _$$InsertLanguageProcessImplCopyWith<$Res> {
+  __$$InsertLanguageProcessImplCopyWithImpl(_$InsertLanguageProcessImpl _value,
+      $Res Function(_$InsertLanguageProcessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1533,7 +1550,7 @@ class __$$_InsertLanguageProcessCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_InsertLanguageProcess(
+    return _then(_$InsertLanguageProcessImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -1556,8 +1573,8 @@ class __$$_InsertLanguageProcessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InsertLanguageProcess extends _InsertLanguageProcess {
-  _$_InsertLanguageProcess(this.model) : super._();
+class _$InsertLanguageProcessImpl extends _InsertLanguageProcess {
+  _$InsertLanguageProcessImpl(this.model) : super._();
 
   @override
   final LanguageProcessResponse? model;
@@ -1568,10 +1585,10 @@ class _$_InsertLanguageProcess extends _InsertLanguageProcess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InsertLanguageProcess &&
+            other is _$InsertLanguageProcessImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -1581,9 +1598,9 @@ class _$_InsertLanguageProcess extends _InsertLanguageProcess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InsertLanguageProcessCopyWith<_$_InsertLanguageProcess> get copyWith =>
-      __$$_InsertLanguageProcessCopyWithImpl<_$_InsertLanguageProcess>(
-          this, _$identity);
+  _$$InsertLanguageProcessImplCopyWith<_$InsertLanguageProcessImpl>
+      get copyWith => __$$InsertLanguageProcessImplCopyWithImpl<
+          _$InsertLanguageProcessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1698,11 +1715,12 @@ class _$_InsertLanguageProcess extends _InsertLanguageProcess {
 
 abstract class _InsertLanguageProcess extends WorkingProcessClient {
   factory _InsertLanguageProcess(final LanguageProcessResponse? model) =
-      _$_InsertLanguageProcess;
+      _$InsertLanguageProcessImpl;
   _InsertLanguageProcess._() : super._();
 
+  @override
   LanguageProcessResponse? get model;
   @JsonKey(ignore: true)
-  _$$_InsertLanguageProcessCopyWith<_$_InsertLanguageProcess> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InsertLanguageProcessImplCopyWith<_$InsertLanguageProcessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

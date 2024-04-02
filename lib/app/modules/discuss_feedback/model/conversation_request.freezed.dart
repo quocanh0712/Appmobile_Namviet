@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'conversation_request.dart';
 
@@ -12,7 +12,7 @@ part of 'conversation_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ConversationRequest _$ConversationRequestFromJson(Map<String, dynamic> json) {
   return _ConversationRequest.fromJson(json);
@@ -74,22 +74,22 @@ class _$ConversationRequestCopyWithImpl<$Res, $Val extends ConversationRequest>
 }
 
 /// @nodoc
-abstract class _$$_ConversationRequestCopyWith<$Res>
+abstract class _$$ConversationRequestImplCopyWith<$Res>
     implements $ConversationRequestCopyWith<$Res> {
-  factory _$$_ConversationRequestCopyWith(_$_ConversationRequest value,
-          $Res Function(_$_ConversationRequest) then) =
-      __$$_ConversationRequestCopyWithImpl<$Res>;
+  factory _$$ConversationRequestImplCopyWith(_$ConversationRequestImpl value,
+          $Res Function(_$ConversationRequestImpl) then) =
+      __$$ConversationRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? startindex, int? length, String? keyword});
 }
 
 /// @nodoc
-class __$$_ConversationRequestCopyWithImpl<$Res>
-    extends _$ConversationRequestCopyWithImpl<$Res, _$_ConversationRequest>
-    implements _$$_ConversationRequestCopyWith<$Res> {
-  __$$_ConversationRequestCopyWithImpl(_$_ConversationRequest _value,
-      $Res Function(_$_ConversationRequest) _then)
+class __$$ConversationRequestImplCopyWithImpl<$Res>
+    extends _$ConversationRequestCopyWithImpl<$Res, _$ConversationRequestImpl>
+    implements _$$ConversationRequestImplCopyWith<$Res> {
+  __$$ConversationRequestImplCopyWithImpl(_$ConversationRequestImpl _value,
+      $Res Function(_$ConversationRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$_ConversationRequestCopyWithImpl<$Res>
     Object? length = freezed,
     Object? keyword = freezed,
   }) {
-    return _then(_$_ConversationRequest(
+    return _then(_$ConversationRequestImpl(
       startindex: freezed == startindex
           ? _value.startindex
           : startindex // ignore: cast_nullable_to_non_nullable
@@ -118,11 +118,11 @@ class __$$_ConversationRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ConversationRequest implements _ConversationRequest {
-  const _$_ConversationRequest({this.startindex, this.length, this.keyword});
+class _$ConversationRequestImpl implements _ConversationRequest {
+  const _$ConversationRequestImpl({this.startindex, this.length, this.keyword});
 
-  factory _$_ConversationRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_ConversationRequestFromJson(json);
+  factory _$ConversationRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ConversationRequestImplFromJson(json);
 
   @override
   final int? startindex;
@@ -137,10 +137,10 @@ class _$_ConversationRequest implements _ConversationRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ConversationRequest &&
+            other is _$ConversationRequestImpl &&
             (identical(other.startindex, startindex) ||
                 other.startindex == startindex) &&
             (identical(other.length, length) || other.length == length) &&
@@ -154,13 +154,13 @@ class _$_ConversationRequest implements _ConversationRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ConversationRequestCopyWith<_$_ConversationRequest> get copyWith =>
-      __$$_ConversationRequestCopyWithImpl<_$_ConversationRequest>(
+  _$$ConversationRequestImplCopyWith<_$ConversationRequestImpl> get copyWith =>
+      __$$ConversationRequestImplCopyWithImpl<_$ConversationRequestImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ConversationRequestToJson(
+    return _$$ConversationRequestImplToJson(
       this,
     );
   }
@@ -170,10 +170,10 @@ abstract class _ConversationRequest implements ConversationRequest {
   const factory _ConversationRequest(
       {final int? startindex,
       final int? length,
-      final String? keyword}) = _$_ConversationRequest;
+      final String? keyword}) = _$ConversationRequestImpl;
 
   factory _ConversationRequest.fromJson(Map<String, dynamic> json) =
-      _$_ConversationRequest.fromJson;
+      _$ConversationRequestImpl.fromJson;
 
   @override
   int? get startindex;
@@ -183,6 +183,6 @@ abstract class _ConversationRequest implements ConversationRequest {
   String? get keyword;
   @override
   @JsonKey(ignore: true)
-  _$$_ConversationRequestCopyWith<_$_ConversationRequest> get copyWith =>
+  _$$ConversationRequestImplCopyWith<_$ConversationRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -3,32 +3,12 @@
 part of 'test_schedule_object.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-TestScheduleObject? jsonToNullableTestScheduleObject(Object? json) =>
-    TestScheduleObject.fromJson(json as Map<String, dynamic>);
-
-TestScheduleObject jsonToTestScheduleObject(Object? json) =>
-    TestScheduleObject.fromJson(json as Map<String, dynamic>);
-
-List<TestScheduleObject?> jsonToListNullableTestScheduleObjects(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => TestScheduleObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<TestScheduleObject> jsonToListTestScheduleObjects(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => TestScheduleObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_TestScheduleObject _$$_TestScheduleObjectFromJson(
+_$TestScheduleObjectImpl _$$TestScheduleObjectImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TestScheduleObject(
+    _$TestScheduleObjectImpl(
       dayofweeks: json['dayofweeks'] as String?,
       date: json['date'] as int?,
       month: json['month'] as String?,
@@ -39,8 +19,8 @@ _$_TestScheduleObject _$$_TestScheduleObjectFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_TestScheduleObjectToJson(
-        _$_TestScheduleObject instance) =>
+Map<String, dynamic> _$$TestScheduleObjectImplToJson(
+        _$TestScheduleObjectImpl instance) =>
     <String, dynamic>{
       'dayofweeks': instance.dayofweeks,
       'date': instance.date,

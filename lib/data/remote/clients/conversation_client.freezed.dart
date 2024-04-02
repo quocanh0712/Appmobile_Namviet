@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'conversation_client.dart';
 
@@ -12,10 +12,11 @@ part of 'conversation_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ConversationClient {
+  Object? get model => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(ConversationRequest? model) getListConversation,
@@ -97,10 +98,10 @@ class _$ConversationClientCopyWithImpl<$Res, $Val extends ConversationClient>
 }
 
 /// @nodoc
-abstract class _$$_ConversationListCopyWith<$Res> {
-  factory _$$_ConversationListCopyWith(
-          _$_ConversationList value, $Res Function(_$_ConversationList) then) =
-      __$$_ConversationListCopyWithImpl<$Res>;
+abstract class _$$ConversationListImplCopyWith<$Res> {
+  factory _$$ConversationListImplCopyWith(_$ConversationListImpl value,
+          $Res Function(_$ConversationListImpl) then) =
+      __$$ConversationListImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ConversationRequest? model});
 
@@ -108,11 +109,11 @@ abstract class _$$_ConversationListCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ConversationListCopyWithImpl<$Res>
-    extends _$ConversationClientCopyWithImpl<$Res, _$_ConversationList>
-    implements _$$_ConversationListCopyWith<$Res> {
-  __$$_ConversationListCopyWithImpl(
-      _$_ConversationList _value, $Res Function(_$_ConversationList) _then)
+class __$$ConversationListImplCopyWithImpl<$Res>
+    extends _$ConversationClientCopyWithImpl<$Res, _$ConversationListImpl>
+    implements _$$ConversationListImplCopyWith<$Res> {
+  __$$ConversationListImplCopyWithImpl(_$ConversationListImpl _value,
+      $Res Function(_$ConversationListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -120,7 +121,7 @@ class __$$_ConversationListCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_ConversationList(
+    return _then(_$ConversationListImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -143,8 +144,8 @@ class __$$_ConversationListCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ConversationList extends _ConversationList {
-  _$_ConversationList(this.model) : super._();
+class _$ConversationListImpl extends _ConversationList {
+  _$ConversationListImpl(this.model) : super._();
 
   @override
   final ConversationRequest? model;
@@ -155,10 +156,10 @@ class _$_ConversationList extends _ConversationList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ConversationList &&
+            other is _$ConversationListImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -168,8 +169,9 @@ class _$_ConversationList extends _ConversationList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ConversationListCopyWith<_$_ConversationList> get copyWith =>
-      __$$_ConversationListCopyWithImpl<_$_ConversationList>(this, _$identity);
+  _$$ConversationListImplCopyWith<_$ConversationListImpl> get copyWith =>
+      __$$ConversationListImplCopyWithImpl<_$ConversationListImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -258,20 +260,21 @@ class _$_ConversationList extends _ConversationList {
 
 abstract class _ConversationList extends ConversationClient {
   factory _ConversationList(final ConversationRequest? model) =
-      _$_ConversationList;
+      _$ConversationListImpl;
   _ConversationList._() : super._();
 
+  @override
   ConversationRequest? get model;
   @JsonKey(ignore: true)
-  _$$_ConversationListCopyWith<_$_ConversationList> get copyWith =>
+  _$$ConversationListImplCopyWith<_$ConversationListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_CommentListCopyWith<$Res> {
-  factory _$$_CommentListCopyWith(
-          _$_CommentList value, $Res Function(_$_CommentList) then) =
-      __$$_CommentListCopyWithImpl<$Res>;
+abstract class _$$CommentListImplCopyWith<$Res> {
+  factory _$$CommentListImplCopyWith(
+          _$CommentListImpl value, $Res Function(_$CommentListImpl) then) =
+      __$$CommentListImplCopyWithImpl<$Res>;
   @useResult
   $Res call({CommentRequest? model});
 
@@ -279,11 +282,11 @@ abstract class _$$_CommentListCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CommentListCopyWithImpl<$Res>
-    extends _$ConversationClientCopyWithImpl<$Res, _$_CommentList>
-    implements _$$_CommentListCopyWith<$Res> {
-  __$$_CommentListCopyWithImpl(
-      _$_CommentList _value, $Res Function(_$_CommentList) _then)
+class __$$CommentListImplCopyWithImpl<$Res>
+    extends _$ConversationClientCopyWithImpl<$Res, _$CommentListImpl>
+    implements _$$CommentListImplCopyWith<$Res> {
+  __$$CommentListImplCopyWithImpl(
+      _$CommentListImpl _value, $Res Function(_$CommentListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -291,7 +294,7 @@ class __$$_CommentListCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_CommentList(
+    return _then(_$CommentListImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -314,8 +317,8 @@ class __$$_CommentListCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_CommentList extends _CommentList {
-  _$_CommentList(this.model) : super._();
+class _$CommentListImpl extends _CommentList {
+  _$CommentListImpl(this.model) : super._();
 
   @override
   final CommentRequest? model;
@@ -326,10 +329,10 @@ class _$_CommentList extends _CommentList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CommentList &&
+            other is _$CommentListImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -339,8 +342,8 @@ class _$_CommentList extends _CommentList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CommentListCopyWith<_$_CommentList> get copyWith =>
-      __$$_CommentListCopyWithImpl<_$_CommentList>(this, _$identity);
+  _$$CommentListImplCopyWith<_$CommentListImpl> get copyWith =>
+      __$$CommentListImplCopyWithImpl<_$CommentListImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -428,20 +431,21 @@ class _$_CommentList extends _CommentList {
 }
 
 abstract class _CommentList extends ConversationClient {
-  factory _CommentList(final CommentRequest? model) = _$_CommentList;
+  factory _CommentList(final CommentRequest? model) = _$CommentListImpl;
   _CommentList._() : super._();
 
+  @override
   CommentRequest? get model;
   @JsonKey(ignore: true)
-  _$$_CommentListCopyWith<_$_CommentList> get copyWith =>
+  _$$CommentListImplCopyWith<_$CommentListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_InsertNewCommentCopyWith<$Res> {
-  factory _$$_InsertNewCommentCopyWith(
-          _$_InsertNewComment value, $Res Function(_$_InsertNewComment) then) =
-      __$$_InsertNewCommentCopyWithImpl<$Res>;
+abstract class _$$InsertNewCommentImplCopyWith<$Res> {
+  factory _$$InsertNewCommentImplCopyWith(_$InsertNewCommentImpl value,
+          $Res Function(_$InsertNewCommentImpl) then) =
+      __$$InsertNewCommentImplCopyWithImpl<$Res>;
   @useResult
   $Res call({CommentInsertRequest? model});
 
@@ -449,11 +453,11 @@ abstract class _$$_InsertNewCommentCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_InsertNewCommentCopyWithImpl<$Res>
-    extends _$ConversationClientCopyWithImpl<$Res, _$_InsertNewComment>
-    implements _$$_InsertNewCommentCopyWith<$Res> {
-  __$$_InsertNewCommentCopyWithImpl(
-      _$_InsertNewComment _value, $Res Function(_$_InsertNewComment) _then)
+class __$$InsertNewCommentImplCopyWithImpl<$Res>
+    extends _$ConversationClientCopyWithImpl<$Res, _$InsertNewCommentImpl>
+    implements _$$InsertNewCommentImplCopyWith<$Res> {
+  __$$InsertNewCommentImplCopyWithImpl(_$InsertNewCommentImpl _value,
+      $Res Function(_$InsertNewCommentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -461,7 +465,7 @@ class __$$_InsertNewCommentCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_InsertNewComment(
+    return _then(_$InsertNewCommentImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -484,8 +488,8 @@ class __$$_InsertNewCommentCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InsertNewComment extends _InsertNewComment {
-  _$_InsertNewComment(this.model) : super._();
+class _$InsertNewCommentImpl extends _InsertNewComment {
+  _$InsertNewCommentImpl(this.model) : super._();
 
   @override
   final CommentInsertRequest? model;
@@ -496,10 +500,10 @@ class _$_InsertNewComment extends _InsertNewComment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InsertNewComment &&
+            other is _$InsertNewCommentImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -509,8 +513,9 @@ class _$_InsertNewComment extends _InsertNewComment {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InsertNewCommentCopyWith<_$_InsertNewComment> get copyWith =>
-      __$$_InsertNewCommentCopyWithImpl<_$_InsertNewComment>(this, _$identity);
+  _$$InsertNewCommentImplCopyWith<_$InsertNewCommentImpl> get copyWith =>
+      __$$InsertNewCommentImplCopyWithImpl<_$InsertNewCommentImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -599,20 +604,22 @@ class _$_InsertNewComment extends _InsertNewComment {
 
 abstract class _InsertNewComment extends ConversationClient {
   factory _InsertNewComment(final CommentInsertRequest? model) =
-      _$_InsertNewComment;
+      _$InsertNewCommentImpl;
   _InsertNewComment._() : super._();
 
+  @override
   CommentInsertRequest? get model;
   @JsonKey(ignore: true)
-  _$$_InsertNewCommentCopyWith<_$_InsertNewComment> get copyWith =>
+  _$$InsertNewCommentImplCopyWith<_$InsertNewCommentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_InsertNewConversationCopyWith<$Res> {
-  factory _$$_InsertNewConversationCopyWith(_$_InsertNewConversation value,
-          $Res Function(_$_InsertNewConversation) then) =
-      __$$_InsertNewConversationCopyWithImpl<$Res>;
+abstract class _$$InsertNewConversationImplCopyWith<$Res> {
+  factory _$$InsertNewConversationImplCopyWith(
+          _$InsertNewConversationImpl value,
+          $Res Function(_$InsertNewConversationImpl) then) =
+      __$$InsertNewConversationImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ConversationResponse? model});
 
@@ -620,11 +627,11 @@ abstract class _$$_InsertNewConversationCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_InsertNewConversationCopyWithImpl<$Res>
-    extends _$ConversationClientCopyWithImpl<$Res, _$_InsertNewConversation>
-    implements _$$_InsertNewConversationCopyWith<$Res> {
-  __$$_InsertNewConversationCopyWithImpl(_$_InsertNewConversation _value,
-      $Res Function(_$_InsertNewConversation) _then)
+class __$$InsertNewConversationImplCopyWithImpl<$Res>
+    extends _$ConversationClientCopyWithImpl<$Res, _$InsertNewConversationImpl>
+    implements _$$InsertNewConversationImplCopyWith<$Res> {
+  __$$InsertNewConversationImplCopyWithImpl(_$InsertNewConversationImpl _value,
+      $Res Function(_$InsertNewConversationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -632,7 +639,7 @@ class __$$_InsertNewConversationCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_InsertNewConversation(
+    return _then(_$InsertNewConversationImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -655,8 +662,8 @@ class __$$_InsertNewConversationCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InsertNewConversation extends _InsertNewConversation {
-  _$_InsertNewConversation(this.model) : super._();
+class _$InsertNewConversationImpl extends _InsertNewConversation {
+  _$InsertNewConversationImpl(this.model) : super._();
 
   @override
   final ConversationResponse? model;
@@ -667,10 +674,10 @@ class _$_InsertNewConversation extends _InsertNewConversation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InsertNewConversation &&
+            other is _$InsertNewConversationImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -680,9 +687,9 @@ class _$_InsertNewConversation extends _InsertNewConversation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InsertNewConversationCopyWith<_$_InsertNewConversation> get copyWith =>
-      __$$_InsertNewConversationCopyWithImpl<_$_InsertNewConversation>(
-          this, _$identity);
+  _$$InsertNewConversationImplCopyWith<_$InsertNewConversationImpl>
+      get copyWith => __$$InsertNewConversationImplCopyWithImpl<
+          _$InsertNewConversationImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -771,20 +778,22 @@ class _$_InsertNewConversation extends _InsertNewConversation {
 
 abstract class _InsertNewConversation extends ConversationClient {
   factory _InsertNewConversation(final ConversationResponse? model) =
-      _$_InsertNewConversation;
+      _$InsertNewConversationImpl;
   _InsertNewConversation._() : super._();
 
+  @override
   ConversationResponse? get model;
   @JsonKey(ignore: true)
-  _$$_InsertNewConversationCopyWith<_$_InsertNewConversation> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InsertNewConversationImplCopyWith<_$InsertNewConversationImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_UpdateNewConversationCopyWith<$Res> {
-  factory _$$_UpdateNewConversationCopyWith(_$_UpdateNewConversation value,
-          $Res Function(_$_UpdateNewConversation) then) =
-      __$$_UpdateNewConversationCopyWithImpl<$Res>;
+abstract class _$$UpdateNewConversationImplCopyWith<$Res> {
+  factory _$$UpdateNewConversationImplCopyWith(
+          _$UpdateNewConversationImpl value,
+          $Res Function(_$UpdateNewConversationImpl) then) =
+      __$$UpdateNewConversationImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ConversationResponse? model});
 
@@ -792,11 +801,11 @@ abstract class _$$_UpdateNewConversationCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_UpdateNewConversationCopyWithImpl<$Res>
-    extends _$ConversationClientCopyWithImpl<$Res, _$_UpdateNewConversation>
-    implements _$$_UpdateNewConversationCopyWith<$Res> {
-  __$$_UpdateNewConversationCopyWithImpl(_$_UpdateNewConversation _value,
-      $Res Function(_$_UpdateNewConversation) _then)
+class __$$UpdateNewConversationImplCopyWithImpl<$Res>
+    extends _$ConversationClientCopyWithImpl<$Res, _$UpdateNewConversationImpl>
+    implements _$$UpdateNewConversationImplCopyWith<$Res> {
+  __$$UpdateNewConversationImplCopyWithImpl(_$UpdateNewConversationImpl _value,
+      $Res Function(_$UpdateNewConversationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -804,7 +813,7 @@ class __$$_UpdateNewConversationCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_UpdateNewConversation(
+    return _then(_$UpdateNewConversationImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -827,8 +836,8 @@ class __$$_UpdateNewConversationCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateNewConversation extends _UpdateNewConversation {
-  _$_UpdateNewConversation(this.model) : super._();
+class _$UpdateNewConversationImpl extends _UpdateNewConversation {
+  _$UpdateNewConversationImpl(this.model) : super._();
 
   @override
   final ConversationResponse? model;
@@ -839,10 +848,10 @@ class _$_UpdateNewConversation extends _UpdateNewConversation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UpdateNewConversation &&
+            other is _$UpdateNewConversationImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -852,9 +861,9 @@ class _$_UpdateNewConversation extends _UpdateNewConversation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateNewConversationCopyWith<_$_UpdateNewConversation> get copyWith =>
-      __$$_UpdateNewConversationCopyWithImpl<_$_UpdateNewConversation>(
-          this, _$identity);
+  _$$UpdateNewConversationImplCopyWith<_$UpdateNewConversationImpl>
+      get copyWith => __$$UpdateNewConversationImplCopyWithImpl<
+          _$UpdateNewConversationImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -943,11 +952,12 @@ class _$_UpdateNewConversation extends _UpdateNewConversation {
 
 abstract class _UpdateNewConversation extends ConversationClient {
   factory _UpdateNewConversation(final ConversationResponse? model) =
-      _$_UpdateNewConversation;
+      _$UpdateNewConversationImpl;
   _UpdateNewConversation._() : super._();
 
+  @override
   ConversationResponse? get model;
   @JsonKey(ignore: true)
-  _$$_UpdateNewConversationCopyWith<_$_UpdateNewConversation> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$UpdateNewConversationImplCopyWith<_$UpdateNewConversationImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

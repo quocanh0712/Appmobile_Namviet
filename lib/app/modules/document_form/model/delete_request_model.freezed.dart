@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'delete_request_model.dart';
 
@@ -12,7 +12,7 @@ part of 'delete_request_model.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 DeleteRequestModel _$DeleteRequestModelFromJson(Map<String, dynamic> json) {
   return _DeleteRequestModel.fromJson(json);
@@ -62,22 +62,22 @@ class _$DeleteRequestModelCopyWithImpl<$Res, $Val extends DeleteRequestModel>
 }
 
 /// @nodoc
-abstract class _$$_DeleteRequestModelCopyWith<$Res>
+abstract class _$$DeleteRequestModelImplCopyWith<$Res>
     implements $DeleteRequestModelCopyWith<$Res> {
-  factory _$$_DeleteRequestModelCopyWith(_$_DeleteRequestModel value,
-          $Res Function(_$_DeleteRequestModel) then) =
-      __$$_DeleteRequestModelCopyWithImpl<$Res>;
+  factory _$$DeleteRequestModelImplCopyWith(_$DeleteRequestModelImpl value,
+          $Res Function(_$DeleteRequestModelImpl) then) =
+      __$$DeleteRequestModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? requestId});
 }
 
 /// @nodoc
-class __$$_DeleteRequestModelCopyWithImpl<$Res>
-    extends _$DeleteRequestModelCopyWithImpl<$Res, _$_DeleteRequestModel>
-    implements _$$_DeleteRequestModelCopyWith<$Res> {
-  __$$_DeleteRequestModelCopyWithImpl(
-      _$_DeleteRequestModel _value, $Res Function(_$_DeleteRequestModel) _then)
+class __$$DeleteRequestModelImplCopyWithImpl<$Res>
+    extends _$DeleteRequestModelCopyWithImpl<$Res, _$DeleteRequestModelImpl>
+    implements _$$DeleteRequestModelImplCopyWith<$Res> {
+  __$$DeleteRequestModelImplCopyWithImpl(_$DeleteRequestModelImpl _value,
+      $Res Function(_$DeleteRequestModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$_DeleteRequestModelCopyWithImpl<$Res>
   $Res call({
     Object? requestId = freezed,
   }) {
-    return _then(_$_DeleteRequestModel(
+    return _then(_$DeleteRequestModelImpl(
       requestId: freezed == requestId
           ? _value.requestId
           : requestId // ignore: cast_nullable_to_non_nullable
@@ -96,11 +96,11 @@ class __$$_DeleteRequestModelCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DeleteRequestModel implements _DeleteRequestModel {
-  const _$_DeleteRequestModel({this.requestId});
+class _$DeleteRequestModelImpl implements _DeleteRequestModel {
+  const _$DeleteRequestModelImpl({this.requestId});
 
-  factory _$_DeleteRequestModel.fromJson(Map<String, dynamic> json) =>
-      _$$_DeleteRequestModelFromJson(json);
+  factory _$DeleteRequestModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DeleteRequestModelImplFromJson(json);
 
   @override
   final String? requestId;
@@ -111,10 +111,10 @@ class _$_DeleteRequestModel implements _DeleteRequestModel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DeleteRequestModel &&
+            other is _$DeleteRequestModelImpl &&
             (identical(other.requestId, requestId) ||
                 other.requestId == requestId));
   }
@@ -126,13 +126,13 @@ class _$_DeleteRequestModel implements _DeleteRequestModel {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DeleteRequestModelCopyWith<_$_DeleteRequestModel> get copyWith =>
-      __$$_DeleteRequestModelCopyWithImpl<_$_DeleteRequestModel>(
+  _$$DeleteRequestModelImplCopyWith<_$DeleteRequestModelImpl> get copyWith =>
+      __$$DeleteRequestModelImplCopyWithImpl<_$DeleteRequestModelImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeleteRequestModelToJson(
+    return _$$DeleteRequestModelImplToJson(
       this,
     );
   }
@@ -140,15 +140,15 @@ class _$_DeleteRequestModel implements _DeleteRequestModel {
 
 abstract class _DeleteRequestModel implements DeleteRequestModel {
   const factory _DeleteRequestModel({final String? requestId}) =
-      _$_DeleteRequestModel;
+      _$DeleteRequestModelImpl;
 
   factory _DeleteRequestModel.fromJson(Map<String, dynamic> json) =
-      _$_DeleteRequestModel.fromJson;
+      _$DeleteRequestModelImpl.fromJson;
 
   @override
   String? get requestId;
   @override
   @JsonKey(ignore: true)
-  _$$_DeleteRequestModelCopyWith<_$_DeleteRequestModel> get copyWith =>
+  _$$DeleteRequestModelImplCopyWith<_$DeleteRequestModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

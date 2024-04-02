@@ -3,26 +3,6 @@
 part of 'checkin_object.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-CheckInObject? jsonToNullableCheckInObject(Object? json) =>
-    CheckInObject.fromJson(json as Map<String, dynamic>);
-
-CheckInObject jsonToCheckInObject(Object? json) =>
-    CheckInObject.fromJson(json as Map<String, dynamic>);
-
-List<CheckInObject?> jsonToListNullableCheckInObjects(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => CheckInObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<CheckInObject> jsonToListCheckInObjects(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => CheckInObject.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
@@ -100,8 +80,8 @@ class CheckInObjectAdapter extends TypeAdapter<CheckInObject> {
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CheckInObject _$$_CheckInObjectFromJson(Map<String, dynamic> json) =>
-    _$_CheckInObject(
+_$CheckInObjectImpl _$$CheckInObjectImplFromJson(Map<String, dynamic> json) =>
+    _$CheckInObjectImpl(
       ma_ts: json['ma_ts'] as String?,
       ten_ts: json['ten_ts'] as String?,
       nam_sx: json['nam_sx'] as String?,
@@ -117,7 +97,7 @@ _$_CheckInObject _$$_CheckInObjectFromJson(Map<String, dynamic> json) =>
       str_ngay_bdsd: json['str_ngay_bdsd'] as String?,
     );
 
-Map<String, dynamic> _$$_CheckInObjectToJson(_$_CheckInObject instance) =>
+Map<String, dynamic> _$$CheckInObjectImplToJson(_$CheckInObjectImpl instance) =>
     <String, dynamic>{
       'ma_ts': instance.ma_ts,
       'ten_ts': instance.ten_ts,

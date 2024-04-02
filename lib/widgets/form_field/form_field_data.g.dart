@@ -6,8 +6,8 @@ part of 'form_field_data.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FormFieldData _$$_FormFieldDataFromJson(Map<String, dynamic> json) =>
-    _$_FormFieldData(
+_$FormFieldDataImpl _$$FormFieldDataImplFromJson(Map<String, dynamic> json) =>
+    _$FormFieldDataImpl(
       type: json['type'] as String?,
       required: json['required'] as bool?,
       label: json['label'] as String?,
@@ -24,7 +24,7 @@ _$_FormFieldData _$$_FormFieldDataFromJson(Map<String, dynamic> json) =>
       multiple: json['multiple'] as bool?,
     );
 
-Map<String, dynamic> _$$_FormFieldDataToJson(_$_FormFieldData instance) =>
+Map<String, dynamic> _$$FormFieldDataImplToJson(_$FormFieldDataImpl instance) =>
     <String, dynamic>{
       'type': instance.type,
       'required': instance.required,
@@ -40,14 +40,14 @@ Map<String, dynamic> _$$_FormFieldDataToJson(_$_FormFieldData instance) =>
       'multiple': instance.multiple,
     };
 
-_$_ValueModel _$$_ValueModelFromJson(Map<String, dynamic> json) =>
-    _$_ValueModel(
+_$ValueModelImpl _$$ValueModelImplFromJson(Map<String, dynamic> json) =>
+    _$ValueModelImpl(
       label: json['label'] as String?,
       value: json['value'] as String?,
       selected: json['selected'] as bool?,
     );
 
-Map<String, dynamic> _$$_ValueModelToJson(_$_ValueModel instance) =>
+Map<String, dynamic> _$$ValueModelImplToJson(_$ValueModelImpl instance) =>
     <String, dynamic>{
       'label': instance.label,
       'value': instance.value,

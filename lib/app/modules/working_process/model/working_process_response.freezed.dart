@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'working_process_response.dart';
 
@@ -12,7 +12,7 @@ part of 'working_process_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 WorkingProcessResponse _$WorkingProcessResponseFromJson(
     Map<String, dynamic> json) {
@@ -93,11 +93,12 @@ class _$WorkingProcessResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_WorkingProcessResponseCopyWith<$Res>
+abstract class _$$WorkingProcessResponseImplCopyWith<$Res>
     implements $WorkingProcessResponseCopyWith<$Res> {
-  factory _$$_WorkingProcessResponseCopyWith(_$_WorkingProcessResponse value,
-          $Res Function(_$_WorkingProcessResponse) then) =
-      __$$_WorkingProcessResponseCopyWithImpl<$Res>;
+  factory _$$WorkingProcessResponseImplCopyWith(
+          _$WorkingProcessResponseImpl value,
+          $Res Function(_$WorkingProcessResponseImpl) then) =
+      __$$WorkingProcessResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -109,12 +110,13 @@ abstract class _$$_WorkingProcessResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_WorkingProcessResponseCopyWithImpl<$Res>
+class __$$WorkingProcessResponseImplCopyWithImpl<$Res>
     extends _$WorkingProcessResponseCopyWithImpl<$Res,
-        _$_WorkingProcessResponse>
-    implements _$$_WorkingProcessResponseCopyWith<$Res> {
-  __$$_WorkingProcessResponseCopyWithImpl(_$_WorkingProcessResponse _value,
-      $Res Function(_$_WorkingProcessResponse) _then)
+        _$WorkingProcessResponseImpl>
+    implements _$$WorkingProcessResponseImplCopyWith<$Res> {
+  __$$WorkingProcessResponseImplCopyWithImpl(
+      _$WorkingProcessResponseImpl _value,
+      $Res Function(_$WorkingProcessResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -126,7 +128,7 @@ class __$$_WorkingProcessResponseCopyWithImpl<$Res>
     Object? position = freezed,
     Object? workplace = freezed,
   }) {
-    return _then(_$_WorkingProcessResponse(
+    return _then(_$WorkingProcessResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -153,12 +155,12 @@ class __$$_WorkingProcessResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_WorkingProcessResponse implements _WorkingProcessResponse {
-  const _$_WorkingProcessResponse(
+class _$WorkingProcessResponseImpl implements _WorkingProcessResponse {
+  const _$WorkingProcessResponseImpl(
       {this.id, this.fromdate, this.todate, this.position, this.workplace});
 
-  factory _$_WorkingProcessResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_WorkingProcessResponseFromJson(json);
+  factory _$WorkingProcessResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$WorkingProcessResponseImplFromJson(json);
 
   @override
   final int? id;
@@ -177,10 +179,10 @@ class _$_WorkingProcessResponse implements _WorkingProcessResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_WorkingProcessResponse &&
+            other is _$WorkingProcessResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.fromdate, fromdate) ||
                 other.fromdate == fromdate) &&
@@ -199,13 +201,13 @@ class _$_WorkingProcessResponse implements _WorkingProcessResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_WorkingProcessResponseCopyWith<_$_WorkingProcessResponse> get copyWith =>
-      __$$_WorkingProcessResponseCopyWithImpl<_$_WorkingProcessResponse>(
-          this, _$identity);
+  _$$WorkingProcessResponseImplCopyWith<_$WorkingProcessResponseImpl>
+      get copyWith => __$$WorkingProcessResponseImplCopyWithImpl<
+          _$WorkingProcessResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_WorkingProcessResponseToJson(
+    return _$$WorkingProcessResponseImplToJson(
       this,
     );
   }
@@ -217,10 +219,10 @@ abstract class _WorkingProcessResponse implements WorkingProcessResponse {
       final DateTime? fromdate,
       final DateTime? todate,
       final String? position,
-      final String? workplace}) = _$_WorkingProcessResponse;
+      final String? workplace}) = _$WorkingProcessResponseImpl;
 
   factory _WorkingProcessResponse.fromJson(Map<String, dynamic> json) =
-      _$_WorkingProcessResponse.fromJson;
+      _$WorkingProcessResponseImpl.fromJson;
 
   @override
   int? get id;
@@ -234,6 +236,6 @@ abstract class _WorkingProcessResponse implements WorkingProcessResponse {
   String? get workplace;
   @override
   @JsonKey(ignore: true)
-  _$$_WorkingProcessResponseCopyWith<_$_WorkingProcessResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$WorkingProcessResponseImplCopyWith<_$WorkingProcessResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

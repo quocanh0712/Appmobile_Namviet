@@ -6,15 +6,15 @@ part of 'certificate_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CertificateRequest _$$_CertificateRequestFromJson(
+_$CertificateRequestImpl _$$CertificateRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CertificateRequest(
+    _$CertificateRequestImpl(
       startindex: json['startindex'] as int?,
       length: json['length'] as int?,
     );
 
-Map<String, dynamic> _$$_CertificateRequestToJson(
-        _$_CertificateRequest instance) =>
+Map<String, dynamic> _$$CertificateRequestImplToJson(
+        _$CertificateRequestImpl instance) =>
     <String, dynamic>{
       'startindex': instance.startindex,
       'length': instance.length,

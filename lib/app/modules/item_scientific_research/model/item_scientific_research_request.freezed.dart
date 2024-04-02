@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'item_scientific_research_request.dart';
 
@@ -12,7 +12,7 @@ part of 'item_scientific_research_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ItemScientificResearchRequest _$ItemScientificResearchRequestFromJson(
     Map<String, dynamic> json) {
@@ -84,25 +84,25 @@ class _$ItemScientificResearchRequestCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ItemScientificResearchRequestCopyWith<$Res>
+abstract class _$$ItemScientificResearchRequestImplCopyWith<$Res>
     implements $ItemScientificResearchRequestCopyWith<$Res> {
-  factory _$$_ItemScientificResearchRequestCopyWith(
-          _$_ItemScientificResearchRequest value,
-          $Res Function(_$_ItemScientificResearchRequest) then) =
-      __$$_ItemScientificResearchRequestCopyWithImpl<$Res>;
+  factory _$$ItemScientificResearchRequestImplCopyWith(
+          _$ItemScientificResearchRequestImpl value,
+          $Res Function(_$ItemScientificResearchRequestImpl) then) =
+      __$$ItemScientificResearchRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? idTypeNckh, int? startindex, int? length, String? keyword});
 }
 
 /// @nodoc
-class __$$_ItemScientificResearchRequestCopyWithImpl<$Res>
+class __$$ItemScientificResearchRequestImplCopyWithImpl<$Res>
     extends _$ItemScientificResearchRequestCopyWithImpl<$Res,
-        _$_ItemScientificResearchRequest>
-    implements _$$_ItemScientificResearchRequestCopyWith<$Res> {
-  __$$_ItemScientificResearchRequestCopyWithImpl(
-      _$_ItemScientificResearchRequest _value,
-      $Res Function(_$_ItemScientificResearchRequest) _then)
+        _$ItemScientificResearchRequestImpl>
+    implements _$$ItemScientificResearchRequestImplCopyWith<$Res> {
+  __$$ItemScientificResearchRequestImplCopyWithImpl(
+      _$ItemScientificResearchRequestImpl _value,
+      $Res Function(_$ItemScientificResearchRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -113,7 +113,7 @@ class __$$_ItemScientificResearchRequestCopyWithImpl<$Res>
     Object? length = freezed,
     Object? keyword = freezed,
   }) {
-    return _then(_$_ItemScientificResearchRequest(
+    return _then(_$ItemScientificResearchRequestImpl(
       idTypeNckh: freezed == idTypeNckh
           ? _value.idTypeNckh
           : idTypeNckh // ignore: cast_nullable_to_non_nullable
@@ -136,14 +136,14 @@ class __$$_ItemScientificResearchRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ItemScientificResearchRequest
+class _$ItemScientificResearchRequestImpl
     implements _ItemScientificResearchRequest {
-  const _$_ItemScientificResearchRequest(
+  const _$ItemScientificResearchRequestImpl(
       {this.idTypeNckh, this.startindex, this.length, this.keyword});
 
-  factory _$_ItemScientificResearchRequest.fromJson(
+  factory _$ItemScientificResearchRequestImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_ItemScientificResearchRequestFromJson(json);
+      _$$ItemScientificResearchRequestImplFromJson(json);
 
   @override
   final int? idTypeNckh;
@@ -160,10 +160,10 @@ class _$_ItemScientificResearchRequest
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ItemScientificResearchRequest &&
+            other is _$ItemScientificResearchRequestImpl &&
             (identical(other.idTypeNckh, idTypeNckh) ||
                 other.idTypeNckh == idTypeNckh) &&
             (identical(other.startindex, startindex) ||
@@ -180,13 +180,14 @@ class _$_ItemScientificResearchRequest
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ItemScientificResearchRequestCopyWith<_$_ItemScientificResearchRequest>
-      get copyWith => __$$_ItemScientificResearchRequestCopyWithImpl<
-          _$_ItemScientificResearchRequest>(this, _$identity);
+  _$$ItemScientificResearchRequestImplCopyWith<
+          _$ItemScientificResearchRequestImpl>
+      get copyWith => __$$ItemScientificResearchRequestImplCopyWithImpl<
+          _$ItemScientificResearchRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ItemScientificResearchRequestToJson(
+    return _$$ItemScientificResearchRequestImplToJson(
       this,
     );
   }
@@ -198,10 +199,10 @@ abstract class _ItemScientificResearchRequest
       {final int? idTypeNckh,
       final int? startindex,
       final int? length,
-      final String? keyword}) = _$_ItemScientificResearchRequest;
+      final String? keyword}) = _$ItemScientificResearchRequestImpl;
 
   factory _ItemScientificResearchRequest.fromJson(Map<String, dynamic> json) =
-      _$_ItemScientificResearchRequest.fromJson;
+      _$ItemScientificResearchRequestImpl.fromJson;
 
   @override
   int? get idTypeNckh;
@@ -213,6 +214,7 @@ abstract class _ItemScientificResearchRequest
   String? get keyword;
   @override
   @JsonKey(ignore: true)
-  _$$_ItemScientificResearchRequestCopyWith<_$_ItemScientificResearchRequest>
+  _$$ItemScientificResearchRequestImplCopyWith<
+          _$ItemScientificResearchRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

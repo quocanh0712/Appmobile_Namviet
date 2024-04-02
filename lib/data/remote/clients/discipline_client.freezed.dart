@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'discipline_client.dart';
 
@@ -12,7 +12,7 @@ part of 'discipline_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$DisciplineClient {
@@ -103,11 +103,11 @@ class _$DisciplineClientCopyWithImpl<$Res, $Val extends DisciplineClient>
 }
 
 /// @nodoc
-abstract class _$$_DisciplineClientCopyWith<$Res>
+abstract class _$$DisciplineClientImplCopyWith<$Res>
     implements $DisciplineClientCopyWith<$Res> {
-  factory _$$_DisciplineClientCopyWith(
-          _$_DisciplineClient value, $Res Function(_$_DisciplineClient) then) =
-      __$$_DisciplineClientCopyWithImpl<$Res>;
+  factory _$$DisciplineClientImplCopyWith(_$DisciplineClientImpl value,
+          $Res Function(_$DisciplineClientImpl) then) =
+      __$$DisciplineClientImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({RewardDisciplineRequest? model});
@@ -117,11 +117,11 @@ abstract class _$$_DisciplineClientCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DisciplineClientCopyWithImpl<$Res>
-    extends _$DisciplineClientCopyWithImpl<$Res, _$_DisciplineClient>
-    implements _$$_DisciplineClientCopyWith<$Res> {
-  __$$_DisciplineClientCopyWithImpl(
-      _$_DisciplineClient _value, $Res Function(_$_DisciplineClient) _then)
+class __$$DisciplineClientImplCopyWithImpl<$Res>
+    extends _$DisciplineClientCopyWithImpl<$Res, _$DisciplineClientImpl>
+    implements _$$DisciplineClientImplCopyWith<$Res> {
+  __$$DisciplineClientImplCopyWithImpl(_$DisciplineClientImpl _value,
+      $Res Function(_$DisciplineClientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -129,7 +129,7 @@ class __$$_DisciplineClientCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_DisciplineClient(
+    return _then(_$DisciplineClientImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -140,8 +140,8 @@ class __$$_DisciplineClientCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DisciplineClient extends _DisciplineClient {
-  _$_DisciplineClient(this.model) : super._();
+class _$DisciplineClientImpl extends _DisciplineClient {
+  _$DisciplineClientImpl(this.model) : super._();
 
   @override
   final RewardDisciplineRequest? model;
@@ -152,10 +152,10 @@ class _$_DisciplineClient extends _DisciplineClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DisciplineClient &&
+            other is _$DisciplineClientImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -165,8 +165,9 @@ class _$_DisciplineClient extends _DisciplineClient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DisciplineClientCopyWith<_$_DisciplineClient> get copyWith =>
-      __$$_DisciplineClientCopyWithImpl<_$_DisciplineClient>(this, _$identity);
+  _$$DisciplineClientImplCopyWith<_$DisciplineClientImpl> get copyWith =>
+      __$$DisciplineClientImplCopyWithImpl<_$DisciplineClientImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -227,13 +228,13 @@ class _$_DisciplineClient extends _DisciplineClient {
 
 abstract class _DisciplineClient extends DisciplineClient {
   factory _DisciplineClient(final RewardDisciplineRequest? model) =
-      _$_DisciplineClient;
+      _$DisciplineClientImpl;
   _DisciplineClient._() : super._();
 
   @override
   RewardDisciplineRequest? get model;
   @override
   @JsonKey(ignore: true)
-  _$$_DisciplineClientCopyWith<_$_DisciplineClient> get copyWith =>
+  _$$DisciplineClientImplCopyWith<_$DisciplineClientImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

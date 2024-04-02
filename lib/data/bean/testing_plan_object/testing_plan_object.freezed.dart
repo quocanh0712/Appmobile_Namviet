@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'testing_plan_object.dart';
 
@@ -12,7 +12,7 @@ part of 'testing_plan_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 TestingPlanObject _$TestingPlanObjectFromJson(Map<String, dynamic> json) {
   return _TestingPlanObject.fromJson(json);
@@ -128,11 +128,11 @@ class _$TestingPlanObjectCopyWithImpl<$Res, $Val extends TestingPlanObject>
 }
 
 /// @nodoc
-abstract class _$$_TestingPlanObjectCopyWith<$Res>
+abstract class _$$TestingPlanObjectImplCopyWith<$Res>
     implements $TestingPlanObjectCopyWith<$Res> {
-  factory _$$_TestingPlanObjectCopyWith(_$_TestingPlanObject value,
-          $Res Function(_$_TestingPlanObject) then) =
-      __$$_TestingPlanObjectCopyWithImpl<$Res>;
+  factory _$$TestingPlanObjectImplCopyWith(_$TestingPlanObjectImpl value,
+          $Res Function(_$TestingPlanObjectImpl) then) =
+      __$$TestingPlanObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -149,11 +149,11 @@ abstract class _$$_TestingPlanObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TestingPlanObjectCopyWithImpl<$Res>
-    extends _$TestingPlanObjectCopyWithImpl<$Res, _$_TestingPlanObject>
-    implements _$$_TestingPlanObjectCopyWith<$Res> {
-  __$$_TestingPlanObjectCopyWithImpl(
-      _$_TestingPlanObject _value, $Res Function(_$_TestingPlanObject) _then)
+class __$$TestingPlanObjectImplCopyWithImpl<$Res>
+    extends _$TestingPlanObjectCopyWithImpl<$Res, _$TestingPlanObjectImpl>
+    implements _$$TestingPlanObjectImplCopyWith<$Res> {
+  __$$TestingPlanObjectImplCopyWithImpl(_$TestingPlanObjectImpl _value,
+      $Res Function(_$TestingPlanObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -170,7 +170,7 @@ class __$$_TestingPlanObjectCopyWithImpl<$Res>
     Object? endAt = freezed,
     Object? isLast = freezed,
   }) {
-    return _then(_$_TestingPlanObject(
+    return _then(_$TestingPlanObjectImpl(
       isLabel: freezed == isLabel
           ? _value.isLabel
           : isLabel // ignore: cast_nullable_to_non_nullable
@@ -217,8 +217,8 @@ class __$$_TestingPlanObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TestingPlanObject implements _TestingPlanObject {
-  _$_TestingPlanObject(
+class _$TestingPlanObjectImpl implements _TestingPlanObject {
+  _$TestingPlanObjectImpl(
       {this.isLabel,
       this.course,
       this.time,
@@ -230,8 +230,8 @@ class _$_TestingPlanObject implements _TestingPlanObject {
       @JiffyJsonConverter() this.endAt,
       this.isLast});
 
-  factory _$_TestingPlanObject.fromJson(Map<String, dynamic> json) =>
-      _$$_TestingPlanObjectFromJson(json);
+  factory _$TestingPlanObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TestingPlanObjectImplFromJson(json);
 
   @override
   final bool? isLabel;
@@ -262,10 +262,10 @@ class _$_TestingPlanObject implements _TestingPlanObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TestingPlanObject &&
+            other is _$TestingPlanObjectImpl &&
             (identical(other.isLabel, isLabel) || other.isLabel == isLabel) &&
             (identical(other.course, course) || other.course == course) &&
             (identical(other.time, time) || other.time == time) &&
@@ -290,13 +290,13 @@ class _$_TestingPlanObject implements _TestingPlanObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TestingPlanObjectCopyWith<_$_TestingPlanObject> get copyWith =>
-      __$$_TestingPlanObjectCopyWithImpl<_$_TestingPlanObject>(
+  _$$TestingPlanObjectImplCopyWith<_$TestingPlanObjectImpl> get copyWith =>
+      __$$TestingPlanObjectImplCopyWithImpl<_$TestingPlanObjectImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestingPlanObjectToJson(
+    return _$$TestingPlanObjectImplToJson(
       this,
     );
   }
@@ -313,10 +313,10 @@ abstract class _TestingPlanObject implements TestingPlanObject {
       final int? examTime,
       @JiffyJsonConverter() final Jiffy? startAt,
       @JiffyJsonConverter() final Jiffy? endAt,
-      final bool? isLast}) = _$_TestingPlanObject;
+      final bool? isLast}) = _$TestingPlanObjectImpl;
 
   factory _TestingPlanObject.fromJson(Map<String, dynamic> json) =
-      _$_TestingPlanObject.fromJson;
+      _$TestingPlanObjectImpl.fromJson;
 
   @override
   bool? get isLabel;
@@ -342,6 +342,6 @@ abstract class _TestingPlanObject implements TestingPlanObject {
   bool? get isLast;
   @override
   @JsonKey(ignore: true)
-  _$$_TestingPlanObjectCopyWith<_$_TestingPlanObject> get copyWith =>
+  _$$TestingPlanObjectImplCopyWith<_$TestingPlanObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'elearning_response.dart';
 
@@ -12,7 +12,7 @@ part of 'elearning_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ELearningResponse _$ELearningResponseFromJson(Map<String, dynamic> json) {
   return _ELearningResponse.fromJson(json);
@@ -91,11 +91,11 @@ class _$ELearningResponseCopyWithImpl<$Res, $Val extends ELearningResponse>
 }
 
 /// @nodoc
-abstract class _$$_ELearningResponseCopyWith<$Res>
+abstract class _$$ELearningResponseImplCopyWith<$Res>
     implements $ELearningResponseCopyWith<$Res> {
-  factory _$$_ELearningResponseCopyWith(_$_ELearningResponse value,
-          $Res Function(_$_ELearningResponse) then) =
-      __$$_ELearningResponseCopyWithImpl<$Res>;
+  factory _$$ELearningResponseImplCopyWith(_$ELearningResponseImpl value,
+          $Res Function(_$ELearningResponseImpl) then) =
+      __$$ELearningResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -107,11 +107,11 @@ abstract class _$$_ELearningResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ELearningResponseCopyWithImpl<$Res>
-    extends _$ELearningResponseCopyWithImpl<$Res, _$_ELearningResponse>
-    implements _$$_ELearningResponseCopyWith<$Res> {
-  __$$_ELearningResponseCopyWithImpl(
-      _$_ELearningResponse _value, $Res Function(_$_ELearningResponse) _then)
+class __$$ELearningResponseImplCopyWithImpl<$Res>
+    extends _$ELearningResponseCopyWithImpl<$Res, _$ELearningResponseImpl>
+    implements _$$ELearningResponseImplCopyWith<$Res> {
+  __$$ELearningResponseImplCopyWithImpl(_$ELearningResponseImpl _value,
+      $Res Function(_$ELearningResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -123,7 +123,7 @@ class __$$_ELearningResponseCopyWithImpl<$Res>
     Object? teacher = freezed,
     Object? link = freezed,
   }) {
-    return _then(_$_ELearningResponse(
+    return _then(_$ELearningResponseImpl(
       imageUrl: freezed == imageUrl
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
@@ -150,12 +150,12 @@ class __$$_ELearningResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ELearningResponse implements _ELearningResponse {
-  const _$_ELearningResponse(
+class _$ELearningResponseImpl implements _ELearningResponse {
+  const _$ELearningResponseImpl(
       {this.imageUrl, this.title, this.time, this.teacher, this.link});
 
-  factory _$_ELearningResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_ELearningResponseFromJson(json);
+  factory _$ELearningResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ELearningResponseImplFromJson(json);
 
   @override
   final String? imageUrl;
@@ -174,10 +174,10 @@ class _$_ELearningResponse implements _ELearningResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ELearningResponse &&
+            other is _$ELearningResponseImpl &&
             (identical(other.imageUrl, imageUrl) ||
                 other.imageUrl == imageUrl) &&
             (identical(other.title, title) || other.title == title) &&
@@ -194,13 +194,13 @@ class _$_ELearningResponse implements _ELearningResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ELearningResponseCopyWith<_$_ELearningResponse> get copyWith =>
-      __$$_ELearningResponseCopyWithImpl<_$_ELearningResponse>(
+  _$$ELearningResponseImplCopyWith<_$ELearningResponseImpl> get copyWith =>
+      __$$ELearningResponseImplCopyWithImpl<_$ELearningResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ELearningResponseToJson(
+    return _$$ELearningResponseImplToJson(
       this,
     );
   }
@@ -212,10 +212,10 @@ abstract class _ELearningResponse implements ELearningResponse {
       final String? title,
       final String? time,
       final String? teacher,
-      final String? link}) = _$_ELearningResponse;
+      final String? link}) = _$ELearningResponseImpl;
 
   factory _ELearningResponse.fromJson(Map<String, dynamic> json) =
-      _$_ELearningResponse.fromJson;
+      _$ELearningResponseImpl.fromJson;
 
   @override
   String? get imageUrl;
@@ -229,6 +229,6 @@ abstract class _ELearningResponse implements ELearningResponse {
   String? get link;
   @override
   @JsonKey(ignore: true)
-  _$$_ELearningResponseCopyWith<_$_ELearningResponse> get copyWith =>
+  _$$ELearningResponseImplCopyWith<_$ELearningResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

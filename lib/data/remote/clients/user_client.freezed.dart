@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'user_client.dart';
 
@@ -12,7 +12,7 @@ part of 'user_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$UserClient {
@@ -87,18 +87,20 @@ class _$UserClientCopyWithImpl<$Res, $Val extends UserClient>
 }
 
 /// @nodoc
-abstract class _$$_LoginCopyWith<$Res> {
-  factory _$$_LoginCopyWith(_$_Login value, $Res Function(_$_Login) then) =
-      __$$_LoginCopyWithImpl<$Res>;
+abstract class _$$LoginImplCopyWith<$Res> {
+  factory _$$LoginImplCopyWith(
+          _$LoginImpl value, $Res Function(_$LoginImpl) then) =
+      __$$LoginImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? userName, String? password});
 }
 
 /// @nodoc
-class __$$_LoginCopyWithImpl<$Res>
-    extends _$UserClientCopyWithImpl<$Res, _$_Login>
-    implements _$$_LoginCopyWith<$Res> {
-  __$$_LoginCopyWithImpl(_$_Login _value, $Res Function(_$_Login) _then)
+class __$$LoginImplCopyWithImpl<$Res>
+    extends _$UserClientCopyWithImpl<$Res, _$LoginImpl>
+    implements _$$LoginImplCopyWith<$Res> {
+  __$$LoginImplCopyWithImpl(
+      _$LoginImpl _value, $Res Function(_$LoginImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -107,7 +109,7 @@ class __$$_LoginCopyWithImpl<$Res>
     Object? userName = freezed,
     Object? password = freezed,
   }) {
-    return _then(_$_Login(
+    return _then(_$LoginImpl(
       freezed == userName
           ? _value.userName
           : userName // ignore: cast_nullable_to_non_nullable
@@ -122,8 +124,8 @@ class __$$_LoginCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Login extends _Login {
-  _$_Login(this.userName, this.password) : super._();
+class _$LoginImpl extends _Login {
+  _$LoginImpl(this.userName, this.password) : super._();
 
   @override
   final String? userName;
@@ -136,10 +138,10 @@ class _$_Login extends _Login {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Login &&
+            other is _$LoginImpl &&
             (identical(other.userName, userName) ||
                 other.userName == userName) &&
             (identical(other.password, password) ||
@@ -152,8 +154,8 @@ class _$_Login extends _Login {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoginCopyWith<_$_Login> get copyWith =>
-      __$$_LoginCopyWithImpl<_$_Login>(this, _$identity);
+  _$$LoginImplCopyWith<_$LoginImpl> get copyWith =>
+      __$$LoginImplCopyWithImpl<_$LoginImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -231,20 +233,21 @@ class _$_Login extends _Login {
 }
 
 abstract class _Login extends UserClient {
-  factory _Login(final String? userName, final String? password) = _$_Login;
+  factory _Login(final String? userName, final String? password) = _$LoginImpl;
   _Login._() : super._();
 
   String? get userName;
   String? get password;
   @JsonKey(ignore: true)
-  _$$_LoginCopyWith<_$_Login> get copyWith =>
+  _$$LoginImplCopyWith<_$LoginImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_UpdateCopyWith<$Res> {
-  factory _$$_UpdateCopyWith(_$_Update value, $Res Function(_$_Update) then) =
-      __$$_UpdateCopyWithImpl<$Res>;
+abstract class _$$UpdateImplCopyWith<$Res> {
+  factory _$$UpdateImplCopyWith(
+          _$UpdateImpl value, $Res Function(_$UpdateImpl) then) =
+      __$$UpdateImplCopyWithImpl<$Res>;
   @useResult
   $Res call({UserObject? user});
 
@@ -252,10 +255,11 @@ abstract class _$$_UpdateCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_UpdateCopyWithImpl<$Res>
-    extends _$UserClientCopyWithImpl<$Res, _$_Update>
-    implements _$$_UpdateCopyWith<$Res> {
-  __$$_UpdateCopyWithImpl(_$_Update _value, $Res Function(_$_Update) _then)
+class __$$UpdateImplCopyWithImpl<$Res>
+    extends _$UserClientCopyWithImpl<$Res, _$UpdateImpl>
+    implements _$$UpdateImplCopyWith<$Res> {
+  __$$UpdateImplCopyWithImpl(
+      _$UpdateImpl _value, $Res Function(_$UpdateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -263,7 +267,7 @@ class __$$_UpdateCopyWithImpl<$Res>
   $Res call({
     Object? user = freezed,
   }) {
-    return _then(_$_Update(
+    return _then(_$UpdateImpl(
       freezed == user
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
@@ -286,8 +290,8 @@ class __$$_UpdateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Update extends _Update {
-  _$_Update(this.user) : super._();
+class _$UpdateImpl extends _Update {
+  _$UpdateImpl(this.user) : super._();
 
   @override
   final UserObject? user;
@@ -298,10 +302,10 @@ class _$_Update extends _Update {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Update &&
+            other is _$UpdateImpl &&
             (identical(other.user, user) || other.user == user));
   }
 
@@ -311,8 +315,8 @@ class _$_Update extends _Update {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateCopyWith<_$_Update> get copyWith =>
-      __$$_UpdateCopyWithImpl<_$_Update>(this, _$identity);
+  _$$UpdateImplCopyWith<_$UpdateImpl> get copyWith =>
+      __$$UpdateImplCopyWithImpl<_$UpdateImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -390,30 +394,30 @@ class _$_Update extends _Update {
 }
 
 abstract class _Update extends UserClient {
-  factory _Update(final UserObject? user) = _$_Update;
+  factory _Update(final UserObject? user) = _$UpdateImpl;
   _Update._() : super._();
 
   UserObject? get user;
   @JsonKey(ignore: true)
-  _$$_UpdateCopyWith<_$_Update> get copyWith =>
+  _$$UpdateImplCopyWith<_$UpdateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_ChangePassCopyWith<$Res> {
-  factory _$$_ChangePassCopyWith(
-          _$_ChangePass value, $Res Function(_$_ChangePass) then) =
-      __$$_ChangePassCopyWithImpl<$Res>;
+abstract class _$$ChangePassImplCopyWith<$Res> {
+  factory _$$ChangePassImplCopyWith(
+          _$ChangePassImpl value, $Res Function(_$ChangePassImpl) then) =
+      __$$ChangePassImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? oldPass, String? newPass});
 }
 
 /// @nodoc
-class __$$_ChangePassCopyWithImpl<$Res>
-    extends _$UserClientCopyWithImpl<$Res, _$_ChangePass>
-    implements _$$_ChangePassCopyWith<$Res> {
-  __$$_ChangePassCopyWithImpl(
-      _$_ChangePass _value, $Res Function(_$_ChangePass) _then)
+class __$$ChangePassImplCopyWithImpl<$Res>
+    extends _$UserClientCopyWithImpl<$Res, _$ChangePassImpl>
+    implements _$$ChangePassImplCopyWith<$Res> {
+  __$$ChangePassImplCopyWithImpl(
+      _$ChangePassImpl _value, $Res Function(_$ChangePassImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -422,7 +426,7 @@ class __$$_ChangePassCopyWithImpl<$Res>
     Object? oldPass = freezed,
     Object? newPass = freezed,
   }) {
-    return _then(_$_ChangePass(
+    return _then(_$ChangePassImpl(
       freezed == oldPass
           ? _value.oldPass
           : oldPass // ignore: cast_nullable_to_non_nullable
@@ -437,8 +441,8 @@ class __$$_ChangePassCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ChangePass extends _ChangePass {
-  _$_ChangePass(this.oldPass, this.newPass) : super._();
+class _$ChangePassImpl extends _ChangePass {
+  _$ChangePassImpl(this.oldPass, this.newPass) : super._();
 
   @override
   final String? oldPass;
@@ -451,10 +455,10 @@ class _$_ChangePass extends _ChangePass {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ChangePass &&
+            other is _$ChangePassImpl &&
             (identical(other.oldPass, oldPass) || other.oldPass == oldPass) &&
             (identical(other.newPass, newPass) || other.newPass == newPass));
   }
@@ -465,8 +469,8 @@ class _$_ChangePass extends _ChangePass {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ChangePassCopyWith<_$_ChangePass> get copyWith =>
-      __$$_ChangePassCopyWithImpl<_$_ChangePass>(this, _$identity);
+  _$$ChangePassImplCopyWith<_$ChangePassImpl> get copyWith =>
+      __$$ChangePassImplCopyWithImpl<_$ChangePassImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -545,34 +549,36 @@ class _$_ChangePass extends _ChangePass {
 
 abstract class _ChangePass extends UserClient {
   factory _ChangePass(final String? oldPass, final String? newPass) =
-      _$_ChangePass;
+      _$ChangePassImpl;
   _ChangePass._() : super._();
 
   String? get oldPass;
   String? get newPass;
   @JsonKey(ignore: true)
-  _$$_ChangePassCopyWith<_$_ChangePass> get copyWith =>
+  _$$ChangePassImplCopyWith<_$ChangePassImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_LogoutCopyWith<$Res> {
-  factory _$$_LogoutCopyWith(_$_Logout value, $Res Function(_$_Logout) then) =
-      __$$_LogoutCopyWithImpl<$Res>;
+abstract class _$$LogoutImplCopyWith<$Res> {
+  factory _$$LogoutImplCopyWith(
+          _$LogoutImpl value, $Res Function(_$LogoutImpl) then) =
+      __$$LogoutImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LogoutCopyWithImpl<$Res>
-    extends _$UserClientCopyWithImpl<$Res, _$_Logout>
-    implements _$$_LogoutCopyWith<$Res> {
-  __$$_LogoutCopyWithImpl(_$_Logout _value, $Res Function(_$_Logout) _then)
+class __$$LogoutImplCopyWithImpl<$Res>
+    extends _$UserClientCopyWithImpl<$Res, _$LogoutImpl>
+    implements _$$LogoutImplCopyWith<$Res> {
+  __$$LogoutImplCopyWithImpl(
+      _$LogoutImpl _value, $Res Function(_$LogoutImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Logout extends _Logout {
-  _$_Logout() : super._();
+class _$LogoutImpl extends _Logout {
+  _$LogoutImpl() : super._();
 
   @override
   String toString() {
@@ -580,9 +586,9 @@ class _$_Logout extends _Logout {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Logout);
+        (other.runtimeType == runtimeType && other is _$LogoutImpl);
   }
 
   @override
@@ -664,6 +670,6 @@ class _$_Logout extends _Logout {
 }
 
 abstract class _Logout extends UserClient {
-  factory _Logout() = _$_Logout;
+  factory _Logout() = _$LogoutImpl;
   _Logout._() : super._();
 }

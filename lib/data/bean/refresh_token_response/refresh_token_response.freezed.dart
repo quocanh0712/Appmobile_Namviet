@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'refresh_token_response.dart';
 
@@ -12,7 +12,7 @@ part of 'refresh_token_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 RefreshTokenResponse _$RefreshTokenResponseFromJson(Map<String, dynamic> json) {
   return _RefreshTokenResponse.fromJson(json);
@@ -89,11 +89,11 @@ class _$RefreshTokenResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_RefreshTokenResponseCopyWith<$Res>
+abstract class _$$RefreshTokenResponseImplCopyWith<$Res>
     implements $RefreshTokenResponseCopyWith<$Res> {
-  factory _$$_RefreshTokenResponseCopyWith(_$_RefreshTokenResponse value,
-          $Res Function(_$_RefreshTokenResponse) then) =
-      __$$_RefreshTokenResponseCopyWithImpl<$Res>;
+  factory _$$RefreshTokenResponseImplCopyWith(_$RefreshTokenResponseImpl value,
+          $Res Function(_$RefreshTokenResponseImpl) then) =
+      __$$RefreshTokenResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -104,11 +104,11 @@ abstract class _$$_RefreshTokenResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_RefreshTokenResponseCopyWithImpl<$Res>
-    extends _$RefreshTokenResponseCopyWithImpl<$Res, _$_RefreshTokenResponse>
-    implements _$$_RefreshTokenResponseCopyWith<$Res> {
-  __$$_RefreshTokenResponseCopyWithImpl(_$_RefreshTokenResponse _value,
-      $Res Function(_$_RefreshTokenResponse) _then)
+class __$$RefreshTokenResponseImplCopyWithImpl<$Res>
+    extends _$RefreshTokenResponseCopyWithImpl<$Res, _$RefreshTokenResponseImpl>
+    implements _$$RefreshTokenResponseImplCopyWith<$Res> {
+  __$$RefreshTokenResponseImplCopyWithImpl(_$RefreshTokenResponseImpl _value,
+      $Res Function(_$RefreshTokenResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -119,7 +119,7 @@ class __$$_RefreshTokenResponseCopyWithImpl<$Res>
     Object? tokenType = freezed,
     Object? expiresIn = freezed,
   }) {
-    return _then(_$_RefreshTokenResponse(
+    return _then(_$RefreshTokenResponseImpl(
       accessToken: freezed == accessToken
           ? _value.accessToken
           : accessToken // ignore: cast_nullable_to_non_nullable
@@ -142,15 +142,15 @@ class __$$_RefreshTokenResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_RefreshTokenResponse implements _RefreshTokenResponse {
-  _$_RefreshTokenResponse(
+class _$RefreshTokenResponseImpl implements _RefreshTokenResponse {
+  _$RefreshTokenResponseImpl(
       {@JsonKey(name: 'access_token') this.accessToken,
       @JsonKey(name: 'refresh_token') this.refreshToken,
       @JsonKey(name: 'token_type') this.tokenType,
       @JsonKey(name: 'expires_in') this.expiresIn});
 
-  factory _$_RefreshTokenResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_RefreshTokenResponseFromJson(json);
+  factory _$RefreshTokenResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$RefreshTokenResponseImplFromJson(json);
 
   @override
   @JsonKey(name: 'access_token')
@@ -171,10 +171,10 @@ class _$_RefreshTokenResponse implements _RefreshTokenResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_RefreshTokenResponse &&
+            other is _$RefreshTokenResponseImpl &&
             (identical(other.accessToken, accessToken) ||
                 other.accessToken == accessToken) &&
             (identical(other.refreshToken, refreshToken) ||
@@ -193,13 +193,14 @@ class _$_RefreshTokenResponse implements _RefreshTokenResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RefreshTokenResponseCopyWith<_$_RefreshTokenResponse> get copyWith =>
-      __$$_RefreshTokenResponseCopyWithImpl<_$_RefreshTokenResponse>(
-          this, _$identity);
+  _$$RefreshTokenResponseImplCopyWith<_$RefreshTokenResponseImpl>
+      get copyWith =>
+          __$$RefreshTokenResponseImplCopyWithImpl<_$RefreshTokenResponseImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_RefreshTokenResponseToJson(
+    return _$$RefreshTokenResponseImplToJson(
       this,
     );
   }
@@ -211,10 +212,10 @@ abstract class _RefreshTokenResponse implements RefreshTokenResponse {
           @JsonKey(name: 'refresh_token') final String? refreshToken,
           @JsonKey(name: 'token_type') final String? tokenType,
           @JsonKey(name: 'expires_in') final String? expiresIn}) =
-      _$_RefreshTokenResponse;
+      _$RefreshTokenResponseImpl;
 
   factory _RefreshTokenResponse.fromJson(Map<String, dynamic> json) =
-      _$_RefreshTokenResponse.fromJson;
+      _$RefreshTokenResponseImpl.fromJson;
 
   @override
   @JsonKey(name: 'access_token')
@@ -230,6 +231,6 @@ abstract class _RefreshTokenResponse implements RefreshTokenResponse {
   String? get expiresIn;
   @override
   @JsonKey(ignore: true)
-  _$$_RefreshTokenResponseCopyWith<_$_RefreshTokenResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$RefreshTokenResponseImplCopyWith<_$RefreshTokenResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

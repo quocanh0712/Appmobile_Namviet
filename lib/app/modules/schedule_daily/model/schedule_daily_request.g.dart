@@ -6,14 +6,14 @@ part of 'schedule_daily_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ScheduleDailyRequest _$$_ScheduleDailyRequestFromJson(
+_$ScheduleDailyRequestImpl _$$ScheduleDailyRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ScheduleDailyRequest(
+    _$ScheduleDailyRequestImpl(
       nowdate: json['nowdate'] as String?,
     );
 
-Map<String, dynamic> _$$_ScheduleDailyRequestToJson(
-        _$_ScheduleDailyRequest instance) =>
+Map<String, dynamic> _$$ScheduleDailyRequestImplToJson(
+        _$ScheduleDailyRequestImpl instance) =>
     <String, dynamic>{
       'nowdate': instance.nowdate,
     };

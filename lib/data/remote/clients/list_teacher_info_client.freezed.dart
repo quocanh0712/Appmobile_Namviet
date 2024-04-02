@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'list_teacher_info_client.dart';
 
@@ -12,7 +12,7 @@ part of 'list_teacher_info_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ListTeacherInfoClient {
@@ -104,11 +104,12 @@ class _$ListTeacherInfoClientCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ListTeacherInfoClientCopyWith<$Res>
+abstract class _$$ListTeacherInfoClientImplCopyWith<$Res>
     implements $ListTeacherInfoClientCopyWith<$Res> {
-  factory _$$_ListTeacherInfoClientCopyWith(_$_ListTeacherInfoClient value,
-          $Res Function(_$_ListTeacherInfoClient) then) =
-      __$$_ListTeacherInfoClientCopyWithImpl<$Res>;
+  factory _$$ListTeacherInfoClientImplCopyWith(
+          _$ListTeacherInfoClientImpl value,
+          $Res Function(_$ListTeacherInfoClientImpl) then) =
+      __$$ListTeacherInfoClientImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({TeacherInfoRequest? model});
@@ -118,11 +119,12 @@ abstract class _$$_ListTeacherInfoClientCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ListTeacherInfoClientCopyWithImpl<$Res>
-    extends _$ListTeacherInfoClientCopyWithImpl<$Res, _$_ListTeacherInfoClient>
-    implements _$$_ListTeacherInfoClientCopyWith<$Res> {
-  __$$_ListTeacherInfoClientCopyWithImpl(_$_ListTeacherInfoClient _value,
-      $Res Function(_$_ListTeacherInfoClient) _then)
+class __$$ListTeacherInfoClientImplCopyWithImpl<$Res>
+    extends _$ListTeacherInfoClientCopyWithImpl<$Res,
+        _$ListTeacherInfoClientImpl>
+    implements _$$ListTeacherInfoClientImplCopyWith<$Res> {
+  __$$ListTeacherInfoClientImplCopyWithImpl(_$ListTeacherInfoClientImpl _value,
+      $Res Function(_$ListTeacherInfoClientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -130,7 +132,7 @@ class __$$_ListTeacherInfoClientCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_ListTeacherInfoClient(
+    return _then(_$ListTeacherInfoClientImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -141,8 +143,8 @@ class __$$_ListTeacherInfoClientCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ListTeacherInfoClient extends _ListTeacherInfoClient {
-  _$_ListTeacherInfoClient(this.model) : super._();
+class _$ListTeacherInfoClientImpl extends _ListTeacherInfoClient {
+  _$ListTeacherInfoClientImpl(this.model) : super._();
 
   @override
   final TeacherInfoRequest? model;
@@ -153,10 +155,10 @@ class _$_ListTeacherInfoClient extends _ListTeacherInfoClient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ListTeacherInfoClient &&
+            other is _$ListTeacherInfoClientImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -166,9 +168,9 @@ class _$_ListTeacherInfoClient extends _ListTeacherInfoClient {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ListTeacherInfoClientCopyWith<_$_ListTeacherInfoClient> get copyWith =>
-      __$$_ListTeacherInfoClientCopyWithImpl<_$_ListTeacherInfoClient>(
-          this, _$identity);
+  _$$ListTeacherInfoClientImplCopyWith<_$ListTeacherInfoClientImpl>
+      get copyWith => __$$ListTeacherInfoClientImplCopyWithImpl<
+          _$ListTeacherInfoClientImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -229,13 +231,13 @@ class _$_ListTeacherInfoClient extends _ListTeacherInfoClient {
 
 abstract class _ListTeacherInfoClient extends ListTeacherInfoClient {
   factory _ListTeacherInfoClient(final TeacherInfoRequest? model) =
-      _$_ListTeacherInfoClient;
+      _$ListTeacherInfoClientImpl;
   _ListTeacherInfoClient._() : super._();
 
   @override
   TeacherInfoRequest? get model;
   @override
   @JsonKey(ignore: true)
-  _$$_ListTeacherInfoClientCopyWith<_$_ListTeacherInfoClient> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ListTeacherInfoClientImplCopyWith<_$ListTeacherInfoClientImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

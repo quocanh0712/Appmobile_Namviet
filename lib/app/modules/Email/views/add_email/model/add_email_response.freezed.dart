@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'add_email_response.dart';
 
@@ -12,7 +12,7 @@ part of 'add_email_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AddEmailResponse _$AddEmailResponseFromJson(Map<String, dynamic> json) {
   return _AddEmailResponse.fromJson(json);
@@ -62,22 +62,22 @@ class _$AddEmailResponseCopyWithImpl<$Res, $Val extends AddEmailResponse>
 }
 
 /// @nodoc
-abstract class _$$_AddEmailResponseCopyWith<$Res>
+abstract class _$$AddEmailResponseImplCopyWith<$Res>
     implements $AddEmailResponseCopyWith<$Res> {
-  factory _$$_AddEmailResponseCopyWith(
-          _$_AddEmailResponse value, $Res Function(_$_AddEmailResponse) then) =
-      __$$_AddEmailResponseCopyWithImpl<$Res>;
+  factory _$$AddEmailResponseImplCopyWith(_$AddEmailResponseImpl value,
+          $Res Function(_$AddEmailResponseImpl) then) =
+      __$$AddEmailResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({List<FormFieldData>? listForm});
 }
 
 /// @nodoc
-class __$$_AddEmailResponseCopyWithImpl<$Res>
-    extends _$AddEmailResponseCopyWithImpl<$Res, _$_AddEmailResponse>
-    implements _$$_AddEmailResponseCopyWith<$Res> {
-  __$$_AddEmailResponseCopyWithImpl(
-      _$_AddEmailResponse _value, $Res Function(_$_AddEmailResponse) _then)
+class __$$AddEmailResponseImplCopyWithImpl<$Res>
+    extends _$AddEmailResponseCopyWithImpl<$Res, _$AddEmailResponseImpl>
+    implements _$$AddEmailResponseImplCopyWith<$Res> {
+  __$$AddEmailResponseImplCopyWithImpl(_$AddEmailResponseImpl _value,
+      $Res Function(_$AddEmailResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -85,7 +85,7 @@ class __$$_AddEmailResponseCopyWithImpl<$Res>
   $Res call({
     Object? listForm = freezed,
   }) {
-    return _then(_$_AddEmailResponse(
+    return _then(_$AddEmailResponseImpl(
       listForm: freezed == listForm
           ? _value._listForm
           : listForm // ignore: cast_nullable_to_non_nullable
@@ -96,18 +96,19 @@ class __$$_AddEmailResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AddEmailResponse implements _AddEmailResponse {
-  const _$_AddEmailResponse({final List<FormFieldData>? listForm})
+class _$AddEmailResponseImpl implements _AddEmailResponse {
+  const _$AddEmailResponseImpl({final List<FormFieldData>? listForm})
       : _listForm = listForm;
 
-  factory _$_AddEmailResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_AddEmailResponseFromJson(json);
+  factory _$AddEmailResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AddEmailResponseImplFromJson(json);
 
   final List<FormFieldData>? _listForm;
   @override
   List<FormFieldData>? get listForm {
     final value = _listForm;
     if (value == null) return null;
+    if (_listForm is EqualUnmodifiableListView) return _listForm;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -118,10 +119,10 @@ class _$_AddEmailResponse implements _AddEmailResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AddEmailResponse &&
+            other is _$AddEmailResponseImpl &&
             const DeepCollectionEquality().equals(other._listForm, _listForm));
   }
 
@@ -133,12 +134,13 @@ class _$_AddEmailResponse implements _AddEmailResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AddEmailResponseCopyWith<_$_AddEmailResponse> get copyWith =>
-      __$$_AddEmailResponseCopyWithImpl<_$_AddEmailResponse>(this, _$identity);
+  _$$AddEmailResponseImplCopyWith<_$AddEmailResponseImpl> get copyWith =>
+      __$$AddEmailResponseImplCopyWithImpl<_$AddEmailResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AddEmailResponseToJson(
+    return _$$AddEmailResponseImplToJson(
       this,
     );
   }
@@ -146,15 +148,15 @@ class _$_AddEmailResponse implements _AddEmailResponse {
 
 abstract class _AddEmailResponse implements AddEmailResponse {
   const factory _AddEmailResponse({final List<FormFieldData>? listForm}) =
-      _$_AddEmailResponse;
+      _$AddEmailResponseImpl;
 
   factory _AddEmailResponse.fromJson(Map<String, dynamic> json) =
-      _$_AddEmailResponse.fromJson;
+      _$AddEmailResponseImpl.fromJson;
 
   @override
   List<FormFieldData>? get listForm;
   @override
   @JsonKey(ignore: true)
-  _$$_AddEmailResponseCopyWith<_$_AddEmailResponse> get copyWith =>
+  _$$AddEmailResponseImplCopyWith<_$AddEmailResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'finance_response_object.dart';
 
@@ -12,7 +12,7 @@ part of 'finance_response_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 FinanceResponseObject _$FinanceResponseObjectFromJson(
     Map<String, dynamic> json) {
@@ -86,11 +86,12 @@ class _$FinanceResponseObjectCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_FinanceResponseObjectCopyWith<$Res>
+abstract class _$$FinanceResponseObjectImplCopyWith<$Res>
     implements $FinanceResponseObjectCopyWith<$Res> {
-  factory _$$_FinanceResponseObjectCopyWith(_$_FinanceResponseObject value,
-          $Res Function(_$_FinanceResponseObject) then) =
-      __$$_FinanceResponseObjectCopyWithImpl<$Res>;
+  factory _$$FinanceResponseObjectImplCopyWith(
+          _$FinanceResponseObjectImpl value,
+          $Res Function(_$FinanceResponseObjectImpl) then) =
+      __$$FinanceResponseObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -101,11 +102,12 @@ abstract class _$$_FinanceResponseObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FinanceResponseObjectCopyWithImpl<$Res>
-    extends _$FinanceResponseObjectCopyWithImpl<$Res, _$_FinanceResponseObject>
-    implements _$$_FinanceResponseObjectCopyWith<$Res> {
-  __$$_FinanceResponseObjectCopyWithImpl(_$_FinanceResponseObject _value,
-      $Res Function(_$_FinanceResponseObject) _then)
+class __$$FinanceResponseObjectImplCopyWithImpl<$Res>
+    extends _$FinanceResponseObjectCopyWithImpl<$Res,
+        _$FinanceResponseObjectImpl>
+    implements _$$FinanceResponseObjectImplCopyWith<$Res> {
+  __$$FinanceResponseObjectImplCopyWithImpl(_$FinanceResponseObjectImpl _value,
+      $Res Function(_$FinanceResponseObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -116,7 +118,7 @@ class __$$_FinanceResponseObjectCopyWithImpl<$Res>
     Object? excessFee = freezed,
     Object? semesters = freezed,
   }) {
-    return _then(_$_FinanceResponseObject(
+    return _then(_$FinanceResponseObjectImpl(
       totalFee: freezed == totalFee
           ? _value.totalFee
           : totalFee // ignore: cast_nullable_to_non_nullable
@@ -139,16 +141,16 @@ class __$$_FinanceResponseObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FinanceResponseObject implements _FinanceResponseObject {
-  _$_FinanceResponseObject(
+class _$FinanceResponseObjectImpl implements _FinanceResponseObject {
+  _$FinanceResponseObjectImpl(
       {this.totalFee,
       this.feePaid,
       this.excessFee,
       final List<SemesterFinance>? semesters})
       : _semesters = semesters;
 
-  factory _$_FinanceResponseObject.fromJson(Map<String, dynamic> json) =>
-      _$$_FinanceResponseObjectFromJson(json);
+  factory _$FinanceResponseObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FinanceResponseObjectImplFromJson(json);
 
   @override
   final int? totalFee;
@@ -161,6 +163,7 @@ class _$_FinanceResponseObject implements _FinanceResponseObject {
   List<SemesterFinance>? get semesters {
     final value = _semesters;
     if (value == null) return null;
+    if (_semesters is EqualUnmodifiableListView) return _semesters;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -171,10 +174,10 @@ class _$_FinanceResponseObject implements _FinanceResponseObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FinanceResponseObject &&
+            other is _$FinanceResponseObjectImpl &&
             (identical(other.totalFee, totalFee) ||
                 other.totalFee == totalFee) &&
             (identical(other.feePaid, feePaid) || other.feePaid == feePaid) &&
@@ -192,13 +195,13 @@ class _$_FinanceResponseObject implements _FinanceResponseObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FinanceResponseObjectCopyWith<_$_FinanceResponseObject> get copyWith =>
-      __$$_FinanceResponseObjectCopyWithImpl<_$_FinanceResponseObject>(
-          this, _$identity);
+  _$$FinanceResponseObjectImplCopyWith<_$FinanceResponseObjectImpl>
+      get copyWith => __$$FinanceResponseObjectImplCopyWithImpl<
+          _$FinanceResponseObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FinanceResponseObjectToJson(
+    return _$$FinanceResponseObjectImplToJson(
       this,
     );
   }
@@ -209,10 +212,10 @@ abstract class _FinanceResponseObject implements FinanceResponseObject {
       {final int? totalFee,
       final int? feePaid,
       final int? excessFee,
-      final List<SemesterFinance>? semesters}) = _$_FinanceResponseObject;
+      final List<SemesterFinance>? semesters}) = _$FinanceResponseObjectImpl;
 
   factory _FinanceResponseObject.fromJson(Map<String, dynamic> json) =
-      _$_FinanceResponseObject.fromJson;
+      _$FinanceResponseObjectImpl.fromJson;
 
   @override
   int? get totalFee;
@@ -224,6 +227,6 @@ abstract class _FinanceResponseObject implements FinanceResponseObject {
   List<SemesterFinance>? get semesters;
   @override
   @JsonKey(ignore: true)
-  _$$_FinanceResponseObjectCopyWith<_$_FinanceResponseObject> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$FinanceResponseObjectImplCopyWith<_$FinanceResponseObjectImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'test_schedule_request_params.dart';
 
@@ -12,7 +12,7 @@ part of 'test_schedule_request_params.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 TestScheduleRequestParams _$TestScheduleRequestParamsFromJson(
     Map<String, dynamic> json) {
@@ -107,12 +107,12 @@ class _$TestScheduleRequestParamsCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_TestScheduleRequestParamsCopyWith<$Res>
+abstract class _$$TestScheduleRequestParamsImplCopyWith<$Res>
     implements $TestScheduleRequestParamsCopyWith<$Res> {
-  factory _$$_TestScheduleRequestParamsCopyWith(
-          _$_TestScheduleRequestParams value,
-          $Res Function(_$_TestScheduleRequestParams) then) =
-      __$$_TestScheduleRequestParamsCopyWithImpl<$Res>;
+  factory _$$TestScheduleRequestParamsImplCopyWith(
+          _$TestScheduleRequestParamsImpl value,
+          $Res Function(_$TestScheduleRequestParamsImpl) then) =
+      __$$TestScheduleRequestParamsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -126,13 +126,13 @@ abstract class _$$_TestScheduleRequestParamsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TestScheduleRequestParamsCopyWithImpl<$Res>
+class __$$TestScheduleRequestParamsImplCopyWithImpl<$Res>
     extends _$TestScheduleRequestParamsCopyWithImpl<$Res,
-        _$_TestScheduleRequestParams>
-    implements _$$_TestScheduleRequestParamsCopyWith<$Res> {
-  __$$_TestScheduleRequestParamsCopyWithImpl(
-      _$_TestScheduleRequestParams _value,
-      $Res Function(_$_TestScheduleRequestParams) _then)
+        _$TestScheduleRequestParamsImpl>
+    implements _$$TestScheduleRequestParamsImplCopyWith<$Res> {
+  __$$TestScheduleRequestParamsImplCopyWithImpl(
+      _$TestScheduleRequestParamsImpl _value,
+      $Res Function(_$TestScheduleRequestParamsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -146,7 +146,7 @@ class __$$_TestScheduleRequestParamsCopyWithImpl<$Res>
     Object? startindex = freezed,
     Object? length = freezed,
   }) {
-    return _then(_$_TestScheduleRequestParams(
+    return _then(_$TestScheduleRequestParamsImpl(
       fromDate: freezed == fromDate
           ? _value.fromDate
           : fromDate // ignore: cast_nullable_to_non_nullable
@@ -181,8 +181,8 @@ class __$$_TestScheduleRequestParamsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_TestScheduleRequestParams implements _TestScheduleRequestParams {
-  _$_TestScheduleRequestParams(
+class _$TestScheduleRequestParamsImpl implements _TestScheduleRequestParams {
+  _$TestScheduleRequestParamsImpl(
       {this.fromDate,
       this.toDate,
       this.semester,
@@ -191,8 +191,8 @@ class _$_TestScheduleRequestParams implements _TestScheduleRequestParams {
       this.startindex,
       this.length});
 
-  factory _$_TestScheduleRequestParams.fromJson(Map<String, dynamic> json) =>
-      _$$_TestScheduleRequestParamsFromJson(json);
+  factory _$TestScheduleRequestParamsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TestScheduleRequestParamsImplFromJson(json);
 
   @override
   final DateTime? fromDate;
@@ -215,10 +215,10 @@ class _$_TestScheduleRequestParams implements _TestScheduleRequestParams {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TestScheduleRequestParams &&
+            other is _$TestScheduleRequestParamsImpl &&
             (identical(other.fromDate, fromDate) ||
                 other.fromDate == fromDate) &&
             (identical(other.toDate, toDate) || other.toDate == toDate) &&
@@ -240,13 +240,13 @@ class _$_TestScheduleRequestParams implements _TestScheduleRequestParams {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TestScheduleRequestParamsCopyWith<_$_TestScheduleRequestParams>
-      get copyWith => __$$_TestScheduleRequestParamsCopyWithImpl<
-          _$_TestScheduleRequestParams>(this, _$identity);
+  _$$TestScheduleRequestParamsImplCopyWith<_$TestScheduleRequestParamsImpl>
+      get copyWith => __$$TestScheduleRequestParamsImplCopyWithImpl<
+          _$TestScheduleRequestParamsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_TestScheduleRequestParamsToJson(
+    return _$$TestScheduleRequestParamsImplToJson(
       this,
     );
   }
@@ -260,10 +260,10 @@ abstract class _TestScheduleRequestParams implements TestScheduleRequestParams {
       final String? year,
       final int? examination,
       final int? startindex,
-      final int? length}) = _$_TestScheduleRequestParams;
+      final int? length}) = _$TestScheduleRequestParamsImpl;
 
   factory _TestScheduleRequestParams.fromJson(Map<String, dynamic> json) =
-      _$_TestScheduleRequestParams.fromJson;
+      _$TestScheduleRequestParamsImpl.fromJson;
 
   @override
   DateTime? get fromDate;
@@ -281,6 +281,6 @@ abstract class _TestScheduleRequestParams implements TestScheduleRequestParams {
   int? get length;
   @override
   @JsonKey(ignore: true)
-  _$$_TestScheduleRequestParamsCopyWith<_$_TestScheduleRequestParams>
+  _$$TestScheduleRequestParamsImplCopyWith<_$TestScheduleRequestParamsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

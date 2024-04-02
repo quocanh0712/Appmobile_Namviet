@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'all_courses_points_object.dart';
 
@@ -12,7 +12,7 @@ part of 'all_courses_points_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AllCoursesPointsObject _$AllCoursesPointsObjectFromJson(
     Map<String, dynamic> json) {
@@ -109,11 +109,12 @@ class _$AllCoursesPointsObjectCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_AllCoursesPointsObjectCopyWith<$Res>
+abstract class _$$AllCoursesPointsObjectImplCopyWith<$Res>
     implements $AllCoursesPointsObjectCopyWith<$Res> {
-  factory _$$_AllCoursesPointsObjectCopyWith(_$_AllCoursesPointsObject value,
-          $Res Function(_$_AllCoursesPointsObject) then) =
-      __$$_AllCoursesPointsObjectCopyWithImpl<$Res>;
+  factory _$$AllCoursesPointsObjectImplCopyWith(
+          _$AllCoursesPointsObjectImpl value,
+          $Res Function(_$AllCoursesPointsObjectImpl) then) =
+      __$$AllCoursesPointsObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -127,12 +128,13 @@ abstract class _$$_AllCoursesPointsObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AllCoursesPointsObjectCopyWithImpl<$Res>
+class __$$AllCoursesPointsObjectImplCopyWithImpl<$Res>
     extends _$AllCoursesPointsObjectCopyWithImpl<$Res,
-        _$_AllCoursesPointsObject>
-    implements _$$_AllCoursesPointsObjectCopyWith<$Res> {
-  __$$_AllCoursesPointsObjectCopyWithImpl(_$_AllCoursesPointsObject _value,
-      $Res Function(_$_AllCoursesPointsObject) _then)
+        _$AllCoursesPointsObjectImpl>
+    implements _$$AllCoursesPointsObjectImplCopyWith<$Res> {
+  __$$AllCoursesPointsObjectImplCopyWithImpl(
+      _$AllCoursesPointsObjectImpl _value,
+      $Res Function(_$AllCoursesPointsObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -146,7 +148,7 @@ class __$$_AllCoursesPointsObjectCopyWithImpl<$Res>
     Object? selectedSemesterClassification = freezed,
     Object? lstCourses = freezed,
   }) {
-    return _then(_$_AllCoursesPointsObject(
+    return _then(_$AllCoursesPointsObjectImpl(
       semesterCount: freezed == semesterCount
           ? _value.semesterCount
           : semesterCount // ignore: cast_nullable_to_non_nullable
@@ -181,8 +183,8 @@ class __$$_AllCoursesPointsObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AllCoursesPointsObject implements _AllCoursesPointsObject {
-  _$_AllCoursesPointsObject(
+class _$AllCoursesPointsObjectImpl implements _AllCoursesPointsObject {
+  _$AllCoursesPointsObjectImpl(
       {this.semesterCount,
       this.selectedSemesterverage,
       this.allSemestersAvarage,
@@ -192,8 +194,8 @@ class _$_AllCoursesPointsObject implements _AllCoursesPointsObject {
       @JsonKey(name: 'listcourse') final List<CourseObject?>? lstCourses})
       : _lstCourses = lstCourses;
 
-  factory _$_AllCoursesPointsObject.fromJson(Map<String, dynamic> json) =>
-      _$$_AllCoursesPointsObjectFromJson(json);
+  factory _$AllCoursesPointsObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AllCoursesPointsObjectImplFromJson(json);
 
   @override
   final int? semesterCount;
@@ -213,6 +215,7 @@ class _$_AllCoursesPointsObject implements _AllCoursesPointsObject {
   List<CourseObject?>? get lstCourses {
     final value = _lstCourses;
     if (value == null) return null;
+    if (_lstCourses is EqualUnmodifiableListView) return _lstCourses;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -223,10 +226,10 @@ class _$_AllCoursesPointsObject implements _AllCoursesPointsObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AllCoursesPointsObject &&
+            other is _$AllCoursesPointsObjectImpl &&
             (identical(other.semesterCount, semesterCount) ||
                 other.semesterCount == semesterCount) &&
             (identical(other.selectedSemesterverage, selectedSemesterverage) ||
@@ -260,13 +263,13 @@ class _$_AllCoursesPointsObject implements _AllCoursesPointsObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AllCoursesPointsObjectCopyWith<_$_AllCoursesPointsObject> get copyWith =>
-      __$$_AllCoursesPointsObjectCopyWithImpl<_$_AllCoursesPointsObject>(
-          this, _$identity);
+  _$$AllCoursesPointsObjectImplCopyWith<_$AllCoursesPointsObjectImpl>
+      get copyWith => __$$AllCoursesPointsObjectImplCopyWithImpl<
+          _$AllCoursesPointsObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AllCoursesPointsObjectToJson(
+    return _$$AllCoursesPointsObjectImplToJson(
       this,
     );
   }
@@ -281,10 +284,10 @@ abstract class _AllCoursesPointsObject implements AllCoursesPointsObject {
           final String? selectedSemester,
           final String? selectedSemesterClassification,
           @JsonKey(name: 'listcourse') final List<CourseObject?>? lstCourses}) =
-      _$_AllCoursesPointsObject;
+      _$AllCoursesPointsObjectImpl;
 
   factory _AllCoursesPointsObject.fromJson(Map<String, dynamic> json) =
-      _$_AllCoursesPointsObject.fromJson;
+      _$AllCoursesPointsObjectImpl.fromJson;
 
   @override
   int? get semesterCount;
@@ -303,6 +306,6 @@ abstract class _AllCoursesPointsObject implements AllCoursesPointsObject {
   List<CourseObject?>? get lstCourses;
   @override
   @JsonKey(ignore: true)
-  _$$_AllCoursesPointsObjectCopyWith<_$_AllCoursesPointsObject> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AllCoursesPointsObjectImplCopyWith<_$AllCoursesPointsObjectImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

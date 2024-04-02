@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'finance_client.dart';
 
@@ -12,7 +12,7 @@ part of 'finance_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$FinanceClient {
@@ -109,10 +109,11 @@ class _$FinanceClientCopyWithImpl<$Res, $Val extends FinanceClient>
 }
 
 /// @nodoc
-abstract class _$$_GetAllCopyWith<$Res>
+abstract class _$$GetAllImplCopyWith<$Res>
     implements $FinanceClientCopyWith<$Res> {
-  factory _$$_GetAllCopyWith(_$_GetAll value, $Res Function(_$_GetAll) then) =
-      __$$_GetAllCopyWithImpl<$Res>;
+  factory _$$GetAllImplCopyWith(
+          _$GetAllImpl value, $Res Function(_$GetAllImpl) then) =
+      __$$GetAllImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({FinanceRequestParams? params});
@@ -122,10 +123,11 @@ abstract class _$$_GetAllCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetAllCopyWithImpl<$Res>
-    extends _$FinanceClientCopyWithImpl<$Res, _$_GetAll>
-    implements _$$_GetAllCopyWith<$Res> {
-  __$$_GetAllCopyWithImpl(_$_GetAll _value, $Res Function(_$_GetAll) _then)
+class __$$GetAllImplCopyWithImpl<$Res>
+    extends _$FinanceClientCopyWithImpl<$Res, _$GetAllImpl>
+    implements _$$GetAllImplCopyWith<$Res> {
+  __$$GetAllImplCopyWithImpl(
+      _$GetAllImpl _value, $Res Function(_$GetAllImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -133,7 +135,7 @@ class __$$_GetAllCopyWithImpl<$Res>
   $Res call({
     Object? params = freezed,
   }) {
-    return _then(_$_GetAll(
+    return _then(_$GetAllImpl(
       freezed == params
           ? _value.params
           : params // ignore: cast_nullable_to_non_nullable
@@ -144,8 +146,8 @@ class __$$_GetAllCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_GetAll extends _GetAll {
-  _$_GetAll(this.params) : super._();
+class _$GetAllImpl extends _GetAll {
+  _$GetAllImpl(this.params) : super._();
 
   @override
   final FinanceRequestParams? params;
@@ -156,10 +158,10 @@ class _$_GetAll extends _GetAll {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetAll &&
+            other is _$GetAllImpl &&
             (identical(other.params, params) || other.params == params));
   }
 
@@ -169,8 +171,8 @@ class _$_GetAll extends _GetAll {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetAllCopyWith<_$_GetAll> get copyWith =>
-      __$$_GetAllCopyWithImpl<_$_GetAll>(this, _$identity);
+  _$$GetAllImplCopyWith<_$GetAllImpl> get copyWith =>
+      __$$GetAllImplCopyWithImpl<_$GetAllImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -236,23 +238,23 @@ class _$_GetAll extends _GetAll {
 }
 
 abstract class _GetAll extends FinanceClient {
-  factory _GetAll(final FinanceRequestParams? params) = _$_GetAll;
+  factory _GetAll(final FinanceRequestParams? params) = _$GetAllImpl;
   _GetAll._() : super._();
 
   @override
   FinanceRequestParams? get params;
   @override
   @JsonKey(ignore: true)
-  _$$_GetAllCopyWith<_$_GetAll> get copyWith =>
+  _$$GetAllImplCopyWith<_$GetAllImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_GetAllBillsCopyWith<$Res>
+abstract class _$$GetAllBillsImplCopyWith<$Res>
     implements $FinanceClientCopyWith<$Res> {
-  factory _$$_GetAllBillsCopyWith(
-          _$_GetAllBills value, $Res Function(_$_GetAllBills) then) =
-      __$$_GetAllBillsCopyWithImpl<$Res>;
+  factory _$$GetAllBillsImplCopyWith(
+          _$GetAllBillsImpl value, $Res Function(_$GetAllBillsImpl) then) =
+      __$$GetAllBillsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({FinanceRequestParams? params});
@@ -262,11 +264,11 @@ abstract class _$$_GetAllBillsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GetAllBillsCopyWithImpl<$Res>
-    extends _$FinanceClientCopyWithImpl<$Res, _$_GetAllBills>
-    implements _$$_GetAllBillsCopyWith<$Res> {
-  __$$_GetAllBillsCopyWithImpl(
-      _$_GetAllBills _value, $Res Function(_$_GetAllBills) _then)
+class __$$GetAllBillsImplCopyWithImpl<$Res>
+    extends _$FinanceClientCopyWithImpl<$Res, _$GetAllBillsImpl>
+    implements _$$GetAllBillsImplCopyWith<$Res> {
+  __$$GetAllBillsImplCopyWithImpl(
+      _$GetAllBillsImpl _value, $Res Function(_$GetAllBillsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -274,7 +276,7 @@ class __$$_GetAllBillsCopyWithImpl<$Res>
   $Res call({
     Object? params = freezed,
   }) {
-    return _then(_$_GetAllBills(
+    return _then(_$GetAllBillsImpl(
       freezed == params
           ? _value.params
           : params // ignore: cast_nullable_to_non_nullable
@@ -285,8 +287,8 @@ class __$$_GetAllBillsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_GetAllBills extends _GetAllBills {
-  _$_GetAllBills(this.params) : super._();
+class _$GetAllBillsImpl extends _GetAllBills {
+  _$GetAllBillsImpl(this.params) : super._();
 
   @override
   final FinanceRequestParams? params;
@@ -297,10 +299,10 @@ class _$_GetAllBills extends _GetAllBills {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GetAllBills &&
+            other is _$GetAllBillsImpl &&
             (identical(other.params, params) || other.params == params));
   }
 
@@ -310,8 +312,8 @@ class _$_GetAllBills extends _GetAllBills {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GetAllBillsCopyWith<_$_GetAllBills> get copyWith =>
-      __$$_GetAllBillsCopyWithImpl<_$_GetAllBills>(this, _$identity);
+  _$$GetAllBillsImplCopyWith<_$GetAllBillsImpl> get copyWith =>
+      __$$GetAllBillsImplCopyWithImpl<_$GetAllBillsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -377,13 +379,13 @@ class _$_GetAllBills extends _GetAllBills {
 }
 
 abstract class _GetAllBills extends FinanceClient {
-  factory _GetAllBills(final FinanceRequestParams? params) = _$_GetAllBills;
+  factory _GetAllBills(final FinanceRequestParams? params) = _$GetAllBillsImpl;
   _GetAllBills._() : super._();
 
   @override
   FinanceRequestParams? get params;
   @override
   @JsonKey(ignore: true)
-  _$$_GetAllBillsCopyWith<_$_GetAllBills> get copyWith =>
+  _$$GetAllBillsImplCopyWith<_$GetAllBillsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

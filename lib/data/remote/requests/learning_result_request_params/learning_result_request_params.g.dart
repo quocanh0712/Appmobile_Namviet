@@ -6,9 +6,9 @@ part of 'learning_result_request_params.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LearningResultRequestParams _$$_LearningResultRequestParamsFromJson(
+_$LearningResultRequestParamsImpl _$$LearningResultRequestParamsImplFromJson(
         Map<String, dynamic> json) =>
-    _$_LearningResultRequestParams(
+    _$LearningResultRequestParamsImpl(
       semester: json['semester'] as int?,
       year: json['year'] as String?,
       courseId: json['courseId'] as int?,
@@ -16,8 +16,8 @@ _$_LearningResultRequestParams _$$_LearningResultRequestParamsFromJson(
       length: json['length'] as int?,
     );
 
-Map<String, dynamic> _$$_LearningResultRequestParamsToJson(
-        _$_LearningResultRequestParams instance) =>
+Map<String, dynamic> _$$LearningResultRequestParamsImplToJson(
+        _$LearningResultRequestParamsImpl instance) =>
     <String, dynamic>{
       'semester': instance.semester,
       'year': instance.year,

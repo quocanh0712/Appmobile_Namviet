@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'scientific_research_client.dart';
 
@@ -12,10 +12,11 @@ part of 'scientific_research_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ScientificResearchClient {
+  Object? get model => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(ScientificResearchRequest? model)
@@ -86,10 +87,11 @@ class _$ScientificResearchClientCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ScientificResearchListCopyWith<$Res> {
-  factory _$$_ScientificResearchListCopyWith(_$_ScientificResearchList value,
-          $Res Function(_$_ScientificResearchList) then) =
-      __$$_ScientificResearchListCopyWithImpl<$Res>;
+abstract class _$$ScientificResearchListImplCopyWith<$Res> {
+  factory _$$ScientificResearchListImplCopyWith(
+          _$ScientificResearchListImpl value,
+          $Res Function(_$ScientificResearchListImpl) then) =
+      __$$ScientificResearchListImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ScientificResearchRequest? model});
 
@@ -97,12 +99,13 @@ abstract class _$$_ScientificResearchListCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ScientificResearchListCopyWithImpl<$Res>
+class __$$ScientificResearchListImplCopyWithImpl<$Res>
     extends _$ScientificResearchClientCopyWithImpl<$Res,
-        _$_ScientificResearchList>
-    implements _$$_ScientificResearchListCopyWith<$Res> {
-  __$$_ScientificResearchListCopyWithImpl(_$_ScientificResearchList _value,
-      $Res Function(_$_ScientificResearchList) _then)
+        _$ScientificResearchListImpl>
+    implements _$$ScientificResearchListImplCopyWith<$Res> {
+  __$$ScientificResearchListImplCopyWithImpl(
+      _$ScientificResearchListImpl _value,
+      $Res Function(_$ScientificResearchListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -110,7 +113,7 @@ class __$$_ScientificResearchListCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_ScientificResearchList(
+    return _then(_$ScientificResearchListImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -133,8 +136,8 @@ class __$$_ScientificResearchListCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ScientificResearchList extends _ScientificResearchList {
-  _$_ScientificResearchList(this.model) : super._();
+class _$ScientificResearchListImpl extends _ScientificResearchList {
+  _$ScientificResearchListImpl(this.model) : super._();
 
   @override
   final ScientificResearchRequest? model;
@@ -145,10 +148,10 @@ class _$_ScientificResearchList extends _ScientificResearchList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ScientificResearchList &&
+            other is _$ScientificResearchListImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -158,9 +161,9 @@ class _$_ScientificResearchList extends _ScientificResearchList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ScientificResearchListCopyWith<_$_ScientificResearchList> get copyWith =>
-      __$$_ScientificResearchListCopyWithImpl<_$_ScientificResearchList>(
-          this, _$identity);
+  _$$ScientificResearchListImplCopyWith<_$ScientificResearchListImpl>
+      get copyWith => __$$ScientificResearchListImplCopyWithImpl<
+          _$ScientificResearchListImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -237,20 +240,22 @@ class _$_ScientificResearchList extends _ScientificResearchList {
 
 abstract class _ScientificResearchList extends ScientificResearchClient {
   factory _ScientificResearchList(final ScientificResearchRequest? model) =
-      _$_ScientificResearchList;
+      _$ScientificResearchListImpl;
   _ScientificResearchList._() : super._();
 
+  @override
   ScientificResearchRequest? get model;
   @JsonKey(ignore: true)
-  _$$_ScientificResearchListCopyWith<_$_ScientificResearchList> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ScientificResearchListImplCopyWith<_$ScientificResearchListImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_ItemScientificResearchCopyWith<$Res> {
-  factory _$$_ItemScientificResearchCopyWith(_$_ItemScientificResearch value,
-          $Res Function(_$_ItemScientificResearch) then) =
-      __$$_ItemScientificResearchCopyWithImpl<$Res>;
+abstract class _$$ItemScientificResearchImplCopyWith<$Res> {
+  factory _$$ItemScientificResearchImplCopyWith(
+          _$ItemScientificResearchImpl value,
+          $Res Function(_$ItemScientificResearchImpl) then) =
+      __$$ItemScientificResearchImplCopyWithImpl<$Res>;
   @useResult
   $Res call({ItemScientificResearchRequest? model});
 
@@ -258,12 +263,13 @@ abstract class _$$_ItemScientificResearchCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ItemScientificResearchCopyWithImpl<$Res>
+class __$$ItemScientificResearchImplCopyWithImpl<$Res>
     extends _$ScientificResearchClientCopyWithImpl<$Res,
-        _$_ItemScientificResearch>
-    implements _$$_ItemScientificResearchCopyWith<$Res> {
-  __$$_ItemScientificResearchCopyWithImpl(_$_ItemScientificResearch _value,
-      $Res Function(_$_ItemScientificResearch) _then)
+        _$ItemScientificResearchImpl>
+    implements _$$ItemScientificResearchImplCopyWith<$Res> {
+  __$$ItemScientificResearchImplCopyWithImpl(
+      _$ItemScientificResearchImpl _value,
+      $Res Function(_$ItemScientificResearchImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -271,7 +277,7 @@ class __$$_ItemScientificResearchCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_ItemScientificResearch(
+    return _then(_$ItemScientificResearchImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -294,8 +300,8 @@ class __$$_ItemScientificResearchCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ItemScientificResearch extends _ItemScientificResearch {
-  _$_ItemScientificResearch(this.model) : super._();
+class _$ItemScientificResearchImpl extends _ItemScientificResearch {
+  _$ItemScientificResearchImpl(this.model) : super._();
 
   @override
   final ItemScientificResearchRequest? model;
@@ -306,10 +312,10 @@ class _$_ItemScientificResearch extends _ItemScientificResearch {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ItemScientificResearch &&
+            other is _$ItemScientificResearchImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -319,9 +325,9 @@ class _$_ItemScientificResearch extends _ItemScientificResearch {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ItemScientificResearchCopyWith<_$_ItemScientificResearch> get copyWith =>
-      __$$_ItemScientificResearchCopyWithImpl<_$_ItemScientificResearch>(
-          this, _$identity);
+  _$$ItemScientificResearchImplCopyWith<_$ItemScientificResearchImpl>
+      get copyWith => __$$ItemScientificResearchImplCopyWithImpl<
+          _$ItemScientificResearchImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -398,11 +404,12 @@ class _$_ItemScientificResearch extends _ItemScientificResearch {
 
 abstract class _ItemScientificResearch extends ScientificResearchClient {
   factory _ItemScientificResearch(final ItemScientificResearchRequest? model) =
-      _$_ItemScientificResearch;
+      _$ItemScientificResearchImpl;
   _ItemScientificResearch._() : super._();
 
+  @override
   ItemScientificResearchRequest? get model;
   @JsonKey(ignore: true)
-  _$$_ItemScientificResearchCopyWith<_$_ItemScientificResearch> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ItemScientificResearchImplCopyWith<_$ItemScientificResearchImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

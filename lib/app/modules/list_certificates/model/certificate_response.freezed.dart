@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'certificate_response.dart';
 
@@ -12,7 +12,7 @@ part of 'certificate_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 CertificateResponse _$CertificateResponseFromJson(Map<String, dynamic> json) {
   return _CertificateResponse.fromJson(json);
@@ -112,11 +112,11 @@ class _$CertificateResponseCopyWithImpl<$Res, $Val extends CertificateResponse>
 }
 
 /// @nodoc
-abstract class _$$_CertificateResponseCopyWith<$Res>
+abstract class _$$CertificateResponseImplCopyWith<$Res>
     implements $CertificateResponseCopyWith<$Res> {
-  factory _$$_CertificateResponseCopyWith(_$_CertificateResponse value,
-          $Res Function(_$_CertificateResponse) then) =
-      __$$_CertificateResponseCopyWithImpl<$Res>;
+  factory _$$CertificateResponseImplCopyWith(_$CertificateResponseImpl value,
+          $Res Function(_$CertificateResponseImpl) then) =
+      __$$CertificateResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -131,11 +131,11 @@ abstract class _$$_CertificateResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CertificateResponseCopyWithImpl<$Res>
-    extends _$CertificateResponseCopyWithImpl<$Res, _$_CertificateResponse>
-    implements _$$_CertificateResponseCopyWith<$Res> {
-  __$$_CertificateResponseCopyWithImpl(_$_CertificateResponse _value,
-      $Res Function(_$_CertificateResponse) _then)
+class __$$CertificateResponseImplCopyWithImpl<$Res>
+    extends _$CertificateResponseCopyWithImpl<$Res, _$CertificateResponseImpl>
+    implements _$$CertificateResponseImplCopyWith<$Res> {
+  __$$CertificateResponseImplCopyWithImpl(_$CertificateResponseImpl _value,
+      $Res Function(_$CertificateResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -150,7 +150,7 @@ class __$$_CertificateResponseCopyWithImpl<$Res>
     Object? fileName = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_CertificateResponse(
+    return _then(_$CertificateResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -189,8 +189,8 @@ class __$$_CertificateResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CertificateResponse implements _CertificateResponse {
-  const _$_CertificateResponse(
+class _$CertificateResponseImpl implements _CertificateResponse {
+  const _$CertificateResponseImpl(
       {this.id,
       this.certificateName,
       this.graduationYear,
@@ -200,8 +200,8 @@ class _$_CertificateResponse implements _CertificateResponse {
       this.fileName,
       this.status});
 
-  factory _$_CertificateResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_CertificateResponseFromJson(json);
+  factory _$CertificateResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CertificateResponseImplFromJson(json);
 
   @override
   final int? id;
@@ -226,10 +226,10 @@ class _$_CertificateResponse implements _CertificateResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CertificateResponse &&
+            other is _$CertificateResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.certificateName, certificateName) ||
                 other.certificateName == certificateName) &&
@@ -253,13 +253,13 @@ class _$_CertificateResponse implements _CertificateResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CertificateResponseCopyWith<_$_CertificateResponse> get copyWith =>
-      __$$_CertificateResponseCopyWithImpl<_$_CertificateResponse>(
+  _$$CertificateResponseImplCopyWith<_$CertificateResponseImpl> get copyWith =>
+      __$$CertificateResponseImplCopyWithImpl<_$CertificateResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CertificateResponseToJson(
+    return _$$CertificateResponseImplToJson(
       this,
     );
   }
@@ -274,10 +274,10 @@ abstract class _CertificateResponse implements CertificateResponse {
       final String? academicRank,
       final String? studyPlace,
       final String? fileName,
-      final int? status}) = _$_CertificateResponse;
+      final int? status}) = _$CertificateResponseImpl;
 
   factory _CertificateResponse.fromJson(Map<String, dynamic> json) =
-      _$_CertificateResponse.fromJson;
+      _$CertificateResponseImpl.fromJson;
 
   @override
   int? get id;
@@ -297,6 +297,6 @@ abstract class _CertificateResponse implements CertificateResponse {
   int? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_CertificateResponseCopyWith<_$_CertificateResponse> get copyWith =>
+  _$$CertificateResponseImplCopyWith<_$CertificateResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

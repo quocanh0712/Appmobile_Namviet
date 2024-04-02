@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'test_schedule_client.dart';
 
@@ -12,7 +12,7 @@ part of 'test_schedule_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$TestScheduleClient {
@@ -104,11 +104,11 @@ class _$TestScheduleClientCopyWithImpl<$Res, $Val extends TestScheduleClient>
 }
 
 /// @nodoc
-abstract class _$$_LoadTestScheduleCopyWith<$Res>
+abstract class _$$LoadTestScheduleImplCopyWith<$Res>
     implements $TestScheduleClientCopyWith<$Res> {
-  factory _$$_LoadTestScheduleCopyWith(
-          _$_LoadTestSchedule value, $Res Function(_$_LoadTestSchedule) then) =
-      __$$_LoadTestScheduleCopyWithImpl<$Res>;
+  factory _$$LoadTestScheduleImplCopyWith(_$LoadTestScheduleImpl value,
+          $Res Function(_$LoadTestScheduleImpl) then) =
+      __$$LoadTestScheduleImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({TestScheduleRequestParams? params});
@@ -118,11 +118,11 @@ abstract class _$$_LoadTestScheduleCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_LoadTestScheduleCopyWithImpl<$Res>
-    extends _$TestScheduleClientCopyWithImpl<$Res, _$_LoadTestSchedule>
-    implements _$$_LoadTestScheduleCopyWith<$Res> {
-  __$$_LoadTestScheduleCopyWithImpl(
-      _$_LoadTestSchedule _value, $Res Function(_$_LoadTestSchedule) _then)
+class __$$LoadTestScheduleImplCopyWithImpl<$Res>
+    extends _$TestScheduleClientCopyWithImpl<$Res, _$LoadTestScheduleImpl>
+    implements _$$LoadTestScheduleImplCopyWith<$Res> {
+  __$$LoadTestScheduleImplCopyWithImpl(_$LoadTestScheduleImpl _value,
+      $Res Function(_$LoadTestScheduleImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -130,7 +130,7 @@ class __$$_LoadTestScheduleCopyWithImpl<$Res>
   $Res call({
     Object? params = freezed,
   }) {
-    return _then(_$_LoadTestSchedule(
+    return _then(_$LoadTestScheduleImpl(
       params: freezed == params
           ? _value.params
           : params // ignore: cast_nullable_to_non_nullable
@@ -141,8 +141,8 @@ class __$$_LoadTestScheduleCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadTestSchedule extends _LoadTestSchedule {
-  _$_LoadTestSchedule({this.params}) : super._();
+class _$LoadTestScheduleImpl extends _LoadTestSchedule {
+  _$LoadTestScheduleImpl({this.params}) : super._();
 
   @override
   final TestScheduleRequestParams? params;
@@ -153,10 +153,10 @@ class _$_LoadTestSchedule extends _LoadTestSchedule {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadTestSchedule &&
+            other is _$LoadTestScheduleImpl &&
             (identical(other.params, params) || other.params == params));
   }
 
@@ -166,8 +166,9 @@ class _$_LoadTestSchedule extends _LoadTestSchedule {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoadTestScheduleCopyWith<_$_LoadTestSchedule> get copyWith =>
-      __$$_LoadTestScheduleCopyWithImpl<_$_LoadTestSchedule>(this, _$identity);
+  _$$LoadTestScheduleImplCopyWith<_$LoadTestScheduleImpl> get copyWith =>
+      __$$LoadTestScheduleImplCopyWithImpl<_$LoadTestScheduleImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -229,13 +230,13 @@ class _$_LoadTestSchedule extends _LoadTestSchedule {
 
 abstract class _LoadTestSchedule extends TestScheduleClient {
   factory _LoadTestSchedule({final TestScheduleRequestParams? params}) =
-      _$_LoadTestSchedule;
+      _$LoadTestScheduleImpl;
   _LoadTestSchedule._() : super._();
 
   @override
   TestScheduleRequestParams? get params;
   @override
   @JsonKey(ignore: true)
-  _$$_LoadTestScheduleCopyWith<_$_LoadTestSchedule> get copyWith =>
+  _$$LoadTestScheduleImplCopyWith<_$LoadTestScheduleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

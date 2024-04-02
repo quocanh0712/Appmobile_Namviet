@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'assets_client.dart';
 
@@ -12,7 +12,7 @@ part of 'assets_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$AssetsClient {
@@ -81,20 +81,20 @@ class _$AssetsClientCopyWithImpl<$Res, $Val extends AssetsClient>
 }
 
 /// @nodoc
-abstract class _$$_InventoryCopyWith<$Res> {
-  factory _$$_InventoryCopyWith(
-          _$_Inventory value, $Res Function(_$_Inventory) then) =
-      __$$_InventoryCopyWithImpl<$Res>;
+abstract class _$$InventoryImplCopyWith<$Res> {
+  factory _$$InventoryImplCopyWith(
+          _$InventoryImpl value, $Res Function(_$InventoryImpl) then) =
+      __$$InventoryImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? barcode, String? schedulecode});
 }
 
 /// @nodoc
-class __$$_InventoryCopyWithImpl<$Res>
-    extends _$AssetsClientCopyWithImpl<$Res, _$_Inventory>
-    implements _$$_InventoryCopyWith<$Res> {
-  __$$_InventoryCopyWithImpl(
-      _$_Inventory _value, $Res Function(_$_Inventory) _then)
+class __$$InventoryImplCopyWithImpl<$Res>
+    extends _$AssetsClientCopyWithImpl<$Res, _$InventoryImpl>
+    implements _$$InventoryImplCopyWith<$Res> {
+  __$$InventoryImplCopyWithImpl(
+      _$InventoryImpl _value, $Res Function(_$InventoryImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -103,7 +103,7 @@ class __$$_InventoryCopyWithImpl<$Res>
     Object? barcode = freezed,
     Object? schedulecode = freezed,
   }) {
-    return _then(_$_Inventory(
+    return _then(_$InventoryImpl(
       freezed == barcode
           ? _value.barcode
           : barcode // ignore: cast_nullable_to_non_nullable
@@ -118,8 +118,8 @@ class __$$_InventoryCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Inventory extends _Inventory {
-  _$_Inventory(this.barcode, this.schedulecode) : super._();
+class _$InventoryImpl extends _Inventory {
+  _$InventoryImpl(this.barcode, this.schedulecode) : super._();
 
   @override
   final String? barcode;
@@ -132,10 +132,10 @@ class _$_Inventory extends _Inventory {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Inventory &&
+            other is _$InventoryImpl &&
             (identical(other.barcode, barcode) || other.barcode == barcode) &&
             (identical(other.schedulecode, schedulecode) ||
                 other.schedulecode == schedulecode));
@@ -147,8 +147,8 @@ class _$_Inventory extends _Inventory {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InventoryCopyWith<_$_Inventory> get copyWith =>
-      __$$_InventoryCopyWithImpl<_$_Inventory>(this, _$identity);
+  _$$InventoryImplCopyWith<_$InventoryImpl> get copyWith =>
+      __$$InventoryImplCopyWithImpl<_$InventoryImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -221,31 +221,31 @@ class _$_Inventory extends _Inventory {
 
 abstract class _Inventory extends AssetsClient {
   factory _Inventory(final String? barcode, final String? schedulecode) =
-      _$_Inventory;
+      _$InventoryImpl;
   _Inventory._() : super._();
 
   String? get barcode;
   String? get schedulecode;
   @JsonKey(ignore: true)
-  _$$_InventoryCopyWith<_$_Inventory> get copyWith =>
+  _$$InventoryImplCopyWith<_$InventoryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_InventoryInfoCopyWith<$Res> {
-  factory _$$_InventoryInfoCopyWith(
-          _$_InventoryInfo value, $Res Function(_$_InventoryInfo) then) =
-      __$$_InventoryInfoCopyWithImpl<$Res>;
+abstract class _$$InventoryInfoImplCopyWith<$Res> {
+  factory _$$InventoryInfoImplCopyWith(
+          _$InventoryInfoImpl value, $Res Function(_$InventoryInfoImpl) then) =
+      __$$InventoryInfoImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String? barcode});
 }
 
 /// @nodoc
-class __$$_InventoryInfoCopyWithImpl<$Res>
-    extends _$AssetsClientCopyWithImpl<$Res, _$_InventoryInfo>
-    implements _$$_InventoryInfoCopyWith<$Res> {
-  __$$_InventoryInfoCopyWithImpl(
-      _$_InventoryInfo _value, $Res Function(_$_InventoryInfo) _then)
+class __$$InventoryInfoImplCopyWithImpl<$Res>
+    extends _$AssetsClientCopyWithImpl<$Res, _$InventoryInfoImpl>
+    implements _$$InventoryInfoImplCopyWith<$Res> {
+  __$$InventoryInfoImplCopyWithImpl(
+      _$InventoryInfoImpl _value, $Res Function(_$InventoryInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -253,7 +253,7 @@ class __$$_InventoryInfoCopyWithImpl<$Res>
   $Res call({
     Object? barcode = freezed,
   }) {
-    return _then(_$_InventoryInfo(
+    return _then(_$InventoryInfoImpl(
       freezed == barcode
           ? _value.barcode
           : barcode // ignore: cast_nullable_to_non_nullable
@@ -264,8 +264,8 @@ class __$$_InventoryInfoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InventoryInfo extends _InventoryInfo {
-  _$_InventoryInfo(this.barcode) : super._();
+class _$InventoryInfoImpl extends _InventoryInfo {
+  _$InventoryInfoImpl(this.barcode) : super._();
 
   @override
   final String? barcode;
@@ -276,10 +276,10 @@ class _$_InventoryInfo extends _InventoryInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InventoryInfo &&
+            other is _$InventoryInfoImpl &&
             (identical(other.barcode, barcode) || other.barcode == barcode));
   }
 
@@ -289,8 +289,8 @@ class _$_InventoryInfo extends _InventoryInfo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_InventoryInfoCopyWith<_$_InventoryInfo> get copyWith =>
-      __$$_InventoryInfoCopyWithImpl<_$_InventoryInfo>(this, _$identity);
+  _$$InventoryInfoImplCopyWith<_$InventoryInfoImpl> get copyWith =>
+      __$$InventoryInfoImplCopyWithImpl<_$InventoryInfoImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -362,35 +362,35 @@ class _$_InventoryInfo extends _InventoryInfo {
 }
 
 abstract class _InventoryInfo extends AssetsClient {
-  factory _InventoryInfo(final String? barcode) = _$_InventoryInfo;
+  factory _InventoryInfo(final String? barcode) = _$InventoryInfoImpl;
   _InventoryInfo._() : super._();
 
   String? get barcode;
   @JsonKey(ignore: true)
-  _$$_InventoryInfoCopyWith<_$_InventoryInfo> get copyWith =>
+  _$$InventoryInfoImplCopyWith<_$InventoryInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_InventoryScheduleCopyWith<$Res> {
-  factory _$$_InventoryScheduleCopyWith(_$_InventorySchedule value,
-          $Res Function(_$_InventorySchedule) then) =
-      __$$_InventoryScheduleCopyWithImpl<$Res>;
+abstract class _$$InventoryScheduleImplCopyWith<$Res> {
+  factory _$$InventoryScheduleImplCopyWith(_$InventoryScheduleImpl value,
+          $Res Function(_$InventoryScheduleImpl) then) =
+      __$$InventoryScheduleImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InventoryScheduleCopyWithImpl<$Res>
-    extends _$AssetsClientCopyWithImpl<$Res, _$_InventorySchedule>
-    implements _$$_InventoryScheduleCopyWith<$Res> {
-  __$$_InventoryScheduleCopyWithImpl(
-      _$_InventorySchedule _value, $Res Function(_$_InventorySchedule) _then)
+class __$$InventoryScheduleImplCopyWithImpl<$Res>
+    extends _$AssetsClientCopyWithImpl<$Res, _$InventoryScheduleImpl>
+    implements _$$InventoryScheduleImplCopyWith<$Res> {
+  __$$InventoryScheduleImplCopyWithImpl(_$InventoryScheduleImpl _value,
+      $Res Function(_$InventoryScheduleImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_InventorySchedule extends _InventorySchedule {
-  _$_InventorySchedule() : super._();
+class _$InventoryScheduleImpl extends _InventorySchedule {
+  _$InventoryScheduleImpl() : super._();
 
   @override
   String toString() {
@@ -398,9 +398,9 @@ class _$_InventorySchedule extends _InventorySchedule {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_InventorySchedule);
+        (other.runtimeType == runtimeType && other is _$InventoryScheduleImpl);
   }
 
   @override
@@ -476,6 +476,6 @@ class _$_InventorySchedule extends _InventorySchedule {
 }
 
 abstract class _InventorySchedule extends AssetsClient {
-  factory _InventorySchedule() = _$_InventorySchedule;
+  factory _InventorySchedule() = _$InventoryScheduleImpl;
   _InventorySchedule._() : super._();
 }

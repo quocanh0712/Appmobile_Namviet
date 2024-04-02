@@ -3,40 +3,19 @@
 part of 'edit_report_task_response.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-EditReportTaskResponse? jsonToNullableEditReportTaskResponse(Object? json) =>
-    EditReportTaskResponse.fromJson(json as Map<String, dynamic>);
-
-EditReportTaskResponse jsonToEditReportTaskResponse(Object? json) =>
-    EditReportTaskResponse.fromJson(json as Map<String, dynamic>);
-
-List<EditReportTaskResponse?> jsonToListNullableEditReportTaskResponses(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => EditReportTaskResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<EditReportTaskResponse> jsonToListEditReportTaskResponses(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => EditReportTaskResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_EditReportTaskResponse _$$_EditReportTaskResponseFromJson(
+_$EditReportTaskResponseImpl _$$EditReportTaskResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_EditReportTaskResponse(
+    _$EditReportTaskResponseImpl(
       listForm: (json['listForm'] as List<dynamic>?)
           ?.map((e) => FormFieldData.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_EditReportTaskResponseToJson(
-        _$_EditReportTaskResponse instance) =>
+Map<String, dynamic> _$$EditReportTaskResponseImplToJson(
+        _$EditReportTaskResponseImpl instance) =>
     <String, dynamic>{
       'listForm': instance.listForm,
     };

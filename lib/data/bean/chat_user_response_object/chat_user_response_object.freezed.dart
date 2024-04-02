@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'chat_user_response_object.dart';
 
@@ -12,7 +12,7 @@ part of 'chat_user_response_object.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ChatUserResponseObject _$ChatUserResponseObjectFromJson(
     Map<String, dynamic> json) {
@@ -82,23 +82,25 @@ class _$ChatUserResponseObjectCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ChatUserResponseObjectCopyWith<$Res>
+abstract class _$$ChatUserResponseObjectImplCopyWith<$Res>
     implements $ChatUserResponseObjectCopyWith<$Res> {
-  factory _$$_ChatUserResponseObjectCopyWith(_$_ChatUserResponseObject value,
-          $Res Function(_$_ChatUserResponseObject) then) =
-      __$$_ChatUserResponseObjectCopyWithImpl<$Res>;
+  factory _$$ChatUserResponseObjectImplCopyWith(
+          _$ChatUserResponseObjectImpl value,
+          $Res Function(_$ChatUserResponseObjectImpl) then) =
+      __$$ChatUserResponseObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String? name, String? idUser, String? className, String? image});
 }
 
 /// @nodoc
-class __$$_ChatUserResponseObjectCopyWithImpl<$Res>
+class __$$ChatUserResponseObjectImplCopyWithImpl<$Res>
     extends _$ChatUserResponseObjectCopyWithImpl<$Res,
-        _$_ChatUserResponseObject>
-    implements _$$_ChatUserResponseObjectCopyWith<$Res> {
-  __$$_ChatUserResponseObjectCopyWithImpl(_$_ChatUserResponseObject _value,
-      $Res Function(_$_ChatUserResponseObject) _then)
+        _$ChatUserResponseObjectImpl>
+    implements _$$ChatUserResponseObjectImplCopyWith<$Res> {
+  __$$ChatUserResponseObjectImplCopyWithImpl(
+      _$ChatUserResponseObjectImpl _value,
+      $Res Function(_$ChatUserResponseObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -109,7 +111,7 @@ class __$$_ChatUserResponseObjectCopyWithImpl<$Res>
     Object? className = freezed,
     Object? image = freezed,
   }) {
-    return _then(_$_ChatUserResponseObject(
+    return _then(_$ChatUserResponseObjectImpl(
       name: freezed == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -132,12 +134,12 @@ class __$$_ChatUserResponseObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ChatUserResponseObject implements _ChatUserResponseObject {
-  _$_ChatUserResponseObject(
+class _$ChatUserResponseObjectImpl implements _ChatUserResponseObject {
+  _$ChatUserResponseObjectImpl(
       {this.name, this.idUser, this.className, this.image});
 
-  factory _$_ChatUserResponseObject.fromJson(Map<String, dynamic> json) =>
-      _$$_ChatUserResponseObjectFromJson(json);
+  factory _$ChatUserResponseObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ChatUserResponseObjectImplFromJson(json);
 
   @override
   final String? name;
@@ -154,10 +156,10 @@ class _$_ChatUserResponseObject implements _ChatUserResponseObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ChatUserResponseObject &&
+            other is _$ChatUserResponseObjectImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.idUser, idUser) || other.idUser == idUser) &&
             (identical(other.className, className) ||
@@ -172,13 +174,13 @@ class _$_ChatUserResponseObject implements _ChatUserResponseObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ChatUserResponseObjectCopyWith<_$_ChatUserResponseObject> get copyWith =>
-      __$$_ChatUserResponseObjectCopyWithImpl<_$_ChatUserResponseObject>(
-          this, _$identity);
+  _$$ChatUserResponseObjectImplCopyWith<_$ChatUserResponseObjectImpl>
+      get copyWith => __$$ChatUserResponseObjectImplCopyWithImpl<
+          _$ChatUserResponseObjectImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ChatUserResponseObjectToJson(
+    return _$$ChatUserResponseObjectImplToJson(
       this,
     );
   }
@@ -189,10 +191,10 @@ abstract class _ChatUserResponseObject implements ChatUserResponseObject {
       {final String? name,
       final String? idUser,
       final String? className,
-      final String? image}) = _$_ChatUserResponseObject;
+      final String? image}) = _$ChatUserResponseObjectImpl;
 
   factory _ChatUserResponseObject.fromJson(Map<String, dynamic> json) =
-      _$_ChatUserResponseObject.fromJson;
+      _$ChatUserResponseObjectImpl.fromJson;
 
   @override
   String? get name;
@@ -204,6 +206,6 @@ abstract class _ChatUserResponseObject implements ChatUserResponseObject {
   String? get image;
   @override
   @JsonKey(ignore: true)
-  _$$_ChatUserResponseObjectCopyWith<_$_ChatUserResponseObject> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ChatUserResponseObjectImplCopyWith<_$ChatUserResponseObjectImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

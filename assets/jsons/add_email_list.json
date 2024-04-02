@@ -1,0 +1,165 @@
+{
+  "listForm": [
+    {
+      "type": "select",
+      "required": false,
+      "label": "Phòng ban",
+      "toggle": false,
+      "inline": false,
+      "name": "select-1671722390927-0",
+      "access": false,
+      "other": false,
+      "className": null,
+      "subtype": null,
+      "multiple": false,
+      "values": [
+        {
+          "label": "-Chọn phòng ban-",
+          "value": "0",
+          "selected": true
+        },
+        {
+          "label": "Phòng Đào tạo",
+          "value": "1",
+          "selected": false
+        },
+        {
+          "label": "Phòng Tổ chức - Hành chính",
+          "value": "2",
+          "selected": false
+        },
+        {
+          "label": "Phòng KH-TC & QT thiết bị",
+          "value": "3",
+          "selected": false
+        },
+        {
+          "label": "Phòng KHCN & HTQT",
+          "value": "4",
+          "selected": false
+        },
+        {
+          "label": "Phòng quản lý HSSV",
+          "value": "5",
+          "selected": false
+        },
+        {
+          "label": "Phòng QLCL & TT-PC",
+          "value": "6",
+          "selected": false
+        },
+        {
+          "label": "Trung tâm CNTT",
+          "value": "7",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "required": false,
+      "label": "Chọn người dùng",
+      "toggle": false,
+      "inline": false,
+      "name": "select-1671722390927-0",
+      "access": false,
+      "other": false,
+      "className": null,
+      "subtype": null,
+      "multiple": false,
+      "values": [
+        {
+          "label": "-Chọn người dùng-",
+          "value": "0",
+          "selected": true
+        },
+        {
+          "label": "doananhvan1974 - ĐOÀN ANH VÂN",
+          "value": "1",
+          "selected": false
+        },
+        {
+          "label": "buingochung1972 - BÙI NGỌC HƯNG",
+          "value": "2",
+          "selected": false
+        },
+        {
+          "label": "nguyenthuyhoa1984 - NGUYỄN THỊ MINH NGUYỆT",
+          "value": "3",
+          "selected": false
+        },
+        {
+          "label": "tranletung1983 - TRẦN LÊ TÙNG",
+          "value": "4",
+          "selected": false
+        },
+        {
+          "label": "vudinhchinh1979 - VŨ ĐÌNH CHINH",
+          "value": "5",
+          "selected": false
+        },
+        {
+          "label": "trinhthiha1979 - TRỊNH THỊ HÀ",
+          "value": "6",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "required": false,
+      "label": "File Upload",
+      "toggle": false,
+      "inline": false,
+      "name": "file-1671722323144-0",
+      "access": false,
+      "other": false,
+      "className": "form-control",
+      "subtype": "file",
+      "multiple": false,
+      "values": null
+    },
+    {
+      "type": "text",
+      "required": false,
+      "label": "Gửi tới",
+      "toggle": false,
+      "inline": false,
+      "name": "text-1671722392969-0",
+      "access": false,
+      "other": false,
+      "className": "form-control",
+      "subtype": "text",
+      "multiple": false,
+      "values": null
+    },
+    {
+      "type": "textarea",
+      "required": false,
+      "label": "Tiêu đề",
+      "toggle": false,
+      "inline": false,
+      "name": "textarea-1671722400802-0",
+      "access": false,
+      "other": false,
+      "className": "form-control",
+      "subtype": "textarea",
+      "multiple": false,
+      "values": null
+    },
+    {
+      "type": "textarea",
+      "required": false,
+      "label": "Soạn nội dung",
+      "toggle": false,
+      "inline": false,
+      "name": "textarea-1671722400802-0",
+      "access": false,
+      "other": false,
+      "className": "form-control",
+      "subtype": "textarea",
+      "multiple": false,
+      "values": null
+    }
+  ]
+}

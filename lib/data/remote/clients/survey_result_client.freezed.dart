@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'survey_result_client.dart';
 
@@ -12,10 +12,11 @@ part of 'survey_result_client.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$SurveyResultClient {
+  Object? get model => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(SurveyResultRequest? model) getSurveyList,
@@ -75,10 +76,10 @@ class _$SurveyResultClientCopyWithImpl<$Res, $Val extends SurveyResultClient>
 }
 
 /// @nodoc
-abstract class _$$_SurveyListCopyWith<$Res> {
-  factory _$$_SurveyListCopyWith(
-          _$_SurveyList value, $Res Function(_$_SurveyList) then) =
-      __$$_SurveyListCopyWithImpl<$Res>;
+abstract class _$$SurveyListImplCopyWith<$Res> {
+  factory _$$SurveyListImplCopyWith(
+          _$SurveyListImpl value, $Res Function(_$SurveyListImpl) then) =
+      __$$SurveyListImplCopyWithImpl<$Res>;
   @useResult
   $Res call({SurveyResultRequest? model});
 
@@ -86,11 +87,11 @@ abstract class _$$_SurveyListCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_SurveyListCopyWithImpl<$Res>
-    extends _$SurveyResultClientCopyWithImpl<$Res, _$_SurveyList>
-    implements _$$_SurveyListCopyWith<$Res> {
-  __$$_SurveyListCopyWithImpl(
-      _$_SurveyList _value, $Res Function(_$_SurveyList) _then)
+class __$$SurveyListImplCopyWithImpl<$Res>
+    extends _$SurveyResultClientCopyWithImpl<$Res, _$SurveyListImpl>
+    implements _$$SurveyListImplCopyWith<$Res> {
+  __$$SurveyListImplCopyWithImpl(
+      _$SurveyListImpl _value, $Res Function(_$SurveyListImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -98,7 +99,7 @@ class __$$_SurveyListCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_SurveyList(
+    return _then(_$SurveyListImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -121,8 +122,8 @@ class __$$_SurveyListCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_SurveyList extends _SurveyList {
-  _$_SurveyList(this.model) : super._();
+class _$SurveyListImpl extends _SurveyList {
+  _$SurveyListImpl(this.model) : super._();
 
   @override
   final SurveyResultRequest? model;
@@ -133,10 +134,10 @@ class _$_SurveyList extends _SurveyList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_SurveyList &&
+            other is _$SurveyListImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -146,8 +147,8 @@ class _$_SurveyList extends _SurveyList {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_SurveyListCopyWith<_$_SurveyList> get copyWith =>
-      __$$_SurveyListCopyWithImpl<_$_SurveyList>(this, _$identity);
+  _$$SurveyListImplCopyWith<_$SurveyListImpl> get copyWith =>
+      __$$SurveyListImplCopyWithImpl<_$SurveyListImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -213,20 +214,21 @@ class _$_SurveyList extends _SurveyList {
 }
 
 abstract class _SurveyList extends SurveyResultClient {
-  factory _SurveyList(final SurveyResultRequest? model) = _$_SurveyList;
+  factory _SurveyList(final SurveyResultRequest? model) = _$SurveyListImpl;
   _SurveyList._() : super._();
 
+  @override
   SurveyResultRequest? get model;
   @JsonKey(ignore: true)
-  _$$_SurveyListCopyWith<_$_SurveyList> get copyWith =>
+  _$$SurveyListImplCopyWith<_$SurveyListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_DetailSurveyCopyWith<$Res> {
-  factory _$$_DetailSurveyCopyWith(
-          _$_DetailSurvey value, $Res Function(_$_DetailSurvey) then) =
-      __$$_DetailSurveyCopyWithImpl<$Res>;
+abstract class _$$DetailSurveyImplCopyWith<$Res> {
+  factory _$$DetailSurveyImplCopyWith(
+          _$DetailSurveyImpl value, $Res Function(_$DetailSurveyImpl) then) =
+      __$$DetailSurveyImplCopyWithImpl<$Res>;
   @useResult
   $Res call({SurveyItemRequest? model});
 
@@ -234,11 +236,11 @@ abstract class _$$_DetailSurveyCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_DetailSurveyCopyWithImpl<$Res>
-    extends _$SurveyResultClientCopyWithImpl<$Res, _$_DetailSurvey>
-    implements _$$_DetailSurveyCopyWith<$Res> {
-  __$$_DetailSurveyCopyWithImpl(
-      _$_DetailSurvey _value, $Res Function(_$_DetailSurvey) _then)
+class __$$DetailSurveyImplCopyWithImpl<$Res>
+    extends _$SurveyResultClientCopyWithImpl<$Res, _$DetailSurveyImpl>
+    implements _$$DetailSurveyImplCopyWith<$Res> {
+  __$$DetailSurveyImplCopyWithImpl(
+      _$DetailSurveyImpl _value, $Res Function(_$DetailSurveyImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -246,7 +248,7 @@ class __$$_DetailSurveyCopyWithImpl<$Res>
   $Res call({
     Object? model = freezed,
   }) {
-    return _then(_$_DetailSurvey(
+    return _then(_$DetailSurveyImpl(
       freezed == model
           ? _value.model
           : model // ignore: cast_nullable_to_non_nullable
@@ -269,8 +271,8 @@ class __$$_DetailSurveyCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DetailSurvey extends _DetailSurvey {
-  _$_DetailSurvey(this.model) : super._();
+class _$DetailSurveyImpl extends _DetailSurvey {
+  _$DetailSurveyImpl(this.model) : super._();
 
   @override
   final SurveyItemRequest? model;
@@ -281,10 +283,10 @@ class _$_DetailSurvey extends _DetailSurvey {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DetailSurvey &&
+            other is _$DetailSurveyImpl &&
             (identical(other.model, model) || other.model == model));
   }
 
@@ -294,8 +296,8 @@ class _$_DetailSurvey extends _DetailSurvey {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DetailSurveyCopyWith<_$_DetailSurvey> get copyWith =>
-      __$$_DetailSurveyCopyWithImpl<_$_DetailSurvey>(this, _$identity);
+  _$$DetailSurveyImplCopyWith<_$DetailSurveyImpl> get copyWith =>
+      __$$DetailSurveyImplCopyWithImpl<_$DetailSurveyImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -361,11 +363,12 @@ class _$_DetailSurvey extends _DetailSurvey {
 }
 
 abstract class _DetailSurvey extends SurveyResultClient {
-  factory _DetailSurvey(final SurveyItemRequest? model) = _$_DetailSurvey;
+  factory _DetailSurvey(final SurveyItemRequest? model) = _$DetailSurveyImpl;
   _DetailSurvey._() : super._();
 
+  @override
   SurveyItemRequest? get model;
   @JsonKey(ignore: true)
-  _$$_DetailSurveyCopyWith<_$_DetailSurvey> get copyWith =>
+  _$$DetailSurveyImplCopyWith<_$DetailSurveyImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

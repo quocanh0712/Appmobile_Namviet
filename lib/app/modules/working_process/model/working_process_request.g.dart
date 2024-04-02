@@ -6,16 +6,16 @@ part of 'working_process_request.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_WorkingProcessRequest _$$_WorkingProcessRequestFromJson(
+_$WorkingProcessRequestImpl _$$WorkingProcessRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_WorkingProcessRequest(
+    _$WorkingProcessRequestImpl(
       startindex: json['startindex'] as int?,
       length: json['length'] as int?,
       keyword: json['keyword'] as String?,
     );
 
-Map<String, dynamic> _$$_WorkingProcessRequestToJson(
-        _$_WorkingProcessRequest instance) =>
+Map<String, dynamic> _$$WorkingProcessRequestImplToJson(
+        _$WorkingProcessRequestImpl instance) =>
     <String, dynamic>{
       'startindex': instance.startindex,
       'length': instance.length,

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'my_request_document_response.dart';
 
@@ -12,7 +12,7 @@ part of 'my_request_document_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MyRequestDocumentResponse _$MyRequestDocumentResponseFromJson(
     Map<String, dynamic> json) {
@@ -100,12 +100,12 @@ class _$MyRequestDocumentResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MyRequestDocumentResponseCopyWith<$Res>
+abstract class _$$MyRequestDocumentResponseImplCopyWith<$Res>
     implements $MyRequestDocumentResponseCopyWith<$Res> {
-  factory _$$_MyRequestDocumentResponseCopyWith(
-          _$_MyRequestDocumentResponse value,
-          $Res Function(_$_MyRequestDocumentResponse) then) =
-      __$$_MyRequestDocumentResponseCopyWithImpl<$Res>;
+  factory _$$MyRequestDocumentResponseImplCopyWith(
+          _$MyRequestDocumentResponseImpl value,
+          $Res Function(_$MyRequestDocumentResponseImpl) then) =
+      __$$MyRequestDocumentResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -118,13 +118,13 @@ abstract class _$$_MyRequestDocumentResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_MyRequestDocumentResponseCopyWithImpl<$Res>
+class __$$MyRequestDocumentResponseImplCopyWithImpl<$Res>
     extends _$MyRequestDocumentResponseCopyWithImpl<$Res,
-        _$_MyRequestDocumentResponse>
-    implements _$$_MyRequestDocumentResponseCopyWith<$Res> {
-  __$$_MyRequestDocumentResponseCopyWithImpl(
-      _$_MyRequestDocumentResponse _value,
-      $Res Function(_$_MyRequestDocumentResponse) _then)
+        _$MyRequestDocumentResponseImpl>
+    implements _$$MyRequestDocumentResponseImplCopyWith<$Res> {
+  __$$MyRequestDocumentResponseImplCopyWithImpl(
+      _$MyRequestDocumentResponseImpl _value,
+      $Res Function(_$MyRequestDocumentResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -137,7 +137,7 @@ class __$$_MyRequestDocumentResponseCopyWithImpl<$Res>
     Object? status = freezed,
     Object? listForm = freezed,
   }) {
-    return _then(_$_MyRequestDocumentResponse(
+    return _then(_$MyRequestDocumentResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -168,8 +168,8 @@ class __$$_MyRequestDocumentResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MyRequestDocumentResponse implements _MyRequestDocumentResponse {
-  const _$_MyRequestDocumentResponse(
+class _$MyRequestDocumentResponseImpl implements _MyRequestDocumentResponse {
+  const _$MyRequestDocumentResponseImpl(
       {this.id,
       this.idForm,
       this.formname,
@@ -178,8 +178,8 @@ class _$_MyRequestDocumentResponse implements _MyRequestDocumentResponse {
       final List<ValueModel>? listForm})
       : _listForm = listForm;
 
-  factory _$_MyRequestDocumentResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_MyRequestDocumentResponseFromJson(json);
+  factory _$MyRequestDocumentResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MyRequestDocumentResponseImplFromJson(json);
 
   @override
   final String? id;
@@ -196,6 +196,7 @@ class _$_MyRequestDocumentResponse implements _MyRequestDocumentResponse {
   List<ValueModel>? get listForm {
     final value = _listForm;
     if (value == null) return null;
+    if (_listForm is EqualUnmodifiableListView) return _listForm;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -206,10 +207,10 @@ class _$_MyRequestDocumentResponse implements _MyRequestDocumentResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MyRequestDocumentResponse &&
+            other is _$MyRequestDocumentResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.idForm, idForm) || other.idForm == idForm) &&
             (identical(other.formname, formname) ||
@@ -228,13 +229,13 @@ class _$_MyRequestDocumentResponse implements _MyRequestDocumentResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MyRequestDocumentResponseCopyWith<_$_MyRequestDocumentResponse>
-      get copyWith => __$$_MyRequestDocumentResponseCopyWithImpl<
-          _$_MyRequestDocumentResponse>(this, _$identity);
+  _$$MyRequestDocumentResponseImplCopyWith<_$MyRequestDocumentResponseImpl>
+      get copyWith => __$$MyRequestDocumentResponseImplCopyWithImpl<
+          _$MyRequestDocumentResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MyRequestDocumentResponseToJson(
+    return _$$MyRequestDocumentResponseImplToJson(
       this,
     );
   }
@@ -247,10 +248,10 @@ abstract class _MyRequestDocumentResponse implements MyRequestDocumentResponse {
       final String? formname,
       final DateTime? updateTime,
       final int? status,
-      final List<ValueModel>? listForm}) = _$_MyRequestDocumentResponse;
+      final List<ValueModel>? listForm}) = _$MyRequestDocumentResponseImpl;
 
   factory _MyRequestDocumentResponse.fromJson(Map<String, dynamic> json) =
-      _$_MyRequestDocumentResponse.fromJson;
+      _$MyRequestDocumentResponseImpl.fromJson;
 
   @override
   String? get id;
@@ -266,6 +267,6 @@ abstract class _MyRequestDocumentResponse implements MyRequestDocumentResponse {
   List<ValueModel>? get listForm;
   @override
   @JsonKey(ignore: true)
-  _$$_MyRequestDocumentResponseCopyWith<_$_MyRequestDocumentResponse>
+  _$$MyRequestDocumentResponseImplCopyWith<_$MyRequestDocumentResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

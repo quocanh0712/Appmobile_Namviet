@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'my_request_document_request.dart';
 
@@ -12,7 +12,7 @@ part of 'my_request_document_request.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 MyRequestDocumentRequest _$MyRequestDocumentRequestFromJson(
     Map<String, dynamic> json) {
@@ -82,24 +82,25 @@ class _$MyRequestDocumentRequestCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_MyRequestDocumentRequestCopyWith<$Res>
+abstract class _$$MyRequestDocumentRequestImplCopyWith<$Res>
     implements $MyRequestDocumentRequestCopyWith<$Res> {
-  factory _$$_MyRequestDocumentRequestCopyWith(
-          _$_MyRequestDocumentRequest value,
-          $Res Function(_$_MyRequestDocumentRequest) then) =
-      __$$_MyRequestDocumentRequestCopyWithImpl<$Res>;
+  factory _$$MyRequestDocumentRequestImplCopyWith(
+          _$MyRequestDocumentRequestImpl value,
+          $Res Function(_$MyRequestDocumentRequestImpl) then) =
+      __$$MyRequestDocumentRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? startindex, int? length, String? keyword, int? status});
 }
 
 /// @nodoc
-class __$$_MyRequestDocumentRequestCopyWithImpl<$Res>
+class __$$MyRequestDocumentRequestImplCopyWithImpl<$Res>
     extends _$MyRequestDocumentRequestCopyWithImpl<$Res,
-        _$_MyRequestDocumentRequest>
-    implements _$$_MyRequestDocumentRequestCopyWith<$Res> {
-  __$$_MyRequestDocumentRequestCopyWithImpl(_$_MyRequestDocumentRequest _value,
-      $Res Function(_$_MyRequestDocumentRequest) _then)
+        _$MyRequestDocumentRequestImpl>
+    implements _$$MyRequestDocumentRequestImplCopyWith<$Res> {
+  __$$MyRequestDocumentRequestImplCopyWithImpl(
+      _$MyRequestDocumentRequestImpl _value,
+      $Res Function(_$MyRequestDocumentRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -110,7 +111,7 @@ class __$$_MyRequestDocumentRequestCopyWithImpl<$Res>
     Object? keyword = freezed,
     Object? status = freezed,
   }) {
-    return _then(_$_MyRequestDocumentRequest(
+    return _then(_$MyRequestDocumentRequestImpl(
       startindex: freezed == startindex
           ? _value.startindex
           : startindex // ignore: cast_nullable_to_non_nullable
@@ -133,12 +134,12 @@ class __$$_MyRequestDocumentRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_MyRequestDocumentRequest implements _MyRequestDocumentRequest {
-  const _$_MyRequestDocumentRequest(
+class _$MyRequestDocumentRequestImpl implements _MyRequestDocumentRequest {
+  const _$MyRequestDocumentRequestImpl(
       {this.startindex, this.length, this.keyword, this.status});
 
-  factory _$_MyRequestDocumentRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_MyRequestDocumentRequestFromJson(json);
+  factory _$MyRequestDocumentRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$MyRequestDocumentRequestImplFromJson(json);
 
   @override
   final int? startindex;
@@ -155,10 +156,10 @@ class _$_MyRequestDocumentRequest implements _MyRequestDocumentRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_MyRequestDocumentRequest &&
+            other is _$MyRequestDocumentRequestImpl &&
             (identical(other.startindex, startindex) ||
                 other.startindex == startindex) &&
             (identical(other.length, length) || other.length == length) &&
@@ -174,13 +175,13 @@ class _$_MyRequestDocumentRequest implements _MyRequestDocumentRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_MyRequestDocumentRequestCopyWith<_$_MyRequestDocumentRequest>
-      get copyWith => __$$_MyRequestDocumentRequestCopyWithImpl<
-          _$_MyRequestDocumentRequest>(this, _$identity);
+  _$$MyRequestDocumentRequestImplCopyWith<_$MyRequestDocumentRequestImpl>
+      get copyWith => __$$MyRequestDocumentRequestImplCopyWithImpl<
+          _$MyRequestDocumentRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_MyRequestDocumentRequestToJson(
+    return _$$MyRequestDocumentRequestImplToJson(
       this,
     );
   }
@@ -191,10 +192,10 @@ abstract class _MyRequestDocumentRequest implements MyRequestDocumentRequest {
       {final int? startindex,
       final int? length,
       final String? keyword,
-      final int? status}) = _$_MyRequestDocumentRequest;
+      final int? status}) = _$MyRequestDocumentRequestImpl;
 
   factory _MyRequestDocumentRequest.fromJson(Map<String, dynamic> json) =
-      _$_MyRequestDocumentRequest.fromJson;
+      _$MyRequestDocumentRequestImpl.fromJson;
 
   @override
   int? get startindex;
@@ -206,6 +207,6 @@ abstract class _MyRequestDocumentRequest implements MyRequestDocumentRequest {
   int? get status;
   @override
   @JsonKey(ignore: true)
-  _$$_MyRequestDocumentRequestCopyWith<_$_MyRequestDocumentRequest>
+  _$$MyRequestDocumentRequestImplCopyWith<_$MyRequestDocumentRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -1,0 +1,34 @@
+{
+  "code": "0000",
+  "message": "Thành Công",
+  "result": {
+    "semesterCount": 5,
+    "selectedSemesterverage": 7.5,
+    "allSemestersAvarage": 7.5,
+    "classification": "Giỏi",
+    "selectedSemester": "Kì hiện tại: 20221",
+    "selectedSemesterClassification": "Xếp loại kì hiện tại: Giỏi",
+    "listcourse": [
+      {
+        "id": 1,
+        "coursename": "(20BIO001) - Đại cương PPDH Sinh học",
+        "numbercredits": 2,
+        "numberlession": 0,
+        "coefficient": 1,
+        "gpaPoint": 1,
+        "roomname": "null",
+        "timestart": "null",
+        "timeend": "null",
+        "lession": "null",
+        "identificationNumber": "null",
+        "examTime": 0,
+        "examination": 0,
+        "time": "null",
+        "teachingmethod": "null",
+        "status": "null"
+      }
+    ]
+  },
+  "recordsTotal": 0,
+  "icon": null
+}

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'language_process_response.dart';
 
@@ -12,7 +12,7 @@ part of 'language_process_response.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 LanguageProcessResponse _$LanguageProcessResponseFromJson(
     Map<String, dynamic> json) {
@@ -76,23 +76,25 @@ class _$LanguageProcessResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_LanguageProcessResponseCopyWith<$Res>
+abstract class _$$LanguageProcessResponseImplCopyWith<$Res>
     implements $LanguageProcessResponseCopyWith<$Res> {
-  factory _$$_LanguageProcessResponseCopyWith(_$_LanguageProcessResponse value,
-          $Res Function(_$_LanguageProcessResponse) then) =
-      __$$_LanguageProcessResponseCopyWithImpl<$Res>;
+  factory _$$LanguageProcessResponseImplCopyWith(
+          _$LanguageProcessResponseImpl value,
+          $Res Function(_$LanguageProcessResponseImpl) then) =
+      __$$LanguageProcessResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int? id, String? foreignlanguage, String? level});
 }
 
 /// @nodoc
-class __$$_LanguageProcessResponseCopyWithImpl<$Res>
+class __$$LanguageProcessResponseImplCopyWithImpl<$Res>
     extends _$LanguageProcessResponseCopyWithImpl<$Res,
-        _$_LanguageProcessResponse>
-    implements _$$_LanguageProcessResponseCopyWith<$Res> {
-  __$$_LanguageProcessResponseCopyWithImpl(_$_LanguageProcessResponse _value,
-      $Res Function(_$_LanguageProcessResponse) _then)
+        _$LanguageProcessResponseImpl>
+    implements _$$LanguageProcessResponseImplCopyWith<$Res> {
+  __$$LanguageProcessResponseImplCopyWithImpl(
+      _$LanguageProcessResponseImpl _value,
+      $Res Function(_$LanguageProcessResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -102,7 +104,7 @@ class __$$_LanguageProcessResponseCopyWithImpl<$Res>
     Object? foreignlanguage = freezed,
     Object? level = freezed,
   }) {
-    return _then(_$_LanguageProcessResponse(
+    return _then(_$LanguageProcessResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -121,11 +123,12 @@ class __$$_LanguageProcessResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_LanguageProcessResponse implements _LanguageProcessResponse {
-  const _$_LanguageProcessResponse({this.id, this.foreignlanguage, this.level});
+class _$LanguageProcessResponseImpl implements _LanguageProcessResponse {
+  const _$LanguageProcessResponseImpl(
+      {this.id, this.foreignlanguage, this.level});
 
-  factory _$_LanguageProcessResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_LanguageProcessResponseFromJson(json);
+  factory _$LanguageProcessResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LanguageProcessResponseImplFromJson(json);
 
   @override
   final int? id;
@@ -140,10 +143,10 @@ class _$_LanguageProcessResponse implements _LanguageProcessResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LanguageProcessResponse &&
+            other is _$LanguageProcessResponseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.foreignlanguage, foreignlanguage) ||
                 other.foreignlanguage == foreignlanguage) &&
@@ -157,14 +160,13 @@ class _$_LanguageProcessResponse implements _LanguageProcessResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LanguageProcessResponseCopyWith<_$_LanguageProcessResponse>
-      get copyWith =>
-          __$$_LanguageProcessResponseCopyWithImpl<_$_LanguageProcessResponse>(
-              this, _$identity);
+  _$$LanguageProcessResponseImplCopyWith<_$LanguageProcessResponseImpl>
+      get copyWith => __$$LanguageProcessResponseImplCopyWithImpl<
+          _$LanguageProcessResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_LanguageProcessResponseToJson(
+    return _$$LanguageProcessResponseImplToJson(
       this,
     );
   }
@@ -174,10 +176,10 @@ abstract class _LanguageProcessResponse implements LanguageProcessResponse {
   const factory _LanguageProcessResponse(
       {final int? id,
       final String? foreignlanguage,
-      final String? level}) = _$_LanguageProcessResponse;
+      final String? level}) = _$LanguageProcessResponseImpl;
 
   factory _LanguageProcessResponse.fromJson(Map<String, dynamic> json) =
-      _$_LanguageProcessResponse.fromJson;
+      _$LanguageProcessResponseImpl.fromJson;
 
   @override
   int? get id;
@@ -187,6 +189,6 @@ abstract class _LanguageProcessResponse implements LanguageProcessResponse {
   String? get level;
   @override
   @JsonKey(ignore: true)
-  _$$_LanguageProcessResponseCopyWith<_$_LanguageProcessResponse>
+  _$$LanguageProcessResponseImplCopyWith<_$LanguageProcessResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'app_configurations.dart';
 
@@ -12,7 +12,7 @@ part of 'app_configurations.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 AppConfigurations _$AppConfigurationsFromJson(Map<String, dynamic> json) {
   return _AppConfigurations.fromJson(json);
@@ -96,11 +96,11 @@ class _$AppConfigurationsCopyWithImpl<$Res, $Val extends AppConfigurations>
 }
 
 /// @nodoc
-abstract class _$$_AppConfigurationsCopyWith<$Res>
+abstract class _$$AppConfigurationsImplCopyWith<$Res>
     implements $AppConfigurationsCopyWith<$Res> {
-  factory _$$_AppConfigurationsCopyWith(_$_AppConfigurations value,
-          $Res Function(_$_AppConfigurations) then) =
-      __$$_AppConfigurationsCopyWithImpl<$Res>;
+  factory _$$AppConfigurationsImplCopyWith(_$AppConfigurationsImpl value,
+          $Res Function(_$AppConfigurationsImpl) then) =
+      __$$AppConfigurationsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -112,11 +112,11 @@ abstract class _$$_AppConfigurationsCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AppConfigurationsCopyWithImpl<$Res>
-    extends _$AppConfigurationsCopyWithImpl<$Res, _$_AppConfigurations>
-    implements _$$_AppConfigurationsCopyWith<$Res> {
-  __$$_AppConfigurationsCopyWithImpl(
-      _$_AppConfigurations _value, $Res Function(_$_AppConfigurations) _then)
+class __$$AppConfigurationsImplCopyWithImpl<$Res>
+    extends _$AppConfigurationsCopyWithImpl<$Res, _$AppConfigurationsImpl>
+    implements _$$AppConfigurationsImplCopyWith<$Res> {
+  __$$AppConfigurationsImplCopyWithImpl(_$AppConfigurationsImpl _value,
+      $Res Function(_$AppConfigurationsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -128,7 +128,7 @@ class __$$_AppConfigurationsCopyWithImpl<$Res>
     Object? baseUrl = freezed,
     Object? idDonVi = freezed,
   }) {
-    return _then(_$_AppConfigurations(
+    return _then(_$AppConfigurationsImpl(
       latestSyncedTime: freezed == latestSyncedTime
           ? _value.latestSyncedTime
           : latestSyncedTime // ignore: cast_nullable_to_non_nullable
@@ -155,16 +155,16 @@ class __$$_AppConfigurationsCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AppConfigurations implements _AppConfigurations {
-  _$_AppConfigurations(
+class _$AppConfigurationsImpl implements _AppConfigurations {
+  _$AppConfigurationsImpl(
       {@HiveField(0) this.latestSyncedTime,
       @HiveField(4) this.accessToken,
       @HiveField(5) this.refreshToken,
       @HiveField(6) this.baseUrl,
       @HiveField(7) this.idDonVi});
 
-  factory _$_AppConfigurations.fromJson(Map<String, dynamic> json) =>
-      _$$_AppConfigurationsFromJson(json);
+  factory _$AppConfigurationsImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AppConfigurationsImplFromJson(json);
 
   @override
   @HiveField(0)
@@ -188,10 +188,10 @@ class _$_AppConfigurations implements _AppConfigurations {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AppConfigurations &&
+            other is _$AppConfigurationsImpl &&
             (identical(other.latestSyncedTime, latestSyncedTime) ||
                 other.latestSyncedTime == latestSyncedTime) &&
             (identical(other.accessToken, accessToken) ||
@@ -210,13 +210,13 @@ class _$_AppConfigurations implements _AppConfigurations {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AppConfigurationsCopyWith<_$_AppConfigurations> get copyWith =>
-      __$$_AppConfigurationsCopyWithImpl<_$_AppConfigurations>(
+  _$$AppConfigurationsImplCopyWith<_$AppConfigurationsImpl> get copyWith =>
+      __$$AppConfigurationsImplCopyWithImpl<_$AppConfigurationsImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AppConfigurationsToJson(
+    return _$$AppConfigurationsImplToJson(
       this,
     );
   }
@@ -228,10 +228,10 @@ abstract class _AppConfigurations implements AppConfigurations {
       @HiveField(4) final String? accessToken,
       @HiveField(5) final String? refreshToken,
       @HiveField(6) final String? baseUrl,
-      @HiveField(7) final int? idDonVi}) = _$_AppConfigurations;
+      @HiveField(7) final int? idDonVi}) = _$AppConfigurationsImpl;
 
   factory _AppConfigurations.fromJson(Map<String, dynamic> json) =
-      _$_AppConfigurations.fromJson;
+      _$AppConfigurationsImpl.fromJson;
 
   @override
   @HiveField(0)
@@ -250,6 +250,6 @@ abstract class _AppConfigurations implements AppConfigurations {
   int? get idDonVi;
   @override
   @JsonKey(ignore: true)
-  _$$_AppConfigurationsCopyWith<_$_AppConfigurations> get copyWith =>
+  _$$AppConfigurationsImplCopyWith<_$AppConfigurationsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

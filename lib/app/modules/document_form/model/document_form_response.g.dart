@@ -3,33 +3,12 @@
 part of 'document_form_response.dart';
 
 // **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
-DocumentFormResponse? jsonToNullableDocumentFormResponse(Object? json) =>
-    DocumentFormResponse.fromJson(json as Map<String, dynamic>);
-
-DocumentFormResponse jsonToDocumentFormResponse(Object? json) =>
-    DocumentFormResponse.fromJson(json as Map<String, dynamic>);
-
-List<DocumentFormResponse?> jsonToListNullableDocumentFormResponses(
-        Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => DocumentFormResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-List<DocumentFormResponse> jsonToListDocumentFormResponses(Object? json) =>
-    List<Object>.from(json as List)
-        .map((e) => DocumentFormResponse.fromJson(e as Map<String, dynamic>))
-        .toList();
-
-// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_DocumentFormResponse _$$_DocumentFormResponseFromJson(
+_$DocumentFormResponseImpl _$$DocumentFormResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DocumentFormResponse(
+    _$DocumentFormResponseImpl(
       id: json['id'] as String?,
       idForm: json['idForm'] as String?,
       formname: json['formname'] as String?,
@@ -45,8 +24,8 @@ _$_DocumentFormResponse _$$_DocumentFormResponseFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_DocumentFormResponseToJson(
-        _$_DocumentFormResponse instance) =>
+Map<String, dynamic> _$$DocumentFormResponseImplToJson(
+        _$DocumentFormResponseImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'idForm': instance.idForm,

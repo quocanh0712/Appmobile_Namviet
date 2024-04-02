@@ -279,3 +279,5 @@ extension NetworkResponseConverter on BaseResponseObject {
   int? jsonToInt(Object? json) => json as int?;
   String? jsonToString(Object? json) => json as String?;
 }
+
+
