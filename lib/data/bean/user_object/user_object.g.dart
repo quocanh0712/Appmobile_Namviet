@@ -2,7 +2,25 @@
 
 part of 'user_object.dart';
 
+// **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
 
+UserObject? jsonToNullableUserObject(Object? json) =>
+    UserObject.fromJson(json as Map<String, dynamic>);
+
+UserObject jsonToUserObject(Object? json) =>
+    UserObject.fromJson(json as Map<String, dynamic>);
+
+List<UserObject?> jsonToListNullableUserObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => UserObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<UserObject> jsonToListUserObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => UserObject.fromJson(e as Map<String, dynamic>))
+        .toList();
 
 // **************************************************************************
 // TypeAdapterGenerator

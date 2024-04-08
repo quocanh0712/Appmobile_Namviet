@@ -3,6 +3,31 @@
 part of 'single_course_points_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+SingleCoursePointsObject? jsonToNullableSingleCoursePointsObject(
+    Object? json) =>
+    SingleCoursePointsObject.fromJson(json as Map<String, dynamic>);
+
+SingleCoursePointsObject jsonToSingleCoursePointsObject(Object? json) =>
+    SingleCoursePointsObject.fromJson(json as Map<String, dynamic>);
+
+List<SingleCoursePointsObject?> jsonToListNullableSingleCoursePointsObjects(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map(
+            (e) => SingleCoursePointsObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<SingleCoursePointsObject> jsonToListSingleCoursePointsObjects(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map(
+            (e) => SingleCoursePointsObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

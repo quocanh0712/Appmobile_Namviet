@@ -3,6 +3,27 @@
 part of 'service_request_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+ServiceRequestObject? jsonToNullableServiceRequestObject(Object? json) =>
+    ServiceRequestObject.fromJson(json as Map<String, dynamic>);
+
+ServiceRequestObject jsonToServiceRequestObject(Object? json) =>
+    ServiceRequestObject.fromJson(json as Map<String, dynamic>);
+
+List<ServiceRequestObject?> jsonToListNullableServiceRequestObjects(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => ServiceRequestObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<ServiceRequestObject> jsonToListServiceRequestObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => ServiceRequestObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

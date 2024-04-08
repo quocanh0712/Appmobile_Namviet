@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:ftu_lms/generated/assets.gen.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 typedef ExpandHeaderWidget = Widget Function();
 typedef AppBarActions = List<Widget>? Function(BuildContext context);
@@ -57,9 +58,9 @@ class BaseAppBarWidget extends StatelessWidget {
                         ),
                       )
                     : const SizedBox.shrink(),
-                const SizedBox(width: 3),
+                const SizedBox(width: 0),
                 Expanded(child: expandHeaderViewBuilder?.call() ?? Container()),
-                const SizedBox(width: 3),
+                const SizedBox(width: 0),
                 if (appBarActions?.call(context)?.isNotEmpty == true) ...{
                   Row(children: appBarActions?.call(context) ?? []),
                 }
@@ -73,8 +74,7 @@ class BaseAppBarWidget extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                       textAlign: TextAlign.start,
-                      style: context.themeExtensions.headline
-                          .copyWith(color: context.themeExtensions.textColor),
+                      style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontSize: 25, fontWeight: FontWeight.bold),
                     ))
                 : const SizedBox(),
           ],

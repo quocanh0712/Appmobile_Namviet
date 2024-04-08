@@ -3,6 +3,26 @@
 part of 'reward_response.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+RewardResponse? jsonToNullableRewardResponse(Object? json) =>
+    RewardResponse.fromJson(json as Map<String, dynamic>);
+
+RewardResponse jsonToRewardResponse(Object? json) =>
+    RewardResponse.fromJson(json as Map<String, dynamic>);
+
+List<RewardResponse?> jsonToListNullableRewardResponses(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => RewardResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<RewardResponse> jsonToListRewardResponses(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => RewardResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

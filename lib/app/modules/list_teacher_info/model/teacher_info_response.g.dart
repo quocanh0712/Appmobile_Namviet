@@ -3,6 +3,27 @@
 part of 'teacher_info_response.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+TeacherInfoResponse? jsonToNullableTeacherInfoResponse(Object? json) =>
+    TeacherInfoResponse.fromJson(json as Map<String, dynamic>);
+
+TeacherInfoResponse jsonToTeacherInfoResponse(Object? json) =>
+    TeacherInfoResponse.fromJson(json as Map<String, dynamic>);
+
+List<TeacherInfoResponse?> jsonToListNullableTeacherInfoResponses(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => TeacherInfoResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<TeacherInfoResponse> jsonToListTeacherInfoResponses(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => TeacherInfoResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

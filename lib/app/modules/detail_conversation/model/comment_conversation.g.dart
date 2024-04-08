@@ -3,6 +3,27 @@
 part of 'comment_conversation.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+CommentConversation? jsonToNullableCommentConversation(Object? json) =>
+    CommentConversation.fromJson(json as Map<String, dynamic>);
+
+CommentConversation jsonToCommentConversation(Object? json) =>
+    CommentConversation.fromJson(json as Map<String, dynamic>);
+
+List<CommentConversation?> jsonToListNullableCommentConversations(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => CommentConversation.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<CommentConversation> jsonToListCommentConversations(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => CommentConversation.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

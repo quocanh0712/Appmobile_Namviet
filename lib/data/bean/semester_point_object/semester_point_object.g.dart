@@ -3,6 +3,27 @@
 part of 'semester_point_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+SemesterPointObject? jsonToNullableSemesterPointObject(Object? json) =>
+    SemesterPointObject.fromJson(json as Map<String, dynamic>);
+
+SemesterPointObject jsonToSemesterPointObject(Object? json) =>
+    SemesterPointObject.fromJson(json as Map<String, dynamic>);
+
+List<SemesterPointObject?> jsonToListNullableSemesterPointObjects(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => SemesterPointObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<SemesterPointObject> jsonToListSemesterPointObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => SemesterPointObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

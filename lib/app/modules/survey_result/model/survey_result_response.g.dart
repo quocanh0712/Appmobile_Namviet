@@ -3,6 +3,27 @@
 part of 'survey_result_response.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+SurveyResultResponse? jsonToNullableSurveyResultResponse(Object? json) =>
+    SurveyResultResponse.fromJson(json as Map<String, dynamic>);
+
+SurveyResultResponse jsonToSurveyResultResponse(Object? json) =>
+    SurveyResultResponse.fromJson(json as Map<String, dynamic>);
+
+List<SurveyResultResponse?> jsonToListNullableSurveyResultResponses(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => SurveyResultResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<SurveyResultResponse> jsonToListSurveyResultResponses(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => SurveyResultResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

@@ -19,6 +19,8 @@ class ActivityView
   final HomeController homeController =
       Get.put(HomeController(), permanent: false);
 
+
+
   @override
   Widget? onCreateViews(BuildContext context) {
     return Scaffold(
@@ -38,6 +40,7 @@ class ActivityView
       ),
     );
   }
+
 
   Widget _title(BuildContext context) {
     return Row(

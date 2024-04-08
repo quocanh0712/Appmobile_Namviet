@@ -3,6 +3,28 @@
 part of 'language_process_response.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+LanguageProcessResponse? jsonToNullableLanguageProcessResponse(Object? json) =>
+    LanguageProcessResponse.fromJson(json as Map<String, dynamic>);
+
+LanguageProcessResponse jsonToLanguageProcessResponse(Object? json) =>
+    LanguageProcessResponse.fromJson(json as Map<String, dynamic>);
+
+List<LanguageProcessResponse?> jsonToListNullableLanguageProcessResponses(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => LanguageProcessResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<LanguageProcessResponse> jsonToListLanguageProcessResponses(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => LanguageProcessResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

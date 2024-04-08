@@ -11,7 +11,7 @@ class Constants {
   static const String SUPPORT_PHONE_NUMBER = "(+84) 236. 3699324";
   static const String UNIVERSITY_WEBSITE = "http://ufl.udn.vn/";
   static const String ONE_SIGNAL_APP_ID =
-      "c54e1ad1-a7d2-45b5-99d5-7b3957d0624b";
+      "a67d7378-6175-4bd7-9fb9-94e98d78b8c4";
   static const emailValidateReg =
       r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+";
   static const phoneValidateReg =

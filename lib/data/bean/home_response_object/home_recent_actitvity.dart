@@ -11,9 +11,11 @@ part 'home_recent_actitvity.g.dart';
 class HomeRecentActitvity with _$HomeRecentActitvity {
   factory HomeRecentActitvity({
     int? id,
-    String? image,
+    String? icon,
     String? title,
     String? content,
+    String? url,
+    String? createDate,
   }) = _HomeRecentActitvity;
 
   factory HomeRecentActitvity.fromJson(Map<String, dynamic> json) =>

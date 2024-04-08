@@ -10,8 +10,12 @@ import 'package:ftu_lms/data/repositories/learning_result_repository.dart';
 import 'package:ftu_lms/data/repositories/user_repository.dart';
 import 'package:ftu_lms/utils/biometric_auth/biometric_authenticator.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:shared_preferences_helper/shared_preferences_helper.dart';
 import 'package:sliding_up_panel2/sliding_up_panel2.dart';
 import '../../../../generated/assets.gen.dart';
+
 
 class PersonalController extends BaseController {
   late ScrollController? scrollController;
@@ -92,6 +96,13 @@ class PersonalController extends BaseController {
     if (biometricAuthIsNotSupported.value) {
       biometricLoginIsEnable.value = userObject.value?.biometricAuth ?? false;
     }
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+    if (!isLoggedIn) {
+      // Nếu không đăng nhập, thực hiện các hành động khác cần thiết
+       Get.offAllNamed(Routes.LOGIN);
+    }
+
   }
 
   retrieveSemesterPoints({bool? isRefresh = false}) async {
@@ -144,6 +155,9 @@ class PersonalController extends BaseController {
   logout() async {
     Fimber.d("logout()");
     await userRepo.logout();
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    prefs.remove('isLoggedIn');
+    biometricLoginIsEnable.value = false;
     Get.offAllNamed(Routes.LOGIN);
   }
 

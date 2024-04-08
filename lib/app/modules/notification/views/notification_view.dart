@@ -13,6 +13,7 @@ import 'package:ftu_lms/generated/assets.gen.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../controllers/notification_controller.dart';
 
@@ -56,10 +57,10 @@ class NotificationView
       mainAxisSize: MainAxisSize.max,
       children: [
         isFirst == true ? const SizedBox(height: 15) : const SizedBox(height: 30),
-        AutoSizeText(
-          '${item?.createdAt?.EEEE} - ${item?.createdAt?.date}/${item?.createdAt?.month}/${item?.createdAt?.year}',
-          style: context.themeExtensions.subTex.copyWith(color: context.themeExtensions.textGrey),
-        ).paddingSymmetric(horizontal: 20),
+        // AutoSizeText(
+        //   '${item?.createdAt?.EEEE} - ${item?.createdAt?.date}/${item?.createdAt?.month}/${item?.createdAt?.year}',
+        //   style: context.themeExtensions.subTex.copyWith(color: context.themeExtensions.red),
+        // ).paddingSymmetric(horizontal: 20),
         const SizedBox(height: 9),
       ],
     );
@@ -105,15 +106,13 @@ class NotificationView
                           AutoSizeText(
                             notificationObject?.title ?? '',
                             maxLines: 2,
-                            style: context.themeExtensions.paragraph
-                                .copyWith(color: context.themeExtensions.textColor),
+                            style: GoogleFonts.openSans(color: context.themeExtensions.mainGreen, fontSize: 12, fontWeight: FontWeight.bold),
                           ),
                           const SizedBox(height: 7),
                           AutoSizeText(
                             notificationObject?.body ?? '',
                             maxLines: 1,
-                            style: context.themeExtensions.subTex
-                                .copyWith(color: context.themeExtensions.textGrey),
+                            style: GoogleFonts.openSans(color: context.themeExtensions.textGrey),
                           )
                         ],
                       ),

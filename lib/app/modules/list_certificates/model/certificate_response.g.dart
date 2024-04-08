@@ -3,6 +3,27 @@
 part of 'certificate_response.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+CertificateResponse? jsonToNullableCertificateResponse(Object? json) =>
+    CertificateResponse.fromJson(json as Map<String, dynamic>);
+
+CertificateResponse jsonToCertificateResponse(Object? json) =>
+    CertificateResponse.fromJson(json as Map<String, dynamic>);
+
+List<CertificateResponse?> jsonToListNullableCertificateResponses(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => CertificateResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<CertificateResponse> jsonToListCertificateResponses(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => CertificateResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

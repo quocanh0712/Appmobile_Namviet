@@ -45,7 +45,7 @@ class ProfileView extends BaseView<ProfileController> {
                   padding: const EdgeInsets.all(18),
                   child: Obx(() => Stack(
                         children: [
-                          qrFutureBuilder(controller.userObject.value?.iduser),
+                          qrFutureBuilder("${controller.userObject.value?.iduser} ${controller.userObject.value?.username}"),
                           Positioned.fill(
                             child: Align(
                               alignment: Alignment.center,

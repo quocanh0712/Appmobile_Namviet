@@ -3,6 +3,27 @@
 part of 'finance_response_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+FinanceResponseObject? jsonToNullableFinanceResponseObject(Object? json) =>
+    FinanceResponseObject.fromJson(json as Map<String, dynamic>);
+
+FinanceResponseObject jsonToFinanceResponseObject(Object? json) =>
+    FinanceResponseObject.fromJson(json as Map<String, dynamic>);
+
+List<FinanceResponseObject?> jsonToListNullableFinanceResponseObjects(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => FinanceResponseObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<FinanceResponseObject> jsonToListFinanceResponseObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => FinanceResponseObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

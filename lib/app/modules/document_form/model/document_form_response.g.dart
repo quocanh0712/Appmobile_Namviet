@@ -3,6 +3,27 @@
 part of 'document_form_response.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+DocumentFormResponse? jsonToNullableDocumentFormResponse(Object? json) =>
+    DocumentFormResponse.fromJson(json as Map<String, dynamic>);
+
+DocumentFormResponse jsonToDocumentFormResponse(Object? json) =>
+    DocumentFormResponse.fromJson(json as Map<String, dynamic>);
+
+List<DocumentFormResponse?> jsonToListNullableDocumentFormResponses(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => DocumentFormResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<DocumentFormResponse> jsonToListDocumentFormResponses(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => DocumentFormResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

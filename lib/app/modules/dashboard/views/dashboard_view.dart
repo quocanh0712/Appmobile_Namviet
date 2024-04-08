@@ -214,10 +214,13 @@ class _DashboardViewState extends State<DashboardView> {
           leftCornerRadius: 20,
           rightCornerRadius: 20,
 
+
           onTap: (index) => {
+
             dashboardController.currentTabIndex.value = index,
             if (index < checkInTabIndex) {pageController.jumpToPage(index)},
-            if (index >= checkInTabIndex) {pageController.jumpToPage(index + 1)}
+            if (index >= checkInTabIndex) {pageController.jumpToPage(index + 1)},
+
           },
           shadow: BoxShadow(
             color: Colors.white.withOpacity(0.5),
@@ -226,6 +229,79 @@ class _DashboardViewState extends State<DashboardView> {
             offset: const Offset(0, 3), // changes position of shadow
           ),
         ));
+  }
+
+
+
+
+
+  // void showChatNotificationDialog(BuildContext context, int tabIndex) {
+  //   showDialog(
+  //     context: context,
+  //     builder: (BuildContext context) {
+  //       return AlertDialog(
+  //         title: Text("Thông báo"),
+  //         content: Text("Bạn đã chọn mục chat."),
+  //         actions: [
+  //           ElevatedButton(
+  //             child: Text("Đồng ý"),
+  //             onPressed: () {
+  //               // Cập nhật currentTabIndex
+  //               dashboardController.currentTabIndex.value = tabIndex - 1;
+  //               Navigator.of(context).pop(); // Đóng hộp thoại
+  //             },
+  //           ),
+  //         ],
+  //       );
+  //     },
+  //   );
+  // }
+  void showChatNotificationDialog(BuildContext context, int tabIndex) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Thông báo"),
+          content: Text("Tính năng đang được cập nhật."),
+          actions: [
+            ElevatedButton(
+              child: Text("Đồng ý"),
+              onPressed: () {
+                // Cập nhật currentTabIndex nếu cần
+                dashboardController.currentTabIndex.value = tabIndex - 1;
+                // Chuyển đến trang tương ứng
+                pageController.jumpToPage(0);
+                Navigator.of(context).pop(); // Đóng hộp thoại
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void showActivityNotificationDialog(BuildContext context, int tabIndex) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Thông báo"),
+          content: Text("Tính năng đang được cập nhật."),
+          actions: [
+            ElevatedButton(
+              child: Text("Đồng ý"),
+              onPressed: () {
+                // Cập nhật currentTabIndex nếu cần
+                dashboardController.currentTabIndex.value = tabIndex - 3;
+                // Chuyển đến trang tương ứng
+                pageController.jumpToPage(0);
+                Navigator.of(context).pop(); // Đóng hộp thoại
+              },
+            ),
+          ],
+        );
+      },
+    );
   }
 
   Future<bool> _showExitPopup(BuildContext context) async {
@@ -282,16 +358,44 @@ class _DashboardViewState extends State<DashboardView> {
     }
   }
 
+  // void _updateCurrentTabIndex(int tabIndex) {
+  //   if (tabIndex < checkInTabIndex) {
+  //     dashboardController.currentTabIndex.value = tabIndex;
+  //   }
+  //   if (tabIndex == checkInTabIndex) {
+  //     dashboardController.currentTabIndex.value = -1;
+  //   }
+  //   if (tabIndex > checkInTabIndex) {
+  //     dashboardController.currentTabIndex.value = tabIndex - 1;
+  //   }
+  // }
+
   void _updateCurrentTabIndex(int tabIndex) {
+    // Cập nhật chỉ số của tab hiện tại
     if (tabIndex < checkInTabIndex) {
       dashboardController.currentTabIndex.value = tabIndex;
+      print('---------$tabIndex');
     }
     if (tabIndex == checkInTabIndex) {
       dashboardController.currentTabIndex.value = -1;
+      print('---------$tabIndex');
     }
     if (tabIndex > checkInTabIndex) {
       dashboardController.currentTabIndex.value = tabIndex - 1;
+      print('---------$tabIndex');
     }
+
+    //Kiểm tra nếu người dùng chọn tab "Chat", thì hiển thị thông báo
+    if (tabIndex == 1) {
+      showChatNotificationDialog(context, tabIndex);
+
+      print('---------$tabIndex');
+    }
+    if (tabIndex == 3) {
+      showActivityNotificationDialog(context, tabIndex);
+      print('---------$tabIndex');
+    }
+
   }
 
   void _setupQRScannerCamera(int tabIndex) {

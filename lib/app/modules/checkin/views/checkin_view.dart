@@ -31,6 +31,15 @@ class CheckinViewState extends State<CheckinView> {
     return Scaffold(
       body: Stack(children: [
         _buildQrView(context),
+        Positioned(
+          bottom: 20,
+          left: 20,
+          child:
+          // Sử dụng Text để hiển thị nội dung mã QR
+          controller.result != null && controller.result!.code != null
+              ? Text(controller.result!.code!)
+              : Text('Mày chưa scan code'),
+        ),
         Obx(() {
           if (controller.isError.value?.isNotBlank() == true) {
             WidgetsBinding.instance.addPostFrameCallback((duration) {
@@ -45,6 +54,7 @@ class CheckinViewState extends State<CheckinView> {
           }
           return const SizedBox.shrink();
         }),
+
         Obx(() {
           if (controller.isLoading.value == true) {
             WidgetsBinding.instance.addPostFrameCallback((duration) {
@@ -122,6 +132,11 @@ class CheckinViewState extends State<CheckinView> {
                               .image(width: 32, height: 32, fit: BoxFit.cover),
                     )),
               ),
+
+              // Center(
+              //   child: (controller.result!.code != null) ? Text('${controller.result?.code}') : Text('Mày chưa scan code'),
+              // ),
+
               InkWell(
                 onTap: () => controller.resumeQRScannerCamera(),
                 child: Container(
@@ -132,12 +147,15 @@ class CheckinViewState extends State<CheckinView> {
                       .svg(width: 32, height: 32, fit: BoxFit.cover),
                 ),
               ),
+
             ],
           ),
         ),
       ],
     );
   }
+
+
 
   void _onQRViewCreated(QRViewController qrController) {
     controller.qrController = qrController;
@@ -148,6 +166,7 @@ class CheckinViewState extends State<CheckinView> {
     });
     controller.resumeQRScannerCamera();
   }
+
 
   void _onPermissionSet(BuildContext context, QRViewController ctrl, bool p) {
     Fimber.d('${DateTime.now().toIso8601String()}_onPermissionSet $p');

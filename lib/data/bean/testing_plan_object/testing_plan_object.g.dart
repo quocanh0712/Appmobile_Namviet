@@ -3,6 +3,26 @@
 part of 'testing_plan_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+TestingPlanObject? jsonToNullableTestingPlanObject(Object? json) =>
+    TestingPlanObject.fromJson(json as Map<String, dynamic>);
+
+TestingPlanObject jsonToTestingPlanObject(Object? json) =>
+    TestingPlanObject.fromJson(json as Map<String, dynamic>);
+
+List<TestingPlanObject?> jsonToListNullableTestingPlanObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => TestingPlanObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<TestingPlanObject> jsonToListTestingPlanObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => TestingPlanObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

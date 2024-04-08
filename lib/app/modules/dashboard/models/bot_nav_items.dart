@@ -41,5 +41,6 @@ final botNavItems = <BotNavItem>[
 
 const notificationTabIndex = 1;
 const checkInTabIndex = 2;
+const chatTabIndex = 4;
 const homeTabIndex = 0;
 const activityTabIndex = 3;

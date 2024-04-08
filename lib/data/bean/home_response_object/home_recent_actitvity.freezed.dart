@@ -21,9 +21,11 @@ HomeRecentActitvity _$HomeRecentActitvityFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$HomeRecentActitvity {
   int? get id => throw _privateConstructorUsedError;
-  String? get image => throw _privateConstructorUsedError;
+  String? get icon => throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
   String? get content => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
+  String? get createDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +39,13 @@ abstract class $HomeRecentActitvityCopyWith<$Res> {
           HomeRecentActitvity value, $Res Function(HomeRecentActitvity) then) =
       _$HomeRecentActitvityCopyWithImpl<$Res, HomeRecentActitvity>;
   @useResult
-  $Res call({int? id, String? image, String? title, String? content});
+  $Res call(
+      {int? id,
+      String? icon,
+      String? title,
+      String? content,
+      String? url,
+      String? createDate});
 }
 
 /// @nodoc
@@ -54,18 +62,20 @@ class _$HomeRecentActitvityCopyWithImpl<$Res, $Val extends HomeRecentActitvity>
   @override
   $Res call({
     Object? id = freezed,
-    Object? image = freezed,
+    Object? icon = freezed,
     Object? title = freezed,
     Object? content = freezed,
+    Object? url = freezed,
+    Object? createDate = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      image: freezed == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
               as String?,
       title: freezed == title
           ? _value.title
@@ -74,6 +84,14 @@ class _$HomeRecentActitvityCopyWithImpl<$Res, $Val extends HomeRecentActitvity>
       content: freezed == content
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createDate: freezed == createDate
+          ? _value.createDate
+          : createDate // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -87,7 +105,13 @@ abstract class _$$HomeRecentActitvityImplCopyWith<$Res>
       __$$HomeRecentActitvityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int? id, String? image, String? title, String? content});
+  $Res call(
+      {int? id,
+      String? icon,
+      String? title,
+      String? content,
+      String? url,
+      String? createDate});
 }
 
 /// @nodoc
@@ -102,18 +126,20 @@ class __$$HomeRecentActitvityImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? image = freezed,
+    Object? icon = freezed,
     Object? title = freezed,
     Object? content = freezed,
+    Object? url = freezed,
+    Object? createDate = freezed,
   }) {
     return _then(_$HomeRecentActitvityImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int?,
-      image: freezed == image
-          ? _value.image
-          : image // ignore: cast_nullable_to_non_nullable
+      icon: freezed == icon
+          ? _value.icon
+          : icon // ignore: cast_nullable_to_non_nullable
               as String?,
       title: freezed == title
           ? _value.title
@@ -123,6 +149,14 @@ class __$$HomeRecentActitvityImplCopyWithImpl<$Res>
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createDate: freezed == createDate
+          ? _value.createDate
+          : createDate // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -130,7 +164,13 @@ class __$$HomeRecentActitvityImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$HomeRecentActitvityImpl implements _HomeRecentActitvity {
-  _$HomeRecentActitvityImpl({this.id, this.image, this.title, this.content});
+  _$HomeRecentActitvityImpl(
+      {this.id,
+      this.icon,
+      this.title,
+      this.content,
+      this.url,
+      this.createDate});
 
   factory _$HomeRecentActitvityImpl.fromJson(Map<String, dynamic> json) =>
       _$$HomeRecentActitvityImplFromJson(json);
@@ -138,15 +178,19 @@ class _$HomeRecentActitvityImpl implements _HomeRecentActitvity {
   @override
   final int? id;
   @override
-  final String? image;
+  final String? icon;
   @override
   final String? title;
   @override
   final String? content;
+  @override
+  final String? url;
+  @override
+  final String? createDate;
 
   @override
   String toString() {
-    return 'HomeRecentActitvity(id: $id, image: $image, title: $title, content: $content)';
+    return 'HomeRecentActitvity(id: $id, icon: $icon, title: $title, content: $content, url: $url, createDate: $createDate)';
   }
 
   @override
@@ -155,14 +199,18 @@ class _$HomeRecentActitvityImpl implements _HomeRecentActitvity {
         (other.runtimeType == runtimeType &&
             other is _$HomeRecentActitvityImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.image, image) || other.image == image) &&
+            (identical(other.icon, icon) || other.icon == icon) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.content, content) || other.content == content));
+            (identical(other.content, content) || other.content == content) &&
+            (identical(other.url, url) || other.url == url) &&
+            (identical(other.createDate, createDate) ||
+                other.createDate == createDate));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, image, title, content);
+  int get hashCode =>
+      Object.hash(runtimeType, id, icon, title, content, url, createDate);
 
   @JsonKey(ignore: true)
   @override
@@ -182,9 +230,11 @@ class _$HomeRecentActitvityImpl implements _HomeRecentActitvity {
 abstract class _HomeRecentActitvity implements HomeRecentActitvity {
   factory _HomeRecentActitvity(
       {final int? id,
-      final String? image,
+      final String? icon,
       final String? title,
-      final String? content}) = _$HomeRecentActitvityImpl;
+      final String? content,
+      final String? url,
+      final String? createDate}) = _$HomeRecentActitvityImpl;
 
   factory _HomeRecentActitvity.fromJson(Map<String, dynamic> json) =
       _$HomeRecentActitvityImpl.fromJson;
@@ -192,11 +242,15 @@ abstract class _HomeRecentActitvity implements HomeRecentActitvity {
   @override
   int? get id;
   @override
-  String? get image;
+  String? get icon;
   @override
   String? get title;
   @override
   String? get content;
+  @override
+  String? get url;
+  @override
+  String? get createDate;
   @override
   @JsonKey(ignore: true)
   _$$HomeRecentActitvityImplCopyWith<_$HomeRecentActitvityImpl> get copyWith =>

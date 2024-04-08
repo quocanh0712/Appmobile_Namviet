@@ -3,6 +3,27 @@
 part of 'schedule_checkin_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+ScheDuleCheckInObject? jsonToNullableScheDuleCheckInObject(Object? json) =>
+    ScheDuleCheckInObject.fromJson(json as Map<String, dynamic>);
+
+ScheDuleCheckInObject jsonToScheDuleCheckInObject(Object? json) =>
+    ScheDuleCheckInObject.fromJson(json as Map<String, dynamic>);
+
+List<ScheDuleCheckInObject?> jsonToListNullableScheDuleCheckInObjects(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => ScheDuleCheckInObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<ScheDuleCheckInObject> jsonToListScheDuleCheckInObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => ScheDuleCheckInObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 

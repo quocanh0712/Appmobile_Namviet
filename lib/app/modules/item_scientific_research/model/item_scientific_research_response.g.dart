@@ -1,6 +1,33 @@
+
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'item_scientific_research_response.dart';
+
+// **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+ItemScientificResearchResponse? jsonToNullableItemScientificResearchResponse(
+    Object? json) =>
+    ItemScientificResearchResponse.fromJson(json as Map<String, dynamic>);
+
+ItemScientificResearchResponse jsonToItemScientificResearchResponse(
+    Object? json) =>
+    ItemScientificResearchResponse.fromJson(json as Map<String, dynamic>);
+
+List<ItemScientificResearchResponse?>
+jsonToListNullableItemScientificResearchResponses(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => ItemScientificResearchResponse.fromJson(
+        e as Map<String, dynamic>))
+        .toList();
+
+List<ItemScientificResearchResponse> jsonToListItemScientificResearchResponses(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) =>
+        ItemScientificResearchResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
 
 // **************************************************************************
 // JsonSerializableGenerator

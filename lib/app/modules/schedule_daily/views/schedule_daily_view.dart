@@ -193,7 +193,13 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
                       element.timestart != null && element.timeend != null
                           ? "${hourMinute.format(element.timestart!)} - ${hourMinute.format(element.timeend!)}"
                           : null
+
                     ]),
+
+                    // element.timestart != null && element.timeend != null
+                    //     ? "${hourMinute.format(element.timestart!)} - ${hourMinute.format(element.timeend!)}"
+                    //     : null
+
                     textAlign: TextAlign.start,
                     // style: Get.context?.themeExtensions.subTex
                     //     .copyWith(color: Get.context?.themeExtensions.white),

@@ -10,16 +10,20 @@ _$HomeRecentActitvityImpl _$$HomeRecentActitvityImplFromJson(
         Map<String, dynamic> json) =>
     _$HomeRecentActitvityImpl(
       id: json['id'] as int?,
-      image: json['image'] as String?,
+      icon: json['icon'] as String?,
       title: json['title'] as String?,
       content: json['content'] as String?,
+      url: json['url'] as String?,
+      createDate: json['createDate'] as String?,
     );
 
 Map<String, dynamic> _$$HomeRecentActitvityImplToJson(
         _$HomeRecentActitvityImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'image': instance.image,
+      'icon': instance.icon,
       'title': instance.title,
       'content': instance.content,
+      'url': instance.url,
+      'createDate': instance.createDate,
     };

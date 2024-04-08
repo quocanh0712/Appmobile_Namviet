@@ -3,6 +3,31 @@
 part of 'education_program_response.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+EducationProgramResponse? jsonToNullableEducationProgramResponse(
+    Object? json) =>
+    EducationProgramResponse.fromJson(json as Map<String, dynamic>);
+
+EducationProgramResponse jsonToEducationProgramResponse(Object? json) =>
+    EducationProgramResponse.fromJson(json as Map<String, dynamic>);
+
+List<EducationProgramResponse?> jsonToListNullableEducationProgramResponses(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map(
+            (e) => EducationProgramResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<EducationProgramResponse> jsonToListEducationProgramResponses(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map(
+            (e) => EducationProgramResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

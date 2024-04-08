@@ -6,6 +6,7 @@ environment:
   sdk: '>=2.18.2 <3.0.0'
 
 dependencies:
+  get_storage: ^2.0.3
   watcher: ^1.1.0
   firebase_core_platform_interface: 5.0.0
   cupertino_icons: ^1.0.2
@@ -79,6 +80,8 @@ dependencies:
   flutter_screenutil: ^5.9.0
   webview_flutter: ^4.5.0
   flutter_inappwebview: ^6.0.0
+  shared_preferences: ^2.2.2
+  shared_preferences_helper: ^0.0.3
 
 
 
@@ -142,6 +145,7 @@ flutter:
     - assets/images/
     - assets/lotties/
     - assets/jsons/
+    - assets/Icon/
   fonts:
     - family: Poppins
       fonts:

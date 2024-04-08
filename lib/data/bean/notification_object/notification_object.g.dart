@@ -3,6 +3,26 @@
 part of 'notification_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+NotificationObject? jsonToNullableNotificationObject(Object? json) =>
+    NotificationObject.fromJson(json as Map<String, dynamic>);
+
+NotificationObject jsonToNotificationObject(Object? json) =>
+    NotificationObject.fromJson(json as Map<String, dynamic>);
+
+List<NotificationObject?> jsonToListNullableNotificationObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => NotificationObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<NotificationObject> jsonToListNotificationObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => NotificationObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

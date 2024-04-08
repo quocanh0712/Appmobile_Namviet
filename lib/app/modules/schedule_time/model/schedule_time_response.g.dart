@@ -3,6 +3,27 @@
 part of 'schedule_time_response.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+ScheduleTimeResponse? jsonToNullableScheduleTimeResponse(Object? json) =>
+    ScheduleTimeResponse.fromJson(json as Map<String, dynamic>);
+
+ScheduleTimeResponse jsonToScheduleTimeResponse(Object? json) =>
+    ScheduleTimeResponse.fromJson(json as Map<String, dynamic>);
+
+List<ScheduleTimeResponse?> jsonToListNullableScheduleTimeResponses(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => ScheduleTimeResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<ScheduleTimeResponse> jsonToListScheduleTimeResponses(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => ScheduleTimeResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

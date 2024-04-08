@@ -3,6 +3,31 @@
 part of 'semester_bill_response_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+SemesterBillResponseObject? jsonToNullableSemesterBillResponseObject(
+    Object? json) =>
+    SemesterBillResponseObject.fromJson(json as Map<String, dynamic>);
+
+SemesterBillResponseObject jsonToSemesterBillResponseObject(Object? json) =>
+    SemesterBillResponseObject.fromJson(json as Map<String, dynamic>);
+
+List<SemesterBillResponseObject?> jsonToListNullableSemesterBillResponseObjects(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) =>
+        SemesterBillResponseObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<SemesterBillResponseObject> jsonToListSemesterBillResponseObjects(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) =>
+        SemesterBillResponseObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

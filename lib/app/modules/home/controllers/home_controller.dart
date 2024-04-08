@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/app/routes/app_pages.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_banner_url.dart';
+import 'package:ftu_lms/data/bean/home_response_object/home_new_activity.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_outstanding_actitvity.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_recent_actitvity.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_recent_task.dart';
@@ -15,6 +16,7 @@ import 'package:ftu_lms/data/repositories/home_repository.dart';
 import 'package:ftu_lms/data/repositories/user_repository.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sliding_up_panel2/sliding_up_panel2.dart';
 import 'package:status_bar_control/status_bar_control.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -24,9 +26,10 @@ import '../../../../generated/assets.gen.dart';
 class HomeController extends BaseController {
   final ScrollController scrollController = ScrollController();
   PanelController? panelController = PanelController();
+  RxString avatarUrl = ''.obs;
   final hasNoTasks = false.obs;
   final recentTasks = <HomeRecentTask?>[].obs;
-
+  final lstNewActivities = <HomeNewActivity>[].obs;
   final lstRecentActivities = <HomeRecentActitvity>[].obs;
   final lstOutstandingActivities = <HomeOutstandingActitvity>[].obs;
 
@@ -37,6 +40,8 @@ class HomeController extends BaseController {
 
   PageController? pageTeacherController = PageController();
   final currentPage = 0.obs;
+
+
 
   final userRepo = Get.find<UserRepository>();
   final homeRepo = Get.find<HomeRepository?>();
@@ -57,6 +62,7 @@ class HomeController extends BaseController {
   @override
   void onInit() async {
     super.onInit();
+
     userObject.value = await userRepo.retrieveUserInfo();
     idDonVi = userObject.value?.idDonVi;
     switch (idDonVi) {
@@ -89,21 +95,42 @@ class HomeController extends BaseController {
 
   }
 
+  // @override
+  // void onReady() async {
+  //   super.onReady();
+  //   Fimber.d("onReady()");
+  //   userObject.value = await userRepo.retrieveUserInfo();
+  //
+  //   userPermission?.value =
+  //       userObject.value?.retrievePermission() ?? UserPermission.none;
+  //   if (userPermission?.value == UserPermission.student) {
+  //     username.value = "1952220001";
+  //     name.value = "Phạm Thị Vân Anh";
+  //   } else {
+  //     username.value = "admin";
+  //     name.value = "Quản trị hệ thống";
+  //   }
+  //   retrieveData();
+  // }
+
   @override
   void onReady() async {
     super.onReady();
     Fimber.d("onReady()");
-    userObject.value = await userRepo.retrieveUserInfo();
-    userPermission?.value =
-        userObject.value?.retrievePermission() ?? UserPermission.none;
-    if (userPermission?.value == UserPermission.student) {
-      username.value = "1952220001";
-      name.value = "Phạm Thị Vân Anh";
+    final homeController = Get.find<HomeController>();
+    homeController.avatarUrl.value = homeController.userObject.value?.avatar ?? '';
+    homeController.userObject.value = await homeController.userRepo.retrieveUserInfo();
+
+    homeController.userPermission?.value =
+        homeController.userObject.value?.retrievePermission() ?? UserPermission.none;
+    if (homeController.userPermission?.value == UserPermission.student) {
+      homeController.username.value = "1952220001";
+      homeController.name.value = "Phạm Thị Vân Anh";
     } else {
-      username.value = "admin";
-      name.value = "Quản trị hệ thống";
+      homeController.username.value = "admin";
+      homeController.name.value = "Quản trị hệ thống";
     }
-    retrieveData();
+    homeController.retrieveData();
   }
 
   Future<void> retrieveData() async {
@@ -114,21 +141,22 @@ class HomeController extends BaseController {
       Fimber.d('response.when(success:)');
       if (data.isSuccess()) {
         Fimber.d('data.isSuccess()');
+        lstNewActivities.value = data.result?.homeNewActivities ?? [];
         lstRecentActivities.value = data.result?.homeRecentActitvities ?? [];
-        lstRecentActivities.value = [
-          HomeRecentActitvity(
-              id: 1,
-              // image: '',
-              image: 'https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg',
-              title: 'Thông báo thay đổi lịch học',
-              content:
-                  'Thay đổi THỜI KHÓA BIỂU HỌC KỲ 1 NĂM HỌC 2023-2024. Chi tiết trên trang cổng thông tin...'),
-          HomeRecentActitvity(
-              id: 2,
-              image: 'http://thttphonxuong.pgdyenthe.edu.vn/upload/38578/fck/24215413/2023_01_28_14_46_241.jpg',
-              title: 'Bạn được nhắn đến trong 01 bài viết gần đây',
-              content: 'Thông báo: Các em sinh viên khóa K22 chuẩn bị nộp...'),
-        ];
+        // lstRecentActivities.value = [
+        //   HomeRecentActitvity(
+        //       id: 1,
+        //       // image: '',
+        //       icon: 'https://static2.yan.vn/YanNews/2167221/202102/facebook-cap-nhat-avatar-doi-voi-tai-khoan-khong-su-dung-anh-dai-dien-e4abd14d.jpg',
+        //       title: 'Thông báo thay đổi lịch học',
+        //       content:
+        //           'Thay đổi THỜI KHÓA BIỂU HỌC KỲ 1 NĂM HỌC 2023-2024. Chi tiết trên trang cổng thông tin...'),
+        //   HomeRecentActitvity(
+        //       id: 2,
+        //       icon: 'http://thttphonxuong.pgdyenthe.edu.vn/upload/38578/fck/24215413/2023_01_28_14_46_241.jpg',
+        //       title: 'Bạn được nhắn đến trong 01 bài viết gần đây',
+        //       content: 'Thông báo: Các em sinh viên khóa K22 chuẩn bị nộp...'),
+        // ];
         // lstOutstandingActivities.value = data.result?.homeOutstandingActitvities ?? [];
         lstOutstandingActivities.value = [
           HomeOutstandingActitvity(
@@ -171,6 +199,10 @@ class HomeController extends BaseController {
     bannerController = null;
     super.onClose();
   }
+
+
+
+
 
   navigateToTasksCalendar() async {
     Fimber.d("navigateToTasksCalendar()");

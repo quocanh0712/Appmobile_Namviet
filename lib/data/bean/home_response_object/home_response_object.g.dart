@@ -3,6 +3,26 @@
 part of 'home_response_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+HomeResponseObject? jsonToNullableHomeResponseObject(Object? json) =>
+    HomeResponseObject.fromJson(json as Map<String, dynamic>);
+
+HomeResponseObject jsonToHomeResponseObject(Object? json) =>
+    HomeResponseObject.fromJson(json as Map<String, dynamic>);
+
+List<HomeResponseObject?> jsonToListNullableHomeResponseObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => HomeResponseObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<HomeResponseObject> jsonToListHomeResponseObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => HomeResponseObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

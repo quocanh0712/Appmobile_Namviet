@@ -1,6 +1,7 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:ftu_lms/app/modules/chat/bindings/chat_binding.dart';
@@ -12,7 +13,10 @@ import '../../../../generated/colors.gen.dart';
 import '../../../../generated/locales.g.dart';
 import '../../../../utils/constants.dart';
 import '../../../../widgets/search_text_field.dart';
+import '../../../routes/app_pages.dart';
 import '../../base/base_binding_creator_widget.dart';
+import '../../dashboard/controllers/dashboard_controller.dart';
+import '../../dashboard/models/bot_nav_items.dart';
 import '../../home/controllers/home_controller.dart';
 import '../controllers/chat_controller.dart';
 
@@ -24,8 +28,16 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
 
   Color searchColor = const Color(0xFFF5F6FA);
 
-  @override
+
+
+
+
+
+
+
+   @override
   Widget? onCreateViews(BuildContext context) {
+
     return DefaultTabController(
       length: 2,
       child: Scaffold(
@@ -167,6 +179,8 @@ class ChatView extends BaseBindingCreatorView<ChatBinding, ChatController> {
       ),
     );
   }
+
+
 
   Widget _title(BuildContext context) {
     return Row(

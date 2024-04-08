@@ -3,6 +3,27 @@
 part of 'working_process_response.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+WorkingProcessResponse? jsonToNullableWorkingProcessResponse(Object? json) =>
+    WorkingProcessResponse.fromJson(json as Map<String, dynamic>);
+
+WorkingProcessResponse jsonToWorkingProcessResponse(Object? json) =>
+    WorkingProcessResponse.fromJson(json as Map<String, dynamic>);
+
+List<WorkingProcessResponse?> jsonToListNullableWorkingProcessResponses(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => WorkingProcessResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<WorkingProcessResponse> jsonToListWorkingProcessResponses(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => WorkingProcessResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

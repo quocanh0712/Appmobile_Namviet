@@ -3,6 +3,28 @@
 part of 'learning_profile_response.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+LearningProfileResponse? jsonToNullableLearningProfileResponse(Object? json) =>
+    LearningProfileResponse.fromJson(json as Map<String, dynamic>);
+
+LearningProfileResponse jsonToLearningProfileResponse(Object? json) =>
+    LearningProfileResponse.fromJson(json as Map<String, dynamic>);
+
+List<LearningProfileResponse?> jsonToListNullableLearningProfileResponses(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => LearningProfileResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<LearningProfileResponse> jsonToListLearningProfileResponses(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => LearningProfileResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

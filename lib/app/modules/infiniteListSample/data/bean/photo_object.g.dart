@@ -3,6 +3,26 @@
 part of 'photo_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+PhotoObject? jsonToNullablePhotoObject(Object? json) =>
+    PhotoObject.fromJson(json as Map<String, dynamic>);
+
+PhotoObject jsonToPhotoObject(Object? json) =>
+    PhotoObject.fromJson(json as Map<String, dynamic>);
+
+List<PhotoObject?> jsonToListNullablePhotoObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => PhotoObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<PhotoObject> jsonToListPhotoObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => PhotoObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

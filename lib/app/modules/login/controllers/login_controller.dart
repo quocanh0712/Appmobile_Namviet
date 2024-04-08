@@ -1,5 +1,6 @@
 // Copyright (c) 2022, one of the D3F outsourcing projects. All rights reserved.
 
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:dart_extensions/dart_extensions.dart';
@@ -13,20 +14,28 @@ import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/utils/biometric_auth/biometric_authenticator.dart';
 import 'package:ftu_lms/utils/constants.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:onesignal_flutter/onesignal_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../routes/app_pages.dart';
+import '../../personal/controllers/personal_controller.dart';
 
 class LoginController extends BaseController {
-  late TextEditingController? userNameTextEditingController;
-  late FocusNode? userNameFocusNode;
+  // late TextEditingController? userNameTextEditingController;
+  // late FocusNode? userNameFocusNode;
+  // late TextEditingController? passwordTextEditingController;
+  // late FocusNode? passwordFocusNode;
+  late TextEditingController userNameTextEditingController = TextEditingController();
+  late FocusNode userNameFocusNode = FocusNode();
+  late TextEditingController passwordTextEditingController = TextEditingController();
+  late FocusNode passwordFocusNode = FocusNode();
   final userNameIsFocus = false.obs;
   String? userName;
   int? idDonVi = 0;
   final showUserNameClearIcon = false.obs;
 
-  late TextEditingController? passwordTextEditingController;
-  late FocusNode? passwordFocusNode;
+
   final passwordIsFocus = false.obs;
   String? password;
   final showPasswordClearIcon = false.obs;
@@ -40,6 +49,8 @@ class LoginController extends BaseController {
   final BiometricAuthenticator biometricAuthenticator = Get.find();
   final biometricLoginIsEnable = true.obs;
   final showBiometricLogin = false.obs;
+
+
 
   // List<DropdownMenuItem> list = [
   //   DropdownMenuItem(
@@ -75,14 +86,73 @@ class LoginController extends BaseController {
             textAlign: TextAlign.center, overflow: TextOverflow.ellipsis))
   ];
 
+
+
+  // @override
+  // void onInit() async {
+  //   super.onInit();
+  //
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   String? loginTimeString = prefs.getString('loginTime');
+  //
+  //   if (loginTimeString != null) {
+  //     DateTime loginTime = DateTime.parse(json.decode(loginTimeString));
+  //     DateTime currentTime = DateTime.now();
+  //     Duration difference = currentTime.difference(loginTime);
+  //     const int sessionDuration = 60 * 60; //
+  //     if (difference.inSeconds > sessionDuration) {
+  //       // Nếu đã vượt quá thời gian 60 phút, xóa trạng thái đã đăng nhập
+  //       prefs.remove('isLoggedIn');
+  //     } else {
+  //       bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+  //       if (isLoggedIn) {
+  //         Get.offAllNamed(Routes.DASHBOARD);
+  //       }
+  //     }
+  //   }
+  // }
+
+
   @override
-  void onInit() {
+  void onInit() async {
     super.onInit();
-    userNameTextEditingController = TextEditingController();
-    userNameFocusNode = FocusNode();
-    passwordTextEditingController = TextEditingController();
-    passwordFocusNode = FocusNode();
+
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? loginTimeString = prefs.getString('loginTime');
+    bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+
+    if (isLoggedIn) {
+      // Nếu người dùng đã đăng nhập trước đó, chuyển hướng đến màn hình Dashboard
+      Get.offAllNamed(Routes.DASHBOARD);
+    } else if (loginTimeString != null) {
+      // Nếu có thông tin về thời gian đăng nhập trước đó
+      DateTime loginTime = DateTime.parse(loginTimeString);
+      DateTime currentTime = DateTime.now();
+      Duration difference = currentTime.difference(loginTime);
+      const int sessionDuration = 60 * 60; // 60 phút
+
+      if (difference.inSeconds > sessionDuration) {
+        // Nếu thời gian đã vượt quá sessionDuration, đăng xuất và xóa trạng thái đăng nhập
+        prefs.remove('isLoggedIn');
+        PersonalController().logout();
+      } else {
+        // Nếu chưa vượt quá sessionDuration, kiểm tra và xử lý hết hạn token nếu có
+        String? accessToken = prefs.getString('accessToken');
+        int? expiresIn = prefs.getInt('expiresIn');
+
+        if (accessToken != null && expiresIn != null) {
+          // Đếm ngược và đăng xuất sau khi hết hạn
+          int durationSeconds = expiresIn;
+          Timer(Duration(seconds: durationSeconds), () {
+            PersonalController().logout();
+          });
+        }
+      }
+    }
   }
+
+
+
 
   @override
   void onReady() {
@@ -91,6 +161,8 @@ class LoginController extends BaseController {
     _handlePasswordTextFieldFocus();
     checkBiometricAuthentication();
   }
+
+
 
   @override
   void onClose() {
@@ -207,13 +279,15 @@ class LoginController extends BaseController {
       if (user.isSuccess()) {
         await userRepo.saveUserInfo(
             user.result?.copyWith(password: password, idDonVi: idDonVi));
+
+        SharedPreferences prefs = await SharedPreferences.getInstance();
+        DateTime loginTime = DateTime.now();
+        prefs.setString('loginTime', json.encode(loginTime.toIso8601String()));
+        prefs.setBool('isLoggedIn', true);
         // share external User Id
         OneSignal.shared
             .setExternalUserId(user.result?.iduser ?? Constants.EMPTY);
         print('------------------${user.result!.accessToken}');
-
-
-
 
         Get.offAllNamed(Routes.DASHBOARD);
       } else {
@@ -228,7 +302,7 @@ class LoginController extends BaseController {
 
   handleBiometricLogin() async {
     Fimber.d("handleBiometricLogin()");
-    //showBiometricLogin.value = true;
+    showBiometricLogin.value = true;
     final authenticated = await biometricAuthenticator
         .authenticateWithBiometrics(LocaleKeys.bimometricDescription.tr);
     if (authenticated) Get.offAllNamed(Routes.DASHBOARD);

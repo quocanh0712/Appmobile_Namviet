@@ -3,6 +3,27 @@
 part of 'all_courses_points_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+AllCoursesPointsObject? jsonToNullableAllCoursesPointsObject(Object? json) =>
+    AllCoursesPointsObject.fromJson(json as Map<String, dynamic>);
+
+AllCoursesPointsObject jsonToAllCoursesPointsObject(Object? json) =>
+    AllCoursesPointsObject.fromJson(json as Map<String, dynamic>);
+
+List<AllCoursesPointsObject?> jsonToListNullableAllCoursesPointsObjects(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => AllCoursesPointsObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<AllCoursesPointsObject> jsonToListAllCoursesPointsObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => AllCoursesPointsObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

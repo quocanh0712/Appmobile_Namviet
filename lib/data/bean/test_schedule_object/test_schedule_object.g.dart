@@ -3,6 +3,26 @@
 part of 'test_schedule_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+TestScheduleObject? jsonToNullableTestScheduleObject(Object? json) =>
+    TestScheduleObject.fromJson(json as Map<String, dynamic>);
+
+TestScheduleObject jsonToTestScheduleObject(Object? json) =>
+    TestScheduleObject.fromJson(json as Map<String, dynamic>);
+
+List<TestScheduleObject?> jsonToListNullableTestScheduleObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => TestScheduleObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<TestScheduleObject> jsonToListTestScheduleObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => TestScheduleObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

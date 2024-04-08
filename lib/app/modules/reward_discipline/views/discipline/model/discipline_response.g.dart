@@ -3,6 +3,26 @@
 part of 'discipline_response.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+DisciplineResponse? jsonToNullableDisciplineResponse(Object? json) =>
+    DisciplineResponse.fromJson(json as Map<String, dynamic>);
+
+DisciplineResponse jsonToDisciplineResponse(Object? json) =>
+    DisciplineResponse.fromJson(json as Map<String, dynamic>);
+
+List<DisciplineResponse?> jsonToListNullableDisciplineResponses(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => DisciplineResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<DisciplineResponse> jsonToListDisciplineResponses(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => DisciplineResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

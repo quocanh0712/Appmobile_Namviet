@@ -3,6 +3,31 @@
 part of 'practice_point_response_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+PracticePointResponseObject? jsonToNullablePracticePointResponseObject(
+    Object? json) =>
+    PracticePointResponseObject.fromJson(json as Map<String, dynamic>);
+
+PracticePointResponseObject jsonToPracticePointResponseObject(Object? json) =>
+    PracticePointResponseObject.fromJson(json as Map<String, dynamic>);
+
+List<PracticePointResponseObject?>
+jsonToListNullablePracticePointResponseObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) =>
+        PracticePointResponseObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<PracticePointResponseObject> jsonToListPracticePointResponseObjects(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) =>
+        PracticePointResponseObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 

@@ -45,6 +45,7 @@ abstract class BaseInfiniteListView<C extends BaseInfiniteListController> extend
               ? BaseAppBarWidget(
                   title: LocaleKeys.notification.tr,
                   appBarActions: appBarActions,
+                  //safeAreaTop: true,
                 )
               : const SizedBox.shrink(),
           Obx(() {

@@ -3,6 +3,26 @@
 part of 'checkin_object.dart';
 
 // **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
+CheckInObject? jsonToNullableCheckInObject(Object? json) =>
+    CheckInObject.fromJson(json as Map<String, dynamic>);
+
+CheckInObject jsonToCheckInObject(Object? json) =>
+    CheckInObject.fromJson(json as Map<String, dynamic>);
+
+List<CheckInObject?> jsonToListNullableCheckInObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => CheckInObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+List<CheckInObject> jsonToListCheckInObjects(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => CheckInObject.fromJson(e as Map<String, dynamic>))
+        .toList();
+
+// **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
 
