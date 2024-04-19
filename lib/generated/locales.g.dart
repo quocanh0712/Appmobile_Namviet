@@ -11,6 +11,7 @@ class AppTranslation {
 
 class LocaleKeys {
   LocaleKeys._();
+
   static const recentsUpdate = 'recentsUpdate';
   static const homePageTitle = 'homePageTitle';
   static const homePage = 'homePage';
@@ -361,6 +362,7 @@ class LocaleKeys {
   static const trackOutgoingDocument = 'trackOutgoingDocument';
   static const documentManagement = 'documentManagement';
   static const incomingNumber = 'incomingNumber';
+  static const incomingName = 'incomingName';
   static const documentIdentifier = 'documentIdentifier';
   static const abstract = 'abstract';
   static const issueDate = 'issueDate';
@@ -388,11 +390,130 @@ class LocaleKeys {
   static const fakeStu10 = 'fakeStu10';
   static const fakeStu11 = 'fakeStu11';
   static const testingTime = 'testingTime';
+  static const training = 'training';
+  static const salary = 'salary';
+  static const attendance = 'attendance';
+  static const teaching_hour = 'teachingHour';
+  static const job_declaration = 'jobDeclaration';
+  static const attendance_stu = 'attendanceStu';
+  static const room_registration = 'roomRegistration';
+  static const vehicle_registration = 'vehicleRegistration';
+  static const trainingForm = 'trainingForm';
+  static const trainingType = 'trainingType';
+  static const timeStart = 'timeStart';
+  static const timeEnd = 'timeEnd';
+  static const extendDate = 'extendDate';
+  static const trainingMark = 'trainingMark';
+  static const trainingCer = 'trainingCer';
+  static const trainingCerName = 'trainingCerName';
+  static const trainingFacilities = 'trainingFacility';
+  static const examSchedule = 'examSchedule';
+  static const lectureManagement = 'lectureManagement';
+  static const teachingReplace = 'teachingReplace';
+  static const inspectionSchedule = 'inspectionSchedule';
+
+  static const evaluateTrainingPoint = 'evaluateTrainingPoint';
+  static const scholarshipList = 'scholarshipList';
+  static const consultant = 'consultant';
+  static const classOfficial = 'classOfficial';
+  static const debtList = 'debtList';
+  static const financialDetail = 'financialDetail';
+  static const personalProperty = 'personalProperty';
+  static const shoppingNeed = 'shoppingNeed';
+  static const approveRepair =  'approveRepair';
+
+  static const followScientificResearch = 'followScientificResearch';
+  static const groupArrive = 'groupArrive';
+  static const partnerProject = 'partnerProject';
+  static const approvalRegistration = 'approvalRegistration';
+  static const stuListManagement = 'stuListManagement';
+  static const repairRequest = 'repairRequest';
+  static const trainingProcess = 'trainingProcess';
+  static const socialInsurance = 'socialInsurance';
+  static const allowance = 'allowance';
+  static const anotherSchedule = 'anotherSchedule';
+  static const textAway = 'textAway';
+  static const textIncome = 'textIncome';
+  static const workResolve = 'workResolve';
+
+  static const teachingSchedule = 'teachingSchedule';
+  static const outlineDetail = 'outlineDetail';
+  static const pointProcess = 'pointProcess';
+  static const test_point = 'testPoint';
+  static const creditApproval = 'creditApproval';
+  static const reExamApproval = 'reExamApproval';
+  static const LMS = 'LMS';
+  static const proof = 'proof';
+  static const accreditation = 'accreditation';
+
+  static const administrativeClass = 'administrativeClass';
+  static const creditClass = 'creditClass';
+  static const propertyLookUp = 'propertyLookUp';
+
+  static const domesticNews = 'domesticNews';
+  static const internationalNews = 'internationalNews';
+  static const scienceTopic = 'scienceTopic';
+  static const memberTopic = 'memberTopic';
+
+
 }
 
 class Locales {
   static const vn_VI = {
-    'recentsUpdate' : 'Hoạt động gần đây',
+    'domesticNews' : 'Báo trong nước',
+    'internationalNews' : 'Báo quốc tế',
+    'scienceTopic' : 'Đề tài khoa học',
+    'memberTopic' : 'Đề tài thành viên',
+
+    'propertyLookUp' : 'Tra cứu tài sản',
+    'administrativeClass' : 'Lớp hành chính',
+    'creditClass' : 'Lớp tín chỉ',
+    'creditApproval' : 'Duyệt tín chỉ',
+    'reExamApproval' : 'Duyệt thi lại',
+    'LMS' : 'LMS',
+    'proof' : 'Minh chứng',
+    'accreditation' : 'Kiểm định',
+    'testPoint' : 'Điểm thi',
+    'teachingSchedule' : 'Lịch giảng dạy',
+    'outlineDetail' : 'Đề cương',
+    'pointProcess' : 'Điểm quá trình',
+
+    'socialInsurance' : 'BHXH',
+    'allowance' : 'Phụ cấp',
+    'anotherSchedule' : 'Lịch khác',
+    'textAway' : 'Văn bản đi',
+    'textIncome' : 'Văn bản đến',
+    'workResolve' : 'Công việc',
+    'trainingProcess' : 'Đào tạo',
+    'approvalRegistration' : 'Duyệt đăng ký',
+    'stuListManagement' : 'Danh sách sinh viên',
+    'repairRequest' : 'Yêu cầu sửa chữa',
+    'followScientificResearch' : 'Theo dõi NCKH',
+    'groupArrive' : 'Đoàn đến - Đoàn đi',
+    'partnerProject' : 'Đối tác - Dự án',
+    'approveRepair' : 'Khấu hao tài sản',
+    'shoppingNeed' : 'Mua sắm',
+    'personalProperty' : 'Tài sản cá nhân',
+    'financialDetail' : 'Chi tiết thu chi',
+    'debtList' : 'Công nợ',
+    'classOfficial' : 'Cán sự lớp',
+    'consultant' : 'Cố vấn học tập',
+    'scholarshipList' : 'Học bổng',
+    'evaluateTrainingPoint' : 'Điểm rèn luyện',
+    'examSchedule' : 'Lịch coi thi',
+    'lectureManagement' : 'Bài giảng',
+    'teachingReplace' : 'Dạy thay,bù',
+    'inspectionSchedule' : 'Lịch thanh tra',
+    'trainingForm': 'Hình thức',
+    'trainingType': 'Loại bồi dưỡng',
+    'timeStart': 'Thời gian bắt đầu',
+    'timeEnd': 'Thời gian kết thúc',
+    'extendDate': 'Gia hạn đến ngày',
+    'trainingMark': 'Số điểm',
+    'trainingCer': 'Số chứng chỉ/Chứng nhận',
+    'trainingCerName': 'Tên chứng chỉ',
+    'trainingFacility': 'Cơ sở đào tạo',
+    'recentsUpdate': 'Hoạt động gần đây',
     'homePageTitle': 'Đăng nhập - Trang chủ',
     'homePage': 'Trang chủ',
     'notification': 'Thông báo',
@@ -418,7 +539,7 @@ class Locales {
     'utilities': 'Tiện ích',
     'account': 'Tài khoản',
     'scienceStudy': 'Nghiên cứu khoa học',
-    'serveyResults': 'Khảo sát sự kiện',
+    'serveyResults': 'Khảo sát',
     'recentActivities': 'Hoạt động gần đây',
     'viewMore': 'Xem tất cả',
     'todayTasks': 'Công việc hôm nay',
@@ -459,7 +580,6 @@ class Locales {
     'semesterOne': 'Học kì 1',
     'semesterTwo': 'Học kì 2',
     'semesterThree': 'Học kì 3',
-
     'chooseSession': 'Chọn đợt học',
     'sessionOne': 'Đợt 1',
     'sessionTwo': 'Đợt 2',
@@ -518,7 +638,7 @@ class Locales {
     'no': 'Không',
     'yes': 'Có',
     'hintScientificResearch': 'Điền tên tài liệu cần tìm',
-    'hintChatResearch' : 'Tìm cuộc trò chuyện',
+    'hintChatResearch': 'Tìm cuộc trò chuyện',
     'loadDataErrorMessage': 'Có lỗi trong khi tải dữ liệu, chạm để thử lại.',
     'noDataMessage': 'Chưa có dữ liệu để hiển thị.',
     'oops': 'Oops',
@@ -600,7 +720,7 @@ class Locales {
     'course': 'Môn học',
     'coefficient': 'Hệ số',
     'sumPoint': 'Điểm TK',
-    'workingProcess': 'Quá trình công tác',
+    'workingProcess': 'Công tác',
     'learningProcess': 'Quá trình đào tạo',
     'languageLevel': 'Trình độ ngoại ngữ',
     'learningProfile': 'Lý lịch khoa học cá nhân',
@@ -688,7 +808,7 @@ class Locales {
     'timekeeping': 'Chấm công',
     'examTrackingSchedule': 'Lịch coi thi',
     'studentList': 'Danh sách sinh viên',
-    'salaryInfo': 'Thông tin lương',
+    'salaryInfo': 'Lương theo tháng',
     'taskStatus': 'Trạng thái công việc',
     'registedCourses': 'Học phần đã đăng ký',
     'scholarship': 'Miễn giảm,\nHọc bổng',
@@ -718,7 +838,7 @@ class Locales {
     'assignDocument': 'Bút phê văn bản đến',
     'editassignDocument': 'Sửa bút phê văn bản đến',
     'forwardDocument': 'Phân phối văn bản đi',
-    'reportTask': 'Báo cáo tiến độ công việc',
+    'reportTask': 'Báo cáo tiến độ',
     'editreportTask': 'Nội dung xử lý công việc',
     'addemail': 'Soạn thư',
     'send': 'Gửi',
@@ -772,9 +892,70 @@ class Locales {
     'fakeStu9': '(19571402060274) - Phan Trọng Tấn',
     'fakeStu10': '(19571402060272) - Nguyễn Văn Nguyên',
     'fakeStu11': '(19571402060273) - Nguyễn Đức Phi',
+    'training': 'Bồi dưỡng',
+    'salary': 'Lương',
+    'attendance': 'Chấm công',
+    'teachingHour': 'Khối lượng giảng dạy',
+    'jobDeclaration': 'Kê khai công việc',
+    'attendanceStu': 'Điểm danh người học',
+    'roomRegistration': 'Mượn phòng',
+    'vehicleRegistration': 'Xe công',
+    'incomingName': 'Họ tên',
   };
   static const en_US = {
-    'recentsUpdate' : 'Hoạt động gần đây',
+
+    'domesticNews' : 'Báo trong nước',
+    'internationalNews' : 'Báo quốc tế',
+    'scienceTopic' : 'Đề tài khoa học',
+    'memberTopic' : 'Đề tài thành viên',
+    'propertyLookUp' : 'Tra cứu tài sản',
+    'administrativeClass' : 'Lớp hành chính',
+    'creditClass' : 'Lớp tín chỉ',
+    'creditApproval' : 'Duyệt tín chỉ',
+    'reExamApproval' : 'Duyệt thi lại',
+    'LMS' : 'LMS',
+    'proof' : 'Minh chứng',
+    'accreditation' : 'Kiểm định',
+    'testPoint' : 'Điểm thi',
+    'teachingSchedule' : 'Lịch giảng dạy',
+    'outlineDetail' : 'Đề cương',
+    'pointProcess' : 'Điểm quá trình',
+    'socialInsurance' : 'BHXH',
+    'allowance' : 'Phụ cấp',
+    'anotherSchedule' : 'Lịch khác',
+    'textAway' : 'Văn bản đi',
+    'textIncome' : 'Văn bản đến',
+    'workResolve' : 'Công việc',
+    'trainingProcess' : 'Đào tạo',
+    'approvalRegistration' : 'Duyệt đăng ký',
+    'stuListManagement' : 'Danh sách sinh viên',
+    'repairRequest' : 'Yêu cầu sửa chữa',
+    'followScientificResearch' : 'Theo dõi NCKH',
+    'groupArrive' : 'Đoàn đến - Đoàn đi',
+    'partnerProject' : 'Đối tác - Dự án',
+    'approveRepair' : 'Khấu hao tài sản',
+    'shoppingNeed' : 'Mua sắm',
+    'personalProperty' : 'Tài sản cá nhân',
+    'financialDetail' : 'Chi tiết thu chi',
+    'debtList' : 'Công nợ',
+    'classOfficial' : 'Cán sự lớp',
+    'consultant' : 'Cố vấn học tập',
+    'scholarshipList' : 'Học bổng',
+    'evaluateTrainingPoint' : 'Điểm rèn luyện',
+    'examSchedule' : 'Lịch coi thi',
+    'lectureManagement' : 'Bài giảng ',
+    'teachingReplace' : 'Dạy thay,bù',
+    'inspectionSchedule' : 'Lịch thanh tra',
+    'trainingForm': 'Hình thức',
+    'trainingType': 'Loại bồi dưỡng',
+    'timeStart': 'Thời gian bắt đầu',
+    'timeEnd': 'Thời gian kết thúc',
+    'extendDate': 'Gia hạn đến ngày',
+    'trainingMark': 'Số điểm',
+    'trainingCer': 'Số chứng chỉ/Chứng nhận',
+    'trainingCerName': 'Tên chứng chỉ',
+    'trainingFacility': 'Cơ sở đào tạo',
+    'recentsUpdate': 'Hoạt động gần đây',
     'homePageTitle': 'Login - Home Page',
     'homePage': 'Trang chủ',
     'notification': 'Thông báo',
@@ -800,7 +981,7 @@ class Locales {
     'utilities': 'Tiện ích',
     'account': 'Tài khoản',
     'scienceStudy': 'Nghiên cứu khoa học',
-    'serveyResults': 'Khảo sát sự kiện',
+    'serveyResults': 'Khảo sát',
     'recentActivities': 'Hoạt động gần đây',
     'viewMore': 'Xem tất cả',
     'todayTasks': 'Công việc hôm nay',
@@ -899,7 +1080,7 @@ class Locales {
     'no': 'No',
     'yes': 'Yes',
     'hintScientificResearch': 'Điền tên tài liệu cần tìm',
-    'hintChatResearch' : 'Tìm cuộc trò chuyện',
+    'hintChatResearch': 'Tìm cuộc trò chuyện',
     'loadDataErrorMessage': 'Error while loading data, tap to try again',
     'noDataMessage': 'There is no data to display.',
     'oops': 'Oops',
@@ -981,7 +1162,7 @@ class Locales {
     'course': 'Môn học',
     'coefficient': 'Hệ số',
     'sumPoint': 'Điểm TK',
-    'workingProcess': 'Quá trình công tác',
+    'workingProcess': 'Công tác',
     'learningProcess': 'Quá trình đào tạo',
     'languageLevel': 'Trình độ ngoại ngữ',
     'learningProfile': 'Lý lịch khoa học cá nhân',
@@ -1068,7 +1249,7 @@ class Locales {
     'timekeeping': 'Chấm công',
     'examTrackingSchedule': 'Lịch coi thi',
     'studentList': 'Danh sách sinh viên',
-    'salaryInfo': 'Thông tin lương',
+    'salaryInfo': 'Lương theo tháng',
     'taskStatus': 'Trạng thái công việc',
     'registedCourses': 'Học phần đã đăng ký',
     'scholarship': 'Miễn giảm,\nHọc bổng',
@@ -1098,7 +1279,7 @@ class Locales {
     'assignDocument': 'Bút phê văn bản đến',
     'editassignDocument': 'Sửa bút phê văn bản đến',
     'forwardDocument': 'Phân phối văn bản đi',
-    'reportTask': 'Báo cáo tiến độ công việc',
+    'reportTask': 'Báo cáo tiến độ',
     'editreportTask': 'Nội dung xử lý công việc',
     'addemail': 'Soạn thư',
     'send': 'Gửi',
@@ -1152,5 +1333,14 @@ class Locales {
     'fakeStu9': '(19571402060274) - Phan Trọng Tấn',
     'fakeStu10': '(19571402060272) - Nguyễn Văn Nguyên',
     'fakeStu11': '(19571402060273) - Nguyễn Đức Phi',
+    'training': 'Bồi dưỡng',
+    'salary': 'Lương',
+    'attendance': 'Chấm công',
+    'teachingHour': 'Khối lượng giảng dạy',
+    'jobDeclaration': 'Kê khai công việc',
+    'attendanceStu': 'Điểm danh người học',
+    'roomRegistration': 'Mượn phòng',
+    'vehicleRegistration': 'Xe công',
+    'incomingName': 'Họ tên',
   };
 }

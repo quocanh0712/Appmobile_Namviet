@@ -213,6 +213,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                 Expanded(
                   child: Container(
                     color: context.themeExtensions.white,
+
                     child: ScrollConfiguration(
                       behavior: DisableScrollGlowBehavior(),
                       child: ListView(
@@ -1185,6 +1186,187 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
   Widget _buildTeacherMainFeatures(BuildContext context,
       {bool? isShowAll = false}) {
     List<Widget> eduItemList = [
+
+      // kiem dinh
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToAccreditation(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/68.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.accreditation.tr,
+      ),
+
+      // minh chung
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToProof(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/63.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.proof.tr,
+      ),
+
+      // LMS
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToLMS(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/62.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.LMS.tr,
+      ),
+
+      // Duyet tin chi
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToCreditApproval(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/67.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.creditApproval.tr,
+      ),
+
+      // Diem Thi
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToTestPoint(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/61.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.test_point.tr,
+      ),
+
+      // Diem qua trinh
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToPointProcess(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/60.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.pointProcess.tr,
+      ),
+
+      // De cuong
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToOutlineDetail(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/58.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.outlineDetail.tr,
+      ),
+
+
+      // lich giang day
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToTeachingSchedule(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/59.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.teachingSchedule.tr,
+      ),
+
+      // Khối lượng giảng dạy
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToTeachingHour(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/26.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.teaching_hour.tr,
+      ),
       //20
       //abc
       // _buildListFeatureItem(
@@ -1202,6 +1384,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       //   image: const Image(image: AssetImage('assets/Icon/21.png',), fit: BoxFit.cover, ),
       //   title: LocaleKeys.executiveDocuments.tr,
       // ),
+
       //21
       // _buildListFeatureItem(
       //   context,
@@ -1216,6 +1399,113 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       //   image: const Image(image: AssetImage('assets/Icon/07.png',), fit: BoxFit.cover, ),
       //   title: LocaleKeys.sendRequest.tr,
       // ),
+      // Lich thanh tra
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.red,
+        ),
+        // icon: Icon(
+        //   Icons.calendar_today,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/48.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.inspectionSchedule.tr,
+        onTap: () => controller.navigateToInspectionSchedule(),
+      ),
+      // dang ky day thay
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.red,
+        ),
+        // icon: Icon(
+        //   Icons.calendar_today,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/30.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.teachingReplace.tr,
+        onTap: () => controller.navigateToTeachingReplace(),
+      ),
+      // Duyet thi lai
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.red,
+        ),
+        // icon: Icon(
+        //   Icons.calendar_today,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/45.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.reExamApproval.tr,
+        onTap: () => controller.navigateToReExamApproval(),
+      ),
+      // Quan ly bai giang
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.red,
+        ),
+        // icon: Icon(
+        //   Icons.calendar_today,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/31.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.lectureManagement.tr,
+        onTap: () => controller.navigateToExamSchedule(),
+      ),
+      // Lịch coi thi
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.red,
+        ),
+        // icon: Icon(
+        //   Icons.calendar_today,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/32.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.examSchedule.tr,
+        onTap: () => controller.navigateToExamSchedule(),
+      ),
+
+
       //1 Lich cong tac
       _buildListFeatureItem(
         context,
@@ -1258,6 +1548,26 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         ),
         title: LocaleKeys.teacherScheduleTimeTitle.tr,
       ),
+
+      //13 khao sat su kien
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToSurveyResult(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.filter_alt_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/09.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.serveyResults.tr,
+      ),
       //2 Chuong trinh dao tao
       _buildListFeatureItem(
         context,
@@ -1279,27 +1589,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         title: LocaleKeys.teachingProgram.tr,
         onTap: () => controller.navigateToEducationProgram(),
       ),
-      //3 Khen thuong , ky luat
-      _buildListFeatureItem(
-        context,
-        onTap: () => controller.navigateToRewardDiscipline(),
-        background: Container(
-          color: Colors.orange,
-        ),
-        // icon: Icon(
-        //   Icons.bookmarks,
-        //   //color: const Color(0xFF4da543).withOpacity(0.75),
-        //   color: Colors.white,
-        //   size: 30,
-        // ),
-        image: const Image(
-          image: AssetImage(
-            'assets/Icon/10.png',
-          ),
-          fit: BoxFit.cover,
-        ),
-        title: LocaleKeys.rewardDiscipline.tr,
-      ),
+
       //4
       // _buildListFeatureItem(
       //   context,
@@ -1380,25 +1670,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         ),
         title: LocaleKeys.studentManager.tr,
       ),
-      // //13 khao sat su kien
-      // _buildListFeatureItem(
-      //   context,
-      //   onTap: () => controller.navigateToSurveyResult(),
-      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-      //   // icon: Icon(
-      //   //   Icons.filter_alt_outlined,
-      //   //   //color: const Color(0xFF4da543).withOpacity(0.75),
-      //   //   color: Colors.white,
-      //   //   size: 30,
-      //   // ),
-      //   image: const Image(
-      //     image: AssetImage(
-      //       'assets/Icon/09.png',
-      //     ),
-      //     fit: BoxFit.cover,
-      //   ),
-      //   title: LocaleKeys.serveyResults.tr,
-      // ),
+
       //5 kiem ke tai san
 
       //8
@@ -1417,11 +1689,228 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // ),
     ];
     List<Widget> timeSchedule = [
-      //21 gui de xuat
+
+      // Cong viec
       _buildListFeatureItem(
         context,
-        //onTap: () => controller.navigateToSendRequest(),
-        onTap: () => _showNotificationDialog(context),
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/49.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.workResolve.tr,
+        onTap: () => controller.navigateToTextAway(),
+      ),
+
+      // van ban di
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/50.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.textAway.tr,
+        onTap: () => controller.navigateToTextAway(),
+      ),
+
+      // van ban den
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/51.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.textIncome.tr,
+        onTap: () => controller.navigateToTextIncome(),
+      ),
+
+      // Lich khac
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/52.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.anotherSchedule.tr,
+        onTap: () => controller.navigateToAnotherSchedule(),
+      ),
+      // Phu cap
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/53.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.allowance.tr,
+        onTap: () => controller.navigateToAllowance(),
+      ),
+      // BHXH
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/54.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.socialInsurance.tr,
+        onTap: () => controller.navigateToSocialInsurance(),
+      ),
+      // luong theo thang
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/55.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.salaryInfo.tr,
+        onTap: () => controller.navigateToSalaryInfo(),
+      ),
+
+      // Qua trinh dao tao
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/56.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.trainingProcess.tr,
+        onTap: () => controller.navigateToTrainingProcess(),
+      ),
+
+      //2 Qua trinh cong tac
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/03.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.workingProcess.tr,
+        onTap: () => controller.navigateToWorkingProcess(),
+      ),
+
+
+      //3 Khen thuong , ky luat
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToRewardDiscipline(),
+        background: Container(
+          color: Colors.orange,
+        ),
+        // icon: Icon(
+        //   Icons.bookmarks,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/10.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.rewardDiscipline.tr,
+      ),
+      // đăng ký xe công
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToVehicleRegistration(),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1431,12 +1920,221 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         // ),
         image: const Image(
           image: AssetImage(
-            'assets/Icon/07.png',
+            'assets/Icon/29.png',
           ),
           fit: BoxFit.cover,
         ),
-        title: LocaleKeys.sendRequest.tr,
+        title: LocaleKeys.vehicle_registration.tr,
       ),
+      // đăng ký phòng học
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToRoomRegistration(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/28.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.room_registration.tr,
+      ),
+
+      // điểm danh học viên
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToAttendanceStu(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/23.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.attendance_stu.tr,
+      ),
+
+
+      // Chấm công
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToAttendance(),
+        //onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/22.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.attendance.tr,
+      ),
+      // luong-BHXH
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToSalary(),
+        //onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/24.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.salary.tr,
+      ),
+      // Bồi dưỡng
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToTraining(),
+        //onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/25.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.training.tr,
+      ),
+
+
+
+
+
+      //15 dich vu mot cua
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToOneGate(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.home_repair_service_rounded,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/01.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.oneStopService.tr,
+      ),
+
+
+    ];
+
+    List<Widget> propertyTool = [
+      // tài sản cá nhân
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToRepairRequest(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/47.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.repairRequest.tr,
+      ),
+      // tài sản cá nhân
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToPersonalProperty(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/33.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.personalProperty.tr,
+      ),
+
+      // nhu cầu mua sắm
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToShoppingNeed(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/34.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.shoppingNeed.tr,
+      ),
+
+      // khấu hao tài sản
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToApproveRepair(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/35.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.approveRepair.tr,
+      ),
+
       //kiem ke tai san
       _buildListFeatureItem(
         context,
@@ -1454,8 +2152,517 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.checkInDevice.tr,
-        //onTap: () => controller.navigateToCheckInDevice(),
-        onTap: () => showNotificationDialog(context),
+        onTap: () => controller.navigateToCheckInDevice(),
+        //onTap: () => showNotificationDialog(context),
+      ),
+
+      //tra cuu tai san
+      _buildListFeatureItem(
+        context,
+        background: Assets.images.homeBotRightButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.qr_code_sharp,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/69.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.propertyLookUp.tr,
+        onTap: () => controller.navigateToPropertyLookUp(),
+        //onTap: () => showNotificationDialog(context),
+      ),
+
+    ];
+
+    List<Widget> learnerFinance = [
+      // danh sách công nợ
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToDebtList(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/36.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.debtList.tr,
+      ),
+      // chi tiết thu chi
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToFinancialDetail(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/37.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.financialDetail.tr,
+      ),
+    ];
+
+    List<Widget> learnerProfile = [
+
+      // Lop tin chi
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToCreditClass(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/65.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.creditClass.tr,
+      ),
+
+      // Lop hanh chinh
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToAdministrativeClass(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/66.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.administrativeClass.tr,
+      ),
+      // Quan ly danh sach sinh vien
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToStuListManagement(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/46.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.stuListManagement.tr,
+      ),
+      // Đánh giá điểm rèn luyện
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToEvaluateTraining(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/38.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.evaluateTrainingPoint.tr,
+      ),
+      // Danh sách học bổng
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToScholarshipList(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/39.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.scholarshipList.tr,
+      ),
+      // Cố vấn học tập
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToConsultant(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/40.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.consultant.tr,
+      ),
+
+      // Cán sự lớp
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToClassOfficial(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/41.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.classOfficial.tr,
+      ),
+
+    ];
+
+    List<Widget> elearningFeature = [
+
+
+      //16
+      // _buildListFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToEmail(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //   // icon: Icon(
+      //   //   Icons.attach_email_outlined,
+      //   //   //color: const Color(0xFF4da543).withOpacity(0.75),
+      //   //   color: Colors.white,
+      //   //   size: 30,
+      //   // ),
+      //   image: const Image(
+      //     image: AssetImage(
+      //       'assets/Icon/06.png',
+      //     ),
+      //     fit: BoxFit.cover,
+      //   ),
+      //   title: LocaleKeys.email.tr,
+      // ),
+    ];
+
+    List<Widget> sciencePartner = [
+
+      // De tai thanh vien
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToMemberTopic(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.science_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/70.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.memberTopic.tr,
+      ),
+      // de tai khoa hoc
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToScienceTopic(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.science_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/71.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.scienceTopic.tr,
+      ),
+      // bao quoc te
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToInternationalNews(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.science_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/72.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.internationalNews.tr,
+      ),
+
+      // bao trong nuoc
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToDomesticNews(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.science_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/73.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.domesticNews.tr,
+      ),
+
+      //11 Nghien cuu khoa hoc
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToScientificResearch(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.science_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/14.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.scienceStudy.tr,
+      ),
+      // theo doi NCKH
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToFollowScientificResearch(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.quick_contacts_dialer_sharp,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/42.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.followScientificResearch.tr,
+      ),
+
+      // Đoàn đến - đoàn đi
+      // _buildListFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToGroupArrive(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //   // icon: Icon(
+      //   //   Icons.quick_contacts_dialer_sharp,
+      //   //   //color: const Color(0xFF4da543).withOpacity(0.75),
+      //   //   color: Colors.white,
+      //   //   size: 30,
+      //   // ),
+      //   image: const Image(
+      //     image: AssetImage(
+      //       'assets/Icon/43.png',
+      //     ),
+      //     fit: BoxFit.cover,
+      //   ),
+      //   title: LocaleKeys.groupArrive.tr,
+      // ),
+        // đối tác - dự án
+      // _buildListFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToPartnerProject(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //   // icon: Icon(
+      //   //   Icons.quick_contacts_dialer_sharp,
+      //   //   //color: const Color(0xFF4da543).withOpacity(0.75),
+      //   //   color: Colors.white,
+      //   //   size: 30,
+      //   // ),
+      //   image: const Image(
+      //     image: AssetImage(
+      //       'assets/Icon/44.png',
+      //     ),
+      //     fit: BoxFit.cover,
+      //   ),
+      //   title: LocaleKeys.partnerProject.tr,
+      // ),
+
+    ];
+
+    List<Widget> checkAttendance = [
+
+
+      // Kê khai công việc
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToJobDeclaration(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/27.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.job_declaration.tr,
+      ),
+      //12 Bao cao tien do
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToReportTask(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/02.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.reportTask.tr,
+      ),
+      //20 van ban dieu hanh
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToDocumentManagement(),
+        //onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.file_copy_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/21.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.executiveDocuments.tr,
+      ),
+      //9 Thong ke
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToStatistical(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.bookmarks,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/20.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.statistical.tr,
+      ),
+      //7 Theo doi tien do
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToTrackProgress(),
+        //onTap: () => showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.bookmarks,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/18.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.trackProgress.tr,
+      ),
+      //21 gui de xuat
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToSendRequest(),
+        //onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/07.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.sendRequest.tr,
       ),
       //6 Ban do truong hoc
       _buildListFeatureItem(
@@ -1492,149 +2699,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         ),
         title: 'Bản đồ trường học',
       ),
-      //7 Theo doi tien do
-      _buildListFeatureItem(
-        context,
-        //onTap: () => controller.navigateToTrackProgress(),
-        onTap: () => showNotificationDialog(context),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        // icon: Icon(
-        //   Icons.bookmarks,
-        //  // color: const Color(0xFF4da543).withOpacity(0.75),
-        //   color: Colors.white,
-        //   size: 30,
-        // ),
-        image: const Image(
-          image: AssetImage(
-            'assets/Icon/18.png',
-          ),
-          fit: BoxFit.cover,
-        ),
-        title: LocaleKeys.trackProgress.tr,
-      ),
-      //20 van ban dieu hanh
-      _buildListFeatureItem(
-        context,
-        //onTap: () => controller.navigateToDocumentManagement(),
-        onTap: () => _showNotificationDialog(context),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        // icon: Icon(
-        //   Icons.file_copy_outlined,
-        //   //color: const Color(0xFF4da543).withOpacity(0.75),
-        //   color: Colors.white,
-        //   size: 30,
-        // ),
-        image: const Image(
-          image: AssetImage(
-            'assets/Icon/21.png',
-          ),
-          fit: BoxFit.cover,
-        ),
-        title: LocaleKeys.executiveDocuments.tr,
-      ),
-      //9 Thong ke
-      _buildListFeatureItem(
-        context,
-        onTap: () => controller.navigateToStatistical(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        // icon: Icon(
-        //   Icons.bookmarks,
-        //   //color: const Color(0xFF4da543).withOpacity(0.75),
-        //   color: Colors.white,
-        //   size: 30,
-        // ),
-        image: const Image(
-          image: AssetImage(
-            'assets/Icon/20.png',
-          ),
-          fit: BoxFit.cover,
-        ),
-        title: LocaleKeys.statistical.tr,
-      ),
-      //15 dich vu mot cua
-      _buildListFeatureItem(
-        context,
-        onTap: () => controller.navigateToOneGate(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        // icon: Icon(
-        //   Icons.home_repair_service_rounded,
-        //   //color: const Color(0xFF4da543).withOpacity(0.75),
-        //   color: Colors.white,
-        //   size: 30,
-        // ),
-        image: const Image(
-          image: AssetImage(
-            'assets/Icon/01.png',
-          ),
-          fit: BoxFit.cover,
-        ),
-        title: LocaleKeys.oneStopService.tr,
-      ),
 
-      //12 Bao cao tien do
-      _buildListFeatureItem(
-        context,
-        onTap: () => controller.navigateToReportTask(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        // icon: Icon(
-        //   Icons.calendar_today_outlined,
-        //   //color: const Color(0xFF4da543).withOpacity(0.75),
-        //   color: Colors.white,
-        //   size: 30,
-        // ),
-        image: const Image(
-          image: AssetImage(
-            'assets/Icon/02.png',
-          ),
-          fit: BoxFit.cover,
-        ),
-        title: LocaleKeys.reportTask.tr,
-      ),
-    ];
-
-    List<Widget> elearningFeature = [
-      //11 Nghien cuu khoa hoc
-      _buildListFeatureItem(
-        context,
-        onTap: () => controller.navigateToScientificResearch(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        // icon: Icon(
-        //   Icons.science_outlined,
-        //   //color: const Color(0xFF4da543).withOpacity(0.75),
-        //   color: Colors.white,
-        //   size: 30,
-        // ),
-        image: const Image(
-          image: AssetImage(
-            'assets/Icon/14.png',
-          ),
-          fit: BoxFit.cover,
-        ),
-        title: LocaleKeys.scienceStudy.tr,
-      ),
-
-      //16
-      // _buildListFeatureItem(
-      //   context,
-      //   onTap: () => controller.navigateToEmail(),
-      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-      //   // icon: Icon(
-      //   //   Icons.attach_email_outlined,
-      //   //   //color: const Color(0xFF4da543).withOpacity(0.75),
-      //   //   color: Colors.white,
-      //   //   size: 30,
-      //   // ),
-      //   image: const Image(
-      //     image: AssetImage(
-      //       'assets/Icon/06.png',
-      //     ),
-      //     fit: BoxFit.cover,
-      //   ),
-      //   title: LocaleKeys.email.tr,
-      // ),
-    ];
-
-    List<Widget> checkAttendance = [
 //14 danh ba giao vien
       _buildListFeatureItem(
         context,
@@ -1657,6 +2722,83 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     ];
 
     List<Widget> mainFeatureItemList = [
+      //11 Nghien cuu khoa hoc
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToScientificResearch(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.science_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/14.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.scienceStudy.tr,
+      ),
+      // theo doi NCKH
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToFollowScientificResearch(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.quick_contacts_dialer_sharp,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/42.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.followScientificResearch.tr,
+      ),
+
+      // Đoàn đến - đoàn đi
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToGroupArrive(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.quick_contacts_dialer_sharp,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/43.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.groupArrive.tr,
+      ),
+      // đối tác - dự án
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToPartnerProject(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.quick_contacts_dialer_sharp,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/44.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.partnerProject.tr,
+      ),
       //1
       _buildListFeatureItem(
         context,
@@ -1737,8 +2879,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.eLearning.tr,
-        // onTap: () => controller.navigateToELearning(),
-        onTap: () => showNotificationDialog(context),
+         onTap: () => controller.navigateToELearning(),
+        //onTap: () => showNotificationDialog(context),
       ),
       _buildListFeatureItem(
         context,
@@ -1756,8 +2898,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.checkInDevice.tr,
-        // onTap: () => controller.navigateToCheckInDevice(),
-        onTap: () => showNotificationDialog(context),
+         onTap: () => controller.navigateToCheckInDevice(),
+        //onTap: () => showNotificationDialog(context),
       ),
       //6
       _buildListFeatureItem(
@@ -1936,71 +3078,71 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         ),
         title: LocaleKeys.titleTeacherContact.tr,
       ),
-      //15
-      _buildMainFeatureItem(
-        context,
-        onTap: () => controller.navigateToOneGate(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.home_repair_service_rounded,
-          // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
-        title: LocaleKeys.oneStopService.tr,
-      ),
+      // //15
+      // _buildMainFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToOneGate(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //   icon: const Icon(
+      //     Icons.home_repair_service_rounded,
+      //     // color: const Color(0xFF4da543).withOpacity(0.75),
+      //     color: Colors.green,
+      //     size: 30,
+      //   ),
+      //   title: LocaleKeys.oneStopService.tr,
+      // ),
       //16
-      _buildMainFeatureItem(
-        context,
-        onTap: () => controller.navigateToEmail(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.attach_email_outlined,
-          //color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
-        title: LocaleKeys.email.tr,
-      ),
+      // _buildMainFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToEmail(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //   icon: const Icon(
+      //     Icons.attach_email_outlined,
+      //     //color: const Color(0xFF4da543).withOpacity(0.75),
+      //     color: Colors.green,
+      //     size: 30,
+      //   ),
+      //   title: LocaleKeys.email.tr,
+      // ),
       //17
-      _buildMainFeatureItem(
-        context,
-        onTap: () => controller.navigateToClassSurveyResult(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.class_,
-          // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
-        title: LocaleKeys.classSurveyResults.tr,
-      ),
+      // _buildMainFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToClassSurveyResult(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //   icon: const Icon(
+      //     Icons.class_,
+      //     // color: const Color(0xFF4da543).withOpacity(0.75),
+      //     color: Colors.green,
+      //     size: 30,
+      //   ),
+      //   title: LocaleKeys.classSurveyResults.tr,
+      // ),
       //18
-      _buildMainFeatureItem(
-        context,
-        onTap: () => controller.navigateToListClassManagerTitle(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.flight_class_rounded,
-          // color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
-        title: LocaleKeys.listClassManagerTitle.tr,
-      ),
+      // _buildMainFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToListClassManagerTitle(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //   icon: const Icon(
+      //     Icons.flight_class_rounded,
+      //     // color: const Color(0xFF4da543).withOpacity(0.75),
+      //     color: Colors.green,
+      //     size: 30,
+      //   ),
+      //   title: LocaleKeys.listClassManagerTitle.tr,
+      // ),
       //19
-      _buildMainFeatureItem(
-        context,
-        onTap: () => controller.navigateToStuCheckinManager(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        icon: const Icon(
-          Icons.fact_check_outlined,
-          //color: const Color(0xFF4da543).withOpacity(0.75),
-          color: Colors.green,
-          size: 30,
-        ),
-        title: LocaleKeys.studentManager.tr,
-      ),
+      // _buildMainFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToStuCheckinManager(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //   icon: const Icon(
+      //     Icons.fact_check_outlined,
+      //     //color: const Color(0xFF4da543).withOpacity(0.75),
+      //     color: Colors.green,
+      //     size: 30,
+      //   ),
+      //   title: LocaleKeys.studentManager.tr,
+      // ),
     ];
     List<Widget> blankSpace = [
       Container(
@@ -2009,10 +3151,13 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     ];
 
     final Map<String, List<Widget>> mapOfWidgets = {
-      'Đào tạo': eduItemList,
-      'Lớp học': trackerList,
       'Hành chính - Tổng hợp': timeSchedule,
-      'Nghiên cứu khoa học': elearningFeature,
+      'Đào tạo - Khảo thí': eduItemList,
+      'Hồ sơ người học' : learnerProfile,
+      'Tài chính người học' : learnerFinance,
+      'Tài sản - Công cụ' : propertyTool,
+      'Khoa học - Hợp tác quốc tế - Tạp chí' : sciencePartner,
+     // 'Lớp học': trackerList,
       'Khác': checkAttendance,
       '': blankSpace,
     };
@@ -2045,7 +3190,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                           physics: const ScrollPhysics(),
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 3,
+                            crossAxisCount: 4,
                             crossAxisSpacing: 15.0,
                             mainAxisSpacing: 10.0,
                           ),
@@ -2083,7 +3228,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         : Column(
             children: [
               SizedBox(
-                height: 280,
+                height: 250,
                 child: Column(
                   children: [
                     Expanded(
@@ -2095,23 +3240,26 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                           controller.currentPage.value = page;
                         },
                         itemBuilder: (context, pageIndex) {
-                          int startIndex = pageIndex * 6;
-                          int endIndex = (pageIndex + 1) * 6;
+                          int startIndex = pageIndex * 8;
+                          int endIndex = (pageIndex + 1) * 8;
                           endIndex = endIndex < mainFeatureItemList.length
                               ? endIndex
                               : mainFeatureItemList.length;
                           List<Widget> items =
                               mainFeatureItemList.sublist(startIndex, endIndex);
                           return Container(
-                            margin: const EdgeInsets.only(top: 2),
+                            margin: const EdgeInsets.only(top: 0,),
                             child: GridView.count(
-                              crossAxisCount: 3,
+                              crossAxisCount: 4,
+                              crossAxisSpacing: 5,
+                              mainAxisSpacing: 37,
                               // childAspectRatio: 2 / 1,
                               physics: const NeverScrollableScrollPhysics(),
                               children: items.map((item) {
                                 return Column(
                                   children: [
                                     Expanded(child: item),
+
                                   ],
                                 );
                               }).toList(),
@@ -2123,9 +3271,9 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
+              // const SizedBox(
+              //   height: 10,
+              // ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
@@ -2289,37 +3437,37 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         children: [
           // background ?? const SizedBox.shrink(),
           Container(
-            width: 120,
-            height: 120,
-            decoration: BoxDecoration(
-              // gradient: LinearGradient(
-              //   begin: Alignment.topLeft,
-              //   end: Alignment.bottomRight,
-              //   colors: [
-              //     Color.fromRGBO(9, 116, 66, 1),
-              //     Color.fromRGBO(98, 179, 69, 1),
-              //   ],
-              // ),
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  spreadRadius: 2,
-                  blurRadius: 5,
-                  offset: const Offset(0, 3), // changes position of shadow
-                ),
-              ],
-            ),
+            // width: 120,
+            // height: 120,
+            // decoration: BoxDecoration(
+            //   // gradient: LinearGradient(
+            //   //   begin: Alignment.topLeft,
+            //   //   end: Alignment.bottomRight,
+            //   //   colors: [
+            //   //     Color.fromRGBO(9, 116, 66, 1),
+            //   //     Color.fromRGBO(98, 179, 69, 1),
+            //   //   ],
+            //   // ),
+            //   color: Colors.white,
+            //   borderRadius: BorderRadius.circular(30),
+            //   boxShadow: [
+            //     BoxShadow(
+            //       color: Colors.black.withOpacity(0.2),
+            //       spreadRadius: 2,
+            //       blurRadius: 5,
+            //       offset: const Offset(0, 3), // changes position of shadow
+            //     ),
+            //   ],
+            // ),
             child: Padding(
-              padding: const EdgeInsets.only(top: 23.0),
+              padding: const EdgeInsets.only(top: 15.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    width: 40,
-                    height: 40,
+                    width: 35,
+                    height: 35,
                     decoration: BoxDecoration(
                       // color: Colors.black12.withOpacity(0.04),
 
@@ -2333,12 +3481,13 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                       width: 110,
                       child: Text(
                         title ?? '',
-                        maxLines: 5,
+                        maxLines: 2,
                         style: GoogleFonts.openSans(
                             color: Colors.black,
-                            fontWeight: FontWeight.w700,
-                            fontSize: 14),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 12, ),
                         textAlign: TextAlign.center,
+
                         // overflow: TextOverflow.clip,
                       ),
                     ),
@@ -2439,7 +3588,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       body: SingleChildScrollView(
         physics: const AlwaysScrollableScrollPhysics(),
         child: Padding(
-          padding: const EdgeInsets.only(top: 10.0),
+          padding: const EdgeInsets.only(top: 10.0,left: 2,right: 2),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

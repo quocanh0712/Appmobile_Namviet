@@ -18,7 +18,7 @@ class AssetsClient extends BaseClientGenerator with _$AssetsClient {
   factory AssetsClient.schedulecheckin() = _InventorySchedule;
 
   @override
-  String get baseURL => '${super.baseURL}/QuanLyTaiSan';
+  String get baseURL => '${super.baseSecondURL}/QuanLyTaiSan';
 
   @override
   String get method {

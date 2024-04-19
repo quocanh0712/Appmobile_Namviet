@@ -100,6 +100,61 @@ abstract class Routes {
   static const TRACK_PROGRESS = _Paths.TRACK_PROGRESS;
   static const TEACHER_SCHEDULE_TIME = _Paths.TEACHER_SCHEDULE_TIME;
   static const MAP_WEBVIEW = _Paths.MAP_WEBVIEW;
+  static const TRAINING = _Paths.TRAINING;
+  static const SALARY = _Paths.SALARY;
+  static const ATTENDANCE = _Paths.ATTENDANCE;
+  static const TEACHING_HOUR = _Paths.TEACHING_HOUR;
+  static const JOB_DECLARATION = _Paths.JOB_DECLARATION;
+  static const ATTENDANCE_STU = _Paths.ATTENDANCE_STU;
+  static const ROOM_REGISTRATION = _Paths.ROOM_REGISTRATION;
+  static const VEHICLE_REGISTRATION = _Paths.VEHICLE_REGISTRATION;
+  static const EXAM_SCHEDULE = _Paths.EXAM_SCHEDULE;
+  static const LECTURE_MANAGEMENT = _Paths.LECTURE_MANAGEMENT;
+  static const TEACHING_REPLACE = _Paths.TEACHING_REPLACE;
+  static const INSPECTION_SCHEDULE = _Paths.INSPECTION_SCHEDULE;
+  static const EVALUATE_TRAINING = _Paths.EVALUATE_TRAINING;
+  static const SCHOLARSHIP_LIST = _Paths.SCHOLARSHIP_LIST;
+  static const CONSULTANT = _Paths.CONSULTANT;
+  static const CLASS_OFFICIAL = _Paths.CLASS_OFFICIAL;
+  static const DEBT_LIST = _Paths.DEBT_LIST;
+  static const FINANCIAL_DETAIL = _Paths.FINANCIAL_DETAIL;
+  static const PERSONAL_PROPERTY = _Paths.PERSONAL_PROPERTY;
+  static const SHOPPING_NEED = _Paths.SHOPPING_NEED;
+  static const APPROVE_REPAIR = _Paths.APPROVE_REPAIR;
+  static const FOLLOW_SCIENTIFIC_RESEARCH = _Paths.FOLLOW_SCIENTIFIC_RESEARCH;
+  static const GROUP_ARRIVE = _Paths.GROUP_ARRIVE;
+  static const PARTNER_PROJECT = _Paths.PARTNER_PROJECT;
+  static const APPROVAL_REGISTRATION = _Paths.APPROVAL_REGISTRATION;
+  static const STU_LIST_MANAGEMENT = _Paths.STU_LIST_MANAGEMENT;
+  static const REPAIR_REQUEST = _Paths.REPAIR_REQUEST;
+  static const TRAINING_PROCESS = _Paths.TRAINING_PROCESS;
+  static const SALARY_INFO = _Paths.SALARY_INFO;
+  static const ALLOWANCE = _Paths.ALLOWANCE;
+  static const ANOTHER_SCHEDULE = _Paths.ANOTHER_SCHEDULE;
+  static const TEXT_AWAY = _Paths.TEXT_AWAY;
+  static const TEXT_INCOME = _Paths.TEXT_INCOME;
+  static const WORK_RESOLE = _Paths.WORK_RESOLVE;
+  static const SOCIAL_INSURANCE = _Paths.SOCIAL_INSURANCE;
+
+  static const TEACHING_SCHEDULE = _Paths.TEACHING_SCHEDULE;
+  static const OUTLINE_DETAIL = _Paths.OUTLINE_DETAIL;
+  static const POINT_PROCESS = _Paths.POINT_PROCESS;
+  static const TEST_POINT = _Paths.TEST_POINT;
+  static const CREDIT_APPROVAL = _Paths.CREDIT_APPROVAL;
+  static const RE_EXAM_APPROVAL = _Paths.RE_EXAM_APPROVAL;
+  static const LMS = _Paths.LMS;
+  static const PROOF = _Paths.PROOF;
+  static const ACCREDITATION = _Paths.ACCREDITATION;
+  static const ADMINISTRATIVE_CLASS = _Paths.ADMINISTRATIVE_CLASS;
+  static const CREDIT_CLASS = _Paths.CREDIT_CLASS;
+  static const PROPERTY_LOOKUP = _Paths.PROPERTY_LOOKUP;
+  static const DOMESTIC_NEWS = _Paths.DOMESTIC_NEWS;
+  static const INTERNATIONAL_NEWS = _Paths.INTERNATIONAL_NEWS;
+  static const SCIENCE_TOPIC = _Paths.SCIENCE_TOPIC;
+  static const MEMBER_TOPIC = _Paths.MEMBER_TOPIC;
+
+
+
 }
 
 abstract class _Paths {
@@ -195,4 +250,59 @@ abstract class _Paths {
   static const TRACK_PROGRESS = '/track-progress';
   static const TEACHER_SCHEDULE_TIME = '/teacher-schedule-time';
   static const MAP_WEBVIEW = '/map_webview';
+  static const TRAINING = '/training';
+  static const SALARY = '/salary';
+  static const ATTENDANCE = '/attendance';
+  static const TEACHING_HOUR = '/teaching_hour';
+  static const JOB_DECLARATION = '/job_declaration';
+  static const ATTENDANCE_STU = '/attendance_stu';
+  static const ROOM_REGISTRATION = '/room_registration';
+  static const VEHICLE_REGISTRATION = '/vehicle_registration';
+  static const EXAM_SCHEDULE = '/exam_schedule';
+  static const LECTURE_MANAGEMENT = '/lecture_management';
+  static const TEACHING_REPLACE = '/teaching_replace';
+  static const INSPECTION_SCHEDULE = '/inspection_schedule';
+  static const EVALUATE_TRAINING = '/evaluateTraining';
+  static const SCHOLARSHIP_LIST = '/scholarshipList';
+  static const CONSULTANT = '/consultant';
+  static const CLASS_OFFICIAL = '/class_official';
+  static const DEBT_LIST = '/debt_list';
+  static const FINANCIAL_DETAIL = '/financial_detail';
+  static const PERSONAL_PROPERTY = '/personal_property';
+  static const SHOPPING_NEED = '/shopping_need';
+  static const APPROVE_REPAIR = '/approve_repair';
+  static const FOLLOW_SCIENTIFIC_RESEARCH = '/follow_scientific_research';
+  static const GROUP_ARRIVE = '/group_arrive';
+  static const PARTNER_PROJECT = '/partner_project';
+  static const APPROVAL_REGISTRATION = '/approval_registration';
+  static const STU_LIST_MANAGEMENT = '/stu_list_management';
+  static const REPAIR_REQUEST = '/repair_request';
+  static const TRAINING_PROCESS = '/training_process';
+  static const SALARY_INFO = '/salary_info';
+  static const SOCIAL_INSURANCE = '/social_insurance';
+  static const ALLOWANCE = '/allowance';
+  static const ANOTHER_SCHEDULE = '/another_schedule';
+  static const TEXT_AWAY = '/text_away';
+  static const TEXT_INCOME = '/text_income';
+  static const WORK_RESOLVE = '/work_resolve';
+
+  static const TEACHING_SCHEDULE = '/teaching_schedule';
+  static const OUTLINE_DETAIL = '/outline_detail';
+  static const POINT_PROCESS = '/point_process';
+  static const TEST_POINT = '/test_point';
+  static const CREDIT_APPROVAL = '/credit_approval';
+  static const RE_EXAM_APPROVAL = '/re_exam_approval';
+  static const LMS = '/LMS';
+  static const PROOF = '/proof';
+  static const ACCREDITATION = '/accreditation';
+
+  static const ADMINISTRATIVE_CLASS = '/administrative_class';
+  static const CREDIT_CLASS = '/credit_class';
+  static const PROPERTY_LOOKUP = '/property_lookup';
+
+  static const DOMESTIC_NEWS = '/domestic_news';
+  static const INTERNATIONAL_NEWS = '/international_news';
+  static const SCIENCE_TOPIC = '/science_topic';
+  static const MEMBER_TOPIC = '/member_topic';
+
 }

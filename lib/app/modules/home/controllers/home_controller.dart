@@ -226,6 +226,32 @@ class HomeController extends BaseController {
     Get.toNamed(Routes.SCHEDULE_TIME, arguments: title);
   }
 
+
+  navigateToExamSchedule() {
+    Fimber.d("navigateToExamSchedule()");
+    Get.toNamed(Routes.EXAM_SCHEDULE);
+  }
+
+  navigateToTeachingReplace() {
+    Fimber.d("navigateToTeachingReplace()");
+    Get.toNamed(Routes.TEACHING_REPLACE);
+  }
+
+  navigateToReExamApproval() {
+    Fimber.d("navigateToReExamApproval()");
+    Get.toNamed(Routes.RE_EXAM_APPROVAL);
+  }
+
+  navigateToInspectionSchedule() {
+    Fimber.d("navigateToInspectionSchedule()");
+    Get.toNamed(Routes.INSPECTION_SCHEDULE);
+  }
+
+  navigateToLectureManagement() {
+    Fimber.d("navigateToLectureManagement()");
+    Get.toNamed(Routes.LECTURE_MANAGEMENT);
+  }
+
   navigateToWebView(){
 
   }
@@ -240,6 +266,11 @@ class HomeController extends BaseController {
     Get.toNamed(Routes.SCHEDULE_CHECKIN);
   }
 
+  navigateToPropertyLookUp() {
+    Fimber.d("navigateToPropertyLookUp()");
+    Get.toNamed(Routes.CHECKIN);
+  }
+
   navigateToUtilites() {
     Fimber.d("navigateToUtilites()");
   }
@@ -252,6 +283,50 @@ class HomeController extends BaseController {
   navigateToEducationProgram() {
     Fimber.d("navigateToEducationProgram()");
     Get.toNamed(Routes.EDUCATION_PROGRAM);
+  }
+
+  navigateToWorkingProcess() {
+    Fimber.d("navigateToWorkingProcess()");
+    Get.toNamed(Routes.WORKING_PROCESS);
+  }
+
+  navigateToTrainingProcess() {
+    Fimber.d("navigateToTrainingProcess()");
+    Get.toNamed(Routes.TRAINING_PROCESS);
+  }
+
+  navigateToSalaryInfo() {
+    Fimber.d("navigateToSalaryInfo()");
+    Get.toNamed(Routes.SALARY_INFO);
+  }
+  navigateToSocialInsurance() {
+    Fimber.d("navigateToSocialInsurance()");
+    Get.toNamed(Routes.SOCIAL_INSURANCE);
+  }
+
+  navigateToAllowance() {
+    Fimber.d("navigateToAllowance()");
+    Get.toNamed(Routes.ALLOWANCE);
+  }
+
+  navigateToAnotherSchedule() {
+    Fimber.d("navigateToAnotherSchedule()");
+    Get.toNamed(Routes.ANOTHER_SCHEDULE);
+  }
+
+  navigateToTextAway() {
+    Fimber.d("navigateToTextAway()");
+    Get.toNamed(Routes.TEXT_AWAY);
+  }
+
+  navigateToWorkResolve() {
+    Fimber.d("navigateToWorkResolve()");
+    Get.toNamed(Routes.WORK_RESOLE);
+  }
+
+  navigateToTextIncome() {
+    Fimber.d("navigateToTextIncome()");
+    Get.toNamed(Routes.TEXT_INCOME);
   }
 
   navigateToFinanceOverview() {
@@ -269,6 +344,26 @@ class HomeController extends BaseController {
     Get.toNamed(Routes.SCIENTIFIC_RESEARCH);
   }
 
+  navigateToDomesticNews() {
+    Fimber.d("navigateToDomesticNews()");
+    Get.toNamed(Routes.DOMESTIC_NEWS);
+  }
+
+  navigateToInternationalNews() {
+    Fimber.d("navigateToInternationalNews()");
+    Get.toNamed(Routes.INTERNATIONAL_NEWS);
+  }
+
+  navigateToScienceTopic() {
+    Fimber.d("navigateToScienceTopic()");
+    Get.toNamed(Routes.SCIENCE_TOPIC);
+  }
+
+  navigateToMemberTopic() {
+    Fimber.d("navigateToMemberTopic()");
+    Get.toNamed(Routes.MEMBER_TOPIC);
+  }
+
   navigateToSurveyResult() {
     Fimber.d("navigateToSurveyResult()");
     Get.toNamed(Routes.SURVEY_RESULT);
@@ -277,6 +372,21 @@ class HomeController extends BaseController {
   navigateToTeacherContact() {
     Fimber.d("navigateToTeacherContact()");
     Get.toNamed(Routes.LIST_TEACHER_INFO);
+  }
+
+  navigateToFollowScientificResearch() {
+    Fimber.d("navigateToFollowScientificResearch()");
+    Get.toNamed(Routes.FOLLOW_SCIENTIFIC_RESEARCH);
+  }
+
+  navigateToGroupArrive() {
+    Fimber.d("navigateToGroupArrive()");
+    Get.toNamed(Routes.GROUP_ARRIVE);
+  }
+
+  navigateToPartnerProject() {
+    Fimber.d("navigateToPartnerProject()");
+    Get.toNamed(Routes.PARTNER_PROJECT);
   }
 
   navigateToConversation() {
@@ -329,9 +439,153 @@ class HomeController extends BaseController {
     Get.toNamed(Routes.SEND_REQUEST);
   }
 
+  navigateToTraining(){
+    Fimber.d("navigateToTraining()");
+    Get.toNamed(Routes.TRAINING);
+  }
+
+  navigateToSalary(){
+    Fimber.d("navigateToSalary()");
+    Get.toNamed(Routes.SALARY);
+  }
+
+  navigateToAttendance(){
+    Fimber.d("navigateToAttendance()");
+    Get.toNamed(Routes.ATTENDANCE);
+  }
+
+  navigateToTeachingHour(){
+    Fimber.d("navigateToTeachingHour()");
+    Get.toNamed(Routes.TEACHING_HOUR);
+  }
+
+  navigateToOutlineDetail(){
+    Fimber.d("navigateToOutlineDetail()");
+    Get.toNamed(Routes.OUTLINE_DETAIL);
+  }
+
+  navigateToPointProcess(){
+    Fimber.d("navigateToPointProcess()");
+    Get.toNamed(Routes.POINT_PROCESS);
+  }
+
+  navigateToTestPoint(){
+    Fimber.d("navigateToTestPoint()");
+    Get.toNamed(Routes.TEST_POINT);
+  }
+
+  navigateToCreditApproval(){
+    Fimber.d("navigateToCreditApproval()");
+    Get.toNamed(Routes.CREDIT_APPROVAL);
+  }
+  navigateToLMS(){
+    Fimber.d("navigateToLMS()");
+    Get.toNamed(Routes.LMS);
+  }
+
+  navigateToProof(){
+    Fimber.d("navigateToProof()");
+    Get.toNamed(Routes.PROOF);
+  }
+
+  navigateToAccreditation(){
+    Fimber.d("navigateToAccreditation()");
+    Get.toNamed(Routes.ACCREDITATION);
+  }
+
+  navigateToTeachingSchedule(){
+    Fimber.d("navigateToTeachingSchedule()");
+    Get.toNamed(Routes.TEACHING_SCHEDULE);
+  }
+
+  navigateToJobDeclaration(){
+    Fimber.d("navigateToJobDeclaration()");
+    Get.toNamed(Routes.JOB_DECLARATION);
+  }
+
+  navigateToAttendanceStu(){
+    Fimber.d("navigateToAttendanceStu()");
+    Get.toNamed(Routes.ATTENDANCE_STU);
+  }
+  navigateToRoomRegistration(){
+    Fimber.d("navigateToRoomRegistration()");
+    Get.toNamed(Routes.ROOM_REGISTRATION);
+  }
+
+  navigateToVehicleRegistration(){
+    Fimber.d("navigateToVehicleRegistration()");
+    Get.toNamed(Routes.VEHICLE_REGISTRATION);
+  }
+
+
+
   navigateToReportTask() {
     Fimber.d("navigateToReportTask()");
     Get.toNamed(Routes.REPORT_TASK);
+  }
+
+  navigateToEvaluateTraining() {
+    Fimber.d("navigateToEvaluateTraining()");
+    Get.toNamed(Routes.EVALUATE_TRAINING);
+  }
+
+  navigateToStuListManagement() {
+    Fimber.d("navigateToStuListManagement()");
+    Get.toNamed(Routes.STU_LIST_MANAGEMENT);
+  }
+
+  navigateToAdministrativeClass() {
+    Fimber.d("navigateToAdministrativeClass()");
+    Get.toNamed(Routes.ADMINISTRATIVE_CLASS);
+  }
+
+  navigateToCreditClass() {
+    Fimber.d("navigateToCreditClass()");
+    Get.toNamed(Routes.CREDIT_CLASS);
+  }
+
+  navigateToDebtList() {
+    Fimber.d("navigateToDebtList()");
+    Get.toNamed(Routes.DEBT_LIST);
+  }
+
+  navigateToPersonalProperty() {
+    Fimber.d("navigateToPersonalProperty()");
+    Get.toNamed(Routes.PERSONAL_PROPERTY);
+  }
+
+  navigateToRepairRequest() {
+    Fimber.d("navigateToRepairRequest()");
+    Get.toNamed(Routes.REPAIR_REQUEST);
+  }
+
+  navigateToShoppingNeed() {
+    Fimber.d("navigateToShoppingNeed()");
+    Get.toNamed(Routes.SHOPPING_NEED);
+  }
+
+  navigateToApproveRepair() {
+    Fimber.d("navigateToApproveRepair()");
+    Get.toNamed(Routes.APPROVE_REPAIR);
+  }
+
+  navigateToFinancialDetail() {
+    Fimber.d("navigateToFinancialDetail()");
+    Get.toNamed(Routes.FINANCIAL_DETAIL);
+  }
+
+  navigateToScholarshipList() {
+    Fimber.d("navigateToScholarshipList()");
+    Get.toNamed(Routes.SCHOLARSHIP_LIST);
+  }
+  navigateToConsultant() {
+    Fimber.d("navigateToConsultant()");
+    Get.toNamed(Routes.CONSULTANT);
+  }
+
+  navigateToClassOfficial() {
+    Fimber.d("navigateToClassOfficial()");
+    Get.toNamed(Routes.CLASS_OFFICIAL);
   }
 
   navigateToEmail() {

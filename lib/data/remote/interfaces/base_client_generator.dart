@@ -19,6 +19,8 @@ abstract class BaseClientGenerator {
   String get method;
   String setUrl = "";
   String get baseURL => setUrl;
+  String secondUrl = "";
+  String get baseSecondURL => secondUrl;
 
   Future<Map<String, dynamic>> defaultBody() async {
     UserRepository userRepo = Get.find();
@@ -28,6 +30,7 @@ abstract class BaseClientGenerator {
     switch (idDonVi) {
       case 1:
         setUrl = EnvironmentConfig.BASE_URL;
+        secondUrl = EnvironmentConfig.BASE_URL_IS;
         break;
       case 2:
         setUrl = EnvironmentConfig.BASE_URL_TUAF;

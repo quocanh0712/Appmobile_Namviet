@@ -1,10 +1,111 @@
+import 'package:ftu_lms/app/modules/LMS/bindings/lms_binding.dart';
+import 'package:ftu_lms/app/modules/LMS/views/lms_view.dart';
+import 'package:ftu_lms/app/modules/TeachingHour/views/teaching_hour_view.dart';
+import 'package:ftu_lms/app/modules/accreditation/bindings/accreditation_binding.dart';
+import 'package:ftu_lms/app/modules/accreditation/views/accreditation_view.dart';
 import 'package:ftu_lms/app/modules/add_item_scientific_research/view/add_item_scientific_research_view.dart';
+import 'package:ftu_lms/app/modules/administrative_class/bindings/administrative_binding.dart';
+import 'package:ftu_lms/app/modules/administrative_class/views/administrative_view.dart';
+import 'package:ftu_lms/app/modules/allowance/bindings/allowance_binding.dart';
+import 'package:ftu_lms/app/modules/allowance/views/allowance_view.dart';
+import 'package:ftu_lms/app/modules/another_schedule/bindings/another_schedule_binding.dart';
+import 'package:ftu_lms/app/modules/another_schedule/views/another_schedule_view.dart';
+import 'package:ftu_lms/app/modules/approval_registration/bindings/approval_registration_binding.dart';
+import 'package:ftu_lms/app/modules/approval_registration/views/approval_registration_view.dart';
+import 'package:ftu_lms/app/modules/approve_repair/bindings/approve_repair_binding.dart';
+import 'package:ftu_lms/app/modules/approve_repair/views/approve_repair_view.dart';
+import 'package:ftu_lms/app/modules/attendance/bindings/attendance_binding.dart';
+import 'package:ftu_lms/app/modules/attendance/views/attendance_view.dart';
+import 'package:ftu_lms/app/modules/attendance_stu/bindings/attendance_stu_binding.dart';
+import 'package:ftu_lms/app/modules/attendance_stu/views/attendance_stu_view.dart';
+import 'package:ftu_lms/app/modules/class_official/bindings/class_official_binding.dart';
+import 'package:ftu_lms/app/modules/class_official/views/class_official_view.dart';
+import 'package:ftu_lms/app/modules/consultant/bindings/consultant_binding.dart';
+import 'package:ftu_lms/app/modules/consultant/views/consultant_view.dart';
+import 'package:ftu_lms/app/modules/credit_approval/bindings/credit_approval_binding.dart';
+import 'package:ftu_lms/app/modules/credit_approval/views/credit_approval_view.dart';
+import 'package:ftu_lms/app/modules/credit_class/bindings/credit_class_binding.dart';
+import 'package:ftu_lms/app/modules/credit_class/views/credit_class_view.dart';
+import 'package:ftu_lms/app/modules/debt_list/bindings/debt_list_binding.dart';
+import 'package:ftu_lms/app/modules/domestic_news/bindings/domestic_news_binding.dart';
+import 'package:ftu_lms/app/modules/domestic_news/views/domestic_news_view.dart';
+import 'package:ftu_lms/app/modules/evaluate_training_point/bindings/evaluate_training_binding.dart';
+import 'package:ftu_lms/app/modules/evaluate_training_point/views/evaluate_training_view.dart';
+import 'package:ftu_lms/app/modules/exam_schedule/bindings/exam_schedule_binding.dart';
+import 'package:ftu_lms/app/modules/exam_schedule/views/exam_schedule_view.dart';
+import 'package:ftu_lms/app/modules/financial_detail/bindings/financial_detail_binding.dart';
+import 'package:ftu_lms/app/modules/financial_detail/views/financial_detail_view.dart';
+import 'package:ftu_lms/app/modules/follow_scientific_research/bindings/follow_scientific_research_binding.dart';
+import 'package:ftu_lms/app/modules/follow_scientific_research/views/follow_scientific_research_view.dart';
+import 'package:ftu_lms/app/modules/group_arrive/bindings/group_arrive_binding.dart';
+import 'package:ftu_lms/app/modules/group_arrive/views/group_arrive_view.dart';
+import 'package:ftu_lms/app/modules/inspection_schedule/bindings/inspection_schedule_binding.dart';
+import 'package:ftu_lms/app/modules/inspection_schedule/views/inspection_schedule_view.dart';
+import 'package:ftu_lms/app/modules/international_news/bindings/international_news_binding.dart';
+import 'package:ftu_lms/app/modules/international_news/views/international_news_view.dart';
+import 'package:ftu_lms/app/modules/job_declaration/bindings/job_declaration_binding.dart';
+import 'package:ftu_lms/app/modules/job_declaration/views/job_declaration_view.dart';
+import 'package:ftu_lms/app/modules/lecture_management/bindings/lecture_management_binding.dart';
+import 'package:ftu_lms/app/modules/lecture_management/views/lecture_management_view.dart';
+import 'package:ftu_lms/app/modules/member_topic/bindings/member_topic_binding.dart';
+import 'package:ftu_lms/app/modules/member_topic/views/member_topic_view.dart';
+import 'package:ftu_lms/app/modules/outline_detail/bindings/outline_detail_binding.dart';
+import 'package:ftu_lms/app/modules/outline_detail/views/outline_detail_view.dart';
+import 'package:ftu_lms/app/modules/partner_project/bindings/partner_project_binding.dart';
+import 'package:ftu_lms/app/modules/partner_project/views/partner_project_view.dart';
+import 'package:ftu_lms/app/modules/personal_property/bindings/personal_property_binding.dart';
+import 'package:ftu_lms/app/modules/personal_property/views/personal_property_view.dart';
+import 'package:ftu_lms/app/modules/point_process/bindings/point_process_binding.dart';
+import 'package:ftu_lms/app/modules/point_process/views/point_process_view.dart';
+import 'package:ftu_lms/app/modules/proof/bindings/proof_binding.dart';
+import 'package:ftu_lms/app/modules/proof/views/proof_view.dart';
+import 'package:ftu_lms/app/modules/property_lookup/bindings/property_lookup_binding.dart';
+import 'package:ftu_lms/app/modules/property_lookup/views/property_lookup_view.dart';
+import 'package:ftu_lms/app/modules/re_exam_approval/bindings/re_exam_approval_binding.dart';
+import 'package:ftu_lms/app/modules/re_exam_approval/views/re_exam_approval_view.dart';
+import 'package:ftu_lms/app/modules/repair_request/bindings/repair_request_binding.dart';
+import 'package:ftu_lms/app/modules/repair_request/views/repair_request_view.dart';
+import 'package:ftu_lms/app/modules/room_registration/bindings/room_registration_binding.dart';
+import 'package:ftu_lms/app/modules/room_registration/views/room_registration_view.dart';
+import 'package:ftu_lms/app/modules/salary/bindings/salary_binding.dart';
+import 'package:ftu_lms/app/modules/salary/views/salary_view.dart';
+import 'package:ftu_lms/app/modules/salary_info/bindings/salary_info_binding.dart';
+import 'package:ftu_lms/app/modules/salary_info/views/salary_info_view.dart';
+import 'package:ftu_lms/app/modules/scholarship_list/bindings/scholarship_list_binding.dart';
+import 'package:ftu_lms/app/modules/scholarship_list/views/scholarship_list_view.dart';
+import 'package:ftu_lms/app/modules/science_topic/bindings/science_topic_binding.dart';
+import 'package:ftu_lms/app/modules/science_topic/views/science_topic_view.dart';
+import 'package:ftu_lms/app/modules/shopping_need/bindings/shopping_need_binding.dart';
+import 'package:ftu_lms/app/modules/shopping_need/views/shopping_need_view.dart';
+import 'package:ftu_lms/app/modules/social_insurance/bindings/social_insurance_binding.dart';
+import 'package:ftu_lms/app/modules/social_insurance/views/social_insurance_view.dart';
+import 'package:ftu_lms/app/modules/stu_list_management/bindings/stu_list_management_binding.dart';
+import 'package:ftu_lms/app/modules/stu_list_management/views/stu_list_management_view.dart';
+import 'package:ftu_lms/app/modules/teaching_replace/bindings/teaching_replace_binding.dart';
+import 'package:ftu_lms/app/modules/teaching_replace/views/teaching_replace_view.dart';
+import 'package:ftu_lms/app/modules/teaching_schedule/bindings/teaching_schedule_binding.dart';
+import 'package:ftu_lms/app/modules/teaching_schedule/views/teaching_schedule_view.dart';
+import 'package:ftu_lms/app/modules/test_point/bindings/test_point_binding.dart';
+import 'package:ftu_lms/app/modules/test_point/views/test_point_view.dart';
+import 'package:ftu_lms/app/modules/text_away/bindings/text_away_binding.dart';
+import 'package:ftu_lms/app/modules/text_away/views/text_away_view.dart';
+import 'package:ftu_lms/app/modules/text_income/bindings/text_income_binding.dart';
+import 'package:ftu_lms/app/modules/text_income/views/text_income_view.dart';
+import 'package:ftu_lms/app/modules/training/bindings/training_binding.dart';
+import 'package:ftu_lms/app/modules/training/views/training_view.dart';
+import 'package:ftu_lms/app/modules/training_process/bindings/training_process_binding.dart';
+import 'package:ftu_lms/app/modules/training_process/views/training_process_view.dart';
+import 'package:ftu_lms/app/modules/vehicle_registration/bindings/vehicle_registration_binding.dart';
+import 'package:ftu_lms/app/modules/vehicle_registration/views/vehicle_registration_view.dart';
+import 'package:ftu_lms/app/modules/work_resolve/bindings/work_resolve_binding.dart';
+import 'package:ftu_lms/app/modules/work_resolve/views/work_resolve_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/Email/bindings/email_binding.dart';
 import '../modules/Email/views/add_email/bindings/add_email_binding.dart';
 import '../modules/Email/views/add_email/views/add_mail_view.dart';
 import '../modules/Email/views/email_view.dart';
+import '../modules/TeachingHour/bindings/teaching_hour_binding.dart';
 import '../modules/account/bindings/account_binding.dart';
 import '../modules/account/views/account_view.dart';
 import '../modules/activity/bindings/activity_binding.dart';
@@ -26,6 +127,7 @@ import '../modules/create_new_form/bindings/create_new_form_binding.dart';
 import '../modules/create_new_form/views/create_new_form_view.dart';
 import '../modules/dashboard/bindings/dashboard_binding.dart';
 import '../modules/dashboard/views/dashboard_view.dart';
+import '../modules/debt_list/views/debt_list_view.dart';
 import '../modules/detail_conversation/bindings/detail_conversation_binding.dart';
 import '../modules/detail_conversation/views/detail_conversation_view.dart';
 import '../modules/discuss_feedback/bindings/discuss_feedback_binding.dart';
@@ -641,5 +743,284 @@ class AppPages {
       name: _Paths.MAP_WEBVIEW,
       page: () => const MapWebView(),
     ),
+    GetPage(
+      name: _Paths.TRAINING,
+      page: () => const TrainingView(),
+      binding: TrainingBinding(),
+    ),
+    GetPage(
+      name: _Paths.SALARY,
+      page: () => const SalaryView(),
+      binding: SalaryBinding(),
+    ),
+    GetPage(
+      name: _Paths.ATTENDANCE,
+      page: () => const AttendanceView(),
+      binding: AttendanceBinding(),
+    ),
+    GetPage(
+      name: _Paths.TEACHING_HOUR,
+      page: () => const TeachingHourView(),
+      binding: TeachingHourBinding(),
+    ),
+    GetPage(
+      name: _Paths.JOB_DECLARATION,
+      page: () => const JobDeclarationView(),
+      binding: JobDeclarationBinding(),
+    ),
+    GetPage(
+      name: _Paths.ATTENDANCE_STU,
+      page: () => const AttendanceStuView(),
+      binding: AttendanceStuBinding(),
+    ),
+    GetPage(
+      name: _Paths.ROOM_REGISTRATION,
+      page: () => const RoomRegistrationView(),
+      binding: RoomRegistrationBinding(),
+    ),
+    GetPage(
+      name: _Paths.VEHICLE_REGISTRATION,
+      page: () => const VehicleRegistrationView(),
+      binding: VehicleRegistrationBinding(),
+    ),
+    GetPage(
+      name: _Paths.EXAM_SCHEDULE,
+      page: () => const ExamScheduleView(),
+      binding: ExamScheduleBinding(),
+    ),
+    GetPage(
+      name: _Paths.LECTURE_MANAGEMENT,
+      page: () => const LectureManagamentView(),
+      binding: LectureManagementBinding(),
+    ),
+    GetPage(
+      name: _Paths.TEACHING_REPLACE,
+      page: () => const TeachingReplaceView(),
+      binding: TeachingReplaceBinding(),
+    ),
+    GetPage(
+      name: _Paths.INSPECTION_SCHEDULE,
+      page: () => const InspectionScheduleView(),
+      binding: InspectionScheduleBinding(),
+    ),
+    GetPage(
+      name: _Paths.EVALUATE_TRAINING,
+      page: () => const EvaluateTrainingView(),
+      binding: EvaluateTrainingBinding(),
+    ),
+    GetPage(
+      name: _Paths.SCHOLARSHIP_LIST,
+      page: () => const ScholarshipListView(),
+      binding: ScholarshipListBinding(),
+    ),
+    GetPage(
+      name: _Paths.CONSULTANT,
+      page: () => const ConsultantView(),
+      binding: ConsultantBinding(),
+    ),
+    GetPage(
+      name: _Paths.CLASS_OFFICIAL,
+      page: () => const ClassOfficialView(),
+      binding: ClassOfficialBinding(),
+    ),
+    GetPage(
+      name: _Paths.DEBT_LIST,
+      page: () => const DebtListView(),
+      binding: DebtListBinding(),
+    ),
+    GetPage(
+      name: _Paths.FINANCIAL_DETAIL,
+      page: () => const FinancialDetailView(),
+      binding: FinancialDetailBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.PERSONAL_PROPERTY,
+      page: () => const PersonalPropertyView(),
+      binding: PersonalPropertyBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.SHOPPING_NEED,
+      page: () => const ShoppingNeedView(),
+      binding: ShoppingNeedBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.APPROVE_REPAIR,
+      page: () => const ApproveRepairView(),
+      binding: ApproveRepairBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.FOLLOW_SCIENTIFIC_RESEARCH,
+      page: () => const FollowScientificResearchView(),
+      binding: FollowScientificResearchBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.GROUP_ARRIVE,
+      page: () => const GroupArriveView(),
+      binding: GroupArriveBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.PARTNER_PROJECT,
+      page: () => const PartnerProjectView(),
+      binding: PartnerProjectBinding(),
+    ),
+    GetPage(
+      name: _Paths.APPROVAL_REGISTRATION,
+      page: () => const ApprovalRegistrationView(),
+      binding: ApprovalRegistrationBinding(),
+    ),
+    GetPage(
+      name: _Paths.STU_LIST_MANAGEMENT,
+      page: () => const StuListManagementView(),
+      binding: StuListManagementBinding(),
+    ),
+    GetPage(
+      name: _Paths.REPAIR_REQUEST,
+      page: () => const RepairRequestView(),
+      binding: RepairRequestBinding(),
+    ),
+    GetPage(
+      name: _Paths.TRAINING_PROCESS,
+      page: () => const TrainingProcessView(),
+      binding: TrainingProcessBinding(),
+    ),
+    GetPage(
+      name: _Paths.SALARY_INFO,
+      page: () => const SalaryInfoView(),
+      binding: SalaryInfoBinding(),
+    ),
+    GetPage(
+      name: _Paths.SOCIAL_INSURANCE,
+      page: () => const SocialInsuranceView(),
+      binding: SocialInsuranceBinding(),
+    ),
+    GetPage(
+      name: _Paths.ALLOWANCE,
+      page: () => const AllowanceView(),
+      binding: AllowanceBinding(),
+    ),
+    GetPage(
+      name: _Paths.ANOTHER_SCHEDULE,
+      page: () => const AnotherScheduleView(),
+      binding: AnotherScheduleBinding(),
+    ),
+    GetPage(
+      name: _Paths.TEXT_AWAY,
+      page: () => const TextAwayView(),
+      binding: TextAwayBinding(),
+    ),
+    GetPage(
+      name: _Paths.TEXT_INCOME,
+      page: () => const TextIncomeView(),
+      binding: TextIncomeBinding(),
+    ),
+    GetPage(
+      name: _Paths.WORK_RESOLVE,
+      page: () => const WorkResolveView(),
+      binding: WorkResolveBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.TEACHING_SCHEDULE,
+      page: () => const TeachingScheduleView(),
+      binding: TeachingScheduleBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.OUTLINE_DETAIL,
+      page: () => const OutlineDetailView(),
+      binding: OutlineDetailBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.POINT_PROCESS,
+      page: () => const PointProcessView(),
+      binding: PointProcessBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.TEST_POINT,
+      page: () => const TestPointView(),
+      binding: TestPointBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.CREDIT_APPROVAL,
+      page: () => const CreditApprovalView(),
+      binding: CreditApprovalBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.RE_EXAM_APPROVAL,
+      page: () => const ReExamApprovalView(),
+      binding: ReExamApprovalBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.LMS,
+      page: () => const LMSView(),
+      binding: LMSBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.PROOF,
+      page: () => const ProofView(),
+      binding: ProofBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.ACCREDITATION,
+      page: () => const AccreditationView(),
+      binding: AccreditationBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.ADMINISTRATIVE_CLASS,
+      page: () => const AdministrativeView(),
+      binding: AdministrativeBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.CREDIT_CLASS,
+      page: () => const CreditClassView(),
+      binding: CreditClassBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.PROPERTY_LOOKUP,
+      page: () => const PropertyLookUpView(),
+      binding: PropertyLookUpBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.DOMESTIC_NEWS,
+      page: () => const DomesticNewsView(),
+      binding: DomesticNewsBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.INTERNATIONAL_NEWS,
+      page: () => const InternationalNewsView(),
+      binding: InternationalNewsBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.SCIENCE_TOPIC,
+      page: () => const ScienceTopicView(),
+      binding: ScienceTopicBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.MEMBER_TOPIC,
+      page: () => const MemberTopicView(),
+      binding: MemberTopicBinding(),
+    ),
+
+
   ];
 }

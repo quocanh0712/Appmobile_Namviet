@@ -194,6 +194,8 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
                           ? "${hourMinute.format(element.timestart!)} - ${hourMinute.format(element.timeend!)}"
                           : null
 
+
+
                     ]),
 
                     // element.timestart != null && element.timeend != null
