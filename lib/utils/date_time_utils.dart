@@ -82,6 +82,7 @@ DateTime maxDate = DateTime.now().add(Duration(days: maxScaleTime));
 DateFormat both = DateFormat("EEEE, MMMM d, yyyy 'at' h:mma");
 DateFormat date = DateFormat('dd-MM-yyyy');
 DateFormat dateYMD = DateFormat('yyyy-MM-dd');
+DateFormat customFormat = DateFormat('MM-dd-yyyy HH:mm:ss');
 DateFormat dateYMDSlash = DateFormat('yyyy/MM/dd');
 DateFormat timeAndDate = DateFormat('HH:mm dd/MM/yyyy');
 DateFormat dateSlash = DateFormat('dd/MM/yyyy');

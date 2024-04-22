@@ -287,7 +287,7 @@ class LoginController extends BaseController {
         // share external User Id
         OneSignal.shared
             .setExternalUserId(user.result?.iduser ?? Constants.EMPTY);
-        print('------------------${user.result!.accessToken}');
+        print('------------------${user.result!.iduser}');
 
         Get.offAllNamed(Routes.DASHBOARD);
       } else {

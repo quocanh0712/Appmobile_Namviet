@@ -146,6 +146,9 @@ flutter:
     - assets/lotties/
     - assets/jsons/
     - assets/Icon/
+
+
+
   fonts:
     - family: Poppins
       fonts:

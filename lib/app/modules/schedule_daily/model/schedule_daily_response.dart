@@ -10,6 +10,7 @@ import 'dart:convert';
 
 import 'package:annotations/annotations.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:intl/intl.dart';
 
 part 'schedule_daily_response.freezed.dart';
 part 'schedule_daily_response.g.dart';
@@ -23,14 +24,19 @@ String scheduleDailyResponseToJson(ScheduleDailyResponse data) => json.encode(da
 @genJsonT4ThisOne
 class ScheduleDailyResponse with _$ScheduleDailyResponse {
   const factory ScheduleDailyResponse({
-    DateTime? timestart,
-    DateTime? timeend,
+    String? timestart,
+    String? timeend,
     int? id,
     String? coursename,
     String? roomname,
-    String? lesson,
+    String? lession,
   }) = _ScheduleDailyResponse;
 
   factory ScheduleDailyResponse.fromJson(Map<String, dynamic> json) =>
       _$ScheduleDailyResponseFromJson(json);
+
 }
+
+
+
+

@@ -20,7 +20,10 @@ String scheduleDailyRequestToJson(ScheduleDailyRequest data) => json.encode(data
 @freezed
 class ScheduleDailyRequest with _$ScheduleDailyRequest {
   const factory ScheduleDailyRequest({
+    String? idUser,
     String? nowdate,
+    int? startindex,
+    int? length,
   }) = _ScheduleDailyRequest;
 
   factory ScheduleDailyRequest.fromJson(Map<String, dynamic> json) =>

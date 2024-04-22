@@ -20,7 +20,10 @@ ScheduleDailyRequest _$ScheduleDailyRequestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ScheduleDailyRequest {
+  String? get idUser => throw _privateConstructorUsedError;
   String? get nowdate => throw _privateConstructorUsedError;
+  int? get startindex => throw _privateConstructorUsedError;
+  int? get length => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -34,7 +37,7 @@ abstract class $ScheduleDailyRequestCopyWith<$Res> {
           $Res Function(ScheduleDailyRequest) then) =
       _$ScheduleDailyRequestCopyWithImpl<$Res, ScheduleDailyRequest>;
   @useResult
-  $Res call({String? nowdate});
+  $Res call({String? idUser, String? nowdate, int? startindex, int? length});
 }
 
 /// @nodoc
@@ -51,13 +54,28 @@ class _$ScheduleDailyRequestCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? idUser = freezed,
     Object? nowdate = freezed,
+    Object? startindex = freezed,
+    Object? length = freezed,
   }) {
     return _then(_value.copyWith(
+      idUser: freezed == idUser
+          ? _value.idUser
+          : idUser // ignore: cast_nullable_to_non_nullable
+              as String?,
       nowdate: freezed == nowdate
           ? _value.nowdate
           : nowdate // ignore: cast_nullable_to_non_nullable
               as String?,
+      startindex: freezed == startindex
+          ? _value.startindex
+          : startindex // ignore: cast_nullable_to_non_nullable
+              as int?,
+      length: freezed == length
+          ? _value.length
+          : length // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -70,7 +88,7 @@ abstract class _$$ScheduleDailyRequestImplCopyWith<$Res>
       __$$ScheduleDailyRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? nowdate});
+  $Res call({String? idUser, String? nowdate, int? startindex, int? length});
 }
 
 /// @nodoc
@@ -84,13 +102,28 @@ class __$$ScheduleDailyRequestImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? idUser = freezed,
     Object? nowdate = freezed,
+    Object? startindex = freezed,
+    Object? length = freezed,
   }) {
     return _then(_$ScheduleDailyRequestImpl(
+      idUser: freezed == idUser
+          ? _value.idUser
+          : idUser // ignore: cast_nullable_to_non_nullable
+              as String?,
       nowdate: freezed == nowdate
           ? _value.nowdate
           : nowdate // ignore: cast_nullable_to_non_nullable
               as String?,
+      startindex: freezed == startindex
+          ? _value.startindex
+          : startindex // ignore: cast_nullable_to_non_nullable
+              as int?,
+      length: freezed == length
+          ? _value.length
+          : length // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -98,17 +131,24 @@ class __$$ScheduleDailyRequestImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ScheduleDailyRequestImpl implements _ScheduleDailyRequest {
-  const _$ScheduleDailyRequestImpl({this.nowdate});
+  const _$ScheduleDailyRequestImpl(
+      {this.idUser, this.nowdate, this.startindex, this.length});
 
   factory _$ScheduleDailyRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$ScheduleDailyRequestImplFromJson(json);
 
   @override
+  final String? idUser;
+  @override
   final String? nowdate;
+  @override
+  final int? startindex;
+  @override
+  final int? length;
 
   @override
   String toString() {
-    return 'ScheduleDailyRequest(nowdate: $nowdate)';
+    return 'ScheduleDailyRequest(idUser: $idUser, nowdate: $nowdate, startindex: $startindex, length: $length)';
   }
 
   @override
@@ -116,12 +156,17 @@ class _$ScheduleDailyRequestImpl implements _ScheduleDailyRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ScheduleDailyRequestImpl &&
-            (identical(other.nowdate, nowdate) || other.nowdate == nowdate));
+            (identical(other.idUser, idUser) || other.idUser == idUser) &&
+            (identical(other.nowdate, nowdate) || other.nowdate == nowdate) &&
+            (identical(other.startindex, startindex) ||
+                other.startindex == startindex) &&
+            (identical(other.length, length) || other.length == length));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, nowdate);
+  int get hashCode =>
+      Object.hash(runtimeType, idUser, nowdate, startindex, length);
 
   @JsonKey(ignore: true)
   @override
@@ -140,14 +185,23 @@ class _$ScheduleDailyRequestImpl implements _ScheduleDailyRequest {
 }
 
 abstract class _ScheduleDailyRequest implements ScheduleDailyRequest {
-  const factory _ScheduleDailyRequest({final String? nowdate}) =
-      _$ScheduleDailyRequestImpl;
+  const factory _ScheduleDailyRequest(
+      {final String? idUser,
+      final String? nowdate,
+      final int? startindex,
+      final int? length}) = _$ScheduleDailyRequestImpl;
 
   factory _ScheduleDailyRequest.fromJson(Map<String, dynamic> json) =
       _$ScheduleDailyRequestImpl.fromJson;
 
   @override
+  String? get idUser;
+  @override
   String? get nowdate;
+  @override
+  int? get startindex;
+  @override
+  int? get length;
   @override
   @JsonKey(ignore: true)
   _$$ScheduleDailyRequestImplCopyWith<_$ScheduleDailyRequestImpl>

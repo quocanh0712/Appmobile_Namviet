@@ -13,7 +13,7 @@ import '../../../../../data/remote/layers/network_executor.dart';
 class ScheduleDailyRepositoryImpl extends ScheduleDailyRepository {
   @override
   Future<Result<BaseResponseObject<List<ScheduleDailyResponse?>?>, NetworkError>> getScheduleDaily(
-      ScheduleDailyRequest? model) {
+      ScheduleDailyRequest? model  ) {
     return NetworkExecutor.execute<BaseResponseObject<List<ScheduleDailyResponse?>?>,
             BaseResponseObject<List<ScheduleDailyResponse?>?>>(
         route: ScheduleClient.getScheduleDaily(model),

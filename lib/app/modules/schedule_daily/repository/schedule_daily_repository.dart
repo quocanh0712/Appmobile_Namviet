@@ -8,5 +8,5 @@ import 'package:ftu_lms/data/remote/wrappers/result.dart';
 
 abstract class ScheduleDailyRepository {
   Future<Result<BaseResponseObject<List<ScheduleDailyResponse?>?>, NetworkError>> getScheduleDaily(
-      ScheduleDailyRequest? model);
+      ScheduleDailyRequest? model  );
 }

@@ -7,6 +7,8 @@ import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/utils/date_time_utils.dart';
 import 'package:get/get.dart';
 
+import '../../../../data/bean/user_object/user_object.dart';
+import '../../../../data/repositories/user_repository.dart';
 import '../model/schedule_daily_response.dart';
 
 class ScheduleDailyController extends BaseController<ScheduleDailyResponse> {
@@ -14,9 +16,15 @@ class ScheduleDailyController extends BaseController<ScheduleDailyResponse> {
   DateTime timeDaily = DateTime.now();
   var listTimeObs = List.empty(growable: true).obs;
   var listScheduleDaily = List<ScheduleDailyResponse?>.empty(growable: true).obs;
+  String idUser = "B10CCD3B-4C45-4191-A573-62EA82A84A80";
+
+  final UserRepository userRepo = Get.find();
+  UserObject? userObject;
+
 
   @override
   void onInit() {
+
     title = Get.arguments;
     listTimeObs.value = [
       LocaleKeys.AM6.tr,
@@ -53,17 +61,18 @@ class ScheduleDailyController extends BaseController<ScheduleDailyResponse> {
   }
 
   getTitle() => title;
-
+//DateTimeUtils.formatDateTime(timeDaily, dateYMD)
   void loadScheduleDaily() async {
     if (isLoading.value == true) return;
     isLoading.value = true;
     ScheduleDailyRepository repository = Get.find();
     var response = await repository.getScheduleDaily(
-        ScheduleDailyRequest(nowdate: DateTimeUtils.formatDateTime(timeDaily, dateYMD)));
+        ScheduleDailyRequest( nowdate: DateTimeUtils.formatDateTime(timeDaily, dateYMD), idUser: userObject?.iduser , startindex: 0 , length: 10 ), );
     response.when(success: (data) {
       isLoading.value = false;
       if (data.isSuccess()) {
         listScheduleDaily.value = data.result?.toList() ?? [];
+        print("-------${listScheduleDaily}");
       } else {
         listScheduleDaily.value = [];
         isError.value = data.message;

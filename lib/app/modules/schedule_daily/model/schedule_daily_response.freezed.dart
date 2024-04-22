@@ -21,12 +21,12 @@ ScheduleDailyResponse _$ScheduleDailyResponseFromJson(
 
 /// @nodoc
 mixin _$ScheduleDailyResponse {
-  DateTime? get timestart => throw _privateConstructorUsedError;
-  DateTime? get timeend => throw _privateConstructorUsedError;
+  String? get timestart => throw _privateConstructorUsedError;
+  String? get timeend => throw _privateConstructorUsedError;
   int? get id => throw _privateConstructorUsedError;
   String? get coursename => throw _privateConstructorUsedError;
   String? get roomname => throw _privateConstructorUsedError;
-  String? get lesson => throw _privateConstructorUsedError;
+  String? get lession => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,12 +41,12 @@ abstract class $ScheduleDailyResponseCopyWith<$Res> {
       _$ScheduleDailyResponseCopyWithImpl<$Res, ScheduleDailyResponse>;
   @useResult
   $Res call(
-      {DateTime? timestart,
-      DateTime? timeend,
+      {String? timestart,
+      String? timeend,
       int? id,
       String? coursename,
       String? roomname,
-      String? lesson});
+      String? lession});
 }
 
 /// @nodoc
@@ -68,17 +68,17 @@ class _$ScheduleDailyResponseCopyWithImpl<$Res,
     Object? id = freezed,
     Object? coursename = freezed,
     Object? roomname = freezed,
-    Object? lesson = freezed,
+    Object? lession = freezed,
   }) {
     return _then(_value.copyWith(
       timestart: freezed == timestart
           ? _value.timestart
           : timestart // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
       timeend: freezed == timeend
           ? _value.timeend
           : timeend // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -91,9 +91,9 @@ class _$ScheduleDailyResponseCopyWithImpl<$Res,
           ? _value.roomname
           : roomname // ignore: cast_nullable_to_non_nullable
               as String?,
-      lesson: freezed == lesson
-          ? _value.lesson
-          : lesson // ignore: cast_nullable_to_non_nullable
+      lession: freezed == lession
+          ? _value.lession
+          : lession // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -109,12 +109,12 @@ abstract class _$$ScheduleDailyResponseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {DateTime? timestart,
-      DateTime? timeend,
+      {String? timestart,
+      String? timeend,
       int? id,
       String? coursename,
       String? roomname,
-      String? lesson});
+      String? lession});
 }
 
 /// @nodoc
@@ -134,17 +134,17 @@ class __$$ScheduleDailyResponseImplCopyWithImpl<$Res>
     Object? id = freezed,
     Object? coursename = freezed,
     Object? roomname = freezed,
-    Object? lesson = freezed,
+    Object? lession = freezed,
   }) {
     return _then(_$ScheduleDailyResponseImpl(
       timestart: freezed == timestart
           ? _value.timestart
           : timestart // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
       timeend: freezed == timeend
           ? _value.timeend
           : timeend // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -157,9 +157,9 @@ class __$$ScheduleDailyResponseImplCopyWithImpl<$Res>
           ? _value.roomname
           : roomname // ignore: cast_nullable_to_non_nullable
               as String?,
-      lesson: freezed == lesson
-          ? _value.lesson
-          : lesson // ignore: cast_nullable_to_non_nullable
+      lession: freezed == lession
+          ? _value.lession
+          : lession // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -174,15 +174,15 @@ class _$ScheduleDailyResponseImpl implements _ScheduleDailyResponse {
       this.id,
       this.coursename,
       this.roomname,
-      this.lesson});
+      this.lession});
 
   factory _$ScheduleDailyResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$ScheduleDailyResponseImplFromJson(json);
 
   @override
-  final DateTime? timestart;
+  final String? timestart;
   @override
-  final DateTime? timeend;
+  final String? timeend;
   @override
   final int? id;
   @override
@@ -190,11 +190,11 @@ class _$ScheduleDailyResponseImpl implements _ScheduleDailyResponse {
   @override
   final String? roomname;
   @override
-  final String? lesson;
+  final String? lession;
 
   @override
   String toString() {
-    return 'ScheduleDailyResponse(timestart: $timestart, timeend: $timeend, id: $id, coursename: $coursename, roomname: $roomname, lesson: $lesson)';
+    return 'ScheduleDailyResponse(timestart: $timestart, timeend: $timeend, id: $id, coursename: $coursename, roomname: $roomname, lession: $lession)';
   }
 
   @override
@@ -210,13 +210,13 @@ class _$ScheduleDailyResponseImpl implements _ScheduleDailyResponse {
                 other.coursename == coursename) &&
             (identical(other.roomname, roomname) ||
                 other.roomname == roomname) &&
-            (identical(other.lesson, lesson) || other.lesson == lesson));
+            (identical(other.lession, lession) || other.lession == lession));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, timestart, timeend, id, coursename, roomname, lesson);
+      runtimeType, timestart, timeend, id, coursename, roomname, lession);
 
   @JsonKey(ignore: true)
   @override
@@ -235,20 +235,20 @@ class _$ScheduleDailyResponseImpl implements _ScheduleDailyResponse {
 
 abstract class _ScheduleDailyResponse implements ScheduleDailyResponse {
   const factory _ScheduleDailyResponse(
-      {final DateTime? timestart,
-      final DateTime? timeend,
+      {final String? timestart,
+      final String? timeend,
       final int? id,
       final String? coursename,
       final String? roomname,
-      final String? lesson}) = _$ScheduleDailyResponseImpl;
+      final String? lession}) = _$ScheduleDailyResponseImpl;
 
   factory _ScheduleDailyResponse.fromJson(Map<String, dynamic> json) =
       _$ScheduleDailyResponseImpl.fromJson;
 
   @override
-  DateTime? get timestart;
+  String? get timestart;
   @override
-  DateTime? get timeend;
+  String? get timeend;
   @override
   int? get id;
   @override
@@ -256,7 +256,7 @@ abstract class _ScheduleDailyResponse implements ScheduleDailyResponse {
   @override
   String? get roomname;
   @override
-  String? get lesson;
+  String? get lession;
   @override
   @JsonKey(ignore: true)
   _$$ScheduleDailyResponseImplCopyWith<_$ScheduleDailyResponseImpl>
