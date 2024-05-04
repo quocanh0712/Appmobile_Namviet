@@ -21,6 +21,7 @@ import '../controllers/testing_planing_controller.dart';
 
 class TestingPlaningView extends BaseView<TestingPlaningController> {
   TestingPlaningView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,8 +52,10 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
                       acceptBtPress: () => controller.loadData(),
                     );
                   },
-                  icon: Assets.images.icFilterSearch
-                      .image(width: 24, height: 24, color: context.themeExtensions.textColor),
+                  icon: Assets.images.icFilterSearch.image(
+                      width: 24,
+                      height: 24,
+                      color: context.themeExtensions.textColor),
                 )
               ],
             ),
@@ -72,14 +75,14 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       AutoSizeText(
-                        LocaleKeys.schoolYear.tr,
+                        LocaleKeys.schoolYearTitle.tr,
                         style: context.themeExtensions.paragraph
                             .copyWith(color: context.themeExtensions.textGrey),
                       ),
                       const SizedBox(width: 13),
                       Expanded(
                         child: Obx(() => AutoSizeText(
-                          controller.searchAdvance.value.year ?? "",
+                              controller.searchAdvance.value.year ?? "",
                               style: context.themeExtensions.paragraph.copyWith(
                                   color: context.themeExtensions.black),
                               textAlign: TextAlign.end,
@@ -87,7 +90,9 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
                       )
                     ],
                   ).paddingOnly(bottom: 13),
-                  Container(height: 1, color: context.themeExtensions.black.withOpacity(0.07)),
+                  Container(
+                      height: 1,
+                      color: context.themeExtensions.black.withOpacity(0.07)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -101,7 +106,7 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
                       const SizedBox(width: 13),
                       Expanded(
                         child: Obx(() => AutoSizeText(
-                          controller.searchAdvance.value.semester
+                              controller.searchAdvance.value.semester
                                       ?.toString() ??
                                   "",
                               style: context.themeExtensions.paragraph.copyWith(
@@ -111,7 +116,9 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
                       )
                     ],
                   ).paddingSymmetric(vertical: 13),
-                  Container(height: 1, color: context.themeExtensions.black.withOpacity(0.07)),
+                  Container(
+                      height: 1,
+                      color: context.themeExtensions.black.withOpacity(0.07)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -126,8 +133,8 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
                       Expanded(
                         child: Obx(() => AutoSizeText(
                               controller.userObject.value?.nganh ?? '',
-                              style: context.themeExtensions.paragraph
-                                  .copyWith(color: context.themeExtensions.black),
+                              style: context.themeExtensions.paragraph.copyWith(
+                                  color: context.themeExtensions.black),
                               textAlign: TextAlign.end,
                             )),
                       )
@@ -148,7 +155,9 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
                         children: [
                           for (var test in controller.lstTestingPlan)
                             _buildItem(context, test,
-                                isFirst: controller.lstTestingPlan.indexOf(test) == 0),
+                                isFirst:
+                                    controller.lstTestingPlan.indexOf(test) ==
+                                        0),
                           const SizedBox(height: 30),
                         ],
                       )),
@@ -173,7 +182,8 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
     );
   }
 
-  Widget _buildItem(BuildContext context, TestScheduleObject? item, {bool? isFirst = false}) {
+  Widget _buildItem(BuildContext context, TestScheduleObject? item,
+      {bool? isFirst = false}) {
     Fimber.d("buildItem()");
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
@@ -182,13 +192,17 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
       children: [
         _buildLabel(context, item),
         for (var course in item?.lstCourses ?? [])
-          _buildTestInfoItem(context, course,
-              item?.lstCourses?.indexOf(course) == (item?.lstCourses?.length ?? 0 - 1)),
+          _buildTestInfoItem(
+              context,
+              course,
+              item?.lstCourses?.indexOf(course) ==
+                  (item?.lstCourses?.length ?? 0 - 1)),
       ],
     );
   }
 
-  Widget _buildLabel(BuildContext context, TestScheduleObject? item, {bool? isFirst = false}) {
+  Widget _buildLabel(BuildContext context, TestScheduleObject? item,
+      {bool? isFirst = false}) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -198,7 +212,7 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
             ? const SizedBox(height: 10)
             : const SizedBox(height: 20),
         AutoSizeText(
-          '${item?.dayofweeks} - ${item?.date}/${item?.month}',
+          '${formatDate(item?.dayofweeks, item?.date, item?.month)}',
           style: context.themeExtensions.heading2
               .copyWith(color: context.themeExtensions.black),
         ).paddingSymmetric(horizontal: 10),
@@ -207,7 +221,43 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
     );
   }
 
-  Widget _buildTestInfoItem(BuildContext context, CourseObject? item, bool? isLast) {
+  String formatDate(String? dayOfWeek, int? date, String? month) {
+    if (dayOfWeek == null || date == null || month == null) return '';
+
+    // Chuyển đổi ngày trong tuần sang tiếng Việt
+    String vietnameseDayOfWeek = '';
+    switch (dayOfWeek) {
+      case 'Monday':
+        vietnameseDayOfWeek = 'Thứ Hai';
+        break;
+      case 'Tuesday':
+        vietnameseDayOfWeek = 'Thứ Ba';
+        break;
+      case 'Wednesday':
+        vietnameseDayOfWeek = 'Thứ Tư';
+        break;
+      case 'Thursday':
+        vietnameseDayOfWeek = 'Thứ Năm';
+        break;
+      case 'Friday':
+        vietnameseDayOfWeek = 'Thứ Sáu';
+        break;
+      case 'Saturday':
+        vietnameseDayOfWeek = 'Thứ Bảy';
+        break;
+      case 'Sunday':
+        vietnameseDayOfWeek = 'Chủ Nhật';
+        break;
+      default:
+        vietnameseDayOfWeek = dayOfWeek;
+    }
+
+    // Trả về ngày đã định dạng
+    return '$vietnameseDayOfWeek - $date/$month';
+  }
+
+  Widget _buildTestInfoItem(
+      BuildContext context, CourseObject? item, bool? isLast) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -219,9 +269,14 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Container(
-                padding: const EdgeInsets.only(top: 4),
-                width: 70,
-                child: AutoSizeText('${item?.time?.replaceAll(RegExp(r' - '), '\n')}')),
+              padding: const EdgeInsets.only(top: 4),
+              width: 70,
+              // child:
+              // // AutoSizeText(
+              // //     '${item?.time?.replaceAll(RegExp(r' - '), '\n')}'),
+              // AutoSizeText(
+              //     '123'),
+            ),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -239,6 +294,11 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       AutoSizeText(
+                        LocaleKeys.bull.tr,
+                        style: context.themeExtensions.subTexMedium.copyWith(
+                            color: context.themeExtensions.lightSilver),
+                      ),
+                      AutoSizeText(
                         '${LocaleKeys.idNumber.tr}: ',
                         style: context.themeExtensions.subTexMedium
                             .copyWith(color: context.themeExtensions.textGrey),
@@ -248,10 +308,14 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
                         style: context.themeExtensions.subTexMedium
                             .copyWith(color: context.themeExtensions.black),
                       ),
+                    ],
+                  ),
+                  Row(
+                    children: [
                       AutoSizeText(
                         LocaleKeys.bull.tr,
-                        style: context.themeExtensions.subTexMedium
-                            .copyWith(color: context.themeExtensions.lightSilver),
+                        style: context.themeExtensions.subTexMedium.copyWith(
+                            color: context.themeExtensions.lightSilver),
                       ),
                       AutoSizeText(
                         '${LocaleKeys.location.tr}: ',
@@ -262,7 +326,7 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
                         item?.roomname ?? '',
                         style: context.themeExtensions.subTexMedium
                             .copyWith(color: context.themeExtensions.black),
-                      )
+                      ),
                     ],
                   ),
                   Row(
@@ -270,6 +334,11 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisSize: MainAxisSize.max,
                     children: [
+                      AutoSizeText(
+                        LocaleKeys.bull.tr,
+                        style: context.themeExtensions.subTexMedium.copyWith(
+                            color: context.themeExtensions.lightSilver),
+                      ),
                       AutoSizeText(
                         '${LocaleKeys.learningTime.tr}: ',
                         style: context.themeExtensions.subTexMedium
@@ -280,10 +349,14 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
                         style: context.themeExtensions.subTexMedium
                             .copyWith(color: context.themeExtensions.black),
                       ),
+                    ],
+                  ),
+                  Row(
+                    children: [
                       AutoSizeText(
                         LocaleKeys.bull.tr,
-                        style: context.themeExtensions.subTexMedium
-                            .copyWith(color: context.themeExtensions.lightSilver),
+                        style: context.themeExtensions.subTexMedium.copyWith(
+                            color: context.themeExtensions.lightSilver),
                       ),
                       AutoSizeText(
                         '${LocaleKeys.testingTime.tr}: ',
@@ -294,6 +367,101 @@ class TestingPlaningView extends BaseView<TestingPlaningController> {
                         item?.examTime?.toString() ?? '',
                         style: context.themeExtensions.subTexMedium
                             .copyWith(color: context.themeExtensions.black),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      AutoSizeText(
+                        LocaleKeys.bull.tr,
+                        style: context.themeExtensions.subTexMedium.copyWith(
+                            color: context.themeExtensions.lightSilver),
+                      ),
+                      AutoSizeText(
+                        '${LocaleKeys.testTime.tr}: ',
+                        style: context.themeExtensions.subTexMedium
+                            .copyWith(color: context.themeExtensions.textGrey),
+                      ),
+                      AutoSizeText(
+                        item?.time?.toString() ?? '',
+                        style: context.themeExtensions.subTexMedium
+                            .copyWith(color: context.themeExtensions.black),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      AutoSizeText(
+                        LocaleKeys.bull.tr,
+                        style: context.themeExtensions.subTexMedium.copyWith(
+                            color: context.themeExtensions.lightSilver),
+                      ),
+                      AutoSizeText(
+                        '${LocaleKeys.testDuringTime.tr}: ',
+                        style: context.themeExtensions.subTexMedium
+                            .copyWith(color: context.themeExtensions.textGrey),
+                      ),
+                      AutoSizeText(
+                        '${item?.duringtime?.toString()} phút' ?? '',
+                        style: context.themeExtensions.subTexMedium
+                            .copyWith(color: context.themeExtensions.black),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      AutoSizeText(
+                        LocaleKeys.bull.tr,
+                        style: context.themeExtensions.subTexMedium.copyWith(
+                            color: context.themeExtensions.lightSilver),
+                      ),
+                      AutoSizeText(
+                        '${LocaleKeys.testMethod.tr}: ',
+                        style: context.themeExtensions.subTexMedium
+                            .copyWith(color: context.themeExtensions.textGrey),
+                      ),
+                      AutoSizeText(
+                        item?.teachingmethod?.toString() ?? '',
+                        style: context.themeExtensions.subTexMedium
+                            .copyWith(color: context.themeExtensions.black),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      AutoSizeText(
+                        LocaleKeys.bull.tr,
+                        style: context.themeExtensions.subTexMedium.copyWith(
+                            color: context.themeExtensions.lightSilver),
+                      ),
+                      AutoSizeText(
+                        '${LocaleKeys.testDate.tr}: ',
+                        style: context.themeExtensions.subTexMedium
+                            .copyWith(color: context.themeExtensions.textGrey),
+                      ),
+                      AutoSizeText(
+                        item?.ngayThi?.toString() ?? '',
+                        style: context.themeExtensions.subTexMedium
+                            .copyWith(color: context.themeExtensions.red),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      AutoSizeText(
+                        LocaleKeys.bull.tr,
+                        style: context.themeExtensions.subTexMedium.copyWith(
+                            color: context.themeExtensions.lightSilver),
+                      ),
+                      AutoSizeText(
+                        '${LocaleKeys.testNote.tr}: ',
+                        style: context.themeExtensions.subTexMedium
+                            .copyWith(color: context.themeExtensions.textGrey),
+                      ),
+                      AutoSizeText(
+                        item?.note?.toString() ?? '',
+                        style: context.themeExtensions.subTexMedium
+                            .copyWith(color: context.themeExtensions.red),
                       )
                     ],
                   ),

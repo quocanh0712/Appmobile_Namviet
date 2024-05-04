@@ -225,6 +225,10 @@ class HomeController extends BaseController {
     }
     Get.toNamed(Routes.SCHEDULE_TIME, arguments: title);
   }
+  navigateToTestingPlaning() {
+    Fimber.d("navigateToTestingPlaning()");
+    Get.toNamed(Routes.TESTING_PLANING);
+  }
 
 
   navigateToExamSchedule() {
@@ -284,6 +288,7 @@ class HomeController extends BaseController {
     Fimber.d("navigateToEducationProgram()");
     Get.toNamed(Routes.EDUCATION_PROGRAM);
   }
+
 
   navigateToWorkingProcess() {
     Fimber.d("navigateToWorkingProcess()");

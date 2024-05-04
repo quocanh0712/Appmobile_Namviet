@@ -9,6 +9,7 @@ import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ftu_lms/app/modules/activity/bindings/activity_binding.dart';
 import 'package:ftu_lms/app/modules/activity/views/activity_view.dart';
 import 'package:ftu_lms/app/modules/appInformation/bindings/app_information_binding.dart';
@@ -58,95 +59,99 @@ class _DashboardViewState extends State<DashboardView> {
         usePageController(keepPage: true, initialPage: homeTabIndex);
     return WillPopScope(
       onWillPop: () => _showExitPopup(context),
-      child: Stack(
-        children: [
-          Scaffold(
-            extendBody: true,
-            body: PageView(
-              controller: pageController,
-              physics: const NeverScrollableScrollPhysics(),
-              onPageChanged: (index) {
-                _updateCurrentTabIndex(index);
-                _setupQRScannerCamera(index);
-                _changeSystemStatusBarIconColor(index);
-              },
-              children: <Widget>[
-                KeepAliveWidget(
-                    child: HomeView(
-                  bindingCreator: () => HomeBinding(),
-                  pageController: pageController,
-                )),
-                KeepAliveWidget(child: ChatView(bindingCreator: () => ChatBinding())),
-                // KeepAliveWidget(
-                //   safeAreaTop: true,
-                //   child: NotificationView(
-                //       bindingCreator: () => NotificationBinding()),
-                // ),
-                KeepAliveWidget(child: CheckinView(key: checkinGlobalKey)),
-                // KeepAliveWidget(
-                //     child: AppInformationView(
-                //         bindingCreator: () => AppInformationBinding())),
-                KeepAliveWidget(
-                    child: ActivityView(
-                        bindingCreator: () => ActivityBinding())),
-                KeepAliveWidget(
-                    child:
-                        PersonalView(bindingCreator: () => PersonalBinding())),
-              ],
+      child: ScreenUtilInit(
+        child: Stack(
+          children: [
+            Scaffold(
+              backgroundColor: Colors.transparent,
+              extendBody: true,
+              body: PageView(
+                controller: pageController,
+                physics: const NeverScrollableScrollPhysics(),
+                onPageChanged: (index) {
+                  _updateCurrentTabIndex(index);
+                  _setupQRScannerCamera(index);
+                  _changeSystemStatusBarIconColor(index);
+                },
+                children: <Widget>[
+                  KeepAliveWidget(
+                      child: HomeView(
+                    bindingCreator: () => HomeBinding(),
+                    pageController: pageController,
+                  )),
+                  KeepAliveWidget(child: ChatView(bindingCreator: () => ChatBinding())),
+                  // KeepAliveWidget(
+                  //   safeAreaTop: true,
+                  //   child: NotificationView(
+                  //       bindingCreator: () => NotificationBinding()),
+                  // ),
+                  KeepAliveWidget(child: CheckinView(key: checkinGlobalKey)),
+                  // KeepAliveWidget(
+                  //     child: AppInformationView(
+                  //         bindingCreator: () => AppInformationBinding())),
+                  KeepAliveWidget(
+                      child: ActivityView(
+                          bindingCreator: () => ActivityBinding())),
+                  KeepAliveWidget(
+                      child:
+                          PersonalView(bindingCreator: () => PersonalBinding())),
+                ],
+              ),
+              floatingActionButton: InkWell(
+                child: Assets.images.icCheckin
+                    .image(width: 56, height: 56, fit: BoxFit.cover),
+                onTap: () {
+                  pageController.jumpToPage(checkInTabIndex);
+                },
+              ),
+              floatingActionButtonLocation:
+                  FloatingActionButtonLocation.centerDocked,
+              bottomNavigationBar: buildBottomNavigationBar(context),
             ),
-            floatingActionButton: InkWell(
-              child: Assets.images.icCheckin
-                  .image(width: 56, height: 56, fit: BoxFit.cover),
-              onTap: () {
-                pageController.jumpToPage(checkInTabIndex);
-              },
-            ),
-            floatingActionButtonLocation:
-                FloatingActionButtonLocation.centerDocked,
-            bottomNavigationBar: buildBottomNavigationBar(context),
-          ),
-          SafeArea(
-            bottom: true,
-            child: Align(
-              alignment: FractionalOffset.bottomCenter,
-              child: Material(
-                color: Colors.transparent,
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () {
-                    pageController.jumpToPage(checkInTabIndex);
-                  },
-                  child: Obx(() => Container(
-                        padding: const EdgeInsets.only(top: 33, bottom: 6),
-                        child: AutoSizeText(
-                          LocaleKeys.qrCode.tr,
-                          maxLines: 1,
-                          style: GoogleFonts.roboto(
-                              decoration: TextDecoration.none,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color:
-                                  (dashboardController.currentTabIndex.value ==
-                                          -1)
-                                      ? LMSColors.mainGreen
-                                      : LMSColors.textGrey),
-                        ),
-                      )),
+            SafeArea(
+              bottom: true,
+              child: Align(
+                alignment: FractionalOffset.bottomCenter,
+                child: Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    splashColor: Colors.transparent,
+                    focusColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    onTap: () {
+                      pageController.jumpToPage(checkInTabIndex);
+                    },
+                    child: Obx(() => Container(
+                          padding:  EdgeInsets.only(top: 20.h, bottom: 0),
+                          child: AutoSizeText(
+                            LocaleKeys.qrCode.tr,
+                            maxLines: 1,
+                            style: GoogleFonts.roboto(
+                                decoration: TextDecoration.none,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
+                                color:
+                                    (dashboardController.currentTabIndex.value ==
+                                            -1)
+                                        ? LMSColors.mainGreen
+                                        : LMSColors.textGrey),
+                          ),
+                        )),
+                  ),
                 ),
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }
 
   buildBottomNavigationBar(BuildContext context) {
     return Obx(() => AnimatedBottomNavigationBar.builder(
-          height: 68,
+
+          height: 58,
           itemCount: botNavItems.length,
           tabBuilder: (int index, bool isActive) {
             final botNavItem = botNavItems[index];
@@ -156,7 +161,7 @@ class _DashboardViewState extends State<DashboardView> {
                     : botNavItem.inactiveColor;
             return Column(
               mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Stack(
                   children: [
@@ -206,13 +211,14 @@ class _DashboardViewState extends State<DashboardView> {
               ],
             );
           },
-          backgroundColor: Colors.white54,
+          backgroundColor: Colors.white,
           activeIndex: dashboardController.currentTabIndex.value,
           splashSpeedInMilliseconds: 68,
           notchSmoothness: NotchSmoothness.defaultEdge,
           gapLocation: GapLocation.center,
-          leftCornerRadius: 20,
-          rightCornerRadius: 20,
+          leftCornerRadius: 30,
+          rightCornerRadius: 30,
+
 
 
           onTap: (index) => {
@@ -223,7 +229,7 @@ class _DashboardViewState extends State<DashboardView> {
 
           },
           shadow: BoxShadow(
-            color: Colors.white.withOpacity(0.5),
+            color: Colors.black87,
             spreadRadius: 5,
             blurRadius: 7,
             offset: const Offset(0, 3), // changes position of shadow

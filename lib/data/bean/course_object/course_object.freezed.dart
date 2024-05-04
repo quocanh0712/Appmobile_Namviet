@@ -36,7 +36,11 @@ mixin _$CourseObject {
   int? get examTime => throw _privateConstructorUsedError;
   int? get examination => throw _privateConstructorUsedError;
   String? get time => throw _privateConstructorUsedError;
-  dynamic get teachingmethod => throw _privateConstructorUsedError;
+  String? get teachingmethod => throw _privateConstructorUsedError;
+  @JsonKey(name: 'ngay_thi')
+  String? get ngayThi => throw _privateConstructorUsedError;
+  String? get note => throw _privateConstructorUsedError;
+  String? get duringtime => throw _privateConstructorUsedError;
   dynamic get status => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -66,7 +70,10 @@ abstract class $CourseObjectCopyWith<$Res> {
       int? examTime,
       int? examination,
       String? time,
-      dynamic teachingmethod,
+      String? teachingmethod,
+      @JsonKey(name: 'ngay_thi') String? ngayThi,
+      String? note,
+      String? duringtime,
       dynamic status});
 }
 
@@ -98,6 +105,9 @@ class _$CourseObjectCopyWithImpl<$Res, $Val extends CourseObject>
     Object? examination = freezed,
     Object? time = freezed,
     Object? teachingmethod = freezed,
+    Object? ngayThi = freezed,
+    Object? note = freezed,
+    Object? duringtime = freezed,
     Object? status = freezed,
   }) {
     return _then(_value.copyWith(
@@ -160,7 +170,19 @@ class _$CourseObjectCopyWithImpl<$Res, $Val extends CourseObject>
       teachingmethod: freezed == teachingmethod
           ? _value.teachingmethod
           : teachingmethod // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
+      ngayThi: freezed == ngayThi
+          ? _value.ngayThi
+          : ngayThi // ignore: cast_nullable_to_non_nullable
+              as String?,
+      note: freezed == note
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as String?,
+      duringtime: freezed == duringtime
+          ? _value.duringtime
+          : duringtime // ignore: cast_nullable_to_non_nullable
+              as String?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -192,7 +214,10 @@ abstract class _$$CourseObjectImplCopyWith<$Res>
       int? examTime,
       int? examination,
       String? time,
-      dynamic teachingmethod,
+      String? teachingmethod,
+      @JsonKey(name: 'ngay_thi') String? ngayThi,
+      String? note,
+      String? duringtime,
       dynamic status});
 }
 
@@ -222,6 +247,9 @@ class __$$CourseObjectImplCopyWithImpl<$Res>
     Object? examination = freezed,
     Object? time = freezed,
     Object? teachingmethod = freezed,
+    Object? ngayThi = freezed,
+    Object? note = freezed,
+    Object? duringtime = freezed,
     Object? status = freezed,
   }) {
     return _then(_$CourseObjectImpl(
@@ -284,7 +312,19 @@ class __$$CourseObjectImplCopyWithImpl<$Res>
       teachingmethod: freezed == teachingmethod
           ? _value.teachingmethod
           : teachingmethod // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
+      ngayThi: freezed == ngayThi
+          ? _value.ngayThi
+          : ngayThi // ignore: cast_nullable_to_non_nullable
+              as String?,
+      note: freezed == note
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as String?,
+      duringtime: freezed == duringtime
+          ? _value.duringtime
+          : duringtime // ignore: cast_nullable_to_non_nullable
+              as String?,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -312,6 +352,9 @@ class _$CourseObjectImpl implements _CourseObject {
       this.examination,
       this.time,
       this.teachingmethod,
+      @JsonKey(name: 'ngay_thi') this.ngayThi,
+      this.note,
+      this.duringtime,
       this.status});
 
   factory _$CourseObjectImpl.fromJson(Map<String, dynamic> json) =>
@@ -348,13 +391,20 @@ class _$CourseObjectImpl implements _CourseObject {
   @override
   final String? time;
   @override
-  final dynamic teachingmethod;
+  final String? teachingmethod;
+  @override
+  @JsonKey(name: 'ngay_thi')
+  final String? ngayThi;
+  @override
+  final String? note;
+  @override
+  final String? duringtime;
   @override
   final dynamic status;
 
   @override
   String toString() {
-    return 'CourseObject(id: $id, coursename: $coursename, numbercredits: $numbercredits, numberlession: $numberlession, coefficient: $coefficient, gpaPoint: $gpaPoint, roomname: $roomname, timestart: $timestart, timeend: $timeend, lession: $lession, identificationnumber: $identificationnumber, examTime: $examTime, examination: $examination, time: $time, teachingmethod: $teachingmethod, status: $status)';
+    return 'CourseObject(id: $id, coursename: $coursename, numbercredits: $numbercredits, numberlession: $numberlession, coefficient: $coefficient, gpaPoint: $gpaPoint, roomname: $roomname, timestart: $timestart, timeend: $timeend, lession: $lession, identificationnumber: $identificationnumber, examTime: $examTime, examination: $examination, time: $time, teachingmethod: $teachingmethod, ngayThi: $ngayThi, note: $note, duringtime: $duringtime, status: $status)';
   }
 
   @override
@@ -386,31 +436,39 @@ class _$CourseObjectImpl implements _CourseObject {
             (identical(other.examination, examination) ||
                 other.examination == examination) &&
             (identical(other.time, time) || other.time == time) &&
-            const DeepCollectionEquality()
-                .equals(other.teachingmethod, teachingmethod) &&
+            (identical(other.teachingmethod, teachingmethod) ||
+                other.teachingmethod == teachingmethod) &&
+            (identical(other.ngayThi, ngayThi) || other.ngayThi == ngayThi) &&
+            (identical(other.note, note) || other.note == note) &&
+            (identical(other.duringtime, duringtime) ||
+                other.duringtime == duringtime) &&
             const DeepCollectionEquality().equals(other.status, status));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      coursename,
-      numbercredits,
-      numberlession,
-      coefficient,
-      gpaPoint,
-      roomname,
-      timestart,
-      timeend,
-      const DeepCollectionEquality().hash(lession),
-      identificationnumber,
-      examTime,
-      examination,
-      time,
-      const DeepCollectionEquality().hash(teachingmethod),
-      const DeepCollectionEquality().hash(status));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        id,
+        coursename,
+        numbercredits,
+        numberlession,
+        coefficient,
+        gpaPoint,
+        roomname,
+        timestart,
+        timeend,
+        const DeepCollectionEquality().hash(lession),
+        identificationnumber,
+        examTime,
+        examination,
+        time,
+        teachingmethod,
+        ngayThi,
+        note,
+        duringtime,
+        const DeepCollectionEquality().hash(status)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -442,7 +500,10 @@ abstract class _CourseObject implements CourseObject {
       final int? examTime,
       final int? examination,
       final String? time,
-      final dynamic teachingmethod,
+      final String? teachingmethod,
+      @JsonKey(name: 'ngay_thi') final String? ngayThi,
+      final String? note,
+      final String? duringtime,
       final dynamic status}) = _$CourseObjectImpl;
 
   factory _CourseObject.fromJson(Map<String, dynamic> json) =
@@ -479,7 +540,14 @@ abstract class _CourseObject implements CourseObject {
   @override
   String? get time;
   @override
-  dynamic get teachingmethod;
+  String? get teachingmethod;
+  @override
+  @JsonKey(name: 'ngay_thi')
+  String? get ngayThi;
+  @override
+  String? get note;
+  @override
+  String? get duringtime;
   @override
   dynamic get status;
   @override

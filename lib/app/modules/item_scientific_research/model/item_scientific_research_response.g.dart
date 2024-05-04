@@ -1,11 +1,6 @@
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'item_scientific_research_response.dart';
-
-// **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
 
 ItemScientificResearchResponse? jsonToNullableItemScientificResearchResponse(
     Object? json) =>

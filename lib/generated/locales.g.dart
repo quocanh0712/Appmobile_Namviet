@@ -455,11 +455,29 @@ class LocaleKeys {
   static const scienceTopic = 'scienceTopic';
   static const memberTopic = 'memberTopic';
 
+  static const  courseManagement = 'courseManagement';
+  static const listCourse = 'listCourse';
+  static const docsManagement = 'docsManagement';
+  static const testDate = 'testDate';
+  static const testTime = 'testTime';
+  static const testDuringTime = 'testDuringTime';
+  static const testMethod = 'testMethod';
+  static const testNote = 'testNote';
+
+
 
 }
 
 class Locales {
   static const vn_VI = {
+    'testMethod' : 'Hình thức thi',
+    'testNote' : 'Ghi chú',
+    'testDuringTime' : 'Thời gian làm bài',
+    'testTime' : 'Thời gian thi',
+    'testDate' : 'Ngày thi',
+    'docsManagement' : 'Tài liệu',
+    'listCourse' : 'Danh sách khoá học',
+    'courseManagement' : 'Quản lý khoá học',
     'domesticNews' : 'Báo trong nước',
     'internationalNews' : 'Báo quốc tế',
     'scienceTopic' : 'Đề tài khoa học',
@@ -649,7 +667,7 @@ class Locales {
     'summary': 'Tổng kết',
     'rank': 'Xếp hạng',
     'theSubjectFailsWarning': '(*) Chưa hoàn thành tín chỉ cho môn học đó',
-    'testingPlan': 'Kế hoạch thi',
+    'testingPlan': 'Lịch thi',
     'semester': 'Học kì',
     'major': 'Ngành học',
     'idNumber': 'SBD',
@@ -903,7 +921,14 @@ class Locales {
     'incomingName': 'Họ tên',
   };
   static const en_US = {
-
+    'testMethod' : 'Hình thức thi',
+    'testNote' : 'Ghi chú',
+    'testDuringTime' : 'Thời gian làm bài',
+    'testTime' : 'Thời gian thi',
+    'testDate' : 'Ngày thi',
+    'docsManagement' : 'Tài liệu',
+    'listCourse' : 'Danh sách khoá học',
+    'courseManagement' : 'Quản lý khoá học',
     'domesticNews' : 'Báo trong nước',
     'internationalNews' : 'Báo quốc tế',
     'scienceTopic' : 'Đề tài khoa học',
@@ -1091,7 +1116,7 @@ class Locales {
     'summary': 'Tổng kết',
     'rank': 'Xếp hạng',
     'theSubjectFailsWarning': '(*) Chưa hoàn thành tín chỉ cho môn học đó',
-    'testingPlan': 'Kế hoạch thi',
+    'testingPlan': 'Lịch thi',
     'semester': 'Học kì',
     'major': 'Ngành học',
     'idNumber': 'SBD',

@@ -13,6 +13,8 @@ _$ScheduleDailyRequestImpl _$$ScheduleDailyRequestImplFromJson(
       nowdate: json['nowdate'] as String?,
       startindex: json['startindex'] as int?,
       length: json['length'] as int?,
+      weeksOfYear: json['weeksOfYear'] as int?,
+      year: json['year'] as String?,
     );
 
 Map<String, dynamic> _$$ScheduleDailyRequestImplToJson(
@@ -22,4 +24,6 @@ Map<String, dynamic> _$$ScheduleDailyRequestImplToJson(
       'nowdate': instance.nowdate,
       'startindex': instance.startindex,
       'length': instance.length,
+      'weeksOfYear': instance.weeksOfYear,
+      'year': instance.year,
     };

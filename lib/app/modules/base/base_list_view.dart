@@ -22,6 +22,8 @@ abstract class BaseListView<C extends BaseListController> extends BaseAppBarView
                   headerExpand(),
                   Expanded(
                     child: Obx(() => ListView.builder(
+
+                      shrinkWrap: true,
                       padding: EdgeInsets.zero,
                       itemCount: controller.getDataLength(),
                       // Add one more item for progress indicator

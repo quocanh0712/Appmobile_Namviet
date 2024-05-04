@@ -1,4 +1,4 @@
-package com.namvietjsc.ufll
+package com.namvietjsc.ufllive
 
 import android.os.Bundle
 import io.flutter.embedding.android.FlutterFragmentActivity

@@ -12,6 +12,7 @@ part 'schedule_time_response.g.dart';
 @genJsonT4ThisOne
 abstract class ScheduleTimeResponse with _$ScheduleTimeResponse {
   const factory ScheduleTimeResponse({
+    String? weeksOfYear,
     DateTime? date,
     List<CourseItem>? listcourse,
   }) = _ScheduleTimeResponse;
@@ -31,9 +32,10 @@ abstract class CourseItem with _$CourseItem {
     int? gpaPoint,
     int? gpa,
     String? roomname,
-    DateTime? timestart,
-    DateTime? timeend,
+    String? timestart,
+    String? timeend,
     String? lession,
+    String? dayofweeks,
     int? rank,
   }) = _CourseItem;
 

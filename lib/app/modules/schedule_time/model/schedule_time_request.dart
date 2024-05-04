@@ -25,10 +25,13 @@ String scheduleTimeRequestToJson(ScheduleTimeRequest data) => json.encode(data.t
 class ScheduleTimeRequest with _$ScheduleTimeRequest {
   const factory ScheduleTimeRequest({
     String? year,
+    String? nowdate,
+    int? weeksOfYear,
     int? semester,
     int? session,
     int? startindex,
     int? length,
+    String? idUser,
   }) = _ScheduleTimeRequest;
 
   factory ScheduleTimeRequest.fromJson(Map<String, dynamic> json) =>

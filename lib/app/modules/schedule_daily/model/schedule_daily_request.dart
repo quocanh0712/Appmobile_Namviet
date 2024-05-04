@@ -24,6 +24,8 @@ class ScheduleDailyRequest with _$ScheduleDailyRequest {
     String? nowdate,
     int? startindex,
     int? length,
+    int? weeksOfYear,
+    String? year,
   }) = _ScheduleDailyRequest;
 
   factory ScheduleDailyRequest.fromJson(Map<String, dynamic> json) =>

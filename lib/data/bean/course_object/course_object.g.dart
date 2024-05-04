@@ -23,7 +23,10 @@ _$CourseObjectImpl _$$CourseObjectImplFromJson(Map<String, dynamic> json) =>
       examTime: json['examTime'] as int?,
       examination: json['examination'] as int?,
       time: json['time'] as String?,
-      teachingmethod: json['teachingmethod'],
+      teachingmethod: json['teachingmethod'] as String?,
+      ngayThi: json['ngay_thi'] as String?,
+      note: json['note'] as String?,
+      duringtime: json['duringtime'] as String?,
       status: json['status'],
     );
 
@@ -44,5 +47,8 @@ Map<String, dynamic> _$$CourseObjectImplToJson(_$CourseObjectImpl instance) =>
       'examination': instance.examination,
       'time': instance.time,
       'teachingmethod': instance.teachingmethod,
+      'ngay_thi': instance.ngayThi,
+      'note': instance.note,
+      'duringtime': instance.duringtime,
       'status': instance.status,
     };

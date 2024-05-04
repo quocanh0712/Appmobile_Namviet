@@ -1,4 +1,3 @@
-
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'conversation_response.dart';
@@ -23,6 +22,7 @@ List<ConversationResponse> jsonToListConversationResponses(Object? json) =>
     List<Object>.from(json as List)
         .map((e) => ConversationResponse.fromJson(e as Map<String, dynamic>))
         .toList();
+
 
 // **************************************************************************
 // JsonSerializableGenerator

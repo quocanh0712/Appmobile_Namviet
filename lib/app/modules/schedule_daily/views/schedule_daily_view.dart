@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/app/modules/schedule_daily/model/schedule_daily_response.dart';
 import 'package:ftu_lms/generated/assets.gen.dart';
@@ -21,7 +22,7 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
   ScheduleDailyView({Key? key}) : super(key: key);
 
   final double marginItem = 60;
-  final String idUser = "B10CCD3B-4C45-4191-A573-62EA82A84A80";
+
 
 
   @override
@@ -50,10 +51,10 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
                 // ),
                 boxShadow:  [
                   BoxShadow(
-                    color: Colors.grey.shade300,
+                    color: Colors.grey,
                     spreadRadius: 1,
                     blurRadius: 1,
-                    offset: Offset(0, 0), // changes position of shadow
+                    offset: Offset(0, 5), // changes position of shadow
                   ),
                 ]),
             child: Column(
@@ -141,7 +142,7 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
           const SizedBox(
             height: 20,
           ),
-          Container(
+          Padding(
             padding: const EdgeInsets.only(left: 20, right: 12),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -203,175 +204,95 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
     if (controller.listScheduleDaily.isEmpty) {
       return Container();
     }
-    // Lấy danh sách các phần tử từ danh sách quan sát và chuyển thành danh sách cố định
+
     var listItem = controller.listScheduleDaily.toList();
-    return Expanded(child:
+    return Column(
+      children: [
         ListView.builder(
           physics: NeverScrollableScrollPhysics(),
             padding: EdgeInsets.zero,
           shrinkWrap: true,
             itemCount: listItem?.length,
             itemBuilder: (context, index){
-
-          return Column(
-            children: [
-              Row(
-                children: [
-                  Container(
-                    height: 20,
-                    width: 20,
-                    
-                    decoration: BoxDecoration(
-                      color: tramColors[index],
-                      borderRadius: BorderRadius.circular(20),
-                        boxShadow:  [
-                          BoxShadow(
-                            color: tramColors[index],
-                            spreadRadius: 1,
-                            blurRadius: 6,
-                            offset: Offset(0, 0), // changes position of shadow
-                          ),
-                        ]
-                    ),
-                  ),
-                  SizedBox(width: 20,),
-                  Text("${formatTime(listItem[0]?.timestart)} - ${formatTime(listItem[0]?.timeend)}", style: GoogleFonts.openSans(fontSize: 22, color: Colors.grey.shade600, fontWeight: FontWeight.w600),),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 9),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+          return ScreenUtilInit(
+            child: Column(
+              children: [
+                Row(
                   children: [
                     Container(
-                      height: 200,
-                      width: 2,
-                      color: Colors.grey.shade600,
-                    ),
-                    SizedBox(width: 20,),
-                    Container(
-                      height: 125,
-                      width: 360,
+                      height: 20,
+                      width: 20,
+
                       decoration: BoxDecoration(
                         color: tramColors[index],
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(20),
                           boxShadow:  [
                             BoxShadow(
-                              color: Colors.black38,
+                              color: tramColors[index],
                               spreadRadius: 1,
-                              blurRadius: 3,
-                              offset: Offset(2, 2), // changes position of shadow
+                              blurRadius: 6,
+                              offset: Offset(0, 0), // changes position of shadow
                             ),
                           ]
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 5.0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(height: 8,),
-                            Text("${listItem[index]?.coursename}", style: GoogleFonts.openSans(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w700),),
-                            Text("${listItem[index]?.roomname}", style: GoogleFonts.openSans(fontSize: 16, color: Colors.white, fontWeight: FontWeight.w600),),
-                          ],
-                        ),
-                      ),
-                    )
-
+                    ),
+                    SizedBox(width: 20,),
+                    //${formatTime(listItem[0]?.timestart)} - ${formatTime(listItem[0]?.timeend)}
+                    Text("${formatTime(listItem[index]?.timestart)} - ${formatTime(listItem[index]?.timeend)}", style: GoogleFonts.openSans(fontSize: 19.sp, color: Colors.grey.shade600, fontWeight: FontWeight.w600),),
                   ],
                 ),
-              )
-            ],
+                Padding(
+                  padding: const EdgeInsets.only(left: 9),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 200,
+                        width: 2,
+                        color: Colors.grey.shade600,
+                      ),
+                      SizedBox(width: 20,),
+                      Container(
+                        height: 125.h,
+                        width: 300.w,
+                        decoration: BoxDecoration(
+                          color: tramColors[index],
+                          borderRadius: BorderRadius.circular(10),
+                            boxShadow:  [
+                              BoxShadow(
+                                color: Colors.black38,
+                                spreadRadius: 1,
+                                blurRadius: 3,
+                                offset: Offset(2, 2), // changes position of shadow
+                              ),
+                            ]
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 5.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(height: 8,),
+                              Text("${listItem[index]?.coursename}", style: GoogleFonts.openSans(fontSize: 16.sp, color: Colors.white, fontWeight: FontWeight.w700), maxLines: 2,),
+                              Text("${listItem[index]?.roomname}", style: GoogleFonts.openSans(fontSize: 14.sp, color: Colors.white, fontWeight: FontWeight.w600),),
+                            ],
+                          ),
+                        ),
+                      )
+
+                    ],
+                  ),
+                )
+              ],
+            ),
           );
-        })
-
-
+        }),
+      ],
     );
 
   }
 
-  // return Column(
-  // children: [
-  // Container(
-  // decoration: BoxDecoration(
-  // borderRadius: BorderRadius.circular(8),
-  // color: Colors.blue,
-  // boxShadow: const [
-  // BoxShadow(
-  // color: Colors.black12,
-  // spreadRadius: 1,
-  // blurRadius: 10,
-  // offset: Offset(0, 4), // changes position of shadow
-  // ),
-  // ]),
-  // height: 150,
-  // padding:
-  // const EdgeInsets.only(left: 14, right: 14, top: 10, bottom: 10),
-  // child: SingleChildScrollView(
-  // child: Column(children: [
-  // Align(
-  // alignment: Alignment.centerLeft,
-  // child: Text(
-  // listItem.isNotEmpty
-  // ? listItem[0]?.coursename ?? Constants.EMPTY
-  //     : Constants.EMPTY,
-  // textAlign: TextAlign.start,
-  // style: GoogleFonts.notoSansKhojki(
-  // fontSize: 16,
-  // color: Colors.white,
-  // fontWeight: FontWeight.bold),
-  // ),
-  // ),
-  // const SizedBox(height: 2),
-  // Align(
-  // alignment: Alignment.centerLeft,
-  // child: Text(
-  // Utils.getNotEmptyValue([
-  // listItem.isNotEmpty ? listItem[0]?.lession : null,
-  // listItem.isNotEmpty
-  // ? "${formatTime(listItem[0]?.timestart)} - ${formatTime(listItem[0]?.timeend)}"
-  //     : null,
-  // ]),
-  // textAlign: TextAlign.start,
-  // style: GoogleFonts.notoSansKhojki(
-  // fontSize: 15,
-  // color: Colors.white,
-  // fontWeight: FontWeight.w600),
-  // ),
-  // ),
-  // const SizedBox(height: 2),
-  // Align(
-  // alignment: Alignment.centerLeft,
-  // child: Text(
-  // listItem.isNotEmpty
-  // ? listItem[0]?.roomname ?? Constants.EMPTY
-  //     : Constants.EMPTY,
-  // textAlign: TextAlign.start,
-  // style: GoogleFonts.notoSansKhojki(
-  // fontSize: 13,
-  // color: Colors.white,
-  // fontWeight: FontWeight.w600),
-  // ),
-  // ),
-  // ]),
-  // ),
-  // ),
-  // ],
-  // );
 
-
-
-  // String formatTime(String? timeString) {
-  //   if (timeString == null) return '';
-  //   List<String> parts = timeString.split(' ');
-  //   if (parts.length >= 2) {
-  //     String timePart = parts[1];
-  //     List<String> timeParts = timePart.split(':');
-  //     if (timeParts.length >= 2) {
-  //       return '${timeParts[0]}:${timeParts[1]}'; // Trả về giờ:phút
-  //     }
-  //   }
-  //   return '';
-  // }
 
   String formatTime(String? timeString) {
     if (timeString == null) return '';
@@ -384,112 +305,6 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
     return '';
   }
 
-  // Widget scheduleDaily() {
-  //   var listItemSchedule = controller.listScheduleDaily.map((element) {
-  //     if (element == null) return Container();
-  //     // double marginStart = calculateMarginStartTop(element.timestart) + 10;
-  //     // double marginEnd = calculateMarginEndTop(element.timeend) + 10;
-  //     double marginStart = 10;
-  //     double marginEnd = 10;
-  //     if (marginStart >= marginEnd) return Container(
-  //     );
-  //     return Column(
-  //       children: [
-  //         SizedBox(height: 150),
-  //         //card
-  //         Container(
-  //           decoration: BoxDecoration(
-  //             borderRadius: BorderRadius.circular(8),
-  //             color: Utils.randomColor(),
-  //               boxShadow: const [
-  //                 BoxShadow(
-  //                   color: Colors.black12,
-  //                   spreadRadius: 5,
-  //                   blurRadius: 10,
-  //                   offset: Offset(0, 4), // changes position of shadow
-  //                 ),
-  //               ]
-  //           ),
-  //           height: marginEnd - marginStart,
-  //           padding:
-  //               const EdgeInsets.only(left: 14, right: 14, top: 10, bottom: 10),
-  //           child: SingleChildScrollView(
-  //             child: Column(children: [
-  //               Align(
-  //                 alignment: Alignment.centerLeft,
-  //                 child: Text(
-  //                   element.coursename ?? Constants.EMPTY,
-  //                   textAlign: TextAlign.start,
-  //                   style: GoogleFonts.notoSansKhojki(fontSize: 16, color: Colors.white, fontWeight: FontWeight.bold),
-  //                 ),
-  //               ),
-  //               const SizedBox(height: 2),
-  //               Align(
-  //                 alignment: Alignment.centerLeft,
-  //                 child: Text(
-  //                   Utils.getNotEmptyValue([
-  //                     element.lession,
-  //                     element.timestart != null && element.timeend != null
-  //                         ? "${element.timestart!} - ${element.timeend!}"
-  //                         : null
-  //                   ]),
-  //
-  //                   // element.timestart != null && element.timeend != null
-  //                   //     ? "${hourMinute.format(element.timestart!)} - ${hourMinute.format(element.timeend!)}"
-  //                   //     : null
-  //
-  //                   textAlign: TextAlign.start,
-  //                   style: GoogleFonts.notoSansKhojki(fontSize: 15, color: Colors.white, fontWeight: FontWeight.w600),
-  //                 ),
-  //               ),
-  //               const SizedBox(height: 2),
-  //               Align(
-  //                 alignment: Alignment.centerLeft,
-  //                 child: Text(
-  //                   element.roomname ?? Constants.EMPTY,
-  //                   textAlign: TextAlign.start,
-  //                   style: GoogleFonts.notoSansKhojki(fontSize: 13, color: Colors.white, fontWeight: FontWeight.w600),
-  //                 ),
-  //               ),
-  //             ]),
-  //           ),
-  //         ),
-  //       ],
-  //     );
-  //   }).toList();
-  //   return Stack(
-  //     children: listItemSchedule,
-  //   );
-  // }
-
-  // double calculateMarginStartTop(DateTime? dateTime) {
-  //   double marginHour = calculateMarginWithHour(dateTime?.hour);
-  //   double marginMinute = calculateMarginStartWithMinute(dateTime?.minute);
-  //   return marginHour + marginMinute;
-  // }
-  //
-  // double calculateMarginEndTop(DateTime? dateTime) {
-  //   double marginHour = calculateMarginWithHour(dateTime?.hour);
-  //   double marginMinute = calculateMarginEndWithMinute(dateTime?.minute);
-  //   return marginHour + marginMinute;
-  // }
-  //
-  //
-  //
-  // double calculateMarginWithHour(int? hour) {
-  //   if (hour == null || hour >= 24 || hour < 6) return 0;
-  //   return marginItem * (hour - 6);
-  // }
-  //
-  // double calculateMarginStartWithMinute(int? minute) {
-  //   if (minute == null || minute < 30) return 0;
-  //   return marginItem / 2;
-  // }
-  //
-  // double calculateMarginEndWithMinute(int? minute) {
-  //   if (minute == null || minute < 30) return marginItem / 2;
-  //   return marginItem;
-  // }
 
   Widget timeView() {
     var listTimeWidget = controller.listTimeObs

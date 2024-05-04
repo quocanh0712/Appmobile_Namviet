@@ -11,7 +11,7 @@ class KeepAliveWidget extends StatefulWidget {
     this.safeAreaLeft = false,
     this.safeAreaTop = false,
     this.safeAreaRight = false,
-    this.safeAreaBottom = false,
+    this.safeAreaBottom = true,
   }) : super(key: key);
 
   final Widget? child;

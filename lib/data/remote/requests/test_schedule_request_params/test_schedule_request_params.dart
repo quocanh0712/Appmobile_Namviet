@@ -14,9 +14,9 @@ class TestScheduleRequestParams with _$TestScheduleRequestParams {
     DateTime? toDate,
     int? semester,
     String? year,
-    int? examination,
     int? startindex,
     int? length,
+    String? idUser,
   }) = _TestScheduleRequestParams;
 
   factory TestScheduleRequestParams.fromJson(Map<String, dynamic> json) =>

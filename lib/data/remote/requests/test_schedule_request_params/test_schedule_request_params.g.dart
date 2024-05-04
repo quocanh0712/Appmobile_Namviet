@@ -17,9 +17,9 @@ _$TestScheduleRequestParamsImpl _$$TestScheduleRequestParamsImplFromJson(
           : DateTime.parse(json['toDate'] as String),
       semester: json['semester'] as int?,
       year: json['year'] as String?,
-      examination: json['examination'] as int?,
       startindex: json['startindex'] as int?,
       length: json['length'] as int?,
+      idUser: json['idUser'] as String?,
     );
 
 Map<String, dynamic> _$$TestScheduleRequestParamsImplToJson(
@@ -29,7 +29,7 @@ Map<String, dynamic> _$$TestScheduleRequestParamsImplToJson(
       'toDate': instance.toDate?.toIso8601String(),
       'semester': instance.semester,
       'year': instance.year,
-      'examination': instance.examination,
       'startindex': instance.startindex,
       'length': instance.length,
+      'idUser': instance.idUser,
     };

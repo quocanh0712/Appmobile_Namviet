@@ -58,7 +58,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.namvietjsc.ufll"
+        applicationId "com.namvietjsc.ufllive"
         applicationIdSuffix dartEnvironmentVariables.DART_DEFINES_APP_SUFFIX
         minSdkVersion 21
         targetSdkVersion 33
@@ -88,6 +88,10 @@ android {
             storePassword 'Abc@1234'
             keyAlias 'ftu_lms'
             keyPassword 'Abc@1234'
+//            storeFile file("../ftu_lms.keystore")
+//            storePassword 'Abc@1234'
+//            keyAlias 'ftu_lms'
+//            keyPassword 'Abc@1234'
         }
     }
 
@@ -131,6 +135,7 @@ flutter {
 }
 
 dependencies {
+
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
     implementation("com.google.firebase:firebase-analytics")

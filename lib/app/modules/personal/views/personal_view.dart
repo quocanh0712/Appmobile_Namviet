@@ -19,6 +19,7 @@ import 'package:ftu_lms/utils/extensions/double_ext.dart';
 import 'package:ftu_lms/utils/extensions/string_ext.dart';
 import 'package:ftu_lms/widgets/flutter_switch.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:sliding_up_panel2/sliding_up_panel2.dart';
 
 import '../controllers/personal_controller.dart';
@@ -39,14 +40,13 @@ class PersonalView
   Widget _buildTeacherViews(BuildContext context) {
     return SlidingUpPanel(
       maxHeight: Get.height - 125,
-      minHeight: Get.height - 230,
+      minHeight: Get.height - 350,
       parallaxEnabled: false,
       color: context.themeExtensions.transparent,
       boxShadow: [
         BoxShadow(blurRadius: 0, color: context.themeExtensions.transparent)
       ],
       body: Scaffold(
-
         body: Stack(
           children: [
             Assets.images.universityBuilding
@@ -73,12 +73,11 @@ class PersonalView
                     Obx(() => AutoSizeText(controller.title.value,
                         style: context.themeExtensions.heading3
                             .copyWith(color: context.themeExtensions.white))),
-                    const SizedBox(height: 3),
+                    const SizedBox(height: 7),
                     Obx(() => AutoSizeText(
                         //"${controller.userObject.value?.fullname}",
                         controller.name.value,
-                        style: context.themeExtensions.subTex
-                            .copyWith(color: context.themeExtensions.white))),
+                        style: GoogleFonts.openSans(color: context.themeExtensions.white,fontSize: 14, fontWeight: FontWeight.w700))),
                     // const SizedBox(height: 3),
                     // Obx(() => AutoSizeText(
                     //     "${controller.userObject.value?.username}",
@@ -137,7 +136,7 @@ class PersonalView
   Widget _buildStudentPersonalViews(BuildContext context) {
     return SlidingUpPanel(
       maxHeight: Get.height - 125,
-      minHeight: Get.height - 230,
+      minHeight: Get.height - 350,
       parallaxEnabled: false,
       color: context.themeExtensions.transparent,
       boxShadow: [
@@ -147,7 +146,7 @@ class PersonalView
         body: Stack(
           children: [
             Assets.images.universityBuilding
-                .image(width: double.infinity, fit: BoxFit.cover),
+                .image(width: double.infinity, fit: BoxFit.cover, height: 450),
             Container(
               width: double.infinity,
               height: 445,
@@ -174,8 +173,7 @@ class PersonalView
                     Obx(() => AutoSizeText(
                         //"${controller.userObject.value?.fullname}",
                         controller.name.value,
-                        style: context.themeExtensions.subTex
-                            .copyWith(color: context.themeExtensions.white))),
+                        style: GoogleFonts.openSans(color: context.themeExtensions.white,fontSize: 14, fontWeight: FontWeight.w700))),
                     // const SizedBox(height: 3),
                     // Obx(() => AutoSizeText(
                     //     "${controller.userObject.value?.username}",

@@ -9,6 +9,7 @@ import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ftu_lms/app/app_global_bindings.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
@@ -27,6 +28,7 @@ Future<void> main() async {
   Fimber.plantTree(DebugTree.elapsed());
 
   WidgetsFlutterBinding.ensureInitialized();
+
 
 
   FlutterCryptography.enable();

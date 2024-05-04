@@ -34,7 +34,7 @@ class ElearningController extends BaseListController<ELearningResponse> {
         startindex: pageIndex));
   }
 
-  String getTitle() => LocaleKeys.eLearning.tr;
+  String getTitle() => LocaleKeys.listCourse.tr;
 
   void openHrefLink(String? href) async {
     if (!await launchUrl(Uri.parse(href ?? Constants.EMPTY),

@@ -49,152 +49,154 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
   final DashboardController dashboardController =
       Get.put(DashboardController(), permanent: false);
 
-
-
   @override
   Widget? onCreateViews(BuildContext context) {
-
-    return SlidingUpPanel(
-      maxHeight: Get.height - 130,
-      minHeight: Get.height - 260,
-      parallaxEnabled: false,
-      color: context.themeExtensions.transparent,
-      boxShadow: [
-        BoxShadow(blurRadius: 0, color: context.themeExtensions.transparent)
-      ],
-      body: Scaffold(
-        body: Stack(
-          children: [
-            Assets.images.universityBuilding
-                .image(width: double.infinity, fit: BoxFit.cover, height: 380),
-            Container(
-              width: double.infinity,
-              height: 445,
-              decoration: BoxDecoration(
-                  gradient: GradientExtension(context).headerGradient),
-              child: SafeArea(
-                top: true,
-                bottom: true,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    /// header profile
-                    Container(
-                      margin: const EdgeInsets.only(left: 20, right: 10),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                             Obx(() =>  GestureDetector(
-                               onTap: () => controller.navigateToProfile(),
-                               child: Container(
-                                 width: 50,
-                                 height: 50,
-                                 decoration:  BoxDecoration(
-                                   shape: BoxShape.circle,
-                                   image: DecorationImage(
-                                     image: NetworkImage(
-                                       controller.userObject.value?.avatar ?? '',
-                                     ),
-                                     fit: BoxFit.cover,
-                                   ),
-
-                                 ),
-                               ),
-                             ),),
-                              const SizedBox(
-                                width: 15,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Obx(() => AutoSizeText(
-                                      "${controller.userObject.value?.fullname}",
-                                      style: GoogleFonts.openSans(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 20))),
-                                  const SizedBox(height: 3),
-                                  Obx(() => AutoSizeText(
-                                      "${controller.userObject.value?.username}",
-                                      // controller.username.value,
-                                      style: GoogleFonts.openSans(
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.normal,
-                                          fontSize: 17))),
-                                ],
-                              ),
-                            ],
-                          ),
-                          GestureDetector(
-                              onTap: () {
-                                controller.navigateToNotification();
-                                // pageController?.animateToPage(
-                                //     notificationTabIndex,
-                                //     duration: const Duration(milliseconds: 300),
-                                //     curve: Curves.easeInOut);
-                              },
-                              child: Container(
-                                  margin: const EdgeInsets.only(right: 10),
-                                  child: dashboardController
-                                          .notiCount.value.isEmpty
-                                      ? const Icon(
-                                          Icons.notifications,
-                                          color: Colors.white,
-                                          size: 30,
-                                        )
-                                      : Badge(
-                                          label: Text(dashboardController
-                                              .notiCount.value),
-                                          child: const Icon(
+    return ScreenUtilInit(
+      child: SlidingUpPanel(
+        maxHeight: Get.height - 150,
+        minHeight: Get.height - 350,
+        parallaxEnabled: false,
+        color: context.themeExtensions.transparent,
+        boxShadow: [
+          BoxShadow(blurRadius: 0, color: context.themeExtensions.transparent)
+        ],
+        body: Scaffold(
+          body: Stack(
+            children: [
+              Assets.images.universityBuilding.image(
+                  width: double.infinity, fit: BoxFit.cover, height: 380),
+              Container(
+                width: double.infinity,
+                height: 445,
+                decoration: BoxDecoration(
+                    gradient: GradientExtension(context).headerGradient),
+                child: SafeArea(
+                  top: true,
+                  bottom: true,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      /// header profile
+                      Container(
+                        margin: const EdgeInsets.only(left: 20, right: 10),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                Obx(
+                                  () => GestureDetector(
+                                    onTap: () => controller.navigateToProfile(),
+                                    child: Container(
+                                      width: 50,
+                                      height: 50,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        image: DecorationImage(
+                                          image: NetworkImage(
+                                            controller
+                                                    .userObject.value?.avatar ??
+                                                '',
+                                          ),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 15,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Obx(() => AutoSizeText(
+                                        "${controller.userObject.value?.fullname}",
+                                        style: GoogleFonts.openSans(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 20))),
+                                    const SizedBox(height: 3),
+                                    Obx(() => AutoSizeText(
+                                        "${controller.userObject.value?.username}",
+                                        // controller.username.value,
+                                        style: GoogleFonts.openSans(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.normal,
+                                            fontSize: 17))),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            GestureDetector(
+                                onTap: () {
+                                  controller.navigateToNotification();
+                                  // pageController?.animateToPage(
+                                  //     notificationTabIndex,
+                                  //     duration: const Duration(milliseconds: 300),
+                                  //     curve: Curves.easeInOut);
+                                },
+                                child: Container(
+                                    margin: const EdgeInsets.only(right: 10),
+                                    child: dashboardController
+                                            .notiCount.value.isEmpty
+                                        ? const Icon(
                                             Icons.notifications,
                                             color: Colors.white,
                                             size: 30,
-                                          ),
-                                        ))),
-                        ],
+                                          )
+                                        : Badge(
+                                            label: Text(dashboardController
+                                                .notiCount.value),
+                                            child: const Icon(
+                                              Icons.notifications,
+                                              color: Colors.white,
+                                              size: 30,
+                                            ),
+                                          ))),
+                          ],
+                        ),
                       ),
-                    ),
-                    //logo
-                    Obx(() => Visibility(
-                          visible: true,
-                          child: Image.asset(controller.imagePath.value,
-                              height: 68, width: 68, fit: BoxFit.cover),
-                        )),
-                    const SizedBox(height: 13),
-                    Obx(() => AutoSizeText(controller.title.value,
-                        style: GoogleFonts.openSans(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18))),
-                  ],
+                      //logo
+                      Obx(() => Visibility(
+                            visible: true,
+                            child: Image.asset(controller.imagePath.value,
+                                height: 68, width: 68, fit: BoxFit.cover),
+                          )),
+                      const SizedBox(height: 13),
+                      Obx(() => AutoSizeText(controller.title.value,
+                          style: GoogleFonts.openSans(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18))),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            Obx(() {
-              if (controller.isLoading.value == true) {
-                WidgetsBinding.instance.addPostFrameCallback((duration) {
-                  EasyLoading.show();
-                });
-              } else {
-                WidgetsBinding.instance.addPostFrameCallback((duration) {
-                  EasyLoading.dismiss();
-                });
-              }
-              return const SizedBox.shrink();
-            }),
-          ],
+              Obx(() {
+                if (controller.isLoading.value == true) {
+                  WidgetsBinding.instance.addPostFrameCallback((duration) {
+                    EasyLoading.show();
+                  });
+                } else {
+                  WidgetsBinding.instance.addPostFrameCallback((duration) {
+                    EasyLoading.dismiss();
+                  });
+                }
+                return const SizedBox.shrink();
+              }),
+            ],
+          ),
         ),
+        scrollController: controller.scrollController,
+        controller: controller.panelController,
+        panelBuilder: () => _panel(context),
+        onPanelSlide: (double pos) {
+          Fimber.d("onPanelSlide - pos: $pos");
+        },
       ),
-      scrollController: controller.scrollController,
-      controller: controller.panelController,
-      panelBuilder: () => _panel(context),
-      onPanelSlide: (double pos) {
-        Fimber.d("onPanelSlide - pos: $pos");
-      },
     );
   }
 
@@ -213,7 +215,6 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                 Expanded(
                   child: Container(
                     color: context.themeExtensions.white,
-
                     child: ScrollConfiguration(
                       behavior: DisableScrollGlowBehavior(),
                       child: ListView(
@@ -238,6 +239,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
 
                           ///show recent activity
                           _buildRecentActivities(context),
+
+                          SizedBox(height: 50)
                         ],
                       ),
                     ),
@@ -1014,9 +1017,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                 ],
                 color: context.themeExtensions.white,
               ),
-              child: controller.hasNoTasks.value
-                  ? _buildNoTasksOverview(context)
+              child: controller.recentTasks.isEmpty
+                  ? _buildTodayTasks(context)
                   : _buildTodayTasks(context),
+              //controller.hasNoTasks.value
+           // _buildNoTasksOverview(context)
             )),
       ),
     );
@@ -1186,11 +1191,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
   Widget _buildTeacherMainFeatures(BuildContext context,
       {bool? isShowAll = false}) {
     List<Widget> eduItemList = [
-
       // kiem dinh
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToAccreditation(),
+        // onTap: () => controller.navigateToAccreditation(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1210,7 +1215,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // minh chung
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToProof(),
+        //onTap: () => controller.navigateToProof(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1230,7 +1236,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // LMS
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToLMS(),
+         onTap: () => controller.navigateToELearning(),
+       // onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1244,13 +1251,14 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           ),
           fit: BoxFit.cover,
         ),
-        title: LocaleKeys.LMS.tr,
+        title: LocaleKeys.courseManagement.tr,
       ),
 
       // Duyet tin chi
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToCreditApproval(),
+        //onTap: () => controller.navigateToCreditApproval(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1270,7 +1278,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // Diem Thi
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToTestPoint(),
+        //  onTap: () => controller.navigateToTestPoint(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1290,7 +1299,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // Diem qua trinh
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToPointProcess(),
+        // onTap: () => controller.navigateToPointProcess(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1310,7 +1320,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // De cuong
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToOutlineDetail(),
+        // onTap: () => controller.navigateToOutlineDetail(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1327,11 +1338,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         title: LocaleKeys.outlineDetail.tr,
       ),
 
-
       // lich giang day
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToTeachingSchedule(),
+        //onTap: () => controller.navigateToTeachingSchedule(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1351,7 +1362,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // Khối lượng giảng dạy
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToTeachingHour(),
+        // onTap: () => controller.navigateToTeachingHour(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1418,7 +1430,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.inspectionSchedule.tr,
-        onTap: () => controller.navigateToInspectionSchedule(),
+        // onTap: () => controller.navigateToInspectionSchedule(),
+        onTap: () => _showNotificationDialog(context),
       ),
       // dang ky day thay
       _buildListFeatureItem(
@@ -1439,7 +1452,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.teachingReplace.tr,
-        onTap: () => controller.navigateToTeachingReplace(),
+        //onTap: () => controller.navigateToTeachingReplace(),
+        onTap: () => _showNotificationDialog(context),
       ),
       // Duyet thi lai
       _buildListFeatureItem(
@@ -1460,7 +1474,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.reExamApproval.tr,
-        onTap: () => controller.navigateToReExamApproval(),
+        // onTap: () => controller.navigateToReExamApproval(),
+        onTap: () => _showNotificationDialog(context),
       ),
       // Quan ly bai giang
       _buildListFeatureItem(
@@ -1481,7 +1496,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.lectureManagement.tr,
-        onTap: () => controller.navigateToExamSchedule(),
+        //onTap: () => controller.navigateToExamSchedule(),
+        onTap: () => _showNotificationDialog(context),
       ),
       // Lịch coi thi
       _buildListFeatureItem(
@@ -1502,9 +1518,9 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.examSchedule.tr,
-        onTap: () => controller.navigateToExamSchedule(),
+        // onTap: () => controller.navigateToExamSchedule(),
+        onTap: () => _showNotificationDialog(context),
       ),
-
 
       //1 Lich cong tac
       _buildListFeatureItem(
@@ -1525,7 +1541,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.tasksCalendar.tr,
-        onTap: () => controller.navigateToScheduleTime(),
+        // onTap: () => controller.navigateToScheduleTime(),
+        onTap: () => _showNotificationDialog(context),
       ),
       //10 Lich lam viec
       _buildListFeatureItem(
@@ -1589,6 +1606,19 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         title: LocaleKeys.teachingProgram.tr,
         onTap: () => controller.navigateToEducationProgram(),
       ),
+      // ket qua hoc tap
+      // _buildMainFeatureItem(
+      //   context,
+      //   background: Assets.images.homeTopRightButBg.image(fit: BoxFit.cover),
+      //   image: Image(
+      //     image: AssetImage(
+      //       'assets/Icon/74.png',
+      //     ),
+      //     fit: BoxFit.cover,
+      //   ),
+      //   title: LocaleKeys.learningResults.tr,
+      //   onTap: () => controller.navigateToLearningResults(),
+      // ),
 
       //4
       // _buildListFeatureItem(
@@ -1635,7 +1665,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       //18 quan ly lop hoc
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToListClassManagerTitle(),
+        // onTap: () => controller.navigateToListClassManagerTitle(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.flight_class_rounded,
@@ -1654,7 +1685,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       //19 quan ly sinh vien
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToStuCheckinManager(),
+        //onTap: () => controller.navigateToStuCheckinManager(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.fact_check_outlined,
@@ -1689,7 +1721,6 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // ),
     ];
     List<Widget> timeSchedule = [
-
       // Cong viec
       _buildListFeatureItem(
         context,
@@ -1709,7 +1740,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.workResolve.tr,
-        onTap: () => controller.navigateToTextAway(),
+        onTap: () => _showNotificationDialog(context),
+        // onTap: () => controller.navigateToTextAway(),
       ),
 
       // van ban di
@@ -1731,7 +1763,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.textAway.tr,
-        onTap: () => controller.navigateToTextAway(),
+        // onTap: () => controller.navigateToTextAway(),
+        onTap: () => _showNotificationDialog(context),
       ),
 
       // van ban den
@@ -1753,7 +1786,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.textIncome.tr,
-        onTap: () => controller.navigateToTextIncome(),
+        onTap: () => _showNotificationDialog(context),
+        //onTap: () => controller.navigateToTextIncome(),
       ),
 
       // Lich khac
@@ -1775,7 +1809,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.anotherSchedule.tr,
-        onTap: () => controller.navigateToAnotherSchedule(),
+        // onTap: () => controller.navigateToAnotherSchedule(),
+        onTap: () => _showNotificationDialog(context),
       ),
       // Phu cap
       _buildListFeatureItem(
@@ -1796,7 +1831,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.allowance.tr,
-        onTap: () => controller.navigateToAllowance(),
+        // onTap: () => controller.navigateToAllowance(),
+        onTap: () => _showNotificationDialog(context),
       ),
       // BHXH
       _buildListFeatureItem(
@@ -1817,7 +1853,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.socialInsurance.tr,
-        onTap: () => controller.navigateToSocialInsurance(),
+        //onTap: () => controller.navigateToSocialInsurance(),
+        onTap: () => _showNotificationDialog(context),
       ),
       // luong theo thang
       _buildListFeatureItem(
@@ -1838,7 +1875,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.salaryInfo.tr,
-        onTap: () => controller.navigateToSalaryInfo(),
+        //onTap: () => controller.navigateToSalaryInfo(),
+        onTap: () => _showNotificationDialog(context),
       ),
 
       // Qua trinh dao tao
@@ -1860,7 +1898,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.trainingProcess.tr,
-        onTap: () => controller.navigateToTrainingProcess(),
+        //onTap: () => controller.navigateToTrainingProcess(),
+        onTap: () => _showNotificationDialog(context),
       ),
 
       //2 Qua trinh cong tac
@@ -1885,11 +1924,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         onTap: () => controller.navigateToWorkingProcess(),
       ),
 
-
       //3 Khen thuong , ky luat
       _buildListFeatureItem(
         context,
         onTap: () => controller.navigateToRewardDiscipline(),
+        //onTap: () => _showNotificationDialog(context),
         background: Container(
           color: Colors.orange,
         ),
@@ -1910,7 +1949,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // đăng ký xe công
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToVehicleRegistration(),
+        // onTap: () => controller.navigateToVehicleRegistration(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1929,7 +1969,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // đăng ký phòng học
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToRoomRegistration(),
+        //onTap: () => controller.navigateToRoomRegistration(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1946,32 +1987,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         title: LocaleKeys.room_registration.tr,
       ),
 
-      // điểm danh học viên
-      _buildListFeatureItem(
-        context,
-        onTap: () => controller.navigateToAttendanceStu(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        // icon: Icon(
-        //   Icons.send_to_mobile,
-        //  // color: const Color(0xFF4da543).withOpacity(0.75),
-        //   color: Colors.white,
-        //   size: 30,
-        // ),
-        image: const Image(
-          image: AssetImage(
-            'assets/Icon/23.png',
-          ),
-          fit: BoxFit.cover,
-        ),
-        title: LocaleKeys.attendance_stu.tr,
-      ),
-
-
       // Chấm công
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToAttendance(),
-        //onTap: () => _showNotificationDialog(context),
+        //onTap: () => controller.navigateToAttendance(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1990,8 +2010,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // luong-BHXH
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToSalary(),
-        //onTap: () => _showNotificationDialog(context),
+        //onTap: () => controller.navigateToSalary(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -2010,8 +2030,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // Bồi dưỡng
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToTraining(),
-        //onTap: () => _showNotificationDialog(context),
+        // onTap: () => controller.navigateToTraining(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -2027,10 +2047,6 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         ),
         title: LocaleKeys.training.tr,
       ),
-
-
-
-
 
       //15 dich vu mot cua
       _buildListFeatureItem(
@@ -2051,15 +2067,14 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         ),
         title: LocaleKeys.oneStopService.tr,
       ),
-
-
     ];
 
     List<Widget> propertyTool = [
       // tài sản cá nhân
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToRepairRequest(),
+        // onTap: () => controller.navigateToRepairRequest(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.calendar_today_outlined,
@@ -2078,7 +2093,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // tài sản cá nhân
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToPersonalProperty(),
+        // onTap: () => controller.navigateToPersonalProperty(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.calendar_today_outlined,
@@ -2098,7 +2114,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // nhu cầu mua sắm
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToShoppingNeed(),
+        //onTap: () => controller.navigateToShoppingNeed(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.calendar_today_outlined,
@@ -2118,7 +2135,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // khấu hao tài sản
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToApproveRepair(),
+        //onTap: () => controller.navigateToApproveRepair(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.calendar_today_outlined,
@@ -2176,14 +2194,14 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         onTap: () => controller.navigateToPropertyLookUp(),
         //onTap: () => showNotificationDialog(context),
       ),
-
     ];
 
     List<Widget> learnerFinance = [
       // danh sách công nợ
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToDebtList(),
+        //onTap: () => controller.navigateToDebtList(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.calendar_today_outlined,
@@ -2202,7 +2220,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // chi tiết thu chi
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToFinancialDetail(),
+        //onTap: () => controller.navigateToFinancialDetail(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.calendar_today_outlined,
@@ -2221,11 +2240,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     ];
 
     List<Widget> learnerProfile = [
-
       // Lop tin chi
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToCreditClass(),
+        // onTap: () => controller.navigateToCreditClass(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.calendar_today_outlined,
@@ -2245,7 +2264,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // Lop hanh chinh
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToAdministrativeClass(),
+        //onTap: () => controller.navigateToAdministrativeClass(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.calendar_today_outlined,
@@ -2264,7 +2284,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // Quan ly danh sach sinh vien
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToStuListManagement(),
+        // onTap: () => controller.navigateToStuListManagement(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.calendar_today_outlined,
@@ -2283,7 +2304,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // Đánh giá điểm rèn luyện
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToEvaluateTraining(),
+        //onTap: () => controller.navigateToEvaluateTraining(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.calendar_today_outlined,
@@ -2302,7 +2324,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // Danh sách học bổng
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToScholarshipList(),
+        //onTap: () => controller.navigateToScholarshipList(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.calendar_today_outlined,
@@ -2321,7 +2344,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // Cố vấn học tập
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToConsultant(),
+        //onTap: () => controller.navigateToConsultant(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.calendar_today_outlined,
@@ -2341,7 +2365,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // Cán sự lớp
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToClassOfficial(),
+        //onTap: () => controller.navigateToClassOfficial(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.calendar_today_outlined,
@@ -2357,12 +2382,29 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         ),
         title: LocaleKeys.classOfficial.tr,
       ),
-
+      // điểm danh học viên
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToAttendanceStu(),
+        //onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/23.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.attendance_stu.tr,
+      ),
     ];
 
     List<Widget> elearningFeature = [
-
-
       //16
       // _buildListFeatureItem(
       //   context,
@@ -2385,11 +2427,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     ];
 
     List<Widget> sciencePartner = [
-
       // De tai thanh vien
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToMemberTopic(),
+        // onTap: () => controller.navigateToMemberTopic(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.science_outlined,
@@ -2408,7 +2450,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // de tai khoa hoc
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToScienceTopic(),
+        // onTap: () => controller.navigateToScienceTopic(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.science_outlined,
@@ -2427,7 +2470,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // bao quoc te
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToInternationalNews(),
+        //onTap: () => controller.navigateToInternationalNews(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.science_outlined,
@@ -2447,7 +2491,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // bao trong nuoc
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToDomesticNews(),
+        // onTap: () => controller.navigateToDomesticNews(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.science_outlined,
@@ -2486,7 +2531,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // theo doi NCKH
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToFollowScientificResearch(),
+        //  onTap: () => controller.navigateToFollowScientificResearch(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.quick_contacts_dialer_sharp,
@@ -2522,7 +2568,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       //   ),
       //   title: LocaleKeys.groupArrive.tr,
       // ),
-        // đối tác - dự án
+      // đối tác - dự án
       // _buildListFeatureItem(
       //   context,
       //   onTap: () => controller.navigateToPartnerProject(),
@@ -2541,16 +2587,14 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       //   ),
       //   title: LocaleKeys.partnerProject.tr,
       // ),
-
     ];
 
     List<Widget> checkAttendance = [
-
-
       // Kê khai công việc
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToJobDeclaration(),
+        // onTap: () => controller.navigateToJobDeclaration(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -2603,7 +2647,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           ),
           fit: BoxFit.cover,
         ),
-        title: LocaleKeys.executiveDocuments.tr,
+        title: LocaleKeys.docsManagement.tr,
       ),
       //9 Thong ke
       _buildListFeatureItem(
@@ -2744,7 +2788,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // theo doi NCKH
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToFollowScientificResearch(),
+        //  onTap: () => controller.navigateToFollowScientificResearch(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.quick_contacts_dialer_sharp,
@@ -2764,7 +2809,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // Đoàn đến - đoàn đi
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToGroupArrive(),
+        // onTap: () => controller.navigateToGroupArrive(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.quick_contacts_dialer_sharp,
@@ -2783,7 +2829,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // đối tác - dự án
       _buildListFeatureItem(
         context,
-        onTap: () => controller.navigateToPartnerProject(),
+        // onTap: () => controller.navigateToPartnerProject(),
+        onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.quick_contacts_dialer_sharp,
@@ -2799,7 +2846,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         ),
         title: LocaleKeys.partnerProject.tr,
       ),
-      //1
+      //1 DANG FIX
       _buildListFeatureItem(
         context,
         background: Container(
@@ -2819,6 +2866,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         ),
         title: LocaleKeys.tasksCalendar.tr,
         onTap: () => controller.navigateToScheduleTime(),
+        //onTap: () => _showNotificationDialog(context),
       ),
       //2
       _buildListFeatureItem(
@@ -2879,7 +2927,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.eLearning.tr,
-         onTap: () => controller.navigateToELearning(),
+        onTap: () => controller.navigateToELearning(),
         //onTap: () => showNotificationDialog(context),
       ),
       _buildListFeatureItem(
@@ -2898,7 +2946,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.checkInDevice.tr,
-         onTap: () => controller.navigateToCheckInDevice(),
+        onTap: () => controller.navigateToCheckInDevice(),
         //onTap: () => showNotificationDialog(context),
       ),
       //6
@@ -3153,11 +3201,11 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     final Map<String, List<Widget>> mapOfWidgets = {
       'Hành chính - Tổng hợp': timeSchedule,
       'Đào tạo - Khảo thí': eduItemList,
-      'Hồ sơ người học' : learnerProfile,
-      'Tài chính người học' : learnerFinance,
-      'Tài sản - Công cụ' : propertyTool,
-      'Khoa học - Hợp tác quốc tế - Tạp chí' : sciencePartner,
-     // 'Lớp học': trackerList,
+      'Hồ sơ người học': learnerProfile,
+      'Tài chính người học': learnerFinance,
+      'Tài sản - Công cụ': propertyTool,
+      'Khoa học - Hợp tác quốc tế - Tạp chí': sciencePartner,
+      // 'Lớp học': trackerList,
       'Khác': checkAttendance,
       '': blankSpace,
     };
@@ -3189,10 +3237,10 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                           shrinkWrap: true,
                           physics: const ScrollPhysics(),
                           gridDelegate:
-                              const SliverGridDelegateWithFixedCrossAxisCount(
+                              SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 4,
-                            crossAxisSpacing: 15.0,
-                            mainAxisSpacing: 10.0,
+                            crossAxisSpacing: 10.h,
+                            mainAxisSpacing: 15.w,
                           ),
                           itemCount: widgets.length,
                           itemBuilder: (BuildContext context, int innerIndex) {
@@ -3228,7 +3276,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         : Column(
             children: [
               SizedBox(
-                height: 250,
+                height: 225,
                 child: Column(
                   children: [
                     Expanded(
@@ -3248,18 +3296,19 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                           List<Widget> items =
                               mainFeatureItemList.sublist(startIndex, endIndex);
                           return Container(
-                            margin: const EdgeInsets.only(top: 0,),
+                            margin: const EdgeInsets.only(
+                              top: 0,
+                            ),
                             child: GridView.count(
                               crossAxisCount: 4,
-                              crossAxisSpacing: 5,
-                              mainAxisSpacing: 37,
+                              crossAxisSpacing: 5.h,
+                              mainAxisSpacing: 20.w,
                               // childAspectRatio: 2 / 1,
                               physics: const NeverScrollableScrollPhysics(),
                               children: items.map((item) {
                                 return Column(
                                   children: [
                                     Expanded(child: item),
-
                                   ],
                                 );
                               }).toList(),
@@ -3316,43 +3365,831 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     );
   }
 
-  Widget _buildStudentMainFeatures(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            _buildMainFeatureItem(
-              context,
-              background:
-                  Assets.images.homeTopLeftButBg.image(fit: BoxFit.cover),
-              icon: Assets.images.icCalendarEdition.svg(fit: BoxFit.cover),
-              title: LocaleKeys.learningSchedule.tr,
-              onTap: () => controller.navigateToScheduleTime(),
-            ),
-            const SizedBox(width: 6),
-            _buildMainFeatureItem(
-              context,
-              background:
-                  Assets.images.homeTopRightButBg.image(fit: BoxFit.cover),
-              icon: Assets.images.icTeacherSvg
-                  .svg(fit: BoxFit.cover, color: context.themeExtensions.white),
-              title: LocaleKeys.learningResults.tr,
-              onTap: () => controller.navigateToLearningResults(),
-            ),
-          ],
-        )
-      ],
-    );
+  Widget _buildStudentMainFeatures(BuildContext context,
+      {bool? isShowAll = false}) {
+    List<Widget> mainFeatureStudentItemList = [
+      _buildListFeatureItem(
+        context,
+        background: Assets.images.homeTopLeftButBg.image(fit: BoxFit.cover),
+        image: Image(
+          image: AssetImage(
+            'assets/Icon/11.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.learningSchedule.tr,
+        onTap: () => controller.navigateToScheduleTime(),
+      ),
+      _buildListFeatureItem(
+        context,
+        background: Assets.images.homeTopRightButBg.image(fit: BoxFit.cover),
+        image: Image(
+          image: AssetImage(
+            'assets/Icon/74.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.learningResults.tr,
+        onTap: () => controller.navigateToLearningResults(),
+      ),
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToOneGate(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.home_repair_service_rounded,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/01.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.oneStopService.tr,
+      ),
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToRewardDiscipline(),
+        // onTap: () => _showNotificationDialog(context),
+        background: Container(
+          color: Colors.orange,
+        ),
+        // icon: Icon(
+        //   Icons.bookmarks,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/10.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.rewardDiscipline.tr,
+      ),
+
+      _buildListFeatureItem(
+        context,
+        // onTap: () => controller.navigateToCreditClass(),
+        onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/65.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.creditClass.tr,
+      ),
+      _buildListFeatureItem(
+        context,
+        //onTap: () => controller.navigateToEvaluateTraining(),
+        onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/38.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.evaluateTrainingPoint.tr,
+      ),
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToScientificResearch(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.science_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/14.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.scienceStudy.tr,
+      ),
+      _buildListFeatureItem(
+        context,
+        onTap: () {
+          if (Platform.isIOS) {
+            // launchUrl(
+            //   Uri.parse('https://viettech.itch.io/map3d'),
+            //   mode: LaunchMode.inAppWebView,
+            // );
+            Fimber.d("navigateToMapWevView()");
+            Get.toNamed(Routes.MAP_WEBVIEW);
+          } else {
+            // launchUrl(
+            //   Uri.parse('https://viettech.itch.io/map3d'),
+            //   mode: LaunchMode.externalNonBrowserApplication,
+            // );
+            Fimber.d("navigateToMapWevView()");
+            Get.toNamed(Routes.MAP_WEBVIEW);
+          }
+        },
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.maps_home_work,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/13.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: 'Bản đồ trường học',
+      ),
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToTeacherContact(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.quick_contacts_dialer_sharp,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/04.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.titleTeacherContact.tr,
+      ),
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/54.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.socialInsurance.tr,
+        //onTap: () => controller.navigateToSocialInsurance(),
+        onTap: () => _showNotificationDialog(context),
+      ),
+
+      _buildListFeatureItem(
+        context,
+        //onTap: () => controller.navigateToScholarshipList(),
+        onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/39.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.scholarshipList.tr,
+      ),
+      // Quan ly danh sach sinh vien
+      _buildListFeatureItem(
+        context,
+        // onTap: () => controller.navigateToStuListManagement(),
+        onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/46.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.stuListManagement.tr,
+      ),
+
+      _buildListFeatureItem(
+        context,
+        //onTap: () => controller.navigateToAttendanceStu(),
+        onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/23.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.attendance_stu.tr,
+      ),
+      //2 Chuong trinh dao tao
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/03.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.teachingProgram.tr,
+        onTap: () => controller.navigateToEducationProgram(),
+      ),
+
+    ];
+//student1
+    List<Widget> administrative = [
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/76.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.finance.tr,
+        onTap: () => controller.navigateToFinanceOverview(),
+      ),
+      //2 Chuong trinh dao tao
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/03.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.teachingProgram.tr,
+        onTap: () => controller.navigateToEducationProgram(),
+      ),
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToOneGate(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.home_repair_service_rounded,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/01.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.oneStopService.tr,
+      ),
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToRewardDiscipline(),
+        // onTap: () => _showNotificationDialog(context),
+        background: Container(
+          color: Colors.orange,
+        ),
+        // icon: Icon(
+        //   Icons.bookmarks,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/10.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.rewardDiscipline.tr,
+      ),
+      //BHXH1
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        // icon: Icon(
+        //   Icons.train,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/54.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.socialInsurance.tr,
+        //onTap: () => controller.navigateToSocialInsurance(),
+        onTap: () => _showNotificationDialog(context),
+      ),
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToSurveyResult(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.filter_alt_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/09.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.serveyResults.tr,
+      ),
+    ];
+    List<Widget> eduStudentItemList = [
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.red,
+        ),
+        // icon: Icon(
+        //   Icons.calendar_today,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/75.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.testingPlan.tr,
+         onTap: () => controller.navigateToTestingPlaning(),
+      //  onTap: () => _showNotificationDialog(context),
+      ),
+      //lich hoc
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.red,
+        ),
+        // icon: Icon(
+        //   Icons.calendar_today,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/11.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.otherScheduleTimeTitle.tr,
+        // onTap: () => controller.navigateToScheduleTime(),
+        onTap: () => _showNotificationDialog(context),
+      ),
+      //ketquahoctap1
+      _buildMainFeatureItem(
+        context,
+        background: Assets.images.homeTopRightButBg.image(fit: BoxFit.cover),
+        image: Image(
+          image: AssetImage(
+            'assets/Icon/74.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.learningResults.tr,
+        onTap: () => controller.navigateToLearningResults(),
+      ),
+
+
+    ];
+    List<Widget> studentProfile = [
+      //loptinchi1
+      _buildListFeatureItem(
+        context,
+        // onTap: () => controller.navigateToCreditClass(),
+        onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/65.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.creditClass.tr,
+      ),
+      _buildListFeatureItem(
+        context,
+        //onTap: () => controller.navigateToEvaluateTraining(),
+        onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/38.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.evaluateTrainingPoint.tr,
+      ),
+      // Danh sách học bổng
+      _buildListFeatureItem(
+        context,
+        //onTap: () => controller.navigateToScholarshipList(),
+        onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/39.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.scholarshipList.tr,
+      ),
+      // Quan ly danh sach sinh vien
+      _buildListFeatureItem(
+        context,
+        // onTap: () => controller.navigateToStuListManagement(),
+        onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.calendar_today_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/46.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.stuListManagement.tr,
+      ),
+      //diemdanh1
+      _buildListFeatureItem(
+        context,
+        //onTap: () => controller.navigateToAttendanceStu(),
+        onTap: () => _showNotificationDialog(context),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.send_to_mobile,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/23.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.attendance_stu.tr,
+      ),
+    ];
+    List<Widget> scientificStudent = [
+      //NCKH1
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToScientificResearch(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.science_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/14.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.scienceStudy.tr,
+      ),
+    ];
+    List<Widget> otherStudent = [
+      _buildListFeatureItem(
+        context,
+        onTap: () {
+          if (Platform.isIOS) {
+            // launchUrl(
+            //   Uri.parse('https://viettech.itch.io/map3d'),
+            //   mode: LaunchMode.inAppWebView,
+            // );
+            Fimber.d("navigateToMapWevView()");
+            Get.toNamed(Routes.MAP_WEBVIEW);
+          } else {
+            // launchUrl(
+            //   Uri.parse('https://viettech.itch.io/map3d'),
+            //   mode: LaunchMode.externalNonBrowserApplication,
+            // );
+            Fimber.d("navigateToMapWevView()");
+            Get.toNamed(Routes.MAP_WEBVIEW);
+          }
+        },
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.maps_home_work,
+        //  // color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/13.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: 'Bản đồ trường học',
+      ),
+
+//14 danh ba giao vien
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToTeacherContact(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.quick_contacts_dialer_sharp,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/04.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.titleTeacherContact.tr,
+      ),
+    ];
+
+    final Map<String, List<Widget>> mapOfStudentWidgets = {
+      'Hành chính - Tổng hợp': administrative,
+      'Đào tạo - Khảo thí': eduStudentItemList,
+      'Hồ sơ người học': studentProfile,
+      'Khoa học - Hợp tác quốc tế - Tạp chí': scientificStudent,
+      'Khác': otherStudent,
+    };
+    return isShowAll == true
+        ? Column(
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height,
+                child: ListView.builder(
+                  itemCount: mapOfStudentWidgets.length,
+                  shrinkWrap: true,
+                  physics: const ScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    final title = mapOfStudentWidgets.keys.toList()[index];
+                    final widgets = mapOfStudentWidgets.values.toList()[index];
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(title,
+                              style: GoogleFonts.openSans(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18)),
+                        ),
+                        GridView.builder(
+                          shrinkWrap: true,
+                          physics: const ScrollPhysics(),
+                          gridDelegate:
+                              SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 4,
+                            crossAxisSpacing: 10.h,
+                            mainAxisSpacing: 15.w,
+                          ),
+                          itemCount: widgets.length,
+                          itemBuilder: (BuildContext context, int innerIndex) {
+                            return Column(
+                              children: [
+                                widgets[innerIndex],
+                              ],
+                            );
+                          },
+                        ),
+                      ],
+                    );
+                  },
+                ),
+              ),
+            ],
+          )
+
+        // SizedBox(
+        //    height: MediaQuery.of(context).size.height ,
+        //    child: GridView.count(
+        //      crossAxisCount: 3,
+        //     childAspectRatio: 1.2 / 1,
+        //      children: List.generate(mainFeatureItemList.length, (index) {
+        //        return Container(
+        //            decoration: BoxDecoration(
+        //              borderRadius: BorderRadius.circular(20),
+        //            ),
+        //            child: mainFeatureItemList[index]);
+        //      }),
+        //    ),
+        //  )
+        : Column(
+            children: [
+              SizedBox(
+                height: 225,
+                child: Column(
+                  children: [
+                    Expanded(
+                      child: PageView.builder(
+                        controller: controller.pageTeacherController,
+                        //itemCount: (mainFeatureItemList.length / 6).ceil(),
+                        itemCount: 2,
+                        onPageChanged: (int page) {
+                          controller.currentPage.value = page;
+                        },
+                        itemBuilder: (context, pageIndex) {
+                          int startIndex = pageIndex * 8;
+                          int endIndex = (pageIndex + 1) * 8;
+                          endIndex = endIndex < mainFeatureStudentItemList.length
+                              ? endIndex
+                              : mainFeatureStudentItemList.length;
+                          List<Widget> items =
+                          mainFeatureStudentItemList.sublist(startIndex, endIndex);
+                          return Container(
+                            margin: const EdgeInsets.only(
+                              top: 0,
+                            ),
+                            child: GridView.count(
+                              crossAxisCount: 4,
+                              crossAxisSpacing: 8.h,
+                              mainAxisSpacing: 20.w,
+                              // childAspectRatio: 2 / 1,
+                              physics: const NeverScrollableScrollPhysics(),
+                              children: items.map((item) {
+                                return Column(
+                                  children: [
+                                    Expanded(child: item),
+                                  ],
+                                );
+                              }).toList(),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              // const SizedBox(
+              //   height: 10,
+              // ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  (mainFeatureStudentItemList.length / 10).ceil(),
+                  (index) => Obx(() => Container(
+                        width: 6,
+                        height: 6,
+                        margin: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 4),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: context.themeExtensions.mainGreen.withOpacity(
+                            controller.currentPage.value == index ? 0.9 : 0.3,
+                          ),
+                        ),
+                      )),
+                ),
+              ),
+            ],
+          );
+    // return Column(
+    //   children: [
+    //     Row(
+    //       mainAxisAlignment: MainAxisAlignment.center,
+    //       crossAxisAlignment: CrossAxisAlignment.center,
+    //       children: <Widget>[
+    //         _buildMainFeatureItem(
+    //           context,
+    //           background:
+    //               Assets.images.homeTopLeftButBg.image(fit: BoxFit.cover),
+    //           image: Image(
+    //             image: AssetImage(
+    //               'assets/Icon/11.png',
+    //             ),
+    //             fit: BoxFit.cover,
+    //           ),
+    //           title: LocaleKeys.learningSchedule.tr,
+    //           onTap: () => controller.navigateToScheduleTime(),
+    //         ),
+    //         //assets/images/ic_teacher.svg
+    //         const SizedBox(width: 6),
+    //         _buildMainFeatureItem(
+    //           context,
+    //           background:
+    //               Assets.images.homeTopRightButBg.image(fit: BoxFit.cover),
+    //           image: Image(
+    //             image: AssetImage(
+    //               'assets/Icon/74.png',
+    //             ),
+    //             fit: BoxFit.cover,
+    //           ),
+    //           title: LocaleKeys.learningResults.tr,
+    //           onTap: () => controller.navigateToLearningResults(),
+    //         ),
+    //       ],
+    //     )
+    //   ],
+    // );
   }
-
-
 
   Widget _buildMainFeatureItem(
     BuildContext context, {
     Widget? background,
-    Widget? icon,
+    Widget? image,
     String? title,
     GestureTapCallback? onTap,
   }) {
@@ -3362,28 +4199,28 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         children: [
           // background ?? const SizedBox.shrink(),
           Container(
-            width: 120,
-            height: 120,
-            decoration: BoxDecoration(
-              // gradient: LinearGradient(
-              //   begin: Alignment.topLeft,
-              //   end: Alignment.bottomRight,
-              //   colors: [
-              //     Color.fromRGBO(9, 116, 66, 1),
-              //     Color.fromRGBO(98, 179, 69, 1),
-              //   ],
-              // ),
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  spreadRadius: 0,
-                  blurRadius: 5,
-                  offset: const Offset(0, 0), // changes position of shadow
-                ),
-              ],
-            ),
+            // width: 120,
+            // height: 120,
+            // decoration: BoxDecoration(
+            //   // gradient: LinearGradient(
+            //   //   begin: Alignment.topLeft,
+            //   //   end: Alignment.bottomRight,
+            //   //   colors: [
+            //   //     Color.fromRGBO(9, 116, 66, 1),
+            //   //     Color.fromRGBO(98, 179, 69, 1),
+            //   //   ],
+            //   // ),
+            //   color: Colors.white,
+            //   borderRadius: BorderRadius.circular(30),
+            //   boxShadow: [
+            //     BoxShadow(
+            //       color: Colors.black.withOpacity(0.2),
+            //       spreadRadius: 2,
+            //       blurRadius: 5,
+            //       offset: const Offset(0, 3), // changes position of shadow
+            //     ),
+            //   ],
+            // ),
             child: Padding(
               padding: const EdgeInsets.only(top: 15.0),
               child: Column(
@@ -3391,26 +4228,29 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                      width: 50,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        // color: Colors.black12.withOpacity(0.04),
+                    width: 35,
+                    height: 35,
+                    decoration: BoxDecoration(
+                      // color: Colors.black12.withOpacity(0.04),
 
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Container(child: icon)),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: Container(child: image),
+                  ),
                   const SizedBox(height: 10),
                   Center(
                     child: SizedBox(
                       width: 110,
                       child: Text(
                         title ?? '',
-                        maxLines: 5,
+                        maxLines: 2,
                         style: GoogleFonts.openSans(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14),
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 10.sp,
+                        ),
                         textAlign: TextAlign.center,
+
                         // overflow: TextOverflow.clip,
                       ),
                     ),
@@ -3483,9 +4323,10 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                         title ?? '',
                         maxLines: 2,
                         style: GoogleFonts.openSans(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 12, ),
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 10.sp,
+                        ),
                         textAlign: TextAlign.center,
 
                         // overflow: TextOverflow.clip,
@@ -3588,7 +4429,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       body: SingleChildScrollView(
         physics: const AlwaysScrollableScrollPhysics(),
         child: Padding(
-          padding: const EdgeInsets.only(top: 10.0,left: 2,right: 2),
+          padding: const EdgeInsets.only(top: 10.0, left: 2, right: 2),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -3602,7 +4443,10 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
               // ),
               Container(
                 decoration: const BoxDecoration(color: Colors.white),
-                child: _buildTeacherMainFeatures(context, isShowAll: true),
+                child:
+                    controller.userPermission?.value == UserPermission.teacher
+                        ? _buildTeacherMainFeatures(context, isShowAll: true)
+                        : _buildStudentMainFeatures(context, isShowAll: true),
               ),
             ],
           ),
@@ -3630,6 +4474,4 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       },
     );
   }
-
-
 }

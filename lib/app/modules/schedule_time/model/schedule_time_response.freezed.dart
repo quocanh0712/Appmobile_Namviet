@@ -20,6 +20,7 @@ ScheduleTimeResponse _$ScheduleTimeResponseFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ScheduleTimeResponse {
+  String? get weeksOfYear => throw _privateConstructorUsedError;
   DateTime? get date => throw _privateConstructorUsedError;
   List<CourseItem>? get listcourse => throw _privateConstructorUsedError;
 
@@ -35,7 +36,8 @@ abstract class $ScheduleTimeResponseCopyWith<$Res> {
           $Res Function(ScheduleTimeResponse) then) =
       _$ScheduleTimeResponseCopyWithImpl<$Res, ScheduleTimeResponse>;
   @useResult
-  $Res call({DateTime? date, List<CourseItem>? listcourse});
+  $Res call(
+      {String? weeksOfYear, DateTime? date, List<CourseItem>? listcourse});
 }
 
 /// @nodoc
@@ -52,10 +54,15 @@ class _$ScheduleTimeResponseCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? weeksOfYear = freezed,
     Object? date = freezed,
     Object? listcourse = freezed,
   }) {
     return _then(_value.copyWith(
+      weeksOfYear: freezed == weeksOfYear
+          ? _value.weeksOfYear
+          : weeksOfYear // ignore: cast_nullable_to_non_nullable
+              as String?,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -76,7 +83,8 @@ abstract class _$$ScheduleTimeResponseImplCopyWith<$Res>
       __$$ScheduleTimeResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({DateTime? date, List<CourseItem>? listcourse});
+  $Res call(
+      {String? weeksOfYear, DateTime? date, List<CourseItem>? listcourse});
 }
 
 /// @nodoc
@@ -90,10 +98,15 @@ class __$$ScheduleTimeResponseImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? weeksOfYear = freezed,
     Object? date = freezed,
     Object? listcourse = freezed,
   }) {
     return _then(_$ScheduleTimeResponseImpl(
+      weeksOfYear: freezed == weeksOfYear
+          ? _value.weeksOfYear
+          : weeksOfYear // ignore: cast_nullable_to_non_nullable
+              as String?,
       date: freezed == date
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
@@ -110,12 +123,14 @@ class __$$ScheduleTimeResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ScheduleTimeResponseImpl implements _ScheduleTimeResponse {
   const _$ScheduleTimeResponseImpl(
-      {this.date, final List<CourseItem>? listcourse})
+      {this.weeksOfYear, this.date, final List<CourseItem>? listcourse})
       : _listcourse = listcourse;
 
   factory _$ScheduleTimeResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$ScheduleTimeResponseImplFromJson(json);
 
+  @override
+  final String? weeksOfYear;
   @override
   final DateTime? date;
   final List<CourseItem>? _listcourse;
@@ -130,7 +145,7 @@ class _$ScheduleTimeResponseImpl implements _ScheduleTimeResponse {
 
   @override
   String toString() {
-    return 'ScheduleTimeResponse(date: $date, listcourse: $listcourse)';
+    return 'ScheduleTimeResponse(weeksOfYear: $weeksOfYear, date: $date, listcourse: $listcourse)';
   }
 
   @override
@@ -138,6 +153,8 @@ class _$ScheduleTimeResponseImpl implements _ScheduleTimeResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ScheduleTimeResponseImpl &&
+            (identical(other.weeksOfYear, weeksOfYear) ||
+                other.weeksOfYear == weeksOfYear) &&
             (identical(other.date, date) || other.date == date) &&
             const DeepCollectionEquality()
                 .equals(other._listcourse, _listcourse));
@@ -145,8 +162,8 @@ class _$ScheduleTimeResponseImpl implements _ScheduleTimeResponse {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, date, const DeepCollectionEquality().hash(_listcourse));
+  int get hashCode => Object.hash(runtimeType, weeksOfYear, date,
+      const DeepCollectionEquality().hash(_listcourse));
 
   @JsonKey(ignore: true)
   @override
@@ -166,12 +183,15 @@ class _$ScheduleTimeResponseImpl implements _ScheduleTimeResponse {
 
 abstract class _ScheduleTimeResponse implements ScheduleTimeResponse {
   const factory _ScheduleTimeResponse(
-      {final DateTime? date,
+      {final String? weeksOfYear,
+      final DateTime? date,
       final List<CourseItem>? listcourse}) = _$ScheduleTimeResponseImpl;
 
   factory _ScheduleTimeResponse.fromJson(Map<String, dynamic> json) =
       _$ScheduleTimeResponseImpl.fromJson;
 
+  @override
+  String? get weeksOfYear;
   @override
   DateTime? get date;
   @override
@@ -196,9 +216,10 @@ mixin _$CourseItem {
   int? get gpaPoint => throw _privateConstructorUsedError;
   int? get gpa => throw _privateConstructorUsedError;
   String? get roomname => throw _privateConstructorUsedError;
-  DateTime? get timestart => throw _privateConstructorUsedError;
-  DateTime? get timeend => throw _privateConstructorUsedError;
+  String? get timestart => throw _privateConstructorUsedError;
+  String? get timeend => throw _privateConstructorUsedError;
   String? get lession => throw _privateConstructorUsedError;
+  String? get dayofweeks => throw _privateConstructorUsedError;
   int? get rank => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -222,9 +243,10 @@ abstract class $CourseItemCopyWith<$Res> {
       int? gpaPoint,
       int? gpa,
       String? roomname,
-      DateTime? timestart,
-      DateTime? timeend,
+      String? timestart,
+      String? timeend,
       String? lession,
+      String? dayofweeks,
       int? rank});
 }
 
@@ -252,6 +274,7 @@ class _$CourseItemCopyWithImpl<$Res, $Val extends CourseItem>
     Object? timestart = freezed,
     Object? timeend = freezed,
     Object? lession = freezed,
+    Object? dayofweeks = freezed,
     Object? rank = freezed,
   }) {
     return _then(_value.copyWith(
@@ -290,14 +313,18 @@ class _$CourseItemCopyWithImpl<$Res, $Val extends CourseItem>
       timestart: freezed == timestart
           ? _value.timestart
           : timestart // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
       timeend: freezed == timeend
           ? _value.timeend
           : timeend // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
       lession: freezed == lession
           ? _value.lession
           : lession // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dayofweeks: freezed == dayofweeks
+          ? _value.dayofweeks
+          : dayofweeks // ignore: cast_nullable_to_non_nullable
               as String?,
       rank: freezed == rank
           ? _value.rank
@@ -324,9 +351,10 @@ abstract class _$$CourseItemImplCopyWith<$Res>
       int? gpaPoint,
       int? gpa,
       String? roomname,
-      DateTime? timestart,
-      DateTime? timeend,
+      String? timestart,
+      String? timeend,
       String? lession,
+      String? dayofweeks,
       int? rank});
 }
 
@@ -352,6 +380,7 @@ class __$$CourseItemImplCopyWithImpl<$Res>
     Object? timestart = freezed,
     Object? timeend = freezed,
     Object? lession = freezed,
+    Object? dayofweeks = freezed,
     Object? rank = freezed,
   }) {
     return _then(_$CourseItemImpl(
@@ -390,14 +419,18 @@ class __$$CourseItemImplCopyWithImpl<$Res>
       timestart: freezed == timestart
           ? _value.timestart
           : timestart // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
       timeend: freezed == timeend
           ? _value.timeend
           : timeend // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as String?,
       lession: freezed == lession
           ? _value.lession
           : lession // ignore: cast_nullable_to_non_nullable
+              as String?,
+      dayofweeks: freezed == dayofweeks
+          ? _value.dayofweeks
+          : dayofweeks // ignore: cast_nullable_to_non_nullable
               as String?,
       rank: freezed == rank
           ? _value.rank
@@ -422,6 +455,7 @@ class _$CourseItemImpl implements _CourseItem {
       this.timestart,
       this.timeend,
       this.lession,
+      this.dayofweeks,
       this.rank});
 
   factory _$CourseItemImpl.fromJson(Map<String, dynamic> json) =>
@@ -444,17 +478,19 @@ class _$CourseItemImpl implements _CourseItem {
   @override
   final String? roomname;
   @override
-  final DateTime? timestart;
+  final String? timestart;
   @override
-  final DateTime? timeend;
+  final String? timeend;
   @override
   final String? lession;
+  @override
+  final String? dayofweeks;
   @override
   final int? rank;
 
   @override
   String toString() {
-    return 'CourseItem(id: $id, coursename: $coursename, numbercredits: $numbercredits, numberlession: $numberlession, coefficient: $coefficient, gpaPoint: $gpaPoint, gpa: $gpa, roomname: $roomname, timestart: $timestart, timeend: $timeend, lession: $lession, rank: $rank)';
+    return 'CourseItem(id: $id, coursename: $coursename, numbercredits: $numbercredits, numberlession: $numberlession, coefficient: $coefficient, gpaPoint: $gpaPoint, gpa: $gpa, roomname: $roomname, timestart: $timestart, timeend: $timeend, lession: $lession, dayofweeks: $dayofweeks, rank: $rank)';
   }
 
   @override
@@ -480,6 +516,8 @@ class _$CourseItemImpl implements _CourseItem {
                 other.timestart == timestart) &&
             (identical(other.timeend, timeend) || other.timeend == timeend) &&
             (identical(other.lession, lession) || other.lession == lession) &&
+            (identical(other.dayofweeks, dayofweeks) ||
+                other.dayofweeks == dayofweeks) &&
             (identical(other.rank, rank) || other.rank == rank));
   }
 
@@ -498,6 +536,7 @@ class _$CourseItemImpl implements _CourseItem {
       timestart,
       timeend,
       lession,
+      dayofweeks,
       rank);
 
   @JsonKey(ignore: true)
@@ -524,9 +563,10 @@ abstract class _CourseItem implements CourseItem {
       final int? gpaPoint,
       final int? gpa,
       final String? roomname,
-      final DateTime? timestart,
-      final DateTime? timeend,
+      final String? timestart,
+      final String? timeend,
       final String? lession,
+      final String? dayofweeks,
       final int? rank}) = _$CourseItemImpl;
 
   factory _CourseItem.fromJson(Map<String, dynamic> json) =
@@ -549,11 +589,13 @@ abstract class _CourseItem implements CourseItem {
   @override
   String? get roomname;
   @override
-  DateTime? get timestart;
+  String? get timestart;
   @override
-  DateTime? get timeend;
+  String? get timeend;
   @override
   String? get lession;
+  @override
+  String? get dayofweeks;
   @override
   int? get rank;
   @override

@@ -24,6 +24,8 @@ mixin _$ScheduleDailyRequest {
   String? get nowdate => throw _privateConstructorUsedError;
   int? get startindex => throw _privateConstructorUsedError;
   int? get length => throw _privateConstructorUsedError;
+  int? get weeksOfYear => throw _privateConstructorUsedError;
+  String? get year => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +39,13 @@ abstract class $ScheduleDailyRequestCopyWith<$Res> {
           $Res Function(ScheduleDailyRequest) then) =
       _$ScheduleDailyRequestCopyWithImpl<$Res, ScheduleDailyRequest>;
   @useResult
-  $Res call({String? idUser, String? nowdate, int? startindex, int? length});
+  $Res call(
+      {String? idUser,
+      String? nowdate,
+      int? startindex,
+      int? length,
+      int? weeksOfYear,
+      String? year});
 }
 
 /// @nodoc
@@ -58,6 +66,8 @@ class _$ScheduleDailyRequestCopyWithImpl<$Res,
     Object? nowdate = freezed,
     Object? startindex = freezed,
     Object? length = freezed,
+    Object? weeksOfYear = freezed,
+    Object? year = freezed,
   }) {
     return _then(_value.copyWith(
       idUser: freezed == idUser
@@ -76,6 +86,14 @@ class _$ScheduleDailyRequestCopyWithImpl<$Res,
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
               as int?,
+      weeksOfYear: freezed == weeksOfYear
+          ? _value.weeksOfYear
+          : weeksOfYear // ignore: cast_nullable_to_non_nullable
+              as int?,
+      year: freezed == year
+          ? _value.year
+          : year // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -88,7 +106,13 @@ abstract class _$$ScheduleDailyRequestImplCopyWith<$Res>
       __$$ScheduleDailyRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? idUser, String? nowdate, int? startindex, int? length});
+  $Res call(
+      {String? idUser,
+      String? nowdate,
+      int? startindex,
+      int? length,
+      int? weeksOfYear,
+      String? year});
 }
 
 /// @nodoc
@@ -106,6 +130,8 @@ class __$$ScheduleDailyRequestImplCopyWithImpl<$Res>
     Object? nowdate = freezed,
     Object? startindex = freezed,
     Object? length = freezed,
+    Object? weeksOfYear = freezed,
+    Object? year = freezed,
   }) {
     return _then(_$ScheduleDailyRequestImpl(
       idUser: freezed == idUser
@@ -124,6 +150,14 @@ class __$$ScheduleDailyRequestImplCopyWithImpl<$Res>
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
               as int?,
+      weeksOfYear: freezed == weeksOfYear
+          ? _value.weeksOfYear
+          : weeksOfYear // ignore: cast_nullable_to_non_nullable
+              as int?,
+      year: freezed == year
+          ? _value.year
+          : year // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -132,7 +166,12 @@ class __$$ScheduleDailyRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ScheduleDailyRequestImpl implements _ScheduleDailyRequest {
   const _$ScheduleDailyRequestImpl(
-      {this.idUser, this.nowdate, this.startindex, this.length});
+      {this.idUser,
+      this.nowdate,
+      this.startindex,
+      this.length,
+      this.weeksOfYear,
+      this.year});
 
   factory _$ScheduleDailyRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$ScheduleDailyRequestImplFromJson(json);
@@ -145,10 +184,14 @@ class _$ScheduleDailyRequestImpl implements _ScheduleDailyRequest {
   final int? startindex;
   @override
   final int? length;
+  @override
+  final int? weeksOfYear;
+  @override
+  final String? year;
 
   @override
   String toString() {
-    return 'ScheduleDailyRequest(idUser: $idUser, nowdate: $nowdate, startindex: $startindex, length: $length)';
+    return 'ScheduleDailyRequest(idUser: $idUser, nowdate: $nowdate, startindex: $startindex, length: $length, weeksOfYear: $weeksOfYear, year: $year)';
   }
 
   @override
@@ -160,13 +203,16 @@ class _$ScheduleDailyRequestImpl implements _ScheduleDailyRequest {
             (identical(other.nowdate, nowdate) || other.nowdate == nowdate) &&
             (identical(other.startindex, startindex) ||
                 other.startindex == startindex) &&
-            (identical(other.length, length) || other.length == length));
+            (identical(other.length, length) || other.length == length) &&
+            (identical(other.weeksOfYear, weeksOfYear) ||
+                other.weeksOfYear == weeksOfYear) &&
+            (identical(other.year, year) || other.year == year));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, idUser, nowdate, startindex, length);
+  int get hashCode => Object.hash(
+      runtimeType, idUser, nowdate, startindex, length, weeksOfYear, year);
 
   @JsonKey(ignore: true)
   @override
@@ -189,7 +235,9 @@ abstract class _ScheduleDailyRequest implements ScheduleDailyRequest {
       {final String? idUser,
       final String? nowdate,
       final int? startindex,
-      final int? length}) = _$ScheduleDailyRequestImpl;
+      final int? length,
+      final int? weeksOfYear,
+      final String? year}) = _$ScheduleDailyRequestImpl;
 
   factory _ScheduleDailyRequest.fromJson(Map<String, dynamic> json) =
       _$ScheduleDailyRequestImpl.fromJson;
@@ -202,6 +250,10 @@ abstract class _ScheduleDailyRequest implements ScheduleDailyRequest {
   int? get startindex;
   @override
   int? get length;
+  @override
+  int? get weeksOfYear;
+  @override
+  String? get year;
   @override
   @JsonKey(ignore: true)
   _$$ScheduleDailyRequestImplCopyWith<_$ScheduleDailyRequestImpl>

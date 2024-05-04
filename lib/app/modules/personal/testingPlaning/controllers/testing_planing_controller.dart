@@ -22,6 +22,9 @@ class TestingPlaningController extends BaseController {
   final userRepo = Get.find<UserRepository>();
   Rx<UserObject?> userObject = UserObject().obs;
 
+  // final UserRepository userRepo1 = Get.find();
+  // UserObject? userObject1;
+
   @override
   void onReady() async {
     Fimber.d("onReady()");
@@ -37,12 +40,13 @@ class TestingPlaningController extends BaseController {
     if (isRefresh != true) isLoading.value = true;
     isLoading.value = true;
     final response = await testingPlanRepo?.loadTestingPlan(
-        TestScheduleRequestParams(year: searchAdvance.value.year, semester: searchAdvance.value.semester, startindex: 1, length: 100));
+        TestScheduleRequestParams(fromDate: DateTime.now(), toDate: DateTime.now(),year: searchAdvance.value.year, semester: searchAdvance.value.semester, startindex: 1, length: 100, idUser: userObject.value?.iduser ));
     // final response = await testingPlanRepo?.loadTestingPlan(null);
     response?.when(success: (data) {
       if (data.isSuccess()) {
         Fimber.d(data.result.toString());
         lstTestingPlan.value = data.result ?? [];
+        print('---------${lstTestingPlan}');
       } else {
         isError.value = data.message;
       }

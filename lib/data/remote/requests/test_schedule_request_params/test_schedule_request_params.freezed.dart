@@ -25,9 +25,9 @@ mixin _$TestScheduleRequestParams {
   DateTime? get toDate => throw _privateConstructorUsedError;
   int? get semester => throw _privateConstructorUsedError;
   String? get year => throw _privateConstructorUsedError;
-  int? get examination => throw _privateConstructorUsedError;
   int? get startindex => throw _privateConstructorUsedError;
   int? get length => throw _privateConstructorUsedError;
+  String? get idUser => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,9 +46,9 @@ abstract class $TestScheduleRequestParamsCopyWith<$Res> {
       DateTime? toDate,
       int? semester,
       String? year,
-      int? examination,
       int? startindex,
-      int? length});
+      int? length,
+      String? idUser});
 }
 
 /// @nodoc
@@ -69,9 +69,9 @@ class _$TestScheduleRequestParamsCopyWithImpl<$Res,
     Object? toDate = freezed,
     Object? semester = freezed,
     Object? year = freezed,
-    Object? examination = freezed,
     Object? startindex = freezed,
     Object? length = freezed,
+    Object? idUser = freezed,
   }) {
     return _then(_value.copyWith(
       fromDate: freezed == fromDate
@@ -90,10 +90,6 @@ class _$TestScheduleRequestParamsCopyWithImpl<$Res,
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
               as String?,
-      examination: freezed == examination
-          ? _value.examination
-          : examination // ignore: cast_nullable_to_non_nullable
-              as int?,
       startindex: freezed == startindex
           ? _value.startindex
           : startindex // ignore: cast_nullable_to_non_nullable
@@ -102,6 +98,10 @@ class _$TestScheduleRequestParamsCopyWithImpl<$Res,
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
               as int?,
+      idUser: freezed == idUser
+          ? _value.idUser
+          : idUser // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -120,9 +120,9 @@ abstract class _$$TestScheduleRequestParamsImplCopyWith<$Res>
       DateTime? toDate,
       int? semester,
       String? year,
-      int? examination,
       int? startindex,
-      int? length});
+      int? length,
+      String? idUser});
 }
 
 /// @nodoc
@@ -142,9 +142,9 @@ class __$$TestScheduleRequestParamsImplCopyWithImpl<$Res>
     Object? toDate = freezed,
     Object? semester = freezed,
     Object? year = freezed,
-    Object? examination = freezed,
     Object? startindex = freezed,
     Object? length = freezed,
+    Object? idUser = freezed,
   }) {
     return _then(_$TestScheduleRequestParamsImpl(
       fromDate: freezed == fromDate
@@ -163,10 +163,6 @@ class __$$TestScheduleRequestParamsImplCopyWithImpl<$Res>
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
               as String?,
-      examination: freezed == examination
-          ? _value.examination
-          : examination // ignore: cast_nullable_to_non_nullable
-              as int?,
       startindex: freezed == startindex
           ? _value.startindex
           : startindex // ignore: cast_nullable_to_non_nullable
@@ -175,6 +171,10 @@ class __$$TestScheduleRequestParamsImplCopyWithImpl<$Res>
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
               as int?,
+      idUser: freezed == idUser
+          ? _value.idUser
+          : idUser // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -187,9 +187,9 @@ class _$TestScheduleRequestParamsImpl implements _TestScheduleRequestParams {
       this.toDate,
       this.semester,
       this.year,
-      this.examination,
       this.startindex,
-      this.length});
+      this.length,
+      this.idUser});
 
   factory _$TestScheduleRequestParamsImpl.fromJson(Map<String, dynamic> json) =>
       _$$TestScheduleRequestParamsImplFromJson(json);
@@ -203,15 +203,15 @@ class _$TestScheduleRequestParamsImpl implements _TestScheduleRequestParams {
   @override
   final String? year;
   @override
-  final int? examination;
-  @override
   final int? startindex;
   @override
   final int? length;
+  @override
+  final String? idUser;
 
   @override
   String toString() {
-    return 'TestScheduleRequestParams(fromDate: $fromDate, toDate: $toDate, semester: $semester, year: $year, examination: $examination, startindex: $startindex, length: $length)';
+    return 'TestScheduleRequestParams(fromDate: $fromDate, toDate: $toDate, semester: $semester, year: $year, startindex: $startindex, length: $length, idUser: $idUser)';
   }
 
   @override
@@ -225,17 +225,16 @@ class _$TestScheduleRequestParamsImpl implements _TestScheduleRequestParams {
             (identical(other.semester, semester) ||
                 other.semester == semester) &&
             (identical(other.year, year) || other.year == year) &&
-            (identical(other.examination, examination) ||
-                other.examination == examination) &&
             (identical(other.startindex, startindex) ||
                 other.startindex == startindex) &&
-            (identical(other.length, length) || other.length == length));
+            (identical(other.length, length) || other.length == length) &&
+            (identical(other.idUser, idUser) || other.idUser == idUser));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, fromDate, toDate, semester, year,
-      examination, startindex, length);
+      startindex, length, idUser);
 
   @JsonKey(ignore: true)
   @override
@@ -258,9 +257,9 @@ abstract class _TestScheduleRequestParams implements TestScheduleRequestParams {
       final DateTime? toDate,
       final int? semester,
       final String? year,
-      final int? examination,
       final int? startindex,
-      final int? length}) = _$TestScheduleRequestParamsImpl;
+      final int? length,
+      final String? idUser}) = _$TestScheduleRequestParamsImpl;
 
   factory _TestScheduleRequestParams.fromJson(Map<String, dynamic> json) =
       _$TestScheduleRequestParamsImpl.fromJson;
@@ -274,11 +273,11 @@ abstract class _TestScheduleRequestParams implements TestScheduleRequestParams {
   @override
   String? get year;
   @override
-  int? get examination;
-  @override
   int? get startindex;
   @override
   int? get length;
+  @override
+  String? get idUser;
   @override
   @JsonKey(ignore: true)
   _$$TestScheduleRequestParamsImplCopyWith<_$TestScheduleRequestParamsImpl>

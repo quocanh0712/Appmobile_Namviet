@@ -1,6 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'schedule_daily_response.dart';
+
 // **************************************************************************
 // D3FBaseResponseJsonToTGenerator
 // **************************************************************************
@@ -21,7 +22,6 @@ List<ScheduleDailyResponse> jsonToListScheduleDailyResponses(Object? json) =>
     List<Object>.from(json as List)
         .map((e) => ScheduleDailyResponse.fromJson(e as Map<String, dynamic>))
         .toList();
-
 
 // **************************************************************************
 // JsonSerializableGenerator

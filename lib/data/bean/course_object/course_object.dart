@@ -26,7 +26,10 @@ class CourseObject with _$CourseObject {
     int? examTime,
     int? examination,
     String? time,
-    dynamic teachingmethod,
+    String? teachingmethod,
+    @JsonKey(name: 'ngay_thi') String? ngayThi,
+    String? note,
+    String? duringtime,
     dynamic status,
   }) = _CourseObject;
 

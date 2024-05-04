@@ -125,23 +125,26 @@ class FinanceBySemesterView extends BaseView<FinanceBySemesterController> {
                   )),
             ),
           ),
-          InkWell(
-            onTap: () => controller.doPayment(),
-            child: Container(
-              width: double.infinity,
-              height: 50,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  image: DecorationImage(
-                      image: AssetImage(Assets.images.butGradientBg.path),
-                      fit: BoxFit.cover)),
-              child: Align(
-                  alignment: FractionalOffset.center,
-                  child: AutoSizeText(
-                    LocaleKeys.billPaymentTitle.tr,
-                    style: Get.context?.themeExtensions.paragraph
-                        .copyWith(color: Get.context?.themeExtensions.white),
-                  )),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 20.0, left: 12, right: 12),
+            child: InkWell(
+              onTap: () => controller.doPayment(),
+              child: Container(
+                width: double.infinity,
+                height: 50,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    image: DecorationImage(
+                        image: AssetImage(Assets.images.butGradientBg.path),
+                        fit: BoxFit.cover)),
+                child: Align(
+                    alignment: FractionalOffset.center,
+                    child: AutoSizeText(
+                      LocaleKeys.billPaymentTitle.tr,
+                      style: Get.context?.themeExtensions.paragraph
+                          .copyWith(color: Get.context?.themeExtensions.white),
+                    )),
+              ),
             ),
           ),
           Obx(() {

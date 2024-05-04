@@ -770,7 +770,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.ATTENDANCE_STU,
-      page: () => const AttendanceStuView(),
+      page: () =>  AttendanceStuView(),
       binding: AttendanceStuBinding(),
     ),
     GetPage(

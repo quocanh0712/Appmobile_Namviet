@@ -1,11 +1,13 @@
 // Copyright (c) 2022, one of the D3F outsourcing projects. All rights reserved.
 
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/app/modules/schedule_daily/model/schedule_daily_request.dart';
 import 'package:ftu_lms/app/modules/schedule_daily/repository/schedule_daily_repository.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/utils/date_time_utils.dart';
 import 'package:get/get.dart';
+import 'package:week_of_year/date_week_extensions.dart';
 
 import '../../../../data/bean/user_object/user_object.dart';
 import '../../../../data/repositories/user_repository.dart';
@@ -16,7 +18,9 @@ class ScheduleDailyController extends BaseController<ScheduleDailyResponse> {
   DateTime timeDaily = DateTime.now();
   var listTimeObs = List.empty(growable: true).obs;
   var listScheduleDaily = List<ScheduleDailyResponse?>.empty(growable: true).obs;
-  String idUser = "B10CCD3B-4C45-4191-A573-62EA82A84A80";
+
+
+  final date = DateTime.now();
 
   final UserRepository userRepo = Get.find();
   UserObject? userObject;
@@ -24,6 +28,8 @@ class ScheduleDailyController extends BaseController<ScheduleDailyResponse> {
 
   @override
   void onInit() {
+
+
 
     title = Get.arguments;
     listTimeObs.value = [
@@ -67,7 +73,7 @@ class ScheduleDailyController extends BaseController<ScheduleDailyResponse> {
     isLoading.value = true;
     ScheduleDailyRepository repository = Get.find();
     var response = await repository.getScheduleDaily(
-        ScheduleDailyRequest( nowdate: DateTimeUtils.formatDateTime(timeDaily, dateYMD), idUser: userObject?.iduser , startindex: 0 , length: 10 ), );
+        ScheduleDailyRequest( nowdate: DateTimeUtils.formatDateTime(timeDaily, dateYMD), idUser: userObject?.iduser , startindex: 0 , length: 10 , year: date.year.toString(), weeksOfYear: date.weekOfYear ), );
     response.when(success: (data) {
       isLoading.value = false;
       if (data.isSuccess()) {

@@ -21,10 +21,13 @@ ScheduleTimeRequest _$ScheduleTimeRequestFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ScheduleTimeRequest {
   String? get year => throw _privateConstructorUsedError;
+  String? get nowdate => throw _privateConstructorUsedError;
+  int? get weeksOfYear => throw _privateConstructorUsedError;
   int? get semester => throw _privateConstructorUsedError;
   int? get session => throw _privateConstructorUsedError;
   int? get startindex => throw _privateConstructorUsedError;
   int? get length => throw _privateConstructorUsedError;
+  String? get idUser => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,10 +43,13 @@ abstract class $ScheduleTimeRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {String? year,
+      String? nowdate,
+      int? weeksOfYear,
       int? semester,
       int? session,
       int? startindex,
-      int? length});
+      int? length,
+      String? idUser});
 }
 
 /// @nodoc
@@ -60,16 +66,27 @@ class _$ScheduleTimeRequestCopyWithImpl<$Res, $Val extends ScheduleTimeRequest>
   @override
   $Res call({
     Object? year = freezed,
+    Object? nowdate = freezed,
+    Object? weeksOfYear = freezed,
     Object? semester = freezed,
     Object? session = freezed,
     Object? startindex = freezed,
     Object? length = freezed,
+    Object? idUser = freezed,
   }) {
     return _then(_value.copyWith(
       year: freezed == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
               as String?,
+      nowdate: freezed == nowdate
+          ? _value.nowdate
+          : nowdate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      weeksOfYear: freezed == weeksOfYear
+          ? _value.weeksOfYear
+          : weeksOfYear // ignore: cast_nullable_to_non_nullable
+              as int?,
       semester: freezed == semester
           ? _value.semester
           : semester // ignore: cast_nullable_to_non_nullable
@@ -86,6 +103,10 @@ class _$ScheduleTimeRequestCopyWithImpl<$Res, $Val extends ScheduleTimeRequest>
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
               as int?,
+      idUser: freezed == idUser
+          ? _value.idUser
+          : idUser // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -100,10 +121,13 @@ abstract class _$$ScheduleTimeRequestImplCopyWith<$Res>
   @useResult
   $Res call(
       {String? year,
+      String? nowdate,
+      int? weeksOfYear,
       int? semester,
       int? session,
       int? startindex,
-      int? length});
+      int? length,
+      String? idUser});
 }
 
 /// @nodoc
@@ -118,16 +142,27 @@ class __$$ScheduleTimeRequestImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? year = freezed,
+    Object? nowdate = freezed,
+    Object? weeksOfYear = freezed,
     Object? semester = freezed,
     Object? session = freezed,
     Object? startindex = freezed,
     Object? length = freezed,
+    Object? idUser = freezed,
   }) {
     return _then(_$ScheduleTimeRequestImpl(
       year: freezed == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
               as String?,
+      nowdate: freezed == nowdate
+          ? _value.nowdate
+          : nowdate // ignore: cast_nullable_to_non_nullable
+              as String?,
+      weeksOfYear: freezed == weeksOfYear
+          ? _value.weeksOfYear
+          : weeksOfYear // ignore: cast_nullable_to_non_nullable
+              as int?,
       semester: freezed == semester
           ? _value.semester
           : semester // ignore: cast_nullable_to_non_nullable
@@ -144,6 +179,10 @@ class __$$ScheduleTimeRequestImplCopyWithImpl<$Res>
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
               as int?,
+      idUser: freezed == idUser
+          ? _value.idUser
+          : idUser // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -152,13 +191,24 @@ class __$$ScheduleTimeRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ScheduleTimeRequestImpl implements _ScheduleTimeRequest {
   const _$ScheduleTimeRequestImpl(
-      {this.year, this.semester, this.session, this.startindex, this.length});
+      {this.year,
+      this.nowdate,
+      this.weeksOfYear,
+      this.semester,
+      this.session,
+      this.startindex,
+      this.length,
+      this.idUser});
 
   factory _$ScheduleTimeRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$ScheduleTimeRequestImplFromJson(json);
 
   @override
   final String? year;
+  @override
+  final String? nowdate;
+  @override
+  final int? weeksOfYear;
   @override
   final int? semester;
   @override
@@ -167,10 +217,12 @@ class _$ScheduleTimeRequestImpl implements _ScheduleTimeRequest {
   final int? startindex;
   @override
   final int? length;
+  @override
+  final String? idUser;
 
   @override
   String toString() {
-    return 'ScheduleTimeRequest(year: $year, semester: $semester, session: $session, startindex: $startindex, length: $length)';
+    return 'ScheduleTimeRequest(year: $year, nowdate: $nowdate, weeksOfYear: $weeksOfYear, semester: $semester, session: $session, startindex: $startindex, length: $length, idUser: $idUser)';
   }
 
   @override
@@ -179,18 +231,22 @@ class _$ScheduleTimeRequestImpl implements _ScheduleTimeRequest {
         (other.runtimeType == runtimeType &&
             other is _$ScheduleTimeRequestImpl &&
             (identical(other.year, year) || other.year == year) &&
+            (identical(other.nowdate, nowdate) || other.nowdate == nowdate) &&
+            (identical(other.weeksOfYear, weeksOfYear) ||
+                other.weeksOfYear == weeksOfYear) &&
             (identical(other.semester, semester) ||
                 other.semester == semester) &&
             (identical(other.session, session) || other.session == session) &&
             (identical(other.startindex, startindex) ||
                 other.startindex == startindex) &&
-            (identical(other.length, length) || other.length == length));
+            (identical(other.length, length) || other.length == length) &&
+            (identical(other.idUser, idUser) || other.idUser == idUser));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, year, semester, session, startindex, length);
+  int get hashCode => Object.hash(runtimeType, year, nowdate, weeksOfYear,
+      semester, session, startindex, length, idUser);
 
   @JsonKey(ignore: true)
   @override
@@ -210,16 +266,23 @@ class _$ScheduleTimeRequestImpl implements _ScheduleTimeRequest {
 abstract class _ScheduleTimeRequest implements ScheduleTimeRequest {
   const factory _ScheduleTimeRequest(
       {final String? year,
+      final String? nowdate,
+      final int? weeksOfYear,
       final int? semester,
       final int? session,
       final int? startindex,
-      final int? length}) = _$ScheduleTimeRequestImpl;
+      final int? length,
+      final String? idUser}) = _$ScheduleTimeRequestImpl;
 
   factory _ScheduleTimeRequest.fromJson(Map<String, dynamic> json) =
       _$ScheduleTimeRequestImpl.fromJson;
 
   @override
   String? get year;
+  @override
+  String? get nowdate;
+  @override
+  int? get weeksOfYear;
   @override
   int? get semester;
   @override
@@ -228,6 +291,8 @@ abstract class _ScheduleTimeRequest implements ScheduleTimeRequest {
   int? get startindex;
   @override
   int? get length;
+  @override
+  String? get idUser;
   @override
   @JsonKey(ignore: true)
   _$$ScheduleTimeRequestImplCopyWith<_$ScheduleTimeRequestImpl> get copyWith =>
