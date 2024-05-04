@@ -217,6 +217,8 @@ extension NetworkResponseConverter on BaseResponseObject {
       return BaseResponseObject<SemesterPointObject?>.fromJson(
           json, jsonToNullableSemesterPointObject);
     }
+
+
     if (this is BaseResponseObject<LearningProfileResponse?>) {
       return BaseResponseObject<LearningProfileResponse?>.fromJson(
           json, jsonToNullableLearningProfileResponse);

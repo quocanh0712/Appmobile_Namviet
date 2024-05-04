@@ -1018,7 +1018,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                 color: context.themeExtensions.white,
               ),
               child: controller.recentTasks.isEmpty
-                  ? _buildTodayTasks(context)
+                  ? _buildNoTasksOverview(context)
                   : _buildTodayTasks(context),
               //controller.hasNoTasks.value
            // _buildNoTasksOverview(context)
@@ -2427,6 +2427,25 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     ];
 
     List<Widget> sciencePartner = [
+    // hoi thao
+    _buildListFeatureItem(
+    context,
+      onTap: () => controller.navigateToSeminar(),
+    background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+    // icon: Icon(
+    //   Icons.science_outlined,
+    //   //color: const Color(0xFF4da543).withOpacity(0.75),
+    //   color: Colors.white,
+    //   size: 30,
+    // ),
+    image: const Image(
+    image: AssetImage(
+    'assets/Icon/77.png',
+    ),
+    fit: BoxFit.cover,
+    ),
+    title: LocaleKeys.seminar.tr,
+    ),
       // De tai thanh vien
       _buildListFeatureItem(
         context,

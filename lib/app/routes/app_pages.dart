@@ -75,6 +75,8 @@ import 'package:ftu_lms/app/modules/scholarship_list/bindings/scholarship_list_b
 import 'package:ftu_lms/app/modules/scholarship_list/views/scholarship_list_view.dart';
 import 'package:ftu_lms/app/modules/science_topic/bindings/science_topic_binding.dart';
 import 'package:ftu_lms/app/modules/science_topic/views/science_topic_view.dart';
+import 'package:ftu_lms/app/modules/seminar/bindings/seminar_binding.dart';
+import 'package:ftu_lms/app/modules/seminar/views/seminar_view.dart';
 import 'package:ftu_lms/app/modules/shopping_need/bindings/shopping_need_binding.dart';
 import 'package:ftu_lms/app/modules/shopping_need/views/shopping_need_view.dart';
 import 'package:ftu_lms/app/modules/social_insurance/bindings/social_insurance_binding.dart';
@@ -1020,6 +1022,13 @@ class AppPages {
       page: () => const MemberTopicView(),
       binding: MemberTopicBinding(),
     ),
+
+    GetPage(
+      name: _Paths.SEMINAR,
+      page: () => const SeminarView(),
+      binding: SeminarBinding(),
+    ),
+
 
 
   ];

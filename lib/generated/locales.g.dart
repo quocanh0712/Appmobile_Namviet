@@ -464,12 +464,15 @@ class LocaleKeys {
   static const testMethod = 'testMethod';
   static const testNote = 'testNote';
 
+  static const seminar = 'seminar';
+
 
 
 }
 
 class Locales {
   static const vn_VI = {
+    'seminar' : 'Hội thảo',
     'testMethod' : 'Hình thức thi',
     'testNote' : 'Ghi chú',
     'testDuringTime' : 'Thời gian làm bài',
@@ -921,6 +924,7 @@ class Locales {
     'incomingName': 'Họ tên',
   };
   static const en_US = {
+    'seminar' : 'Hội thảo',
     'testMethod' : 'Hình thức thi',
     'testNote' : 'Ghi chú',
     'testDuringTime' : 'Thời gian làm bài',

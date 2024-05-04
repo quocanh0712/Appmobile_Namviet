@@ -2,6 +2,7 @@
 
 // coverage:ignore-file
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ftu_lms/app/modules/base/base_list_view.dart';
@@ -43,7 +44,7 @@ class ScheduleTimeView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white60,
       appBar: AppBar(
-        title: Text(controller.getTitle()),
+        title: Text(controller.getTitle(), style: GoogleFonts.openSans(fontWeight: FontWeight.bold, fontSize: 23),),
         actions: [
           IconButton(
             onPressed: () {
@@ -78,26 +79,17 @@ class ScheduleTimeView extends StatelessWidget {
             const SizedBox(
               height: 6,
             ),
-            Container(
-              height: 50.h,
-              width: 300.w,
-              decoration: BoxDecoration(
-                color: Colors.red,
-                borderRadius: BorderRadius.circular(10)
-              ),
-              child: Text(
-                ''
-              ),
-            ),
+
             const SizedBox(
               height: 6,
             ),
-            Divider(
-              color: context.themeExtensions.black,
-              height: 2,
-            ),
+            // Divider(
+            //   color: context.themeExtensions.black,
+            //   height: 2,
+            // ),
             Expanded(
-              child: Obx(() {
+              child:
+              Obx(() {
                 return ListView.builder(
                   physics: ScrollPhysics(),
                   padding: EdgeInsets.zero,
@@ -108,8 +100,37 @@ class ScheduleTimeView extends StatelessWidget {
                     controller.listScheduleTime.value[index];
                     List<CourseItem>? courseItems = scheduleTime?.listcourse;
 
-                    return Column(
-                      children: courseItems?.map((courseItem) {
+                    return courseItems!.isEmpty ? _buildNoTasksOverviewThisWeek(context)
+                        : Column(
+                      children: [
+                        Container(
+                          height: 50.h,
+                          width: 300.w,
+                          decoration: BoxDecoration(
+
+                            borderRadius: BorderRadius.circular(10),
+                            gradient: const LinearGradient(
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                              colors: [
+                                Color.fromRGBO(9, 116, 66, 1),
+                                Color.fromRGBO(98, 179, 69, 1),
+                              ],
+                            ),
+                          ),
+                          child: Center(
+                            child: Text(
+
+                              '${scheduleTime?.weeksOfYear}',
+                              style: GoogleFonts.openSans(
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.white,
+                                  fontSize: 18.sp),
+                            ),
+                          ),
+                        ),
+                        Column(
+                          children: courseItems?.map((courseItem) {
                             return Padding(
                               padding:  EdgeInsets.symmetric(vertical: 5.0.h, horizontal: 10.w
                               ),
@@ -136,12 +157,12 @@ class ScheduleTimeView extends StatelessWidget {
                                                   shape: BoxShape.circle),
                                               child: Center(
                                                   child: Text(
-                                                "${_formatTime(scheduleTime?.date.toString())}",
-                                                style: GoogleFonts.openSans(
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Colors.white,
-                                                    fontSize: 18.sp),
-                                              ))),
+                                                    "${_formatTime(scheduleTime?.date.toString())}",
+                                                    style: GoogleFonts.openSans(
+                                                        fontWeight: FontWeight.bold,
+                                                        color: Colors.white,
+                                                        fontSize: 18.sp),
+                                                  ))),
                                         ],
                                       ),
                                     ],
@@ -157,7 +178,7 @@ class ScheduleTimeView extends StatelessWidget {
                                       child: Column(
                                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                        CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             "${courseItem?.coursename}",
@@ -173,15 +194,15 @@ class ScheduleTimeView extends StatelessWidget {
                                                   height: 17.h,
 
                                                   decoration: BoxDecoration(
-                                                    color: Colors.black12,
-                                                    borderRadius: BorderRadius.circular(5)
+                                                      color: Colors.black12,
+                                                      borderRadius: BorderRadius.circular(5)
                                                   ),
                                                   child: Center(
                                                     child: Text(
                                                       "${courseItem?.roomname}",
                                                       style: GoogleFonts.openSans(
                                                           fontWeight:
-                                                              FontWeight.w600,
+                                                          FontWeight.w600,
                                                           color: Colors.white,
                                                           fontSize: 12.sp),
                                                     ),
@@ -192,8 +213,8 @@ class ScheduleTimeView extends StatelessWidget {
                                                 children: [
                                                   Icon(Icons.access_time_outlined, color: Colors.white,size: 14.sp,),
                                                   Text('${courseItem?.timestart ?? ''} - ${courseItem?.timeend ?? ''}',style: GoogleFonts.openSans(
-                                                  fontWeight:
-                                                  FontWeight.w600,
+                                                      fontWeight:
+                                                      FontWeight.w600,
                                                       color: Colors.white,
                                                       fontSize: 12.sp),),
                                                 ],
@@ -208,11 +229,13 @@ class ScheduleTimeView extends StatelessWidget {
                               ),
                             );
                           }).toList() ??
-                          [],
+                              [],
+                        ),
+                      ],
                     );
                   },
                 );
-              }),
+              }) ,
             ),
           ],
         ),
@@ -232,6 +255,33 @@ class ScheduleTimeView extends StatelessWidget {
     String day = dateTime.day.toString();
 
     return day;
+  }
+
+  Widget? _buildNoTasksOverviewThisWeek(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        const SizedBox(width: 32),
+        Assets.images.icNoTasks.image(fit: BoxFit.cover),
+        const SizedBox(width: 25),
+        Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                AutoSizeText(LocaleKeys.restNow.tr,
+                    style: context.themeExtensions.heading2
+                        .copyWith(color: context.themeExtensions.textColor)),
+                const SizedBox(height: 11),
+                AutoSizeText(LocaleKeys.noTasksMessage.tr,
+                    style: context.themeExtensions.paragraph
+                        .copyWith(color: context.themeExtensions.textGrey))
+              ],
+            )),
+        const SizedBox(width: 25)
+      ],
+    );
   }
 }
 

@@ -369,6 +369,11 @@ class HomeController extends BaseController {
     Get.toNamed(Routes.MEMBER_TOPIC);
   }
 
+  navigateToSeminar() {
+    Fimber.d("navigateToSeminar()");
+    Get.toNamed(Routes.SEMINAR);
+  }
+
   navigateToSurveyResult() {
     Fimber.d("navigateToSurveyResult()");
     Get.toNamed(Routes.SURVEY_RESULT);

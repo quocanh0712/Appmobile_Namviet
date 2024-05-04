@@ -152,6 +152,7 @@ abstract class Routes {
   static const INTERNATIONAL_NEWS = _Paths.INTERNATIONAL_NEWS;
   static const SCIENCE_TOPIC = _Paths.SCIENCE_TOPIC;
   static const MEMBER_TOPIC = _Paths.MEMBER_TOPIC;
+  static const SEMINAR = _Paths.SEMINAR;
 
 
 
@@ -304,5 +305,6 @@ abstract class _Paths {
   static const INTERNATIONAL_NEWS = '/international_news';
   static const SCIENCE_TOPIC = '/science_topic';
   static const MEMBER_TOPIC = '/member_topic';
+  static const SEMINAR = '/seminar';
 
 }
