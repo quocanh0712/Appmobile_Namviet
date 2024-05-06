@@ -1025,7 +1025,7 @@ class AppPages {
 
     GetPage(
       name: _Paths.SEMINAR,
-      page: () => const SeminarView(),
+      page: () =>  SeminarView(),
       binding: SeminarBinding(),
     ),
 

@@ -20,6 +20,7 @@ import 'package:ftu_lms/app/modules/reward_discipline/views/reward/model/reward_
 import 'package:ftu_lms/app/modules/schedule_daily/model/schedule_daily_response.dart';
 import 'package:ftu_lms/app/modules/schedule_time/model/schedule_time_response.dart';
 import 'package:ftu_lms/app/modules/scientific_research/model/scientific_research_response.dart';
+import 'package:ftu_lms/app/modules/seminar/model/seminar_response.dart';
 import 'package:ftu_lms/app/modules/survey_result/model/survey_result_response.dart';
 import 'package:ftu_lms/app/modules/survey_result/views/survey_item/model/survey_item_response.dart';
 import 'package:ftu_lms/app/modules/working_process/model/key_value_response.dart';
@@ -217,6 +218,15 @@ extension NetworkResponseConverter on BaseResponseObject {
       return BaseResponseObject<SemesterPointObject?>.fromJson(
           json, jsonToNullableSemesterPointObject);
     }
+
+
+
+    if (this is BaseResponseObject<List<SeminarResponse?>?>) {
+      return BaseResponseObject<List<SeminarResponse?>?>.fromJson(
+          json, jsonToListNullableSeminarResponse);
+    }
+
+
 
 
     if (this is BaseResponseObject<LearningProfileResponse?>) {

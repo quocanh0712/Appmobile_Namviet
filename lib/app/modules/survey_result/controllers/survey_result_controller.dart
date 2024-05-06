@@ -10,9 +10,15 @@ import 'package:ftu_lms/data/remote/wrappers/result.dart';
 import 'package:ftu_lms/widgets/search_advance_view.dart';
 import 'package:get/get.dart';
 
+import '../../../../data/bean/user_object/user_object.dart';
+import '../../../../data/repositories/user_repository.dart';
+
 class SurveyResultController extends BaseListController<SurveyResultResponse> {
   SurveyResultRequest _request = const SurveyResultRequest();
   SurveyResultRequest _requestDraft = const SurveyResultRequest();
+
+  final UserRepository userRepo = Get.find();
+  UserObject? userObject;
 
   SurveyResultRequest getRequestData() => _request;
 
@@ -38,6 +44,7 @@ class SurveyResultController extends BaseListController<SurveyResultResponse> {
   Future<Result<BaseResponseObject<List<SurveyResultResponse?>?>, Exception>> callToHost() {
     SurveyResultRepository repository = Get.find();
     return repository.getSurveyItemList(_request.copyWith(
+        idUser: userObject?.iduser,
         year: _request.year ?? "",
         semester: _request.semester ?? 0,
         length: maxLengthResult,

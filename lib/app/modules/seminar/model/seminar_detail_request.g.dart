@@ -1,27 +1,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'survey_result_request.dart';
+part of 'seminar_detail_request.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SurveyResultRequestImpl _$$SurveyResultRequestImplFromJson(
+_$SeminarDetailRequestImpl _$$SeminarDetailRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$SurveyResultRequestImpl(
-      year: json['year'] as String?,
-      semester: json['semester'] as int?,
+    _$SeminarDetailRequestImpl(
       startindex: json['startindex'] as int?,
       length: json['length'] as int?,
-      idUser: json['idUser'] as String?,
     );
 
-Map<String, dynamic> _$$SurveyResultRequestImplToJson(
-        _$SurveyResultRequestImpl instance) =>
+Map<String, dynamic> _$$SeminarDetailRequestImplToJson(
+        _$SeminarDetailRequestImpl instance) =>
     <String, dynamic>{
-      'year': instance.year,
-      'semester': instance.semester,
       'startindex': instance.startindex,
       'length': instance.length,
-      'idUser': instance.idUser,
     };

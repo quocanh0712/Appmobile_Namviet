@@ -24,6 +24,7 @@ mixin _$SurveyResultRequest {
   int? get semester => throw _privateConstructorUsedError;
   int? get startindex => throw _privateConstructorUsedError;
   int? get length => throw _privateConstructorUsedError;
+  String? get idUser => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +38,12 @@ abstract class $SurveyResultRequestCopyWith<$Res> {
           SurveyResultRequest value, $Res Function(SurveyResultRequest) then) =
       _$SurveyResultRequestCopyWithImpl<$Res, SurveyResultRequest>;
   @useResult
-  $Res call({String? year, int? semester, int? startindex, int? length});
+  $Res call(
+      {String? year,
+      int? semester,
+      int? startindex,
+      int? length,
+      String? idUser});
 }
 
 /// @nodoc
@@ -57,6 +63,7 @@ class _$SurveyResultRequestCopyWithImpl<$Res, $Val extends SurveyResultRequest>
     Object? semester = freezed,
     Object? startindex = freezed,
     Object? length = freezed,
+    Object? idUser = freezed,
   }) {
     return _then(_value.copyWith(
       year: freezed == year
@@ -75,6 +82,10 @@ class _$SurveyResultRequestCopyWithImpl<$Res, $Val extends SurveyResultRequest>
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
               as int?,
+      idUser: freezed == idUser
+          ? _value.idUser
+          : idUser // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -87,7 +98,12 @@ abstract class _$$SurveyResultRequestImplCopyWith<$Res>
       __$$SurveyResultRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? year, int? semester, int? startindex, int? length});
+  $Res call(
+      {String? year,
+      int? semester,
+      int? startindex,
+      int? length,
+      String? idUser});
 }
 
 /// @nodoc
@@ -105,6 +121,7 @@ class __$$SurveyResultRequestImplCopyWithImpl<$Res>
     Object? semester = freezed,
     Object? startindex = freezed,
     Object? length = freezed,
+    Object? idUser = freezed,
   }) {
     return _then(_$SurveyResultRequestImpl(
       year: freezed == year
@@ -123,6 +140,10 @@ class __$$SurveyResultRequestImplCopyWithImpl<$Res>
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
               as int?,
+      idUser: freezed == idUser
+          ? _value.idUser
+          : idUser // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -131,7 +152,7 @@ class __$$SurveyResultRequestImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SurveyResultRequestImpl implements _SurveyResultRequest {
   const _$SurveyResultRequestImpl(
-      {this.year, this.semester, this.startindex, this.length});
+      {this.year, this.semester, this.startindex, this.length, this.idUser});
 
   factory _$SurveyResultRequestImpl.fromJson(Map<String, dynamic> json) =>
       _$$SurveyResultRequestImplFromJson(json);
@@ -144,10 +165,12 @@ class _$SurveyResultRequestImpl implements _SurveyResultRequest {
   final int? startindex;
   @override
   final int? length;
+  @override
+  final String? idUser;
 
   @override
   String toString() {
-    return 'SurveyResultRequest(year: $year, semester: $semester, startindex: $startindex, length: $length)';
+    return 'SurveyResultRequest(year: $year, semester: $semester, startindex: $startindex, length: $length, idUser: $idUser)';
   }
 
   @override
@@ -160,13 +183,14 @@ class _$SurveyResultRequestImpl implements _SurveyResultRequest {
                 other.semester == semester) &&
             (identical(other.startindex, startindex) ||
                 other.startindex == startindex) &&
-            (identical(other.length, length) || other.length == length));
+            (identical(other.length, length) || other.length == length) &&
+            (identical(other.idUser, idUser) || other.idUser == idUser));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, year, semester, startindex, length);
+      Object.hash(runtimeType, year, semester, startindex, length, idUser);
 
   @JsonKey(ignore: true)
   @override
@@ -188,7 +212,8 @@ abstract class _SurveyResultRequest implements SurveyResultRequest {
       {final String? year,
       final int? semester,
       final int? startindex,
-      final int? length}) = _$SurveyResultRequestImpl;
+      final int? length,
+      final String? idUser}) = _$SurveyResultRequestImpl;
 
   factory _SurveyResultRequest.fromJson(Map<String, dynamic> json) =
       _$SurveyResultRequestImpl.fromJson;
@@ -201,6 +226,8 @@ abstract class _SurveyResultRequest implements SurveyResultRequest {
   int? get startindex;
   @override
   int? get length;
+  @override
+  String? get idUser;
   @override
   @JsonKey(ignore: true)
   _$$SurveyResultRequestImplCopyWith<_$SurveyResultRequestImpl> get copyWith =>

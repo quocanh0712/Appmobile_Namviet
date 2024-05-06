@@ -24,6 +24,7 @@ class SurveyResultRequest with _$SurveyResultRequest {
     int? semester,
     int? startindex,
     int? length,
+    String? idUser,
   }) = _SurveyResultRequest;
 
   factory SurveyResultRequest.fromJson(Map<String, dynamic> json) =>
