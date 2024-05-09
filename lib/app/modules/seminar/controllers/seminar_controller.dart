@@ -100,7 +100,7 @@ class SeminarController extends BaseController<SeminarResponse> {
     isLoading.value = true;
     SeminarRepository repository = Get.find();
     var response = await repository.getSeminarList(
-      SeminarDetailRequest(startindex: 0, length: 10),
+      SeminarDetailRequest(startindex: 0, length: 100),
     );
     response.when(
       success: (data) {

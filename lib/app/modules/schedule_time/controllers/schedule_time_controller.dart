@@ -20,8 +20,8 @@ class ScheduleTimeController extends BaseListController<ScheduleTimeResponse> {
   ScheduleTimeRequest? _scheduleTimeRequestDraft;
   var listScheduleTime = List<ScheduleTimeResponse?>.empty(growable: true).obs;
   DateTime timeDaily = DateTime.now();
-  final UserRepository userRepo = Get.find();
-  UserObject? userObject;
+  final userRepo = Get.find<UserRepository>();
+  Rx<UserObject?> userObject = UserObject().obs;
 
 
 
@@ -38,6 +38,8 @@ class ScheduleTimeController extends BaseListController<ScheduleTimeResponse> {
   @override
   void onReady() async {
     super.onReady();
+
+    userObject.value = await userRepo.retrieveUserInfo();
 
   }
 
@@ -65,7 +67,7 @@ class ScheduleTimeController extends BaseListController<ScheduleTimeResponse> {
   Future<Result<BaseResponseObject<List<ScheduleTimeResponse?>?>, Exception>> callToHost() {
     ScheduleTimeRepository repository = Get.find();
     return repository.getScheduleTime(
-        _scheduleTimeRequest?.copyWith(length: maxLengthResult, startindex: pageIndex , idUser: userObject?.iduser ));
+        _scheduleTimeRequest?.copyWith(length: maxLengthResult, startindex: pageIndex , idUser: userObject.value?.iduser.toString() ));
 
   }
 
@@ -74,7 +76,7 @@ class ScheduleTimeController extends BaseListController<ScheduleTimeResponse> {
     isLoading.value = true;
     ScheduleTimeRepository repository = Get.find();
     var response = await repository.getScheduleTime(
-      ScheduleTimeRequest( nowdate: DateTimeUtils.formatDateTime(timeDaily, dateYMD), idUser: userObject?.iduser , startindex: pageIndex , length: maxLengthResult,year: timeDaily.year.toString(), weeksOfYear: timeDaily.weekOfYear), );
+      ScheduleTimeRequest( nowdate: DateTimeUtils.formatDateTime(timeDaily, dateYMD), idUser: userObject.value?.iduser.toString() , startindex: pageIndex , length: maxLengthResult,year: timeDaily.year.toString(), weeksOfYear: timeDaily.weekOfYear), );
     response.when(success: (data) {
       isLoading.value = false;
       if (data.isSuccess()) {

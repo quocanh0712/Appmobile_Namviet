@@ -73,7 +73,7 @@ class ScheduleDailyController extends BaseController<ScheduleDailyResponse> {
     isLoading.value = true;
     ScheduleDailyRepository repository = Get.find();
     var response = await repository.getScheduleDaily(
-        ScheduleDailyRequest( nowdate: DateTimeUtils.formatDateTime(timeDaily, dateYMD), idUser: userObject?.iduser , startindex: 0 , length: 10 , year: date.year.toString(), weeksOfYear: date.weekOfYear ), );
+        ScheduleDailyRequest( nowdate: DateTimeUtils.formatDateTime(timeDaily, dateYMD), idUser: userObject?.iduser , startindex: 0 , length: 100 , year: date.year.toString(), weeksOfYear: date.weekOfYear ), );
     response.when(success: (data) {
       isLoading.value = false;
       if (data.isSuccess()) {

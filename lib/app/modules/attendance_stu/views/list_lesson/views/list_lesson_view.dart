@@ -1,36 +1,27 @@
+
+
+
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ftu_lms/app/modules/attendance_stu/bindings/attendance_stu_binding.dart';
-import 'package:ftu_lms/app/modules/base/base.dart';
-import 'package:ftu_lms/app/modules/base/base_app_bar_widget.dart';
+import 'package:ftu_lms/app/modules/attendance_stu/views/list_lesson/controllers/list_lesson_controller.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../../generated/assets.gen.dart';
-import '../../../../generated/locales.g.dart';
-import '../../../../utils/constants.dart';
-import '../../base/base_list_view.dart';
-import '../../base/base_view.dart';
-import '../controllers/attendance_stu_controller.dart';
+import '../../../../../../generated/assets.gen.dart';
+import '../../../../../../generated/locales.g.dart';
 
-class AttendanceStuView extends BaseBindingCreatorView<
-AttendanceStuBinding, AttendanceStuController
-> {
-  AttendanceStuView({super.key, required super.bindingCreator});
-
-
-
+class ListLessonView extends StatelessWidget {
   @override
-  Widget? onCreateViews(BuildContext context) {
-    return GetBuilder<AttendanceStuController>(
+  Widget build(BuildContext context) {
+    return GetBuilder<ListLessonController>(
       builder: (controller) {
         return Scaffold(
           backgroundColor: Colors.white,
           appBar: AppBar(
             title: Text(
-              LocaleKeys.attendance_stu.tr,
+              LocaleKeys.listLesson.tr,
               style: GoogleFonts.openSans(
                 fontWeight: FontWeight.bold,
                 fontSize: 23,
@@ -43,8 +34,8 @@ AttendanceStuBinding, AttendanceStuController
     );
   }
 
-  Widget _buildClassList(AttendanceStuController controller) {
-    var listItem = controller.listClass.toList() ?? [];
+  Widget _buildClassList(ListLessonController controller) {
+    var listItem = controller.listLesson.toList() ?? [];
 
     return Padding(
       padding:  EdgeInsets.only(top:20.0),
@@ -53,7 +44,7 @@ AttendanceStuBinding, AttendanceStuController
         physics: ScrollPhysics(),
         itemCount: listItem.length,
         itemBuilder: (context, index) {
-          var classListAttendance = listItem[index];
+          var classListLesson = listItem[index];
           return Column(
             children: [
               Padding(
@@ -61,10 +52,10 @@ AttendanceStuBinding, AttendanceStuController
                 child: Column(
                   children: [
                     InkWell(
-                      onTap: () => controller.navigateListLesson(index),
+                       onTap: () => controller.navigateListStudentAttendance(index),
                       child: Container(
                         padding: const EdgeInsets.all(14),
-                        height: 120.h,
+                        height: 160.h,
                         decoration: BoxDecoration(
                             color: context.themeExtensions.white,
                             borderRadius: BorderRadius.circular(10),
@@ -85,18 +76,19 @@ AttendanceStuBinding, AttendanceStuController
                                     Align(
                                       alignment: Alignment.centerLeft,
                                       child: Text(
-                                          classListAttendance?.tenLopHp?.toString() ?? '',
+                                        classListLesson?.tenMon?.toString() ?? '',
                                         style: GoogleFonts.openSans(color: context.themeExtensions.mainGreen, fontWeight: FontWeight.bold, fontSize: 12.sp),
                                         textAlign: TextAlign.left,
                                       ),
                                     ),
                                     SizedBox(height: 10.h,),
                                     Row(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Align(
                                           alignment: Alignment.centerLeft,
                                           child: Text(
-                                           LocaleKeys.bull.tr,
+                                            LocaleKeys.bull.tr,
                                             style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 8.sp),
                                             textAlign: TextAlign.left,
                                           ),
@@ -104,7 +96,40 @@ AttendanceStuBinding, AttendanceStuController
                                         Align(
                                           alignment: Alignment.centerLeft,
                                           child: Text(
-                                            "Môn học : ",
+                                            "Lớp : ",
+                                            style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
+                                            textAlign: TextAlign.left,
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Container(
+                                            width: 200.w,
+                                            height: 25.h,
+                                            child: AutoSizeText(
+                                              classListLesson?.tenLop?.toString() ?? '',
+                                              style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
+                                              textAlign: TextAlign.left,
+                                              maxLines: 2,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            LocaleKeys.bull.tr,
+                                            style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 8.sp),
+                                            textAlign: TextAlign.left,
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            "ID môn học : ",
                                             style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
                                             textAlign: TextAlign.left,
                                           ),
@@ -112,7 +137,7 @@ AttendanceStuBinding, AttendanceStuController
                                         Align(
                                           alignment: Alignment.centerLeft,
                                           child: Text(
-                                            classListAttendance?.tenMon?.toString() ?? '',
+                                            classListLesson?.idMon?.toString() ?? '',
                                             style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
                                             textAlign: TextAlign.left,
                                           ),
@@ -132,7 +157,7 @@ AttendanceStuBinding, AttendanceStuController
                                         Align(
                                           alignment: Alignment.centerLeft,
                                           child: Text(
-                                            "ID môn : ",
+                                            "Phòng học : ",
                                             style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
                                             textAlign: TextAlign.left,
                                           ),
@@ -140,7 +165,7 @@ AttendanceStuBinding, AttendanceStuController
                                         Align(
                                           alignment: Alignment.centerLeft,
                                           child: Text(
-                                            classListAttendance?.idMon?.toString() ?? '',
+                                            classListLesson?.diaDiem?.toString() ?? '',
                                             style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
                                             textAlign: TextAlign.left,
                                           ),
@@ -160,7 +185,7 @@ AttendanceStuBinding, AttendanceStuController
                                         Align(
                                           alignment: Alignment.centerLeft,
                                           child: Text(
-                                            "Số tín chỉ : ",
+                                            "Thời gian : ",
                                             style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
                                             textAlign: TextAlign.left,
                                           ),
@@ -168,7 +193,63 @@ AttendanceStuBinding, AttendanceStuController
                                         Align(
                                           alignment: Alignment.centerLeft,
                                           child: Text(
-                                            classListAttendance?.soTinChi?.toString() ?? '',
+                                            formatTime("${classListLesson?.ngayChiTiet}") ?? '',
+                                            style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
+                                            textAlign: TextAlign.left,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            LocaleKeys.bull.tr,
+                                            style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 8.sp),
+                                            textAlign: TextAlign.left,
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            "Ca học : ",
+                                            style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
+                                            textAlign: TextAlign.left,
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            classListLesson?.caHoc?.toString() ?? '',
+                                            style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
+                                            textAlign: TextAlign.left,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            LocaleKeys.bull.tr,
+                                            style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 8.sp),
+                                            textAlign: TextAlign.left,
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            "Thời gian học : ",
+                                            style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
+                                            textAlign: TextAlign.left,
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: Alignment.centerLeft,
+                                          child: Text(
+                                            classListLesson?.thoiGianHoc?.toString() ?? '',
                                             style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
                                             textAlign: TextAlign.left,
                                           ),
@@ -196,7 +277,7 @@ AttendanceStuBinding, AttendanceStuController
                                         Align(
                                           alignment: Alignment.centerLeft,
                                           child: Text(
-                                            classListAttendance?.hoTen?.toString() ?? '',
+                                            classListLesson?.hoTen?.toString() ?? '',
                                             style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 10.sp),
                                             textAlign: TextAlign.left,
                                           ),
@@ -235,71 +316,25 @@ AttendanceStuBinding, AttendanceStuController
   }
 
   String formatTime(String dateTimeString) {
-    List<String> parts = dateTimeString.split('T');
-    return parts[0];
+    // Chuyển đổi chuỗi thành đối tượng DateTime
+    DateTime dateTime = DateTime.parse(dateTimeString);
+
+    // Lấy các phần từ ngày, tháng, năm từ đối tượng DateTime
+    int day = dateTime.day;
+    int month = dateTime.month;
+    int year = dateTime.year;
+
+    // Tạo chuỗi mới theo định dạng "dd-MM-yyyy"
+    String formattedDate = '$day-${_twoDigit(month)}-$year';
+
+    return formattedDate;
   }
 
-
+// Hàm phụ để đảm bảo rằng số tháng có hai chữ số
+  String _twoDigit(int n) {
+    if (n >= 10) {
+      return '$n';
+    }
+    return '0$n';
+  }
 }
-
-
-// class AttendanceStuView extends BaseListView<AttendanceStuController> {
-//   AttendanceStuView({Key? key}) : super(key: key);
-//
-//   @override
-//   Widget itemView(BuildContext context, int index) {
-//     return Column(
-//       children: [
-//         InkWell(
-//           // onTap: () => controller.navigateItemScientificResearch(index),
-//           child: Container(
-//             padding: const EdgeInsets.all(14),
-//             decoration: BoxDecoration(
-//                 color: context.themeExtensions.white,
-//                 borderRadius: BorderRadius.circular(10),
-//                 border: Border.all(color: context.themeExtensions.lightSilver),
-//                 boxShadow: [
-//                   BoxShadow(
-//                     color: context.themeExtensions.textLightGrey.withOpacity(0.5),
-//                     spreadRadius: 1,
-//                     blurRadius: 2,
-//                     offset: const Offset(0, 3), // changes position of shadow
-//                   ),
-//                 ]),
-//             child: Row(
-//               children: [
-//                 Expanded(
-//                     child: Align(
-//                       alignment: Alignment.centerLeft,
-//                       child: Text(
-//                         controller.getItem(index).type ?? Constants.EMPTY,
-//                         style: GoogleFonts.openSans(color: context.themeExtensions.textColor, fontWeight: FontWeight.bold, fontSize: 12.sp),
-//                         textAlign: TextAlign.left,
-//                       ),
-//                     )),
-//                 const SizedBox(
-//                   width: 6,
-//                 ),
-//                 // Align(
-//                 //   alignment: Alignment.centerRight,
-//                 //   child: Assets.images.arrowRight.svg(
-//                 //       width: 24,
-//                 //       height: 24,
-//                 //       fit: BoxFit.cover,
-//                 //       color: context.themeExtensions.textGrey),
-//                 // )
-//               ],
-//             ),
-//           ),
-//         ),
-//         const SizedBox(
-//           height: 8,
-//         )
-//       ],
-//     );
-//   }
-//
-//   @override
-//   String? get titleAppBar => LocaleKeys.scienceStudy.tr;
-// }
-

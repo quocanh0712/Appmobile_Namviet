@@ -153,6 +153,8 @@ abstract class Routes {
   static const SCIENCE_TOPIC = _Paths.SCIENCE_TOPIC;
   static const MEMBER_TOPIC = _Paths.MEMBER_TOPIC;
   static const SEMINAR = _Paths.SEMINAR;
+  static const LIST_LESSON = _Paths.LIST_LESSON;
+  static const LIST_STUDENT_ATTENDANCE = _Paths.LIST_STUDENT_ATTENDANCE;
 
 
 
@@ -306,5 +308,7 @@ abstract class _Paths {
   static const SCIENCE_TOPIC = '/science_topic';
   static const MEMBER_TOPIC = '/member_topic';
   static const SEMINAR = '/seminar';
+  static const LIST_LESSON = '/list_lesson';
+  static const LIST_STUDENT_ATTENDANCE = '/list_student_attendance';
 
 }

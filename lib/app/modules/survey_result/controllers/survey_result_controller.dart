@@ -17,8 +17,8 @@ class SurveyResultController extends BaseListController<SurveyResultResponse> {
   SurveyResultRequest _request = const SurveyResultRequest();
   SurveyResultRequest _requestDraft = const SurveyResultRequest();
 
-  final UserRepository userRepo = Get.find();
-  UserObject? userObject;
+  final userRepo = Get.find<UserRepository>();
+  Rx<UserObject?> userObject = UserObject().obs;
 
   SurveyResultRequest getRequestData() => _request;
 
@@ -36,15 +36,16 @@ class SurveyResultController extends BaseListController<SurveyResultResponse> {
   }
 
   @override
-  void onInit() {
+  void onInit() async {
     super.onInit();
+    userObject.value = await userRepo.retrieveUserInfo();
   }
 
   @override
   Future<Result<BaseResponseObject<List<SurveyResultResponse?>?>, Exception>> callToHost() {
     SurveyResultRepository repository = Get.find();
     return repository.getSurveyItemList(_request.copyWith(
-        idUser: userObject?.iduser,
+        idUser: userObject?.value?.iduser,
         year: _request.year ?? "",
         semester: _request.semester ?? 0,
         length: maxLengthResult,

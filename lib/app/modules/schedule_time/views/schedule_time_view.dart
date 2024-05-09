@@ -258,29 +258,32 @@ class ScheduleTimeView extends StatelessWidget {
   }
 
   Widget? _buildNoTasksOverviewThisWeek(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        const SizedBox(width: 32),
-        Assets.images.icNoTasks.image(fit: BoxFit.cover),
-        const SizedBox(width: 25),
-        Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                AutoSizeText(LocaleKeys.restNow.tr,
-                    style: context.themeExtensions.heading2
-                        .copyWith(color: context.themeExtensions.textColor)),
-                const SizedBox(height: 11),
-                AutoSizeText(LocaleKeys.noTasksMessage.tr,
-                    style: context.themeExtensions.paragraph
-                        .copyWith(color: context.themeExtensions.textGrey))
-              ],
-            )),
-        const SizedBox(width: 25)
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(top:250),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          const SizedBox(width: 32),
+          Assets.images.icNoTasks.image(fit: BoxFit.cover),
+          const SizedBox(width: 25),
+          Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AutoSizeText(LocaleKeys.restNow.tr,
+                      style: context.themeExtensions.heading2
+                          .copyWith(color: context.themeExtensions.textColor)),
+                  const SizedBox(height: 11),
+                  AutoSizeText(LocaleKeys.noTasksMessage.tr,
+                      style: context.themeExtensions.paragraph
+                          .copyWith(color: context.themeExtensions.textGrey))
+                ],
+              )),
+          const SizedBox(width: 25)
+        ],
+      ),
     );
   }
 }

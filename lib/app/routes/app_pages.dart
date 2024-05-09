@@ -18,6 +18,8 @@ import 'package:ftu_lms/app/modules/attendance/bindings/attendance_binding.dart'
 import 'package:ftu_lms/app/modules/attendance/views/attendance_view.dart';
 import 'package:ftu_lms/app/modules/attendance_stu/bindings/attendance_stu_binding.dart';
 import 'package:ftu_lms/app/modules/attendance_stu/views/attendance_stu_view.dart';
+import 'package:ftu_lms/app/modules/attendance_stu/views/list_lesson/bindings/list_lesson_binding.dart';
+import 'package:ftu_lms/app/modules/attendance_stu/views/list_student_attendance/views/list_student_attendance_view.dart';
 import 'package:ftu_lms/app/modules/class_official/bindings/class_official_binding.dart';
 import 'package:ftu_lms/app/modules/class_official/views/class_official_view.dart';
 import 'package:ftu_lms/app/modules/consultant/bindings/consultant_binding.dart';
@@ -115,6 +117,8 @@ import '../modules/activity/views/activity_view.dart';
 import '../modules/add_item_scientific_research/bindings/add_item_scientific_research_binding.dart';
 import '../modules/appInformation/bindings/app_information_binding.dart';
 import '../modules/appInformation/views/app_information_view.dart';
+import '../modules/attendance_stu/views/list_lesson/views/list_lesson_view.dart';
+import '../modules/attendance_stu/views/list_student_attendance/bindings/list_student_attendance_binding.dart';
 import '../modules/chat/bindings/chat_binding.dart';
 import '../modules/chat/views/chat_view.dart';
 import '../modules/checkin/bindings/checkin_binding.dart';
@@ -772,8 +776,22 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.ATTENDANCE_STU,
-      page: () =>  AttendanceStuView(),
+      page: () =>  AttendanceStuView(
+        bindingCreator: () => AttendanceStuBinding(),
+      ),
       binding: AttendanceStuBinding(),
+    ),
+    GetPage(
+      name: _Paths.LIST_LESSON,
+      page: () =>  ListLessonView(),
+      binding: ListLessonBinding(),
+    ),
+    GetPage(
+      name: _Paths.LIST_STUDENT_ATTENDANCE,
+      page: () =>  ListStudentAttendanceView(
+        bindingCreator: () => ListStudentAttendanceBinding(),
+      ),
+      binding: ListStudentAttendanceBinding(),
     ),
     GetPage(
       name: _Paths.ROOM_REGISTRATION,
@@ -1028,6 +1046,7 @@ class AppPages {
       page: () =>  SeminarView(),
       binding: SeminarBinding(),
     ),
+
 
 
 

@@ -5,6 +5,9 @@ import 'dart:ui';
 
 import 'package:equatable/equatable.dart';
 import 'package:fimber/fimber.dart';
+import 'package:ftu_lms/app/modules/attendance_stu/model/attendance_stu_response.dart';
+import 'package:ftu_lms/app/modules/attendance_stu/views/list_lesson/model/list_lesson_response.dart';
+import 'package:ftu_lms/app/modules/attendance_stu/views/list_student_attendance/model/list_student_attendance_response.dart';
 import 'package:ftu_lms/app/modules/detail_conversation/model/comment_conversation.dart';
 import 'package:ftu_lms/app/modules/discuss_feedback/model/conversation_response.dart';
 import 'package:ftu_lms/app/modules/document_form/model/document_form_response.dart';
@@ -224,6 +227,22 @@ extension NetworkResponseConverter on BaseResponseObject {
     if (this is BaseResponseObject<List<SeminarResponse?>?>) {
       return BaseResponseObject<List<SeminarResponse?>?>.fromJson(
           json, jsonToListNullableSeminarResponse);
+    }
+
+    if (this is BaseResponseObject<List<AttendanceStuResponse?>?>) {
+      return BaseResponseObject<List<AttendanceStuResponse?>?>.fromJson(
+          json, jsonToListNullableAttendanceStuResponse);
+    }
+
+    if (this is BaseResponseObject<List<ListLessonResponse?>?>) {
+      return BaseResponseObject<List<ListLessonResponse?>?>.fromJson(
+          json, jsonToListNullableListLessonResponse);
+    }
+
+
+    if (this is BaseResponseObject<List<ListStudentAttendanceResponse?>?>) {
+      return BaseResponseObject<List<ListStudentAttendanceResponse?>?>.fromJson(
+          json, jsonToListNullableListStudentAttendanceResponse);
     }
 
 

@@ -465,6 +465,8 @@ class LocaleKeys {
   static const testNote = 'testNote';
 
   static const seminar = 'seminar';
+  static const listLesson = 'listLesson';
+  static const listStuAttendance = 'listStuAttendance';
 
 
 
@@ -472,6 +474,8 @@ class LocaleKeys {
 
 class Locales {
   static const vn_VI = {
+    'listStuAttendance' : 'Kết quả điểm danh',
+    'listLesson' : 'Danh sách buổi học',
     'seminar' : 'Hội thảo',
     'testMethod' : 'Hình thức thi',
     'testNote' : 'Ghi chú',
@@ -924,6 +928,8 @@ class Locales {
     'incomingName': 'Họ tên',
   };
   static const en_US = {
+    'listStuAttendance' : 'Kết quả điểm danh',
+    'listLesson' : 'Danh sách buổi học',
     'seminar' : 'Hội thảo',
     'testMethod' : 'Hình thức thi',
     'testNote' : 'Ghi chú',
