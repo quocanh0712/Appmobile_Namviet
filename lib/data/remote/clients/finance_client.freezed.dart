@@ -16,23 +16,26 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$FinanceClient {
-  FinanceRequestParams? get params => throw _privateConstructorUsedError;
+  Object? get params => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function(FinanceRequestParams? params) getAll,
     required TResult Function(FinanceRequestParams? params) getAllBills,
+    required TResult Function(FinanceTeacherRequest? params) getSalary,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(FinanceRequestParams? params)? getAll,
     TResult? Function(FinanceRequestParams? params)? getAllBills,
+    TResult? Function(FinanceTeacherRequest? params)? getSalary,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(FinanceRequestParams? params)? getAll,
     TResult Function(FinanceRequestParams? params)? getAllBills,
+    TResult Function(FinanceTeacherRequest? params)? getSalary,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -40,24 +43,23 @@ mixin _$FinanceClient {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetAll value) getAll,
     required TResult Function(_GetAllBills value) getAllBills,
+    required TResult Function(_GetSalary value) getSalary,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetAll value)? getAll,
     TResult? Function(_GetAllBills value)? getAllBills,
+    TResult? Function(_GetSalary value)? getSalary,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetAll value)? getAll,
     TResult Function(_GetAllBills value)? getAllBills,
+    TResult Function(_GetSalary value)? getSalary,
     required TResult orElse(),
   }) =>
-      throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $FinanceClientCopyWith<FinanceClient> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -66,10 +68,6 @@ abstract class $FinanceClientCopyWith<$Res> {
   factory $FinanceClientCopyWith(
           FinanceClient value, $Res Function(FinanceClient) then) =
       _$FinanceClientCopyWithImpl<$Res, FinanceClient>;
-  @useResult
-  $Res call({FinanceRequestParams? params});
-
-  $FinanceRequestParamsCopyWith<$Res>? get params;
 }
 
 /// @nodoc
@@ -81,44 +79,16 @@ class _$FinanceClientCopyWithImpl<$Res, $Val extends FinanceClient>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? params = freezed,
-  }) {
-    return _then(_value.copyWith(
-      params: freezed == params
-          ? _value.params
-          : params // ignore: cast_nullable_to_non_nullable
-              as FinanceRequestParams?,
-    ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $FinanceRequestParamsCopyWith<$Res>? get params {
-    if (_value.params == null) {
-      return null;
-    }
-
-    return $FinanceRequestParamsCopyWith<$Res>(_value.params!, (value) {
-      return _then(_value.copyWith(params: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
-abstract class _$$GetAllImplCopyWith<$Res>
-    implements $FinanceClientCopyWith<$Res> {
+abstract class _$$GetAllImplCopyWith<$Res> {
   factory _$$GetAllImplCopyWith(
           _$GetAllImpl value, $Res Function(_$GetAllImpl) then) =
       __$$GetAllImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({FinanceRequestParams? params});
 
-  @override
   $FinanceRequestParamsCopyWith<$Res>? get params;
 }
 
@@ -141,6 +111,18 @@ class __$$GetAllImplCopyWithImpl<$Res>
           : params // ignore: cast_nullable_to_non_nullable
               as FinanceRequestParams?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FinanceRequestParamsCopyWith<$Res>? get params {
+    if (_value.params == null) {
+      return null;
+    }
+
+    return $FinanceRequestParamsCopyWith<$Res>(_value.params!, (value) {
+      return _then(_value.copyWith(params: value));
+    });
   }
 }
 
@@ -179,6 +161,7 @@ class _$GetAllImpl extends _GetAll {
   TResult when<TResult extends Object?>({
     required TResult Function(FinanceRequestParams? params) getAll,
     required TResult Function(FinanceRequestParams? params) getAllBills,
+    required TResult Function(FinanceTeacherRequest? params) getSalary,
   }) {
     return getAll(params);
   }
@@ -188,6 +171,7 @@ class _$GetAllImpl extends _GetAll {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(FinanceRequestParams? params)? getAll,
     TResult? Function(FinanceRequestParams? params)? getAllBills,
+    TResult? Function(FinanceTeacherRequest? params)? getSalary,
   }) {
     return getAll?.call(params);
   }
@@ -197,6 +181,7 @@ class _$GetAllImpl extends _GetAll {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(FinanceRequestParams? params)? getAll,
     TResult Function(FinanceRequestParams? params)? getAllBills,
+    TResult Function(FinanceTeacherRequest? params)? getSalary,
     required TResult orElse(),
   }) {
     if (getAll != null) {
@@ -210,6 +195,7 @@ class _$GetAllImpl extends _GetAll {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetAll value) getAll,
     required TResult Function(_GetAllBills value) getAllBills,
+    required TResult Function(_GetSalary value) getSalary,
   }) {
     return getAll(this);
   }
@@ -219,6 +205,7 @@ class _$GetAllImpl extends _GetAll {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetAll value)? getAll,
     TResult? Function(_GetAllBills value)? getAllBills,
+    TResult? Function(_GetSalary value)? getSalary,
   }) {
     return getAll?.call(this);
   }
@@ -228,6 +215,7 @@ class _$GetAllImpl extends _GetAll {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetAll value)? getAll,
     TResult Function(_GetAllBills value)? getAllBills,
+    TResult Function(_GetSalary value)? getSalary,
     required TResult orElse(),
   }) {
     if (getAll != null) {
@@ -243,23 +231,19 @@ abstract class _GetAll extends FinanceClient {
 
   @override
   FinanceRequestParams? get params;
-  @override
   @JsonKey(ignore: true)
   _$$GetAllImplCopyWith<_$GetAllImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$GetAllBillsImplCopyWith<$Res>
-    implements $FinanceClientCopyWith<$Res> {
+abstract class _$$GetAllBillsImplCopyWith<$Res> {
   factory _$$GetAllBillsImplCopyWith(
           _$GetAllBillsImpl value, $Res Function(_$GetAllBillsImpl) then) =
       __$$GetAllBillsImplCopyWithImpl<$Res>;
-  @override
   @useResult
   $Res call({FinanceRequestParams? params});
 
-  @override
   $FinanceRequestParamsCopyWith<$Res>? get params;
 }
 
@@ -282,6 +266,18 @@ class __$$GetAllBillsImplCopyWithImpl<$Res>
           : params // ignore: cast_nullable_to_non_nullable
               as FinanceRequestParams?,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FinanceRequestParamsCopyWith<$Res>? get params {
+    if (_value.params == null) {
+      return null;
+    }
+
+    return $FinanceRequestParamsCopyWith<$Res>(_value.params!, (value) {
+      return _then(_value.copyWith(params: value));
+    });
   }
 }
 
@@ -320,6 +316,7 @@ class _$GetAllBillsImpl extends _GetAllBills {
   TResult when<TResult extends Object?>({
     required TResult Function(FinanceRequestParams? params) getAll,
     required TResult Function(FinanceRequestParams? params) getAllBills,
+    required TResult Function(FinanceTeacherRequest? params) getSalary,
   }) {
     return getAllBills(params);
   }
@@ -329,6 +326,7 @@ class _$GetAllBillsImpl extends _GetAllBills {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(FinanceRequestParams? params)? getAll,
     TResult? Function(FinanceRequestParams? params)? getAllBills,
+    TResult? Function(FinanceTeacherRequest? params)? getSalary,
   }) {
     return getAllBills?.call(params);
   }
@@ -338,6 +336,7 @@ class _$GetAllBillsImpl extends _GetAllBills {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(FinanceRequestParams? params)? getAll,
     TResult Function(FinanceRequestParams? params)? getAllBills,
+    TResult Function(FinanceTeacherRequest? params)? getSalary,
     required TResult orElse(),
   }) {
     if (getAllBills != null) {
@@ -351,6 +350,7 @@ class _$GetAllBillsImpl extends _GetAllBills {
   TResult map<TResult extends Object?>({
     required TResult Function(_GetAll value) getAll,
     required TResult Function(_GetAllBills value) getAllBills,
+    required TResult Function(_GetSalary value) getSalary,
   }) {
     return getAllBills(this);
   }
@@ -360,6 +360,7 @@ class _$GetAllBillsImpl extends _GetAllBills {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_GetAll value)? getAll,
     TResult? Function(_GetAllBills value)? getAllBills,
+    TResult? Function(_GetSalary value)? getSalary,
   }) {
     return getAllBills?.call(this);
   }
@@ -369,6 +370,7 @@ class _$GetAllBillsImpl extends _GetAllBills {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_GetAll value)? getAll,
     TResult Function(_GetAllBills value)? getAllBills,
+    TResult Function(_GetSalary value)? getSalary,
     required TResult orElse(),
   }) {
     if (getAllBills != null) {
@@ -384,8 +386,162 @@ abstract class _GetAllBills extends FinanceClient {
 
   @override
   FinanceRequestParams? get params;
-  @override
   @JsonKey(ignore: true)
   _$$GetAllBillsImplCopyWith<_$GetAllBillsImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetSalaryImplCopyWith<$Res> {
+  factory _$$GetSalaryImplCopyWith(
+          _$GetSalaryImpl value, $Res Function(_$GetSalaryImpl) then) =
+      __$$GetSalaryImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({FinanceTeacherRequest? params});
+
+  $FinanceTeacherRequestCopyWith<$Res>? get params;
+}
+
+/// @nodoc
+class __$$GetSalaryImplCopyWithImpl<$Res>
+    extends _$FinanceClientCopyWithImpl<$Res, _$GetSalaryImpl>
+    implements _$$GetSalaryImplCopyWith<$Res> {
+  __$$GetSalaryImplCopyWithImpl(
+      _$GetSalaryImpl _value, $Res Function(_$GetSalaryImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? params = freezed,
+  }) {
+    return _then(_$GetSalaryImpl(
+      freezed == params
+          ? _value.params
+          : params // ignore: cast_nullable_to_non_nullable
+              as FinanceTeacherRequest?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $FinanceTeacherRequestCopyWith<$Res>? get params {
+    if (_value.params == null) {
+      return null;
+    }
+
+    return $FinanceTeacherRequestCopyWith<$Res>(_value.params!, (value) {
+      return _then(_value.copyWith(params: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$GetSalaryImpl extends _GetSalary {
+  _$GetSalaryImpl(this.params) : super._();
+
+  @override
+  final FinanceTeacherRequest? params;
+
+  @override
+  String toString() {
+    return 'FinanceClient.getSalary(params: $params)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetSalaryImpl &&
+            (identical(other.params, params) || other.params == params));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, params);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetSalaryImplCopyWith<_$GetSalaryImpl> get copyWith =>
+      __$$GetSalaryImplCopyWithImpl<_$GetSalaryImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(FinanceRequestParams? params) getAll,
+    required TResult Function(FinanceRequestParams? params) getAllBills,
+    required TResult Function(FinanceTeacherRequest? params) getSalary,
+  }) {
+    return getSalary(params);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(FinanceRequestParams? params)? getAll,
+    TResult? Function(FinanceRequestParams? params)? getAllBills,
+    TResult? Function(FinanceTeacherRequest? params)? getSalary,
+  }) {
+    return getSalary?.call(params);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(FinanceRequestParams? params)? getAll,
+    TResult Function(FinanceRequestParams? params)? getAllBills,
+    TResult Function(FinanceTeacherRequest? params)? getSalary,
+    required TResult orElse(),
+  }) {
+    if (getSalary != null) {
+      return getSalary(params);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_GetAll value) getAll,
+    required TResult Function(_GetAllBills value) getAllBills,
+    required TResult Function(_GetSalary value) getSalary,
+  }) {
+    return getSalary(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_GetAll value)? getAll,
+    TResult? Function(_GetAllBills value)? getAllBills,
+    TResult? Function(_GetSalary value)? getSalary,
+  }) {
+    return getSalary?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_GetAll value)? getAll,
+    TResult Function(_GetAllBills value)? getAllBills,
+    TResult Function(_GetSalary value)? getSalary,
+    required TResult orElse(),
+  }) {
+    if (getSalary != null) {
+      return getSalary(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetSalary extends FinanceClient {
+  factory _GetSalary(final FinanceTeacherRequest? params) = _$GetSalaryImpl;
+  _GetSalary._() : super._();
+
+  @override
+  FinanceTeacherRequest? get params;
+  @JsonKey(ignore: true)
+  _$$GetSalaryImplCopyWith<_$GetSalaryImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

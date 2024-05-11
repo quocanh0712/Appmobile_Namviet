@@ -93,11 +93,13 @@ class SeminarView extends StatelessWidget {
                       ExpansionTile(
                         title: Padding(
                           padding: EdgeInsets.only(left: 2.w),
-                          child: Text(
-                            seminar?.tenHoiThao?.toString() ?? '',
-                            style: GoogleFonts.openSans(
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w800,
+                          child: Expanded(
+                            child: Text(
+                              seminar?.tenHoiThao?.toString() ?? '',
+                              style: GoogleFonts.openSans(
+                                fontSize: 16.sp,
+                                fontWeight: FontWeight.w800,
+                              ),
                             ),
                           ),
                         ),
@@ -126,12 +128,14 @@ class SeminarView extends StatelessWidget {
                                         ),
                                       ),
                                       SizedBox(width: 10.w),
-                                      Text(
-                                        seminar?.noiDung?.toString() ?? '',
-                                        style: GoogleFonts.openSans(
-                                            fontSize: 12.sp,
-                                            fontWeight: FontWeight.w500,
-                                            color: context.themeExtensions.black
+                                      Expanded(
+                                        child: Text(
+                                          seminar?.noiDung?.toString() ?? '',
+                                          style: GoogleFonts.openSans(
+                                              fontSize: 12.sp,
+                                              fontWeight: FontWeight.w500,
+                                              color: context.themeExtensions.black
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -153,12 +157,14 @@ class SeminarView extends StatelessWidget {
                                         ),
                                       ),
                                       SizedBox(width: 10.w),
-                                      Text(
-                                        seminar?.soQuyetDinh?.toString() ?? '',
-                                        style: GoogleFonts.openSans(
-                                            fontSize: 12.sp,
-                                            fontWeight: FontWeight.w500,
-                                            color: context.themeExtensions.black
+                                      Expanded(
+                                        child: Text(
+                                          seminar?.soQuyetDinh?.toString() ?? '',
+                                          style: GoogleFonts.openSans(
+                                              fontSize: 12.sp,
+                                              fontWeight: FontWeight.w500,
+                                              color: context.themeExtensions.black
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -180,12 +186,14 @@ class SeminarView extends StatelessWidget {
                                         ),
                                       ),
                                       SizedBox(width: 10.w),
-                                      Text(
-                                        seminar?.mucDich?.toString() ?? '',
-                                        style: GoogleFonts.openSans(
-                                            fontSize: 12.sp,
-                                            fontWeight: FontWeight.w500,
-                                            color: context.themeExtensions.black
+                                      Expanded(
+                                        child: Text(
+                                          seminar?.mucDich?.toString() ?? '',
+                                          style: GoogleFonts.openSans(
+                                              fontSize: 12.sp,
+                                              fontWeight: FontWeight.w500,
+                                              color: context.themeExtensions.black
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -207,12 +215,14 @@ class SeminarView extends StatelessWidget {
                                         ),
                                       ),
                                       SizedBox(width: 10.w),
-                                      Text(
-                                        seminar?.tenLoaiHoiThao?.toString() ?? '',
-                                        style: GoogleFonts.openSans(
-                                            fontSize: 12.sp,
-                                            fontWeight: FontWeight.w500,
-                                            color: context.themeExtensions.black
+                                      Expanded(
+                                        child: Text(
+                                          seminar?.tenLoaiHoiThao?.toString() ?? '',
+                                          style: GoogleFonts.openSans(
+                                              fontSize: 12.sp,
+                                              fontWeight: FontWeight.w500,
+                                              color: context.themeExtensions.black
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -261,12 +271,14 @@ class SeminarView extends StatelessWidget {
                                         ),
                                       ),
                                       SizedBox(width: 10.w),
-                                      Text(
-                                        seminar?.diaDiemToChuc?.toString() ?? '',
-                                        style: GoogleFonts.openSans(
-                                            fontSize: 12.sp,
-                                            fontWeight: FontWeight.w500,
-                                            color: context.themeExtensions.black
+                                      Expanded(
+                                        child: Text(
+                                          seminar?.diaDiemToChuc?.toString() ?? '',
+                                          style: GoogleFonts.openSans(
+                                              fontSize: 12.sp,
+                                              fontWeight: FontWeight.w500,
+                                              color: context.themeExtensions.black
+                                          ),
                                         ),
                                       ),
                                     ],

@@ -14,6 +14,7 @@ import 'package:ftu_lms/app/modules/document_form/model/document_form_response.d
 import 'package:ftu_lms/app/modules/document_form/model/my_request_document_response.dart';
 import 'package:ftu_lms/app/modules/educationProgram/model/education_program_response.dart';
 import 'package:ftu_lms/app/modules/elearning/model/elearning_response.dart';
+import 'package:ftu_lms/app/modules/financeOverview/views/financeTeacher/models/finance_teacher_response.dart';
 import 'package:ftu_lms/app/modules/infiniteListSample/data/bean/photo_object.dart';
 import 'package:ftu_lms/app/modules/item_scientific_research/model/item_scientific_research_response.dart';
 import 'package:ftu_lms/app/modules/list_certificates/model/certificate_response.dart';
@@ -288,6 +289,13 @@ extension NetworkResponseConverter on BaseResponseObject {
       return BaseResponseObject<List<SemesterBillResponseObject?>?>.fromJson(
           json, jsonToListSemesterBillResponseObjects);
     }
+
+    if (this is BaseResponseObject<List<FinanceTeacherResponse?>?>) {
+      return BaseResponseObject<List<FinanceTeacherResponse?>?>.fromJson(
+          json, jsonToListFinanceTeacherResponse);
+    }
+
+
     if (this is BaseResponseObject<PracticePointResponseObject?>) {
       return BaseResponseObject<PracticePointResponseObject?>.fromJson(
           json, jsonToNullablePracticePointResponseObject);

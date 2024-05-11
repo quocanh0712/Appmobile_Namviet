@@ -155,6 +155,7 @@ abstract class Routes {
   static const SEMINAR = _Paths.SEMINAR;
   static const LIST_LESSON = _Paths.LIST_LESSON;
   static const LIST_STUDENT_ATTENDANCE = _Paths.LIST_STUDENT_ATTENDANCE;
+  static const FINANCE_TEACHER = _Paths.FINANCE_TEACHER;
 
 
 
@@ -310,5 +311,6 @@ abstract class _Paths {
   static const SEMINAR = '/seminar';
   static const LIST_LESSON = '/list_lesson';
   static const LIST_STUDENT_ATTENDANCE = '/list_student_attendance';
+  static const FINANCE_TEACHER = '/finance_teacher';
 
 }

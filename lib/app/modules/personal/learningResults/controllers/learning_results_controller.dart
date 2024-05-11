@@ -2,6 +2,7 @@
 
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/app/routes/app_pages.dart';
 import 'package:ftu_lms/data/bean/semester_point_object/semester_point_object.dart';
@@ -14,6 +15,14 @@ class LearningResultsController extends BaseController {
 
   final learningResultRepo = Get.find<LearningResultRepository?>();
   final Rx<SemesterPointObject?>? semesterPoint = SemesterPointObject().obs;
+
+  void showLoadingIndicator() {
+    EasyLoading.show(status: 'Loading...');
+  }
+
+  void dismissLoadingIndicator() {
+    EasyLoading.dismiss();
+  }
 
   @override
   void onInit() {
@@ -36,10 +45,11 @@ class LearningResultsController extends BaseController {
 
   retrieveSemesterPoints({bool? isRefresh = false}) async {
     Fimber.d("retrieveSemesterPoints({bool? isRefresh = $isRefresh})");
-    if (isRefresh != true) isLoading.value = true;
+    showLoadingIndicator();
     final response = await learningResultRepo?.retrieveSemesterPoints(null);
     response?.when(
       success: (data) {
+        dismissLoadingIndicator();
         if (data.isSuccess()) {
           semesterPoint?.value = data.result;
         } else {
@@ -47,10 +57,10 @@ class LearningResultsController extends BaseController {
         }
       },
       failure: (error) {
+        dismissLoadingIndicator(); 
         Fimber.d(error.localizedErrorMessage ?? '');
       },
     );
-    isLoading.value = false;
   }
 
   @override

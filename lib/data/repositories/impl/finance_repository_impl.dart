@@ -1,5 +1,7 @@
 // Copyright (c) 2023, one of the D3F outsourcing projects. All rights reserved.
 
+import 'package:ftu_lms/app/modules/financeOverview/views/financeTeacher/models/finance_teacher_request.dart';
+import 'package:ftu_lms/app/modules/financeOverview/views/financeTeacher/models/finance_teacher_response.dart';
 import 'package:ftu_lms/data/bean/finance_response_object/finance_response_object.dart';
 import 'package:ftu_lms/data/bean/semester_bill_response_object/semester_bill_response_object.dart';
 import 'package:ftu_lms/data/remote/clients/finance_client.dart';
@@ -27,5 +29,14 @@ class FinanceRepositoryImpl extends FinanceRepository {
             BaseResponseObject<List<SemesterBillResponseObject?>?>>(
         route: FinanceClient.getAllBills(params),
         responseType: const BaseResponseObject<List<SemesterBillResponseObject?>?>());
+  }
+
+  @override
+  Future<Result<BaseResponseObject<List<FinanceTeacherResponse?>?>, NetworkError>> getSalary(
+      FinanceTeacherRequest? params) async {
+    return NetworkExecutor.execute<BaseResponseObject<List<FinanceTeacherResponse?>?>,
+        BaseResponseObject<List<FinanceTeacherResponse?>?>>(
+        route: FinanceClient.getSalary(params),
+        responseType: const BaseResponseObject<List<FinanceTeacherResponse?>?>());
   }
 }

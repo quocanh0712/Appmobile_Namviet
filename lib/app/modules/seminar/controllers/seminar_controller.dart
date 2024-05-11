@@ -1,5 +1,6 @@
 
 
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:ftu_lms/app/modules/seminar/model/seminar_detail_request.dart';
 import 'package:ftu_lms/app/modules/seminar/model/seminar_response.dart';
 import 'package:ftu_lms/app/modules/seminar/repository/seminar_repository.dart';
@@ -64,6 +65,16 @@ class SeminarController extends BaseController<SeminarResponse> {
   var listSeminar = List<SeminarResponse?>.empty(growable: true).obs;
   var expandedList = List<bool>.empty(growable: true).obs; // List to track expansion state
 
+
+
+  void showLoadingIndicator() {
+    EasyLoading.show(status: 'Loading...');
+  }
+
+  void dismissLoadingIndicator() {
+    EasyLoading.dismiss();
+  }
+
   @override
   void onInit() {
     super.onInit();
@@ -98,6 +109,7 @@ class SeminarController extends BaseController<SeminarResponse> {
   void loadSeminar() async {
     if (isLoading.value == true) return;
     isLoading.value = true;
+    showLoadingIndicator();
     SeminarRepository repository = Get.find();
     var response = await repository.getSeminarList(
       SeminarDetailRequest(startindex: 0, length: 100),
@@ -105,9 +117,9 @@ class SeminarController extends BaseController<SeminarResponse> {
     response.when(
       success: (data) {
         isLoading.value = false;
+        dismissLoadingIndicator();
         if (data.isSuccess()) {
           listSeminar.value = data.result?.toList() ?? [];
-          // Initialize expandedList with false for each item in listSeminar
           expandedList.assignAll(List.generate(listSeminar.length, (_) => false));
           print("-------$listSeminar");
         } else {
@@ -116,6 +128,7 @@ class SeminarController extends BaseController<SeminarResponse> {
       },
       failure: (e) {
         isLoading.value = false;
+        dismissLoadingIndicator();
         isError.value = e.toString();
       },
     );

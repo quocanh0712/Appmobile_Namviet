@@ -454,9 +454,9 @@ class HomeController extends BaseController {
     Get.toNamed(Routes.TRAINING);
   }
 
-  navigateToSalary(){
-    Fimber.d("navigateToSalary()");
-    Get.toNamed(Routes.SALARY);
+  navigateToFinanceTeacher(){
+    Fimber.d("navigateToFinanceTeacher()");
+    Get.toNamed(Routes.FINANCE_TEACHER);
   }
 
   navigateToAttendance(){

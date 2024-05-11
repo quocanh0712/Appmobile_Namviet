@@ -35,6 +35,7 @@ import 'package:ftu_lms/app/modules/evaluate_training_point/bindings/evaluate_tr
 import 'package:ftu_lms/app/modules/evaluate_training_point/views/evaluate_training_view.dart';
 import 'package:ftu_lms/app/modules/exam_schedule/bindings/exam_schedule_binding.dart';
 import 'package:ftu_lms/app/modules/exam_schedule/views/exam_schedule_view.dart';
+import 'package:ftu_lms/app/modules/financeOverview/views/financeTeacher/views/finance_teacher_view.dart';
 import 'package:ftu_lms/app/modules/financial_detail/bindings/financial_detail_binding.dart';
 import 'package:ftu_lms/app/modules/financial_detail/views/financial_detail_view.dart';
 import 'package:ftu_lms/app/modules/follow_scientific_research/bindings/follow_scientific_research_binding.dart';
@@ -164,6 +165,7 @@ import '../modules/financeOverview/financeBySemester/bindings/finance_by_semeste
 import '../modules/financeOverview/financeBySemester/views/finance_by_semester_view.dart';
 import '../modules/financeOverview/tuition/bindings/tuition_binding.dart';
 import '../modules/financeOverview/tuition/views/tuition_view.dart';
+import '../modules/financeOverview/views/financeTeacher/bindings/finance_teacher_binding.dart';
 import '../modules/financeOverview/views/finance_overview_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
@@ -1045,6 +1047,12 @@ class AppPages {
       name: _Paths.SEMINAR,
       page: () =>  SeminarView(),
       binding: SeminarBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.FINANCE_TEACHER,
+      page: () =>  FinanceTeacherView(),
+      binding: FinanceTeacherBinding(),
     ),
 
 

@@ -132,7 +132,7 @@ class LearningResultsView extends BaseView<LearningResultsController> {
                                 context: context,
                                 title: LocaleKeys.credits.tr,
                                 value:
-                                    '${controller.semesterPoint?.value?.accumulatedCredits}/${controller.semesterPoint?.value?.academicCredits}'),
+                                    '${controller.semesterPoint?.value?.accumulatedCredits ?? ''}/${controller.semesterPoint?.value?.academicCredits ?? ''}'),
                             buildLearningResultInfoItem(
                                 context: context,
                                 title: LocaleKeys.semesterCredits.tr,

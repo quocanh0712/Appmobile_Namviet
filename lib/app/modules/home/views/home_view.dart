@@ -2010,8 +2010,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // luong-BHXH
       _buildListFeatureItem(
         context,
-        //onTap: () => controller.navigateToSalary(),
-        onTap: () => _showNotificationDialog(context),
+        onTap: () => controller.navigateToFinanceTeacher(),
+        //onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,

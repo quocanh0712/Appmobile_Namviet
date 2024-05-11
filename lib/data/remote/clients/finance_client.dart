@@ -3,6 +3,7 @@
 // coverage:ignore-file
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:ftu_lms/app/modules/financeOverview/views/financeTeacher/models/finance_teacher_request.dart';
 import 'package:ftu_lms/data/remote/requests/finance_request_params/finance_request_params.dart';
 import 'package:http_mock_adapter/http_mock_adapter.dart';
 
@@ -15,6 +16,7 @@ class FinanceClient extends BaseClientGenerator with _$FinanceClient {
   FinanceClient._() : super();
   factory FinanceClient.getAll(FinanceRequestParams? params) = _GetAll;
   factory FinanceClient.getAllBills(FinanceRequestParams? params) = _GetAllBills;
+  factory FinanceClient.getSalary(FinanceTeacherRequest? params) = _GetSalary;
 
   @override
   String get baseURL => '${super.baseURL}/TaiChinh';
@@ -31,6 +33,7 @@ class FinanceClient extends BaseClientGenerator with _$FinanceClient {
     return maybeWhen<String>(
       getAll: (params) => '/GetAll',
       getAllBills: (params) => '/GetAllHoaDon',
+      getSalary: (params) => '/TinhLuong',
       orElse: () => 'get',
     );
   }
@@ -40,6 +43,7 @@ class FinanceClient extends BaseClientGenerator with _$FinanceClient {
     return maybeWhen(
       getAll: (params) => params?.toJson() ?? {},
       getAllBills: (params) => params?.toJson() ?? {},
+      getSalary: (params) => params?.toJson() ?? {},
       orElse: () => {},
     );
   }
