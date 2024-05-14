@@ -3,6 +3,7 @@
 // coverage:ignore-file
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:ftu_lms/data/bean/home_response_object/home_request.dart';
 import 'package:http_mock_adapter/http_mock_adapter.dart';
 
 import '../interfaces/base_client_generator.dart';
@@ -12,7 +13,7 @@ part 'home_client.freezed.dart';
 @freezed
 class HomeClient extends BaseClientGenerator with _$HomeClient {
   HomeClient._() : super();
-  factory HomeClient.getAll() = _GetAll;
+  factory HomeClient.getAll(HomeRequest? model) = _GetAll;
 
   @override
   String get baseURL => '${super.baseURL}/HomePage';
@@ -20,7 +21,7 @@ class HomeClient extends BaseClientGenerator with _$HomeClient {
   @override
   String get method {
     return maybeWhen<String>(
-      getAll: () => RequestMethods.post.name,
+      getAll: (data) => RequestMethods.post.name,
       orElse: () => RequestMethods.get.name,
     );
   }
@@ -28,7 +29,7 @@ class HomeClient extends BaseClientGenerator with _$HomeClient {
   @override
   String get path {
     return maybeWhen<String>(
-      getAll: () => '/GetAll',
+      getAll: (data) => '/GetAll',
       orElse: () => 'get',
     );
   }
@@ -36,6 +37,7 @@ class HomeClient extends BaseClientGenerator with _$HomeClient {
   @override
   Map<String, dynamic> get body {
     return maybeWhen(
+      getAll: (data) => data?.toJson() ?? {},
       orElse: () => {},
     );
   }

@@ -23,6 +23,7 @@ mixin _$AttendanceStuClient {
     required TResult Function(ListLessonRequest? model) getLessonList,
     required TResult Function(ListStudentAttendanceRequest? model)
         getStudentAttendanceList,
+    required TResult Function(AttendanceStuRequest? model) getYearTime,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,6 +32,7 @@ mixin _$AttendanceStuClient {
     TResult? Function(ListLessonRequest? model)? getLessonList,
     TResult? Function(ListStudentAttendanceRequest? model)?
         getStudentAttendanceList,
+    TResult? Function(AttendanceStuRequest? model)? getYearTime,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -39,6 +41,7 @@ mixin _$AttendanceStuClient {
     TResult Function(ListLessonRequest? model)? getLessonList,
     TResult Function(ListStudentAttendanceRequest? model)?
         getStudentAttendanceList,
+    TResult Function(AttendanceStuRequest? model)? getYearTime,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -48,6 +51,7 @@ mixin _$AttendanceStuClient {
     required TResult Function(_ListLesson value) getLessonList,
     required TResult Function(_ListStudentAttendance value)
         getStudentAttendanceList,
+    required TResult Function(_YearTime value) getYearTime,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$AttendanceStuClient {
     TResult? Function(_AttendanceStuClient value)? getClassList,
     TResult? Function(_ListLesson value)? getLessonList,
     TResult? Function(_ListStudentAttendance value)? getStudentAttendanceList,
+    TResult? Function(_YearTime value)? getYearTime,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,6 +67,7 @@ mixin _$AttendanceStuClient {
     TResult Function(_AttendanceStuClient value)? getClassList,
     TResult Function(_ListLesson value)? getLessonList,
     TResult Function(_ListStudentAttendance value)? getStudentAttendanceList,
+    TResult Function(_YearTime value)? getYearTime,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -168,6 +174,7 @@ class _$AttendanceStuClientImpl extends _AttendanceStuClient {
     required TResult Function(ListLessonRequest? model) getLessonList,
     required TResult Function(ListStudentAttendanceRequest? model)
         getStudentAttendanceList,
+    required TResult Function(AttendanceStuRequest? model) getYearTime,
   }) {
     return getClassList(model);
   }
@@ -179,6 +186,7 @@ class _$AttendanceStuClientImpl extends _AttendanceStuClient {
     TResult? Function(ListLessonRequest? model)? getLessonList,
     TResult? Function(ListStudentAttendanceRequest? model)?
         getStudentAttendanceList,
+    TResult? Function(AttendanceStuRequest? model)? getYearTime,
   }) {
     return getClassList?.call(model);
   }
@@ -190,6 +198,7 @@ class _$AttendanceStuClientImpl extends _AttendanceStuClient {
     TResult Function(ListLessonRequest? model)? getLessonList,
     TResult Function(ListStudentAttendanceRequest? model)?
         getStudentAttendanceList,
+    TResult Function(AttendanceStuRequest? model)? getYearTime,
     required TResult orElse(),
   }) {
     if (getClassList != null) {
@@ -205,6 +214,7 @@ class _$AttendanceStuClientImpl extends _AttendanceStuClient {
     required TResult Function(_ListLesson value) getLessonList,
     required TResult Function(_ListStudentAttendance value)
         getStudentAttendanceList,
+    required TResult Function(_YearTime value) getYearTime,
   }) {
     return getClassList(this);
   }
@@ -215,6 +225,7 @@ class _$AttendanceStuClientImpl extends _AttendanceStuClient {
     TResult? Function(_AttendanceStuClient value)? getClassList,
     TResult? Function(_ListLesson value)? getLessonList,
     TResult? Function(_ListStudentAttendance value)? getStudentAttendanceList,
+    TResult? Function(_YearTime value)? getYearTime,
   }) {
     return getClassList?.call(this);
   }
@@ -225,6 +236,7 @@ class _$AttendanceStuClientImpl extends _AttendanceStuClient {
     TResult Function(_AttendanceStuClient value)? getClassList,
     TResult Function(_ListLesson value)? getLessonList,
     TResult Function(_ListStudentAttendance value)? getStudentAttendanceList,
+    TResult Function(_YearTime value)? getYearTime,
     required TResult orElse(),
   }) {
     if (getClassList != null) {
@@ -328,6 +340,7 @@ class _$ListLessonImpl extends _ListLesson {
     required TResult Function(ListLessonRequest? model) getLessonList,
     required TResult Function(ListStudentAttendanceRequest? model)
         getStudentAttendanceList,
+    required TResult Function(AttendanceStuRequest? model) getYearTime,
   }) {
     return getLessonList(model);
   }
@@ -339,6 +352,7 @@ class _$ListLessonImpl extends _ListLesson {
     TResult? Function(ListLessonRequest? model)? getLessonList,
     TResult? Function(ListStudentAttendanceRequest? model)?
         getStudentAttendanceList,
+    TResult? Function(AttendanceStuRequest? model)? getYearTime,
   }) {
     return getLessonList?.call(model);
   }
@@ -350,6 +364,7 @@ class _$ListLessonImpl extends _ListLesson {
     TResult Function(ListLessonRequest? model)? getLessonList,
     TResult Function(ListStudentAttendanceRequest? model)?
         getStudentAttendanceList,
+    TResult Function(AttendanceStuRequest? model)? getYearTime,
     required TResult orElse(),
   }) {
     if (getLessonList != null) {
@@ -365,6 +380,7 @@ class _$ListLessonImpl extends _ListLesson {
     required TResult Function(_ListLesson value) getLessonList,
     required TResult Function(_ListStudentAttendance value)
         getStudentAttendanceList,
+    required TResult Function(_YearTime value) getYearTime,
   }) {
     return getLessonList(this);
   }
@@ -375,6 +391,7 @@ class _$ListLessonImpl extends _ListLesson {
     TResult? Function(_AttendanceStuClient value)? getClassList,
     TResult? Function(_ListLesson value)? getLessonList,
     TResult? Function(_ListStudentAttendance value)? getStudentAttendanceList,
+    TResult? Function(_YearTime value)? getYearTime,
   }) {
     return getLessonList?.call(this);
   }
@@ -385,6 +402,7 @@ class _$ListLessonImpl extends _ListLesson {
     TResult Function(_AttendanceStuClient value)? getClassList,
     TResult Function(_ListLesson value)? getLessonList,
     TResult Function(_ListStudentAttendance value)? getStudentAttendanceList,
+    TResult Function(_YearTime value)? getYearTime,
     required TResult orElse(),
   }) {
     if (getLessonList != null) {
@@ -489,6 +507,7 @@ class _$ListStudentAttendanceImpl extends _ListStudentAttendance {
     required TResult Function(ListLessonRequest? model) getLessonList,
     required TResult Function(ListStudentAttendanceRequest? model)
         getStudentAttendanceList,
+    required TResult Function(AttendanceStuRequest? model) getYearTime,
   }) {
     return getStudentAttendanceList(model);
   }
@@ -500,6 +519,7 @@ class _$ListStudentAttendanceImpl extends _ListStudentAttendance {
     TResult? Function(ListLessonRequest? model)? getLessonList,
     TResult? Function(ListStudentAttendanceRequest? model)?
         getStudentAttendanceList,
+    TResult? Function(AttendanceStuRequest? model)? getYearTime,
   }) {
     return getStudentAttendanceList?.call(model);
   }
@@ -511,6 +531,7 @@ class _$ListStudentAttendanceImpl extends _ListStudentAttendance {
     TResult Function(ListLessonRequest? model)? getLessonList,
     TResult Function(ListStudentAttendanceRequest? model)?
         getStudentAttendanceList,
+    TResult Function(AttendanceStuRequest? model)? getYearTime,
     required TResult orElse(),
   }) {
     if (getStudentAttendanceList != null) {
@@ -526,6 +547,7 @@ class _$ListStudentAttendanceImpl extends _ListStudentAttendance {
     required TResult Function(_ListLesson value) getLessonList,
     required TResult Function(_ListStudentAttendance value)
         getStudentAttendanceList,
+    required TResult Function(_YearTime value) getYearTime,
   }) {
     return getStudentAttendanceList(this);
   }
@@ -536,6 +558,7 @@ class _$ListStudentAttendanceImpl extends _ListStudentAttendance {
     TResult? Function(_AttendanceStuClient value)? getClassList,
     TResult? Function(_ListLesson value)? getLessonList,
     TResult? Function(_ListStudentAttendance value)? getStudentAttendanceList,
+    TResult? Function(_YearTime value)? getYearTime,
   }) {
     return getStudentAttendanceList?.call(this);
   }
@@ -546,6 +569,7 @@ class _$ListStudentAttendanceImpl extends _ListStudentAttendance {
     TResult Function(_AttendanceStuClient value)? getClassList,
     TResult Function(_ListLesson value)? getLessonList,
     TResult Function(_ListStudentAttendance value)? getStudentAttendanceList,
+    TResult Function(_YearTime value)? getYearTime,
     required TResult orElse(),
   }) {
     if (getStudentAttendanceList != null) {
@@ -565,4 +589,169 @@ abstract class _ListStudentAttendance extends AttendanceStuClient {
   @JsonKey(ignore: true)
   _$$ListStudentAttendanceImplCopyWith<_$ListStudentAttendanceImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$YearTimeImplCopyWith<$Res> {
+  factory _$$YearTimeImplCopyWith(
+          _$YearTimeImpl value, $Res Function(_$YearTimeImpl) then) =
+      __$$YearTimeImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({AttendanceStuRequest? model});
+
+  $AttendanceStuRequestCopyWith<$Res>? get model;
+}
+
+/// @nodoc
+class __$$YearTimeImplCopyWithImpl<$Res>
+    extends _$AttendanceStuClientCopyWithImpl<$Res, _$YearTimeImpl>
+    implements _$$YearTimeImplCopyWith<$Res> {
+  __$$YearTimeImplCopyWithImpl(
+      _$YearTimeImpl _value, $Res Function(_$YearTimeImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? model = freezed,
+  }) {
+    return _then(_$YearTimeImpl(
+      freezed == model
+          ? _value.model
+          : model // ignore: cast_nullable_to_non_nullable
+              as AttendanceStuRequest?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AttendanceStuRequestCopyWith<$Res>? get model {
+    if (_value.model == null) {
+      return null;
+    }
+
+    return $AttendanceStuRequestCopyWith<$Res>(_value.model!, (value) {
+      return _then(_value.copyWith(model: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$YearTimeImpl extends _YearTime {
+  _$YearTimeImpl(this.model) : super._();
+
+  @override
+  final AttendanceStuRequest? model;
+
+  @override
+  String toString() {
+    return 'AttendanceStuClient.getYearTime(model: $model)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$YearTimeImpl &&
+            (identical(other.model, model) || other.model == model));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, model);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$YearTimeImplCopyWith<_$YearTimeImpl> get copyWith =>
+      __$$YearTimeImplCopyWithImpl<_$YearTimeImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(AttendanceStuRequest? model) getClassList,
+    required TResult Function(ListLessonRequest? model) getLessonList,
+    required TResult Function(ListStudentAttendanceRequest? model)
+        getStudentAttendanceList,
+    required TResult Function(AttendanceStuRequest? model) getYearTime,
+  }) {
+    return getYearTime(model);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(AttendanceStuRequest? model)? getClassList,
+    TResult? Function(ListLessonRequest? model)? getLessonList,
+    TResult? Function(ListStudentAttendanceRequest? model)?
+        getStudentAttendanceList,
+    TResult? Function(AttendanceStuRequest? model)? getYearTime,
+  }) {
+    return getYearTime?.call(model);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(AttendanceStuRequest? model)? getClassList,
+    TResult Function(ListLessonRequest? model)? getLessonList,
+    TResult Function(ListStudentAttendanceRequest? model)?
+        getStudentAttendanceList,
+    TResult Function(AttendanceStuRequest? model)? getYearTime,
+    required TResult orElse(),
+  }) {
+    if (getYearTime != null) {
+      return getYearTime(model);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_AttendanceStuClient value) getClassList,
+    required TResult Function(_ListLesson value) getLessonList,
+    required TResult Function(_ListStudentAttendance value)
+        getStudentAttendanceList,
+    required TResult Function(_YearTime value) getYearTime,
+  }) {
+    return getYearTime(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_AttendanceStuClient value)? getClassList,
+    TResult? Function(_ListLesson value)? getLessonList,
+    TResult? Function(_ListStudentAttendance value)? getStudentAttendanceList,
+    TResult? Function(_YearTime value)? getYearTime,
+  }) {
+    return getYearTime?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_AttendanceStuClient value)? getClassList,
+    TResult Function(_ListLesson value)? getLessonList,
+    TResult Function(_ListStudentAttendance value)? getStudentAttendanceList,
+    TResult Function(_YearTime value)? getYearTime,
+    required TResult orElse(),
+  }) {
+    if (getYearTime != null) {
+      return getYearTime(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _YearTime extends AttendanceStuClient {
+  factory _YearTime(final AttendanceStuRequest? model) = _$YearTimeImpl;
+  _YearTime._() : super._();
+
+  @override
+  AttendanceStuRequest? get model;
+  @JsonKey(ignore: true)
+  _$$YearTimeImplCopyWith<_$YearTimeImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

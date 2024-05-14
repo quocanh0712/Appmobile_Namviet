@@ -178,7 +178,7 @@ class FinanceTeacherView extends BaseView<FinanceTeacherController> {
             ? Container(
             width: double.infinity,
             height: 1,
-            color: context.themeExtensions.black.withOpacity(0.1))
+            color: context.themeExtensions.white.withOpacity(0.1))
             : const SizedBox.shrink(),
       ],
     );

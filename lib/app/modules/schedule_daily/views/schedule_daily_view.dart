@@ -76,7 +76,7 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
                       selectedDate.value = DateFormat('dd/MM/yyyy')
                           .format(date); // Định dạng ngày tháng năm
                       controller.timeDaily = date;
-                      controller.loadScheduleDaily();
+                      //controller.loadScheduleDaily();
                     },
                         currentTime: controller.timeDaily,
                         locale: LocaleType.vi);

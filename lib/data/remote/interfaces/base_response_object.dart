@@ -6,6 +6,7 @@ import 'dart:ui';
 import 'package:equatable/equatable.dart';
 import 'package:fimber/fimber.dart';
 import 'package:ftu_lms/app/modules/attendance_stu/model/attendance_stu_response.dart';
+import 'package:ftu_lms/app/modules/attendance_stu/model/year_time_response.dart';
 import 'package:ftu_lms/app/modules/attendance_stu/views/list_lesson/model/list_lesson_response.dart';
 import 'package:ftu_lms/app/modules/attendance_stu/views/list_student_attendance/model/list_student_attendance_response.dart';
 import 'package:ftu_lms/app/modules/detail_conversation/model/comment_conversation.dart';
@@ -233,6 +234,11 @@ extension NetworkResponseConverter on BaseResponseObject {
     if (this is BaseResponseObject<List<AttendanceStuResponse?>?>) {
       return BaseResponseObject<List<AttendanceStuResponse?>?>.fromJson(
           json, jsonToListNullableAttendanceStuResponse);
+    }
+
+    if (this is BaseResponseObject<List<YearTimeResponse?>?>) {
+      return BaseResponseObject<List<YearTimeResponse?>?>.fromJson(
+          json, jsonToListNullableYearTimeResponse);
     }
 
     if (this is BaseResponseObject<List<ListLessonResponse?>?>) {

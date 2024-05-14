@@ -1541,8 +1541,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.tasksCalendar.tr,
-        // onTap: () => controller.navigateToScheduleTime(),
-        onTap: () => _showNotificationDialog(context),
+        onTap: () => controller.navigateToScheduleTime(),
+       // onTap: () => _showNotificationDialog(context),
       ),
       //10 Lich lam viec
       // _buildListFeatureItem(
@@ -2829,8 +2829,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       //diemdanh1
       _buildListFeatureItem(
         context,
-        //onTap: () => controller.navigateToAttendanceStu(),
-        onTap: () => _showNotificationDialog(context),
+        onTap: () => controller.navigateToAttendanceStu(),
+       // onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -3491,24 +3491,24 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       //   ),
       //   title: LocaleKeys.evaluateTrainingPoint.tr,
       // ),
-      _buildListFeatureItem(
-        context,
-        onTap: () => controller.navigateToScientificResearch(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        // icon: Icon(
-        //   Icons.science_outlined,
-        //   //color: const Color(0xFF4da543).withOpacity(0.75),
-        //   color: Colors.white,
-        //   size: 30,
-        // ),
-        image: const Image(
-          image: AssetImage(
-            'assets/Icon/14.png',
-          ),
-          fit: BoxFit.cover,
-        ),
-        title: LocaleKeys.scienceStudy.tr,
-      ),
+      // _buildListFeatureItem(
+      //   context,
+      //   onTap: () => controller.navigateToScientificResearch(),
+      //   background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+      //   // icon: Icon(
+      //   //   Icons.science_outlined,
+      //   //   //color: const Color(0xFF4da543).withOpacity(0.75),
+      //   //   color: Colors.white,
+      //   //   size: 30,
+      //   // ),
+      //   image: const Image(
+      //     image: AssetImage(
+      //       'assets/Icon/14.png',
+      //     ),
+      //     fit: BoxFit.cover,
+      //   ),
+      //   title: LocaleKeys.scienceStudy.tr,
+      // ),
       _buildListFeatureItem(
         context,
         onTap: () {
@@ -4010,27 +4010,27 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         title: LocaleKeys.attendance_stu.tr,
       ),
     ];
-    List<Widget> scientificStudent = [
-      //NCKH1
-      _buildListFeatureItem(
-        context,
-        onTap: () => controller.navigateToScientificResearch(),
-        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-        // icon: Icon(
-        //   Icons.science_outlined,
-        //   //color: const Color(0xFF4da543).withOpacity(0.75),
-        //   color: Colors.white,
-        //   size: 30,
-        // ),
-        image: const Image(
-          image: AssetImage(
-            'assets/Icon/14.png',
-          ),
-          fit: BoxFit.cover,
-        ),
-        title: LocaleKeys.scienceStudy.tr,
-      ),
-    ];
+    // List<Widget> scientificStudent = [
+    //   //NCKH1
+    //   _buildListFeatureItem(
+    //     context,
+    //     onTap: () => controller.navigateToScientificResearch(),
+    //     background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+    //     // icon: Icon(
+    //     //   Icons.science_outlined,
+    //     //   //color: const Color(0xFF4da543).withOpacity(0.75),
+    //     //   color: Colors.white,
+    //     //   size: 30,
+    //     // ),
+    //     image: const Image(
+    //       image: AssetImage(
+    //         'assets/Icon/14.png',
+    //       ),
+    //       fit: BoxFit.cover,
+    //     ),
+    //     title: LocaleKeys.scienceStudy.tr,
+    //   ),
+    // ];
     List<Widget> otherStudent = [
       _buildListFeatureItem(
         context,
@@ -4097,7 +4097,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       'Hành chính - Tổng hợp': administrative,
       'Đào tạo - Khảo thí': eduStudentItemList,
       'Hồ sơ người học': studentProfile,
-      'Khoa học - Hợp tác quốc tế - Tạp chí': scientificStudent,
+      //'Khoa học - Hợp tác quốc tế - Tạp chí': scientificStudent,
       'Khác': otherStudent,
       '': blankSpaceSv,
     };
@@ -4192,8 +4192,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                             ),
                             child: GridView.count(
                               crossAxisCount: 4,
-                              crossAxisSpacing: 8.h,
-                              mainAxisSpacing: 20.w,
+                              crossAxisSpacing: 6.h,
+                              mainAxisSpacing: 18.w,
                               // childAspectRatio: 2 / 1,
                               physics: const NeverScrollableScrollPhysics(),
                               children: items.map((item) {

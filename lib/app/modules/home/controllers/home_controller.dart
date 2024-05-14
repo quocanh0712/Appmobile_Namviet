@@ -4,6 +4,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/app/routes/app_pages.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_banner_url.dart';
@@ -11,6 +12,7 @@ import 'package:ftu_lms/data/bean/home_response_object/home_new_activity.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_outstanding_actitvity.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_recent_actitvity.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_recent_task.dart';
+import 'package:ftu_lms/data/bean/home_response_object/home_request.dart';
 import 'package:ftu_lms/data/bean/user_object/user_object.dart';
 import 'package:ftu_lms/data/repositories/home_repository.dart';
 import 'package:ftu_lms/data/repositories/user_repository.dart';
@@ -22,6 +24,9 @@ import 'package:status_bar_control/status_bar_control.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 import '../../../../generated/assets.gen.dart';
+import '../../attendance_stu/model/attendance_stu_request.dart';
+import '../../attendance_stu/model/year_time_response.dart';
+import '../../attendance_stu/repository/attendance_stu_repository.dart';
 
 class HomeController extends BaseController {
   final ScrollController scrollController = ScrollController();
@@ -50,12 +55,17 @@ class HomeController extends BaseController {
 
 
 
+
+
+
   int? idDonVi = 0;
   Rx<String> title = "NAM VIỆT JSC".obs;
   Rx<String> imagePath = Assets.images.icBookPng.path.obs;
 
   Rx<String> username = "1952220001".obs;
   Rx<String> name = "Phạm Thị Vân Anh".obs;
+
+  var yearTime = List<YearTimeResponse?>.empty(growable: true).obs;
   //Rx<String> username = "admin".obs;
   //Rx<String> name = "Quản trị hệ thống".obs;
 
@@ -113,10 +123,12 @@ class HomeController extends BaseController {
   //   retrieveData();
   // }
 
+
   @override
   void onReady() async {
     super.onReady();
     Fimber.d("onReady()");
+
     final homeController = Get.find<HomeController>();
     homeController.avatarUrl.value = homeController.userObject.value?.avatar ?? '';
     homeController.userObject.value = await homeController.userRepo.retrieveUserInfo();
@@ -131,12 +143,19 @@ class HomeController extends BaseController {
       homeController.name.value = "Quản trị hệ thống";
     }
     homeController.retrieveData();
+
   }
+
+
+
+
+
+
 
   Future<void> retrieveData() async {
     Fimber.d('retrieveData()');
     isLoading.value = true;
-    final response = await homeRepo?.retrieveData();
+    final response = await homeRepo?.retrieveData(HomeRequest(iduser: userObject.value?.iduser, startindex: 0 , length: 20, year: "", weeksOfYear: 0));
     response?.when(success: ((data) {
       Fimber.d('response.when(success:)');
       if (data.isSuccess()) {

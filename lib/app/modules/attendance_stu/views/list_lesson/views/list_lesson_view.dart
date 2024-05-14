@@ -11,6 +11,8 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../../../generated/assets.gen.dart';
 import '../../../../../../generated/locales.g.dart';
+import '../../../../../../utils/constants.dart';
+import '../../../../base/base_list_view.dart';
 
 class ListLessonView extends StatelessWidget {
   @override
@@ -338,3 +340,5 @@ class ListLessonView extends StatelessWidget {
     return '0$n';
   }
 }
+
+

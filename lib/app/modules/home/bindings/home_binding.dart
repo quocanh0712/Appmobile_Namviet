@@ -4,11 +4,14 @@
 
 import 'package:get/get.dart';
 
+import '../../attendance_stu/repository/attendance_stu_repository.dart';
+import '../../attendance_stu/repository/impl/attendance_stu_repository_impl.dart';
 import '../controllers/home_controller.dart';
 
 class HomeBinding extends Bindings {
   @override
   void dependencies() {
     Get.lazyPut<HomeController>(() => HomeController(), fenix: true);
+    Get.lazyPut<AttendanceStuRepository>(() => AttendanceStuRepositoryImpl());
   }
 }

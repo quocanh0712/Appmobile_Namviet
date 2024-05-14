@@ -77,7 +77,10 @@ class PersonalView
                     Obx(() => AutoSizeText(
                         //"${controller.userObject.value?.fullname}",
                         controller.name.value,
-                        style: GoogleFonts.openSans(color: context.themeExtensions.white,fontSize: 14, fontWeight: FontWeight.w700))),
+                        style: GoogleFonts.openSans(
+                            color: context.themeExtensions.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700))),
                     // const SizedBox(height: 3),
                     // Obx(() => AutoSizeText(
                     //     "${controller.userObject.value?.username}",
@@ -173,7 +176,10 @@ class PersonalView
                     Obx(() => AutoSizeText(
                         //"${controller.userObject.value?.fullname}",
                         controller.name.value,
-                        style: GoogleFonts.openSans(color: context.themeExtensions.white,fontSize: 14, fontWeight: FontWeight.w700))),
+                        style: GoogleFonts.openSans(
+                            color: context.themeExtensions.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w700))),
                     // const SizedBox(height: 3),
                     // Obx(() => AutoSizeText(
                     //     "${controller.userObject.value?.username}",
@@ -582,7 +588,11 @@ class PersonalView
                                               .themeExtensions.darkGreen),
                                 ),
                                 Obx(() => AutoSizeText(
-                                      '${controller.semesterPoint?.value?.accumulatedCredits} / ${controller.semesterPoint?.value?.academicCredits}',
+                                      controller.semesterPoint?.value
+                                                  ?.accumulatedCredits !=
+                                              null
+                                          ? '${controller.semesterPoint?.value?.accumulatedCredits ?? Constants.EMPTY} / ${controller.semesterPoint?.value?.academicCredits ?? Constants.EMPTY}'
+                                          : Constants.EMPTY,
                                       style: context
                                           .themeExtensions.paragraphSemiBold
                                           .copyWith(

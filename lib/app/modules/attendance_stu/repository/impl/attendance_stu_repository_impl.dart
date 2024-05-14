@@ -3,6 +3,7 @@
 
 import 'package:ftu_lms/app/modules/attendance_stu/model/attendance_stu_request.dart';
 import 'package:ftu_lms/app/modules/attendance_stu/model/attendance_stu_response.dart';
+import 'package:ftu_lms/app/modules/attendance_stu/model/year_time_response.dart';
 import 'package:ftu_lms/app/modules/attendance_stu/repository/attendance_stu_repository.dart';
 
 import '../../../../../data/remote/clients/attendance_stu_client.dart';
@@ -19,5 +20,14 @@ class AttendanceStuRepositoryImpl extends AttendanceStuRepository {
         BaseResponseObject<List<AttendanceStuResponse?>?>>(
         route: AttendanceStuClient.getClassList(model),
         responseType: const BaseResponseObject<List<AttendanceStuResponse?>?>());
+  }
+
+  @override
+  Future<Result<BaseResponseObject<List<YearTimeResponse?>?>, NetworkError>> getYearTime(
+      AttendanceStuRequest? model  ) {
+    return NetworkExecutor.execute<BaseResponseObject<List<YearTimeResponse?>?>,
+        BaseResponseObject<List<YearTimeResponse?>?>>(
+        route: AttendanceStuClient.getYearTime(model),
+        responseType: const BaseResponseObject<List<YearTimeResponse?>?>());
   }
 }

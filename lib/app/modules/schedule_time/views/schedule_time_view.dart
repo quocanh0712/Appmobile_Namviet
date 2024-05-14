@@ -99,7 +99,8 @@ class ScheduleTimeView extends StatelessWidget {
                     ScheduleTimeResponse? scheduleTime =
                     controller.listScheduleTime.value[index];
                     List<CourseItem>? courseItems = scheduleTime?.listcourse;
-
+                  DateTime date = DateTime.now();
+                  String dateOnly =  date.day.toString();
                     return courseItems!.isEmpty ? _buildNoTasksOverviewThisWeek(context)
                         : Column(
                       children: [
@@ -129,6 +130,7 @@ class ScheduleTimeView extends StatelessWidget {
                             ),
                           ),
                         ),
+                        SizedBox(height: 15.h,),
                         Column(
                           children: courseItems?.map((courseItem) {
                             return Padding(
@@ -153,7 +155,7 @@ class ScheduleTimeView extends StatelessWidget {
                                               width: 35.w,
                                               height: 35.h,
                                               decoration: BoxDecoration(
-                                                  color: Colors.green.shade700,
+                                                  color: dateOnly == _formatTime(scheduleTime?.date.toString()) ? Colors.green.shade700 : Colors.grey,
                                                   shape: BoxShape.circle),
                                               child: Center(
                                                   child: Text(
@@ -171,7 +173,7 @@ class ScheduleTimeView extends StatelessWidget {
                                     height: 45.h,
                                     width: 280.w,
                                     decoration: BoxDecoration(
-                                        color: Colors.green,
+                                        color: context.themeExtensions.lightSilver,
                                         borderRadius: BorderRadius.circular(10)),
                                     child: Padding(
                                       padding: EdgeInsets.only(left: 13.0.w, top: 3.h, bottom: 3.h),
@@ -184,7 +186,7 @@ class ScheduleTimeView extends StatelessWidget {
                                             "${courseItem?.coursename}",
                                             style: GoogleFonts.openSans(
                                                 fontWeight: FontWeight.bold,
-                                                color: Colors.white,
+                                                color: Colors.black54,
                                                 fontSize: 13.sp),
                                           ),
                                           Row(
@@ -202,7 +204,7 @@ class ScheduleTimeView extends StatelessWidget {
                                                       "${courseItem?.roomname}",
                                                       style: GoogleFonts.openSans(
                                                           fontWeight:
-                                                          FontWeight.w600,
+                                                          FontWeight.bold,
                                                           color: Colors.white,
                                                           fontSize: 12.sp),
                                                     ),
@@ -212,10 +214,11 @@ class ScheduleTimeView extends StatelessWidget {
 
                                                 children: [
                                                   Icon(Icons.access_time_outlined, color: Colors.white,size: 14.sp,),
+                                                  SizedBox(width: 5.w,),
                                                   Text('${courseItem?.timestart ?? ''} - ${courseItem?.timeend ?? ''}',style: GoogleFonts.openSans(
                                                       fontWeight:
                                                       FontWeight.w600,
-                                                      color: Colors.white,
+                                                      color: Colors.black54,
                                                       fontSize: 12.sp),),
                                                 ],
                                               )

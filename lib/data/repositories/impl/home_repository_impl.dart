@@ -1,5 +1,6 @@
 // Copyright (c) 2022, one of the D3F outsourcing projects. All rights reserved.
 
+import 'package:ftu_lms/data/bean/home_response_object/home_request.dart';
 import 'package:ftu_lms/data/bean/home_response_object/home_response_object.dart';
 import 'package:ftu_lms/data/remote/clients/home_client.dart';
 import 'package:ftu_lms/data/remote/interfaces/base_response_object.dart';
@@ -10,9 +11,9 @@ import 'package:ftu_lms/data/repositories/home_repository.dart';
 
 class HomeRepositoryImpl extends HomeRepository {
   @override
-  Future<Result<BaseResponseObject<HomeResponseObject?>, NetworkError>> retrieveData() {
+  Future<Result<BaseResponseObject<HomeResponseObject?>, NetworkError>> retrieveData(HomeRequest ? model) {
     return NetworkExecutor.execute<BaseResponseObject<HomeResponseObject?>,
             BaseResponseObject<HomeResponseObject?>>(
-        route: HomeClient.getAll(), responseType: const BaseResponseObject<HomeResponseObject?>());
+        route: HomeClient.getAll(model), responseType: const BaseResponseObject<HomeResponseObject?>());
   }
 }

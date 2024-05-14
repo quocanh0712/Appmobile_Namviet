@@ -19,6 +19,7 @@ class AttendanceStuClient extends BaseClientGenerator with _$AttendanceStuClient
   factory AttendanceStuClient.getClassList(AttendanceStuRequest? model) = _AttendanceStuClient;
   factory AttendanceStuClient.getLessonList(ListLessonRequest? model) = _ListLesson;
   factory AttendanceStuClient.getStudentAttendanceList(ListStudentAttendanceRequest? model) = _ListStudentAttendance;
+  factory AttendanceStuClient.getYearTime(AttendanceStuRequest? model) = _YearTime;
 
   @override
   String get baseURL => '${super.baseURL}/DiemDanh';
@@ -29,6 +30,7 @@ class AttendanceStuClient extends BaseClientGenerator with _$AttendanceStuClient
         getClassList: (data) => data?.toJson() ?? {},
         getLessonList: (data) => data?.toJson() ?? {},
         getStudentAttendanceList: (data) => data?.toJson() ?? {},
+        getYearTime: (data) => data?.toJson() ?? {},
         orElse: () => {});
   }
 
@@ -45,6 +47,7 @@ class AttendanceStuClient extends BaseClientGenerator with _$AttendanceStuClient
       getClassList: (data) => '/GetAll',
       getLessonList: (data) => '/GetChiTiet',
       getStudentAttendanceList: (data) => '/GetDiemDanh',
+      getYearTime: (data) => '/GetLichNam',
       orElse: () => '',
     );
   }

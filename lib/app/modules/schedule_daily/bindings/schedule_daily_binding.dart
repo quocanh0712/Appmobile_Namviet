@@ -2,6 +2,8 @@
 
 // coverage:ignore-file
 
+import 'package:ftu_lms/app/modules/attendance_stu/repository/attendance_stu_repository.dart';
+import 'package:ftu_lms/app/modules/attendance_stu/repository/impl/attendance_stu_repository_impl.dart';
 import 'package:ftu_lms/app/modules/schedule_daily/repository/impl/schedule_daily_repository_impl.dart';
 import 'package:ftu_lms/app/modules/schedule_daily/repository/schedule_daily_repository.dart';
 import 'package:get/get.dart';
@@ -13,5 +15,6 @@ class ScheduleDailyBinding extends Bindings {
   void dependencies() {
     Get.lazyPut<ScheduleDailyController>(() => ScheduleDailyController());
     Get.lazyPut<ScheduleDailyRepository>(() => ScheduleDailyRepositoryImpl());
+    Get.lazyPut<AttendanceStuRepository>(() => AttendanceStuRepositoryImpl());
   }
 }

@@ -48,250 +48,252 @@ class ListStudentAttendanceView extends BaseBindingCreatorView<ListStudentAttend
     var listItem = controller.listStuAttendance.toList() ?? [];
     int stt = 0;
     //var classListStu = listItem[index];
-    return Column(
-      children: [
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            //cot dau tien
-            Container(
-              decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                      color: context.themeExtensions.textLightGrey.withOpacity(0.5),
-                      spreadRadius: 1,
-                      blurRadius: 2,
-                      offset: const Offset(1, 1), // changes position of shadow
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              //cot dau tien
+              Container(
+                decoration: BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: context.themeExtensions.textLightGrey.withOpacity(0.5),
+                        spreadRadius: 1,
+                        blurRadius: 2,
+                        offset: const Offset(1, 1), // changes position of shadow
+                      ),
+                    ]
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+      
+                      children: [
+                        Container(
+                          height: 35.h,
+                          width: 40.w,
+                          color: Colors.white,
+                          child: Center(
+                            child: Text(
+                              "#",
+                              style: GoogleFonts.openSans(
+                                  color: Colors.grey.shade500,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 13.sp),
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: 35.h,
+                          width: 160.w,
+                          color: Colors.white,
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              "Họ tên",
+                              style: GoogleFonts.roboto(
+                                  color: Colors.blueAccent,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12.sp),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ]
+                    Column(
+                      children: listItem.map((classListStu) {
+                        stt++;
+                        return Row(
+                          children: [
+                            Container(
+                              height: 35.h,
+                              width: 40.w,
+                              color: Colors.white,
+                              child: Center(
+                                child: Text(
+                                  "$stt",
+                                  style: GoogleFonts.roboto(
+                                      color: Colors.grey.shade500,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 11.sp),
+                                ),
+                              ),
+                            ),
+                            Container(
+                              height: 35.h,
+                              width: 160.w,
+                              color: Colors.white,
+                              child: Align(
+                                alignment: Alignment.centerLeft,
+                                child: Text(
+                                  '${classListStu?.hoTen}',
+                                  style: GoogleFonts.roboto(
+                                      color: context.themeExtensions.textColor,
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12.sp),
+                                ),
+                              ),
+                            ),
+                          ],
+                        );
+                      }).toList(),
+                    ),
+                  ],
+                ),
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-
+              //cot thu 2
+              Expanded(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        height: 35.h,
-                        width: 40.w,
-                        color: Colors.white,
-                        child: Center(
-                          child: Text(
-                            "#",
-                            style: GoogleFonts.openSans(
-                                color: Colors.grey.shade500,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 13.sp),
-                          ),
-                        ),
-                      ),
-                      Container(
-                        height: 35.h,
-                        width: 160.w,
-                        color: Colors.white,
-                        child: Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            "Họ tên",
-                            style: GoogleFonts.roboto(
-                                color: Colors.blueAccent,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 12.sp),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: listItem.map((classListStu) {
-                      stt++;
-                      return Row(
+                      // cot chi tiet 1
+                  SizedBox(width: 3,),
+                      Column(
                         children: [
                           Container(
                             height: 35.h,
-                            width: 40.w,
-                            color: Colors.white,
-                            child: Center(
-                              child: Text(
-                                "$stt",
-                                style: GoogleFonts.roboto(
-                                    color: Colors.grey.shade500,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 11.sp),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            height: 35.h,
-                            width: 160.w,
+                            width: 100.w,
                             color: Colors.white,
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
-                                '${classListStu?.hoTen}',
+                                "Mã SV",
                                 style: GoogleFonts.roboto(
-                                    color: context.themeExtensions.textColor,
+                                    color: Colors.blueAccent,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 12.sp),
                               ),
                             ),
                           ),
+                          Column(
+                            children: listItem.map((classListStu) {
+                              stt++;
+                              return Row(
+                                children: [
+                                  Container(
+                                    height: 35.h,
+                                    width: 100.w,
+                                    color: Colors.white,
+                                    child: Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Text(
+                                        '${classListStu?.maSv}',
+                                        style: GoogleFonts.roboto(
+                                            color: context.themeExtensions.textGrey,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12.sp),
+                                      ),
+                                    ),
+                                  ),
+      
+                                ],
+                              );
+                            }).toList(),
+                          ),
                         ],
-                      );
-                    }).toList(),
+                      ),
+                      // cot chi tiet 2
+                      Column(
+                        children: [
+                          Container(
+                            height: 35.h,
+                            width: 100.w,
+                            color: Colors.white,
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "Tên lớp",
+                                style: GoogleFonts.roboto(
+                                    color: Colors.blueAccent,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12.sp),
+                              ),
+                            ),
+                          ),
+                          Column(
+                            children: listItem.map((classListStu) {
+                              stt++;
+                              return Row(
+                                children: [
+                                  Container(
+                                    height: 35.h,
+                                    width: 100.w,
+                                    color: Colors.white,
+                                    child: Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Text(
+                                        '${classListStu?.tenLop}',
+                                        style: GoogleFonts.roboto(
+                                            color: context.themeExtensions.textGrey,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12.sp),
+                                      ),
+                                    ),
+                                  ),
+      
+                                ],
+                              );
+                            }).toList(),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            height: 35.h,
+                            width: 100.w,
+                            color: Colors.white,
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                "Số tiết nghỉ",
+                                style: GoogleFonts.roboto(
+                                    color: Colors.blueAccent,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 12.sp),
+                              ),
+                            ),
+                          ),
+                          Column(
+                            children: listItem.map((classListStu) {
+                              stt++;
+                              return Row(
+                                children: [
+                                  Container(
+                                    height: 35.h,
+                                    width: 100.w,
+                                    color: Colors.white,
+                                    child: Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Text(
+                                        '${classListStu?.tongSoTietNghi}',
+                                        style: GoogleFonts.roboto(
+                                            color: context.themeExtensions.mainGreen,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12.sp),
+                                      ),
+                                    ),
+                                  ),
+      
+                                ],
+                              );
+                            }).toList(),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                ],
-              ),
-            ),
-            //cot thu 2
-            Expanded(
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // cot chi tiet 1
-                SizedBox(width: 3,),
-                    Column(
-                      children: [
-                        Container(
-                          height: 35.h,
-                          width: 100.w,
-                          color: Colors.white,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Mã SV",
-                              style: GoogleFonts.roboto(
-                                  color: Colors.blueAccent,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12.sp),
-                            ),
-                          ),
-                        ),
-                        Column(
-                          children: listItem.map((classListStu) {
-                            stt++;
-                            return Row(
-                              children: [
-                                Container(
-                                  height: 35.h,
-                                  width: 100.w,
-                                  color: Colors.white,
-                                  child: Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      '${classListStu?.maSv}',
-                                      style: GoogleFonts.roboto(
-                                          color: context.themeExtensions.textColor,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 12.sp),
-                                    ),
-                                  ),
-                                ),
-
-                              ],
-                            );
-                          }).toList(),
-                        ),
-                      ],
-                    ),
-                    // cot chi tiet 2
-                    Column(
-                      children: [
-                        Container(
-                          height: 35.h,
-                          width: 100.w,
-                          color: Colors.white,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Tên lớp",
-                              style: GoogleFonts.roboto(
-                                  color: Colors.blueAccent,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12.sp),
-                            ),
-                          ),
-                        ),
-                        Column(
-                          children: listItem.map((classListStu) {
-                            stt++;
-                            return Row(
-                              children: [
-                                Container(
-                                  height: 35.h,
-                                  width: 100.w,
-                                  color: Colors.white,
-                                  child: Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      '${classListStu?.tenLop}',
-                                      style: GoogleFonts.roboto(
-                                          color: context.themeExtensions.textColor,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 12.sp),
-                                    ),
-                                  ),
-                                ),
-
-                              ],
-                            );
-                          }).toList(),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Container(
-                          height: 35.h,
-                          width: 100.w,
-                          color: Colors.white,
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              "Số tiết nghỉ",
-                              style: GoogleFonts.roboto(
-                                  color: Colors.blueAccent,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 12.sp),
-                            ),
-                          ),
-                        ),
-                        Column(
-                          children: listItem.map((classListStu) {
-                            stt++;
-                            return Row(
-                              children: [
-                                Container(
-                                  height: 35.h,
-                                  width: 100.w,
-                                  color: Colors.white,
-                                  child: Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      '${classListStu?.tongSoTietNghi}',
-                                      style: GoogleFonts.roboto(
-                                          color: context.themeExtensions.textColor,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 12.sp),
-                                    ),
-                                  ),
-                                ),
-
-                              ],
-                            );
-                          }).toList(),
-                        ),
-                      ],
-                    ),
-                  ],
                 ),
-              ),
-            )
-          ],
-        )
-      ],
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 
