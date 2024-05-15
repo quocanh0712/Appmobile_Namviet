@@ -129,8 +129,7 @@ class LoginController extends BaseController {
       DateTime loginTime = DateTime.parse(loginTimeString);
       DateTime currentTime = DateTime.now();
       Duration difference = currentTime.difference(loginTime);
-      const int sessionDuration = 60 * 60; // 60 phút
-
+      const int sessionDuration = 60 * 60;
       if (difference.inSeconds > sessionDuration) {
         // Nếu thời gian đã vượt quá sessionDuration, đăng xuất và xóa trạng thái đăng nhập
         prefs.remove('isLoggedIn');

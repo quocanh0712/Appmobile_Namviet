@@ -429,7 +429,25 @@ class LoginView extends BaseView<LoginController> {
                                                                 .themeExtensions
                                                                 .mainGreen)),
                                               )
-                                            : const SizedBox.shrink()
+                                            : InkWell(
+                                          onTap: () => loginController
+                                              .handleBiometricLogin(),
+                                          child: Padding(
+                                              padding:
+                                              const EdgeInsets.all(
+                                                  10),
+                                              child: Assets
+                                                  .images.icFingerScan
+                                                  .svg(
+                                                  width: 32,
+                                                  height: 32,
+                                                  fit: BoxFit.cover,
+                                                  color: context
+                                                      .themeExtensions
+                                                      .mainGreen)),
+                                        )
+
+                                        //const SizedBox.shrink()
                                       ],
                                     )),
                                 const SizedBox(height: 25),
