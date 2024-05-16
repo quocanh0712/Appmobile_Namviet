@@ -103,6 +103,7 @@ class PersonalController extends BaseController {
        Get.offAllNamed(Routes.LOGIN);
     }
 
+
   }
 
   retrieveSemesterPoints({bool? isRefresh = false}) async {
@@ -159,6 +160,7 @@ class PersonalController extends BaseController {
     prefs.remove('isLoggedIn');
     biometricLoginIsEnable.value = false;
     Get.offAllNamed(Routes.LOGIN);
+    print("--------User logged out successfully.");
   }
 
   navigateToCertificate() {

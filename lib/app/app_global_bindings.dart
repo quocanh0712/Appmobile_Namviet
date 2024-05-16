@@ -5,6 +5,7 @@
 import 'package:dio/dio.dart';
 import 'package:ftu_lms/app/modules/infiniteListSample/data/repository/impl/photo_repository_impl.dart';
 import 'package:ftu_lms/app/modules/infiniteListSample/data/repository/photo_repository.dart';
+import 'package:ftu_lms/app/modules/login/controllers/login_controller.dart';
 import 'package:ftu_lms/data/bean/app_configurations.dart';
 import 'package:ftu_lms/data/bean/user_object/user_object.dart';
 import 'package:ftu_lms/data/repositories/app_configs_repository.dart';
@@ -49,6 +50,7 @@ class AppGlobalBindings extends Bindings {
     Get.lazyPut<LearningResultRepository?>(() => LearningResultRepositoryImpl(), fenix: true);
     Get.lazyPut<TestScheduleRepository?>(() => TestScheduleRepositoryImpl(), fenix: true);
     Get.lazyPut<HomeRepository?>(() => HomeRepositoryImpl(), fenix: true);
+    Get.lazyPut<LoginController>(() => LoginController(), fenix: true);
     Get.lazyPut<ActivityRepository?>(() => ActivityRepositoryImpl(), fenix: true);
     Get.lazyPut<FinanceRepository?>(() => FinanceRepositoryImpl(), fenix: true);
     Get.lazyPut<PracticePointRepository?>(() => PracticePointRepositoryImpl(), fenix: true);

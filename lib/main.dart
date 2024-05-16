@@ -2,6 +2,7 @@
 
 // coverage:ignore-file
 
+import 'dart:async';
 import 'dart:convert';
 
 import 'package:cryptography_flutter/cryptography_flutter.dart';
@@ -11,6 +12,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ftu_lms/app/app_global_bindings.dart';
+import 'package:ftu_lms/app/modules/personal/controllers/personal_controller.dart';
 import 'package:ftu_lms/generated/locales.g.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:ftu_lms/utils/constants.dart';
@@ -20,7 +22,9 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:jiffy/jiffy.dart';
 import 'package:status_bar_control/status_bar_control.dart';
 
+import 'app/modules/login/controllers/login_controller.dart';
 import 'app/routes/app_pages.dart';
+
 import 'widgets/easy_loading_animation.dart';
 
 Future<void> main() async {
