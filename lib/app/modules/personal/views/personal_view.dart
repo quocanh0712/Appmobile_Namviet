@@ -650,26 +650,26 @@ class PersonalView
                     color: context.themeExtensions.black.withOpacity(0.05)),
               ),
             )),
-        Obx(() => Visibility(
-              visible: controller.isTeacherPermission.value,
-              child: InkWell(
-                onTap: () => controller.navigateToWorkingProcess(),
-                child: _buildActionMenuItem(
-                    context,
-                    Assets.images.icCertificate,
-                    LocaleKeys.countTeaching.tr + ': 122 tiết'),
-              ),
-            )),
-        Obx(() => Visibility(
-              visible: controller.isTeacherPermission.value,
-              child: InkWell(
-                onTap: () => controller.navigateToWorkingProcess(),
-                child: _buildActionMenuItem(
-                    context,
-                    Assets.images.icWorkingProcess,
-                    LocaleKeys.workingProcess.tr),
-              ),
-            )),
+        // Obx(() => Visibility(
+        //       visible: controller.isTeacherPermission.value,
+        //       child: InkWell(
+        //         onTap: () => controller.navigateToWorkingProcess(),
+        //         child: _buildActionMenuItem(
+        //             context,
+        //             Assets.images.icCertificate,
+        //             LocaleKeys.countTeaching.tr + ': 122 tiết'),
+        //       ),
+        //     )),
+        // Obx(() => Visibility(
+        //       visible: controller.isTeacherPermission.value,
+        //       child: InkWell(
+        //         onTap: () => controller.navigateToWorkingProcess(),
+        //         child: _buildActionMenuItem(
+        //             context,
+        //             Assets.images.icWorkingProcess,
+        //             LocaleKeys.workingProcess.tr),
+        //       ),
+        //     )),
         Obx(() => Visibility(
               visible: controller.isTeacherPermission.value,
               child: Padding(
@@ -765,7 +765,7 @@ class PersonalView
               color: context.themeExtensions.black.withOpacity(0.05)),
         ),
         InkWell(
-          onTap: () => controller.navigateToFinanceOverview(),
+          // onTap: () => controller.navigateToFinanceOverview(),
           child: _buildActionMenuItem(
               context, Assets.images.icLampCharge, LocaleKeys.help.tr),
         ),

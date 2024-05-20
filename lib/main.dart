@@ -23,6 +23,7 @@ import 'package:jiffy/jiffy.dart';
 import 'package:status_bar_control/status_bar_control.dart';
 
 import 'app/modules/login/controllers/login_controller.dart';
+import 'app/modules/login/services/session_service.dart';
 import 'app/routes/app_pages.dart';
 
 import 'widgets/easy_loading_animation.dart';
@@ -32,6 +33,7 @@ Future<void> main() async {
   Fimber.plantTree(DebugTree.elapsed());
 
   WidgetsFlutterBinding.ensureInitialized();
+
 
 
 

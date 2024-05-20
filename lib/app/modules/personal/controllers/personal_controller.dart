@@ -1,7 +1,10 @@
 // Copyright (c) 2022, one of the D3F outsourcing projects. All rights reserved.
 
+import 'dart:async';
+
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/app/routes/app_pages.dart';
 import 'package:ftu_lms/data/bean/semester_point_object/semester_point_object.dart';
@@ -17,7 +20,12 @@ import 'package:sliding_up_panel2/sliding_up_panel2.dart';
 import '../../../../generated/assets.gen.dart';
 
 
+import 'package:flutter_easyloading/flutter_easyloading.dart';
+
+import '../../login/services/session_service.dart';
+
 class PersonalController extends BaseController {
+  final SessionService sessionService = Get.find<SessionService>();
   late ScrollController? scrollController;
   late PanelController? panelController;
 
@@ -38,8 +46,9 @@ class PersonalController extends BaseController {
   Rx<String> imagePath = Assets.images.uflLogo.path.obs;
   Rx<String> username = "1952220001".obs;
   Rx<String> name = "Phạm Thị Vân Anh".obs;
-  //Rx<String> username = "admin".obs;
-  //Rx<String> name = "Quản trị hệ thống".obs;
+
+  Rx<bool> isLoggedIn = false.obs; // Biến cờ cho trạng thái đăng nhập
+
   @override
   void onInit() async {
     super.onInit();
@@ -90,21 +99,18 @@ class PersonalController extends BaseController {
   void onReady() async {
     super.onReady();
     Fimber.d("onReady()");
-    biometricAuthIsNotSupported.value =
-        await biometricAuthenticator.deviceIsSupported();
+    biometricAuthIsNotSupported.value = await biometricAuthenticator.deviceIsSupported();
     userObject.value = await userRepo.retrieveUserInfo();
     if (biometricAuthIsNotSupported.value) {
       biometricLoginIsEnable.value = userObject.value?.biometricAuth ?? false;
     }
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
-    if (!isLoggedIn) {
-      // Nếu không đăng nhập, thực hiện các hành động khác cần thiết
-       Get.offAllNamed(Routes.LOGIN);
+    isLoggedIn.value = prefs.getBool('isLoggedIn') ?? false;
+    if (!isLoggedIn.value) {
+      Get.offAllNamed(Routes.LOGIN);
     }
-
-
   }
+
 
   retrieveSemesterPoints({bool? isRefresh = false}) async {
     Fimber.d("retrieveSemesterPoints({bool? isRefresh = $isRefresh})");
@@ -153,12 +159,22 @@ class PersonalController extends BaseController {
     Get.toNamed(Routes.PASSWORD_EDITION);
   }
 
-  logout() async {
+  Future<void> logout() async {
     Fimber.d("logout()");
+    EasyLoading.show(status: 'Đang đăng xuất...');
+
+    sessionService.cancelLogoutTimer(); // Hủy bỏ bộ đếm thời gian
+
     await userRepo.logout();
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.remove('isLoggedIn');
+    prefs.remove('userName');
+    prefs.remove('password');
     biometricLoginIsEnable.value = false;
+
+    isLoggedIn.value = false; // Đặt biến cờ đăng nhập về false
+
+    EasyLoading.dismiss();
     Get.offAllNamed(Routes.LOGIN);
     print("--------User logged out successfully.");
   }
@@ -173,3 +189,7 @@ class PersonalController extends BaseController {
     Get.toNamed(Routes.WORKING_PROCESS);
   }
 }
+
+
+
+

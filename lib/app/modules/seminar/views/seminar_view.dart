@@ -47,7 +47,7 @@ class SeminarView extends StatelessWidget {
     var listItem = controller.listSeminar.toList() ?? [];
 
     return Padding(
-      padding:  EdgeInsets.only(top:20.0),
+      padding: EdgeInsets.only(top: 20.0),
       child: ListView.builder(
         padding: EdgeInsets.only(top: 10),
         physics: ScrollPhysics(),
@@ -93,13 +93,11 @@ class SeminarView extends StatelessWidget {
                       ExpansionTile(
                         title: Padding(
                           padding: EdgeInsets.only(left: 2.w),
-                          child: Expanded(
-                            child: Text(
-                              seminar?.tenHoiThao?.toString() ?? '',
-                              style: GoogleFonts.openSans(
-                                fontSize: 16.sp,
-                                fontWeight: FontWeight.w800,
-                              ),
+                          child: Text(
+                            seminar?.tenHoiThao?.toString() ?? '',
+                            style: GoogleFonts.openSans(
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w800,
                             ),
                           ),
                         ),
@@ -108,7 +106,7 @@ class SeminarView extends StatelessWidget {
                         ),
                         children: [
                           Padding(
-                            padding:  EdgeInsets.only(left: 15.w),
+                            padding: EdgeInsets.only(left: 15.w),
                             child: SingleChildScrollView(
                               child: Column(
                                 children: [
@@ -119,6 +117,7 @@ class SeminarView extends StatelessWidget {
                                         style: context.themeExtensions.subTexMedium.copyWith(
                                             color: context.themeExtensions.lightSilver),
                                       ),
+                                      SizedBox(width: 5.w), // Add spacing between widgets
                                       Text(
                                         "Nội dung :",
                                         style: GoogleFonts.openSans(
@@ -140,7 +139,7 @@ class SeminarView extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 5.h,),
+                                  SizedBox(height: 5.h),
                                   Row(
                                     children: [
                                       AutoSizeText(
@@ -148,6 +147,7 @@ class SeminarView extends StatelessWidget {
                                         style: context.themeExtensions.subTexMedium.copyWith(
                                             color: context.themeExtensions.lightSilver),
                                       ),
+                                      SizedBox(width: 5.w), // Add spacing between widgets
                                       Text(
                                         "Số quyết định :",
                                         style: GoogleFonts.openSans(
@@ -169,7 +169,7 @@ class SeminarView extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 5.h,),
+                                  SizedBox(height: 5.h),
                                   Row(
                                     children: [
                                       AutoSizeText(
@@ -177,6 +177,7 @@ class SeminarView extends StatelessWidget {
                                         style: context.themeExtensions.subTexMedium.copyWith(
                                             color: context.themeExtensions.lightSilver),
                                       ),
+                                      SizedBox(width: 5.w), // Add spacing between widgets
                                       Text(
                                         "Mục đích :",
                                         style: GoogleFonts.openSans(
@@ -198,7 +199,7 @@ class SeminarView extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 5.h,),
+                                  SizedBox(height: 5.h),
                                   Row(
                                     children: [
                                       AutoSizeText(
@@ -206,6 +207,7 @@ class SeminarView extends StatelessWidget {
                                         style: context.themeExtensions.subTexMedium.copyWith(
                                             color: context.themeExtensions.lightSilver),
                                       ),
+                                      SizedBox(width: 5.w), // Add spacing between widgets
                                       Text(
                                         "Tên loại hội thảo :",
                                         style: GoogleFonts.openSans(
@@ -227,7 +229,7 @@ class SeminarView extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 5.h,),
+                                  SizedBox(height: 5.h),
                                   Row(
                                     children: [
                                       AutoSizeText(
@@ -235,6 +237,7 @@ class SeminarView extends StatelessWidget {
                                         style: context.themeExtensions.subTexMedium.copyWith(
                                             color: context.themeExtensions.lightSilver),
                                       ),
+                                      SizedBox(width: 5.w), // Add spacing between widgets
                                       Text(
                                         "Năm học :",
                                         style: GoogleFonts.openSans(
@@ -254,7 +257,7 @@ class SeminarView extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 5.h,),
+                                  SizedBox(height: 5.h),
                                   Row(
                                     children: [
                                       AutoSizeText(
@@ -262,6 +265,7 @@ class SeminarView extends StatelessWidget {
                                         style: context.themeExtensions.subTexMedium.copyWith(
                                             color: context.themeExtensions.lightSilver),
                                       ),
+                                      SizedBox(width: 5.w), // Add spacing between widgets
                                       Text(
                                         "Địa điểm tổ chức :",
                                         style: GoogleFonts.openSans(
@@ -283,7 +287,7 @@ class SeminarView extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 5.h,),
+                                  SizedBox(height: 5.h),
                                   Row(
                                     children: [
                                       AutoSizeText(
@@ -291,6 +295,7 @@ class SeminarView extends StatelessWidget {
                                         style: context.themeExtensions.subTexMedium.copyWith(
                                             color: context.themeExtensions.lightSilver),
                                       ),
+                                      SizedBox(width: 5.w), // Add spacing between widgets
                                       Text(
                                         "Ngôn ngữ :",
                                         style: GoogleFonts.openSans(
@@ -310,7 +315,7 @@ class SeminarView extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 5.h,),
+                                  SizedBox(height: 5.h),
                                   Row(
                                     children: [
                                       AutoSizeText(
@@ -318,6 +323,7 @@ class SeminarView extends StatelessWidget {
                                         style: context.themeExtensions.subTexMedium.copyWith(
                                             color: context.themeExtensions.lightSilver),
                                       ),
+                                      SizedBox(width: 5.w), // Add spacing between widgets
                                       Text(
                                         "Ngày tổ chức :",
                                         style: GoogleFonts.openSans(
@@ -337,7 +343,7 @@ class SeminarView extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  SizedBox(height: 5.h,),
+                                  SizedBox(height: 5.h),
                                   Row(
                                     children: [
                                       AutoSizeText(
@@ -345,6 +351,7 @@ class SeminarView extends StatelessWidget {
                                         style: context.themeExtensions.subTexMedium.copyWith(
                                             color: context.themeExtensions.lightSilver),
                                       ),
+                                      SizedBox(width: 5.w), // Add spacing between widgets
                                       Text(
                                         "Ngày kết thúc :",
                                         style: GoogleFonts.openSans(
@@ -377,7 +384,7 @@ class SeminarView extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 20),
             ],
           );
         },
@@ -395,360 +402,4 @@ class SeminarView extends StatelessWidget {
 
 
 
-// class SeminarView extends StatefulWidget {
-//   SeminarView({Key? key}) : super(key: key);
-//
-//   @override
-//   _SeminarViewState createState() => _SeminarViewState();
-// }
-//
-// class _SeminarViewState extends State<SeminarView> {
-//   late SeminarController controller;
-//
-//   //bool _isExpanded = false;
-//
-//   late List<bool> _isExpandedList;
-//
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     controller = Get.find<SeminarController>();
-//
-//     return Scaffold(
-//       backgroundColor: Colors.white,
-//       appBar: AppBar(
-//         title: Text(
-//           LocaleKeys.seminar.tr,
-//           style: GoogleFonts.openSans(
-//             fontWeight: FontWeight.bold,
-//             fontSize: 23,
-//           ),
-//         ),
-//       ),
-//       body: Obx(() => seminarList(controller)),
-//     );
-//   }
-//
-//   Widget seminarList(SeminarController controller) {
-//     var listItem = controller.listSeminar.toList() ?? [];
-//
-//     return ListView.builder(
-//       physics: ScrollPhysics(),
-//       itemCount: listItem.length,
-//       itemBuilder: (context, index) {
-//         var seminar = listItem[index];
-//         return Column(
-//           children: [
-//             Padding(
-//               padding:  EdgeInsets.symmetric(horizontal: 25.w),
-//               child: AnimatedContainer(
-//                 duration: Duration(milliseconds: 300),
-//                 height: _isExpanded ? 450.h : 160.h,
-//                 width: MediaQuery.of(context).size.width,
-//                 decoration: BoxDecoration(
-//                   color:context.themeExtensions.bgGrey,
-//                   borderRadius: BorderRadius.circular(20),
-//                 ),
-//                 child: Column(
-//                   children: [
-//                     Padding(
-//                       padding: EdgeInsets.only(left: 15.w, right: 15.w, top: 10.h, bottom: 3.h),
-//                       child: ClipRRect(
-//                         borderRadius: BorderRadius.circular(10),
-//                         child: Image.asset(
-//                           'assets/Icon/78.jpeg',
-//                           width: MediaQuery.of(context).size.width,
-//                           height: 100.h,
-//                           fit: BoxFit.fill,
-//                         ),
-//                       ),
-//                     ),
-//                     ExpansionTile(
-//                       title: Padding(
-//                         padding:  EdgeInsets.only(left: 2.w),
-//                         child: Text(
-//                           seminar?.tenHoiThao?.toString() ?? '',
-//                           style: GoogleFonts.openSans(
-//                             fontSize: 16.sp,
-//                             fontWeight: FontWeight.w800,
-//                           ),
-//                         ),
-//                       ),
-//                       trailing: Icon(_isExpanded ? Icons.arrow_drop_up : Icons.arrow_drop_down),
-//                       children: [
-//                        Padding(
-//                          padding:  EdgeInsets.only(left: 15.w),
-//                          child: SingleChildScrollView(
-//                            child: Column(
-//                              children: [
-//                                Row(
-//                                  children: [
-//                                    AutoSizeText(
-//                                      LocaleKeys.bull.tr,
-//                                      style: context.themeExtensions.subTexMedium.copyWith(
-//                                          color: context.themeExtensions.lightSilver),
-//                                    ),
-//                                    Text(
-//                                      "Nội dung :",
-//                                      style: GoogleFonts.openSans(
-//                                        fontSize: 12.sp,
-//                                        fontWeight: FontWeight.w500,
-//                                        color: context.themeExtensions.textGrey
-//                                      ),
-//                                    ),
-//                                    SizedBox(width: 10.w),
-//                                    Text(
-//                                      seminar?.noiDung?.toString() ?? '',
-//                                      style: GoogleFonts.openSans(
-//                                        fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.black
-//                                      ),
-//                                    ),
-//                                  ],
-//                                ),
-//                                SizedBox(height: 5.h,),
-//                                Row(
-//                                  children: [
-//                                    AutoSizeText(
-//                                      LocaleKeys.bull.tr,
-//                                      style: context.themeExtensions.subTexMedium.copyWith(
-//                                          color: context.themeExtensions.lightSilver),
-//                                    ),
-//                                    Text(
-//                                      "Số quyết định :",
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.textGrey
-//                                      ),
-//                                    ),
-//                                    SizedBox(width: 10.w),
-//                                    Text(
-//                                      seminar?.soQuyetDinh?.toString() ?? '',
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.black
-//                                      ),
-//                                    ),
-//                                  ],
-//                                ),
-//                                SizedBox(height: 5.h,),
-//                                Row(
-//                                  children: [
-//                                    AutoSizeText(
-//                                      LocaleKeys.bull.tr,
-//                                      style: context.themeExtensions.subTexMedium.copyWith(
-//                                          color: context.themeExtensions.lightSilver),
-//                                    ),
-//                                    Text(
-//                                      "Mục đích :",
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.textGrey
-//                                      ),
-//                                    ),
-//                                    SizedBox(width: 10.w),
-//                                    Text(
-//                                      seminar?.mucDich?.toString() ?? '',
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.black
-//                                      ),
-//                                    ),
-//                                  ],
-//                                ),
-//                                SizedBox(height: 5.h,),
-//                                Row(
-//                                  children: [
-//                                    AutoSizeText(
-//                                      LocaleKeys.bull.tr,
-//                                      style: context.themeExtensions.subTexMedium.copyWith(
-//                                          color: context.themeExtensions.lightSilver),
-//                                    ),
-//                                    Text(
-//                                      "Tên loại hội thảo :",
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.textGrey
-//                                      ),
-//                                    ),
-//                                    SizedBox(width: 10.w),
-//                                    Text(
-//                                      seminar?.tenLoaiHoiThao?.toString() ?? '',
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.black
-//                                      ),
-//                                    ),
-//                                  ],
-//                                ),
-//                                SizedBox(height: 5.h,),
-//                                Row(
-//                                  children: [
-//                                    AutoSizeText(
-//                                      LocaleKeys.bull.tr,
-//                                      style: context.themeExtensions.subTexMedium.copyWith(
-//                                          color: context.themeExtensions.lightSilver),
-//                                    ),
-//                                    Text(
-//                                      "Năm học :",
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.textGrey
-//                                      ),
-//                                    ),
-//                                    SizedBox(width: 10.w),
-//                                    Text(
-//                                      seminar?.namHoc?.toString() ?? '',
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.black
-//                                      ),
-//                                    ),
-//                                  ],
-//                                ),
-//                                SizedBox(height: 5.h,),
-//                                Row(
-//                                  children: [
-//                                    AutoSizeText(
-//                                      LocaleKeys.bull.tr,
-//                                      style: context.themeExtensions.subTexMedium.copyWith(
-//                                          color: context.themeExtensions.lightSilver),
-//                                    ),
-//                                    Text(
-//                                      "Địa điểm tổ chức :",
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.textGrey
-//                                      ),
-//                                    ),
-//                                    SizedBox(width: 10.w),
-//                                    Text(
-//                                      seminar?.diaDiemToChuc?.toString() ?? '',
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.black
-//                                      ),
-//                                    ),
-//                                  ],
-//                                ),
-//                                SizedBox(height: 5.h,),
-//                                Row(
-//                                  children: [
-//                                    AutoSizeText(
-//                                      LocaleKeys.bull.tr,
-//                                      style: context.themeExtensions.subTexMedium.copyWith(
-//                                          color: context.themeExtensions.lightSilver),
-//                                    ),
-//                                    Text(
-//                                      "Ngôn ngữ :",
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.textGrey
-//                                      ),
-//                                    ),
-//                                    SizedBox(width: 10.w),
-//                                    Text(
-//                                      seminar?.ngonNgu?.toString() ?? '',
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.black
-//                                      ),
-//                                    ),
-//                                  ],
-//                                ),
-//                                SizedBox(height: 5.h,),
-//                                Row(
-//                                  children: [
-//                                    AutoSizeText(
-//                                      LocaleKeys.bull.tr,
-//                                      style: context.themeExtensions.subTexMedium.copyWith(
-//                                          color: context.themeExtensions.lightSilver),
-//                                    ),
-//                                    Text(
-//                                      "Ngày tổ chức :",
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.textGrey
-//                                      ),
-//                                    ),
-//                                    SizedBox(width: 10.w),
-//                                    Text(
-//                                      formatTime(seminar?.ngayToChuc?.toString() ?? ''),
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.black
-//                                      ),
-//                                    ),
-//                                  ],
-//                                ),
-//                                SizedBox(height: 5.h,),
-//                                Row(
-//                                  children: [
-//                                    AutoSizeText(
-//                                      LocaleKeys.bull.tr,
-//                                      style: context.themeExtensions.subTexMedium.copyWith(
-//                                          color: context.themeExtensions.lightSilver),
-//                                    ),
-//                                    Text(
-//                                      "Ngày kết thúc :",
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.textGrey
-//                                      ),
-//                                    ),
-//                                    SizedBox(width: 10.w),
-//                                    Text(
-//                                      formatTime(seminar?.ngayKetThuc?.toString() ?? ''),
-//                                      style: GoogleFonts.openSans(
-//                                          fontSize: 12.sp,
-//                                          fontWeight: FontWeight.w500,
-//                                          color: context.themeExtensions.black
-//                                      ),
-//                                    ),
-//                                  ],
-//                                ),
-//                              ],
-//                            ),
-//                          ),
-//                        )
-//
-//
-//                       ],
-//                       onExpansionChanged: (bool expanded) {
-//                         setState(() {
-//                           _isExpanded = expanded;
-//                         });
-//                       },
-//                     ),
-//                   ],
-//                 ),
-//               ),
-//             ),
-//             SizedBox(height: 20,),
-//           ],
-//         );
-//       },
-//     );
-//   }
-//
-//   String formatTime(String dateTimeString) {
-//     List<String> parts = dateTimeString.split('T');
-//     return parts[0];
-//   }
-// }
+

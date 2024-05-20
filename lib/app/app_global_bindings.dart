@@ -34,6 +34,7 @@ import 'package:local_auth/local_auth.dart';
 
 import '../data/repositories/activity_repository.dart';
 import '../data/repositories/impl/activity_repository_impl.dart';
+import 'modules/login/services/session_service.dart';
 
 class AppGlobalBindings extends Bindings {
   @override
@@ -51,6 +52,7 @@ class AppGlobalBindings extends Bindings {
     Get.lazyPut<TestScheduleRepository?>(() => TestScheduleRepositoryImpl(), fenix: true);
     Get.lazyPut<HomeRepository?>(() => HomeRepositoryImpl(), fenix: true);
     Get.lazyPut<LoginController>(() => LoginController(), fenix: true);
+    Get.lazyPut(()=>SessionService());
     Get.lazyPut<ActivityRepository?>(() => ActivityRepositoryImpl(), fenix: true);
     Get.lazyPut<FinanceRepository?>(() => FinanceRepositoryImpl(), fenix: true);
     Get.lazyPut<PracticePointRepository?>(() => PracticePointRepositoryImpl(), fenix: true);
