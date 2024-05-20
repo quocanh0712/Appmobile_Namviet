@@ -359,13 +359,30 @@ class PersonalController extends BaseController {
     super.onClose();
   }
 
-  toggleBimometricLogin(bool enable) async {
-    Fimber.d("toggleBimometricLogin($enable)");
-    await userRepo.toggleBiometricLogin(enable);
-    biometricLoginIsEnable.value = enable;
+  // toggleBimometricLogin(bool enable) async {
+  //   Fimber.d("toggleBimometricLogin($enable)");
+  //   await userRepo.toggleBiometricLogin(enable);
+  //   biometricLoginIsEnable.value = enable;
+  //   SharedPreferences prefs = await SharedPreferences.getInstance();
+  //   await prefs.setBool('biometricLoginIsEnable', enable);
+  // }
+
+  toggleBiometricLogin(bool enable) async {
+    Fimber.d("toggleBiometricLogin($enable)");
+
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setBool('biometricLoginIsEnable', enable);
+
+    if (enable) {
+      await userRepo.toggleBiometricLogin(enable);
+      biometricLoginIsEnable.value = enable;
+      await prefs.setBool('biometricLoginIsEnable', enable);
+    } else {
+      await userRepo.toggleBiometricLogin(enable);
+      biometricLoginIsEnable.value = enable;
+      await prefs.remove('biometricLoginIsEnable');
+    }
   }
+
 
   navigateToProfile() {
     Fimber.d("navigateToProfile()");

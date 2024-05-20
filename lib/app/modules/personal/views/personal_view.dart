@@ -7,6 +7,7 @@ import 'package:dotted_line/dotted_line.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ftu_lms/app/modules/base/base.dart';
 import 'package:ftu_lms/app/modules/base/binding_creator.dart';
 import 'package:ftu_lms/app/modules/personal/bindings/personal_binding.dart';
@@ -761,70 +762,64 @@ class PersonalView
               width: 70,
               child: Obx(() => controller.biometricAuthIsNotSupported.value
                   ? FlutterSwitch(
-                width: 55,
-                height: 30,
-                padding: 3,
-                activeColor: context.themeExtensions.mainGreen,
-                inactiveColor: context.themeExtensions.textGrey,
-                value: controller.biometricLoginIsEnable.value,
-                onToggle: (value) {
-                  Get.dialog(
-                    AlertDialog(
-                      title: Text('Bạn có muốn dùng FaceID/Vân tay cho những lần đăng nhập tiếp theo ?'),
-                      actions: [
-                        TextButton(
-                          onPressed: () async {
-                            Get.back();
-                            controller.toggleBimometricLogin(value);
-                          },
-                          child: Text('Đồng ý'),
-                        ),
-                        TextButton(
-                          onPressed: () {
-                            Get.back();
-                          },
-                          child: Text('Lúc khác'),
-                        ),
-                      ],
-                    ),
-                  );
-                },
-              )
-                  : SizedBox(
-                height: 50,
-                width: 70,
-                child: Stack(
-                  children: [
-                    FlutterSwitch(
                       width: 55,
                       height: 30,
                       padding: 3,
-                      disabled: true,
-                      activeColor: context.themeExtensions.textGrey,
+                      activeColor: context.themeExtensions.mainGreen,
                       inactiveColor: context.themeExtensions.textGrey,
-                      value: false,
-                      onToggle: (value) =>
-                          controller.toggleBimometricLogin(value),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        EasyLoading.showToast(
-                          LocaleKeys.biometricAuthIsNotSupportedMessage.tr,
-                          duration: ToastDuration.LENGTH_SHORT,
-                          toastPosition: EasyLoadingToastPosition.bottom,
+                      value: controller.biometricLoginIsEnable.value,
+                      onToggle: (value) {
+                        Get.dialog(
+                          value
+                              ? buildDialog(
+                                  value,
+                                  'Sử dụng FaceID/Vân tay',
+                                  'Bạn có muốn sử dụng tính năng đăng nhập bằng FaceID/Vân tay?',
+                                  Colors.green,
+                                  const Color(0xffEC5B5), Colors.green)
+                              :  buildDialog(
+                              value,
+                              'Tắt sử dụng FaceID/Vân tay',
+                              'Bạn có muốn tắt sử dụng tính năng đăng nhập bằng FaceID/Vân tay?',
+                              Colors.red,
+                              Colors.red, Colors.red),
                         );
                       },
-                      child: const SizedBox(
-                        width: double.infinity,
-                        height: double.infinity,
-                      ),
                     )
-                  ],
-                ),
-              )),
+                  : SizedBox(
+                      height: 50,
+                      width: 70,
+                      child: Stack(
+                        children: [
+                          FlutterSwitch(
+                            width: 55,
+                            height: 30,
+                            padding: 3,
+                            disabled: true,
+                            activeColor: context.themeExtensions.textGrey,
+                            inactiveColor: context.themeExtensions.textGrey,
+                            value: false,
+                            onToggle: (value) =>
+                                controller.toggleBiometricLogin(value),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              EasyLoading.showToast(
+                                LocaleKeys
+                                    .biometricAuthIsNotSupportedMessage.tr,
+                                duration: ToastDuration.LENGTH_SHORT,
+                                toastPosition: EasyLoadingToastPosition.bottom,
+                              );
+                            },
+                            child: const SizedBox(
+                              width: double.infinity,
+                              height: double.infinity,
+                            ),
+                          ),
+                        ],
+                      ),
+                    )),
             )
-
-
           ],
         ),
         Padding(
@@ -847,6 +842,90 @@ class PersonalView
         _buildActionMenuItem(
             context, Assets.images.icInfoCircle, LocaleKeys.versionInfo.tr),
       ],
+    );
+  }
+
+  Widget buildDialog(bool value, String title, String describ, Color titleColor,
+      Color buttonOutlineColor, Color buttonColor) {
+    return Dialog(
+      child: Container(
+        padding: EdgeInsets.symmetric(
+          horizontal: 26.w,
+          vertical: 30.h,
+        ),
+        decoration: BoxDecoration(
+          //color: Color(0xff2A303E),
+          color: Colors.transparent,
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Image.asset(
+              'assets/Icon/80.png',
+              width: 72.w,
+            ),
+            SizedBox(
+              height: 24.h,
+            ),
+            Text(
+              title,
+              style: GoogleFonts.montserrat(
+                fontSize: 16.sp,
+                color: titleColor,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(
+              height: 4,
+            ),
+            Text(
+              describ,
+              textAlign: TextAlign.center,
+              style: GoogleFonts.roboto(
+                  fontWeight: FontWeight.w300,
+                  color: Colors.black,
+                  fontSize: 14.sp),
+            ),
+            SizedBox(
+              height: 32.h,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                        padding: EdgeInsets.symmetric(
+                          vertical: 8.h,
+                          horizontal: 32.w,
+                        ),
+                        backgroundColor: buttonColor,
+                        foregroundColor: Colors.white,
+                        side: BorderSide(
+                          color: buttonOutlineColor,
+                        )),
+                    onPressed: () async {
+                      Get.back();
+                      controller.toggleBiometricLogin(value);
+                    },
+                    child: const Text('Đồng ý')),
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      foregroundColor: Colors.black,
+                      padding: EdgeInsets.symmetric(
+                        vertical: 8.h,
+                        horizontal: 32.w,
+                      ),
+                    ),
+                    onPressed: () {
+                      Get.back();
+                    },
+                    child: const Text('Lúc khác'))
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }
