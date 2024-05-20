@@ -323,7 +323,7 @@ class LoginController extends BaseController with WidgetsBindingObserver {
     bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
 
     if (isLoggedIn) {
-      const int sessionDuration = 1 * 60;
+      const int sessionDuration = 3600;
       int duration = remainingSeconds ?? sessionDuration;
       sessionService.startLogoutTimer(duration: duration);
     }
@@ -503,6 +503,8 @@ class LoginController extends BaseController with WidgetsBindingObserver {
         "Thông báo",
         "Vui lòng đăng nhập sau đó thiết lập đăng nhập bằng FaceID/Vân tay để thực hiện",
         snackPosition: SnackPosition.TOP,
+        colorText: Colors.white,
+        backgroundColor: Colors.redAccent.withOpacity(.9)
 
       );
     }

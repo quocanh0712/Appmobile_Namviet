@@ -1004,7 +1004,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         padding: const EdgeInsets.only(left: 20, right: 20),
         child: Obx(() => Container(
               width: double.infinity,
-              height: controller.hasNoTasks.value ? 146 : 170,
+              height: controller.hasNoTasks.value ? 115.h : 110.h,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.all(Radius.circular(10)),
                 boxShadow: [

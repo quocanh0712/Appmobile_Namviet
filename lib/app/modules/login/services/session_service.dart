@@ -16,7 +16,7 @@ class SessionService extends GetxService {
   UserObject? userObject;
   Timer? _logoutTimer;
 
-  void startLogoutTimer({int duration = 7200}) {
+  void startLogoutTimer({int duration = 3600}) {
     _logoutTimer?.cancel();
     _logoutTimer = Timer.periodic(Duration(seconds: 1), (timer) {
       duration -= 1;

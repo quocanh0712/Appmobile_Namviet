@@ -710,52 +710,121 @@ class PersonalView
                     .copyWith(color: context.themeExtensions.black),
               ),
             ),
+            // SizedBox(
+            //   height: 50,
+            //   width: 70,
+            //   child: Obx(() => controller.biometricAuthIsNotSupported.value
+            //       ? FlutterSwitch(
+            //           width: 55,
+            //           height: 30,
+            //           padding: 3,
+            //           activeColor: context.themeExtensions.mainGreen,
+            //           inactiveColor: context.themeExtensions.textGrey,
+            //           value: controller.biometricLoginIsEnable.value,
+            //           onToggle: (value) =>
+            //               controller.toggleBimometricLogin(value))
+            //       : SizedBox(
+            //           height: 50,
+            //           width: 70,
+            //           child: Stack(
+            //             children: [
+            //               FlutterSwitch(
+            //                   width: 55,
+            //                   height: 30,
+            //                   padding: 3,
+            //                   disabled: true,
+            //                   activeColor: context.themeExtensions.textGrey,
+            //                   inactiveColor: context.themeExtensions.textGrey,
+            //                   value: false,
+            //                   onToggle: (value) =>
+            //                       controller.toggleBimometricLogin(value)),
+            //               InkWell(
+            //                 onTap: () {
+            //                   EasyLoading.showToast(
+            //                       LocaleKeys
+            //                           .biometricAuthIsNotSupportedMessage.tr,
+            //                       duration: ToastDuration.LENGTH_SHORT,
+            //                       toastPosition:
+            //                           EasyLoadingToastPosition.bottom);
+            //                 },
+            //                 child: const SizedBox(
+            //                   width: double.infinity,
+            //                   height: double.infinity,
+            //                 ),
+            //               )
+            //             ],
+            //           ),
+            //         )),
+            // )
             SizedBox(
               height: 50,
               width: 70,
               child: Obx(() => controller.biometricAuthIsNotSupported.value
                   ? FlutterSwitch(
+                width: 55,
+                height: 30,
+                padding: 3,
+                activeColor: context.themeExtensions.mainGreen,
+                inactiveColor: context.themeExtensions.textGrey,
+                value: controller.biometricLoginIsEnable.value,
+                onToggle: (value) {
+                  Get.dialog(
+                    AlertDialog(
+                      title: Text('Bạn có muốn dùng FaceID/Vân tay cho những lần đăng nhập tiếp theo ?'),
+                      actions: [
+                        TextButton(
+                          onPressed: () async {
+                            Get.back();
+                            controller.toggleBimometricLogin(value);
+                          },
+                          child: Text('Đồng ý'),
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          child: Text('Lúc khác'),
+                        ),
+                      ],
+                    ),
+                  );
+                },
+              )
+                  : SizedBox(
+                height: 50,
+                width: 70,
+                child: Stack(
+                  children: [
+                    FlutterSwitch(
                       width: 55,
                       height: 30,
                       padding: 3,
-                      activeColor: context.themeExtensions.mainGreen,
+                      disabled: true,
+                      activeColor: context.themeExtensions.textGrey,
                       inactiveColor: context.themeExtensions.textGrey,
-                      value: controller.biometricLoginIsEnable.value,
+                      value: false,
                       onToggle: (value) =>
-                          controller.toggleBimometricLogin(value))
-                  : SizedBox(
-                      height: 50,
-                      width: 70,
-                      child: Stack(
-                        children: [
-                          FlutterSwitch(
-                              width: 55,
-                              height: 30,
-                              padding: 3,
-                              disabled: true,
-                              activeColor: context.themeExtensions.textGrey,
-                              inactiveColor: context.themeExtensions.textGrey,
-                              value: false,
-                              onToggle: (value) =>
-                                  controller.toggleBimometricLogin(value)),
-                          InkWell(
-                            onTap: () {
-                              EasyLoading.showToast(
-                                  LocaleKeys
-                                      .biometricAuthIsNotSupportedMessage.tr,
-                                  duration: ToastDuration.LENGTH_SHORT,
-                                  toastPosition:
-                                      EasyLoadingToastPosition.bottom);
-                            },
-                            child: const SizedBox(
-                              width: double.infinity,
-                              height: double.infinity,
-                            ),
-                          )
-                        ],
+                          controller.toggleBimometricLogin(value),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        EasyLoading.showToast(
+                          LocaleKeys.biometricAuthIsNotSupportedMessage.tr,
+                          duration: ToastDuration.LENGTH_SHORT,
+                          toastPosition: EasyLoadingToastPosition.bottom,
+                        );
+                      },
+                      child: const SizedBox(
+                        width: double.infinity,
+                        height: double.infinity,
                       ),
-                    )),
+                    )
+                  ],
+                ),
+              )),
             )
+
+
           ],
         ),
         Padding(
