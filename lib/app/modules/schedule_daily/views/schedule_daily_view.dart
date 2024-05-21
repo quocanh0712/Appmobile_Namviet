@@ -2,6 +2,7 @@
 
 // coverage:ignore-file
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,11 +24,8 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
 
   final double marginItem = 60;
 
-
-
   @override
   Widget child(BuildContext context) {
-
     RxString selectedDate = RxString('');
     return SingleChildScrollView(
       child: Column(
@@ -40,21 +38,20 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
             width: MediaQuery.of(context).size.width * 0.95,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
-                color: Colors.grey.shade300,
-                // gradient: const LinearGradient(
-                //   begin: Alignment.topLeft,
-                //   end: Alignment.bottomRight,
-                //   colors: [
-                //     Color.fromRGBO(9, 116, 66, 1),
-                //     Color.fromRGBO(98, 179, 69, 1),
-                //   ],
-                // ),
-                boxShadow:  [
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color.fromRGBO(9, 116, 66, 1),
+                    Color.fromRGBO(98, 179, 69, 1),
+                  ],
+                ),
+                boxShadow: [
                   BoxShadow(
                     color: Colors.grey,
                     spreadRadius: 1,
                     blurRadius: 1,
-                    offset: Offset(0, 5), // changes position of shadow
+                    offset: Offset(0, 3), // changes position of shadow
                   ),
                 ]),
             child: Column(
@@ -98,13 +95,13 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
                                     : selectedDate.value,
                                 style: GoogleFonts.notoSansKhojki(
                                     fontSize: 25,
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontWeight: FontWeight.bold),
                               )),
                         ),
                         const Icon(
                           Icons.arrow_drop_down_sharp,
-                          color: Colors.black,
+                          color: Colors.white,
                           size: 45,
                         ),
                       ],
@@ -123,14 +120,14 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
                         'Thời gian',
                         style: GoogleFonts.notoSansKhojki(
                             fontSize: 15,
-                            color: Colors.black,
+                            color: Colors.white,
                             fontWeight: FontWeight.w600),
                       ),
                       Text(
                         'Công việc',
                         style: GoogleFonts.notoSansKhojki(
                             fontSize: 15,
-                            color: Colors.black,
+                            color: Colors.white,
                             fontWeight: FontWeight.w600),
                       )
                     ],
@@ -157,7 +154,7 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
                 Expanded(
                     child: SizedBox(
                   width: double.maxFinite,
-                  child: Obx(() => scheduleDaily( )),
+                  child: Obx(() => scheduleDaily()),
                 ))
               ],
             ),
@@ -168,12 +165,10 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
   }
 
   Widget scheduleDaily() {
-
-
     List<Color> tramColors = [
       // Màu Xanh Đậm
 
-      Colors.indigo,
+      Color(0xFF25D366),
       Colors.teal,
 
       Colors.blueGrey,
@@ -182,7 +177,6 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
 
       // Màu Xám
       Colors.grey[500]!,
-
 
       // Màu Ghi
       Colors.blueGrey[400]!,
@@ -209,90 +203,120 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
     return Column(
       children: [
         ListView.builder(
-          physics: NeverScrollableScrollPhysics(),
+            physics: NeverScrollableScrollPhysics(),
             padding: EdgeInsets.zero,
-          shrinkWrap: true,
+            shrinkWrap: true,
             itemCount: listItem?.length,
-            itemBuilder: (context, index){
-          return ScreenUtilInit(
-            child: Column(
-              children: [
-                Row(
+            itemBuilder: (context, index) {
+              return ScreenUtilInit(
+                child: Column(
                   children: [
-                    Container(
-                      height: 20,
-                      width: 20,
-
-                      decoration: BoxDecoration(
-                        color: tramColors[index],
-                        borderRadius: BorderRadius.circular(20),
-                          boxShadow:  [
-                            BoxShadow(
+                    Row(
+                      children: [
+                        Container(
+                          height: 20,
+                          width: 20,
+                          decoration: BoxDecoration(
                               color: tramColors[index],
-                              spreadRadius: 1,
-                              blurRadius: 6,
-                              offset: Offset(0, 0), // changes position of shadow
-                            ),
-                          ]
-                      ),
+                              borderRadius: BorderRadius.circular(20),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: tramColors[index],
+                                  spreadRadius: 1,
+                                  blurRadius: 6,
+                                  offset: Offset(
+                                      0, 0), // changes position of shadow
+                                ),
+                              ]),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        //${formatTime(listItem[0]?.timestart)} - ${formatTime(listItem[0]?.timeend)}
+                        Text(
+                          "${formatTime(listItem[index]?.timestart)} - ${formatTime(listItem[index]?.timeend)}",
+                          style: GoogleFonts.openSans(
+                              fontSize: 19.sp,
+                              color: Colors.grey.shade600,
+                              fontWeight: FontWeight.w600),
+                        ),
+                      ],
                     ),
-                    SizedBox(width: 20,),
-                    //${formatTime(listItem[0]?.timestart)} - ${formatTime(listItem[0]?.timeend)}
-                    Text("${formatTime(listItem[index]?.timestart)} - ${formatTime(listItem[index]?.timeend)}", style: GoogleFonts.openSans(fontSize: 19.sp, color: Colors.grey.shade600, fontWeight: FontWeight.w600),),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 9),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            height: 80.h,
+                            width: 2,
+                            color: Colors.grey.shade600,
+                          ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Container(
+                            height: 70.h,
+                            width: 300.w,
+                            decoration: BoxDecoration(
+                                color: tramColors[index],
+                                borderRadius: BorderRadius.circular(10),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black38,
+                                    spreadRadius: 1,
+                                    blurRadius: 3,
+                                    offset: Offset(
+                                        2, 2), // changes position of shadow
+                                  ),
+                                ]),
+                            child: Padding(
+                              padding:  EdgeInsets.only(left: 5.w , top: 4.h , bottom: 8.h),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  SizedBox(
+                                    height: 8,
+                                  ),
+                                  Expanded(
+                                      child: Text(
+                                    "${listItem[index]?.coursename}",
+                                    style: GoogleFonts.openSans(
+                                        fontSize: 14.sp,
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold),
+                                  )),
+                                  Container(
+                                    width: 50.w,
+                                    height: 17.h,
+                                    decoration: BoxDecoration(
+                                        color: Colors.black12,
+                                        borderRadius: BorderRadius.circular(5)
+                                    ),
+                                    child: Center(
+                                      child: Text(
+                                        "${listItem[index]?.roomname}",
+                                        style: GoogleFonts.openSans(
+                                            fontSize: 12.sp,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.w600),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    )
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 9),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        height: 200,
-                        width: 2,
-                        color: Colors.grey.shade600,
-                      ),
-                      SizedBox(width: 20,),
-                      Container(
-                        height: 125.h,
-                        width: 300.w,
-                        decoration: BoxDecoration(
-                          color: tramColors[index],
-                          borderRadius: BorderRadius.circular(10),
-                            boxShadow:  [
-                              BoxShadow(
-                                color: Colors.black38,
-                                spreadRadius: 1,
-                                blurRadius: 3,
-                                offset: Offset(2, 2), // changes position of shadow
-                              ),
-                            ]
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 5.0),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(height: 8,),
-                              Text("${listItem[index]?.coursename}", style: GoogleFonts.openSans(fontSize: 16.sp, color: Colors.white, fontWeight: FontWeight.w700), maxLines: 2,),
-                              Text("${listItem[index]?.roomname}", style: GoogleFonts.openSans(fontSize: 14.sp, color: Colors.white, fontWeight: FontWeight.w600),),
-                            ],
-                          ),
-                        ),
-                      )
-
-                    ],
-                  ),
-                )
-              ],
-            ),
-          );
-        }),
+              );
+            }),
       ],
     );
-
   }
-
-
 
   String formatTime(String? timeString) {
     if (timeString == null) return '';
@@ -304,7 +328,6 @@ class ScheduleDailyView extends BaseAppBarView<ScheduleDailyController> {
     }
     return '';
   }
-
 
   Widget timeView() {
     var listTimeWidget = controller.listTimeObs

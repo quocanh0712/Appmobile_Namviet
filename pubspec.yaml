@@ -1,5 +1,5 @@
 name: ftu_lms
-version: 0.0.1+4
+version: 0.0.1+6
 publish_to: none
 description: The Learning Management System.
 environment: 

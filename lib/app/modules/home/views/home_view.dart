@@ -273,7 +273,10 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                       fontSize: 18),
                 ),
                 GestureDetector(
-                  onTap: () {
+                  onTap: () async {
+                    EasyLoading.show(status: 'Đang tải...');
+                    await Future.delayed(Duration(seconds: 1)); // Giả lập thời gian tải
+                    EasyLoading.dismiss();
                     Get.to(
                       () => _navigatorToTeacherMainFeatures(context),
                     );

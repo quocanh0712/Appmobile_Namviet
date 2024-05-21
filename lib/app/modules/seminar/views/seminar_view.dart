@@ -63,14 +63,19 @@ class SeminarView extends StatelessWidget {
                   height: controller.isExpanded(index) ? 450.h : 160.h,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    color: context.themeExtensions.bgGrey,
+                    // color: context.themeExtensions.bgGrey,
+                    //color: Color(0xFFC2D3CB),
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: Color(0xFF25D366),
+                    ),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 2,
-                        blurRadius: 2,
-                        offset: Offset(0, 0), // changes position of shadow
+                        color: Colors.black.withOpacity(0.2),
+                        spreadRadius: 1,
+                        blurRadius: 1,
+                        offset: Offset(1, 1), // changes position of shadow
                       ),
                     ],
                   ),
