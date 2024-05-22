@@ -67,17 +67,17 @@ class SeminarView extends StatelessWidget {
                     //color: Color(0xFFC2D3CB),
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(20),
-                    border: Border.all(
-                      color: Color(0xFF25D366),
-                    ),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.2),
-                        spreadRadius: 1,
-                        blurRadius: 1,
-                        offset: Offset(1, 1), // changes position of shadow
-                      ),
-                    ],
+                    // border: Border.all(
+                    //   color: Color(0xFF25D366),
+                    // ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: context.themeExtensions.textLightGrey.withOpacity(0.5),
+                          spreadRadius: 1,
+                          blurRadius: 2,
+                          offset: const Offset(0, 0), // changes position of shadow
+                        ),
+                      ]
                   ),
                   child: Column(
                     children: [

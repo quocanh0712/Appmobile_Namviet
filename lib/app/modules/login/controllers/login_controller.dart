@@ -474,6 +474,7 @@ class LoginController extends BaseController with WidgetsBindingObserver {
       isLoading.value = false;
       isError.value = error.localizedErrorMessage;
       Fimber.e(error.toString());
+
     });
   }
 

@@ -349,7 +349,8 @@ class LoginView extends BaseView<LoginController> {
                                 const SizedBox(height: 16),
                                 Obx(() => loginController
                                         .isError.value.isNotBlank
-                                    ? Column(
+                                    ?
+                                Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.start,
                                         crossAxisAlignment:
