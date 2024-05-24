@@ -41,16 +41,6 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9705A1C41CF9048500538489 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +68,11 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5F78C1F2BFDF96B003235E6 /* ICSmartVoiceUI.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ICSmartVoiceUI.xcframework; path = ../../../../Users/quocanhtruong/Downloads/ICSmartVoiceUIFull_26032024_xcode13_4_version1.1.5_xcFramework/SDKs/ICSmartVoiceUI.xcframework; sourceTree = "<group>"; };
+		A5F78C222BFDF971003235E6 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = ../../../../Users/quocanhtruong/Downloads/ICSmartVoiceUIFull_26032024_xcode13_4_version1.1.5_xcFramework/SDKs/Kingfisher.framework; sourceTree = "<group>"; };
+		A5F78C252BFDF976003235E6 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = ../../../../Users/quocanhtruong/Downloads/ICSmartVoiceUIFull_26032024_xcode13_4_version1.1.5_xcFramework/SDKs/MBProgressHUD.framework; sourceTree = "<group>"; };
+		A5F78C282BFDF978003235E6 /* STPopup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = STPopup.framework; path = ../../../../Users/quocanhtruong/Downloads/ICSmartVoiceUIFull_26032024_xcode13_4_version1.1.5_xcFramework/SDKs/STPopup.framework; sourceTree = "<group>"; };
+		A5F78C2B2BFDF97B003235E6 /* TensorFlowLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TensorFlowLite.framework; path = ../../../../Users/quocanhtruong/Downloads/ICSmartVoiceUIFull_26032024_xcode13_4_version1.1.5_xcFramework/SDKs/TensorFlowLite.framework; sourceTree = "<group>"; };
 		B76EB24BDD2C7EEB34CF7BE0 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
 		D55EAC6468F77C6CE45E105D /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		E4F2428B28A44310A35636E3 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +115,11 @@
 		49B6A35F9FE4391E5C760939 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A5F78C2B2BFDF97B003235E6 /* TensorFlowLite.framework */,
+				A5F78C282BFDF978003235E6 /* STPopup.framework */,
+				A5F78C252BFDF976003235E6 /* MBProgressHUD.framework */,
+				A5F78C222BFDF971003235E6 /* Kingfisher.framework */,
+				A5F78C1F2BFDF96B003235E6 /* ICSmartVoiceUI.xcframework */,
 				1427FA4B179C1E64C3992507 /* Pods_Runner.framework */,
 				F9F870C12308672BF31DCA06 /* Pods_OneSignalNotificationServiceExtension.framework */,
 			);
@@ -230,7 +230,6 @@
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				1A4A8D652953FDA400851820 /* Embed Foundation Extensions */,
-				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				1A16058129693184008D7344 /* Copy Google Service Plist */,

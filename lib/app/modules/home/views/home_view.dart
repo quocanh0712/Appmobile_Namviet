@@ -64,7 +64,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           body: Stack(
             children: [
               Assets.images.universityBuilding.image(
-                  width: double.infinity, fit: BoxFit.cover, height: 380),
+                  width: double.infinity, fit: BoxFit.cover, height: 300.h),
               Container(
                 width: double.infinity,
                 height: 445,
