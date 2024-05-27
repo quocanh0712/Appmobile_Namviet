@@ -28,7 +28,7 @@ import '../../attendance_stu/model/attendance_stu_request.dart';
 import '../../attendance_stu/model/year_time_response.dart';
 import '../../attendance_stu/repository/attendance_stu_repository.dart';
 
-class HomeController extends BaseController {
+class HomeController extends BaseController with SingleGetTickerProviderMixin {
   final ScrollController scrollController = ScrollController();
   PanelController? panelController = PanelController();
   RxString avatarUrl = ''.obs;
@@ -57,7 +57,6 @@ class HomeController extends BaseController {
 
 
 
-
   int? idDonVi = 0;
   Rx<String> title = "NAM VIỆT JSC".obs;
   Rx<String> imagePath = Assets.images.icBookPng.path.obs;
@@ -69,9 +68,18 @@ class HomeController extends BaseController {
   //Rx<String> username = "admin".obs;
   //Rx<String> name = "Quản trị hệ thống".obs;
 
+  late AnimationController animationController;
+  late Animation<double> animation;
+
   @override
   void onInit() async {
     super.onInit();
+
+    animationController = AnimationController(
+      duration: const Duration(seconds: 2),
+      vsync: this,
+    )..repeat();
+
 
     userObject.value = await userRepo.retrieveUserInfo();
     idDonVi = userObject.value?.idDonVi;
@@ -101,6 +109,8 @@ class HomeController extends BaseController {
         imagePath.value = Assets.images.icBookPng.path;
         break;
     }
+
+
 
 
   }
@@ -214,6 +224,7 @@ class HomeController extends BaseController {
   @override
   void onClose() {
     scrollController.dispose();
+    animationController.dispose();
     panelController = null;
     bannerController = null;
     super.onClose();
@@ -630,6 +641,11 @@ class HomeController extends BaseController {
   navigateToNotification() {
     Fimber.d("navigateToNotification()");
     Get.toNamed(Routes.NOTIFICATION);
+  }
+
+  navigateToChatBotWebView() {
+    Fimber.d("navigateToChatBotWebView()");
+    Get.toNamed(Routes.CHATBOT_WEBVIEW);
   }
 
   navigateToDocumentManagement() {

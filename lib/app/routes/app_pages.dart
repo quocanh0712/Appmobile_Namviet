@@ -1,3 +1,4 @@
+import 'package:ftu_lms/app/modules/Chatbot/views/chatbot_webview.dart';
 import 'package:ftu_lms/app/modules/LMS/bindings/lms_binding.dart';
 import 'package:ftu_lms/app/modules/LMS/views/lms_view.dart';
 import 'package:ftu_lms/app/modules/TeachingHour/views/teaching_hour_view.dart';
@@ -750,6 +751,10 @@ class AppPages {
     GetPage(
       name: _Paths.MAP_WEBVIEW,
       page: () => const MapWebView(),
+    ),
+    GetPage(
+      name: _Paths.CHATBOT_WEBVIEW,
+      page: () => const ChatBotWebView(),
     ),
     GetPage(
       name: _Paths.TRAINING,

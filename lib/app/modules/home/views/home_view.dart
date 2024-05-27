@@ -24,6 +24,7 @@ import 'package:ftu_lms/utils/constants.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:jiffy/jiffy.dart';
+import 'package:lottie/lottie.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sliding_up_panel2/sliding_up_panel2.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -51,6 +52,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
 
   @override
   Widget? onCreateViews(BuildContext context) {
+    final HomeController controller = Get.find<HomeController>();
     return ScreenUtilInit(
       child: SlidingUpPanel(
         maxHeight: Get.height - 150,
@@ -130,32 +132,90 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                                 ),
                               ],
                             ),
-                            GestureDetector(
-                                onTap: () {
-                                  controller.navigateToNotification();
-                                  // pageController?.animateToPage(
-                                  //     notificationTabIndex,
-                                  //     duration: const Duration(milliseconds: 300),
-                                  //     curve: Curves.easeInOut);
-                                },
-                                child: Container(
-                                    margin: const EdgeInsets.only(right: 10),
-                                    child: dashboardController
-                                            .notiCount.value.isEmpty
-                                        ? const Icon(
-                                            Icons.notifications,
-                                            color: Colors.white,
-                                            size: 30,
-                                          )
-                                        : Badge(
-                                            label: Text(dashboardController
-                                                .notiCount.value),
-                                            child: const Icon(
-                                              Icons.notifications,
-                                              color: Colors.white,
-                                              size: 30,
-                                            ),
-                                          ))),
+                            Row(
+                              children: [
+                                // GestureDetector(
+                                //   onTap: () {
+                                //     controller.navigateToChatBotWebView();
+                                //   },
+                                //   child: Stack(
+                                //     alignment: Alignment.center,
+                                //     children: [
+                                //       AnimatedBuilder(
+                                //         animation:
+                                //             controller.animationController,
+                                //         builder: (context, child) {
+                                //           return Container(
+                                //             width: 25 +
+                                //                 (controller.animationController
+                                //                         .value *
+                                //                     25),
+                                //             height: 25 +
+                                //                 (controller.animationController
+                                //                         .value *
+                                //                     25),
+                                //             decoration: BoxDecoration(
+                                //               shape: BoxShape.circle,
+                                //               color: Colors.red.withOpacity(1 -
+                                //                   controller.animationController
+                                //                       .value),
+                                //             ),
+                                //           );
+                                //         },
+                                //       ),
+                                //       Container(
+                                //         height: 25.h,
+                                //         width: 25.h,
+                                //         child: Image.asset(
+                                //           'assets/Icon/81.png',
+                                //           fit: BoxFit.cover,
+                                //         ),
+                                //       ),
+                                //     ],
+                                //   ),
+                                // ),
+                                GestureDetector(
+                                    onTap: () {
+                                      controller.navigateToChatBotWebView();
+                                    },
+                                  child: Container(
+                                      margin:
+                                       EdgeInsets.only(right: 10.w),
+                                    width: 39.w,
+                                    height: 39.h,
+
+                                    child : Lottie.asset("assets/animation/chatbot.json", repeat: true, reverse: true)
+                                  ),
+                                ),
+                                GestureDetector(
+                                    onTap: () {
+                                      controller.navigateToNotification();
+                                      // pageController?.animateToPage(
+                                      //     notificationTabIndex,
+                                      //     duration: const Duration(milliseconds: 300),
+                                      //     curve: Curves.easeInOut);
+                                    },
+                                    child: Container(
+                                        margin:
+                                            const EdgeInsets.only(right: 10),
+                                        child: dashboardController
+                                                .notiCount.value.isEmpty
+                                            ? const Icon(
+                                                Icons.notifications,
+                                                color: Colors.white,
+                                                size: 30,
+                                              )
+                                            : Badge(
+                                                label: Text(dashboardController
+                                                    .notiCount.value),
+                                                child: const Icon(
+                                                  Icons.notifications,
+                                                  color: Colors.white,
+                                                  size: 30,
+                                                ),
+                                              ))),
+                              ],
+                            ),
                           ],
                         ),
                       ),
@@ -275,7 +335,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                 GestureDetector(
                   onTap: () async {
                     EasyLoading.show(status: 'Đang tải...');
-                    await Future.delayed(Duration(seconds: 1)); // Giả lập thời gian tải
+                    await Future.delayed(
+                        Duration(seconds: 1)); // Giả lập thời gian tải
                     EasyLoading.dismiss();
                     Get.to(
                       () => _navigatorToTeacherMainFeatures(context),
@@ -1024,7 +1085,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                   ? _buildNoTasksOverview(context)
                   : _buildTodayTasks(context),
               //controller.hasNoTasks.value
-           // _buildNoTasksOverview(context)
+              // _buildNoTasksOverview(context)
             )),
       ),
     );
@@ -1239,8 +1300,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       // LMS
       _buildListFeatureItem(
         context,
-         onTap: () => controller.navigateToELearning(),
-       // onTap: () => _showNotificationDialog(context),
+        onTap: () => controller.navigateToELearning(),
+        // onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -1545,7 +1606,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         ),
         title: LocaleKeys.tasksCalendar.tr,
         onTap: () => controller.navigateToScheduleTime(),
-       // onTap: () => _showNotificationDialog(context),
+        // onTap: () => _showNotificationDialog(context),
       ),
       //10 Lich lam viec
       // _buildListFeatureItem(
@@ -2430,25 +2491,25 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     ];
 
     List<Widget> sciencePartner = [
-    // hoi thao
-    _buildListFeatureItem(
-    context,
-      onTap: () => controller.navigateToSeminar(),
-    background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
-    // icon: Icon(
-    //   Icons.science_outlined,
-    //   //color: const Color(0xFF4da543).withOpacity(0.75),
-    //   color: Colors.white,
-    //   size: 30,
-    // ),
-    image: const Image(
-    image: AssetImage(
-    'assets/Icon/77.png',
-    ),
-    fit: BoxFit.cover,
-    ),
-    title: LocaleKeys.seminar.tr,
-    ),
+      // hoi thao
+      _buildListFeatureItem(
+        context,
+        onTap: () => controller.navigateToSeminar(),
+        background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
+        // icon: Icon(
+        //   Icons.science_outlined,
+        //   //color: const Color(0xFF4da543).withOpacity(0.75),
+        //   color: Colors.white,
+        //   size: 30,
+        // ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/77.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.seminar.tr,
+      ),
       // // De tai thanh vien
       // _buildListFeatureItem(
       //   context,
@@ -2787,7 +2848,6 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       ),
     ];
 
-
     //menu chinh GV
     List<Widget> mainFeatureItemList = [
       //11 Nghien cuu khoa hoc
@@ -2833,7 +2893,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       _buildListFeatureItem(
         context,
         onTap: () => controller.navigateToAttendanceStu(),
-       // onTap: () => _showNotificationDialog(context),
+        // onTap: () => _showNotificationDialog(context),
         background: Assets.images.homeBotLeftButBg.image(fit: BoxFit.cover),
         // icon: Icon(
         //   Icons.send_to_mobile,
@@ -3389,7 +3449,6 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
 
   Widget _buildStudentMainFeatures(BuildContext context,
       {bool? isShowAll = false}) {
-
     //menu sv
     List<Widget> mainFeatureStudentItemList = [
       _buildListFeatureItem(
@@ -3727,7 +3786,6 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         onTap: () => controller.navigateToTestingPlaning(),
         //  onTap: () => _showNotificationDialog(context),
       ),
-
     ];
 //student1
     List<Widget> administrative = [
@@ -3871,8 +3929,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.testingPlan.tr,
-         onTap: () => controller.navigateToTestingPlaning(),
-      //  onTap: () => _showNotificationDialog(context),
+        onTap: () => controller.navigateToTestingPlaning(),
+        //  onTap: () => _showNotificationDialog(context),
       ),
       //lich hoc
       _buildListFeatureItem(
@@ -3893,7 +3951,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.otherScheduleTimeTitle.tr,
-         onTap: () => controller.navigateToScheduleTime(),
+        onTap: () => controller.navigateToScheduleTime(),
         //onTap: () => _showNotificationDialog(context),
       ),
       //ketquahoctap1
@@ -3909,8 +3967,6 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
         title: LocaleKeys.learningResults.tr,
         onTap: () => controller.navigateToLearningResults(),
       ),
-
-
     ];
     List<Widget> studentProfile = [
       //loptinchi1
@@ -4092,9 +4148,10 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     ];
 
     List<Widget> blankSpaceSv = [
-    Container(
-      height: 10,
-    ),];
+      Container(
+        height: 10,
+      ),
+    ];
 
     final Map<String, List<Widget>> mapOfStudentWidgets = {
       'Hành chính - Tổng hợp': administrative,
@@ -4184,11 +4241,12 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
                         itemBuilder: (context, pageIndex) {
                           int startIndex = pageIndex * 8;
                           int endIndex = (pageIndex + 1) * 8;
-                          endIndex = endIndex < mainFeatureStudentItemList.length
-                              ? endIndex
-                              : mainFeatureStudentItemList.length;
-                          List<Widget> items =
-                          mainFeatureStudentItemList.sublist(startIndex, endIndex);
+                          endIndex =
+                              endIndex < mainFeatureStudentItemList.length
+                                  ? endIndex
+                                  : mainFeatureStudentItemList.length;
+                          List<Widget> items = mainFeatureStudentItemList
+                              .sublist(startIndex, endIndex);
                           return Container(
                             margin: const EdgeInsets.only(
                               top: 0,

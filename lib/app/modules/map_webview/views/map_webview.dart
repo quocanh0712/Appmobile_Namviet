@@ -18,24 +18,34 @@ class _MapWebViewState extends State<MapWebView> {
   //   ..setJavaScriptMode(JavaScriptMode.disabled)
   //   ..loadRequest(Uri.parse('https://viettech.itch.io/map3d'));
   late  InAppWebViewController webController;
-
+  //https://viettech.itch.io/map3d
 
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: Text('Bản đồ trường học' , style: GoogleFonts.openSans(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 22)),
+        title: Text(
+          'Bản đồ trường học',
+          style: GoogleFonts.openSans(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontSize: 22,
+          ),
+        ),
       ),
       body: InAppWebView(
         initialUrlRequest: URLRequest(
-          url: WebUri('https://viettech.itch.io/map3d'),
-
+          url: WebUri('https://api.ufl.essoft.vn/chatbot/'),
         ),
-        onWebViewCreated: (InAppWebViewController webviewController){
+        onWebViewCreated: (InAppWebViewController webviewController) {
           webController = webviewController;
         },
-
-      )
+        onLoadStop: (controller, url) async {
+          await controller.evaluateJavascript(source: """
+            window.scrollTo(0, document.body.scrollHeight);
+          """);
+        },
+      ),
     );
   }
 }
