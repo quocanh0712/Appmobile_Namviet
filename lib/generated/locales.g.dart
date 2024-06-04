@@ -467,6 +467,10 @@ class LocaleKeys {
   static const seminar = 'seminar';
   static const listLesson = 'listLesson';
   static const listStuAttendance = 'listStuAttendance';
+  static const documentSearching = 'documentSearching';
+  static const progressReport = 'progressReport';
+  static const emailInternal = 'emailInternal';
+  static const approvalDocument = 'approvalDocument';
 
 
 
@@ -474,6 +478,10 @@ class LocaleKeys {
 
 class Locales {
   static const vn_VI = {
+    'emailInternal' : 'Email nội bộ',
+    'approvalDocument' : 'Bút phê',
+    'progressReport' : 'Báo cáo tiến độ',
+    'documentSearching' : 'Tra cứu văn bản',
     'listStuAttendance' : 'Kết quả điểm danh',
     'listLesson' : 'Danh sách buổi học',
     'seminar' : 'Hội thảo',
@@ -928,6 +936,10 @@ class Locales {
     'incomingName': 'Họ tên',
   };
   static const en_US = {
+    'emailInternal' : 'Email nội bộ',
+    'approvalDocument' : 'Bút phê',
+    'progressReport' : 'Báo cáo tiến độ',
+    'documentSearching' : 'Tra cứu văn bản',
     'listStuAttendance' : 'Kết quả điểm danh',
     'listLesson' : 'Danh sách buổi học',
     'seminar' : 'Hội thảo',

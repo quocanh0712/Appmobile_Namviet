@@ -30,6 +30,10 @@ import 'package:ftu_lms/app/modules/credit_approval/views/credit_approval_view.d
 import 'package:ftu_lms/app/modules/credit_class/bindings/credit_class_binding.dart';
 import 'package:ftu_lms/app/modules/credit_class/views/credit_class_view.dart';
 import 'package:ftu_lms/app/modules/debt_list/bindings/debt_list_binding.dart';
+import 'package:ftu_lms/app/modules/document_searching/bindings/document_searching_binding.dart';
+import 'package:ftu_lms/app/modules/document_searching/views/document_pdf/bindings/document_pdf_binding.dart';
+import 'package:ftu_lms/app/modules/document_searching/views/document_pdf/views/document_pdf_view.dart';
+import 'package:ftu_lms/app/modules/document_searching/views/document_searching_view.dart';
 import 'package:ftu_lms/app/modules/domestic_news/bindings/domestic_news_binding.dart';
 import 'package:ftu_lms/app/modules/domestic_news/views/domestic_news_view.dart';
 import 'package:ftu_lms/app/modules/evaluate_training_point/bindings/evaluate_training_binding.dart';
@@ -140,6 +144,8 @@ import '../modules/detail_conversation/bindings/detail_conversation_binding.dart
 import '../modules/detail_conversation/views/detail_conversation_view.dart';
 import '../modules/discuss_feedback/bindings/discuss_feedback_binding.dart';
 import '../modules/discuss_feedback/views/discuss_feedback_view.dart';
+import '../modules/document_email/bindings/document_email_binding.dart';
+import '../modules/document_email/views/document_email_view.dart';
 import '../modules/document_form/bindings/document_form_binding.dart';
 import '../modules/document_form/views/document_form_view.dart';
 import '../modules/document_form_item/bindings/document_form_item_binding.dart';
@@ -757,6 +763,12 @@ class AppPages {
       page: () => const ChatBotWebView(),
     ),
     GetPage(
+      name: _Paths.DOCUMENT_PDF,
+      page: () => const DocumentPdfView(),
+      binding: DocumentPdfBinding(),
+    ),
+
+    GetPage(
       name: _Paths.TRAINING,
       page: () => const TrainingView(),
       binding: TrainingBinding(),
@@ -1059,7 +1071,17 @@ class AppPages {
       page: () =>  FinanceTeacherView(),
       binding: FinanceTeacherBinding(),
     ),
+    GetPage(
+      name: _Paths.DOCUMENT_SEARCHING,
+      page: () =>  DocumentSearchingView(),
+      binding: DocumentSearchingBinding(),
+    ),
 
+    GetPage(
+      name: _Paths.DOCUMENT_EMAIL,
+      page: () =>  DocumentEmailView(),
+      binding: DocumentEmailBinding(),
+    ),
 
 
 

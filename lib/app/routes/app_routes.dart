@@ -157,7 +157,9 @@ abstract class Routes {
   static const LIST_STUDENT_ATTENDANCE = _Paths.LIST_STUDENT_ATTENDANCE;
   static const FINANCE_TEACHER = _Paths.FINANCE_TEACHER;
   static const CHATBOT_WEBVIEW = _Paths.CHATBOT_WEBVIEW;
-
+  static const DOCUMENT_SEARCHING = _Paths.DOCUMENT_SEARCHING;
+  static const DOCUMENT_EMAIL = _Paths.DOCUMENT_EMAIL;
+  static const DOCUMENT_PDF = _Paths.DOCUMENT_PDF;
 
 
 }
@@ -314,4 +316,7 @@ abstract class _Paths {
   static const LIST_STUDENT_ATTENDANCE = '/list_student_attendance';
   static const FINANCE_TEACHER = '/finance_teacher';
   static const CHATBOT_WEBVIEW = '/chatbot_webview';
+  static const DOCUMENT_SEARCHING = '/document_searching';
+  static const DOCUMENT_EMAIL = '/document_email';
+  static const DOCUMENT_PDF = '/document_pdf';
 }

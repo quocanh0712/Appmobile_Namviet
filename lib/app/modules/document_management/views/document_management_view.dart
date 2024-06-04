@@ -1,9 +1,12 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ftu_lms/app/modules/document_management/bindings/document_management_binding.dart';
 import 'package:ftu_lms/styles/theme_extensions.dart';
 import 'package:ftu_lms/widgets/form_field/form_field_widget.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 import 'package:status_bar_control/status_bar_control.dart';
 import '../../../../generated/assets.gen.dart';
 import '../../../../generated/colors.gen.dart';
@@ -22,118 +25,128 @@ class DocumentManagementView extends BaseBindingCreatorView<
 
   @override
   Widget? onCreateViews(BuildContext context) {
+
+    List<Widget> documentItem = [
+      _buildDocumentItem(
+        context,
+        onTap: () => controller.navigateToDocumentSearching(),
+        image :  Lottie.asset("assets/animation/document2.json", repeat: true ),
+        title: LocaleKeys.documentSearching.tr,
+      ),
+      _buildDocumentItem(
+        context,
+        onTap: () {},
+        image :  Lottie.asset("assets/animation/iaNIAyGZ2F.json", repeat: true ),
+        title: LocaleKeys.progressReport.tr,
+      ),
+      _buildDocumentItem(
+        context,
+        onTap: () => controller.navigateToDocumentEmail(),
+        image :  Lottie.asset("assets/animation/emaillottie.json", repeat: true ),
+        title: LocaleKeys.emailInternal.tr,
+      ),
+      _buildDocumentItem(
+        context,
+        onTap: () {},
+        image :  Lottie.asset("assets/animation/iKruOKM8iQ.json", repeat: true ),
+        title: LocaleKeys.approvalDocument.tr,
+      ),
+    ];
     return Scaffold(
+      backgroundColor: Colors.white24,
       appBar: AppBar(
+
           backgroundColor: LMSColors.white,
           elevation: 0,
           leading: IconButton(
             icon: const Icon(
               Icons.arrow_back_ios,
-              color: LMSColors.cyan,
+              color: LMSColors.black,
             ),
             onPressed: () {
               Get.back();
               StatusBarControl.setStyle(StatusBarStyle.LIGHT_CONTENT);
             },
           ),
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                LocaleKeys.documentManagement.tr,
-                style: const TextStyle(color: Colors.black),
-              ),
-              // InkWell(
-              //     onTap: () {
-              //       Get.back();
-              //     },
-              //     child: Text(
-              //       LocaleKeys.post.tr,
-              //       style: const TextStyle(color: LMSColors.cyan, fontSize: 17),
-              //     ))
-            ],
+          title: Text(
+            LocaleKeys.documentManagement.tr,
+            style:  GoogleFonts.roboto(color: Colors.black , fontWeight: FontWeight.bold),
           )),
-      body: Column(
+      body: Padding(
+        padding:  EdgeInsets.symmetric(vertical: 10.h, horizontal: 40.w),
+        child: GridView.count(
+          shrinkWrap: true,
+          crossAxisCount: 2,
+          crossAxisSpacing: 40.0,
+          mainAxisSpacing: 35.w,
+          childAspectRatio: 1.2,
+          children: documentItem,
+        ),
+      ),
+    );
+  }
+
+
+
+  Widget _buildDocumentItem(
+      BuildContext context, {
+        Widget? background,
+        Widget? image,
+        String? title,
+        GestureTapCallback? onTap,
+      }) {
+    return InkWell(
+      onTap: onTap,
+      child: Stack(
         children: [
-          InkWell(
-            onTap: () {
-              StatusBarControl.setStyle(StatusBarStyle.DARK_CONTENT);
-              Get.to(
-                () => _buildShowTrackedDocument(context,
-                    isIncomingDocument: false),
-              );
-            },
-            child: Container(
-              height: 60,
-              // color: Colors.orange,
-              margin: const EdgeInsets.fromLTRB(10, 20, 10, 0),
-              decoration: BoxDecoration(
-                color: context.themeExtensions.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Row(
+          Container(
+            height: 100.h,
+            width: 130.w,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: context.themeExtensions.black.withOpacity(0.3),
+                    spreadRadius: 1,
+                    blurRadius: 2,
+                    offset: const Offset(0, 2), // changes position of shadow
+                  ),
+                ]
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 15.0),
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    margin: const EdgeInsets.only(left: 20, right: 10),
-                    width: 45,
-                    height: 45,
-                    padding: const EdgeInsets.all(10),
-                    decoration: const BoxDecoration(
-                        color: Colors.white, shape: BoxShape.circle),
-                    child: Assets.images.iconsDocument32.image(
-                        fit: BoxFit.cover,
-                        // filterQuality: FilterQuality.none,
-                        color: context.themeExtensions.secondGreen),
+                    width: 50.w,
+                    height: 50.h,
+                    child: image,
                   ),
-                  Text(
-                    LocaleKeys.trackOutgoingDocument.tr,
-                    style: const TextStyle(fontSize: 20),
+                  const SizedBox(height: 10),
+                  Center(
+                    child: SizedBox(
+                      width: 110,
+                      child: Text(
+                        title ?? '',
+                        maxLines: 2,
+                        style: GoogleFonts.openSans(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 11.sp,
+                        ),
+                        textAlign: TextAlign.center,
+
+                        // overflow: TextOverflow.clip,
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
-          ),
-          InkWell(
-            onTap: () {
-              StatusBarControl.setStyle(StatusBarStyle.DARK_CONTENT);
-              Get.to(
-                () => _buildShowTrackedDocument(context,
-                    isIncomingDocument: true),
-              );
-            },
-            child: Container(
-              height: 60,
-              // color: Colors.orange,
-              margin: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-              decoration: BoxDecoration(
-                color: context.themeExtensions.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(left: 20, right: 10),
-                    width: 45,
-                    height: 45,
-                    padding: const EdgeInsets.all(10),
-                    decoration: const BoxDecoration(
-                        color: Colors.white, shape: BoxShape.circle),
-                    child: Assets.images.iconsDocument32.image(
-                        fit: BoxFit.cover,
-                        // filterQuality: FilterQuality.none,
-                        color: context.themeExtensions.secondGreen),
-                  ),
-                  Text(
-                    LocaleKeys.trackIncomingDocument.tr,
-                    style: const TextStyle(fontSize: 20),
-                  ),
-                ],
-              ),
-            ),
-          ),
+          )
         ],
       ),
     );

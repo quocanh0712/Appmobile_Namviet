@@ -50,6 +50,7 @@ import 'package:ftu_lms/data/bean/user_object/user_object.dart';
 import 'package:ftu_lms/utils/extensions/color_extension.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../../../app/modules/document_searching/model/document_searching_response.dart';
 import '../../bean/CheckIn/schedule_checkin_object.dart';
 import '../../bean/activity_response_object/activity_response_object.dart';
 
@@ -234,6 +235,12 @@ extension NetworkResponseConverter on BaseResponseObject {
     if (this is BaseResponseObject<List<AttendanceStuResponse?>?>) {
       return BaseResponseObject<List<AttendanceStuResponse?>?>.fromJson(
           json, jsonToListNullableAttendanceStuResponse);
+    }
+
+
+    if (this is BaseResponseObject<List<DocumentSearchingResponse?>?>) {
+      return BaseResponseObject<List<DocumentSearchingResponse?>?>.fromJson(
+          json, jsonToListNullableDocumentSearchingResponse);
     }
 
     if (this is BaseResponseObject<List<YearTimeResponse?>?>) {

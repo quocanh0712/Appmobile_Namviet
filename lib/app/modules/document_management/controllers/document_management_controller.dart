@@ -1,5 +1,7 @@
+import 'package:fimber/fimber.dart';
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
 import '../../base/base_controller.dart';
 
 class DocumentManagementController extends BaseController {
@@ -22,4 +24,16 @@ class DocumentManagementController extends BaseController {
   }
 
   void increment() => count.value++;
+
+
+  navigateToDocumentSearching() {
+    Fimber.d("navigateToDocumentSearching()");
+    Get.toNamed(Routes.DOCUMENT_SEARCHING);
+  }
+
+  navigateToDocumentEmail() {
+    Fimber.d("navigateToDocumentEmail()");
+    Get.toNamed(Routes.DOCUMENT_EMAIL);
+  }
+
 }

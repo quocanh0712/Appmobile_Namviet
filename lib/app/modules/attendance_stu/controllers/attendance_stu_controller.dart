@@ -107,14 +107,13 @@ class AttendanceStuController extends BaseController<AttendanceStuResponse> {
           isLoading.value = false;
           if (data.isSuccess()) {
             DateTime currentTime = DateTime.now();
-            // Lọc các năm học mà thời gian hiện tại nằm trong khoảng tuNgay - denNgay
             var currentYearTime = data.result?.firstWhere((yearTime) {
               if (yearTime != null && yearTime.tuNgay != null && yearTime.denNgay != null) {
                 DateTime startDate = DateFormat("MM/dd/yyyy HH:mm:ss").parse(yearTime.tuNgay!);
                 DateTime endDate = DateFormat("MM/dd/yyyy HH:mm:ss").parse(yearTime.denNgay!);
                 return currentTime.isAfter(startDate) && currentTime.isBefore(endDate);
               }
-              return false; // Trả về false nếu yearTime hoặc thuộc tính tuNgay-denNgay là null
+              return false;
             }, orElse: () => YearTimeResponse());
             if (currentYearTime != null) {
               // Cập nhật danh sách năm học
