@@ -23,5 +23,14 @@ class DocumentSearchingRepositoryImpl extends DocumentSearchingRepository {
         responseType: const BaseResponseObject<List<DocumentSearchingResponse?>?>());
   }
 
+  @override
+  Future<Result<BaseResponseObject<int?>, NetworkError>> updateStatus(
+      int? id, String? idUser) {
+    return NetworkExecutor.execute<BaseResponseObject<int?>,
+        BaseResponseObject<int?>>(
+        route: DocumentSearchingClient.updateStatus(id, idUser),
+        responseType: const BaseResponseObject<int?>());
+  }
+
 
 }

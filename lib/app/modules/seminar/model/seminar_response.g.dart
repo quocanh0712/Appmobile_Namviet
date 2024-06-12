@@ -12,12 +12,14 @@ SeminarResponse? jsonToNullableSeminarResponse(Object? json) =>
 SeminarResponse jsonToSeminarResponse(Object? json) =>
     SeminarResponse.fromJson(json as Map<String, dynamic>);
 
-List<SeminarResponse?> jsonToListNullableSeminarResponse(Object? json) =>
+List<SeminarResponse?> jsonToListNullableSeminarResponse(
+    Object? json) =>
     List<Object>.from(json as List)
         .map((e) => SeminarResponse.fromJson(e as Map<String, dynamic>))
         .toList();
 
-List<SeminarResponse> jsonToListSeminarResponse(Object? json) =>
+List<SeminarResponse> jsonToListSeminarResponse(
+    Object? json) =>
     List<Object>.from(json as List)
         .map((e) => SeminarResponse.fromJson(e as Map<String, dynamic>))
         .toList();

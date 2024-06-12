@@ -12,5 +12,6 @@ import '../../../../data/remote/wrappers/result.dart';
 abstract class DocumentSearchingRepository {
   Future<Result<BaseResponseObject<List<DocumentSearchingResponse?>?>, NetworkError>> getDocumentList(
       DocumentSearchingRequest? model  );
-
+  Future<Result<BaseResponseObject<int?>, NetworkError>> updateStatus(
+      int? id, String? idUser);
 }

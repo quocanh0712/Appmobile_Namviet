@@ -2,7 +2,6 @@
 
 part of 'certificate_response.dart';
 
-
 // **************************************************************************
 // D3FBaseResponseJsonToTGenerator
 // **************************************************************************
@@ -23,6 +22,7 @@ List<CertificateResponse> jsonToListCertificateResponses(Object? json) =>
     List<Object>.from(json as List)
         .map((e) => CertificateResponse.fromJson(e as Map<String, dynamic>))
         .toList();
+
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************

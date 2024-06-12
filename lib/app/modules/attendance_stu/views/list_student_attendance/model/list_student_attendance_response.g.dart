@@ -9,15 +9,17 @@ part of 'list_student_attendance_response.dart';
 ListStudentAttendanceResponse? jsonToNullableListStudentAttendanceResponse(Object? json) =>
     ListStudentAttendanceResponse.fromJson(json as Map<String, dynamic>);
 
-ListStudentAttendanceResponse jsonToListListStudentAttendanceResponse(Object? json) =>
+ListStudentAttendanceResponse jsonToListStudentAttendanceResponse(Object? json) =>
     ListStudentAttendanceResponse.fromJson(json as Map<String, dynamic>);
 
-List<ListStudentAttendanceResponse?> jsonToListNullableListStudentAttendanceResponse(Object? json) =>
+List<ListStudentAttendanceResponse?> jsonToListNullableListStudentAttendanceResponse(
+    Object? json) =>
     List<Object>.from(json as List)
         .map((e) => ListStudentAttendanceResponse.fromJson(e as Map<String, dynamic>))
         .toList();
 
-List<ListStudentAttendanceResponse> jsonToListStudentAttendanceResponse(Object? json) =>
+List<ListStudentAttendanceResponse> jsonToListListStudentAttendanceResponse(
+    Object? json) =>
     List<Object>.from(json as List)
         .map((e) => ListStudentAttendanceResponse.fromJson(e as Map<String, dynamic>))
         .toList();

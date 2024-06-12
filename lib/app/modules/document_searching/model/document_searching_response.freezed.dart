@@ -29,6 +29,7 @@ mixin _$DocumentSearchingResponse {
   String? get ngayNhanGui => throw _privateConstructorUsedError;
   String? get coQuanBanHanh => throw _privateConstructorUsedError;
   String? get fileUrl => throw _privateConstructorUsedError;
+  int? get trangThaiPhanPhoi => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -50,7 +51,8 @@ abstract class $DocumentSearchingResponseCopyWith<$Res> {
       String? ngayBanHanh,
       String? ngayNhanGui,
       String? coQuanBanHanh,
-      String? fileUrl});
+      String? fileUrl,
+      int? trangThaiPhanPhoi});
 }
 
 /// @nodoc
@@ -75,6 +77,7 @@ class _$DocumentSearchingResponseCopyWithImpl<$Res,
     Object? ngayNhanGui = freezed,
     Object? coQuanBanHanh = freezed,
     Object? fileUrl = freezed,
+    Object? trangThaiPhanPhoi = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -109,6 +112,10 @@ class _$DocumentSearchingResponseCopyWithImpl<$Res,
           ? _value.fileUrl
           : fileUrl // ignore: cast_nullable_to_non_nullable
               as String?,
+      trangThaiPhanPhoi: freezed == trangThaiPhanPhoi
+          ? _value.trangThaiPhanPhoi
+          : trangThaiPhanPhoi // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -130,7 +137,8 @@ abstract class _$$DocumentSearchingResponseImplCopyWith<$Res>
       String? ngayBanHanh,
       String? ngayNhanGui,
       String? coQuanBanHanh,
-      String? fileUrl});
+      String? fileUrl,
+      int? trangThaiPhanPhoi});
 }
 
 /// @nodoc
@@ -154,6 +162,7 @@ class __$$DocumentSearchingResponseImplCopyWithImpl<$Res>
     Object? ngayNhanGui = freezed,
     Object? coQuanBanHanh = freezed,
     Object? fileUrl = freezed,
+    Object? trangThaiPhanPhoi = freezed,
   }) {
     return _then(_$DocumentSearchingResponseImpl(
       id: freezed == id
@@ -188,6 +197,10 @@ class __$$DocumentSearchingResponseImplCopyWithImpl<$Res>
           ? _value.fileUrl
           : fileUrl // ignore: cast_nullable_to_non_nullable
               as String?,
+      trangThaiPhanPhoi: freezed == trangThaiPhanPhoi
+          ? _value.trangThaiPhanPhoi
+          : trangThaiPhanPhoi // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -203,7 +216,8 @@ class _$DocumentSearchingResponseImpl implements _DocumentSearchingResponse {
       this.ngayBanHanh,
       this.ngayNhanGui,
       this.coQuanBanHanh,
-      this.fileUrl});
+      this.fileUrl,
+      this.trangThaiPhanPhoi});
 
   factory _$DocumentSearchingResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$DocumentSearchingResponseImplFromJson(json);
@@ -224,10 +238,12 @@ class _$DocumentSearchingResponseImpl implements _DocumentSearchingResponse {
   final String? coQuanBanHanh;
   @override
   final String? fileUrl;
+  @override
+  final int? trangThaiPhanPhoi;
 
   @override
   String toString() {
-    return 'DocumentSearchingResponse(id: $id, soKyHieu: $soKyHieu, soDiDen: $soDiDen, trichYeu: $trichYeu, ngayBanHanh: $ngayBanHanh, ngayNhanGui: $ngayNhanGui, coQuanBanHanh: $coQuanBanHanh, fileUrl: $fileUrl)';
+    return 'DocumentSearchingResponse(id: $id, soKyHieu: $soKyHieu, soDiDen: $soDiDen, trichYeu: $trichYeu, ngayBanHanh: $ngayBanHanh, ngayNhanGui: $ngayNhanGui, coQuanBanHanh: $coQuanBanHanh, fileUrl: $fileUrl, trangThaiPhanPhoi: $trangThaiPhanPhoi)';
   }
 
   @override
@@ -247,13 +263,15 @@ class _$DocumentSearchingResponseImpl implements _DocumentSearchingResponse {
                 other.ngayNhanGui == ngayNhanGui) &&
             (identical(other.coQuanBanHanh, coQuanBanHanh) ||
                 other.coQuanBanHanh == coQuanBanHanh) &&
-            (identical(other.fileUrl, fileUrl) || other.fileUrl == fileUrl));
+            (identical(other.fileUrl, fileUrl) || other.fileUrl == fileUrl) &&
+            (identical(other.trangThaiPhanPhoi, trangThaiPhanPhoi) ||
+                other.trangThaiPhanPhoi == trangThaiPhanPhoi));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, soKyHieu, soDiDen, trichYeu,
-      ngayBanHanh, ngayNhanGui, coQuanBanHanh, fileUrl);
+      ngayBanHanh, ngayNhanGui, coQuanBanHanh, fileUrl, trangThaiPhanPhoi);
 
   @JsonKey(ignore: true)
   @override
@@ -279,7 +297,8 @@ abstract class _DocumentSearchingResponse implements DocumentSearchingResponse {
       final String? ngayBanHanh,
       final String? ngayNhanGui,
       final String? coQuanBanHanh,
-      final String? fileUrl}) = _$DocumentSearchingResponseImpl;
+      final String? fileUrl,
+      final int? trangThaiPhanPhoi}) = _$DocumentSearchingResponseImpl;
 
   factory _DocumentSearchingResponse.fromJson(Map<String, dynamic> json) =
       _$DocumentSearchingResponseImpl.fromJson;
@@ -300,6 +319,8 @@ abstract class _DocumentSearchingResponse implements DocumentSearchingResponse {
   String? get coQuanBanHanh;
   @override
   String? get fileUrl;
+  @override
+  int? get trangThaiPhanPhoi;
   @override
   @JsonKey(ignore: true)
   _$$DocumentSearchingResponseImplCopyWith<_$DocumentSearchingResponseImpl>

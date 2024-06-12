@@ -2,23 +2,20 @@
 
 part of 'document_searching_response.dart';
 
-
-// **************************************************************************
-// D3FBaseResponseJsonToTGenerator
-// **************************************************************************
-
 DocumentSearchingResponse? jsonToNullableDocumentSearchingResponse(Object? json) =>
     DocumentSearchingResponse.fromJson(json as Map<String, dynamic>);
 
 DocumentSearchingResponse jsonToDocumentSearchingResponse(Object? json) =>
     DocumentSearchingResponse.fromJson(json as Map<String, dynamic>);
 
-List<DocumentSearchingResponse?> jsonToListNullableDocumentSearchingResponse(Object? json) =>
+List<DocumentSearchingResponse?> jsonToListNullableDocumentSearchingResponse(
+    Object? json) =>
     List<Object>.from(json as List)
         .map((e) => DocumentSearchingResponse.fromJson(e as Map<String, dynamic>))
         .toList();
 
-List<DocumentSearchingResponse> jsonToListDocumentSearchingResponse(Object? json) =>
+List<DocumentSearchingResponse> jsonToListDocumentSearchingResponse(
+    Object? json) =>
     List<Object>.from(json as List)
         .map((e) => DocumentSearchingResponse.fromJson(e as Map<String, dynamic>))
         .toList();
@@ -38,6 +35,7 @@ _$DocumentSearchingResponseImpl _$$DocumentSearchingResponseImplFromJson(
       ngayNhanGui: json['ngayNhanGui'] as String?,
       coQuanBanHanh: json['coQuanBanHanh'] as String?,
       fileUrl: json['fileUrl'] as String?,
+      trangThaiPhanPhoi: json['trangThaiPhanPhoi'] as int?,
     );
 
 Map<String, dynamic> _$$DocumentSearchingResponseImplToJson(
@@ -51,4 +49,5 @@ Map<String, dynamic> _$$DocumentSearchingResponseImplToJson(
       'ngayNhanGui': instance.ngayNhanGui,
       'coQuanBanHanh': instance.coQuanBanHanh,
       'fileUrl': instance.fileUrl,
+      'trangThaiPhanPhoi': instance.trangThaiPhanPhoi,
     };

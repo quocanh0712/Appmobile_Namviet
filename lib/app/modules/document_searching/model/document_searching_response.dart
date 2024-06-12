@@ -28,6 +28,7 @@ class DocumentSearchingResponse with _$DocumentSearchingResponse {
     String? ngayNhanGui,
     String? coQuanBanHanh,
     String? fileUrl,
+    int? trangThaiPhanPhoi,
   }) = _DocumentSearchingResponse;
 
   factory DocumentSearchingResponse.fromJson(Map<String, dynamic> json) => _$DocumentSearchingResponseFromJson(json);

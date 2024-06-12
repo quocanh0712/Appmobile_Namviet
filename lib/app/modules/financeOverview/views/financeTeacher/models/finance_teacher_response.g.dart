@@ -6,8 +6,7 @@ part of 'finance_teacher_response.dart';
 // D3FBaseResponseJsonToTGenerator
 // **************************************************************************
 
-FinanceTeacherResponse? jsonToNullableFinanceTeacherResponse(
-    Object? json) =>
+FinanceTeacherResponse? jsonToNullableFinanceTeacherResponse(Object? json) =>
     FinanceTeacherResponse.fromJson(json as Map<String, dynamic>);
 
 FinanceTeacherResponse jsonToFinanceTeacherResponse(Object? json) =>
@@ -16,16 +15,15 @@ FinanceTeacherResponse jsonToFinanceTeacherResponse(Object? json) =>
 List<FinanceTeacherResponse?> jsonToListNullableFinanceTeacherResponse(
     Object? json) =>
     List<Object>.from(json as List)
-        .map((e) =>
-        FinanceTeacherResponse.fromJson(e as Map<String, dynamic>))
+        .map((e) => FinanceTeacherResponse.fromJson(e as Map<String, dynamic>))
         .toList();
 
-List<FinanceTeacherResponse> jsonToListFinanceTeacherResponse(
-    Object? json) =>
+List<FinanceTeacherResponse> jsonToListFinanceTeacherResponse(Object? json) =>
     List<Object>.from(json as List)
-        .map((e) =>
-        FinanceTeacherResponse.fromJson(e as Map<String, dynamic>))
+        .map((e) => FinanceTeacherResponse.fromJson(e as Map<String, dynamic>))
         .toList();
+
+
 
 // **************************************************************************
 // JsonSerializableGenerator

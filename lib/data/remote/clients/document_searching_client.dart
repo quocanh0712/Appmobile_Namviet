@@ -2,6 +2,8 @@
 
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:ftu_lms/app/modules/document_email/views/create_email/models/all_user_request.dart';
+import 'package:ftu_lms/app/modules/document_email/views/create_email/models/create_email_response.dart';
 import 'package:ftu_lms/data/remote/interfaces/base_client_generator.dart';
 import 'package:http_mock_adapter/http_mock_adapter.dart';
 
@@ -16,7 +18,9 @@ class DocumentSearchingClient extends BaseClientGenerator with _$DocumentSearchi
   DocumentSearchingClient._() : super();
 
   factory DocumentSearchingClient.getDocumentList(DocumentSearchingRequest? model) = _DocumentSearchingClient;
-
+  factory DocumentSearchingClient.sendEmail(CreateEmailResponse? model) = _SendEmail;
+  factory DocumentSearchingClient.getAllUser(AllUserRequest? model) = _GetAllRequest;
+  factory DocumentSearchingClient.updateStatus(int? id , String? idUser) = _UpdateStatus;
 
   @override
   String get baseURL => '${super.baseURL}/QuanLyVanBan';
@@ -25,6 +29,10 @@ class DocumentSearchingClient extends BaseClientGenerator with _$DocumentSearchi
   Map<String, dynamic> get body {
     return maybeWhen(
         getDocumentList: (data) => data?.toJson() ?? {},
+        sendEmail: (data) => data?.toJson() ??{},
+        getAllUser: (data) => data?.toJson() ??{},
+        updateStatus: (id, idUser) =>
+        {'id': id, 'idUser': idUser},
         orElse: () => {});
   }
 
@@ -39,6 +47,9 @@ class DocumentSearchingClient extends BaseClientGenerator with _$DocumentSearchi
   String get path {
     return maybeWhen<String>(
       getDocumentList: (data) => '/GetAllVBPPSearch',
+      sendEmail: (data) => '/InsertVBGui',
+      getAllUser: (data) => '/GetAllUser',
+      updateStatus: (id, idUser) => '/UpdateTrangThaiVBPP',
       orElse: () => '',
     );
   }

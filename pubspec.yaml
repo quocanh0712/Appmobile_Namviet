@@ -36,7 +36,7 @@ dependencies:
   flutter_local_notifications: ^11.0.1
   flutter_native_timezone: ^2.0.0
   equatable: ^2.0.5
-  file_picker: ^4.6.1
+  file_picker: ^5.0.1
   theme_tailor_annotation: ^1.0.3
   cached_network_image: ^3.3.1
   carousel_slider: ^4.1.1
@@ -84,6 +84,9 @@ dependencies:
   shared_preferences_helper: ^0.0.3
   melos: ^3.4.0
   week_of_year: ^2.2.0
+  searchfield: ^1.0.5
+  http: ^0.13.6
+  mime: ^1.0.0
 
 
 
@@ -146,8 +149,8 @@ flutter:
     - assets/images/
     - assets/lotties/
     - assets/jsons/
-    - assets/Icon/
-    - assets/animation/
+#    - assets/Icon/
+#    - assets/animation/
 
 
 

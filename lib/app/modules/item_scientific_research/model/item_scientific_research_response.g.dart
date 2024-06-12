@@ -2,6 +2,10 @@
 
 part of 'item_scientific_research_response.dart';
 
+// **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
 ItemScientificResearchResponse? jsonToNullableItemScientificResearchResponse(
     Object? json) =>
     ItemScientificResearchResponse.fromJson(json as Map<String, dynamic>);

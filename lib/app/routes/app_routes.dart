@@ -160,6 +160,7 @@ abstract class Routes {
   static const DOCUMENT_SEARCHING = _Paths.DOCUMENT_SEARCHING;
   static const DOCUMENT_EMAIL = _Paths.DOCUMENT_EMAIL;
   static const DOCUMENT_PDF = _Paths.DOCUMENT_PDF;
+  static const CREATE_EMAIL = _Paths.CREATE_EMAIL;
 
 
 }
@@ -319,4 +320,5 @@ abstract class _Paths {
   static const DOCUMENT_SEARCHING = '/document_searching';
   static const DOCUMENT_EMAIL = '/document_email';
   static const DOCUMENT_PDF = '/document_pdf';
+  static const CREATE_EMAIL = '/create_email';
 }

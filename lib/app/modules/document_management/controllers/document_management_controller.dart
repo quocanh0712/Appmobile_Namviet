@@ -28,7 +28,7 @@ class DocumentManagementController extends BaseController {
 
   navigateToDocumentSearching() {
     Fimber.d("navigateToDocumentSearching()");
-    Get.toNamed(Routes.DOCUMENT_SEARCHING);
+    Get.toNamed(Routes.DOCUMENT_SEARCHING  );
   }
 
   navigateToDocumentEmail() {

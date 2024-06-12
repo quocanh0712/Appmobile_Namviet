@@ -39,8 +39,8 @@ class _DocumentPdfViewState extends State<DocumentPdfView> {
             backgroundColor: Colors.white,
           ),
           body: PDF().cachedFromUrl(
-           // controller.fileUrl,
-            "https://dieuhanhvanban.hnmu.edu.vn/FileUpload/VanBan/2024/6/3/421-CV%C4%90_2024.pdf",
+            controller.fileUrl,
+            //"https://dieuhanhvanban.hnmu.edu.vn/FileUpload/VanBan/2024/6/3/421-CV%C4%90_2024.pdf",
           )
       );
     });

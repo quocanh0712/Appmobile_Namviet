@@ -11,6 +11,8 @@ import 'package:ftu_lms/app/modules/attendance_stu/views/list_lesson/model/list_
 import 'package:ftu_lms/app/modules/attendance_stu/views/list_student_attendance/model/list_student_attendance_response.dart';
 import 'package:ftu_lms/app/modules/detail_conversation/model/comment_conversation.dart';
 import 'package:ftu_lms/app/modules/discuss_feedback/model/conversation_response.dart';
+import 'package:ftu_lms/app/modules/document_email/views/create_email/models/all_user_response.dart';
+import 'package:ftu_lms/app/modules/document_email/views/create_email/models/create_email_response.dart';
 import 'package:ftu_lms/app/modules/document_form/model/document_form_response.dart';
 import 'package:ftu_lms/app/modules/document_form/model/my_request_document_response.dart';
 import 'package:ftu_lms/app/modules/educationProgram/model/education_program_response.dart';
@@ -98,6 +100,10 @@ extension NetworkResponseConverter on BaseResponseObject {
       return BaseResponseObject<CheckInObject>.fromJson(
           json, jsonToCheckInObject);
     }
+    if (this is BaseResponseObject<CreateEmailResponse>) {
+      return BaseResponseObject<CreateEmailResponse>.fromJson(
+          json, jsonToCreateEmailResponse);
+    }
     if (this is BaseResponseObject<CheckInObject?>) {
       return BaseResponseObject<CheckInObject?>.fromJson(
           json, jsonToNullableCheckInObject);
@@ -170,6 +176,10 @@ extension NetworkResponseConverter on BaseResponseObject {
     if (this is BaseResponseObject<List<SurveyItemResponse?>?>) {
       return BaseResponseObject<List<SurveyItemResponse?>?>.fromJson(
           json, jsonToListNullableSurveyItemResponses);
+    }
+    if (this is BaseResponseObject<List<AllUserResponse?>?>) {
+      return BaseResponseObject<List<AllUserResponse?>?>.fromJson(
+          json, jsonToListNullableAllUserResponse);
     }
     if (this is BaseResponseObject<List<SurveyResultResponse?>?>) {
       return BaseResponseObject<List<SurveyResultResponse?>?>.fromJson(

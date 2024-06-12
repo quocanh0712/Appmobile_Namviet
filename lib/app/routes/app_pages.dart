@@ -30,6 +30,8 @@ import 'package:ftu_lms/app/modules/credit_approval/views/credit_approval_view.d
 import 'package:ftu_lms/app/modules/credit_class/bindings/credit_class_binding.dart';
 import 'package:ftu_lms/app/modules/credit_class/views/credit_class_view.dart';
 import 'package:ftu_lms/app/modules/debt_list/bindings/debt_list_binding.dart';
+import 'package:ftu_lms/app/modules/document_email/views/create_email/bindings/create_email_binding.dart';
+import 'package:ftu_lms/app/modules/document_email/views/create_email/views/create_email_view.dart';
 import 'package:ftu_lms/app/modules/document_searching/bindings/document_searching_binding.dart';
 import 'package:ftu_lms/app/modules/document_searching/views/document_pdf/bindings/document_pdf_binding.dart';
 import 'package:ftu_lms/app/modules/document_searching/views/document_pdf/views/document_pdf_view.dart';
@@ -1081,6 +1083,12 @@ class AppPages {
       name: _Paths.DOCUMENT_EMAIL,
       page: () =>  DocumentEmailView(),
       binding: DocumentEmailBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.CREATE_EMAIL,
+      page: () =>  CreateEmailView(),
+      binding: CreateEmailBinding(),
     ),
 
 

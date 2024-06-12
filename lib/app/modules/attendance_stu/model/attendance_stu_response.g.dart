@@ -6,21 +6,23 @@ part of 'attendance_stu_response.dart';
 // D3FBaseResponseJsonToTGenerator
 // **************************************************************************
 
-    AttendanceStuResponse? jsonToNullableAttendanceStuResponse(Object? json) =>
-        AttendanceStuResponse.fromJson(json as Map<String, dynamic>);
+AttendanceStuResponse? jsonToNullableAttendanceStuResponse(Object? json) =>
+    AttendanceStuResponse.fromJson(json as Map<String, dynamic>);
 
 AttendanceStuResponse jsonToAttendanceStuResponse(Object? json) =>
     AttendanceStuResponse.fromJson(json as Map<String, dynamic>);
 
-    List<AttendanceStuResponse?> jsonToListNullableAttendanceStuResponse(Object? json) =>
-        List<Object>.from(json as List)
-            .map((e) => AttendanceStuResponse.fromJson(e as Map<String, dynamic>))
-            .toList();
+List<AttendanceStuResponse?> jsonToListNullableAttendanceStuResponse(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => AttendanceStuResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
 
-    List<AttendanceStuResponse> jsonToListAttendanceStuResponse(Object? json) =>
-        List<Object>.from(json as List)
-            .map((e) => AttendanceStuResponse.fromJson(e as Map<String, dynamic>))
-            .toList();
+List<AttendanceStuResponse> jsonToListAttendanceStuResponse(
+    Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => AttendanceStuResponse.fromJson(e as Map<String, dynamic>))
+        .toList();
 
 // **************************************************************************
 // JsonSerializableGenerator
