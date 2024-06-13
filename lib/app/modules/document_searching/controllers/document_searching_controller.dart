@@ -33,6 +33,7 @@ class DocumentSearchingController extends BaseController<DocumentSearchingRespon
   @override
   void onInit() {
     super.onInit();
+    loadDocumentList();
     tabController = TabController(length: 2, vsync: this);
 
     focusNode.addListener(() {
@@ -65,11 +66,11 @@ class DocumentSearchingController extends BaseController<DocumentSearchingRespon
   @override
   void onReady() async {
     super.onReady();
-    loadDocumentList();
+
   }
 
   void showLoadingIndicator() {
-    EasyLoading.show(status: 'Loading...');
+    EasyLoading.show(status: 'Đang tải...');
   }
 
   void dismissLoadingIndicator() {
@@ -82,7 +83,7 @@ class DocumentSearchingController extends BaseController<DocumentSearchingRespon
     showLoadingIndicator();
     DocumentSearchingRepository repository = Get.find();
     var response = await repository.getDocumentList(
-      DocumentSearchingRequest(iduser: userObject.value?.iduser, startindex: 0, length: 20, loaiDiDen: currentLoaiDiDen),
+      DocumentSearchingRequest(iduser: userObject.value?.iduser, startindex: 0, length: 100, loaiDiDen: currentLoaiDiDen),
     );
     response.when(
       success: (data) {
@@ -92,6 +93,31 @@ class DocumentSearchingController extends BaseController<DocumentSearchingRespon
           listDocument.value = data.result?.toList() ?? [];
           filteredDocument.value = listDocument.value; // Initialize with the full list
           print("-------$listDocument");
+        } else {
+          isError.value = data.message;
+        }
+      },
+      failure: (e) {
+        isLoading.value = false;
+        dismissLoadingIndicator();
+        isError.value = e.toString();
+      },
+    );
+  }
+
+  Future<void> updateStatus(int id) async {
+    if (isLoading.value == true) return;
+    isLoading.value = true;
+    showLoadingIndicator();
+    DocumentSearchingRepository repository = Get.find();
+    var response = await repository.updateStatus(id, userObject.value?.iduser);
+    response.when(
+      success: (data) {
+        isLoading.value = false;
+        dismissLoadingIndicator();
+        if (data.isSuccess()) {
+          print("Status updated for document with id: $id");
+          loadDocumentList();
         } else {
           isError.value = data.message;
         }

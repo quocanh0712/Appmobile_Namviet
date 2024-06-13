@@ -169,7 +169,6 @@ class DocumentSearchingView extends StatelessWidget {
   }
 
   Widget _buildDocumentItem(BuildContext context) {
-    //var listItem = controller.listDocument.toList() ?? [];
     var listItem = controller.filteredDocument.toList();
     return Scaffold(
       backgroundColor: Colors.transparent,
@@ -188,8 +187,7 @@ class DocumentSearchingView extends StatelessWidget {
                   return Stack(
                     children: [
                       Padding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 15.w, vertical: 15.h),
+                        padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 15.h),
                         child: Container(
                           height: 130.h,
                           width: MediaQuery.of(context).size.width,
@@ -198,22 +196,19 @@ class DocumentSearchingView extends StatelessWidget {
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 5.w, vertical: 5.h),
+                            padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 5.h),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
-                                  padding:
-                                      EdgeInsets.symmetric(horizontal: 30.w),
+                                  padding: EdgeInsets.symmetric(horizontal: 30.w),
                                   child: AutoSizeText(
                                     documentDetail!.trichYeu.toString(),
                                     style: GoogleFonts.openSans(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 14.sp,
-                                      color: context
-                                          .themeExtensions.dartmouthGreen,
+                                      color: context.themeExtensions.dartmouthGreen,
                                     ),
                                   ),
                                 ),
@@ -240,8 +235,7 @@ class DocumentSearchingView extends StatelessWidget {
                                     AutoSizeText(
                                       documentDetail!.soKyHieu.toString(),
                                       style: GoogleFonts.openSans(
-                                        color: context
-                                            .themeExtensions.dartmouthGreen,
+                                        color: context.themeExtensions.dartmouthGreen,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 12.sp,
                                       ),
@@ -249,7 +243,10 @@ class DocumentSearchingView extends StatelessWidget {
                                     ),
                                     SizedBox(width: 20.w),
                                     GestureDetector(
-                                      onTap: () => controller.navigateToDocumentPdf(index),
+                                      onTap: () async {
+                                        await controller.updateStatus(documentDetail.id!);
+                                        controller.navigateToDocumentPdf(index);
+                                      },
                                       child: Container(
                                         height: 18.h,
                                         width: 18.w,
@@ -282,11 +279,9 @@ class DocumentSearchingView extends StatelessWidget {
                                       textAlign: TextAlign.left,
                                     ),
                                     Text(
-                                      formatTime(documentDetail!.ngayBanHanh
-                                          .toString()),
+                                      formatTime(documentDetail!.ngayBanHanh.toString()),
                                       style: GoogleFonts.openSans(
-                                        color: context
-                                            .themeExtensions.dartmouthGreen,
+                                        color: context.themeExtensions.dartmouthGreen,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 12.sp,
                                       ),
@@ -315,11 +310,9 @@ class DocumentSearchingView extends StatelessWidget {
                                       textAlign: TextAlign.left,
                                     ),
                                     Text(
-                                      formatTime(documentDetail!.ngayNhanGui
-                                          .toString()),
+                                      formatTime(documentDetail!.ngayNhanGui.toString()),
                                       style: GoogleFonts.openSans(
-                                        color: context
-                                            .themeExtensions.dartmouthGreen,
+                                        color: context.themeExtensions.dartmouthGreen,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 12.sp,
                                       ),
@@ -349,11 +342,9 @@ class DocumentSearchingView extends StatelessWidget {
                                     ),
                                     Expanded(
                                       child: AutoSizeText(
-                                        documentDetail!.coQuanBanHanh
-                                            .toString(),
+                                        documentDetail!.coQuanBanHanh.toString(),
                                         style: GoogleFonts.openSans(
-                                          color: context
-                                              .themeExtensions.dartmouthGreen,
+                                          color: context.themeExtensions.dartmouthGreen,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 12.sp,
                                         ),
@@ -368,24 +359,67 @@ class DocumentSearchingView extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
-                        height: 50,
-                        width: 50,
-                        decoration: BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.circular(25),
-                          border: Border.all(
-                            color: Colors.white,
-                            width: 3,
+                      Positioned(
+                        right: 0,
+                        top: 7.h,
+                        child: documentDetail!.trangThaiPhanPhoi == null ? Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                          decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(10),
+                              bottomLeft: Radius.circular(10),
+                            ),
+                          ),
+                          child: Text(
+                            'Chưa xem',
+                            style: GoogleFonts.roboto(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 10.sp
+                            ),
+                          ),
+                        ) : Container(
+                          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(10),
+                              bottomLeft: Radius.circular(10),
+                            ),
+                          ),
+                          child: Text(
+                            'Đã xem',
+                            style: GoogleFonts.roboto(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 10.sp
+                            ),
                           ),
                         ),
-                        child: Center(
-                          child: Text(
-                            documentDetail!.id.toString(),
-                            style: GoogleFonts.openSans(
+                      ),
+                      Positioned(
+                        top: 0,
+                        left: 0,
+                        child: Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(25),
+                            border: Border.all(
                               color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14.sp,
+                              width: 3,
+                            ),
+                          ),
+                          child: Center(
+                            child: Text(
+                              documentDetail!.soDiDen.toString(),
+                              style: GoogleFonts.openSans(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14.sp,
+                              ),
                             ),
                           ),
                         ),

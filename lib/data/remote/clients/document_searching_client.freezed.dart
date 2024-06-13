@@ -22,6 +22,7 @@ mixin _$DocumentSearchingClient {
     required TResult Function(CreateEmailResponse? model) sendEmail,
     required TResult Function(AllUserRequest? model) getAllUser,
     required TResult Function(int? id, String? idUser) updateStatus,
+    required TResult Function(AllEmailRequest? model) getEmailList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$DocumentSearchingClient {
     TResult? Function(CreateEmailResponse? model)? sendEmail,
     TResult? Function(AllUserRequest? model)? getAllUser,
     TResult? Function(int? id, String? idUser)? updateStatus,
+    TResult? Function(AllEmailRequest? model)? getEmailList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$DocumentSearchingClient {
     TResult Function(CreateEmailResponse? model)? sendEmail,
     TResult Function(AllUserRequest? model)? getAllUser,
     TResult Function(int? id, String? idUser)? updateStatus,
+    TResult Function(AllEmailRequest? model)? getEmailList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,7 @@ mixin _$DocumentSearchingClient {
     required TResult Function(_SendEmail value) sendEmail,
     required TResult Function(_GetAllRequest value) getAllUser,
     required TResult Function(_UpdateStatus value) updateStatus,
+    required TResult Function(_GetAllEmail value) getEmailList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +59,7 @@ mixin _$DocumentSearchingClient {
     TResult? Function(_SendEmail value)? sendEmail,
     TResult? Function(_GetAllRequest value)? getAllUser,
     TResult? Function(_UpdateStatus value)? updateStatus,
+    TResult? Function(_GetAllEmail value)? getEmailList,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +68,7 @@ mixin _$DocumentSearchingClient {
     TResult Function(_SendEmail value)? sendEmail,
     TResult Function(_GetAllRequest value)? getAllUser,
     TResult Function(_UpdateStatus value)? updateStatus,
+    TResult Function(_GetAllEmail value)? getEmailList,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -173,6 +179,7 @@ class _$DocumentSearchingClientImpl extends _DocumentSearchingClient {
     required TResult Function(CreateEmailResponse? model) sendEmail,
     required TResult Function(AllUserRequest? model) getAllUser,
     required TResult Function(int? id, String? idUser) updateStatus,
+    required TResult Function(AllEmailRequest? model) getEmailList,
   }) {
     return getDocumentList(model);
   }
@@ -184,6 +191,7 @@ class _$DocumentSearchingClientImpl extends _DocumentSearchingClient {
     TResult? Function(CreateEmailResponse? model)? sendEmail,
     TResult? Function(AllUserRequest? model)? getAllUser,
     TResult? Function(int? id, String? idUser)? updateStatus,
+    TResult? Function(AllEmailRequest? model)? getEmailList,
   }) {
     return getDocumentList?.call(model);
   }
@@ -195,6 +203,7 @@ class _$DocumentSearchingClientImpl extends _DocumentSearchingClient {
     TResult Function(CreateEmailResponse? model)? sendEmail,
     TResult Function(AllUserRequest? model)? getAllUser,
     TResult Function(int? id, String? idUser)? updateStatus,
+    TResult Function(AllEmailRequest? model)? getEmailList,
     required TResult orElse(),
   }) {
     if (getDocumentList != null) {
@@ -210,6 +219,7 @@ class _$DocumentSearchingClientImpl extends _DocumentSearchingClient {
     required TResult Function(_SendEmail value) sendEmail,
     required TResult Function(_GetAllRequest value) getAllUser,
     required TResult Function(_UpdateStatus value) updateStatus,
+    required TResult Function(_GetAllEmail value) getEmailList,
   }) {
     return getDocumentList(this);
   }
@@ -221,6 +231,7 @@ class _$DocumentSearchingClientImpl extends _DocumentSearchingClient {
     TResult? Function(_SendEmail value)? sendEmail,
     TResult? Function(_GetAllRequest value)? getAllUser,
     TResult? Function(_UpdateStatus value)? updateStatus,
+    TResult? Function(_GetAllEmail value)? getEmailList,
   }) {
     return getDocumentList?.call(this);
   }
@@ -232,6 +243,7 @@ class _$DocumentSearchingClientImpl extends _DocumentSearchingClient {
     TResult Function(_SendEmail value)? sendEmail,
     TResult Function(_GetAllRequest value)? getAllUser,
     TResult Function(_UpdateStatus value)? updateStatus,
+    TResult Function(_GetAllEmail value)? getEmailList,
     required TResult orElse(),
   }) {
     if (getDocumentList != null) {
@@ -334,6 +346,7 @@ class _$SendEmailImpl extends _SendEmail {
     required TResult Function(CreateEmailResponse? model) sendEmail,
     required TResult Function(AllUserRequest? model) getAllUser,
     required TResult Function(int? id, String? idUser) updateStatus,
+    required TResult Function(AllEmailRequest? model) getEmailList,
   }) {
     return sendEmail(model);
   }
@@ -345,6 +358,7 @@ class _$SendEmailImpl extends _SendEmail {
     TResult? Function(CreateEmailResponse? model)? sendEmail,
     TResult? Function(AllUserRequest? model)? getAllUser,
     TResult? Function(int? id, String? idUser)? updateStatus,
+    TResult? Function(AllEmailRequest? model)? getEmailList,
   }) {
     return sendEmail?.call(model);
   }
@@ -356,6 +370,7 @@ class _$SendEmailImpl extends _SendEmail {
     TResult Function(CreateEmailResponse? model)? sendEmail,
     TResult Function(AllUserRequest? model)? getAllUser,
     TResult Function(int? id, String? idUser)? updateStatus,
+    TResult Function(AllEmailRequest? model)? getEmailList,
     required TResult orElse(),
   }) {
     if (sendEmail != null) {
@@ -371,6 +386,7 @@ class _$SendEmailImpl extends _SendEmail {
     required TResult Function(_SendEmail value) sendEmail,
     required TResult Function(_GetAllRequest value) getAllUser,
     required TResult Function(_UpdateStatus value) updateStatus,
+    required TResult Function(_GetAllEmail value) getEmailList,
   }) {
     return sendEmail(this);
   }
@@ -382,6 +398,7 @@ class _$SendEmailImpl extends _SendEmail {
     TResult? Function(_SendEmail value)? sendEmail,
     TResult? Function(_GetAllRequest value)? getAllUser,
     TResult? Function(_UpdateStatus value)? updateStatus,
+    TResult? Function(_GetAllEmail value)? getEmailList,
   }) {
     return sendEmail?.call(this);
   }
@@ -393,6 +410,7 @@ class _$SendEmailImpl extends _SendEmail {
     TResult Function(_SendEmail value)? sendEmail,
     TResult Function(_GetAllRequest value)? getAllUser,
     TResult Function(_UpdateStatus value)? updateStatus,
+    TResult Function(_GetAllEmail value)? getEmailList,
     required TResult orElse(),
   }) {
     if (sendEmail != null) {
@@ -494,6 +512,7 @@ class _$GetAllRequestImpl extends _GetAllRequest {
     required TResult Function(CreateEmailResponse? model) sendEmail,
     required TResult Function(AllUserRequest? model) getAllUser,
     required TResult Function(int? id, String? idUser) updateStatus,
+    required TResult Function(AllEmailRequest? model) getEmailList,
   }) {
     return getAllUser(model);
   }
@@ -505,6 +524,7 @@ class _$GetAllRequestImpl extends _GetAllRequest {
     TResult? Function(CreateEmailResponse? model)? sendEmail,
     TResult? Function(AllUserRequest? model)? getAllUser,
     TResult? Function(int? id, String? idUser)? updateStatus,
+    TResult? Function(AllEmailRequest? model)? getEmailList,
   }) {
     return getAllUser?.call(model);
   }
@@ -516,6 +536,7 @@ class _$GetAllRequestImpl extends _GetAllRequest {
     TResult Function(CreateEmailResponse? model)? sendEmail,
     TResult Function(AllUserRequest? model)? getAllUser,
     TResult Function(int? id, String? idUser)? updateStatus,
+    TResult Function(AllEmailRequest? model)? getEmailList,
     required TResult orElse(),
   }) {
     if (getAllUser != null) {
@@ -531,6 +552,7 @@ class _$GetAllRequestImpl extends _GetAllRequest {
     required TResult Function(_SendEmail value) sendEmail,
     required TResult Function(_GetAllRequest value) getAllUser,
     required TResult Function(_UpdateStatus value) updateStatus,
+    required TResult Function(_GetAllEmail value) getEmailList,
   }) {
     return getAllUser(this);
   }
@@ -542,6 +564,7 @@ class _$GetAllRequestImpl extends _GetAllRequest {
     TResult? Function(_SendEmail value)? sendEmail,
     TResult? Function(_GetAllRequest value)? getAllUser,
     TResult? Function(_UpdateStatus value)? updateStatus,
+    TResult? Function(_GetAllEmail value)? getEmailList,
   }) {
     return getAllUser?.call(this);
   }
@@ -553,6 +576,7 @@ class _$GetAllRequestImpl extends _GetAllRequest {
     TResult Function(_SendEmail value)? sendEmail,
     TResult Function(_GetAllRequest value)? getAllUser,
     TResult Function(_UpdateStatus value)? updateStatus,
+    TResult Function(_GetAllEmail value)? getEmailList,
     required TResult orElse(),
   }) {
     if (getAllUser != null) {
@@ -648,6 +672,7 @@ class _$UpdateStatusImpl extends _UpdateStatus {
     required TResult Function(CreateEmailResponse? model) sendEmail,
     required TResult Function(AllUserRequest? model) getAllUser,
     required TResult Function(int? id, String? idUser) updateStatus,
+    required TResult Function(AllEmailRequest? model) getEmailList,
   }) {
     return updateStatus(id, idUser);
   }
@@ -659,6 +684,7 @@ class _$UpdateStatusImpl extends _UpdateStatus {
     TResult? Function(CreateEmailResponse? model)? sendEmail,
     TResult? Function(AllUserRequest? model)? getAllUser,
     TResult? Function(int? id, String? idUser)? updateStatus,
+    TResult? Function(AllEmailRequest? model)? getEmailList,
   }) {
     return updateStatus?.call(id, idUser);
   }
@@ -670,6 +696,7 @@ class _$UpdateStatusImpl extends _UpdateStatus {
     TResult Function(CreateEmailResponse? model)? sendEmail,
     TResult Function(AllUserRequest? model)? getAllUser,
     TResult Function(int? id, String? idUser)? updateStatus,
+    TResult Function(AllEmailRequest? model)? getEmailList,
     required TResult orElse(),
   }) {
     if (updateStatus != null) {
@@ -685,6 +712,7 @@ class _$UpdateStatusImpl extends _UpdateStatus {
     required TResult Function(_SendEmail value) sendEmail,
     required TResult Function(_GetAllRequest value) getAllUser,
     required TResult Function(_UpdateStatus value) updateStatus,
+    required TResult Function(_GetAllEmail value) getEmailList,
   }) {
     return updateStatus(this);
   }
@@ -696,6 +724,7 @@ class _$UpdateStatusImpl extends _UpdateStatus {
     TResult? Function(_SendEmail value)? sendEmail,
     TResult? Function(_GetAllRequest value)? getAllUser,
     TResult? Function(_UpdateStatus value)? updateStatus,
+    TResult? Function(_GetAllEmail value)? getEmailList,
   }) {
     return updateStatus?.call(this);
   }
@@ -707,6 +736,7 @@ class _$UpdateStatusImpl extends _UpdateStatus {
     TResult Function(_SendEmail value)? sendEmail,
     TResult Function(_GetAllRequest value)? getAllUser,
     TResult Function(_UpdateStatus value)? updateStatus,
+    TResult Function(_GetAllEmail value)? getEmailList,
     required TResult orElse(),
   }) {
     if (updateStatus != null) {
@@ -725,5 +755,171 @@ abstract class _UpdateStatus extends DocumentSearchingClient {
   String? get idUser;
   @JsonKey(ignore: true)
   _$$UpdateStatusImplCopyWith<_$UpdateStatusImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetAllEmailImplCopyWith<$Res> {
+  factory _$$GetAllEmailImplCopyWith(
+          _$GetAllEmailImpl value, $Res Function(_$GetAllEmailImpl) then) =
+      __$$GetAllEmailImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({AllEmailRequest? model});
+
+  $AllEmailRequestCopyWith<$Res>? get model;
+}
+
+/// @nodoc
+class __$$GetAllEmailImplCopyWithImpl<$Res>
+    extends _$DocumentSearchingClientCopyWithImpl<$Res, _$GetAllEmailImpl>
+    implements _$$GetAllEmailImplCopyWith<$Res> {
+  __$$GetAllEmailImplCopyWithImpl(
+      _$GetAllEmailImpl _value, $Res Function(_$GetAllEmailImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? model = freezed,
+  }) {
+    return _then(_$GetAllEmailImpl(
+      freezed == model
+          ? _value.model
+          : model // ignore: cast_nullable_to_non_nullable
+              as AllEmailRequest?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AllEmailRequestCopyWith<$Res>? get model {
+    if (_value.model == null) {
+      return null;
+    }
+
+    return $AllEmailRequestCopyWith<$Res>(_value.model!, (value) {
+      return _then(_value.copyWith(model: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$GetAllEmailImpl extends _GetAllEmail {
+  _$GetAllEmailImpl(this.model) : super._();
+
+  @override
+  final AllEmailRequest? model;
+
+  @override
+  String toString() {
+    return 'DocumentSearchingClient.getEmailList(model: $model)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetAllEmailImpl &&
+            (identical(other.model, model) || other.model == model));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, model);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetAllEmailImplCopyWith<_$GetAllEmailImpl> get copyWith =>
+      __$$GetAllEmailImplCopyWithImpl<_$GetAllEmailImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(DocumentSearchingRequest? model) getDocumentList,
+    required TResult Function(CreateEmailResponse? model) sendEmail,
+    required TResult Function(AllUserRequest? model) getAllUser,
+    required TResult Function(int? id, String? idUser) updateStatus,
+    required TResult Function(AllEmailRequest? model) getEmailList,
+  }) {
+    return getEmailList(model);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(DocumentSearchingRequest? model)? getDocumentList,
+    TResult? Function(CreateEmailResponse? model)? sendEmail,
+    TResult? Function(AllUserRequest? model)? getAllUser,
+    TResult? Function(int? id, String? idUser)? updateStatus,
+    TResult? Function(AllEmailRequest? model)? getEmailList,
+  }) {
+    return getEmailList?.call(model);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(DocumentSearchingRequest? model)? getDocumentList,
+    TResult Function(CreateEmailResponse? model)? sendEmail,
+    TResult Function(AllUserRequest? model)? getAllUser,
+    TResult Function(int? id, String? idUser)? updateStatus,
+    TResult Function(AllEmailRequest? model)? getEmailList,
+    required TResult orElse(),
+  }) {
+    if (getEmailList != null) {
+      return getEmailList(model);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_DocumentSearchingClient value) getDocumentList,
+    required TResult Function(_SendEmail value) sendEmail,
+    required TResult Function(_GetAllRequest value) getAllUser,
+    required TResult Function(_UpdateStatus value) updateStatus,
+    required TResult Function(_GetAllEmail value) getEmailList,
+  }) {
+    return getEmailList(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_DocumentSearchingClient value)? getDocumentList,
+    TResult? Function(_SendEmail value)? sendEmail,
+    TResult? Function(_GetAllRequest value)? getAllUser,
+    TResult? Function(_UpdateStatus value)? updateStatus,
+    TResult? Function(_GetAllEmail value)? getEmailList,
+  }) {
+    return getEmailList?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_DocumentSearchingClient value)? getDocumentList,
+    TResult Function(_SendEmail value)? sendEmail,
+    TResult Function(_GetAllRequest value)? getAllUser,
+    TResult Function(_UpdateStatus value)? updateStatus,
+    TResult Function(_GetAllEmail value)? getEmailList,
+    required TResult orElse(),
+  }) {
+    if (getEmailList != null) {
+      return getEmailList(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetAllEmail extends DocumentSearchingClient {
+  factory _GetAllEmail(final AllEmailRequest? model) = _$GetAllEmailImpl;
+  _GetAllEmail._() : super._();
+
+  AllEmailRequest? get model;
+  @JsonKey(ignore: true)
+  _$$GetAllEmailImplCopyWith<_$GetAllEmailImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

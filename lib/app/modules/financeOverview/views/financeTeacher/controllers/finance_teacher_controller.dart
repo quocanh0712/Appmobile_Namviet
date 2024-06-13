@@ -69,10 +69,10 @@ class FinanceTeacherController extends BaseController {
       FinanceRepository repository = Get.find();
       var response = await repository.getSalary(
         FinanceTeacherRequest(
-          startindex: 1,
-          length: 10,
-          year:"2024",
-          month: 4,
+          startindex: 0,
+          length: 20,
+          year: timeDaily.year.toString(),
+          month: timeDaily.month,
           iduser: userObject.value?.iduser.toString(),
         ),
       );

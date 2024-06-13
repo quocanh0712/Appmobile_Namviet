@@ -149,8 +149,8 @@ flutter:
     - assets/images/
     - assets/lotties/
     - assets/jsons/
-#    - assets/Icon/
-#    - assets/animation/
+    - assets/Icon/
+    - assets/animation/
 
 
 

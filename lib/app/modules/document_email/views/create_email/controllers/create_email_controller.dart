@@ -50,6 +50,8 @@ class CreateEmailController extends BaseController with GetSingleTickerProviderS
 
   var selectedReceiverIds = <int>[].obs;
 
+
+
   void selectFile() async {
     final result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
@@ -261,96 +263,6 @@ class CreateEmailController extends BaseController with GetSingleTickerProviderS
         contentController.text.trim().isNotEmpty && selectedReceivers.isNotEmpty;
   }
 
-  // Future<void> sendEmail({int phanLoai = 0}) async {
-  //   if (isLoading.value == true) return;
-  //   isLoading.value = true;
-  //   showLoadingIndicator();
-  //   await uploadFile();
-  //   String title = titleController.text.trim();
-  //   String content = contentController.text.trim();
-  //
-  //   CreateEmailRepository repository = Get.find();
-  //   var response = await repository.sendEmail(
-  //     CreateEmailResponse(
-  //       iduser: "B10CCD3B-4C45-4191-A573-62EA82A84A80",
-  //       listNguoiNhan: selectedReceiverIds.toList(),
-  //       tieuDe: title,
-  //       noiDung: content,
-  //       listFile: [pdfURL ?? ''],
-  //       phanLoai: phanLoai,
-  //     ),
-  //   );
-  //   response.when(
-  //     success: (data) {
-  //       isLoading.value = false;
-  //       dismissLoadingIndicator();
-  //       if (data.isSuccess()) {
-  //         print("THÀNH CÔNGGGG");
-  //         titleController.clear();
-  //         contentController.clear();
-  //         selectedReceivers.clear();
-  //         selectedReceiverIds.clear();
-  //         rxPlatformFile.value = null;
-  //         Get.snackbar(
-  //           "Thông báo",
-  //           "Email đã được gửi thành công",
-  //           snackPosition: SnackPosition.TOP,
-  //           colorText: Colors.white,
-  //           backgroundColor: Colors.green.withOpacity(.9),
-  //           snackStyle: SnackStyle.FLOATING,
-  //           titleText: Text(
-  //             "Thông báo",
-  //             style: TextStyle(color: Colors.white, fontSize: 16.sp, fontWeight: FontWeight.bold),
-  //           ),
-  //           messageText: Text(
-  //             "Email đã được gửi thành công",
-  //             style: TextStyle(color: Colors.white, fontSize: 14.sp,),
-  //           ),
-  //         );
-  //       } else {
-  //         isError.value = data.message;
-  //         print("-------------------${data.message}");
-  //         Get.snackbar(
-  //           "Thông báo",
-  //           "Gửi email thất bại: ${data.message}",
-  //           snackPosition: SnackPosition.TOP,
-  //           colorText: Colors.white,
-  //           backgroundColor: Colors.redAccent.withOpacity(.9),
-  //           snackStyle: SnackStyle.FLOATING,
-  //           titleText: Text(
-  //             "Thông báo",
-  //             style: TextStyle(color: Colors.white, fontSize: 16.sp, fontWeight: FontWeight.bold),
-  //           ),
-  //           messageText: Text(
-  //             "Gửi email thất bại: ${data.message}",
-  //             style: TextStyle(color: Colors.white, fontSize: 14.sp,),
-  //           ),
-  //         );
-  //       }
-  //     },
-  //     failure: (e) {
-  //       isLoading.value = false;
-  //       dismissLoadingIndicator();
-  //       isError.value = e.toString();
-  //       Get.snackbar(
-  //         "Thông báo",
-  //         "Gửi email thất bại: ${e.toString()}",
-  //         snackPosition: SnackPosition.TOP,
-  //         colorText: Colors.white,
-  //         backgroundColor: Colors.redAccent.withOpacity(.9),
-  //         snackStyle: SnackStyle.FLOATING,
-  //         titleText: Text(
-  //           "Thông báo",
-  //           style: TextStyle(color: Colors.white, fontSize: 16.sp, fontWeight: FontWeight.bold), // Tăng cỡ chữ cho tiêu đề
-  //         ),
-  //         messageText: Text(
-  //           "Gửi email thất bại: ${e.toString()}",
-  //           style: TextStyle(color: Colors.white, fontSize: 14.sp,),
-  //         ),
-  //       );
-  //     },
-  //   );
-  // }
 
   Future<void> sendEmail({int phanLoai = 0}) async {
     if (isLoading.value == true) return;
@@ -363,7 +275,7 @@ class CreateEmailController extends BaseController with GetSingleTickerProviderS
     CreateEmailRepository repository = Get.find();
     var response = await repository.sendEmail(
       CreateEmailResponse(
-        iduser: "B10CCD3B-4C45-4191-A573-62EA82A84A80",
+        iduser: userObject.value?.iduser,
         listNguoiNhan: selectedReceiverIds.toList(),
         tieuDe: title,
         noiDung: content,
