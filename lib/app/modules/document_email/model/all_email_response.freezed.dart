@@ -24,6 +24,7 @@ mixin _$AllEmailResponse {
   String? get noiDung => throw _privateConstructorUsedError;
   String? get tieuDe => throw _privateConstructorUsedError;
   int? get idTrangThai => throw _privateConstructorUsedError;
+  String? get createdDate => throw _privateConstructorUsedError;
   List<NguoiNhan>? get listNguoiNhan => throw _privateConstructorUsedError;
   List<dynamic>? get listFile => throw _privateConstructorUsedError;
   List<NguoiGui>? get listNguoiGui => throw _privateConstructorUsedError;
@@ -45,6 +46,7 @@ abstract class $AllEmailResponseCopyWith<$Res> {
       String? noiDung,
       String? tieuDe,
       int? idTrangThai,
+      String? createdDate,
       List<NguoiNhan>? listNguoiNhan,
       List<dynamic>? listFile,
       List<NguoiGui>? listNguoiGui});
@@ -67,6 +69,7 @@ class _$AllEmailResponseCopyWithImpl<$Res, $Val extends AllEmailResponse>
     Object? noiDung = freezed,
     Object? tieuDe = freezed,
     Object? idTrangThai = freezed,
+    Object? createdDate = freezed,
     Object? listNguoiNhan = freezed,
     Object? listFile = freezed,
     Object? listNguoiGui = freezed,
@@ -88,6 +91,10 @@ class _$AllEmailResponseCopyWithImpl<$Res, $Val extends AllEmailResponse>
           ? _value.idTrangThai
           : idTrangThai // ignore: cast_nullable_to_non_nullable
               as int?,
+      createdDate: freezed == createdDate
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       listNguoiNhan: freezed == listNguoiNhan
           ? _value.listNguoiNhan
           : listNguoiNhan // ignore: cast_nullable_to_non_nullable
@@ -117,6 +124,7 @@ abstract class _$$AllEmailResponseImplCopyWith<$Res>
       String? noiDung,
       String? tieuDe,
       int? idTrangThai,
+      String? createdDate,
       List<NguoiNhan>? listNguoiNhan,
       List<dynamic>? listFile,
       List<NguoiGui>? listNguoiGui});
@@ -137,6 +145,7 @@ class __$$AllEmailResponseImplCopyWithImpl<$Res>
     Object? noiDung = freezed,
     Object? tieuDe = freezed,
     Object? idTrangThai = freezed,
+    Object? createdDate = freezed,
     Object? listNguoiNhan = freezed,
     Object? listFile = freezed,
     Object? listNguoiGui = freezed,
@@ -158,6 +167,10 @@ class __$$AllEmailResponseImplCopyWithImpl<$Res>
           ? _value.idTrangThai
           : idTrangThai // ignore: cast_nullable_to_non_nullable
               as int?,
+      createdDate: freezed == createdDate
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as String?,
       listNguoiNhan: freezed == listNguoiNhan
           ? _value._listNguoiNhan
           : listNguoiNhan // ignore: cast_nullable_to_non_nullable
@@ -182,6 +195,7 @@ class _$AllEmailResponseImpl implements _AllEmailResponse {
       this.noiDung,
       this.tieuDe,
       this.idTrangThai,
+      this.createdDate,
       final List<NguoiNhan>? listNguoiNhan,
       final List<dynamic>? listFile,
       final List<NguoiGui>? listNguoiGui})
@@ -200,6 +214,8 @@ class _$AllEmailResponseImpl implements _AllEmailResponse {
   final String? tieuDe;
   @override
   final int? idTrangThai;
+  @override
+  final String? createdDate;
   final List<NguoiNhan>? _listNguoiNhan;
   @override
   List<NguoiNhan>? get listNguoiNhan {
@@ -232,7 +248,7 @@ class _$AllEmailResponseImpl implements _AllEmailResponse {
 
   @override
   String toString() {
-    return 'AllEmailResponse(id: $id, noiDung: $noiDung, tieuDe: $tieuDe, idTrangThai: $idTrangThai, listNguoiNhan: $listNguoiNhan, listFile: $listFile, listNguoiGui: $listNguoiGui)';
+    return 'AllEmailResponse(id: $id, noiDung: $noiDung, tieuDe: $tieuDe, idTrangThai: $idTrangThai, createdDate: $createdDate, listNguoiNhan: $listNguoiNhan, listFile: $listFile, listNguoiGui: $listNguoiGui)';
   }
 
   @override
@@ -245,6 +261,8 @@ class _$AllEmailResponseImpl implements _AllEmailResponse {
             (identical(other.tieuDe, tieuDe) || other.tieuDe == tieuDe) &&
             (identical(other.idTrangThai, idTrangThai) ||
                 other.idTrangThai == idTrangThai) &&
+            (identical(other.createdDate, createdDate) ||
+                other.createdDate == createdDate) &&
             const DeepCollectionEquality()
                 .equals(other._listNguoiNhan, _listNguoiNhan) &&
             const DeepCollectionEquality().equals(other._listFile, _listFile) &&
@@ -260,6 +278,7 @@ class _$AllEmailResponseImpl implements _AllEmailResponse {
       noiDung,
       tieuDe,
       idTrangThai,
+      createdDate,
       const DeepCollectionEquality().hash(_listNguoiNhan),
       const DeepCollectionEquality().hash(_listFile),
       const DeepCollectionEquality().hash(_listNguoiGui));
@@ -285,6 +304,7 @@ abstract class _AllEmailResponse implements AllEmailResponse {
       final String? noiDung,
       final String? tieuDe,
       final int? idTrangThai,
+      final String? createdDate,
       final List<NguoiNhan>? listNguoiNhan,
       final List<dynamic>? listFile,
       final List<NguoiGui>? listNguoiGui}) = _$AllEmailResponseImpl;
@@ -300,6 +320,8 @@ abstract class _AllEmailResponse implements AllEmailResponse {
   String? get tieuDe;
   @override
   int? get idTrangThai;
+  @override
+  String? get createdDate;
   @override
   List<NguoiNhan>? get listNguoiNhan;
   @override

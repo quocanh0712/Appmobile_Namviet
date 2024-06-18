@@ -19,6 +19,7 @@ class AllEmailResponse with _$AllEmailResponse {
     String? noiDung,
     String? tieuDe,
     int? idTrangThai,
+    String? createdDate,
     List<NguoiNhan>? listNguoiNhan,
     List<dynamic>? listFile,
     List<NguoiGui>? listNguoiGui,

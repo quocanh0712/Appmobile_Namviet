@@ -2,6 +2,10 @@
 
 part of 'all_email_response.dart';
 
+// **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
 AllEmailResponse? jsonToNullableAllEmailResponse(Object? json) =>
     AllEmailResponse.fromJson(json as Map<String, dynamic>);
 
@@ -31,6 +35,7 @@ _$AllEmailResponseImpl _$$AllEmailResponseImplFromJson(
       noiDung: json['noiDung'] as String?,
       tieuDe: json['tieuDe'] as String?,
       idTrangThai: json['idTrangThai'] as int?,
+      createdDate: json['createdDate'] as String?,
       listNguoiNhan: (json['listNguoiNhan'] as List<dynamic>?)
           ?.map((e) => NguoiNhan.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -47,6 +52,7 @@ Map<String, dynamic> _$$AllEmailResponseImplToJson(
       'noiDung': instance.noiDung,
       'tieuDe': instance.tieuDe,
       'idTrangThai': instance.idTrangThai,
+      'createdDate': instance.createdDate,
       'listNguoiNhan': instance.listNguoiNhan,
       'listFile': instance.listFile,
       'listNguoiGui': instance.listNguoiGui,

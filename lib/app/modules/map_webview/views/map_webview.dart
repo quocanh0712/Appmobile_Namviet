@@ -35,7 +35,7 @@ class _MapWebViewState extends State<MapWebView> {
       ),
       body: InAppWebView(
         initialUrlRequest: URLRequest(
-          url: WebUri('https://api.ufl.essoft.vn/chatbot/'),
+          url: WebUri('https://viettech.itch.io/map3d'),
         ),
         onWebViewCreated: (InAppWebViewController webviewController) {
           webController = webviewController;
