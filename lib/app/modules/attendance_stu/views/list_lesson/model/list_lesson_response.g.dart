@@ -2,7 +2,6 @@
 
 part of 'list_lesson_response.dart';
 
-
 // **************************************************************************
 // D3FBaseResponseJsonToTGenerator
 // **************************************************************************
@@ -13,14 +12,12 @@ ListLessonResponse? jsonToNullableListLessonResponse(Object? json) =>
 ListLessonResponse jsonToListLessonResponse(Object? json) =>
     ListLessonResponse.fromJson(json as Map<String, dynamic>);
 
-List<ListLessonResponse?> jsonToListNullableListLessonResponse(
-    Object? json) =>
+List<ListLessonResponse?> jsonToListNullableListLessonResponse(Object? json) =>
     List<Object>.from(json as List)
         .map((e) => ListLessonResponse.fromJson(e as Map<String, dynamic>))
         .toList();
 
-List<ListLessonResponse> jsonToListListLessonResponse(
-    Object? json) =>
+List<ListLessonResponse> jsonToListListLessonResponse(Object? json) =>
     List<Object>.from(json as List)
         .map((e) => ListLessonResponse.fromJson(e as Map<String, dynamic>))
         .toList();

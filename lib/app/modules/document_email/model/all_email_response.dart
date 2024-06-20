@@ -20,36 +20,12 @@ class AllEmailResponse with _$AllEmailResponse {
     String? tieuDe,
     int? idTrangThai,
     String? createdDate,
-    List<NguoiNhan>? listNguoiNhan,
-    List<dynamic>? listFile,
-    List<NguoiGui>? listNguoiGui,
+    String? listNguoiNhan,
+    String? listFile,
+    String? listNguoiGui,
+    String? emailType,
   }) = _AllEmailResponse;
 
   factory AllEmailResponse.fromJson(Map<String, dynamic> json) => _$AllEmailResponseFromJson(json);
 }
 
-@freezed
-@genJsonT4ThisOne
-class NguoiNhan with _$NguoiNhan {
-  factory NguoiNhan({
-    int? id,
-    String? username,
-    String? fullName,
-    String? email,
-  }) = _NguoiNhan;
-
-  factory NguoiNhan.fromJson(Map<String, dynamic> json) => _$NguoiNhanFromJson(json);
-}
-
-@freezed
-@genJsonT4ThisOne
-class NguoiGui with _$NguoiGui {
-  factory NguoiGui({
-    int? id,
-    String? username,
-    String? fullName,
-    String? email,
-  }) = _NguoiGui;
-
-  factory NguoiGui.fromJson(Map<String, dynamic> json) => _$NguoiGuiFromJson(json);
-}

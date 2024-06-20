@@ -22,7 +22,6 @@ List<AllUserResponse> jsonToListAllUserResponse(Object? json) =>
         .map((e) => AllUserResponse.fromJson(e as Map<String, dynamic>))
         .toList();
 
-
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************

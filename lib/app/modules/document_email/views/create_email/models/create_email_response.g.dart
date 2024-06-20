@@ -2,25 +2,32 @@
 
 part of 'create_email_response.dart';
 
-    // **************************************************************************
+// **************************************************************************
 // D3FBaseResponseJsonToTGenerator
 // **************************************************************************
 
-CreateEmailResponse? jsonToNullableCreateEmailResponse(Object? json) =>
+CreateEmailResponse?
+jsonToNullableCreateEmailResponse(Object? json) =>
+    CreateEmailResponse.fromJson(
+        json as Map<String, dynamic>);
+
+CreateEmailResponse jsonToCreateEmailResponse(
+    Object? json) =>
     CreateEmailResponse.fromJson(json as Map<String, dynamic>);
 
-CreateEmailResponse jsonToCreateEmailResponse(Object? json) =>
-    CreateEmailResponse.fromJson(json as Map<String, dynamic>);
+List<CreateEmailResponse?>
+jsonToListNullableCreateEmailResponse(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => CreateEmailResponse.fromJson(
+        e as Map<String, dynamic>))
+        .toList();
 
-    List<CreateEmailResponse?> jsonToListNullableCreateEmailResponse(Object? json) =>
-        List<Object>.from(json as List)
-            .map((e) => CreateEmailResponse.fromJson(e as Map<String, dynamic>))
-            .toList();
-
-    List<CreateEmailResponse> jsonToListCreateEmailResponse(Object? json) =>
-        List<Object>.from(json as List)
-            .map((e) => CreateEmailResponse.fromJson(e as Map<String, dynamic>))
-            .toList();
+List<CreateEmailResponse>
+jsonToListCreateEmailResponse(Object? json) =>
+    List<Object>.from(json as List)
+        .map((e) => CreateEmailResponse.fromJson(
+        e as Map<String, dynamic>))
+        .toList();
 
 // **************************************************************************
 // JsonSerializableGenerator

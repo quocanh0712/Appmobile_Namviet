@@ -2,6 +2,8 @@
 
 
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:ftu_lms/app/modules/document_email/model/delete_email_request.dart';
+import 'package:ftu_lms/app/modules/document_email/model/restore_email_request.dart';
 import 'package:ftu_lms/app/modules/document_email/views/create_email/models/all_user_request.dart';
 import 'package:ftu_lms/app/modules/document_email/views/create_email/models/create_email_response.dart';
 import 'package:ftu_lms/data/remote/interfaces/base_client_generator.dart';
@@ -23,6 +25,8 @@ class DocumentSearchingClient extends BaseClientGenerator with _$DocumentSearchi
   factory DocumentSearchingClient.getAllUser(AllUserRequest? model) = _GetAllRequest;
   factory DocumentSearchingClient.updateStatus(int? id , String? idUser) = _UpdateStatus;
   factory DocumentSearchingClient.getEmailList(AllEmailRequest? model) = _GetAllEmail;
+  factory DocumentSearchingClient.deleteEmail(DeleteEmailRequest? model) = _DeleteEmail;
+  factory DocumentSearchingClient.restoreEmail(RestoreEmailRequest? model) = _RestoreEmail;
 
   @override
   String get baseURL => '${super.baseURL}/QuanLyVanBan';
@@ -34,6 +38,8 @@ class DocumentSearchingClient extends BaseClientGenerator with _$DocumentSearchi
         sendEmail: (data) => data?.toJson() ??{},
         getAllUser: (data) => data?.toJson() ??{},
         getEmailList: (data) => data?.toJson() ??{},
+        deleteEmail: (data) => data?.toJson() ??{},
+        restoreEmail: (data) => data?.toJson() ??{},
         updateStatus: (id, idUser) =>
         {'id': id, 'idUser': idUser},
 
@@ -55,6 +61,8 @@ class DocumentSearchingClient extends BaseClientGenerator with _$DocumentSearchi
       getAllUser: (data) => '/GetAllUser',
       updateStatus: (id, idUser) => '/UpdateTrangThaiVBPP',
       getEmailList: (data) => '/GetAllVBTraoDoi',
+      deleteEmail: (data) => '/DeleteVBTD',
+      restoreEmail: (data) => '/RestoreVBTD',
       orElse: () => '',
     );
   }

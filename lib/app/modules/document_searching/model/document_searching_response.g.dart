@@ -2,20 +2,22 @@
 
 part of 'document_searching_response.dart';
 
+// **************************************************************************
+// D3FBaseResponseJsonToTGenerator
+// **************************************************************************
+
 DocumentSearchingResponse? jsonToNullableDocumentSearchingResponse(Object? json) =>
     DocumentSearchingResponse.fromJson(json as Map<String, dynamic>);
 
 DocumentSearchingResponse jsonToDocumentSearchingResponse(Object? json) =>
     DocumentSearchingResponse.fromJson(json as Map<String, dynamic>);
 
-List<DocumentSearchingResponse?> jsonToListNullableDocumentSearchingResponse(
-    Object? json) =>
+List<DocumentSearchingResponse?> jsonToListNullableDocumentSearchingResponse(Object? json) =>
     List<Object>.from(json as List)
         .map((e) => DocumentSearchingResponse.fromJson(e as Map<String, dynamic>))
         .toList();
 
-List<DocumentSearchingResponse> jsonToListDocumentSearchingResponse(
-    Object? json) =>
+List<DocumentSearchingResponse> jsonToListDocumentSearchingResponse(Object? json) =>
     List<Object>.from(json as List)
         .map((e) => DocumentSearchingResponse.fromJson(e as Map<String, dynamic>))
         .toList();

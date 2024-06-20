@@ -22,7 +22,6 @@ List<SurveyItemResponse> jsonToListSurveyItemResponses(Object? json) =>
         .map((e) => SurveyItemResponse.fromJson(e as Map<String, dynamic>))
         .toList();
 
-
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************

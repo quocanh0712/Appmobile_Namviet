@@ -1,6 +1,8 @@
 
 
 
+import 'package:ftu_lms/app/modules/document_email/model/delete_email_request.dart';
+import 'package:ftu_lms/app/modules/document_email/model/restore_email_request.dart';
 import 'package:ftu_lms/app/modules/document_email/repository/document_email_repository.dart';
 
 import '../../../../../data/remote/clients/document_searching_client.dart';
@@ -22,6 +24,28 @@ class DocumentEmailRepositoryImpl extends DocumentEmailRepository {
         route: DocumentSearchingClient.getEmailList(model),
         responseType: const BaseResponseObject<
             List<AllEmailResponse?>?>());
+  }
+
+  @override
+  Future<Result<BaseResponseObject<int?>,
+      NetworkError>> deleteEmail(DeleteEmailRequest? model) {
+    return NetworkExecutor.execute<
+        BaseResponseObject<int?>,
+        BaseResponseObject<int?>>(
+        route: DocumentSearchingClient.deleteEmail(model),
+        responseType: const BaseResponseObject<
+            int?>());
+  }
+
+  @override
+  Future<Result<BaseResponseObject<int?>,
+      NetworkError>> restoreEmail(RestoreEmailRequest? model) {
+    return NetworkExecutor.execute<
+        BaseResponseObject<int?>,
+        BaseResponseObject<int?>>(
+        route: DocumentSearchingClient.restoreEmail(model),
+        responseType: const BaseResponseObject<
+            int?>());
   }
 
 

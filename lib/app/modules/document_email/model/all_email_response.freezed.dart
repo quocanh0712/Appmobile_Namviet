@@ -25,9 +25,10 @@ mixin _$AllEmailResponse {
   String? get tieuDe => throw _privateConstructorUsedError;
   int? get idTrangThai => throw _privateConstructorUsedError;
   String? get createdDate => throw _privateConstructorUsedError;
-  List<NguoiNhan>? get listNguoiNhan => throw _privateConstructorUsedError;
-  List<dynamic>? get listFile => throw _privateConstructorUsedError;
-  List<NguoiGui>? get listNguoiGui => throw _privateConstructorUsedError;
+  String? get listNguoiNhan => throw _privateConstructorUsedError;
+  String? get listFile => throw _privateConstructorUsedError;
+  String? get listNguoiGui => throw _privateConstructorUsedError;
+  String? get emailType => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -47,9 +48,10 @@ abstract class $AllEmailResponseCopyWith<$Res> {
       String? tieuDe,
       int? idTrangThai,
       String? createdDate,
-      List<NguoiNhan>? listNguoiNhan,
-      List<dynamic>? listFile,
-      List<NguoiGui>? listNguoiGui});
+      String? listNguoiNhan,
+      String? listFile,
+      String? listNguoiGui,
+      String? emailType});
 }
 
 /// @nodoc
@@ -73,6 +75,7 @@ class _$AllEmailResponseCopyWithImpl<$Res, $Val extends AllEmailResponse>
     Object? listNguoiNhan = freezed,
     Object? listFile = freezed,
     Object? listNguoiGui = freezed,
+    Object? emailType = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -98,15 +101,19 @@ class _$AllEmailResponseCopyWithImpl<$Res, $Val extends AllEmailResponse>
       listNguoiNhan: freezed == listNguoiNhan
           ? _value.listNguoiNhan
           : listNguoiNhan // ignore: cast_nullable_to_non_nullable
-              as List<NguoiNhan>?,
+              as String?,
       listFile: freezed == listFile
           ? _value.listFile
           : listFile // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
+              as String?,
       listNguoiGui: freezed == listNguoiGui
           ? _value.listNguoiGui
           : listNguoiGui // ignore: cast_nullable_to_non_nullable
-              as List<NguoiGui>?,
+              as String?,
+      emailType: freezed == emailType
+          ? _value.emailType
+          : emailType // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -125,9 +132,10 @@ abstract class _$$AllEmailResponseImplCopyWith<$Res>
       String? tieuDe,
       int? idTrangThai,
       String? createdDate,
-      List<NguoiNhan>? listNguoiNhan,
-      List<dynamic>? listFile,
-      List<NguoiGui>? listNguoiGui});
+      String? listNguoiNhan,
+      String? listFile,
+      String? listNguoiGui,
+      String? emailType});
 }
 
 /// @nodoc
@@ -149,6 +157,7 @@ class __$$AllEmailResponseImplCopyWithImpl<$Res>
     Object? listNguoiNhan = freezed,
     Object? listFile = freezed,
     Object? listNguoiGui = freezed,
+    Object? emailType = freezed,
   }) {
     return _then(_$AllEmailResponseImpl(
       id: freezed == id
@@ -172,17 +181,21 @@ class __$$AllEmailResponseImplCopyWithImpl<$Res>
           : createdDate // ignore: cast_nullable_to_non_nullable
               as String?,
       listNguoiNhan: freezed == listNguoiNhan
-          ? _value._listNguoiNhan
+          ? _value.listNguoiNhan
           : listNguoiNhan // ignore: cast_nullable_to_non_nullable
-              as List<NguoiNhan>?,
+              as String?,
       listFile: freezed == listFile
-          ? _value._listFile
+          ? _value.listFile
           : listFile // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
+              as String?,
       listNguoiGui: freezed == listNguoiGui
-          ? _value._listNguoiGui
+          ? _value.listNguoiGui
           : listNguoiGui // ignore: cast_nullable_to_non_nullable
-              as List<NguoiGui>?,
+              as String?,
+      emailType: freezed == emailType
+          ? _value.emailType
+          : emailType // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -196,12 +209,10 @@ class _$AllEmailResponseImpl implements _AllEmailResponse {
       this.tieuDe,
       this.idTrangThai,
       this.createdDate,
-      final List<NguoiNhan>? listNguoiNhan,
-      final List<dynamic>? listFile,
-      final List<NguoiGui>? listNguoiGui})
-      : _listNguoiNhan = listNguoiNhan,
-        _listFile = listFile,
-        _listNguoiGui = listNguoiGui;
+      this.listNguoiNhan,
+      this.listFile,
+      this.listNguoiGui,
+      this.emailType});
 
   factory _$AllEmailResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$AllEmailResponseImplFromJson(json);
@@ -216,39 +227,18 @@ class _$AllEmailResponseImpl implements _AllEmailResponse {
   final int? idTrangThai;
   @override
   final String? createdDate;
-  final List<NguoiNhan>? _listNguoiNhan;
   @override
-  List<NguoiNhan>? get listNguoiNhan {
-    final value = _listNguoiNhan;
-    if (value == null) return null;
-    if (_listNguoiNhan is EqualUnmodifiableListView) return _listNguoiNhan;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<dynamic>? _listFile;
+  final String? listNguoiNhan;
   @override
-  List<dynamic>? get listFile {
-    final value = _listFile;
-    if (value == null) return null;
-    if (_listFile is EqualUnmodifiableListView) return _listFile;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  final List<NguoiGui>? _listNguoiGui;
+  final String? listFile;
   @override
-  List<NguoiGui>? get listNguoiGui {
-    final value = _listNguoiGui;
-    if (value == null) return null;
-    if (_listNguoiGui is EqualUnmodifiableListView) return _listNguoiGui;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  final String? listNguoiGui;
+  @override
+  final String? emailType;
 
   @override
   String toString() {
-    return 'AllEmailResponse(id: $id, noiDung: $noiDung, tieuDe: $tieuDe, idTrangThai: $idTrangThai, createdDate: $createdDate, listNguoiNhan: $listNguoiNhan, listFile: $listFile, listNguoiGui: $listNguoiGui)';
+    return 'AllEmailResponse(id: $id, noiDung: $noiDung, tieuDe: $tieuDe, idTrangThai: $idTrangThai, createdDate: $createdDate, listNguoiNhan: $listNguoiNhan, listFile: $listFile, listNguoiGui: $listNguoiGui, emailType: $emailType)';
   }
 
   @override
@@ -263,25 +253,20 @@ class _$AllEmailResponseImpl implements _AllEmailResponse {
                 other.idTrangThai == idTrangThai) &&
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
-            const DeepCollectionEquality()
-                .equals(other._listNguoiNhan, _listNguoiNhan) &&
-            const DeepCollectionEquality().equals(other._listFile, _listFile) &&
-            const DeepCollectionEquality()
-                .equals(other._listNguoiGui, _listNguoiGui));
+            (identical(other.listNguoiNhan, listNguoiNhan) ||
+                other.listNguoiNhan == listNguoiNhan) &&
+            (identical(other.listFile, listFile) ||
+                other.listFile == listFile) &&
+            (identical(other.listNguoiGui, listNguoiGui) ||
+                other.listNguoiGui == listNguoiGui) &&
+            (identical(other.emailType, emailType) ||
+                other.emailType == emailType));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      noiDung,
-      tieuDe,
-      idTrangThai,
-      createdDate,
-      const DeepCollectionEquality().hash(_listNguoiNhan),
-      const DeepCollectionEquality().hash(_listFile),
-      const DeepCollectionEquality().hash(_listNguoiGui));
+  int get hashCode => Object.hash(runtimeType, id, noiDung, tieuDe, idTrangThai,
+      createdDate, listNguoiNhan, listFile, listNguoiGui, emailType);
 
   @JsonKey(ignore: true)
   @override
@@ -305,9 +290,10 @@ abstract class _AllEmailResponse implements AllEmailResponse {
       final String? tieuDe,
       final int? idTrangThai,
       final String? createdDate,
-      final List<NguoiNhan>? listNguoiNhan,
-      final List<dynamic>? listFile,
-      final List<NguoiGui>? listNguoiGui}) = _$AllEmailResponseImpl;
+      final String? listNguoiNhan,
+      final String? listFile,
+      final String? listNguoiGui,
+      final String? emailType}) = _$AllEmailResponseImpl;
 
   factory _AllEmailResponse.fromJson(Map<String, dynamic> json) =
       _$AllEmailResponseImpl.fromJson;
@@ -323,391 +309,15 @@ abstract class _AllEmailResponse implements AllEmailResponse {
   @override
   String? get createdDate;
   @override
-  List<NguoiNhan>? get listNguoiNhan;
+  String? get listNguoiNhan;
   @override
-  List<dynamic>? get listFile;
+  String? get listFile;
   @override
-  List<NguoiGui>? get listNguoiGui;
+  String? get listNguoiGui;
+  @override
+  String? get emailType;
   @override
   @JsonKey(ignore: true)
   _$$AllEmailResponseImplCopyWith<_$AllEmailResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-NguoiNhan _$NguoiNhanFromJson(Map<String, dynamic> json) {
-  return _NguoiNhan.fromJson(json);
-}
-
-/// @nodoc
-mixin _$NguoiNhan {
-  int? get id => throw _privateConstructorUsedError;
-  String? get username => throw _privateConstructorUsedError;
-  String? get fullName => throw _privateConstructorUsedError;
-  String? get email => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $NguoiNhanCopyWith<NguoiNhan> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $NguoiNhanCopyWith<$Res> {
-  factory $NguoiNhanCopyWith(NguoiNhan value, $Res Function(NguoiNhan) then) =
-      _$NguoiNhanCopyWithImpl<$Res, NguoiNhan>;
-  @useResult
-  $Res call({int? id, String? username, String? fullName, String? email});
-}
-
-/// @nodoc
-class _$NguoiNhanCopyWithImpl<$Res, $Val extends NguoiNhan>
-    implements $NguoiNhanCopyWith<$Res> {
-  _$NguoiNhanCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? username = freezed,
-    Object? fullName = freezed,
-    Object? email = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fullName: freezed == fullName
-          ? _value.fullName
-          : fullName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$NguoiNhanImplCopyWith<$Res>
-    implements $NguoiNhanCopyWith<$Res> {
-  factory _$$NguoiNhanImplCopyWith(
-          _$NguoiNhanImpl value, $Res Function(_$NguoiNhanImpl) then) =
-      __$$NguoiNhanImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int? id, String? username, String? fullName, String? email});
-}
-
-/// @nodoc
-class __$$NguoiNhanImplCopyWithImpl<$Res>
-    extends _$NguoiNhanCopyWithImpl<$Res, _$NguoiNhanImpl>
-    implements _$$NguoiNhanImplCopyWith<$Res> {
-  __$$NguoiNhanImplCopyWithImpl(
-      _$NguoiNhanImpl _value, $Res Function(_$NguoiNhanImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? username = freezed,
-    Object? fullName = freezed,
-    Object? email = freezed,
-  }) {
-    return _then(_$NguoiNhanImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fullName: freezed == fullName
-          ? _value.fullName
-          : fullName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$NguoiNhanImpl implements _NguoiNhan {
-  _$NguoiNhanImpl({this.id, this.username, this.fullName, this.email});
-
-  factory _$NguoiNhanImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NguoiNhanImplFromJson(json);
-
-  @override
-  final int? id;
-  @override
-  final String? username;
-  @override
-  final String? fullName;
-  @override
-  final String? email;
-
-  @override
-  String toString() {
-    return 'NguoiNhan(id: $id, username: $username, fullName: $fullName, email: $email)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NguoiNhanImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.fullName, fullName) ||
-                other.fullName == fullName) &&
-            (identical(other.email, email) || other.email == email));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, username, fullName, email);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NguoiNhanImplCopyWith<_$NguoiNhanImpl> get copyWith =>
-      __$$NguoiNhanImplCopyWithImpl<_$NguoiNhanImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NguoiNhanImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _NguoiNhan implements NguoiNhan {
-  factory _NguoiNhan(
-      {final int? id,
-      final String? username,
-      final String? fullName,
-      final String? email}) = _$NguoiNhanImpl;
-
-  factory _NguoiNhan.fromJson(Map<String, dynamic> json) =
-      _$NguoiNhanImpl.fromJson;
-
-  @override
-  int? get id;
-  @override
-  String? get username;
-  @override
-  String? get fullName;
-  @override
-  String? get email;
-  @override
-  @JsonKey(ignore: true)
-  _$$NguoiNhanImplCopyWith<_$NguoiNhanImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-NguoiGui _$NguoiGuiFromJson(Map<String, dynamic> json) {
-  return _NguoiGui.fromJson(json);
-}
-
-/// @nodoc
-mixin _$NguoiGui {
-  int? get id => throw _privateConstructorUsedError;
-  String? get username => throw _privateConstructorUsedError;
-  String? get fullName => throw _privateConstructorUsedError;
-  String? get email => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $NguoiGuiCopyWith<NguoiGui> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $NguoiGuiCopyWith<$Res> {
-  factory $NguoiGuiCopyWith(NguoiGui value, $Res Function(NguoiGui) then) =
-      _$NguoiGuiCopyWithImpl<$Res, NguoiGui>;
-  @useResult
-  $Res call({int? id, String? username, String? fullName, String? email});
-}
-
-/// @nodoc
-class _$NguoiGuiCopyWithImpl<$Res, $Val extends NguoiGui>
-    implements $NguoiGuiCopyWith<$Res> {
-  _$NguoiGuiCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? username = freezed,
-    Object? fullName = freezed,
-    Object? email = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fullName: freezed == fullName
-          ? _value.fullName
-          : fullName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$NguoiGuiImplCopyWith<$Res>
-    implements $NguoiGuiCopyWith<$Res> {
-  factory _$$NguoiGuiImplCopyWith(
-          _$NguoiGuiImpl value, $Res Function(_$NguoiGuiImpl) then) =
-      __$$NguoiGuiImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int? id, String? username, String? fullName, String? email});
-}
-
-/// @nodoc
-class __$$NguoiGuiImplCopyWithImpl<$Res>
-    extends _$NguoiGuiCopyWithImpl<$Res, _$NguoiGuiImpl>
-    implements _$$NguoiGuiImplCopyWith<$Res> {
-  __$$NguoiGuiImplCopyWithImpl(
-      _$NguoiGuiImpl _value, $Res Function(_$NguoiGuiImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? username = freezed,
-    Object? fullName = freezed,
-    Object? email = freezed,
-  }) {
-    return _then(_$NguoiGuiImpl(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      fullName: freezed == fullName
-          ? _value.fullName
-          : fullName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      email: freezed == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$NguoiGuiImpl implements _NguoiGui {
-  _$NguoiGuiImpl({this.id, this.username, this.fullName, this.email});
-
-  factory _$NguoiGuiImpl.fromJson(Map<String, dynamic> json) =>
-      _$$NguoiGuiImplFromJson(json);
-
-  @override
-  final int? id;
-  @override
-  final String? username;
-  @override
-  final String? fullName;
-  @override
-  final String? email;
-
-  @override
-  String toString() {
-    return 'NguoiGui(id: $id, username: $username, fullName: $fullName, email: $email)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$NguoiGuiImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.fullName, fullName) ||
-                other.fullName == fullName) &&
-            (identical(other.email, email) || other.email == email));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(runtimeType, id, username, fullName, email);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$NguoiGuiImplCopyWith<_$NguoiGuiImpl> get copyWith =>
-      __$$NguoiGuiImplCopyWithImpl<_$NguoiGuiImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$NguoiGuiImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class _NguoiGui implements NguoiGui {
-  factory _NguoiGui(
-      {final int? id,
-      final String? username,
-      final String? fullName,
-      final String? email}) = _$NguoiGuiImpl;
-
-  factory _NguoiGui.fromJson(Map<String, dynamic> json) =
-      _$NguoiGuiImpl.fromJson;
-
-  @override
-  int? get id;
-  @override
-  String? get username;
-  @override
-  String? get fullName;
-  @override
-  String? get email;
-  @override
-  @JsonKey(ignore: true)
-  _$$NguoiGuiImplCopyWith<_$NguoiGuiImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

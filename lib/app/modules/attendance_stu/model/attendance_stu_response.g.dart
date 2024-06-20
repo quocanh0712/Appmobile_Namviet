@@ -12,14 +12,12 @@ AttendanceStuResponse? jsonToNullableAttendanceStuResponse(Object? json) =>
 AttendanceStuResponse jsonToAttendanceStuResponse(Object? json) =>
     AttendanceStuResponse.fromJson(json as Map<String, dynamic>);
 
-List<AttendanceStuResponse?> jsonToListNullableAttendanceStuResponse(
-    Object? json) =>
+List<AttendanceStuResponse?> jsonToListNullableAttendanceStuResponse(Object? json) =>
     List<Object>.from(json as List)
         .map((e) => AttendanceStuResponse.fromJson(e as Map<String, dynamic>))
         .toList();
 
-List<AttendanceStuResponse> jsonToListAttendanceStuResponse(
-    Object? json) =>
+List<AttendanceStuResponse> jsonToListAttendanceStuResponse(Object? json) =>
     List<Object>.from(json as List)
         .map((e) => AttendanceStuResponse.fromJson(e as Map<String, dynamic>))
         .toList();

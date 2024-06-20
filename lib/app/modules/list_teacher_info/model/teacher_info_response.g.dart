@@ -23,6 +23,7 @@ List<TeacherInfoResponse> jsonToListTeacherInfoResponses(Object? json) =>
         .map((e) => TeacherInfoResponse.fromJson(e as Map<String, dynamic>))
         .toList();
 
+
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************

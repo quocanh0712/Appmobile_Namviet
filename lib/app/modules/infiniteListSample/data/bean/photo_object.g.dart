@@ -9,16 +9,15 @@ part of 'photo_object.dart';
 PhotoObject? jsonToNullablePhotoObject(Object? json) =>
     PhotoObject.fromJson(json as Map<String, dynamic>);
 
-PhotoObject jsonToSemesterPointObject(Object? json) =>
+PhotoObject jsonToPhotoObject(Object? json) =>
     PhotoObject.fromJson(json as Map<String, dynamic>);
 
-List<PhotoObject?> jsonToListNullablePhotoObject(
-    Object? json) =>
+List<PhotoObject?> jsonToListNullablePhotoObjects(Object? json) =>
     List<Object>.from(json as List)
         .map((e) => PhotoObject.fromJson(e as Map<String, dynamic>))
         .toList();
 
-List<PhotoObject> jsonToListPhotoObject(Object? json) =>
+List<PhotoObject> jsonToListPhotoObjects(Object? json) =>
     List<Object>.from(json as List)
         .map((e) => PhotoObject.fromJson(e as Map<String, dynamic>))
         .toList();

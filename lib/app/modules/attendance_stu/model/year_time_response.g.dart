@@ -12,14 +12,12 @@ YearTimeResponse? jsonToNullableYearTimeResponse(Object? json) =>
 YearTimeResponse jsonToYearTimeResponse(Object? json) =>
     YearTimeResponse.fromJson(json as Map<String, dynamic>);
 
-List<YearTimeResponse?> jsonToListNullableYearTimeResponse(
-    Object? json) =>
+List<YearTimeResponse?> jsonToListNullableYearTimeResponse(Object? json) =>
     List<Object>.from(json as List)
         .map((e) => YearTimeResponse.fromJson(e as Map<String, dynamic>))
         .toList();
 
-List<YearTimeResponse> jsonToListYearTimeResponse(
-    Object? json) =>
+List<YearTimeResponse> jsonToListYearTimeResponse(Object? json) =>
     List<Object>.from(json as List)
         .map((e) => YearTimeResponse.fromJson(e as Map<String, dynamic>))
         .toList();

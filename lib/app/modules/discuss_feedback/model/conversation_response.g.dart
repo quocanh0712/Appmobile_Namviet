@@ -23,7 +23,6 @@ List<ConversationResponse> jsonToListConversationResponses(Object? json) =>
         .map((e) => ConversationResponse.fromJson(e as Map<String, dynamic>))
         .toList();
 
-
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************

@@ -23,6 +23,7 @@ List<SemesterPointObject> jsonToListSemesterPointObjects(Object? json) =>
         .map((e) => SemesterPointObject.fromJson(e as Map<String, dynamic>))
         .toList();
 
+
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
