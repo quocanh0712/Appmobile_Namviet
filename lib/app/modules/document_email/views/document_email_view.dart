@@ -10,7 +10,6 @@ import 'package:random_color/random_color.dart';
 
 import 'create_email/views/create_email_view.dart';
 
-
 class DocumentEmailView extends StatefulWidget {
   DocumentEmailView({super.key});
 
@@ -40,11 +39,10 @@ class _DocumentEmailViewState extends State<DocumentEmailView> {
               setState(() {
                 controller.isSearching = !controller.isSearching;
                 if (!controller.isSearching) {
-              // Đặt lại danh sách email
+                  // Reset email list
                   controller.filterEmailList('');
                   controller.isSearching = false;
                   controller.searchController.clear();
-
                 }
               });
             },
@@ -70,8 +68,13 @@ class _DocumentEmailViewState extends State<DocumentEmailView> {
               }),
             ),
             Expanded(
-              child: GetBuilder<DocumentEmailController>(builder: (controller) {
-                return _buildTabBarView(controller);
+              child: Obx(() {
+                return GestureDetector(
+                  onHorizontalDragUpdate: controller.isLoading.value ? (_) {} : null,
+                  child: GetBuilder<DocumentEmailController>(builder: (controller) {
+                    return _buildTabBarView(controller);
+                  }),
+                );
               }),
             ),
           ],
@@ -134,6 +137,7 @@ class _DocumentEmailViewState extends State<DocumentEmailView> {
     );
   }
 
+
   TabBar _buildTabBar(DocumentEmailController controller) {
     return TabBar(
       controller: controller.tabController,
@@ -171,12 +175,19 @@ class _DocumentEmailViewState extends State<DocumentEmailView> {
         fontWeight: FontWeight.bold,
         fontSize: 12.sp,
       ),
+      onTap: (index) {
+        if (controller.isLoading.value) {
+          // Prevent tab switch
+          controller.tabController.index = controller.currentTab.value;
+        }
+      },
     );
   }
 
   TabBarView _buildTabBarView(DocumentEmailController controller) {
     return TabBarView(
       controller: controller.tabController,
+      physics: NeverScrollableScrollPhysics(),
       children: [
         _buildEmailList(controller, 0),
         _buildEmailList(controller, 1),
@@ -187,14 +198,6 @@ class _DocumentEmailViewState extends State<DocumentEmailView> {
   }
 
 
-  // startActionPane: ActionPane(
-  // motion: StretchMotion(), children: [
-  // SlidableAction(
-  // backgroundColor: Colors.red,
-  // icon: CupertinoIcons.trash,
-  // onPressed: (context) => controller.refreshEmailList())
-  // ],
-  // ),
 
 
 
@@ -220,10 +223,8 @@ class _DocumentEmailViewState extends State<DocumentEmailView> {
             final displayNameWidget = userInfo['displayNameWidget'] as Widget?;
             final emailId = email?.id ?? index.toString();
 
-            return GestureDetector(
-              onTap: (){
-                Get.to(() => DetailEmailView(), transition: Transition.fade);
-              },
+            return InkWell(
+              onTap: () => controller.navigateToDetailEmail(index),
               child: Dismissible(
                 key: ValueKey(emailId),
                 background: Container(
@@ -367,4 +368,5 @@ class _DocumentEmailViewState extends State<DocumentEmailView> {
     return input;
   }
 }
+
 

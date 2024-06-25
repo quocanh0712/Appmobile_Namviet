@@ -7,12 +7,12 @@ import 'package:google_fonts/google_fonts.dart';
 
 class CustomChip extends StatelessWidget {
   final String label;
-  final VoidCallback onDeleted;
+  final VoidCallback? onDeleted;
 
   const CustomChip({
     Key? key,
     required this.label,
-    required this.onDeleted,
+    this.onDeleted,
   }) : super(key: key);
 
   @override
@@ -22,7 +22,7 @@ class CustomChip extends StatelessWidget {
         maxWidth: 200.w,
         minWidth: 50.w,
         minHeight: 20.h,
-        maxHeight: 20.h
+        maxHeight: 20.h,
       ),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -39,29 +39,52 @@ class CustomChip extends StatelessWidget {
           ),
         ],
       ),
-      child: Padding(
+      child: onDeleted != null ? Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.0),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
+             Text(
               label,
               style: GoogleFonts.openSans(
                 color: Colors.black,
                 fontWeight: FontWeight.w500,
                 fontSize: 12.sp,
               ),
-              textAlign: TextAlign.left,
-            ),
+              textAlign:  TextAlign.left,
+            ) ,
             SizedBox(width: 8),
-            GestureDetector(
-              onTap: onDeleted,
-              child: Icon(
-                Icons.close,
-                size: 16,
-                color: Colors.grey,
+            if (onDeleted != null)
+              GestureDetector(
+                onTap: onDeleted,
+                child: Icon(
+                  Icons.close,
+                  size: 16,
+                  color: Colors.grey,
+                ),
               ),
-            ),
+          ],
+        ),
+      ) : Padding(
+        padding:  EdgeInsets.symmetric(horizontal: 8.sp,vertical: 1.w ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Column(
+              children: [
+                Text(
+                  label,
+                  style: GoogleFonts.openSans(
+                    color: Colors.grey.shade700,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 12.sp,
+                  ),
+                  textAlign:  TextAlign.center,
+                ),
+                SizedBox(height: 2.sp,)
+              ],
+            ) ,
+
           ],
         ),
       ),

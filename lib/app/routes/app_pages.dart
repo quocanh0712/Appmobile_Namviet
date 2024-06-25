@@ -149,6 +149,7 @@ import '../modules/detail_conversation/views/detail_conversation_view.dart';
 import '../modules/discuss_feedback/bindings/discuss_feedback_binding.dart';
 import '../modules/discuss_feedback/views/discuss_feedback_view.dart';
 import '../modules/document_email/bindings/document_email_binding.dart';
+import '../modules/document_email/views/detail_email/controllers/detail_email_controller.dart';
 import '../modules/document_email/views/document_email_view.dart';
 import '../modules/document_form/bindings/document_form_binding.dart';
 import '../modules/document_form/views/document_form_view.dart';
@@ -1093,9 +1094,11 @@ class AppPages {
       binding: CreateEmailBinding(),
     ),
     GetPage(
-      name: _Paths.DETAIL_EMAIL,
-      page: () =>  DetailEmailView(),
-      binding: DetailEmailBinding(),
+      name: Routes.DETAIL_EMAIL,
+      page: () => DetailEmailView(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<DetailEmailController>(() => DetailEmailController());
+      }),
     ),
 
 

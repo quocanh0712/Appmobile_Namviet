@@ -61,7 +61,35 @@ class DocumentEmailController extends BaseController with GetSingleTickerProvide
     super.onClose();
   }
 
+  // void _handleTabSelection() {
+  //   if (tabController.indexIsChanging) {
+  //     currentTab.value = tabController.index;
+  //     dataLoaded.value = false;
+  //     loadingTabIndex.value = tabController.index;
+  //     switch (tabController.index) {
+  //       case 0:
+  //         loadEmailList(1, 0);
+  //         break;
+  //       case 1:
+  //         loadEmailList(2, 0);
+  //         break;
+  //       case 2:
+  //         loadEmailList(0, 1);
+  //         break;
+  //       case 3:
+  //         loadEmailList(0, 0);
+  //         break;
+  //     }
+  //   }
+  // }
+
   void _handleTabSelection() {
+    if (isLoading.value) {
+
+      tabController.index = currentTab.value;
+      return;
+    }
+
     if (tabController.indexIsChanging) {
       currentTab.value = tabController.index;
       dataLoaded.value = false;
@@ -82,6 +110,9 @@ class DocumentEmailController extends BaseController with GetSingleTickerProvide
       }
     }
   }
+
+
+
   Future<void> refreshEmailList() async {
     switch (currentTab.value) {
       case 0:
@@ -248,32 +279,6 @@ class DocumentEmailController extends BaseController with GetSingleTickerProvide
   }
 
 
-
-  // Map<String, String> getUsernameForEmail(AllEmailResponse? email) {
-  //   String fullName = '';
-  //   switch (currentTab.value) {
-  //     case 0: // Thư đến
-  //       fullName = (email?.listNguoiGui != null && email!.listNguoiGui!.isNotEmpty)
-  //           ? email.listNguoiGui ?? ''
-  //           : '';
-  //       break;
-  //     case 1: // Thư đi
-  //       fullName = (email?.listNguoiNhan != null && email!.listNguoiNhan!.isNotEmpty)
-  //           ? 'Đến : ${formatListNguoiNhan(email.listNguoiNhan ?? '')}'
-  //           : '';
-  //       break;
-  //     case 2: // Nháp
-  //       fullName = (email?.listNguoiNhan != null && email!.listNguoiNhan!.isNotEmpty )
-  //                 ? 'Đến : ${formatListNguoiNhan(email.listNguoiNhan ?? '')}'
-  //                 : '';
-  //       break;
-  //   }
-  //   String initial = fullName.replaceFirst('Đến : ', '').isNotEmpty
-  //       ? fullName.replaceFirst('Đến : ', '')[0].toUpperCase()
-  //       : '';
-  //   return {'fullName': fullName, 'initial': initial};
-  // }
-
   Map<String, dynamic> getUsernameForEmail(AllEmailResponse? email) {
     String fullName = '';
     Widget? displayNameWidget;
@@ -309,8 +314,8 @@ class DocumentEmailController extends BaseController with GetSingleTickerProvide
         break;
     }
 
-    String initial = fullName.replaceFirst('Đến : ', '').isNotEmpty
-        ? fullName.replaceFirst('Đến : ', '')[0].toUpperCase()
+    String initial = fullName.replaceFirst('Đến: ', '').isNotEmpty
+        ? fullName.replaceFirst('Đến: ', '')[0].toUpperCase()
         : '';
 
     return {'fullName': fullName, 'initial': initial, 'displayNameWidget': displayNameWidget};
@@ -332,9 +337,9 @@ class DocumentEmailController extends BaseController with GetSingleTickerProvide
     Get.toNamed(Routes.CREATE_EMAIL);
   }
 
-  void navigateToDetailEmail() {
+  void navigateToDetailEmail(int index) {
     Fimber.d("navigateToDetailEmail()");
-    Get.toNamed(Routes.DETAIL_EMAIL);
+    Get.toNamed(Routes.DETAIL_EMAIL , arguments: listEmail[index]);
   }
 
   void showLoadingIndicator() {

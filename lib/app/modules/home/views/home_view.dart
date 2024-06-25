@@ -1808,7 +1808,7 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
       //   // onTap: () => controller.navigateToTextAway(),
       // ),
 
-      // // van ban di
+      //  van ban di
       _buildListFeatureItem(
         context,
         background: Container(
@@ -1827,8 +1827,8 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
           fit: BoxFit.cover,
         ),
         title: LocaleKeys.textAway.tr,
-        // onTap: () => controller.navigateToTextAway(),
-        onTap: () => _showNotificationDialog(context),
+         //onTap: () => controller.navigateToPracticePointOverview(),
+       // onTap: () => _showNotificationDialog(context),
       ),
 
       // // van ban den
@@ -3783,6 +3783,22 @@ class HomeView extends BaseBindingCreatorView<HomeBinding, HomeController> {
     ];
 //student1
     List<Widget> administrative = [
+
+      _buildListFeatureItem(
+        context,
+        background: Container(
+          color: Colors.green,
+        ),
+        image: const Image(
+          image: AssetImage(
+            'assets/Icon/85.png',
+          ),
+          fit: BoxFit.cover,
+        ),
+        title: LocaleKeys.evaluateTrainingPoint.tr,
+        onTap: () => controller.navigateToPracticePointOverview(),
+
+      ),
       _buildListFeatureItem(
         context,
         background: Container(
