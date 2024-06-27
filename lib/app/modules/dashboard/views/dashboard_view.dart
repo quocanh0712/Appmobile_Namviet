@@ -391,9 +391,9 @@ class _DashboardViewState extends State<DashboardView> {
       print('---------$tabIndex');
     }
 
-    //Kiểm tra nếu người dùng chọn tab "Chat", thì hiển thị thông báo
+    //Kiểm tra nếu người dùng chọn tab Chat, thì hiển thị thông báo
     if (tabIndex == 1) {
-      showChatNotificationDialog(context, tabIndex);
+     // showChatNotificationDialog(context, tabIndex);
 
       print('---------$tabIndex');
     }

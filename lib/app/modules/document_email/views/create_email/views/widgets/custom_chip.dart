@@ -21,8 +21,8 @@ class CustomChip extends StatelessWidget {
       constraints: BoxConstraints(
         maxWidth: 200.w,
         minWidth: 50.w,
-        minHeight: 20.h,
-        maxHeight: 20.h,
+        minHeight: 22.h,
+        maxHeight: 22.h,
       ),
       decoration: BoxDecoration(
         color: Colors.white,

@@ -9,6 +9,9 @@ import 'package:ftu_lms/app/modules/attendance_stu/model/attendance_stu_response
 import 'package:ftu_lms/app/modules/attendance_stu/model/year_time_response.dart';
 import 'package:ftu_lms/app/modules/attendance_stu/views/list_lesson/model/list_lesson_response.dart';
 import 'package:ftu_lms/app/modules/attendance_stu/views/list_student_attendance/model/list_student_attendance_response.dart';
+import 'package:ftu_lms/app/modules/chat/models/all_member_response.dart';
+import 'package:ftu_lms/app/modules/chat/models/all_message_response.dart';
+import 'package:ftu_lms/app/modules/chat/models/all_room_response.dart';
 import 'package:ftu_lms/app/modules/detail_conversation/model/comment_conversation.dart';
 import 'package:ftu_lms/app/modules/discuss_feedback/model/conversation_response.dart';
 import 'package:ftu_lms/app/modules/document_email/views/create_email/models/all_user_response.dart';
@@ -140,6 +143,21 @@ extension NetworkResponseConverter on BaseResponseObject {
     if (this is BaseResponseObject<List<ScheduleTimeResponse?>?>) {
       return BaseResponseObject<List<ScheduleTimeResponse?>?>.fromJson(
           json, jsonToListNullableScheduleTimeResponses);
+    }
+
+    if (this is BaseResponseObject<List<AllRoomResponse?>?>) {
+      return BaseResponseObject<List<AllRoomResponse?>?>.fromJson(
+          json, jsonToListNullableAllRoomResponse);
+    }
+
+    if (this is BaseResponseObject<List<AllMemberResponse?>?>) {
+      return BaseResponseObject<List<AllMemberResponse?>?>.fromJson(
+          json, jsonToListNullableAllMemberResponse);
+    }
+
+    if (this is BaseResponseObject<List<AllMessageResponse?>?>) {
+      return BaseResponseObject<List<AllMessageResponse?>?>.fromJson(
+          json, jsonToListNullableAllMessageResponse);
     }
     if (this is BaseResponseObject<List<ScheduleDailyResponse?>?>) {
       return BaseResponseObject<List<ScheduleDailyResponse?>?>.fromJson(

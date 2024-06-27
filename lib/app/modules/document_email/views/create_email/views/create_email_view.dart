@@ -41,7 +41,7 @@ class _CreateEmailViewState extends State<CreateEmailView> {
         onPressed: () async {
           bool shouldPop = await controller.onWillPop();
           if (shouldPop) {
-            Get.back();
+            Get.back(result: 'refresh');
           }
         },
       ),

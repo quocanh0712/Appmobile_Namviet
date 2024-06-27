@@ -137,6 +137,8 @@ class DocumentEmailController extends BaseController with GetSingleTickerProvide
 
 
 
+
+
   Future<void> loadEmailList(int loai, int phanLoai) async {
     if (isLoading.value) return;
     isLoading.value = true;
@@ -336,6 +338,8 @@ class DocumentEmailController extends BaseController with GetSingleTickerProvide
     Fimber.d("navigateToCreateEmail()");
     Get.toNamed(Routes.CREATE_EMAIL);
   }
+
+
 
   void navigateToDetailEmail(int index) {
     Fimber.d("navigateToDetailEmail()");
