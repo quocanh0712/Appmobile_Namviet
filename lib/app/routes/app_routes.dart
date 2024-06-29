@@ -162,6 +162,7 @@ abstract class Routes {
   static const DOCUMENT_PDF = _Paths.DOCUMENT_PDF;
   static const CREATE_EMAIL = _Paths.CREATE_EMAIL;
   static const DETAIL_EMAIL = _Paths.DETAIL_EMAIL;
+  static const CHAT_MESSAGE = _Paths.CHAT_MESSAGE;
 
 
 }
@@ -323,4 +324,5 @@ abstract class _Paths {
   static const DOCUMENT_PDF = '/document_pdf';
   static const CREATE_EMAIL = '/create_email';
   static const DETAIL_EMAIL = '/detail_email';
+  static const CHAT_MESSAGE = '/chat_message';
 }

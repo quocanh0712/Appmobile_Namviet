@@ -14,9 +14,10 @@ AllMessageRequest allMessageRequestFromJson(String str) =>
     AllMessageRequest.fromJson(json.decode(str));
 
 String allMessageRequestToJson(AllMessageRequest data) => json.encode(data.toJson());
+
+
+
 @freezed
-
-
 class AllMessageRequest with _$AllMessageRequest {
   factory AllMessageRequest({
     String? iduser,

@@ -21,7 +21,9 @@ class AllRoomResponse with _$AllRoomResponse {
     int? id,
     String? roomName,
     String? createdDate,
-    String? createdBy
+    String? createdBy,
+    int? totalMember,
+    String? lastMessage,
 
   }) = _AllRoomResponse;
 

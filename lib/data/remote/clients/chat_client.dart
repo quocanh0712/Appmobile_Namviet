@@ -49,7 +49,7 @@ class ChatClient extends BaseClientGenerator with _$ChatClient {
       getAllMemberInRoom: (model) => '/AllMember',
       getAllMessageInRoom: (model) => '/AllMessage',
       createRoom: (model) => '/CreateRoom',
-      sendMessage: (model) => '/Send',
+      sendMessage: (model) => '/SendMessage',
       orElse: () => '',
     );
   }

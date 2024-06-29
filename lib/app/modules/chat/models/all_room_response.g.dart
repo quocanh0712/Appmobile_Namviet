@@ -34,6 +34,8 @@ _$AllRoomResponseImpl _$$AllRoomResponseImplFromJson(
       roomName: json['roomName'] as String?,
       createdDate: json['createdDate'] as String?,
       createdBy: json['createdBy'] as String?,
+      totalMember: json['totalMember'] as int?,
+      lastMessage: json['lastMessage'] as String?,
     );
 
 Map<String, dynamic> _$$AllRoomResponseImplToJson(
@@ -43,4 +45,6 @@ Map<String, dynamic> _$$AllRoomResponseImplToJson(
       'roomName': instance.roomName,
       'createdDate': instance.createdDate,
       'createdBy': instance.createdBy,
+      'totalMember': instance.totalMember,
+      'lastMessage': instance.lastMessage,
     };

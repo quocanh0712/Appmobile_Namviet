@@ -24,8 +24,7 @@ mixin _$AllMessageResponse {
   String? get iduser => throw _privateConstructorUsedError;
   String? get message => throw _privateConstructorUsedError;
   int? get idRoom => throw _privateConstructorUsedError;
-  DateTime? get createdDate => throw _privateConstructorUsedError;
-  String? get seen => throw _privateConstructorUsedError;
+  String? get createdDate => throw _privateConstructorUsedError;
   bool? get isSeen => throw _privateConstructorUsedError;
   bool? get isMine => throw _privateConstructorUsedError;
 
@@ -46,8 +45,7 @@ abstract class $AllMessageResponseCopyWith<$Res> {
       String? iduser,
       String? message,
       int? idRoom,
-      DateTime? createdDate,
-      String? seen,
+      String? createdDate,
       bool? isSeen,
       bool? isMine});
 }
@@ -70,7 +68,6 @@ class _$AllMessageResponseCopyWithImpl<$Res, $Val extends AllMessageResponse>
     Object? message = freezed,
     Object? idRoom = freezed,
     Object? createdDate = freezed,
-    Object? seen = freezed,
     Object? isSeen = freezed,
     Object? isMine = freezed,
   }) {
@@ -94,10 +91,6 @@ class _$AllMessageResponseCopyWithImpl<$Res, $Val extends AllMessageResponse>
       createdDate: freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      seen: freezed == seen
-          ? _value.seen
-          : seen // ignore: cast_nullable_to_non_nullable
               as String?,
       isSeen: freezed == isSeen
           ? _value.isSeen
@@ -124,8 +117,7 @@ abstract class _$$AllMessageResponseImplCopyWith<$Res>
       String? iduser,
       String? message,
       int? idRoom,
-      DateTime? createdDate,
-      String? seen,
+      String? createdDate,
       bool? isSeen,
       bool? isMine});
 }
@@ -146,7 +138,6 @@ class __$$AllMessageResponseImplCopyWithImpl<$Res>
     Object? message = freezed,
     Object? idRoom = freezed,
     Object? createdDate = freezed,
-    Object? seen = freezed,
     Object? isSeen = freezed,
     Object? isMine = freezed,
   }) {
@@ -170,10 +161,6 @@ class __$$AllMessageResponseImplCopyWithImpl<$Res>
       createdDate: freezed == createdDate
           ? _value.createdDate
           : createdDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      seen: freezed == seen
-          ? _value.seen
-          : seen // ignore: cast_nullable_to_non_nullable
               as String?,
       isSeen: freezed == isSeen
           ? _value.isSeen
@@ -196,7 +183,6 @@ class _$AllMessageResponseImpl implements _AllMessageResponse {
       this.message,
       this.idRoom,
       this.createdDate,
-      this.seen,
       this.isSeen,
       this.isMine});
 
@@ -212,9 +198,7 @@ class _$AllMessageResponseImpl implements _AllMessageResponse {
   @override
   final int? idRoom;
   @override
-  final DateTime? createdDate;
-  @override
-  final String? seen;
+  final String? createdDate;
   @override
   final bool? isSeen;
   @override
@@ -222,7 +206,7 @@ class _$AllMessageResponseImpl implements _AllMessageResponse {
 
   @override
   String toString() {
-    return 'AllMessageResponse(id: $id, iduser: $iduser, message: $message, idRoom: $idRoom, createdDate: $createdDate, seen: $seen, isSeen: $isSeen, isMine: $isMine)';
+    return 'AllMessageResponse(id: $id, iduser: $iduser, message: $message, idRoom: $idRoom, createdDate: $createdDate, isSeen: $isSeen, isMine: $isMine)';
   }
 
   @override
@@ -236,15 +220,14 @@ class _$AllMessageResponseImpl implements _AllMessageResponse {
             (identical(other.idRoom, idRoom) || other.idRoom == idRoom) &&
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
-            (identical(other.seen, seen) || other.seen == seen) &&
             (identical(other.isSeen, isSeen) || other.isSeen == isSeen) &&
             (identical(other.isMine, isMine) || other.isMine == isMine));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, iduser, message, idRoom,
-      createdDate, seen, isSeen, isMine);
+  int get hashCode => Object.hash(
+      runtimeType, id, iduser, message, idRoom, createdDate, isSeen, isMine);
 
   @JsonKey(ignore: true)
   @override
@@ -267,8 +250,7 @@ abstract class _AllMessageResponse implements AllMessageResponse {
       final String? iduser,
       final String? message,
       final int? idRoom,
-      final DateTime? createdDate,
-      final String? seen,
+      final String? createdDate,
       final bool? isSeen,
       final bool? isMine}) = _$AllMessageResponseImpl;
 
@@ -284,9 +266,7 @@ abstract class _AllMessageResponse implements AllMessageResponse {
   @override
   int? get idRoom;
   @override
-  DateTime? get createdDate;
-  @override
-  String? get seen;
+  String? get createdDate;
   @override
   bool? get isSeen;
   @override

@@ -6,7 +6,7 @@ import 'package:ftu_lms/app/modules/document_email/controllers/document_email_co
 import 'package:ftu_lms/app/modules/document_email/views/detail_email/views/detail_email_view.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:random_color/random_color.dart';
+
 
 import 'create_email/views/create_email_view.dart';
 

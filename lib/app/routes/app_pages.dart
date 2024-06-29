@@ -21,6 +21,8 @@ import 'package:ftu_lms/app/modules/attendance_stu/bindings/attendance_stu_bindi
 import 'package:ftu_lms/app/modules/attendance_stu/views/attendance_stu_view.dart';
 import 'package:ftu_lms/app/modules/attendance_stu/views/list_lesson/bindings/list_lesson_binding.dart';
 import 'package:ftu_lms/app/modules/attendance_stu/views/list_student_attendance/views/list_student_attendance_view.dart';
+import 'package:ftu_lms/app/modules/chat/views/chat_message/bindings/chat_message_binding.dart';
+import 'package:ftu_lms/app/modules/chat/views/chat_message/views/chat_message_view.dart';
 import 'package:ftu_lms/app/modules/class_official/bindings/class_official_binding.dart';
 import 'package:ftu_lms/app/modules/class_official/views/class_official_view.dart';
 import 'package:ftu_lms/app/modules/consultant/bindings/consultant_binding.dart';
@@ -1100,6 +1102,14 @@ class AppPages {
         Get.lazyPut<DetailEmailController>(() => DetailEmailController());
       }),
     ),
+    GetPage(
+      name: _Paths.CHAT_MESSAGE,
+      page: () => ChatMessageView(),
+      binding: ChatMessageBinding(),
+    ),
+
+ 
+
 
 
   ];

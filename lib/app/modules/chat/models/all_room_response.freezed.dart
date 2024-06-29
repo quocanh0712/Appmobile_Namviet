@@ -24,6 +24,8 @@ mixin _$AllRoomResponse {
   String? get roomName => throw _privateConstructorUsedError;
   String? get createdDate => throw _privateConstructorUsedError;
   String? get createdBy => throw _privateConstructorUsedError;
+  int? get totalMember => throw _privateConstructorUsedError;
+  String? get lastMessage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,7 +40,12 @@ abstract class $AllRoomResponseCopyWith<$Res> {
       _$AllRoomResponseCopyWithImpl<$Res, AllRoomResponse>;
   @useResult
   $Res call(
-      {int? id, String? roomName, String? createdDate, String? createdBy});
+      {int? id,
+      String? roomName,
+      String? createdDate,
+      String? createdBy,
+      int? totalMember,
+      String? lastMessage});
 }
 
 /// @nodoc
@@ -58,6 +65,8 @@ class _$AllRoomResponseCopyWithImpl<$Res, $Val extends AllRoomResponse>
     Object? roomName = freezed,
     Object? createdDate = freezed,
     Object? createdBy = freezed,
+    Object? totalMember = freezed,
+    Object? lastMessage = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -76,6 +85,14 @@ class _$AllRoomResponseCopyWithImpl<$Res, $Val extends AllRoomResponse>
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
               as String?,
+      totalMember: freezed == totalMember
+          ? _value.totalMember
+          : totalMember // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lastMessage: freezed == lastMessage
+          ? _value.lastMessage
+          : lastMessage // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -89,7 +106,12 @@ abstract class _$$AllRoomResponseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int? id, String? roomName, String? createdDate, String? createdBy});
+      {int? id,
+      String? roomName,
+      String? createdDate,
+      String? createdBy,
+      int? totalMember,
+      String? lastMessage});
 }
 
 /// @nodoc
@@ -107,6 +129,8 @@ class __$$AllRoomResponseImplCopyWithImpl<$Res>
     Object? roomName = freezed,
     Object? createdDate = freezed,
     Object? createdBy = freezed,
+    Object? totalMember = freezed,
+    Object? lastMessage = freezed,
   }) {
     return _then(_$AllRoomResponseImpl(
       id: freezed == id
@@ -125,6 +149,14 @@ class __$$AllRoomResponseImplCopyWithImpl<$Res>
           ? _value.createdBy
           : createdBy // ignore: cast_nullable_to_non_nullable
               as String?,
+      totalMember: freezed == totalMember
+          ? _value.totalMember
+          : totalMember // ignore: cast_nullable_to_non_nullable
+              as int?,
+      lastMessage: freezed == lastMessage
+          ? _value.lastMessage
+          : lastMessage // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -133,7 +165,12 @@ class __$$AllRoomResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AllRoomResponseImpl implements _AllRoomResponse {
   _$AllRoomResponseImpl(
-      {this.id, this.roomName, this.createdDate, this.createdBy});
+      {this.id,
+      this.roomName,
+      this.createdDate,
+      this.createdBy,
+      this.totalMember,
+      this.lastMessage});
 
   factory _$AllRoomResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$AllRoomResponseImplFromJson(json);
@@ -146,10 +183,14 @@ class _$AllRoomResponseImpl implements _AllRoomResponse {
   final String? createdDate;
   @override
   final String? createdBy;
+  @override
+  final int? totalMember;
+  @override
+  final String? lastMessage;
 
   @override
   String toString() {
-    return 'AllRoomResponse(id: $id, roomName: $roomName, createdDate: $createdDate, createdBy: $createdBy)';
+    return 'AllRoomResponse(id: $id, roomName: $roomName, createdDate: $createdDate, createdBy: $createdBy, totalMember: $totalMember, lastMessage: $lastMessage)';
   }
 
   @override
@@ -163,13 +204,17 @@ class _$AllRoomResponseImpl implements _AllRoomResponse {
             (identical(other.createdDate, createdDate) ||
                 other.createdDate == createdDate) &&
             (identical(other.createdBy, createdBy) ||
-                other.createdBy == createdBy));
+                other.createdBy == createdBy) &&
+            (identical(other.totalMember, totalMember) ||
+                other.totalMember == totalMember) &&
+            (identical(other.lastMessage, lastMessage) ||
+                other.lastMessage == lastMessage));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, roomName, createdDate, createdBy);
+  int get hashCode => Object.hash(runtimeType, id, roomName, createdDate,
+      createdBy, totalMember, lastMessage);
 
   @JsonKey(ignore: true)
   @override
@@ -191,7 +236,9 @@ abstract class _AllRoomResponse implements AllRoomResponse {
       {final int? id,
       final String? roomName,
       final String? createdDate,
-      final String? createdBy}) = _$AllRoomResponseImpl;
+      final String? createdBy,
+      final int? totalMember,
+      final String? lastMessage}) = _$AllRoomResponseImpl;
 
   factory _AllRoomResponse.fromJson(Map<String, dynamic> json) =
       _$AllRoomResponseImpl.fromJson;
@@ -204,6 +251,10 @@ abstract class _AllRoomResponse implements AllRoomResponse {
   String? get createdDate;
   @override
   String? get createdBy;
+  @override
+  int? get totalMember;
+  @override
+  String? get lastMessage;
   @override
   @JsonKey(ignore: true)
   _$$AllRoomResponseImplCopyWith<_$AllRoomResponseImpl> get copyWith =>

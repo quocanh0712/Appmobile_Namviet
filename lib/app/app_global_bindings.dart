@@ -3,6 +3,8 @@
 // coverage:ignore-file
 
 import 'package:dio/dio.dart';
+import 'package:ftu_lms/app/modules/chat/repository/chat_repository.dart';
+import 'package:ftu_lms/app/modules/chat/repository/impl/chat_repository_impl.dart';
 import 'package:ftu_lms/app/modules/document_email/views/create_email/repository/create_email_repository.dart';
 import 'package:ftu_lms/app/modules/document_email/views/create_email/repository/impl/create_email_repository_impl.dart';
 import 'package:ftu_lms/app/modules/infiniteListSample/data/repository/impl/photo_repository_impl.dart';
@@ -36,6 +38,7 @@ import 'package:local_auth/local_auth.dart';
 
 import '../data/repositories/activity_repository.dart';
 import '../data/repositories/impl/activity_repository_impl.dart';
+
 import 'modules/login/services/session_service.dart';
 
 class AppGlobalBindings extends Bindings {
@@ -55,6 +58,7 @@ class AppGlobalBindings extends Bindings {
     Get.lazyPut<HomeRepository?>(() => HomeRepositoryImpl(), fenix: true);
     Get.lazyPut<LoginController>(() => LoginController(), fenix: true);
     Get.lazyPut<CreateEmailRepository>(() => CreateEmailRepositoryImpl(), fenix: true);
+    Get.lazyPut<ChatRepository>(() => ChatRepositoryImpl(), fenix: true);
     Get.lazyPut(()=>SessionService());
     Get.lazyPut<ActivityRepository?>(() => ActivityRepositoryImpl(), fenix: true);
     Get.lazyPut<FinanceRepository?>(() => FinanceRepositoryImpl(), fenix: true);

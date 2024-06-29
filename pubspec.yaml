@@ -88,6 +88,7 @@ dependencies:
   http: ^0.13.6
   mime: ^1.0.0
   random_color: ^1.0.6-nullsafety
+  signalr_netcore: ^0.1.7
 
 
 

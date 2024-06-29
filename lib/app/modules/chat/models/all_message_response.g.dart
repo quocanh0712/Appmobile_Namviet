@@ -34,10 +34,7 @@ _$AllMessageResponseImpl _$$AllMessageResponseImplFromJson(
       iduser: json['iduser'] as String?,
       message: json['message'] as String?,
       idRoom: json['idRoom'] as int?,
-      createdDate: json['createdDate'] == null
-          ? null
-          : DateTime.parse(json['createdDate'] as String),
-      seen: json['seen'] as String?,
+      createdDate: json['createdDate'] as String?,
       isSeen: json['isSeen'] as bool?,
       isMine: json['isMine'] as bool?,
     );
@@ -49,8 +46,7 @@ Map<String, dynamic> _$$AllMessageResponseImplToJson(
       'iduser': instance.iduser,
       'message': instance.message,
       'idRoom': instance.idRoom,
-      'createdDate': instance.createdDate?.toIso8601String(),
-      'seen': instance.seen,
+      'createdDate': instance.createdDate,
       'isSeen': instance.isSeen,
       'isMine': instance.isMine,
     };

@@ -24,8 +24,7 @@ class AllMessageResponse with _$AllMessageResponse {
     String? iduser,
     String? message,
     int? idRoom,
-    DateTime? createdDate,
-    String? seen,
+    String? createdDate,
     bool? isSeen,
     bool? isMine,
   }) = _AllMessageResponse;
